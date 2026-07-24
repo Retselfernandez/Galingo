@@ -1,0 +1,119 @@
+name: Galingo Multiplatform Beta Build Pipeline
+
+on:
+  push:
+    branches: [ main, master, release/* ]
+  workflow_dispatch:
+
+jobs:
+  build-android:
+    name: Build Android APK (Beta)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Java JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          
+      - name: Set up Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          
+      - name: Get Dependencies
+        run: |
+          if [ -d "Galingo" ]; then cd Galingo; fi
+          flutter pub get
+          
+      - name: Build Android APK Release
+        run: |
+          if [ -d "Galingo" ]; then cd Galingo; fi
+          flutter build apk --release
+          
+      - name: Upload Android APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Galingo-Android-Beta-APK
+          path: |
+            build/app/outputs/flutter-apk/app-release.apk
+            Galingo/build/app/outputs/flutter-apk/app-release.apk
+
+  build-windows:
+    name: Build Windows Desktop (.exe)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          
+      - name: Enable Windows Desktop
+        run: flutter config --enable-windows-desktop
+        
+      - name: Get Dependencies
+        run: |
+          if (Test-Path -Path "Galingo") { Set-Location Galingo }
+          flutter pub get
+          
+      - name: Build Windows Release
+        run: |
+          if (Test-Path -Path "Galingo") { Set-Location Galingo }
+          flutter build windows --release
+          
+      - name: Zip Windows Portable Package
+        shell: powershell
+        run: |
+          $relPath = if (Test-Path -Path "Galingo") { "Galingo\build\windows\x64\runner\Release\*" } else { "build\windows\x64\runner\Release\*" }
+          Compress-Archive -Path $relPath -DestinationPath Galingo-Windows-Beta.zip
+          
+      - name: Upload Windows Executable Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Galingo-Windows-Beta-Zip
+          path: Galingo-Windows-Beta.zip
+
+  build-macos:
+    name: Build macOS Desktop (.app)
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          
+      - name: Enable macOS Desktop
+        run: flutter config --enable-macos-desktop
+        
+      - name: Get Dependencies
+        run: |
+          if [ -d "Galingo" ]; then cd Galingo; fi
+          flutter pub get
+          
+      - name: Build macOS Release
+        run: |
+          if [ -d "Galingo" ]; then cd Galingo; fi
+          flutter build macos --release
+          
+      - name: Zip macOS App Bundle
+        run: |
+          if [ -d "Galingo/build/macos/Build/Products/Release" ]; then
+            cd Galingo/build/macos/Build/Products/Release
+            zip -r ../../../../../Galingo-macOS-Beta.zip Galingo.app
+          else
+            cd build/macos/Build/Products/Release
+            zip -r ../../../../Galingo-macOS-Beta.zip Galingo.app
+          fi
+          
+      - name: Upload macOS App Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Galingo-macOS-Beta-Zip
+          path: Galingo-macOS-Beta.zip
+

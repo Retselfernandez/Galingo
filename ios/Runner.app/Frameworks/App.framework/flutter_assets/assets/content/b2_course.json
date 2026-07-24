@@ -1,0 +1,43 @@
+{
+  "id": "B2",
+  "title": "Nivel B2 — Avanzado",
+  "description": "Domina o galego académico, debates sobre actualidade, comprensión de textos complexos e literatura galega contemporánea.",
+  "color": "#8E24AA",
+  "requiredXp": 1000,
+  "units": [
+    {
+      "id": "b2_u1",
+      "title": "Literatura e Actualidade",
+      "level": "B2",
+      "description": "Comprende textos complexos e conversa sobre a cultura galega",
+      "icon": "📚",
+      "accentColor": "#8E24AA",
+      "order": 0,
+      "lessons": [
+        {
+          "id": "b2_u1_l1",
+          "title": "O Rexurdimento",
+          "description": "A literatura do século XIX: Rosalía de Castro e Pondal",
+          "icon": "✍️",
+          "xpReward": 20,
+          "estimatedMinutes": 10,
+          "exercises": [
+            {
+              "id": "b2_u1_l1_e1",
+              "type": "multiple_choice",
+              "question": "Quen escribiu 'Cantares Galegos' en 1863?",
+              "options": [
+                "Rosalía de Castro",
+                "Eduardo Pondal",
+                "Manuel Curros Enríquez",
+                "Alfonso R. Castelao"
+              ],
+              "correctAnswer": "Rosalía de Castro",
+              "explanation": "'Cantares Galegos' é a obra cume do Rexurdimento, escrita por Rosalía de Castro."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

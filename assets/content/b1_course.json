@@ -1,0 +1,51 @@
+{
+  "id": "B1",
+  "title": "Nivel B1 — Umbral",
+  "description": "Perfecciona o teu galego: debates de opinión, contidos formais, redacción de textos e expresións idiomáticas avanzadas.",
+  "color": "#43A047",
+  "requiredXp": 500,
+  "units": [
+    {
+      "id": "b1_u1",
+      "title": "Debates e Opinións",
+      "level": "B1",
+      "description": "Expresa a túa opinión de xeito estruturado e formal",
+      "icon": "💬",
+      "accentColor": "#43A047",
+      "order": 0,
+      "lessons": [
+        {
+          "id": "b1_u1_l1",
+          "title": "Expresar acordo e desacordo",
+          "description": "Vocabulario formal para debates",
+          "icon": "🗣️",
+          "xpReward": 15,
+          "estimatedMinutes": 8,
+          "exercises": [
+            {
+              "id": "b1_u1_l1_e1",
+              "type": "multiple_choice",
+              "question": "Como se di 'estoy de acuerdo' formalmente en galego?",
+              "options": [
+                "Estou de acordo",
+                "Estou conforme",
+                "Concordo plenamente",
+                "Todas son correctas"
+              ],
+              "correctAnswer": "Todas son correctas",
+              "explanation": "'Estou de acordo', 'Estou conforme' e 'Concordo plenamente' son formas válidas en galego."
+            },
+            {
+              "id": "b1_u1_l1_e2",
+              "type": "fill_blank",
+              "question": "Eu non _____ (compartir) esa visión do asunto.",
+              "options": ["comparto", "comparte", "compartimos", "comparten"],
+              "correctAnswer": "comparto",
+              "explanation": "A primeira persoa do presente de indicativo do verbo compartir é 'comparto'."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

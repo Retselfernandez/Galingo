@@ -1,0 +1,1072 @@
+{
+  "id": "A1",
+  "title": "Nivel A1 — Iniciación",
+  "description": "Aprende as bases do galego: saudar, presentarte e comunicarte en situacións cotiás sinxelas.",
+  "color": "#1E6BB8",
+  "requiredXp": 0,
+  "units": [
+    {
+      "id": "a1_u1",
+      "title": "Saúdos e Presentacións",
+      "level": "A1",
+      "description": "Aprende a saudar e a presentarte en galego",
+      "icon": "👋",
+      "accentColor": "#1E6BB8",
+      "order": 0,
+      "lessons": [
+        {
+          "id": "a1_u1_l1",
+          "title": "Ola, como estás?",
+          "description": "Os saúdos básicos do galego",
+          "icon": "😊",
+          "xpReward": 10,
+          "estimatedMinutes": 5,
+          "exercises": [
+            {
+              "id": "a1_u1_l1_e1",
+              "type": "multiple_choice",
+              "question": "Como se di 'Hola' en galego?",
+              "options": ["Ola", "Adeus", "Grazas", "Por favor"],
+              "correctAnswer": "Ola",
+              "explanation": "'Ola' é o saúdo máis común en galego, equivalente ao castelán 'Hola'.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u1_l1_e2",
+              "type": "multiple_choice",
+              "question": "Que significa 'Bo día'?",
+              "options": ["Buenas noches", "Buenos días", "Buenas tardes", "Hasta luego"],
+              "correctAnswer": "Buenos días",
+              "explanation": "'Bo día' úsase polas mañás, igual que 'Buenos días' en castelán.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u1_l1_e3",
+              "type": "fill_blank",
+              "question": "Completa: '_____ noite' (Buenas noches)",
+              "options": ["Boa", "Bo", "Boas", "Bos"],
+              "correctAnswer": "Boa",
+              "hint": "O substantivo 'noite' é feminino en galego",
+              "explanation": "'Boa noite' é o saúdo vespertino. 'Boa' concorda en xénero feminino con 'noite'.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u1_l1_e4",
+              "type": "matching",
+              "question": "Empareja los saludos con su significado",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Ola", "right": "Hola"},
+                {"left": "Adeus", "right": "Adiós"},
+                {"left": "Ata logo", "right": "Hasta luego"},
+                {"left": "Boa tarde", "right": "Buenas tardes"}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u1_l1_e5",
+              "type": "multiple_choice",
+              "question": "Como lle respondes a '¿Como estás?'",
+              "options": ["Estou ben, grazas", "Ola, boa tarde", "Adeus, ata logo", "Por favor"],
+              "correctAnswer": "Estou ben, grazas",
+              "explanation": "'Estou ben, grazas' significa 'Estoy bien, gracias'.",
+              "xpReward": 5
+            }
+          ]
+        },
+        {
+          "id": "a1_u1_l2",
+          "title": "Presentarse",
+          "description": "Di o teu nome e de onde ves",
+          "icon": "🙋",
+          "xpReward": 10,
+          "estimatedMinutes": 6,
+          "exercises": [
+            {
+              "id": "a1_u1_l2_e1",
+              "type": "multiple_choice",
+              "question": "Como di 'Me llamo...' en galego?",
+              "options": ["Chámome...", "Son...", "Teño...", "Vivo en..."],
+              "correctAnswer": "Chámome...",
+              "explanation": "'Chámome' provén do verbo 'chamarse' (llamarse). É a forma máis natural de presentarse.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u1_l2_e2",
+              "type": "fill_blank",
+              "question": "Completa: 'Son _____ Galicia' (Soy de Galicia)",
+              "options": ["de", "en", "da", "con"],
+              "correctAnswer": "de",
+              "explanation": "'Son de Galicia' = 'Soy de Galicia'. A preposición 'de' indica procedencia.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u1_l2_e3",
+              "type": "matching",
+              "question": "Empareja las frases con su traducción",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Chámome Ana", "right": "Me llamo Ana"},
+                {"left": "Son de Vigo", "right": "Soy de Vigo"},
+                {"left": "Teño 25 anos", "right": "Tengo 25 years"},
+                {"left": "Falo galego", "right": "Hablo gallego"}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u1_l2_e4",
+              "type": "translation",
+              "question": "Traduce ao galego: '¿Cómo te llamas?'",
+              "options": ["Como te chamas?", "Cal é o teu nome?", "Como te chamas? / Cal é o teu nome?", "De onde es?"],
+              "correctAnswer": "Como te chamas? / Cal é o teu nome?",
+              "explanation": "Ambas as formas son correctas e de uso común en galego.",
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1_u2",
+      "title": "Números e Cantidades",
+      "level": "A1",
+      "description": "Os números do 1 ao 100 e as cantidades básicas",
+      "icon": "🔢",
+      "accentColor": "#43A047",
+      "order": 1,
+      "lessons": [
+        {
+          "id": "a1_u2_l1",
+          "title": "Do 1 ao 10",
+          "description": "Os primeiros números en galego",
+          "icon": "☝️",
+          "xpReward": 10,
+          "estimatedMinutes": 5,
+          "exercises": [
+            {
+              "id": "a1_u2_l1_e1",
+              "type": "multiple_choice",
+              "question": "Como se di o número '3' en galego?",
+              "options": ["Tres", "Trece", "Treinta", "Dous"],
+              "correctAnswer": "Tres",
+              "explanation": "'Tres' en galego é igual que en castelán.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u2_l1_e2",
+              "type": "matching",
+              "question": "Empareja os números coas súas palabras",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "1", "right": "Un/Unha"},
+                {"left": "5", "right": "Cinco"},
+                {"left": "8", "right": "Oito"},
+                {"left": "10", "right": "Dez"}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u2_l1_e3",
+              "type": "multiple_choice",
+              "question": "Que número é 'Sete'?",
+              "options": ["7", "6", "8", "9"],
+              "correctAnswer": "7",
+              "explanation": "'Sete' é o número 7 en galego.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u2_l1_e4",
+              "type": "fill_blank",
+              "question": "Completa a serie: Un, Dous, _____, Catro",
+              "options": ["Tres", "Cinco", "Seis", "Oito"],
+              "correctAnswer": "Tres",
+              "xpReward": 5
+            }
+          ]
+        },
+        {
+          "id": "a1_u2_l2",
+          "title": "Do 11 ao 30",
+          "description": "Números máis complexos en galego",
+          "icon": "🔟",
+          "xpReward": 10,
+          "estimatedMinutes": 6,
+          "exercises": [
+            {
+              "id": "a1_u2_l2_e1",
+              "type": "multiple_choice",
+              "question": "Como se di '11' en galego?",
+              "options": ["Once", "Doce", "Trece", "Dez e un"],
+              "correctAnswer": "Once",
+              "explanation": "'Once' é igual en galego e en castelán.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u2_l2_e2",
+              "type": "multiple_choice",
+              "question": "Que número é 'Vinte'?",
+              "options": ["20", "15", "25", "12"],
+              "correctAnswer": "20",
+              "explanation": "'Vinte' é o número 20 en galego (en castelán, 'veinte').",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u2_l2_e3",
+              "type": "matching",
+              "question": "Empareja os números",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "14", "right": "Catorce"},
+                {"left": "17", "right": "Dezasete"},
+                {"left": "19", "right": "Dezanove"},
+                {"left": "30", "right": "Trinta"}
+              ],
+              "xpReward": 5
+            }
+          ]
+        },
+        {
+          "id": "a1_u2_l3",
+          "title": "Do 31 ao 100",
+          "description": "Os números grandes e as súas regras",
+          "icon": "💯",
+          "xpReward": 10,
+          "estimatedMinutes": 7,
+          "exercises": [
+            {
+              "id": "a1_u2_l3_e1",
+              "type": "multiple_choice",
+              "question": "Como se di \"40\" en galego?",
+              "options": ["Corenta", "Cuarenta", "Catorce", "Corenta e un"],
+              "correctAnswer": "Corenta",
+              "explanation": "\"Corenta\" é a forma galega para \"40\"; en castelán é \"cuarenta\".",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u2_l3_e2",
+              "type": "matching",
+              "question": "Empareja os números coas decenas",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "50", "right": "Cincuenta"},
+                {"left": "60", "right": "Sesenta"},
+                {"left": "70", "right": "Setenta"},
+                {"left": "80", "right": "Oitenta"}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u2_l3_e3",
+              "type": "fill_blank",
+              "question": "Completa: '31 dise \"trinta e _____\"' (uno)",
+              "options": ["un", "dous", "tres", "cero"],
+              "correctAnswer": "un",
+              "explanation": "A partir do 31, os números compostos únense coa conxunción \"e\" (\"trinta e un\", \"corenta e dous\"...).",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u2_l3_e4",
+              "type": "multiple_choice",
+              "question": "Como se di \"100\" en galego?",
+              "options": ["Cen", "Cento", "Centena", "Cento un"],
+              "correctAnswer": "Cen",
+              "explanation": "\"Cen\" úsase cando o número vai só ou diante doutro substantivo; \"cento\" úsase noutros contextos compostos (ex. \"cento vinte\").",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u2_l3_e5",
+              "type": "matching",
+              "question": "Empareja os números compostos",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "90", "right": "Noventa"},
+                {"left": "100", "right": "Cen"},
+                {"left": "45", "right": "Corenta e cinco"},
+                {"left": "72", "right": "Setenta e dous"}
+              ],
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1_u3",
+      "title": "A Familia",
+      "level": "A1",
+      "description": "Os membros da familia en galego",
+      "icon": "👨‍👩‍👧",
+      "accentColor": "#FF7043",
+      "order": 2,
+      "lessons": [
+        {
+          "id": "a1_u3_l1",
+          "title": "Membros da familia",
+          "description": "Nai, pai, irmáns e máis",
+          "icon": "🏠",
+          "xpReward": 10,
+          "estimatedMinutes": 6,
+          "exercises": [
+            {
+              "id": "a1_u3_l1_e1",
+              "type": "multiple_choice",
+              "question": "Como se di 'madre' en galego?",
+              "options": ["Nai", "Pai", "Irmá", "Avoa"],
+              "correctAnswer": "Nai",
+              "explanation": "'Nai' é a palabra galega para 'madre'.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u3_l1_e2",
+              "type": "matching",
+              "question": "Empareja os membros da familia",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Pai", "right": "Padre"},
+                {"left": "Avó", "right": "Abuelo"},
+                {"left": "Irmán", "right": "Hermano"},
+                {"left": "Fillo", "right": "Hijo"}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u3_l1_e3",
+              "type": "fill_blank",
+              "question": "A _____ do meu pai é a miña avoa. (madre)",
+              "options": ["nai", "irmá", "filla", "cuñada"],
+              "correctAnswer": "nai",
+              "explanation": "A nai do teu pai é a túa avoa paterna.",
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1_u4",
+      "title": "Cores e Descricións",
+      "level": "A1",
+      "description": "Os cores e como describir obxectos",
+      "icon": "🎨",
+      "accentColor": "#9C27B0",
+      "order": 3,
+      "lessons": [
+        {
+          "id": "a1_u4_l1",
+          "title": "Os cores básicos",
+          "description": "Aprende os nomes dos cores en galego",
+          "icon": "🌈",
+          "xpReward": 10,
+          "estimatedMinutes": 5,
+          "exercises": [
+            {
+              "id": "a1_u4_l1_e1",
+              "type": "multiple_choice",
+              "question": "Como se di 'azul' en galego?",
+              "options": ["Azul", "Vermello", "Verde", "Amarelo"],
+              "correctAnswer": "Azul",
+              "explanation": "'Azul' é igual en galego e en castelán.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u4_l1_e2",
+              "type": "matching",
+              "question": "Empareja os cores",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Vermello", "right": "Rojo"},
+                {"left": "Verde", "right": "Verde"},
+                {"left": "Branco", "right": "Blanco"},
+                {"left": "Negro", "right": "Negro"}
+              ],
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1_u5",
+      "title": "Comida e Bebida",
+      "level": "A1",
+      "description": "Vocabulario esencial de alimentación galega",
+      "icon": "🍽️",
+      "accentColor": "#FF9800",
+      "order": 4,
+      "lessons": [
+        {
+          "id": "a1_u5_l1",
+          "title": "Alimentos típicos",
+          "description": "A comida máis importante en galego",
+          "icon": "🥘",
+          "xpReward": 10,
+          "estimatedMinutes": 6,
+          "exercises": [
+            {
+              "id": "a1_u5_l1_e1",
+              "type": "multiple_choice",
+              "question": "Como se chama en galego o 'pan'?",
+              "options": ["Pan", "Queixo", "Viño", "Peixe"],
+              "correctAnswer": "Pan",
+              "explanation": "'Pan' é igual en galego e en castelán.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u5_l1_e2",
+              "type": "matching",
+              "question": "Empareja os alimentos",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Leite", "right": "Leche"},
+                {"left": "Ovo", "right": "Huevo"},
+                {"left": "Peixe", "right": "Pescado"},
+                {"left": "Carne", "right": "Carne"}
+              ],
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1_u6",
+      "title": "A Rutina Diaria",
+      "level": "A1",
+      "description": "Verbos e expresións para o día a día",
+      "icon": "🕐",
+      "accentColor": "#00BCD4",
+      "order": 5,
+      "lessons": [
+        {
+          "id": "a1_u6_l1",
+          "title": "Verbos cotiáns",
+          "description": "Acciones del día a día en gallego",
+          "icon": "⏰",
+          "xpReward": 10,
+          "estimatedMinutes": 7,
+          "exercises": [
+            {
+              "id": "a1_u6_l1_e1",
+              "type": "multiple_choice",
+              "question": "Como se di 'comer' en galego?",
+              "options": ["Comer", "Beber", "Durmir", "Falar"],
+              "correctAnswer": "Comer",
+              "explanation": "'Comer' é igual en galego e en castelán.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u6_l1_e2",
+              "type": "matching",
+              "question": "Empareja os verbos",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Durmir", "right": "Dormir"},
+                {"left": "Traballar", "right": "Trabajar"},
+                {"left": "Camiñar", "right": "Caminar"},
+                {"left": "Ler", "right": "Leer"}
+              ],
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1_u7",
+      "title": "Os Días, os Meses e as Estacións",
+      "level": "A1",
+      "description": "Aprende a falar do tempo: días da semana, meses e estacións do ano.",
+      "icon": "📅",
+      "accentColor": "#3F51B5",
+      "order": 6,
+      "lessons": [
+        {
+          "id": "a1_u7_l1",
+          "title": "Os días da semana",
+          "description": "Luns, martes, mércores e máis",
+          "icon": "🗓️",
+          "xpReward": 10,
+          "estimatedMinutes": 5,
+          "exercises": [
+            {
+              "id": "a1_u7_l1_e1",
+              "type": "multiple_choice",
+              "question": "Como se di \"lunes\" en galego?",
+              "options": ["Luns", "Martes", "Mércores", "Domingo"],
+              "correctAnswer": "Luns",
+              "explanation": "A semana en galego comeza en \"luns\", igual que en castelán.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u7_l1_e2",
+              "type": "matching",
+              "question": "Empareja os días da semana",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Martes", "right": "Martes"},
+                {"left": "Mércores", "right": "Miércoles"},
+                {"left": "Xoves", "right": "Jueves"},
+                {"left": "Venres", "right": "Viernes"}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u7_l1_e3",
+              "type": "fill_blank",
+              "question": "Completa: 'Hoxe é _____' (sábado)",
+              "options": ["sábado", "domingo", "luns", "xoves"],
+              "correctAnswer": "sábado",
+              "explanation": "\"Sábado\" mantense case igual que en castelán.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u7_l1_e4",
+              "type": "multiple_choice",
+              "question": "Cal é o último día da semana en galego?",
+              "options": ["Domingo", "Sábado", "Venres", "Luns"],
+              "correctAnswer": "Domingo",
+              "explanation": "O 'domingo' pecha a semana tamén en galego.",
+              "xpReward": 5
+            }
+          ]
+        },
+        {
+          "id": "a1_u7_l2",
+          "title": "Os meses e as estacións",
+          "description": "Xaneiro, verán, inverno e as estacións",
+          "icon": "🌤️",
+          "xpReward": 10,
+          "estimatedMinutes": 6,
+          "exercises": [
+            {
+              "id": "a1_u7_l2_e1",
+              "type": "multiple_choice",
+              "question": "Como se di \"enero\" en galego?",
+              "options": ["Xaneiro", "Xuño", "Xullo", "Xaneiro e Xuño"],
+              "correctAnswer": "Xaneiro",
+              "explanation": "A letra \"x\" en galego soa como a \"sh\" inglesa; \"xaneiro\" é un dos meses máis recoñecibles polo seu son.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u7_l2_e2",
+              "type": "matching",
+              "question": "Empareja os meses correspondentes",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Marzo", "right": "Marzo"},
+                {"left": "Maio", "right": "Mayo"},
+                {"left": "Setembro", "right": "Septiembre"},
+                {"left": "Decembro", "right": "Diciembre"}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u7_l2_e3",
+              "type": "multiple_choice",
+              "question": "Como se di \"verano\" en galego?",
+              "options": ["Verán", "Inverno", "Outono", "Primavera"],
+              "correctAnswer": "Verán",
+              "explanation": "\"Verán\" leva til para marcar que o acento recae na última sílaba.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u7_l2_e4",
+              "type": "fill_blank",
+              "question": "Completa: 'O _____ é a estación máis fría' (invierno)",
+              "options": ["inverno", "outono", "verán", "primavera"],
+              "correctAnswer": "inverno",
+              "explanation": "O inverno é o período máis frío do ano.",
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1_u8",
+      "title": "O Tempo Atmosférico",
+      "level": "A1",
+      "description": "Expresións para describir o clima.",
+      "icon": "☀️",
+      "accentColor": "#009688",
+      "order": 7,
+      "lessons": [
+        {
+          "id": "a1_u8_l1",
+          "title": "Como está o día?",
+          "description": "Fai sol, chove e fai calor",
+          "icon": "🌦️",
+          "xpReward": 10,
+          "estimatedMinutes": 5,
+          "exercises": [
+            {
+              "id": "a1_u8_l1_e1",
+              "type": "multiple_choice",
+              "question": "Como se di \"hace sol\" en galego?",
+              "options": ["Fai sol", "Fai frío", "Chove", "Neva"],
+              "correctAnswer": "Fai sol",
+              "explanation": "O verbo \"facer\" úsase para describir moitos fenómenos meteorolóxicos, igual que en castelán.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u8_l1_e2",
+              "type": "matching",
+              "question": "Empareja os estados meteorolóxicos",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Chove", "right": "Llueve"},
+                {"left": "Neva", "right": "Nieva"},
+                {"left": "Fai calor", "right": "Hace calor"},
+                {"left": "Fai vento", "right": "Hace viento"}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u8_l1_e3",
+              "type": "fill_blank",
+              "question": "Completa: 'Hoxe está moi _____' (nublado)",
+              "options": ["nubrado", "soleado", "choivoso", "seco"],
+              "correctAnswer": "nubrado",
+              "hint": "A forma máis xeral en galego é \"nubrado\", aínda que tamén se escoita \"nublado\" con variantes dialectais.",
+              "explanation": "\"Está nubrado\" indica que o ceo está cuberto de nubes.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u8_l1_e4",
+              "type": "multiple_choice",
+              "question": "Que significa \"Fai bo tempo\"?",
+              "options": ["Hace buen tiempo", "Hace mal tiempo", "Va a llover", "Hace mucho frío"],
+              "correctAnswer": "Hace buen tiempo",
+              "explanation": "'Fai bo tempo' indica que as condicións climáticas son agradables.",
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1_u9",
+      "title": "A Casa",
+      "level": "A1",
+      "description": "O vocabulario da vivenda e as súas estancias.",
+      "icon": "🏡",
+      "accentColor": "#795548",
+      "order": 8,
+      "lessons": [
+        {
+          "id": "a1_u9_l1",
+          "title": "As estancias da casa",
+          "description": "Cociña, cuarto, baño e xanela",
+          "icon": "🚪",
+          "xpReward": 10,
+          "estimatedMinutes": 6,
+          "exercises": [
+            {
+              "id": "a1_u9_l1_e1",
+              "type": "multiple_choice",
+              "question": "Como se di \"cocina\" (la habitación) en galego?",
+              "options": ["Cociña", "Cuarto", "Salón", "Baño"],
+              "correctAnswer": "Cociña",
+              "explanation": "\"Cociña\" designa tanto a estancia coma a acción de cociñar.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u9_l1_e2",
+              "type": "matching",
+              "question": "Empareja as estancias",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Cuarto", "right": "Habitación"},
+                {"left": "Baño", "right": "Baño"},
+                {"left": "Salón", "right": "Salón"},
+                {"left": "Xardín", "right": "Jardín"}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u9_l1_e3",
+              "type": "fill_blank",
+              "question": "Completa: 'Durmo no meu _____' (habitación)",
+              "options": ["cuarto", "salón", "baño", "xardín"],
+              "correctAnswer": "cuarto",
+              "explanation": "'Cuarto' é o espazo dedicado ao descanso.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u9_l1_e4",
+              "type": "multiple_choice",
+              "question": "Como se di \"ventana\" en galego?",
+              "options": ["Xanela", "Porta", "Parede", "Teito"],
+              "correctAnswer": "Xanela",
+              "explanation": "\"Xanela\" é a forma xenuinamente galega para \"ventana\"; comparte orixe co portugués \"janela\".",
+              "xpReward": 5
+            }
+          ]
+        },
+        {
+          "id": "a1_u9_l2",
+          "title": "Os mobles",
+          "description": "Cadeira, mesa, cama e sofá",
+          "icon": "🛋️",
+          "xpReward": 10,
+          "estimatedMinutes": 5,
+          "exercises": [
+            {
+              "id": "a1_u9_l2_e1",
+              "type": "multiple_choice",
+              "question": "Como se di \"silla\" en galego?",
+              "options": ["Cadeira", "Mesa", "Cama", "Armario"],
+              "correctAnswer": "Cadeira",
+              "explanation": "\"Cadeira\" é unha das palabras máis características do galego fronte ao castelán \"silla\".",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u9_l2_e2",
+              "type": "matching",
+              "question": "Empareja os mobles",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Mesa", "right": "Mesa"},
+                {"left": "Cama", "right": "Cama"},
+                {"left": "Armario", "right": "Armario"},
+                {"left": "Sofá", "right": "Sofá"}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u9_l2_e3",
+              "type": "fill_blank",
+              "question": "Completa: 'Como na _____ da cociña' (mesa)",
+              "options": ["mesa", "cama", "cadeira", "armario"],
+              "correctAnswer": "mesa",
+              "explanation": "'Mesa' é onde se colocan os alimentos para comer.",
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1_u10",
+      "title": "Os Animais",
+      "level": "A1",
+      "description": "Vocabulario dos animais domésticos e do campo.",
+      "icon": "🐾",
+      "accentColor": "#8BC34A",
+      "order": 9,
+      "lessons": [
+        {
+          "id": "a1_u10_l1",
+          "title": "Animais domésticos e de granxa",
+          "description": "Can, gato, cabalo e galiña",
+          "icon": "🐶",
+          "xpReward": 10,
+          "estimatedMinutes": 5,
+          "exercises": [
+            {
+              "id": "a1_u10_l1_e1",
+              "type": "multiple_choice",
+              "question": "Como se di \"perro\" en galego?",
+              "options": ["Can", "Gato", "Cabalo", "Paxaro"],
+              "correctAnswer": "Can",
+              "explanation": "\"Can\" é a palabra galega para \"perro\"; en castelán existe tamén \"can\" como forma culta.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u10_l1_e2",
+              "type": "matching",
+              "question": "Empareja os animais domésticos",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Gato", "right": "Gato"},
+                {"left": "Cabalo", "right": "Caballo"},
+                {"left": "Vaca", "right": "Vaca"},
+                {"left": "Galiña", "right": "Gallina"}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u10_l1_e3",
+              "type": "fill_blank",
+              "question": "Completa: 'A _____ pon ovos' (gallina)",
+              "options": ["galiña", "vaca", "ovella", "cabalo"],
+              "correctAnswer": "galiña",
+              "explanation": "A galiña é a ave de curral que pon ovos.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u10_l1_e4",
+              "type": "multiple_choice",
+              "question": "Como se di \"oveja\" en galego?",
+              "options": ["Ovella", "Vaca", "Cabalo", "Can"],
+              "correctAnswer": "Ovella",
+              "explanation": "Ovella é a femia do carneiro que produce la.",
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1_u11",
+      "title": "Verbos Fundamentais — Ser, Estar e Ter",
+      "level": "A1",
+      "description": "Unidade de gramática esencial para construír frases básicas.",
+      "icon": "🧩",
+      "accentColor": "#673AB7",
+      "order": 10,
+      "lessons": [
+        {
+          "id": "a1_u11_l1",
+          "title": "Ser e Estar",
+          "description": "Diferenzas e conxugación básica de ser e estar",
+          "icon": "🔑",
+          "xpReward": 10,
+          "estimatedMinutes": 6,
+          "exercises": [
+            {
+              "id": "a1_u11_l1_e1",
+              "type": "multiple_choice",
+              "question": "Como se conxuga \"yo soy\" en galego?",
+              "options": ["Eu son", "Eu estou", "Eu teño", "Eu é"],
+              "correctAnswer": "Eu son",
+              "explanation": "\"Son\" é a primeira persoa do singular do verbo \"ser\" en presente de indicativo.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u11_l1_e2",
+              "type": "matching",
+              "question": "Empareja os pronomes co verbo ser",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Ti es", "right": "Tú eres"},
+                {"left": "El/Ela é", "right": "Él/Ella es"},
+                {"left": "Nós somos", "right": "Nosotros somos"},
+                {"left": "Eles son", "right": "Ellos son"}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u11_l1_e3",
+              "type": "fill_blank",
+              "question": "Completa: 'Eu _____ en Vigo' (estoy)",
+              "options": ["estou", "son", "teño", "é"],
+              "correctAnswer": "estou",
+              "explanation": "\"Estar\" úsase para localización; \"Eu estou en Vigo\" indica onde te atopas.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u11_l1_e4",
+              "type": "multiple_choice",
+              "question": "Cal é a diferenza entre \"son\" e \"estou\"?",
+              "options": [
+                "\"Son\" describe identidade/orixe; \"estou\" describe estado/lugar",
+                "Non hai diferenza",
+                "\"Son\" só se usa para números",
+                "\"Estou\" só se usa para o tempo"
+              ],
+              "correctAnswer": "\"Son\" describe identidade/orixe; \"estou\" describe estado/lugar",
+              "explanation": "Ser refírese a calidades permanentes e estar a estados temporais ou localización.",
+              "xpReward": 5
+            }
+          ]
+        },
+        {
+          "id": "a1_u11_l2",
+          "title": "O verbo Ter",
+          "description": "Posesión e idade en galego",
+          "icon": "🖐️",
+          "xpReward": 10,
+          "estimatedMinutes": 5,
+          "exercises": [
+            {
+              "id": "a1_u11_l2_e1",
+              "type": "multiple_choice",
+              "question": "Como se di \"yo tengo\" en galego?",
+              "options": ["Eu teño", "Eu teno", "Eu tes", "Eu ten"],
+              "correctAnswer": "Eu teño",
+              "explanation": "A primeira persoa do verbo \"ter\" en presente é \"teño\".",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u11_l2_e2",
+              "type": "matching",
+              "question": "Empareja as conxugacións do verbo ter",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Ti tes", "right": "Tú tienes"},
+                {"left": "El/Ela ten", "right": "Él/Ella tiene"},
+                {"left": "Nós temos", "right": "Nosotros tenemos"},
+                {"left": "Eles teñen", "right": "Ellos tienen"}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u11_l2_e3",
+              "type": "fill_blank",
+              "question": "Completa: 'Ela _____ vinte anos' (tiene)",
+              "options": ["ten", "teño", "tes", "temos"],
+              "correctAnswer": "ten",
+              "explanation": "'Ela ten' é a terceira persoa do singular do verbo 'ter'.",
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1_u12",
+      "title": "Adxectivos e Comparativos",
+      "level": "A1",
+      "description": "Describir persoas e obxectos, e comparalos entre si.",
+      "icon": "⚖️",
+      "accentColor": "#E91E63",
+      "order": 11,
+      "lessons": [
+        {
+          "id": "a1_u12_l1",
+          "title": "Adxectivos básicos",
+          "description": "Grande, pequeno, bo, novo e xénero",
+          "icon": "📏",
+          "xpReward": 10,
+          "estimatedMinutes": 5,
+          "exercises": [
+            {
+              "id": "a1_u12_l1_e1",
+              "type": "multiple_choice",
+              "question": "Como se di \"grande\" en galego?",
+              "options": ["Grande", "Pequeno", "Bo", "Malo"],
+              "correctAnswer": "Grande",
+              "explanation": "\"Grande\" mantense igual có castelán.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u12_l1_e2",
+              "type": "matching",
+              "question": "Empareja os adxectivos",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Pequeno/a", "right": "Pequeño/a"},
+                {"left": "Bo/Boa", "right": "Bueno/a"},
+                {"left": "Malo/a", "right": "Malo/a"},
+                {"left": "Novo/a", "right": "Nuevo/a"}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u12_l1_e3",
+              "type": "fill_blank",
+              "question": "Completa: 'Esta casa é moi _____' (pequeña)",
+              "options": ["pequena", "pequeno", "pequenas", "pequenos"],
+              "correctAnswer": "pequena",
+              "explanation": "O adxectivo concorda en xénero e número co substantivo: \"casa\" é feminino singular, polo que o adxectivo remata en \"-a\".",
+              "xpReward": 5
+            }
+          ]
+        },
+        {
+          "id": "a1_u12_l2",
+          "title": "Comparativos",
+          "description": "Máis... que, menos... que, tan... como",
+          "icon": "⚖️",
+          "xpReward": 10,
+          "estimatedMinutes": 6,
+          "exercises": [
+            {
+              "id": "a1_u12_l2_e1",
+              "type": "multiple_choice",
+              "question": "Como se di \"más grande que\" en galego?",
+              "options": ["Máis grande que", "Menos grande que", "Tan grande como", "Grande coma"],
+              "correctAnswer": "Máis grande que",
+              "explanation": "A estrutura comparativa de superioridade en galego é \"máis... que\", igual có castelán.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u12_l2_e2",
+              "type": "matching",
+              "question": "Empareja as estruturas comparativas",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Máis... que", "right": "Más... que"},
+                {"left": "Menos... que", "right": "Menos... que"},
+                {"left": "Tan... como", "right": "Tan... como"},
+                {"left": "O máis...", "right": "El más..."}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u12_l2_e3",
+              "type": "fill_blank",
+              "question": "Completa: 'A miña casa é _____ grande _____ a túa' (tan... como)",
+              "options": ["tan / como", "máis / que", "menos / que", "o máis / de"],
+              "correctAnswer": "tan / como",
+              "explanation": "A estrutura de igualdade en galego é \"tan... como\".",
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1_u13",
+      "title": "O Futuro Simple",
+      "level": "A1",
+      "description": "Expresar accións que aínda non ocorreron.",
+      "icon": "🔮",
+      "accentColor": "#9E9E9E",
+      "order": 12,
+      "lessons": [
+        {
+          "id": "a1_u13_l1",
+          "title": "Verbos regulares en futuro",
+          "description": "As terminacións do futuro regular en galego",
+          "icon": "🗓️",
+          "xpReward": 10,
+          "estimatedMinutes": 6,
+          "exercises": [
+            {
+              "id": "a1_u13_l1_e1",
+              "type": "multiple_choice",
+              "question": "Como se di \"yo hablaré\" en galego?",
+              "options": ["Eu falarei", "Eu falei", "Eu falo", "Eu falaba"],
+              "correctAnswer": "Eu falarei",
+              "explanation": "O futuro simple engade as terminacións \"-ei, -ás, -á, -emos, -edes, -án\" ao infinitivo do verbo.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u13_l1_e2",
+              "type": "matching",
+              "question": "Empareja as persoas do futuro regular",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Ti falarás", "right": "Tú hablarás"},
+                {"left": "El/Ela falará", "right": "Él/Ella hablará"},
+                {"left": "Nós falaremos", "right": "Nosotros hablaremos"},
+                {"left": "Eles falarán", "right": "Ellos hablarán"}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u13_l1_e3",
+              "type": "fill_blank",
+              "question": "Completa: 'Mañá eu _____ con ela' (hablaré)",
+              "options": ["falarei", "falo", "falei", "falaba"],
+              "correctAnswer": "falarei",
+              "explanation": "O futuro do verbo falar úsase para indicar o que farei máis adiante.",
+              "xpReward": 5
+            },
+            {
+              "id": "a1_u13_l1_e4",
+              "type": "multiple_choice",
+              "question": "Como se di \"nosotros comeremos\" en galego?",
+              "options": ["Nós comeremos", "Nós comemos", "Nós comimos", "Nós comiamos"],
+              "correctAnswer": "Nós comeremos",
+              "explanation": "O futuro de \"comer\" engade as mesmas terminacións sobre o infinitivo: \"comer-emos\".",
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
