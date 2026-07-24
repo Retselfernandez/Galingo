@@ -1,0 +1,622 @@
+{
+  "id": "A2",
+  "title": "Nivel A2 — Intermedio",
+  "description": "Desenvolve as túas habilidades en galego: viaxar, mercar, lecer, corpo e saúde, indicacións, no restaurante, pasado, tecnoloxía e expresións idiomáticas.",
+  "color": "#FF7043",
+  "requiredXp": 100,
+  "units": [
+    {
+      "id": "a2_u1",
+      "title": "Viaxes e Transportes",
+      "level": "A2",
+      "description": "Móvete pola cidade e planea as túas viaxes en galego",
+      "icon": "✈️",
+      "accentColor": "#FF7043",
+      "order": 0,
+      "lessons": [
+        {
+          "id": "a2_u1_l1",
+          "title": "O transporte público",
+          "description": "Viaxar en tren, autobús e metro",
+          "icon": "🚌",
+          "xpReward": 10,
+          "estimatedMinutes": 6,
+          "exercises": [
+            {
+              "id": "a2_u1_l1_e1",
+              "type": "multiple_choice",
+              "question": "Como se di 'billete' en galego para viaxar?",
+              "options": ["Billete", "Tarxeta", "Pasaxe", "Viaxe"],
+              "correctAnswer": "Billete",
+              "explanation": "Tanto 'billete' como 'pasaxe' son correctos, pero 'billete' é o máis usado para tren e autobús.",
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u1_l1_e2",
+              "type": "matching",
+              "question": "Empareja os medios de transporte",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Tren", "right": "Tren"},
+                {"left": "Autobús", "right": "Autobús"},
+                {"left": "Avión", "right": "Avión"},
+                {"left": "Coche", "right": "Coche"}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u1_l1_e3",
+              "type": "fill_blank",
+              "question": "Completa: 'O _____ chega á estación ás oito' (El tren)",
+              "options": ["tren", "autobús", "metro", "avión"],
+              "correctAnswer": "tren",
+              "explanation": "O 'tren' é o medio de transporte que chega á estación ferroviaria.",
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2_u2",
+      "title": "Tendas e Compras",
+      "level": "A2",
+      "description": "Vocabulario de tendas, prezos e produtos",
+      "icon": "🛍️",
+      "accentColor": "#FFB300",
+      "order": 1,
+      "lessons": [
+        {
+          "id": "a2_u2_l1",
+          "title": "Na tenda de roupa",
+          "description": "Mercar e preguntar prezos de pezas de roupa",
+          "icon": "👕",
+          "xpReward": 10,
+          "estimatedMinutes": 5,
+          "exercises": [
+            {
+              "id": "a2_u2_l1_e1",
+              "type": "multiple_choice",
+              "question": "Como se di 'camisa' en galego?",
+              "options": ["Camisa", "Camiseta", "Chaqueta", "Pantalón"],
+              "correctAnswer": "Camisa",
+              "explanation": "'Camisa' é igual en galego e en castelán.",
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u2_l1_e2",
+              "type": "fill_blank",
+              "question": "Completa: 'Canto _____ este pantalón?' (Cuesta)",
+              "options": ["custa", "vale", "custa / vale", "prezo"],
+              "correctAnswer": "custa / vale",
+              "explanation": "Tanto 'custa' coma 'vale' son correctos e habituais para preguntar o prezo.",
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2_u3",
+      "title": "Tempo Libre e Lecer",
+      "level": "A2",
+      "description": "Falar dos teus pasatempos e o ocio",
+      "icon": "⚽",
+      "accentColor": "#4CAF50",
+      "order": 2,
+      "lessons": [
+        {
+          "id": "a2_u3_l1",
+          "title": "Os meus pasatempos",
+          "description": "Deportes, cine, música e lecer",
+          "icon": "🎸",
+          "xpReward": 10,
+          "estimatedMinutes": 6,
+          "exercises": [
+            {
+              "id": "a2_u3_l1_e1",
+              "type": "multiple_choice",
+              "question": "Que significa 'lecer' en galego?",
+              "options": ["Ocio / Tiempo libre", "Trabajo", "Deporte", "Estudiar"],
+              "correctAnswer": "Ocio / Tiempo libre",
+              "explanation": "'Lecer' é a palabra propia galega para facer referencia ao tempo de descanso ou ocio.",
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u3_l1_e2",
+              "type": "matching",
+              "question": "Empareja as actividades",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Escoitar música", "right": "Escuchar música"},
+                {"left": "Xogar ao fútbol", "right": "Jugar al fútbol"},
+                {"left": "Ver películas", "right": "Ver películas"},
+                {"left": "Ler libros", "right": "Leer libros"}
+              ],
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2_u4",
+      "title": "O Traballo e Estudos",
+      "level": "A2",
+      "description": "Vocabulario de profesiones e tarefas laborais",
+      "icon": "💼",
+      "accentColor": "#00BCD4",
+      "order": 3,
+      "lessons": [
+        {
+          "id": "a2_u4_l1",
+          "title": "As profesións",
+          "description": "Nomes de traballos e lugares laborais",
+          "icon": "👩‍⚕️",
+          "xpReward": 10,
+          "estimatedMinutes": 5,
+          "exercises": [
+            {
+              "id": "a2_u4_l1_e1",
+              "type": "multiple_choice",
+              "question": "Como se di 'médico' ou 'médica' en galego?",
+              "options": ["Médico / Médica", "Mestre / Mestra", "Avogado / Avogada", "Enxeñeiro / Enxeñeira"],
+              "correctAnswer": "Médico / Médica",
+              "explanation": "'Médico/a' utilízase igual en galego e en castelán.",
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u4_l1_e2",
+              "type": "fill_blank",
+              "question": "Completa: 'O _____ traballa na escola' (El profesor)",
+              "options": ["mestre", "médico", "avogado", "pintor"],
+              "correctAnswer": "mestre",
+              "explanation": "'Mestre' significa profesor ou maestro, e traballa no colexio ou escola.",
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2_u5",
+      "title": "O Corpo e a Saúde",
+      "level": "A2",
+      "description": "Vocabulario do corpo humano e expresións para falar de saúde.",
+      "icon": "🏥",
+      "accentColor": "#E91E63",
+      "order": 4,
+      "lessons": [
+        {
+          "id": "a2_u5_l1",
+          "title": "As partes do corpo",
+          "description": "Cabeza, man, pé, perna e ollos",
+          "icon": "🙆",
+          "xpReward": 10,
+          "estimatedMinutes": 5,
+          "exercises": [
+            {
+              "id": "a2_u5_l1_e1",
+              "type": "multiple_choice",
+              "question": "Como se di \"cabeza\" en galego?",
+              "options": ["Cabeza", "Man", "Perna", "Brazo"],
+              "correctAnswer": "Cabeza",
+              "explanation": "\"Cabeza\" mantense case idéntico ao castelán.",
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u5_l1_e2",
+              "type": "matching",
+              "question": "Empareja as partes do corpo",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Man", "right": "Mano"},
+                {"left": "Pé", "right": "Pie"},
+                {"left": "Brazo", "right": "Brazo"},
+                {"left": "Perna", "right": "Pierna"}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u5_l1_e3",
+              "type": "fill_blank",
+              "question": "Completa: 'Vexo cos meus _____' (ojos)",
+              "options": ["ollos", "orellas", "boca", "nariz"],
+              "correctAnswer": "ollos",
+              "explanation": "\"Ollos\" é a forma galega para \"ojos\".",
+              "xpReward": 5
+            }
+          ]
+        },
+        {
+          "id": "a2_u5_l2",
+          "title": "Na consulta médica",
+          "description": "Expresar dor física e síntomas",
+          "icon": "🩺",
+          "xpReward": 10,
+          "estimatedMinutes": 6,
+          "exercises": [
+            {
+              "id": "a2_u5_l2_e1",
+              "type": "multiple_choice",
+              "question": "Como se di \"me duele la cabeza\" en galego?",
+              "options": ["Dóeme a cabeza", "Teño a cabeza", "Son a cabeza", "Estou a cabeza"],
+              "correctAnswer": "Dóeme a cabeza",
+              "explanation": "O verbo \"doer\" funciona igual que en castelán, con pronome de complemento indirecto.",
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u5_l2_e2",
+              "type": "fill_blank",
+              "question": "Completa: 'Teño _____, creo que estou enfermo' (fiebre)",
+              "options": ["febre", "frío", "calor", "sede"],
+              "correctAnswer": "febre",
+              "explanation": "A febre indica unha temperatura corporal elevada.",
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u5_l2_e3",
+              "type": "matching",
+              "question": "Empareja os síntomas e frases médicas",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Estou enfermo/a", "right": "Estoy enfermo/a"},
+                {"left": "Teño febre", "right": "Tengo fiebre"},
+                {"left": "Dóeme a gorxa", "right": "Me duele la garganta"},
+                {"left": "Necesito un médico", "right": "Necesito un médico"}
+              ],
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2_u6",
+      "title": "Indicacións e Direccións",
+      "level": "A2",
+      "description": "Como preguntar e dar indicacións para moverse pola cidade.",
+      "icon": "🧭",
+      "accentColor": "#3F51B5",
+      "order": 5,
+      "lessons": [
+        {
+          "id": "a2_u6_l1",
+          "title": "Onde está...?",
+          "description": "Esquerda, dereita, preto, lonxe",
+          "icon": "📍",
+          "xpReward": 10,
+          "estimatedMinutes": 6,
+          "exercises": [
+            {
+              "id": "a2_u6_l1_e1",
+              "type": "multiple_choice",
+              "question": "Como se di \"a la derecha\" en galego?",
+              "options": ["Á dereita", "Á esquerda", "Recto", "Preto"],
+              "correctAnswer": "Á dereita",
+              "explanation": "\"Dereita\" é un falso amigo parcial: en galego \"dereita\" tamén significa \"recta\" en certos contextos, pero aquí indica dirección.",
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u6_l1_e2",
+              "type": "matching",
+              "question": "Empareja as direccións",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Á esquerda", "right": "A la izquierda"},
+                {"left": "Recto", "right": "Recto/derecho"},
+                {"left": "Preto", "right": "Cerca"},
+                {"left": "Lonxe", "right": "Lejos"}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u6_l1_e3",
+              "type": "fill_blank",
+              "question": "Completa: '¿_____ está a estación?' (Dónde)",
+              "options": ["Onde", "Que", "Cando", "Quen"],
+              "correctAnswer": "Onde",
+              "explanation": "\"Onde\" é o interrogativo galego para \"dónde\".",
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u6_l1_e4",
+              "type": "multiple_choice",
+              "question": "Como preguntarías \"¿Está cerca de aquí?\"",
+              "options": ["Está preto de aquí?", "Está lonxe de aquí?", "Está á dereita?", "Está recto?"],
+              "correctAnswer": "Está preto de aquí?",
+              "explanation": "'Preto de' significa cerca de en galego.",
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2_u7",
+      "title": "No Restaurante",
+      "level": "A2",
+      "description": "Vocabulario para pedir comida e bebida.",
+      "icon": "🍴",
+      "accentColor": "#FF5722",
+      "order": 6,
+      "lessons": [
+        {
+          "id": "a2_u7_l1",
+          "title": "Pedindo a comida",
+          "description": "Pedir pratos, cubertos e a conta",
+          "icon": "🍽️",
+          "xpReward": 10,
+          "estimatedMinutes": 5,
+          "exercises": [
+            {
+              "id": "a2_u7_l1_e1",
+              "type": "multiple_choice",
+              "question": "Como se di \"quiero\" (para pedir) en galego?",
+              "options": ["Quero", "Teño", "Son", "Estou"],
+              "correctAnswer": "Quero",
+              "explanation": "\"Quero un café\" equivale a \"Quiero un café\".",
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u7_l1_e2",
+              "type": "matching",
+              "question": "Empareja os elementos da mesa",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "O menú", "right": "El menú"},
+                {"left": "O prato", "right": "El plato"},
+                {"left": "O garfo", "right": "El tenedor"},
+                {"left": "O coitelo", "right": "El cuchillo"}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u7_l1_e3",
+              "type": "fill_blank",
+              "question": "Completa: 'A _____, por favor' (la cuenta)",
+              "options": ["conta", "culler", "auga", "mesa"],
+              "correctAnswer": "conta",
+              "explanation": "Pedir \"a conta\" é a forma habitual de solicitar a factura nun restaurante.",
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u7_l1_e4",
+              "type": "multiple_choice",
+              "question": "Como se di \"agua\" en galego?",
+              "options": ["Auga", "Viño", "Leite", "Café"],
+              "correctAnswer": "Auga",
+              "explanation": "Auga escríbese con 'u' en galego.",
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2_u8",
+      "title": "O Pasado — Pretérito Regular",
+      "level": "A2",
+      "description": "Introdución á conxugación do pretérito para verbos regulares.",
+      "icon": "⏳",
+      "accentColor": "#9C27B0",
+      "order": 7,
+      "lessons": [
+        {
+          "id": "a2_u8_l1",
+          "title": "Verbos en -AR e -ER",
+          "description": "Conxugación de verbos como falar e comer",
+          "icon": "📖",
+          "xpReward": 10,
+          "estimatedMinutes": 6,
+          "exercises": [
+            {
+              "id": "a2_u8_l1_e1",
+              "type": "multiple_choice",
+              "question": "Como se di \"yo hablé\" en galego?",
+              "options": ["Eu falei", "Eu falo", "Eu falaba", "Eu falarei"],
+              "correctAnswer": "Eu falei",
+              "explanation": "\"Falei\" é a primeira persoa do pretérito do verbo regular \"falar\".",
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u8_l1_e2",
+              "type": "matching",
+              "question": "Empareja as conxugacións de falar no pasado",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Ti falaches", "right": "Tú hablaste"},
+                {"left": "El/Ela falou", "right": "Él/Ella habló"},
+                {"left": "Nós falamos", "right": "Nosotros hablamos"},
+                {"left": "Eles falaron", "right": "Ellos hablaron"}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u8_l1_e3",
+              "type": "fill_blank",
+              "question": "Completa: 'Onte eu _____ pescado' (comí)",
+              "options": ["comín", "como", "comerei", "comía"],
+              "correctAnswer": "comín",
+              "explanation": "\"Comín\" é a primeira persoa do pretérito do verbo regular \"comer\".",
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u8_l1_e4",
+              "type": "multiple_choice",
+              "question": "Como se di \"ellos comieron\" en galego?",
+              "options": ["Eles comeron", "Eles comeron / comían", "Eles comen", "Eles comerán"],
+              "correctAnswer": "Eles comeron",
+              "explanation": "A terminación da terceira persoa de plural en pretérito de verbos en -er é '-eron'.",
+              "xpReward": 5
+            }
+          ]
+        },
+        {
+          "id": "a2_u8_l2",
+          "title": "Verbos en -IR",
+          "description": "Conxugación de verbos como vivir e partir",
+          "icon": "📗",
+          "xpReward": 10,
+          "estimatedMinutes": 5,
+          "exercises": [
+            {
+              "id": "a2_u8_l2_e1",
+              "type": "multiple_choice",
+              "question": "Como se di \"yo viví\" en galego?",
+              "options": ["Eu vivín", "Eu vivo", "Eu vivía", "Eu vivirei"],
+              "correctAnswer": "Eu vivín",
+              "explanation": "Os verbos rematados en \"-ir\", como \"vivir\", forman o pretérito engadindo \"-ín\" na primeira persoa.",
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u8_l2_e2",
+              "type": "matching",
+              "question": "Empareja as conxugacións de vivir no pasado",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "Ti viviches", "right": "Tú viviste"},
+                {"left": "El/Ela viviu", "right": "Él/Ella vivió"},
+                {"left": "Nós vivimos", "right": "Nosotros vivimos"},
+                {"left": "Eles viviron", "right": "Ellos vivieron"}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u8_l2_e3",
+              "type": "fill_blank",
+              "question": "Completa: 'Ela _____ en Ourense durante dous anos' (vivió)",
+              "options": ["viviu", "vive", "vivirá", "vivía"],
+              "correctAnswer": "viviu",
+              "explanation": "A terceira persoa de singular en pretérito de verbos en -ir remata en '-iu'.",
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2_u9",
+      "title": "Tecnoloxía e Comunicación",
+      "level": "A2",
+      "description": "Vocabulario dixital básico.",
+      "icon": "💻",
+      "accentColor": "#607D8B",
+      "order": 8,
+      "lessons": [
+        {
+          "id": "a2_u9_l1",
+          "title": "Dispositivos e internet",
+          "description": "Ordenador, correo, contrasinal e rede",
+          "icon": "📱",
+          "xpReward": 10,
+          "estimatedMinutes": 5,
+          "exercises": [
+            {
+              "id": "a2_u9_l1_e1",
+              "type": "multiple_choice",
+              "question": "Como se di \"ordenador\" en galego?",
+              "options": ["Ordenador", "Teléfono", "Pantalla", "Rato"],
+              "correctAnswer": "Ordenador",
+              "explanation": "\"Ordenador\" úsase igual que en castelán peninsular.",
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u9_l1_e2",
+              "type": "matching",
+              "question": "Empareja os termos dixitais",
+              "correctAnswer": "matched",
+              "matchingPairs": [
+                {"left": "O teléfono", "right": "El teléfono"},
+                {"left": "A pantalla", "right": "La pantalla"},
+                {"left": "O correo electrónico", "right": "El correo electrónico"},
+                {"left": "A internet", "right": "Internet"}
+              ],
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u9_l1_e3",
+              "type": "fill_blank",
+              "question": "Completa: 'Vou _____ unha mensaxe' (enviar)",
+              "options": ["enviar", "recibir", "borrar", "escoitar"],
+              "correctAnswer": "enviar",
+              "explanation": "Enviar refírese ao envío dunha comunicación dixital.",
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u9_l1_e4",
+              "type": "multiple_choice",
+              "question": "Como se di \"contraseña\" en galego?",
+              "options": ["Contrasinal", "Chave", "Código", "Sinal"],
+              "correctAnswer": "Contrasinal",
+              "explanation": "\"Contrasinal\" é o termo normativo galego recomendado polos organismos lingüísticos oficiais para \"contraseña\".",
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2_u10",
+      "title": "Expresións Idiomáticas Galegas",
+      "level": "A2",
+      "description": "Palabras e expresións que non teñen tradución literal e forman parte da identidade cultural galega.",
+      "icon": "💬",
+      "accentColor": "#00BCD4",
+      "order": 9,
+      "lessons": [
+        {
+          "id": "a2_u10_l1",
+          "title": "Palabras propias do galego",
+          "description": "Morriña, chover a cachón e outras xoias lingüísticas",
+          "icon": "🌊",
+          "xpReward": 10,
+          "estimatedMinutes": 6,
+          "exercises": [
+            {
+              "id": "a2_u10_l1_e1",
+              "type": "multiple_choice",
+              "question": "Que significa \"morriña\"?",
+              "options": [
+                "Nostalgia/morriña por algo ou alguén ausente",
+                "Alegría intensa",
+                "Enfado",
+                "Cansazo físico"
+              ],
+              "correctAnswer": "Nostalgia/morriña por algo ou alguén ausente",
+              "explanation": "\"Morriña\" é unha das palabras galegas máis coñecidas internacionalmente; describe unha mestura de saudade e nostalxia, especialmente pola terra ou a familia cando se está lonxe.",
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u10_l1_e2",
+              "type": "multiple_choice",
+              "question": "Como se di \"llover a cántaros\" en galego?",
+              "options": ["Chover a cachón", "Chover pouco", "Facer sol", "Chover a xeada"],
+              "correctAnswer": "Chover a cachón",
+              "explanation": "\"Chover a cachón\" describe unha choiva moi intensa e continuada.",
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u10_l1_e3",
+              "type": "fill_blank",
+              "question": "Completa: 'O meu _____ do peito vive en Ourense' (mejor amigo)",
+              "options": ["amigo", "irmán", "veciño", "compañeiro"],
+              "correctAnswer": "amigo",
+              "explanation": "\"Amigo do peito\" é unha expresión que designa un amigo moi íntimo e de confianza.",
+              "xpReward": 5
+            },
+            {
+              "id": "a2_u10_l1_e4",
+              "type": "multiple_choice",
+              "question": "Si alguien llega empapado por la lluvia, ¿qué dirías en gallego?",
+              "options": ["Está feito unha sopa", "Está feito un sol", "Ten morriña", "Está en cueiros"],
+              "correctAnswer": "Está feito unha sopa",
+              "explanation": "\"Estar feito unha sopa\" indica que alguén está completamente mollado.",
+              "xpReward": 5
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
