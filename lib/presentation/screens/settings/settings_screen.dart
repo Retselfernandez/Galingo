@@ -171,8 +171,8 @@ class SettingsScreen extends ConsumerWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              _buildStatBox('⭐', '${progress.totalXp} XP', 'Experiencia total'),
-              _buildStatBox('🔥', '${progress.streakDays} días', 'Racha de estudio'),
+              Expanded(child: _buildStatBox('⭐', '${progress.totalXp} XP', 'Experiencia total')),
+              Expanded(child: _buildStatBox('🔥', '${progress.streakDays} días', 'Racha de estudio')),
             ],
           ),
           const SizedBox(height: 16),
