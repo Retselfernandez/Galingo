@@ -1,0 +1,18 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: galingo
+      POSTGRES_PASSWORD: galingo
+      POSTGRES_DB: galingo
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports: ["5432:5432"]
+  api:
+    build: .
+    environment:
+      DATABASE_URL: postgresql://galingo:galingo@db:5432/galingo
+    ports: ["8000:8000"]
+    depends_on: [db]
+volumes:
+  pgdata:
