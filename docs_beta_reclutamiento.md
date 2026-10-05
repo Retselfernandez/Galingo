@@ -5,7 +5,7 @@
 Hola! Estoy cerrando mi TFM sobre **Galingo**, una app para aprender gallego.
 ¿Me ayudas probándola 2 semanas? Son 5 minutos al día.
 
-1. Instala el APK: [link al APK firmado]
+1. Instala el APK: https://github.com/Retselfernandez/Galingo/releases/download/v1.0.0-beta/app-release.apk
 2. Abre la app, crea tu perfil y haz al menos 1 lección al día
 3. Si algo falla, agita el móvil → reportar problema (va directo a mi servidor)
 4. No tienes que hacer nada más: la telemetría sale sola
