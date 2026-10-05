@@ -11,6 +11,11 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # Localization (ARB)
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+
   # State Management
   flutter_riverpod: ^2.5.1
 
@@ -42,6 +47,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true
 
   assets:
     - assets/images/

@@ -1,0 +1,82 @@
+{
+  "tagline": "Aprende gallego, paso a paso",
+  "pathTitle": "O Camiño do Galego",
+  "pathSubtitle": "Aprende paso a paso • Nivel A1",
+  "settings": "Configuración",
+  "appearance": "🎨 Apariencia",
+  "theme": "Tema de la aplicación",
+  "typography": "✏️ Tipografía",
+  "textSize": "Tamaño del texto",
+  "interfaceLanguage": "🌍 Idioma",
+  "information": "ℹ️ Información",
+  "reset": "Restablecer",
+  "resetTitle": "Restablecer configuración",
+  "resetConfirm": "Esto restaurará todos los ajustes a los valores predeterminados. ¿Continuar?",
+  "lightTheme": "Claro",
+  "darkTheme": "Oscuro",
+  "systemTheme": "Sistema",
+  "preview": "Vista previa",
+  "yourName": "Tu nombre",
+  "nameHint": "Escribe tu nombre...",
+  "editName": "👤 Perfil",
+  "save": "Guardar",
+  "cancel": "Cancelar",
+  "retry": "Reintentar",
+  "start": "Comenzar",
+  "continueLabel": "Continuar",
+  "nameQuestion": "¿Cómo te llamas?",
+  "nameSubtitle": "Personalización de la experiencia",
+  "greeting": "¡Ola, {name}! 👋",
+  "nextLessonMessage": "¡Tu próxima lección te espera!",
+  "gabiWelcome": "¡Bienvenido/a a Galingo!\\nSeré tu guía. 🌟",
+  "startPath": "Comenzar el Camino →",
+  "completed": "Completado",
+  "locked": "Bloqueado",
+  "errorLoading": "Error al cargar el curso",
+  "version": "Versión",
+  "levelCovered": "Nivel cubierto",
+  "targetLanguage": "Idioma objetivo",
+  "developedBy": "Desarrollado por",
+  "technology": "Tecnología",
+  "application": "Aplicación",
+  "year": "Año",
+  "personalize": "Personaliza tu experiencia",
+  "levelA1": "Nivel A1 — Iniciación",
+  "levelA2": "Nivel A2 — Intermedio",
+  "levelB1": "Nivel B1 — Umbral",
+  "levelB2": "Nivel B2 — Avanzado",
+  "selectLevel": "Selecciona tu nivel de estudio:",
+  "levelA1Subtitle": "Iniciación: Saludos, familia, comidas...",
+  "levelA2Subtitle": "Intermedio: Viajes, compras, trabajo...",
+  "levelB1Subtitle": "Umbral: Debates, opiniones, textos complejos...",
+  "levelB2Subtitle": "Avanzado: Fluidez técnica, literatura, modismos...",
+  "profile": "Perfil",
+  "nameLabel": "Nombre",
+  "@greeting": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "backToPath": "Volver al Camino",
+  "lessonNotFound": "Lección no encontrada: {id}",
+  "backToHome": "Volver al inicio",
+  "typeTranslation": "Escribe tu traducción aquí...",
+  "verifyTranslation": "Verificar traducción",
+  "finishLessonTip": "Finalizar lección y guardar progreso",
+  "nextExerciseTip": "Avanzar al siguiente ejercicio",
+  "finishLesson": "Finalizar lección 🎉",
+  "next": "Seguir →",
+  "veryGood": "¡Muy bien!",
+  "incorrect": "Incorrecto",
+  "lessonCompleted": "¡Enhorabuena! ¡Completaste la lección! 🎊",
+  "continuePath": "Continuar el Camino →",
+  "@lessonNotFound": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  }
+}

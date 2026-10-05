@@ -1,19 +1,17 @@
 /// Idiomas de interfaz disponibles en Galingo
 enum AppLanguage {
-  es('Español', '🇪🇸', false),
-  pt('Português', '🇵🇹', false),
-  en('English', '🇬🇧', false),
-  fr('Français', '🇫🇷', false),
-  ar('عربي', '🇸🇦', true), // RTL
-  ro('Română', '🇷🇴', false),
-  it('Italiano', '🇮🇹', false),
-  de('Deutsch', '🇩🇪', false),
-  zh('中文', '🇨🇳', false);
+  es('Español', '🇪🇸'),
+  pt('Português', '🇵🇹'),
+  en('English', '🇬🇧'),
+  fr('Français', '🇫🇷'),
+  ro('Română', '🇷🇴'),
+  it('Italiano', '🇮🇹'),
+  de('Deutsch', '🇩🇪'),
+  zh('中文', '🇨🇳');
 
   final String displayName;
   final String flag;
-  final bool isRtl;
-  const AppLanguage(this.displayName, this.flag, this.isRtl);
+  const AppLanguage(this.displayName, this.flag);
 }
 
 /// Familias de tipografía disponibles en Galingo

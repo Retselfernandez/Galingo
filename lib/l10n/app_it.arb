@@ -1,0 +1,82 @@
+{
+  "tagline": "Impara il galiziano, passo dopo passo",
+  "pathTitle": "O Camiño do Galego",
+  "pathSubtitle": "Impara passo dopo passo • Livello A1",
+  "settings": "Impostazioni",
+  "appearance": "🎨 Aspetto",
+  "theme": "Tema dell'applicazione",
+  "typography": "✏️ Tipografia",
+  "textSize": "Dimensione del testo",
+  "interfaceLanguage": "🌍 Lingua",
+  "information": "ℹ️ Informazioni",
+  "reset": "Ripristina",
+  "resetTitle": "Ripristina impostazioni",
+  "resetConfirm": "Questo ripristinerà tutte le impostazioni ai valori predefiniti. Continuare?",
+  "lightTheme": "Chiaro",
+  "darkTheme": "Scuro",
+  "systemTheme": "Sistema",
+  "preview": "Anteprima",
+  "yourName": "Il tuo nome",
+  "nameHint": "Scrivi il tuo nome...",
+  "editName": "👤 Profilo",
+  "save": "Salva",
+  "cancel": "Annulla",
+  "retry": "Riprova",
+  "start": "Inizia",
+  "continueLabel": "Continua",
+  "nameQuestion": "Come ti chiami?",
+  "nameSubtitle": "Personalizzerò Galingo per te",
+  "greeting": "Ciao, {name}! 👋",
+  "nextLessonMessage": "La tua prossima lezione ti aspetta!",
+  "gabiWelcome": "Benvenuto su Galingo!\\nSarò la tua guida. 🌟",
+  "startPath": "Inizia il percorso →",
+  "completed": "Completato",
+  "locked": "Bloccato",
+  "errorLoading": "Errore durante il caricamento del corso",
+  "version": "Versione",
+  "levelCovered": "Livello coperto",
+  "targetLanguage": "Lingua di destinazione",
+  "developedBy": "Sviluppato da",
+  "technology": "Tecnologia",
+  "application": "Applicazione",
+  "year": "Anno",
+  "personalize": "Personalizza la tua esperienza",
+  "levelA1": "Livello A1 — Principiante",
+  "levelA2": "Livello A2 — Intermedio",
+  "levelB1": "Livello B1 — Soglia",
+  "levelB2": "Livello B2 — Progredito",
+  "selectLevel": "Seleziona il tuo livello di studio:",
+  "levelA1Subtitle": "Principiante: Saluti, famiglia, cibo...",
+  "levelA2Subtitle": "Intermedio: Viaggi, shopping, lavoro...",
+  "levelB1Subtitle": "Soglia: Dibattiti, opinioni, testi complessi...",
+  "levelB2Subtitle": "Progredito: Fluenza tecnica, letteratura, modi di dire...",
+  "profile": "Profilo",
+  "nameLabel": "Nome",
+  "@greeting": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "backToPath": "Torna al Cammino",
+  "lessonNotFound": "Lezione non trovata: {id}",
+  "backToHome": "Torna all'inizio",
+  "typeTranslation": "Scrivi la tua traduzione qui...",
+  "verifyTranslation": "Verifica la traduzione",
+  "finishLessonTip": "Concludi la lezione e salva i progressi",
+  "nextExerciseTip": "Vai all'esercizio successivo",
+  "finishLesson": "Concludi la lezione 🎉",
+  "next": "Avanti →",
+  "veryGood": "Ben fatto!",
+  "incorrect": "Sbagliato",
+  "lessonCompleted": "Complimenti! Hai completato la lezione! 🎊",
+  "continuePath": "Continua il Cammino →",
+  "@lessonNotFound": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  }
+}

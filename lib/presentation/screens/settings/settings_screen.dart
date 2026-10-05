@@ -4,11 +4,11 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../core/theme/app_theme.dart';
-import '../../../core/i18n/app_strings.dart';
 import '../../../data/models/settings_model.dart';
 import '../../../data/models/user_progress_model.dart';
 import '../../providers/progress_provider.dart';
 import '../../providers/settings_provider.dart';
+import 'package:galingo/l10n/app_localizations.dart';
 
 /// Pantalla de configuración de Galingo
 class SettingsScreen extends ConsumerWidget {
@@ -17,7 +17,7 @@ class SettingsScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final settings = ref.watch(settingsProvider);
-    final strings = ref.watch(appStringsProvider);
+    final strings = AppLocalizations.of(context)!;
     final progressAsync = ref.watch(progressNotifierProvider);
     final userName = progressAsync.valueOrNull?.userName ?? 'Estudante';
 
@@ -107,7 +107,7 @@ class SettingsScreen extends ConsumerWidget {
   Widget _buildProfileCard(
     BuildContext context,
     WidgetRef ref,
-    AppStrings strings,
+    AppLocalizations strings,
     String userName,
   ) {
     final progressAsync = ref.watch(progressNotifierProvider);
@@ -324,7 +324,7 @@ class SettingsScreen extends ConsumerWidget {
     BuildContext context,
     WidgetRef ref,
     SettingsModel settings,
-    AppStrings strings,
+    AppLocalizations strings,
   ) {
     return _SettingsCard(
       child: Column(
@@ -376,7 +376,7 @@ class SettingsScreen extends ConsumerWidget {
     BuildContext context,
     WidgetRef ref,
     SettingsModel settings,
-    AppStrings strings,
+    AppLocalizations strings,
   ) {
     final themeLabels = [strings.lightTheme, strings.darkTheme, strings.systemTheme];
     return _SettingsCard(
@@ -456,7 +456,7 @@ class SettingsScreen extends ConsumerWidget {
     BuildContext context,
     WidgetRef ref,
     SettingsModel settings,
-    AppStrings strings,
+    AppLocalizations strings,
   ) {
     return _SettingsCard(
       child: Column(
@@ -541,7 +541,7 @@ class SettingsScreen extends ConsumerWidget {
   Widget _buildFontPreview(
     BuildContext context,
     SettingsModel settings,
-    AppStrings strings,
+    AppLocalizations strings,
   ) {
     final fontStyle = _getTextStyle(settings);
     return _SettingsCard(
@@ -598,7 +598,7 @@ class SettingsScreen extends ConsumerWidget {
 
   // ─── Información ──────────────────────────────────────────────────────────
 
-  Widget _buildInfoCard(BuildContext context, AppStrings strings) {
+  Widget _buildInfoCard(BuildContext context, AppLocalizations strings) {
     return _SettingsCard(
       child: Column(
         children: [
@@ -623,7 +623,7 @@ class SettingsScreen extends ConsumerWidget {
   Widget _buildTelemetryCard(
     BuildContext context,
     WidgetRef ref,
-    AppStrings strings,
+    AppLocalizations strings,
   ) {
     final progressAsync = ref.watch(progressNotifierProvider);
     final progress = progressAsync.valueOrNull ?? UserProgressModel.initial();
@@ -820,7 +820,7 @@ class SettingsScreen extends ConsumerWidget {
   void _showEditNameDialog(
     BuildContext context,
     WidgetRef ref,
-    AppStrings strings,
+    AppLocalizations strings,
     String currentName,
   ) {
     final controller = TextEditingController(text: currentName);
@@ -860,7 +860,7 @@ class SettingsScreen extends ConsumerWidget {
     );
   }
 
-  void _showResetDialog(BuildContext context, WidgetRef ref, AppStrings strings) {
+  void _showResetDialog(BuildContext context, WidgetRef ref, AppLocalizations strings) {
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(

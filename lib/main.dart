@@ -7,6 +7,8 @@ import 'core/router/app_router.dart';
 import 'core/theme/app_theme.dart';
 import 'core/services/audio_service.dart';
 import 'data/models/settings_model.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:galingo/l10n/app_localizations.dart';
 import 'data/repositories/hive_repository.dart';
 import 'presentation/providers/settings_provider.dart';
 import 'presentation/widgets/gabi/gabi_widget.dart';
@@ -165,17 +167,23 @@ class _GalingoAppState extends ConsumerState<GalingoApp> {
       darkTheme: dynamicDark,
       themeMode: themeMode,
       routerConfig: router,
-      // Escalar texto globalmente + Directionality para árabe
+      locale: Locale(settings.language.name),
+      supportedLocales: AppLanguage.values
+          .map((l) => Locale(l.name))
+          .toList(),
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      // Escalar texto globalmente según preferencia de usuario
       builder: (context, child) {
-        final isRtl = settings.language.isRtl;
         return MediaQuery(
           data: MediaQuery.of(context).copyWith(
             textScaler: TextScaler.linear(settings.fontSize.scale),
           ),
-          child: Directionality(
-            textDirection: isRtl ? TextDirection.rtl : TextDirection.ltr,
-            child: child!,
-          ),
+          child: child!,
         );
       },
     );

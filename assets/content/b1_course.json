@@ -33,15 +33,88 @@
                 "Todas son correctas"
               ],
               "correctAnswer": "Todas son correctas",
-              "explanation": "'Estou de acordo', 'Estou conforme' e 'Concordo plenamente' son formas válidas en galego."
+              "explanation": "'Estou de acordo', 'Estou conforme' e 'Concordo plenamente' son formas válidas en galego.",
+              "i18n": {
+                "es": {
+                  "question": "Como se di 'estoy de acuerdo' formalmente en galego?",
+                  "explanation": "'Estou de acordo', 'Estou conforme' e 'Concordo plenamente' son formas válidas en galego."
+                },
+                "pt": {
+                  "question": "Como se di 'estoy de acuerdo' formalmente en galego?",
+                  "explanation": "'Estou de acordo', 'Estou conforme' e 'Concordo plenamente' son formas válidas en galego."
+                },
+                "en": {
+                  "question": "Como se di 'estoy de acuerdo' formalmente en galego?",
+                  "explanation": "'Estou de acordo', 'Estou conforme' e 'Concordo plenamente' son formas válidas en galego."
+                },
+                "fr": {
+                  "question": "Como se di 'estoy de acuerdo' formalmente en galego?",
+                  "explanation": "'Estou de acordo', 'Estou conforme' e 'Concordo plenamente' son formas válidas en galego."
+                },
+                "ro": {
+                  "question": "Como se di 'estoy de acuerdo' formalmente en galego?",
+                  "explanation": "'Estou de acordo', 'Estou conforme' e 'Concordo plenamente' son formas válidas en galego."
+                },
+                "it": {
+                  "question": "Como se di 'estoy de acuerdo' formalmente en galego?",
+                  "explanation": "'Estou de acordo', 'Estou conforme' e 'Concordo plenamente' son formas válidas en galego."
+                },
+                "de": {
+                  "question": "Como se di 'estoy de acuerdo' formalmente en galego?",
+                  "explanation": "'Estou de acordo', 'Estou conforme' e 'Concordo plenamente' son formas válidas en galego."
+                },
+                "zh": {
+                  "question": "Como se di 'estoy de acuerdo' formalmente en galego?",
+                  "explanation": "'Estou de acordo', 'Estou conforme' e 'Concordo plenamente' son formas válidas en galego."
+                }
+              }
             },
             {
               "id": "b1_u1_l1_e2",
               "type": "fill_blank",
               "question": "Eu non _____ (compartir) esa visión do asunto.",
-              "options": ["comparto", "comparte", "compartimos", "comparten"],
+              "options": [
+                "comparto",
+                "comparte",
+                "compartimos",
+                "comparten"
+              ],
               "correctAnswer": "comparto",
-              "explanation": "A primeira persoa do presente de indicativo do verbo compartir é 'comparto'."
+              "explanation": "A primeira persoa do presente de indicativo do verbo compartir é 'comparto'.",
+              "i18n": {
+                "es": {
+                  "question": "Eu non _____ (compartir) esa visión do asunto.",
+                  "explanation": "A primeira persoa do presente de indicativo do verbo compartir é 'comparto'."
+                },
+                "pt": {
+                  "question": "Eu non _____ (compartir) esa visión do asunto.",
+                  "explanation": "A primeira persoa do presente de indicativo do verbo compartir é 'comparto'."
+                },
+                "en": {
+                  "question": "Eu non _____ (compartir) esa visión do asunto.",
+                  "explanation": "A primeira persoa do presente de indicativo do verbo compartir é 'comparto'."
+                },
+                "fr": {
+                  "question": "Eu non _____ (compartir) esa visión do asunto.",
+                  "explanation": "A primeira persoa do presente de indicativo do verbo compartir é 'comparto'."
+                },
+                "ro": {
+                  "question": "Eu non _____ (compartir) esa visión do asunto.",
+                  "explanation": "A primeira persoa do presente de indicativo do verbo compartir é 'comparto'."
+                },
+                "it": {
+                  "question": "Eu non _____ (compartir) esa visión do asunto.",
+                  "explanation": "A primeira persoa do presente de indicativo do verbo compartir é 'comparto'."
+                },
+                "de": {
+                  "question": "Eu non _____ (compartir) esa visión do asunto.",
+                  "explanation": "A primeira persoa do presente de indicativo do verbo compartir é 'comparto'."
+                },
+                "zh": {
+                  "question": "Eu non _____ (compartir) esa visión do asunto.",
+                  "explanation": "A primeira persoa do presente de indicativo do verbo compartir é 'comparto'."
+                }
+              }
             }
           ]
         }

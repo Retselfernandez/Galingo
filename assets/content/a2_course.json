@@ -26,10 +26,49 @@
               "id": "a2_u1_l1_e1",
               "type": "multiple_choice",
               "question": "Como se di 'billete' en galego para viaxar?",
-              "options": ["Billete", "Tarxeta", "Pasaxe", "Viaxe"],
+              "options": [
+                "Billete",
+                "Tarxeta",
+                "Pasaxe",
+                "Viaxe"
+              ],
               "correctAnswer": "Billete",
               "explanation": "Tanto 'billete' como 'pasaxe' son correctos, pero 'billete' é o máis usado para tren e autobús.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di 'billete' en galego para viaxar?",
+                  "explanation": "Tanto 'billete' como 'pasaxe' son correctos, pero 'billete' é o máis usado para tren e autobús."
+                },
+                "pt": {
+                  "question": "Como se di 'billete' en galego para viaxar?",
+                  "explanation": "Tanto 'billete' como 'pasaxe' son correctos, pero 'billete' é o máis usado para tren e autobús."
+                },
+                "en": {
+                  "question": "Como se di 'billete' en galego para viaxar?",
+                  "explanation": "Tanto 'billete' como 'pasaxe' son correctos, pero 'billete' é o máis usado para tren e autobús."
+                },
+                "fr": {
+                  "question": "Como se di 'billete' en galego para viaxar?",
+                  "explanation": "Tanto 'billete' como 'pasaxe' son correctos, pero 'billete' é o máis usado para tren e autobús."
+                },
+                "ro": {
+                  "question": "Como se di 'billete' en galego para viaxar?",
+                  "explanation": "Tanto 'billete' como 'pasaxe' son correctos, pero 'billete' é o máis usado para tren e autobús."
+                },
+                "it": {
+                  "question": "Como se di 'billete' en galego para viaxar?",
+                  "explanation": "Tanto 'billete' como 'pasaxe' son correctos, pero 'billete' é o máis usado para tren e autobús."
+                },
+                "de": {
+                  "question": "Como se di 'billete' en galego para viaxar?",
+                  "explanation": "Tanto 'billete' como 'pasaxe' son correctos, pero 'billete' é o máis usado para tren e autobús."
+                },
+                "zh": {
+                  "question": "Como se di 'billete' en galego para viaxar?",
+                  "explanation": "Tanto 'billete' como 'pasaxe' son correctos, pero 'billete' é o máis usado para tren e autobús."
+                }
+              }
             },
             {
               "id": "a2_u1_l1_e2",
@@ -37,21 +76,98 @@
               "question": "Empareja os medios de transporte",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Tren", "right": "Tren"},
-                {"left": "Autobús", "right": "Autobús"},
-                {"left": "Avión", "right": "Avión"},
-                {"left": "Coche", "right": "Coche"}
+                {
+                  "left": "Tren",
+                  "right": "Tren"
+                },
+                {
+                  "left": "Autobús",
+                  "right": "Autobús"
+                },
+                {
+                  "left": "Avión",
+                  "right": "Avión"
+                },
+                {
+                  "left": "Coche",
+                  "right": "Coche"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja os medios de transporte"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a2_u1_l1_e3",
               "type": "fill_blank",
               "question": "Completa: 'O _____ chega á estación ás oito' (El tren)",
-              "options": ["tren", "autobús", "metro", "avión"],
+              "options": [
+                "tren",
+                "autobús",
+                "metro",
+                "avión"
+              ],
               "correctAnswer": "tren",
               "explanation": "O 'tren' é o medio de transporte que chega á estación ferroviaria.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: 'O _____ chega á estación ás oito' (El tren)",
+                  "explanation": "O 'tren' é o medio de transporte que chega á estación ferroviaria."
+                },
+                "pt": {
+                  "question": "Completa: 'O _____ chega á estación ás oito' (El tren)",
+                  "explanation": "O 'tren' é o medio de transporte que chega á estación ferroviaria."
+                },
+                "en": {
+                  "question": "Completa: 'O _____ chega á estación ás oito' (El tren)",
+                  "explanation": "O 'tren' é o medio de transporte que chega á estación ferroviaria."
+                },
+                "fr": {
+                  "question": "Completa: 'O _____ chega á estación ás oito' (El tren)",
+                  "explanation": "O 'tren' é o medio de transporte que chega á estación ferroviaria."
+                },
+                "ro": {
+                  "question": "Completa: 'O _____ chega á estación ás oito' (El tren)",
+                  "explanation": "O 'tren' é o medio de transporte que chega á estación ferroviaria."
+                },
+                "it": {
+                  "question": "Completa: 'O _____ chega á estación ás oito' (El tren)",
+                  "explanation": "O 'tren' é o medio de transporte que chega á estación ferroviaria."
+                },
+                "de": {
+                  "question": "Completa: 'O _____ chega á estación ás oito' (El tren)",
+                  "explanation": "O 'tren' é o medio de transporte que chega á estación ferroviaria."
+                },
+                "zh": {
+                  "question": "Completa: 'O _____ chega á estación ás oito' (El tren)",
+                  "explanation": "O 'tren' é o medio de transporte que chega á estación ferroviaria."
+                }
+              }
             }
           ]
         }
@@ -78,19 +194,97 @@
               "id": "a2_u2_l1_e1",
               "type": "multiple_choice",
               "question": "Como se di 'camisa' en galego?",
-              "options": ["Camisa", "Camiseta", "Chaqueta", "Pantalón"],
+              "options": [
+                "Camisa",
+                "Camiseta",
+                "Chaqueta",
+                "Pantalón"
+              ],
               "correctAnswer": "Camisa",
               "explanation": "'Camisa' é igual en galego e en castelán.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di 'camisa' en galego?",
+                  "explanation": "'Camisa' é igual en galego e en castelán."
+                },
+                "pt": {
+                  "question": "Como se diz 'camisa' em galego?",
+                  "explanation": "'Camisa' é igual en galego e en castelán."
+                },
+                "en": {
+                  "question": "How do you say 'camisa' in Galician?",
+                  "explanation": "'Camisa' é igual en galego e en castelán."
+                },
+                "fr": {
+                  "question": "Comment dit-on 'camisa' en galicien?",
+                  "explanation": "'Camisa' é igual en galego e en castelán."
+                },
+                "ro": {
+                  "question": "Cum se spune 'camisa' în galiciană?",
+                  "explanation": "'Camisa' é igual en galego e en castelán."
+                },
+                "it": {
+                  "question": "Come si dice 'camisa' in galiziano?",
+                  "explanation": "'Camisa' é igual en galego e en castelán."
+                },
+                "de": {
+                  "question": "Wie sagt man 'camisa' auf Galicisch?",
+                  "explanation": "'Camisa' é igual en galego e en castelán."
+                },
+                "zh": {
+                  "question": "如何用加利西亚语说“camisa”？",
+                  "explanation": "'Camisa' é igual en galego e en castelán."
+                }
+              }
             },
             {
               "id": "a2_u2_l1_e2",
               "type": "fill_blank",
               "question": "Completa: 'Canto _____ este pantalón?' (Cuesta)",
-              "options": ["custa", "vale", "custa / vale", "prezo"],
+              "options": [
+                "custa",
+                "vale",
+                "custa / vale",
+                "prezo"
+              ],
               "correctAnswer": "custa / vale",
               "explanation": "Tanto 'custa' coma 'vale' son correctos e habituais para preguntar o prezo.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: 'Canto _____ este pantalón?' (Cuesta)",
+                  "explanation": "Tanto 'custa' coma 'vale' son correctos e habituais para preguntar o prezo."
+                },
+                "pt": {
+                  "question": "Completa: 'Canto _____ este pantalón?' (Cuesta)",
+                  "explanation": "Tanto 'custa' coma 'vale' son correctos e habituais para preguntar o prezo."
+                },
+                "en": {
+                  "question": "Completa: 'Canto _____ este pantalón?' (Cuesta)",
+                  "explanation": "Tanto 'custa' coma 'vale' son correctos e habituais para preguntar o prezo."
+                },
+                "fr": {
+                  "question": "Completa: 'Canto _____ este pantalón?' (Cuesta)",
+                  "explanation": "Tanto 'custa' coma 'vale' son correctos e habituais para preguntar o prezo."
+                },
+                "ro": {
+                  "question": "Completa: 'Canto _____ este pantalón?' (Cuesta)",
+                  "explanation": "Tanto 'custa' coma 'vale' son correctos e habituais para preguntar o prezo."
+                },
+                "it": {
+                  "question": "Completa: 'Canto _____ este pantalón?' (Cuesta)",
+                  "explanation": "Tanto 'custa' coma 'vale' son correctos e habituais para preguntar o prezo."
+                },
+                "de": {
+                  "question": "Completa: 'Canto _____ este pantalón?' (Cuesta)",
+                  "explanation": "Tanto 'custa' coma 'vale' son correctos e habituais para preguntar o prezo."
+                },
+                "zh": {
+                  "question": "Completa: 'Canto _____ este pantalón?' (Cuesta)",
+                  "explanation": "Tanto 'custa' coma 'vale' son correctos e habituais para preguntar o prezo."
+                }
+              }
             }
           ]
         }
@@ -117,10 +311,49 @@
               "id": "a2_u3_l1_e1",
               "type": "multiple_choice",
               "question": "Que significa 'lecer' en galego?",
-              "options": ["Ocio / Tiempo libre", "Trabajo", "Deporte", "Estudiar"],
+              "options": [
+                "Ocio / Tiempo libre",
+                "Trabajo",
+                "Deporte",
+                "Estudiar"
+              ],
               "correctAnswer": "Ocio / Tiempo libre",
               "explanation": "'Lecer' é a palabra propia galega para facer referencia ao tempo de descanso ou ocio.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Que significa 'lecer' en galego?",
+                  "explanation": "'Lecer' é a palabra propia galega para facer referencia ao tempo de descanso ou ocio."
+                },
+                "pt": {
+                  "question": "Como se diz 'lecer' em galego?",
+                  "explanation": "'Lecer' é a palabra propia galega para facer referencia ao tempo de descanso ou ocio."
+                },
+                "en": {
+                  "question": "How do you say 'lecer' in Galician?",
+                  "explanation": "'Lecer' é a palabra propia galega para facer referencia ao tempo de descanso ou ocio."
+                },
+                "fr": {
+                  "question": "Comment dit-on 'lecer' en galicien?",
+                  "explanation": "'Lecer' é a palabra propia galega para facer referencia ao tempo de descanso ou ocio."
+                },
+                "ro": {
+                  "question": "Cum se spune 'lecer' în galiciană?",
+                  "explanation": "'Lecer' é a palabra propia galega para facer referencia ao tempo de descanso ou ocio."
+                },
+                "it": {
+                  "question": "Come si dice 'lecer' in galiziano?",
+                  "explanation": "'Lecer' é a palabra propia galega para facer referencia ao tempo de descanso ou ocio."
+                },
+                "de": {
+                  "question": "Wie sagt man 'lecer' auf Galicisch?",
+                  "explanation": "'Lecer' é a palabra propia galega para facer referencia ao tempo de descanso ou ocio."
+                },
+                "zh": {
+                  "question": "如何用加利西亚语说“lecer”？",
+                  "explanation": "'Lecer' é a palabra propia galega para facer referencia ao tempo de descanso ou ocio."
+                }
+              }
             },
             {
               "id": "a2_u3_l1_e2",
@@ -128,12 +361,50 @@
               "question": "Empareja as actividades",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Escoitar música", "right": "Escuchar música"},
-                {"left": "Xogar ao fútbol", "right": "Jugar al fútbol"},
-                {"left": "Ver películas", "right": "Ver películas"},
-                {"left": "Ler libros", "right": "Leer libros"}
+                {
+                  "left": "Escoitar música",
+                  "right": "Escuchar música"
+                },
+                {
+                  "left": "Xogar ao fútbol",
+                  "right": "Jugar al fútbol"
+                },
+                {
+                  "left": "Ver películas",
+                  "right": "Ver películas"
+                },
+                {
+                  "left": "Ler libros",
+                  "right": "Leer libros"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja as actividades"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             }
           ]
         }
@@ -160,19 +431,97 @@
               "id": "a2_u4_l1_e1",
               "type": "multiple_choice",
               "question": "Como se di 'médico' ou 'médica' en galego?",
-              "options": ["Médico / Médica", "Mestre / Mestra", "Avogado / Avogada", "Enxeñeiro / Enxeñeira"],
+              "options": [
+                "Médico / Médica",
+                "Mestre / Mestra",
+                "Avogado / Avogada",
+                "Enxeñeiro / Enxeñeira"
+              ],
               "correctAnswer": "Médico / Médica",
               "explanation": "'Médico/a' utilízase igual en galego e en castelán.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di 'médico' ou 'médica' en galego?",
+                  "explanation": "'Médico/a' utilízase igual en galego e en castelán."
+                },
+                "pt": {
+                  "question": "Como se diz 'médico' em galego?",
+                  "explanation": "'Médico/a' utilízase igual en galego e en castelán."
+                },
+                "en": {
+                  "question": "How do you say 'médico' in Galician?",
+                  "explanation": "'Médico/a' utilízase igual en galego e en castelán."
+                },
+                "fr": {
+                  "question": "Comment dit-on 'médico' en galicien?",
+                  "explanation": "'Médico/a' utilízase igual en galego e en castelán."
+                },
+                "ro": {
+                  "question": "Cum se spune 'médico' în galiciană?",
+                  "explanation": "'Médico/a' utilízase igual en galego e en castelán."
+                },
+                "it": {
+                  "question": "Come si dice 'médico' in galiziano?",
+                  "explanation": "'Médico/a' utilízase igual en galego e en castelán."
+                },
+                "de": {
+                  "question": "Wie sagt man 'médico' auf Galicisch?",
+                  "explanation": "'Médico/a' utilízase igual en galego e en castelán."
+                },
+                "zh": {
+                  "question": "如何用加利西亚语说“médico”？",
+                  "explanation": "'Médico/a' utilízase igual en galego e en castelán."
+                }
+              }
             },
             {
               "id": "a2_u4_l1_e2",
               "type": "fill_blank",
               "question": "Completa: 'O _____ traballa na escola' (El profesor)",
-              "options": ["mestre", "médico", "avogado", "pintor"],
+              "options": [
+                "mestre",
+                "médico",
+                "avogado",
+                "pintor"
+              ],
               "correctAnswer": "mestre",
               "explanation": "'Mestre' significa profesor ou maestro, e traballa no colexio ou escola.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: 'O _____ traballa na escola' (El profesor)",
+                  "explanation": "'Mestre' significa profesor ou maestro, e traballa no colexio ou escola."
+                },
+                "pt": {
+                  "question": "Completa: 'O _____ traballa na escola' (El profesor)",
+                  "explanation": "'Mestre' significa profesor ou maestro, e traballa no colexio ou escola."
+                },
+                "en": {
+                  "question": "Completa: 'O _____ traballa na escola' (El profesor)",
+                  "explanation": "'Mestre' significa profesor ou maestro, e traballa no colexio ou escola."
+                },
+                "fr": {
+                  "question": "Completa: 'O _____ traballa na escola' (El profesor)",
+                  "explanation": "'Mestre' significa profesor ou maestro, e traballa no colexio ou escola."
+                },
+                "ro": {
+                  "question": "Completa: 'O _____ traballa na escola' (El profesor)",
+                  "explanation": "'Mestre' significa profesor ou maestro, e traballa no colexio ou escola."
+                },
+                "it": {
+                  "question": "Completa: 'O _____ traballa na escola' (El profesor)",
+                  "explanation": "'Mestre' significa profesor ou maestro, e traballa no colexio ou escola."
+                },
+                "de": {
+                  "question": "Completa: 'O _____ traballa na escola' (El profesor)",
+                  "explanation": "'Mestre' significa profesor ou maestro, e traballa no colexio ou escola."
+                },
+                "zh": {
+                  "question": "Completa: 'O _____ traballa na escola' (El profesor)",
+                  "explanation": "'Mestre' significa profesor ou maestro, e traballa no colexio ou escola."
+                }
+              }
             }
           ]
         }
@@ -199,10 +548,49 @@
               "id": "a2_u5_l1_e1",
               "type": "multiple_choice",
               "question": "Como se di \"cabeza\" en galego?",
-              "options": ["Cabeza", "Man", "Perna", "Brazo"],
+              "options": [
+                "Cabeza",
+                "Man",
+                "Perna",
+                "Brazo"
+              ],
               "correctAnswer": "Cabeza",
               "explanation": "\"Cabeza\" mantense case idéntico ao castelán.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"cabeza\" en galego?",
+                  "explanation": "\"Cabeza\" mantense case idéntico ao castelán."
+                },
+                "pt": {
+                  "question": "Como se di \"cabeza\" en galego?",
+                  "explanation": "\"Cabeza\" mantense case idéntico ao castelán."
+                },
+                "en": {
+                  "question": "Como se di \"cabeza\" en galego?",
+                  "explanation": "\"Cabeza\" mantense case idéntico ao castelán."
+                },
+                "fr": {
+                  "question": "Como se di \"cabeza\" en galego?",
+                  "explanation": "\"Cabeza\" mantense case idéntico ao castelán."
+                },
+                "ro": {
+                  "question": "Como se di \"cabeza\" en galego?",
+                  "explanation": "\"Cabeza\" mantense case idéntico ao castelán."
+                },
+                "it": {
+                  "question": "Como se di \"cabeza\" en galego?",
+                  "explanation": "\"Cabeza\" mantense case idéntico ao castelán."
+                },
+                "de": {
+                  "question": "Como se di \"cabeza\" en galego?",
+                  "explanation": "\"Cabeza\" mantense case idéntico ao castelán."
+                },
+                "zh": {
+                  "question": "Como se di \"cabeza\" en galego?",
+                  "explanation": "\"Cabeza\" mantense case idéntico ao castelán."
+                }
+              }
             },
             {
               "id": "a2_u5_l1_e2",
@@ -210,21 +598,98 @@
               "question": "Empareja as partes do corpo",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Man", "right": "Mano"},
-                {"left": "Pé", "right": "Pie"},
-                {"left": "Brazo", "right": "Brazo"},
-                {"left": "Perna", "right": "Pierna"}
+                {
+                  "left": "Man",
+                  "right": "Mano"
+                },
+                {
+                  "left": "Pé",
+                  "right": "Pie"
+                },
+                {
+                  "left": "Brazo",
+                  "right": "Brazo"
+                },
+                {
+                  "left": "Perna",
+                  "right": "Pierna"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja as partes do corpo"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a2_u5_l1_e3",
               "type": "fill_blank",
               "question": "Completa: 'Vexo cos meus _____' (ojos)",
-              "options": ["ollos", "orellas", "boca", "nariz"],
+              "options": [
+                "ollos",
+                "orellas",
+                "boca",
+                "nariz"
+              ],
               "correctAnswer": "ollos",
               "explanation": "\"Ollos\" é a forma galega para \"ojos\".",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: 'Vexo cos meus _____' (ojos)",
+                  "explanation": "\"Ollos\" é a forma galega para \"ojos\"."
+                },
+                "pt": {
+                  "question": "Completa: 'Vexo cos meus _____' (ojos)",
+                  "explanation": "\"Ollos\" é a forma galega para \"ojos\"."
+                },
+                "en": {
+                  "question": "Completa: 'Vexo cos meus _____' (ojos)",
+                  "explanation": "\"Ollos\" é a forma galega para \"ojos\"."
+                },
+                "fr": {
+                  "question": "Completa: 'Vexo cos meus _____' (ojos)",
+                  "explanation": "\"Ollos\" é a forma galega para \"ojos\"."
+                },
+                "ro": {
+                  "question": "Completa: 'Vexo cos meus _____' (ojos)",
+                  "explanation": "\"Ollos\" é a forma galega para \"ojos\"."
+                },
+                "it": {
+                  "question": "Completa: 'Vexo cos meus _____' (ojos)",
+                  "explanation": "\"Ollos\" é a forma galega para \"ojos\"."
+                },
+                "de": {
+                  "question": "Completa: 'Vexo cos meus _____' (ojos)",
+                  "explanation": "\"Ollos\" é a forma galega para \"ojos\"."
+                },
+                "zh": {
+                  "question": "Completa: 'Vexo cos meus _____' (ojos)",
+                  "explanation": "\"Ollos\" é a forma galega para \"ojos\"."
+                }
+              }
             }
           ]
         },
@@ -240,19 +705,97 @@
               "id": "a2_u5_l2_e1",
               "type": "multiple_choice",
               "question": "Como se di \"me duele la cabeza\" en galego?",
-              "options": ["Dóeme a cabeza", "Teño a cabeza", "Son a cabeza", "Estou a cabeza"],
+              "options": [
+                "Dóeme a cabeza",
+                "Teño a cabeza",
+                "Son a cabeza",
+                "Estou a cabeza"
+              ],
               "correctAnswer": "Dóeme a cabeza",
               "explanation": "O verbo \"doer\" funciona igual que en castelán, con pronome de complemento indirecto.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"me duele la cabeza\" en galego?",
+                  "explanation": "O verbo \"doer\" funciona igual que en castelán, con pronome de complemento indirecto."
+                },
+                "pt": {
+                  "question": "Como se di \"me duele la cabeza\" en galego?",
+                  "explanation": "O verbo \"doer\" funciona igual que en castelán, con pronome de complemento indirecto."
+                },
+                "en": {
+                  "question": "Como se di \"me duele la cabeza\" en galego?",
+                  "explanation": "O verbo \"doer\" funciona igual que en castelán, con pronome de complemento indirecto."
+                },
+                "fr": {
+                  "question": "Como se di \"me duele la cabeza\" en galego?",
+                  "explanation": "O verbo \"doer\" funciona igual que en castelán, con pronome de complemento indirecto."
+                },
+                "ro": {
+                  "question": "Como se di \"me duele la cabeza\" en galego?",
+                  "explanation": "O verbo \"doer\" funciona igual que en castelán, con pronome de complemento indirecto."
+                },
+                "it": {
+                  "question": "Como se di \"me duele la cabeza\" en galego?",
+                  "explanation": "O verbo \"doer\" funciona igual que en castelán, con pronome de complemento indirecto."
+                },
+                "de": {
+                  "question": "Como se di \"me duele la cabeza\" en galego?",
+                  "explanation": "O verbo \"doer\" funciona igual que en castelán, con pronome de complemento indirecto."
+                },
+                "zh": {
+                  "question": "Como se di \"me duele la cabeza\" en galego?",
+                  "explanation": "O verbo \"doer\" funciona igual que en castelán, con pronome de complemento indirecto."
+                }
+              }
             },
             {
               "id": "a2_u5_l2_e2",
               "type": "fill_blank",
               "question": "Completa: 'Teño _____, creo que estou enfermo' (fiebre)",
-              "options": ["febre", "frío", "calor", "sede"],
+              "options": [
+                "febre",
+                "frío",
+                "calor",
+                "sede"
+              ],
               "correctAnswer": "febre",
               "explanation": "A febre indica unha temperatura corporal elevada.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: 'Teño _____, creo que estou enfermo' (fiebre)",
+                  "explanation": "A febre indica unha temperatura corporal elevada."
+                },
+                "pt": {
+                  "question": "Completa: 'Teño _____, creo que estou enfermo' (fiebre)",
+                  "explanation": "A febre indica unha temperatura corporal elevada."
+                },
+                "en": {
+                  "question": "Completa: 'Teño _____, creo que estou enfermo' (fiebre)",
+                  "explanation": "A febre indica unha temperatura corporal elevada."
+                },
+                "fr": {
+                  "question": "Completa: 'Teño _____, creo que estou enfermo' (fiebre)",
+                  "explanation": "A febre indica unha temperatura corporal elevada."
+                },
+                "ro": {
+                  "question": "Completa: 'Teño _____, creo que estou enfermo' (fiebre)",
+                  "explanation": "A febre indica unha temperatura corporal elevada."
+                },
+                "it": {
+                  "question": "Completa: 'Teño _____, creo que estou enfermo' (fiebre)",
+                  "explanation": "A febre indica unha temperatura corporal elevada."
+                },
+                "de": {
+                  "question": "Completa: 'Teño _____, creo que estou enfermo' (fiebre)",
+                  "explanation": "A febre indica unha temperatura corporal elevada."
+                },
+                "zh": {
+                  "question": "Completa: 'Teño _____, creo que estou enfermo' (fiebre)",
+                  "explanation": "A febre indica unha temperatura corporal elevada."
+                }
+              }
             },
             {
               "id": "a2_u5_l2_e3",
@@ -260,12 +803,50 @@
               "question": "Empareja os síntomas e frases médicas",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Estou enfermo/a", "right": "Estoy enfermo/a"},
-                {"left": "Teño febre", "right": "Tengo fiebre"},
-                {"left": "Dóeme a gorxa", "right": "Me duele la garganta"},
-                {"left": "Necesito un médico", "right": "Necesito un médico"}
+                {
+                  "left": "Estou enfermo/a",
+                  "right": "Estoy enfermo/a"
+                },
+                {
+                  "left": "Teño febre",
+                  "right": "Tengo fiebre"
+                },
+                {
+                  "left": "Dóeme a gorxa",
+                  "right": "Me duele la garganta"
+                },
+                {
+                  "left": "Necesito un médico",
+                  "right": "Necesito un médico"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja os síntomas e frases médicas"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             }
           ]
         }
@@ -292,10 +873,49 @@
               "id": "a2_u6_l1_e1",
               "type": "multiple_choice",
               "question": "Como se di \"a la derecha\" en galego?",
-              "options": ["Á dereita", "Á esquerda", "Recto", "Preto"],
+              "options": [
+                "Á dereita",
+                "Á esquerda",
+                "Recto",
+                "Preto"
+              ],
               "correctAnswer": "Á dereita",
               "explanation": "\"Dereita\" é un falso amigo parcial: en galego \"dereita\" tamén significa \"recta\" en certos contextos, pero aquí indica dirección.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"a la derecha\" en galego?",
+                  "explanation": "\"Dereita\" é un falso amigo parcial: en galego \"dereita\" tamén significa \"recta\" en certos contextos, pero aquí indica dirección."
+                },
+                "pt": {
+                  "question": "Como se di \"a la derecha\" en galego?",
+                  "explanation": "\"Dereita\" é un falso amigo parcial: en galego \"dereita\" tamén significa \"recta\" en certos contextos, pero aquí indica dirección."
+                },
+                "en": {
+                  "question": "Como se di \"a la derecha\" en galego?",
+                  "explanation": "\"Dereita\" é un falso amigo parcial: en galego \"dereita\" tamén significa \"recta\" en certos contextos, pero aquí indica dirección."
+                },
+                "fr": {
+                  "question": "Como se di \"a la derecha\" en galego?",
+                  "explanation": "\"Dereita\" é un falso amigo parcial: en galego \"dereita\" tamén significa \"recta\" en certos contextos, pero aquí indica dirección."
+                },
+                "ro": {
+                  "question": "Como se di \"a la derecha\" en galego?",
+                  "explanation": "\"Dereita\" é un falso amigo parcial: en galego \"dereita\" tamén significa \"recta\" en certos contextos, pero aquí indica dirección."
+                },
+                "it": {
+                  "question": "Como se di \"a la derecha\" en galego?",
+                  "explanation": "\"Dereita\" é un falso amigo parcial: en galego \"dereita\" tamén significa \"recta\" en certos contextos, pero aquí indica dirección."
+                },
+                "de": {
+                  "question": "Como se di \"a la derecha\" en galego?",
+                  "explanation": "\"Dereita\" é un falso amigo parcial: en galego \"dereita\" tamén significa \"recta\" en certos contextos, pero aquí indica dirección."
+                },
+                "zh": {
+                  "question": "Como se di \"a la derecha\" en galego?",
+                  "explanation": "\"Dereita\" é un falso amigo parcial: en galego \"dereita\" tamén significa \"recta\" en certos contextos, pero aquí indica dirección."
+                }
+              }
             },
             {
               "id": "a2_u6_l1_e2",
@@ -303,30 +923,146 @@
               "question": "Empareja as direccións",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Á esquerda", "right": "A la izquierda"},
-                {"left": "Recto", "right": "Recto/derecho"},
-                {"left": "Preto", "right": "Cerca"},
-                {"left": "Lonxe", "right": "Lejos"}
+                {
+                  "left": "Á esquerda",
+                  "right": "A la izquierda"
+                },
+                {
+                  "left": "Recto",
+                  "right": "Recto/derecho"
+                },
+                {
+                  "left": "Preto",
+                  "right": "Cerca"
+                },
+                {
+                  "left": "Lonxe",
+                  "right": "Lejos"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja as direccións"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a2_u6_l1_e3",
               "type": "fill_blank",
               "question": "Completa: '¿_____ está a estación?' (Dónde)",
-              "options": ["Onde", "Que", "Cando", "Quen"],
+              "options": [
+                "Onde",
+                "Que",
+                "Cando",
+                "Quen"
+              ],
               "correctAnswer": "Onde",
               "explanation": "\"Onde\" é o interrogativo galego para \"dónde\".",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: '¿_____ está a estación?' (Dónde)",
+                  "explanation": "\"Onde\" é o interrogativo galego para \"dónde\"."
+                },
+                "pt": {
+                  "question": "Completa: '¿_____ está a estación?' (Dónde)",
+                  "explanation": "\"Onde\" é o interrogativo galego para \"dónde\"."
+                },
+                "en": {
+                  "question": "Completa: '¿_____ está a estación?' (Dónde)",
+                  "explanation": "\"Onde\" é o interrogativo galego para \"dónde\"."
+                },
+                "fr": {
+                  "question": "Completa: '¿_____ está a estación?' (Dónde)",
+                  "explanation": "\"Onde\" é o interrogativo galego para \"dónde\"."
+                },
+                "ro": {
+                  "question": "Completa: '¿_____ está a estación?' (Dónde)",
+                  "explanation": "\"Onde\" é o interrogativo galego para \"dónde\"."
+                },
+                "it": {
+                  "question": "Completa: '¿_____ está a estación?' (Dónde)",
+                  "explanation": "\"Onde\" é o interrogativo galego para \"dónde\"."
+                },
+                "de": {
+                  "question": "Completa: '¿_____ está a estación?' (Dónde)",
+                  "explanation": "\"Onde\" é o interrogativo galego para \"dónde\"."
+                },
+                "zh": {
+                  "question": "Completa: '¿_____ está a estación?' (Dónde)",
+                  "explanation": "\"Onde\" é o interrogativo galego para \"dónde\"."
+                }
+              }
             },
             {
               "id": "a2_u6_l1_e4",
               "type": "multiple_choice",
               "question": "Como preguntarías \"¿Está cerca de aquí?\"",
-              "options": ["Está preto de aquí?", "Está lonxe de aquí?", "Está á dereita?", "Está recto?"],
+              "options": [
+                "Está preto de aquí?",
+                "Está lonxe de aquí?",
+                "Está á dereita?",
+                "Está recto?"
+              ],
               "correctAnswer": "Está preto de aquí?",
               "explanation": "'Preto de' significa cerca de en galego.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como preguntarías \"¿Está cerca de aquí?\"",
+                  "explanation": "'Preto de' significa cerca de en galego."
+                },
+                "pt": {
+                  "question": "Como preguntarías \"¿Está cerca de aquí?\"",
+                  "explanation": "'Preto de' significa cerca de en galego."
+                },
+                "en": {
+                  "question": "Como preguntarías \"¿Está cerca de aquí?\"",
+                  "explanation": "'Preto de' significa cerca de en galego."
+                },
+                "fr": {
+                  "question": "Como preguntarías \"¿Está cerca de aquí?\"",
+                  "explanation": "'Preto de' significa cerca de en galego."
+                },
+                "ro": {
+                  "question": "Como preguntarías \"¿Está cerca de aquí?\"",
+                  "explanation": "'Preto de' significa cerca de en galego."
+                },
+                "it": {
+                  "question": "Como preguntarías \"¿Está cerca de aquí?\"",
+                  "explanation": "'Preto de' significa cerca de en galego."
+                },
+                "de": {
+                  "question": "Como preguntarías \"¿Está cerca de aquí?\"",
+                  "explanation": "'Preto de' significa cerca de en galego."
+                },
+                "zh": {
+                  "question": "Como preguntarías \"¿Está cerca de aquí?\"",
+                  "explanation": "'Preto de' significa cerca de en galego."
+                }
+              }
             }
           ]
         }
@@ -353,10 +1089,49 @@
               "id": "a2_u7_l1_e1",
               "type": "multiple_choice",
               "question": "Como se di \"quiero\" (para pedir) en galego?",
-              "options": ["Quero", "Teño", "Son", "Estou"],
+              "options": [
+                "Quero",
+                "Teño",
+                "Son",
+                "Estou"
+              ],
               "correctAnswer": "Quero",
               "explanation": "\"Quero un café\" equivale a \"Quiero un café\".",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"quiero\" (para pedir) en galego?",
+                  "explanation": "\"Quero un café\" equivale a \"Quiero un café\"."
+                },
+                "pt": {
+                  "question": "Como se di \"quiero\" (para pedir) en galego?",
+                  "explanation": "\"Quero un café\" equivale a \"Quiero un café\"."
+                },
+                "en": {
+                  "question": "Como se di \"quiero\" (para pedir) en galego?",
+                  "explanation": "\"Quero un café\" equivale a \"Quiero un café\"."
+                },
+                "fr": {
+                  "question": "Como se di \"quiero\" (para pedir) en galego?",
+                  "explanation": "\"Quero un café\" equivale a \"Quiero un café\"."
+                },
+                "ro": {
+                  "question": "Como se di \"quiero\" (para pedir) en galego?",
+                  "explanation": "\"Quero un café\" equivale a \"Quiero un café\"."
+                },
+                "it": {
+                  "question": "Como se di \"quiero\" (para pedir) en galego?",
+                  "explanation": "\"Quero un café\" equivale a \"Quiero un café\"."
+                },
+                "de": {
+                  "question": "Como se di \"quiero\" (para pedir) en galego?",
+                  "explanation": "\"Quero un café\" equivale a \"Quiero un café\"."
+                },
+                "zh": {
+                  "question": "Como se di \"quiero\" (para pedir) en galego?",
+                  "explanation": "\"Quero un café\" equivale a \"Quiero un café\"."
+                }
+              }
             },
             {
               "id": "a2_u7_l1_e2",
@@ -364,30 +1139,146 @@
               "question": "Empareja os elementos da mesa",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "O menú", "right": "El menú"},
-                {"left": "O prato", "right": "El plato"},
-                {"left": "O garfo", "right": "El tenedor"},
-                {"left": "O coitelo", "right": "El cuchillo"}
+                {
+                  "left": "O menú",
+                  "right": "El menú"
+                },
+                {
+                  "left": "O prato",
+                  "right": "El plato"
+                },
+                {
+                  "left": "O garfo",
+                  "right": "El tenedor"
+                },
+                {
+                  "left": "O coitelo",
+                  "right": "El cuchillo"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja os elementos da mesa"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a2_u7_l1_e3",
               "type": "fill_blank",
               "question": "Completa: 'A _____, por favor' (la cuenta)",
-              "options": ["conta", "culler", "auga", "mesa"],
+              "options": [
+                "conta",
+                "culler",
+                "auga",
+                "mesa"
+              ],
               "correctAnswer": "conta",
               "explanation": "Pedir \"a conta\" é a forma habitual de solicitar a factura nun restaurante.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: 'A _____, por favor' (la cuenta)",
+                  "explanation": "Pedir \"a conta\" é a forma habitual de solicitar a factura nun restaurante."
+                },
+                "pt": {
+                  "question": "Completa: 'A _____, por favor' (la cuenta)",
+                  "explanation": "Pedir \"a conta\" é a forma habitual de solicitar a factura nun restaurante."
+                },
+                "en": {
+                  "question": "Completa: 'A _____, por favor' (la cuenta)",
+                  "explanation": "Pedir \"a conta\" é a forma habitual de solicitar a factura nun restaurante."
+                },
+                "fr": {
+                  "question": "Completa: 'A _____, por favor' (la cuenta)",
+                  "explanation": "Pedir \"a conta\" é a forma habitual de solicitar a factura nun restaurante."
+                },
+                "ro": {
+                  "question": "Completa: 'A _____, por favor' (la cuenta)",
+                  "explanation": "Pedir \"a conta\" é a forma habitual de solicitar a factura nun restaurante."
+                },
+                "it": {
+                  "question": "Completa: 'A _____, por favor' (la cuenta)",
+                  "explanation": "Pedir \"a conta\" é a forma habitual de solicitar a factura nun restaurante."
+                },
+                "de": {
+                  "question": "Completa: 'A _____, por favor' (la cuenta)",
+                  "explanation": "Pedir \"a conta\" é a forma habitual de solicitar a factura nun restaurante."
+                },
+                "zh": {
+                  "question": "Completa: 'A _____, por favor' (la cuenta)",
+                  "explanation": "Pedir \"a conta\" é a forma habitual de solicitar a factura nun restaurante."
+                }
+              }
             },
             {
               "id": "a2_u7_l1_e4",
               "type": "multiple_choice",
               "question": "Como se di \"agua\" en galego?",
-              "options": ["Auga", "Viño", "Leite", "Café"],
+              "options": [
+                "Auga",
+                "Viño",
+                "Leite",
+                "Café"
+              ],
               "correctAnswer": "Auga",
               "explanation": "Auga escríbese con 'u' en galego.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"agua\" en galego?",
+                  "explanation": "Auga escríbese con 'u' en galego."
+                },
+                "pt": {
+                  "question": "Como se di \"agua\" en galego?",
+                  "explanation": "Auga escríbese con 'u' en galego."
+                },
+                "en": {
+                  "question": "Como se di \"agua\" en galego?",
+                  "explanation": "Auga escríbese con 'u' en galego."
+                },
+                "fr": {
+                  "question": "Como se di \"agua\" en galego?",
+                  "explanation": "Auga escríbese con 'u' en galego."
+                },
+                "ro": {
+                  "question": "Como se di \"agua\" en galego?",
+                  "explanation": "Auga escríbese con 'u' en galego."
+                },
+                "it": {
+                  "question": "Como se di \"agua\" en galego?",
+                  "explanation": "Auga escríbese con 'u' en galego."
+                },
+                "de": {
+                  "question": "Como se di \"agua\" en galego?",
+                  "explanation": "Auga escríbese con 'u' en galego."
+                },
+                "zh": {
+                  "question": "Como se di \"agua\" en galego?",
+                  "explanation": "Auga escríbese con 'u' en galego."
+                }
+              }
             }
           ]
         }
@@ -414,10 +1305,49 @@
               "id": "a2_u8_l1_e1",
               "type": "multiple_choice",
               "question": "Como se di \"yo hablé\" en galego?",
-              "options": ["Eu falei", "Eu falo", "Eu falaba", "Eu falarei"],
+              "options": [
+                "Eu falei",
+                "Eu falo",
+                "Eu falaba",
+                "Eu falarei"
+              ],
               "correctAnswer": "Eu falei",
               "explanation": "\"Falei\" é a primeira persoa do pretérito do verbo regular \"falar\".",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"yo hablé\" en galego?",
+                  "explanation": "\"Falei\" é a primeira persoa do pretérito do verbo regular \"falar\"."
+                },
+                "pt": {
+                  "question": "Como se di \"yo hablé\" en galego?",
+                  "explanation": "\"Falei\" é a primeira persoa do pretérito do verbo regular \"falar\"."
+                },
+                "en": {
+                  "question": "Como se di \"yo hablé\" en galego?",
+                  "explanation": "\"Falei\" é a primeira persoa do pretérito do verbo regular \"falar\"."
+                },
+                "fr": {
+                  "question": "Como se di \"yo hablé\" en galego?",
+                  "explanation": "\"Falei\" é a primeira persoa do pretérito do verbo regular \"falar\"."
+                },
+                "ro": {
+                  "question": "Como se di \"yo hablé\" en galego?",
+                  "explanation": "\"Falei\" é a primeira persoa do pretérito do verbo regular \"falar\"."
+                },
+                "it": {
+                  "question": "Como se di \"yo hablé\" en galego?",
+                  "explanation": "\"Falei\" é a primeira persoa do pretérito do verbo regular \"falar\"."
+                },
+                "de": {
+                  "question": "Como se di \"yo hablé\" en galego?",
+                  "explanation": "\"Falei\" é a primeira persoa do pretérito do verbo regular \"falar\"."
+                },
+                "zh": {
+                  "question": "Como se di \"yo hablé\" en galego?",
+                  "explanation": "\"Falei\" é a primeira persoa do pretérito do verbo regular \"falar\"."
+                }
+              }
             },
             {
               "id": "a2_u8_l1_e2",
@@ -425,30 +1355,146 @@
               "question": "Empareja as conxugacións de falar no pasado",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Ti falaches", "right": "Tú hablaste"},
-                {"left": "El/Ela falou", "right": "Él/Ella habló"},
-                {"left": "Nós falamos", "right": "Nosotros hablamos"},
-                {"left": "Eles falaron", "right": "Ellos hablaron"}
+                {
+                  "left": "Ti falaches",
+                  "right": "Tú hablaste"
+                },
+                {
+                  "left": "El/Ela falou",
+                  "right": "Él/Ella habló"
+                },
+                {
+                  "left": "Nós falamos",
+                  "right": "Nosotros hablamos"
+                },
+                {
+                  "left": "Eles falaron",
+                  "right": "Ellos hablaron"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja as conxugacións de falar no pasado"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a2_u8_l1_e3",
               "type": "fill_blank",
               "question": "Completa: 'Onte eu _____ pescado' (comí)",
-              "options": ["comín", "como", "comerei", "comía"],
+              "options": [
+                "comín",
+                "como",
+                "comerei",
+                "comía"
+              ],
               "correctAnswer": "comín",
               "explanation": "\"Comín\" é a primeira persoa do pretérito do verbo regular \"comer\".",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: 'Onte eu _____ pescado' (comí)",
+                  "explanation": "\"Comín\" é a primeira persoa do pretérito do verbo regular \"comer\"."
+                },
+                "pt": {
+                  "question": "Completa: 'Onte eu _____ pescado' (comí)",
+                  "explanation": "\"Comín\" é a primeira persoa do pretérito do verbo regular \"comer\"."
+                },
+                "en": {
+                  "question": "Completa: 'Onte eu _____ pescado' (comí)",
+                  "explanation": "\"Comín\" é a primeira persoa do pretérito do verbo regular \"comer\"."
+                },
+                "fr": {
+                  "question": "Completa: 'Onte eu _____ pescado' (comí)",
+                  "explanation": "\"Comín\" é a primeira persoa do pretérito do verbo regular \"comer\"."
+                },
+                "ro": {
+                  "question": "Completa: 'Onte eu _____ pescado' (comí)",
+                  "explanation": "\"Comín\" é a primeira persoa do pretérito do verbo regular \"comer\"."
+                },
+                "it": {
+                  "question": "Completa: 'Onte eu _____ pescado' (comí)",
+                  "explanation": "\"Comín\" é a primeira persoa do pretérito do verbo regular \"comer\"."
+                },
+                "de": {
+                  "question": "Completa: 'Onte eu _____ pescado' (comí)",
+                  "explanation": "\"Comín\" é a primeira persoa do pretérito do verbo regular \"comer\"."
+                },
+                "zh": {
+                  "question": "Completa: 'Onte eu _____ pescado' (comí)",
+                  "explanation": "\"Comín\" é a primeira persoa do pretérito do verbo regular \"comer\"."
+                }
+              }
             },
             {
               "id": "a2_u8_l1_e4",
               "type": "multiple_choice",
               "question": "Como se di \"ellos comieron\" en galego?",
-              "options": ["Eles comeron", "Eles comeron / comían", "Eles comen", "Eles comerán"],
+              "options": [
+                "Eles comeron",
+                "Eles comeron / comían",
+                "Eles comen",
+                "Eles comerán"
+              ],
               "correctAnswer": "Eles comeron",
               "explanation": "A terminación da terceira persoa de plural en pretérito de verbos en -er é '-eron'.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"ellos comieron\" en galego?",
+                  "explanation": "A terminación da terceira persoa de plural en pretérito de verbos en -er é '-eron'."
+                },
+                "pt": {
+                  "question": "Como se di \"ellos comieron\" en galego?",
+                  "explanation": "A terminación da terceira persoa de plural en pretérito de verbos en -er é '-eron'."
+                },
+                "en": {
+                  "question": "Como se di \"ellos comieron\" en galego?",
+                  "explanation": "A terminación da terceira persoa de plural en pretérito de verbos en -er é '-eron'."
+                },
+                "fr": {
+                  "question": "Como se di \"ellos comieron\" en galego?",
+                  "explanation": "A terminación da terceira persoa de plural en pretérito de verbos en -er é '-eron'."
+                },
+                "ro": {
+                  "question": "Como se di \"ellos comieron\" en galego?",
+                  "explanation": "A terminación da terceira persoa de plural en pretérito de verbos en -er é '-eron'."
+                },
+                "it": {
+                  "question": "Como se di \"ellos comieron\" en galego?",
+                  "explanation": "A terminación da terceira persoa de plural en pretérito de verbos en -er é '-eron'."
+                },
+                "de": {
+                  "question": "Como se di \"ellos comieron\" en galego?",
+                  "explanation": "A terminación da terceira persoa de plural en pretérito de verbos en -er é '-eron'."
+                },
+                "zh": {
+                  "question": "Como se di \"ellos comieron\" en galego?",
+                  "explanation": "A terminación da terceira persoa de plural en pretérito de verbos en -er é '-eron'."
+                }
+              }
             }
           ]
         },
@@ -464,10 +1510,49 @@
               "id": "a2_u8_l2_e1",
               "type": "multiple_choice",
               "question": "Como se di \"yo viví\" en galego?",
-              "options": ["Eu vivín", "Eu vivo", "Eu vivía", "Eu vivirei"],
+              "options": [
+                "Eu vivín",
+                "Eu vivo",
+                "Eu vivía",
+                "Eu vivirei"
+              ],
               "correctAnswer": "Eu vivín",
               "explanation": "Os verbos rematados en \"-ir\", como \"vivir\", forman o pretérito engadindo \"-ín\" na primeira persoa.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"yo viví\" en galego?",
+                  "explanation": "Os verbos rematados en \"-ir\", como \"vivir\", forman o pretérito engadindo \"-ín\" na primeira persoa."
+                },
+                "pt": {
+                  "question": "Como se di \"yo viví\" en galego?",
+                  "explanation": "Os verbos rematados en \"-ir\", como \"vivir\", forman o pretérito engadindo \"-ín\" na primeira persoa."
+                },
+                "en": {
+                  "question": "Como se di \"yo viví\" en galego?",
+                  "explanation": "Os verbos rematados en \"-ir\", como \"vivir\", forman o pretérito engadindo \"-ín\" na primeira persoa."
+                },
+                "fr": {
+                  "question": "Como se di \"yo viví\" en galego?",
+                  "explanation": "Os verbos rematados en \"-ir\", como \"vivir\", forman o pretérito engadindo \"-ín\" na primeira persoa."
+                },
+                "ro": {
+                  "question": "Como se di \"yo viví\" en galego?",
+                  "explanation": "Os verbos rematados en \"-ir\", como \"vivir\", forman o pretérito engadindo \"-ín\" na primeira persoa."
+                },
+                "it": {
+                  "question": "Como se di \"yo viví\" en galego?",
+                  "explanation": "Os verbos rematados en \"-ir\", como \"vivir\", forman o pretérito engadindo \"-ín\" na primeira persoa."
+                },
+                "de": {
+                  "question": "Como se di \"yo viví\" en galego?",
+                  "explanation": "Os verbos rematados en \"-ir\", como \"vivir\", forman o pretérito engadindo \"-ín\" na primeira persoa."
+                },
+                "zh": {
+                  "question": "Como se di \"yo viví\" en galego?",
+                  "explanation": "Os verbos rematados en \"-ir\", como \"vivir\", forman o pretérito engadindo \"-ín\" na primeira persoa."
+                }
+              }
             },
             {
               "id": "a2_u8_l2_e2",
@@ -475,21 +1560,98 @@
               "question": "Empareja as conxugacións de vivir no pasado",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Ti viviches", "right": "Tú viviste"},
-                {"left": "El/Ela viviu", "right": "Él/Ella vivió"},
-                {"left": "Nós vivimos", "right": "Nosotros vivimos"},
-                {"left": "Eles viviron", "right": "Ellos vivieron"}
+                {
+                  "left": "Ti viviches",
+                  "right": "Tú viviste"
+                },
+                {
+                  "left": "El/Ela viviu",
+                  "right": "Él/Ella vivió"
+                },
+                {
+                  "left": "Nós vivimos",
+                  "right": "Nosotros vivimos"
+                },
+                {
+                  "left": "Eles viviron",
+                  "right": "Ellos vivieron"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja as conxugacións de vivir no pasado"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a2_u8_l2_e3",
               "type": "fill_blank",
               "question": "Completa: 'Ela _____ en Ourense durante dous anos' (vivió)",
-              "options": ["viviu", "vive", "vivirá", "vivía"],
+              "options": [
+                "viviu",
+                "vive",
+                "vivirá",
+                "vivía"
+              ],
               "correctAnswer": "viviu",
               "explanation": "A terceira persoa de singular en pretérito de verbos en -ir remata en '-iu'.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: 'Ela _____ en Ourense durante dous anos' (vivió)",
+                  "explanation": "A terceira persoa de singular en pretérito de verbos en -ir remata en '-iu'."
+                },
+                "pt": {
+                  "question": "Completa: 'Ela _____ en Ourense durante dous anos' (vivió)",
+                  "explanation": "A terceira persoa de singular en pretérito de verbos en -ir remata en '-iu'."
+                },
+                "en": {
+                  "question": "Completa: 'Ela _____ en Ourense durante dous anos' (vivió)",
+                  "explanation": "A terceira persoa de singular en pretérito de verbos en -ir remata en '-iu'."
+                },
+                "fr": {
+                  "question": "Completa: 'Ela _____ en Ourense durante dous anos' (vivió)",
+                  "explanation": "A terceira persoa de singular en pretérito de verbos en -ir remata en '-iu'."
+                },
+                "ro": {
+                  "question": "Completa: 'Ela _____ en Ourense durante dous anos' (vivió)",
+                  "explanation": "A terceira persoa de singular en pretérito de verbos en -ir remata en '-iu'."
+                },
+                "it": {
+                  "question": "Completa: 'Ela _____ en Ourense durante dous anos' (vivió)",
+                  "explanation": "A terceira persoa de singular en pretérito de verbos en -ir remata en '-iu'."
+                },
+                "de": {
+                  "question": "Completa: 'Ela _____ en Ourense durante dous anos' (vivió)",
+                  "explanation": "A terceira persoa de singular en pretérito de verbos en -ir remata en '-iu'."
+                },
+                "zh": {
+                  "question": "Completa: 'Ela _____ en Ourense durante dous anos' (vivió)",
+                  "explanation": "A terceira persoa de singular en pretérito de verbos en -ir remata en '-iu'."
+                }
+              }
             }
           ]
         }
@@ -516,10 +1678,49 @@
               "id": "a2_u9_l1_e1",
               "type": "multiple_choice",
               "question": "Como se di \"ordenador\" en galego?",
-              "options": ["Ordenador", "Teléfono", "Pantalla", "Rato"],
+              "options": [
+                "Ordenador",
+                "Teléfono",
+                "Pantalla",
+                "Rato"
+              ],
               "correctAnswer": "Ordenador",
               "explanation": "\"Ordenador\" úsase igual que en castelán peninsular.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"ordenador\" en galego?",
+                  "explanation": "\"Ordenador\" úsase igual que en castelán peninsular."
+                },
+                "pt": {
+                  "question": "Como se di \"ordenador\" en galego?",
+                  "explanation": "\"Ordenador\" úsase igual que en castelán peninsular."
+                },
+                "en": {
+                  "question": "Como se di \"ordenador\" en galego?",
+                  "explanation": "\"Ordenador\" úsase igual que en castelán peninsular."
+                },
+                "fr": {
+                  "question": "Como se di \"ordenador\" en galego?",
+                  "explanation": "\"Ordenador\" úsase igual que en castelán peninsular."
+                },
+                "ro": {
+                  "question": "Como se di \"ordenador\" en galego?",
+                  "explanation": "\"Ordenador\" úsase igual que en castelán peninsular."
+                },
+                "it": {
+                  "question": "Como se di \"ordenador\" en galego?",
+                  "explanation": "\"Ordenador\" úsase igual que en castelán peninsular."
+                },
+                "de": {
+                  "question": "Como se di \"ordenador\" en galego?",
+                  "explanation": "\"Ordenador\" úsase igual que en castelán peninsular."
+                },
+                "zh": {
+                  "question": "Como se di \"ordenador\" en galego?",
+                  "explanation": "\"Ordenador\" úsase igual que en castelán peninsular."
+                }
+              }
             },
             {
               "id": "a2_u9_l1_e2",
@@ -527,30 +1728,146 @@
               "question": "Empareja os termos dixitais",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "O teléfono", "right": "El teléfono"},
-                {"left": "A pantalla", "right": "La pantalla"},
-                {"left": "O correo electrónico", "right": "El correo electrónico"},
-                {"left": "A internet", "right": "Internet"}
+                {
+                  "left": "O teléfono",
+                  "right": "El teléfono"
+                },
+                {
+                  "left": "A pantalla",
+                  "right": "La pantalla"
+                },
+                {
+                  "left": "O correo electrónico",
+                  "right": "El correo electrónico"
+                },
+                {
+                  "left": "A internet",
+                  "right": "Internet"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja os termos dixitais"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a2_u9_l1_e3",
               "type": "fill_blank",
               "question": "Completa: 'Vou _____ unha mensaxe' (enviar)",
-              "options": ["enviar", "recibir", "borrar", "escoitar"],
+              "options": [
+                "enviar",
+                "recibir",
+                "borrar",
+                "escoitar"
+              ],
               "correctAnswer": "enviar",
               "explanation": "Enviar refírese ao envío dunha comunicación dixital.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: 'Vou _____ unha mensaxe' (enviar)",
+                  "explanation": "Enviar refírese ao envío dunha comunicación dixital."
+                },
+                "pt": {
+                  "question": "Completa: 'Vou _____ unha mensaxe' (enviar)",
+                  "explanation": "Enviar refírese ao envío dunha comunicación dixital."
+                },
+                "en": {
+                  "question": "Completa: 'Vou _____ unha mensaxe' (enviar)",
+                  "explanation": "Enviar refírese ao envío dunha comunicación dixital."
+                },
+                "fr": {
+                  "question": "Completa: 'Vou _____ unha mensaxe' (enviar)",
+                  "explanation": "Enviar refírese ao envío dunha comunicación dixital."
+                },
+                "ro": {
+                  "question": "Completa: 'Vou _____ unha mensaxe' (enviar)",
+                  "explanation": "Enviar refírese ao envío dunha comunicación dixital."
+                },
+                "it": {
+                  "question": "Completa: 'Vou _____ unha mensaxe' (enviar)",
+                  "explanation": "Enviar refírese ao envío dunha comunicación dixital."
+                },
+                "de": {
+                  "question": "Completa: 'Vou _____ unha mensaxe' (enviar)",
+                  "explanation": "Enviar refírese ao envío dunha comunicación dixital."
+                },
+                "zh": {
+                  "question": "Completa: 'Vou _____ unha mensaxe' (enviar)",
+                  "explanation": "Enviar refírese ao envío dunha comunicación dixital."
+                }
+              }
             },
             {
               "id": "a2_u9_l1_e4",
               "type": "multiple_choice",
               "question": "Como se di \"contraseña\" en galego?",
-              "options": ["Contrasinal", "Chave", "Código", "Sinal"],
+              "options": [
+                "Contrasinal",
+                "Chave",
+                "Código",
+                "Sinal"
+              ],
               "correctAnswer": "Contrasinal",
               "explanation": "\"Contrasinal\" é o termo normativo galego recomendado polos organismos lingüísticos oficiais para \"contraseña\".",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"contraseña\" en galego?",
+                  "explanation": "\"Contrasinal\" é o termo normativo galego recomendado polos organismos lingüísticos oficiais para \"contraseña\"."
+                },
+                "pt": {
+                  "question": "Como se di \"contraseña\" en galego?",
+                  "explanation": "\"Contrasinal\" é o termo normativo galego recomendado polos organismos lingüísticos oficiais para \"contraseña\"."
+                },
+                "en": {
+                  "question": "Como se di \"contraseña\" en galego?",
+                  "explanation": "\"Contrasinal\" é o termo normativo galego recomendado polos organismos lingüísticos oficiais para \"contraseña\"."
+                },
+                "fr": {
+                  "question": "Como se di \"contraseña\" en galego?",
+                  "explanation": "\"Contrasinal\" é o termo normativo galego recomendado polos organismos lingüísticos oficiais para \"contraseña\"."
+                },
+                "ro": {
+                  "question": "Como se di \"contraseña\" en galego?",
+                  "explanation": "\"Contrasinal\" é o termo normativo galego recomendado polos organismos lingüísticos oficiais para \"contraseña\"."
+                },
+                "it": {
+                  "question": "Como se di \"contraseña\" en galego?",
+                  "explanation": "\"Contrasinal\" é o termo normativo galego recomendado polos organismos lingüísticos oficiais para \"contraseña\"."
+                },
+                "de": {
+                  "question": "Como se di \"contraseña\" en galego?",
+                  "explanation": "\"Contrasinal\" é o termo normativo galego recomendado polos organismos lingüísticos oficiais para \"contraseña\"."
+                },
+                "zh": {
+                  "question": "Como se di \"contraseña\" en galego?",
+                  "explanation": "\"Contrasinal\" é o termo normativo galego recomendado polos organismos lingüísticos oficiais para \"contraseña\"."
+                }
+              }
             }
           ]
         }
@@ -585,34 +1902,185 @@
               ],
               "correctAnswer": "Nostalgia/morriña por algo ou alguén ausente",
               "explanation": "\"Morriña\" é unha das palabras galegas máis coñecidas internacionalmente; describe unha mestura de saudade e nostalxia, especialmente pola terra ou a familia cando se está lonxe.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Que significa \"morriña\"?",
+                  "explanation": "\"Morriña\" é unha das palabras galegas máis coñecidas internacionalmente; describe unha mestura de saudade e nostalxia, especialmente pola terra ou a familia cando se está lonxe."
+                },
+                "pt": {
+                  "question": "Que significa \"morriña\"?",
+                  "explanation": "\"Morriña\" é unha das palabras galegas máis coñecidas internacionalmente; describe unha mestura de saudade e nostalxia, especialmente pola terra ou a familia cando se está lonxe."
+                },
+                "en": {
+                  "question": "Que significa \"morriña\"?",
+                  "explanation": "\"Morriña\" é unha das palabras galegas máis coñecidas internacionalmente; describe unha mestura de saudade e nostalxia, especialmente pola terra ou a familia cando se está lonxe."
+                },
+                "fr": {
+                  "question": "Que significa \"morriña\"?",
+                  "explanation": "\"Morriña\" é unha das palabras galegas máis coñecidas internacionalmente; describe unha mestura de saudade e nostalxia, especialmente pola terra ou a familia cando se está lonxe."
+                },
+                "ro": {
+                  "question": "Que significa \"morriña\"?",
+                  "explanation": "\"Morriña\" é unha das palabras galegas máis coñecidas internacionalmente; describe unha mestura de saudade e nostalxia, especialmente pola terra ou a familia cando se está lonxe."
+                },
+                "it": {
+                  "question": "Que significa \"morriña\"?",
+                  "explanation": "\"Morriña\" é unha das palabras galegas máis coñecidas internacionalmente; describe unha mestura de saudade e nostalxia, especialmente pola terra ou a familia cando se está lonxe."
+                },
+                "de": {
+                  "question": "Que significa \"morriña\"?",
+                  "explanation": "\"Morriña\" é unha das palabras galegas máis coñecidas internacionalmente; describe unha mestura de saudade e nostalxia, especialmente pola terra ou a familia cando se está lonxe."
+                },
+                "zh": {
+                  "question": "Que significa \"morriña\"?",
+                  "explanation": "\"Morriña\" é unha das palabras galegas máis coñecidas internacionalmente; describe unha mestura de saudade e nostalxia, especialmente pola terra ou a familia cando se está lonxe."
+                }
+              }
             },
             {
               "id": "a2_u10_l1_e2",
               "type": "multiple_choice",
               "question": "Como se di \"llover a cántaros\" en galego?",
-              "options": ["Chover a cachón", "Chover pouco", "Facer sol", "Chover a xeada"],
+              "options": [
+                "Chover a cachón",
+                "Chover pouco",
+                "Facer sol",
+                "Chover a xeada"
+              ],
               "correctAnswer": "Chover a cachón",
               "explanation": "\"Chover a cachón\" describe unha choiva moi intensa e continuada.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"llover a cántaros\" en galego?",
+                  "explanation": "\"Chover a cachón\" describe unha choiva moi intensa e continuada."
+                },
+                "pt": {
+                  "question": "Como se di \"llover a cántaros\" en galego?",
+                  "explanation": "\"Chover a cachón\" describe unha choiva moi intensa e continuada."
+                },
+                "en": {
+                  "question": "Como se di \"llover a cántaros\" en galego?",
+                  "explanation": "\"Chover a cachón\" describe unha choiva moi intensa e continuada."
+                },
+                "fr": {
+                  "question": "Como se di \"llover a cántaros\" en galego?",
+                  "explanation": "\"Chover a cachón\" describe unha choiva moi intensa e continuada."
+                },
+                "ro": {
+                  "question": "Como se di \"llover a cántaros\" en galego?",
+                  "explanation": "\"Chover a cachón\" describe unha choiva moi intensa e continuada."
+                },
+                "it": {
+                  "question": "Como se di \"llover a cántaros\" en galego?",
+                  "explanation": "\"Chover a cachón\" describe unha choiva moi intensa e continuada."
+                },
+                "de": {
+                  "question": "Como se di \"llover a cántaros\" en galego?",
+                  "explanation": "\"Chover a cachón\" describe unha choiva moi intensa e continuada."
+                },
+                "zh": {
+                  "question": "Como se di \"llover a cántaros\" en galego?",
+                  "explanation": "\"Chover a cachón\" describe unha choiva moi intensa e continuada."
+                }
+              }
             },
             {
               "id": "a2_u10_l1_e3",
               "type": "fill_blank",
               "question": "Completa: 'O meu _____ do peito vive en Ourense' (mejor amigo)",
-              "options": ["amigo", "irmán", "veciño", "compañeiro"],
+              "options": [
+                "amigo",
+                "irmán",
+                "veciño",
+                "compañeiro"
+              ],
               "correctAnswer": "amigo",
               "explanation": "\"Amigo do peito\" é unha expresión que designa un amigo moi íntimo e de confianza.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: 'O meu _____ do peito vive en Ourense' (mejor amigo)",
+                  "explanation": "\"Amigo do peito\" é unha expresión que designa un amigo moi íntimo e de confianza."
+                },
+                "pt": {
+                  "question": "Completa: 'O meu _____ do peito vive en Ourense' (mejor amigo)",
+                  "explanation": "\"Amigo do peito\" é unha expresión que designa un amigo moi íntimo e de confianza."
+                },
+                "en": {
+                  "question": "Completa: 'O meu _____ do peito vive en Ourense' (mejor amigo)",
+                  "explanation": "\"Amigo do peito\" é unha expresión que designa un amigo moi íntimo e de confianza."
+                },
+                "fr": {
+                  "question": "Completa: 'O meu _____ do peito vive en Ourense' (mejor amigo)",
+                  "explanation": "\"Amigo do peito\" é unha expresión que designa un amigo moi íntimo e de confianza."
+                },
+                "ro": {
+                  "question": "Completa: 'O meu _____ do peito vive en Ourense' (mejor amigo)",
+                  "explanation": "\"Amigo do peito\" é unha expresión que designa un amigo moi íntimo e de confianza."
+                },
+                "it": {
+                  "question": "Completa: 'O meu _____ do peito vive en Ourense' (mejor amigo)",
+                  "explanation": "\"Amigo do peito\" é unha expresión que designa un amigo moi íntimo e de confianza."
+                },
+                "de": {
+                  "question": "Completa: 'O meu _____ do peito vive en Ourense' (mejor amigo)",
+                  "explanation": "\"Amigo do peito\" é unha expresión que designa un amigo moi íntimo e de confianza."
+                },
+                "zh": {
+                  "question": "Completa: 'O meu _____ do peito vive en Ourense' (mejor amigo)",
+                  "explanation": "\"Amigo do peito\" é unha expresión que designa un amigo moi íntimo e de confianza."
+                }
+              }
             },
             {
               "id": "a2_u10_l1_e4",
               "type": "multiple_choice",
               "question": "Si alguien llega empapado por la lluvia, ¿qué dirías en gallego?",
-              "options": ["Está feito unha sopa", "Está feito un sol", "Ten morriña", "Está en cueiros"],
+              "options": [
+                "Está feito unha sopa",
+                "Está feito un sol",
+                "Ten morriña",
+                "Está en cueiros"
+              ],
               "correctAnswer": "Está feito unha sopa",
               "explanation": "\"Estar feito unha sopa\" indica que alguén está completamente mollado.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Si alguien llega empapado por la lluvia, ¿qué dirías en gallego?",
+                  "explanation": "\"Estar feito unha sopa\" indica que alguén está completamente mollado."
+                },
+                "pt": {
+                  "question": "Si alguien llega empapado por la lluvia, ¿qué dirías en gallego?",
+                  "explanation": "\"Estar feito unha sopa\" indica que alguén está completamente mollado."
+                },
+                "en": {
+                  "question": "Si alguien llega empapado por la lluvia, ¿qué dirías en gallego?",
+                  "explanation": "\"Estar feito unha sopa\" indica que alguén está completamente mollado."
+                },
+                "fr": {
+                  "question": "Si alguien llega empapado por la lluvia, ¿qué dirías en gallego?",
+                  "explanation": "\"Estar feito unha sopa\" indica que alguén está completamente mollado."
+                },
+                "ro": {
+                  "question": "Si alguien llega empapado por la lluvia, ¿qué dirías en gallego?",
+                  "explanation": "\"Estar feito unha sopa\" indica que alguén está completamente mollado."
+                },
+                "it": {
+                  "question": "Si alguien llega empapado por la lluvia, ¿qué dirías en gallego?",
+                  "explanation": "\"Estar feito unha sopa\" indica que alguén está completamente mollado."
+                },
+                "de": {
+                  "question": "Si alguien llega empapado por la lluvia, ¿qué dirías en gallego?",
+                  "explanation": "\"Estar feito unha sopa\" indica que alguén está completamente mollado."
+                },
+                "zh": {
+                  "question": "Si alguien llega empapado por la lluvia, ¿qué dirías en gallego?",
+                  "explanation": "\"Estar feito unha sopa\" indica que alguén está completamente mollado."
+                }
+              }
             }
           ]
         }
