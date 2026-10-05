@@ -12,6 +12,7 @@ import '../../../core/services/audio_service.dart';
 import '../../../data/datasources/mock/content_service.dart';
 import '../../../data/models/exercise_model.dart';
 import '../../../data/models/lesson_model.dart';
+import 'package:galingo/l10n/app_localizations.dart';
 import '../../providers/progress_provider.dart';
 import '../../providers/settings_provider.dart';
 import '../../widgets/gabi/gabi_widget.dart';
@@ -292,7 +293,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
               Navigator.of(context).pop();
               context.go(AppRoutes.home);
             },
-            child: const Text('Volver ao Camiño'),
+            child: Text(AppLocalizations.of(context)!.backToPath),
           ),
         ],
       ),
@@ -331,11 +332,11 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
             children: [
               const Text('❌', style: TextStyle(fontSize: 48)),
               const SizedBox(height: 12),
-              Text('Lección non atopada: ${widget.lessonId}'),
+              Text(AppLocalizations.of(context)!.lessonNotFound(widget.lessonId)),
               const SizedBox(height: 16),
               FilledButton(
                 onPressed: () => context.go(AppRoutes.home),
-                child: const Text('Volver ao inicio'),
+                child: Text(AppLocalizations.of(context)!.backToHome),
               ),
             ],
           ),
@@ -613,7 +614,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                         fontWeight: FontWeight.w600,
                       ),
                       decoration: InputDecoration(
-                        hintText: 'Escribe a túa tradución aquí...',
+                        hintText: AppLocalizations.of(context)!.typeTranslation,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
                           borderSide: BorderSide(color: Colors.grey.shade300),
@@ -795,7 +796,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  _isCorrect ? '¡Moi ben!' : 'Incorrecto',
+                  _isCorrect ? AppLocalizations.of(context)!.veryGood : AppLocalizations.of(context)!.incorrect,
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(
                         color: _isCorrect ? AppTheme.successGreen : AppTheme.errorRed,
                         fontWeight: FontWeight.w800,
@@ -832,7 +833,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           width: double.infinity,
           child: Semantics(
             button: true,
-            label: 'Verificar a túa tradución introducida',
+            label: AppLocalizations.of(context)!.typeTranslation,
             child: FilledButton(
               onPressed: hasInput ? () => _checkAnswer(textInput) : null,
               style: FilledButton.styleFrom(
@@ -840,8 +841,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
               ),
-              child: const Text(
-                'Verificar tradución',
+              child: Text(
+                AppLocalizations.of(context)!.verifyTranslation,
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
               ),
             ),
@@ -855,7 +856,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       width: double.infinity,
       child: Semantics(
         button: true,
-        label: _isLastExercise ? 'Rematar lección e gardar progreso' : 'Avanzar ao seguinte exercicio',
+        label: _isLastExercise ? AppLocalizations.of(context)!.finishLessonTip : AppLocalizations.of(context)!.nextExerciseTip,
         child: FilledButton(
           onPressed: _nextExercise,
           style: FilledButton.styleFrom(
@@ -866,7 +867,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
           ),
           child: Text(
-            _isLastExercise ? 'Rematar lección 🎉' : 'Seguir →',
+            _isLastExercise ? AppLocalizations.of(context)!.finishLesson : AppLocalizations.of(context)!.next,
             style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w700,
@@ -915,11 +916,11 @@ class _LessonCompletedDialog extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const GabiWidget(
+            GabiWidget(
               state: GabiState.happy,
               size: 110,
               showMessage: true,
-              message: '¡Parabéns! Completaches a lección! 🎊',
+              message: AppLocalizations.of(context)!.lessonCompleted,
             ),
             const SizedBox(height: 24),
             Text(
@@ -971,8 +972,8 @@ class _LessonCompletedDialog extends StatelessWidget {
                     borderRadius: BorderRadius.circular(16),
                   ),
                 ),
-                child: const Text(
-                  'Continuar o Camiño →',
+                child: Text(
+                  AppLocalizations.of(context)!.continuePath,
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
                 ),
               ),

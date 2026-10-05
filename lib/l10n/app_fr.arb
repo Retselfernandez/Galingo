@@ -1,0 +1,82 @@
+{
+  "tagline": "Apprenez le galicien, étape par étape",
+  "pathTitle": "O Camiño do Galego",
+  "pathSubtitle": "Apprenez étape par étape • Niveau A1",
+  "settings": "Paramètres",
+  "appearance": "🎨 Apparence",
+  "theme": "Thème de l'application",
+  "typography": "✏️ Typographie",
+  "textSize": "Taille du texte",
+  "interfaceLanguage": "🌍 Langue",
+  "information": "ℹ️ Informations",
+  "reset": "Réinitialiser",
+  "resetTitle": "Réinitialiser les paramètres",
+  "resetConfirm": "Cela rétablira tous les paramètres aux valeurs par défaut. Continuer?",
+  "lightTheme": "Clair",
+  "darkTheme": "Sombre",
+  "systemTheme": "Système",
+  "preview": "Aperçu",
+  "yourName": "Votre nom",
+  "nameHint": "Écrivez votre nom...",
+  "editName": "👤 Profil",
+  "save": "Enregistrer",
+  "cancel": "Annuler",
+  "retry": "Réessayer",
+  "start": "Commencer",
+  "continueLabel": "Continuer",
+  "nameQuestion": "Comment vous appelez-vous?",
+  "nameSubtitle": "Je vais personnaliser Galingo pour vous",
+  "greeting": "Bonjour, {name}! 👋",
+  "nextLessonMessage": "Votre prochaine leçon vous attend!",
+  "gabiWelcome": "Bienvenue sur Galingo!\\nJe serai votre guide. 🌟",
+  "startPath": "Commencer le parcours →",
+  "completed": "Terminé",
+  "locked": "Verrouillé",
+  "errorLoading": "Erreur lors du chargement du cours",
+  "version": "Version",
+  "levelCovered": "Niveau couvert",
+  "targetLanguage": "Langue cible",
+  "developedBy": "Développé par",
+  "technology": "Technologie",
+  "application": "Application",
+  "year": "Année",
+  "personalize": "Personnalisez votre expérience",
+  "levelA1": "Niveau A1 — Débutant",
+  "levelA2": "Niveau A2 — Intermédiaire",
+  "levelB1": "Niveau B1 — Seuil",
+  "levelB2": "Niveau B2 — Avancé",
+  "selectLevel": "Sélectionnez votre niveau d'études :",
+  "levelA1Subtitle": "Débutant : Salutations, famille, nourriture...",
+  "levelA2Subtitle": "Intermédiaire : Voyages, shopping, travail...",
+  "levelB1Subtitle": "Seuil : Débats, opinions, textes complexes...",
+  "levelB2Subtitle": "Avancé : Fluidité technique, littérature, idiomes...",
+  "profile": "Profil",
+  "nameLabel": "Nom",
+  "@greeting": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "backToPath": "Retour au Chemin",
+  "lessonNotFound": "Leçon introuvable : {id}",
+  "backToHome": "Retour au début",
+  "typeTranslation": "Écris ta traduction ici...",
+  "verifyTranslation": "Vérifier la traduction",
+  "finishLessonTip": "Terminer la leçon et sauvegarder",
+  "nextExerciseTip": "Passer à l'exercice suivant",
+  "finishLesson": "Terminer la leçon 🎉",
+  "next": "Suivant →",
+  "veryGood": "Très bien !",
+  "incorrect": "Incorrect",
+  "lessonCompleted": "Félicitations ! Leçon terminée ! 🎊",
+  "continuePath": "Continuer le Chemin →",
+  "@lessonNotFound": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  }
+}

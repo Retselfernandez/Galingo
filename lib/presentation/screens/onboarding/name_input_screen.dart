@@ -6,7 +6,7 @@ import 'package:go_router/go_router.dart';
 import '../../../core/router/app_router.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../providers/progress_provider.dart';
-import '../../providers/settings_provider.dart';
+import 'package:galingo/l10n/app_localizations.dart';
 import '../../widgets/gabi/gabi_widget.dart';
 
 /// Pantalla de onboarding para introducir el nombre del usuario
@@ -58,7 +58,7 @@ class _NameInputScreenState extends ConsumerState<NameInputScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final strings = ref.watch(appStringsProvider);
+    final strings = AppLocalizations.of(context)!;
 
     return Scaffold(
       body: Container(

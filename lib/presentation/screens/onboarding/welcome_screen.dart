@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../core/router/app_router.dart';
-import '../../providers/settings_provider.dart';
+import 'package:galingo/l10n/app_localizations.dart';
 import '../../widgets/gabi/gabi_widget.dart';
 
 /// WelcomeScreen — primera bienvenida al usuario
@@ -13,7 +13,7 @@ class WelcomeScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final strings = ref.watch(appStringsProvider);
+    final strings = AppLocalizations.of(context)!;
 
     return Scaffold(
       body: Container(

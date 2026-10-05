@@ -1,6 +1,5 @@
 import 'dart:ui' as ui;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../core/i18n/app_strings.dart';
 import '../../core/services/audio_service.dart';
 import '../../data/models/settings_model.dart';
 import '../../data/repositories/hive_repository.dart';
@@ -65,10 +64,6 @@ final settingsProvider = NotifierProvider<SettingsNotifier, SettingsModel>(
 );
 
 /// Provider de strings localizados — se actualiza al cambiar idioma
-final appStringsProvider = Provider<AppStrings>((ref) {
-  final language = ref.watch(settingsProvider.select((s) => s.language));
-  return AppStrings.of(language);
-});
 
 /// Provider para conectar el toggle de sonido en Ajustes
 final soundEnabledProvider = StateProvider<bool>((ref) {

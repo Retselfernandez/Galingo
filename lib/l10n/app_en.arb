@@ -1,0 +1,82 @@
+{
+  "tagline": "Learn Galician, step by step",
+  "pathTitle": "O Camiño do Galego",
+  "pathSubtitle": "Learn step by step • Level A1",
+  "settings": "Settings",
+  "appearance": "🎨 Appearance",
+  "theme": "App theme",
+  "typography": "✏️ Typography",
+  "textSize": "Text size",
+  "interfaceLanguage": "🌍 Language",
+  "information": "ℹ️ Information",
+  "reset": "Reset",
+  "resetTitle": "Reset settings",
+  "resetConfirm": "This will restore all settings to default values. Continue?",
+  "lightTheme": "Light",
+  "darkTheme": "Dark",
+  "systemTheme": "System",
+  "preview": "Preview",
+  "yourName": "Your name",
+  "nameHint": "Type your name...",
+  "editName": "👤 Profile",
+  "save": "Save",
+  "cancel": "Cancel",
+  "retry": "Retry",
+  "start": "Start",
+  "continueLabel": "Continue",
+  "nameQuestion": "What is your name?",
+  "nameSubtitle": "I will personalize Galingo for you",
+  "greeting": "Hello, {name}! 👋",
+  "nextLessonMessage": "Your next lesson is waiting!",
+  "gabiWelcome": "Welcome to Galingo!\\nI will be your guide. 🌟",
+  "startPath": "Start learning →",
+  "completed": "Completed",
+  "locked": "Locked",
+  "errorLoading": "Error loading course",
+  "version": "Version",
+  "levelCovered": "Level covered",
+  "targetLanguage": "Target language",
+  "developedBy": "Developed by",
+  "technology": "Technology",
+  "application": "Application",
+  "year": "Year",
+  "personalize": "Personalize your experience",
+  "levelA1": "Level A1 — Beginner",
+  "levelA2": "Level A2 — Intermediate",
+  "levelB1": "Level B1 — Threshold",
+  "levelB2": "Level B2 — Advanced",
+  "selectLevel": "Select your study level:",
+  "levelA1Subtitle": "Beginner: Greetings, family, food...",
+  "levelA2Subtitle": "Intermediate: Travel, shopping, work...",
+  "levelB1Subtitle": "Threshold: Debates, opinions, complex texts...",
+  "levelB2Subtitle": "Advanced: Technical fluency, literature, idioms...",
+  "profile": "Profile",
+  "nameLabel": "Name",
+  "@greeting": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "backToPath": "Back to the Path",
+  "lessonNotFound": "Lesson not found: {id}",
+  "backToHome": "Back to start",
+  "typeTranslation": "Type your translation here...",
+  "verifyTranslation": "Check translation",
+  "finishLessonTip": "Finish lesson and save progress",
+  "nextExerciseTip": "Go to the next exercise",
+  "finishLesson": "Finish lesson 🎉",
+  "next": "Next →",
+  "veryGood": "Well done!",
+  "incorrect": "Incorrect",
+  "lessonCompleted": "Congrats! You completed the lesson! 🎊",
+  "continuePath": "Continue the Path →",
+  "@lessonNotFound": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  }
+}

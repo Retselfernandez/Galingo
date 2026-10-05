@@ -1,0 +1,82 @@
+{
+  "tagline": "Galicisch lernen, Schritt für Schritt",
+  "pathTitle": "O Camiño do Galego",
+  "pathSubtitle": "Schritt für Schritt lernen • A1 Niveau",
+  "settings": "Einstellungen",
+  "appearance": "🎨 Aussehen",
+  "theme": "App-Design",
+  "typography": "✏️ Typografie",
+  "textSize": "Textgröße",
+  "interfaceLanguage": "🌍 Sprache",
+  "information": "ℹ️ Informationen",
+  "reset": "Zurücksetzen",
+  "resetTitle": "Einstellungen zurücksetzen",
+  "resetConfirm": "Dadurch werden alle Einstellungen auf die Standardwerte zurückgesetzt. Fortfahren?",
+  "lightTheme": "Hell",
+  "darkTheme": "Dunkel",
+  "systemTheme": "System",
+  "preview": "Vorschau",
+  "yourName": "Dein Name",
+  "nameHint": "Schreibe deinen Namen...",
+  "editName": "👤 Profil",
+  "save": "Speichern",
+  "cancel": "Abbrechen",
+  "retry": "Wiederholen",
+  "start": "Starten",
+  "continueLabel": "Fortfahren",
+  "nameQuestion": "Wie heißt du?",
+  "nameSubtitle": "Ich werde Galingo für dich anpassen",
+  "greeting": "Hallo, {name}! 👋",
+  "nextLessonMessage": "Deine nächste Lektion wartet auf dich!",
+  "gabiWelcome": "Willkommen bei Galingo!\\nIch werde dein Begleiter sein. 🌟",
+  "startPath": "Reise starten →",
+  "completed": "Abgeschlossen",
+  "locked": "Gesperrt",
+  "errorLoading": "Fehler beim Laden des Kurses",
+  "version": "Version",
+  "levelCovered": "Abgedeckte Stufe",
+  "targetLanguage": "Zielsprache",
+  "developedBy": "Entwickelt von",
+  "technology": "Technologie",
+  "application": "Anwendung",
+  "year": "Jahr",
+  "personalize": "Personalisiere deine Erfahrung",
+  "levelA1": "Stufe A1 — Anfänger",
+  "levelA2": "Stufe A2 — Mittelstufe",
+  "levelB1": "Stufe B1 — Schwellenwert",
+  "levelB2": "Stufe B2 — Fortgeschritten",
+  "selectLevel": "Wählen Sie Ihre Lernstufe:",
+  "levelA1Subtitle": "Anfänger: Grüßen, Familie, Essen...",
+  "levelA2Subtitle": "Mittelstufe: Reisen, Einkaufen, Arbeit...",
+  "levelB1Subtitle": "Schwellenwert: Debatten, Meinungen, komplexe Texte...",
+  "levelB2Subtitle": "Fortgeschritten: Technische Geläufigkeit, Literatur, Redewendungen...",
+  "profile": "Profil",
+  "nameLabel": "Name",
+  "@greeting": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "backToPath": "Zurück zum Pfad",
+  "lessonNotFound": "Lektion nicht gefunden: {id}",
+  "backToHome": "Zurück zum Start",
+  "typeTranslation": "Schreibe deine Übersetzung hier...",
+  "verifyTranslation": "Übersetzung prüfen",
+  "finishLessonTip": "Lektion beenden und Fortschritt speichern",
+  "nextExerciseTip": "Zur nächsten Übung",
+  "finishLesson": "Lektion beenden 🎉",
+  "next": "Weiter →",
+  "veryGood": "Sehr gut!",
+  "incorrect": "Falsch",
+  "lessonCompleted": "Glückwunsch! Lektion abgeschlossen! 🎊",
+  "continuePath": "Weiter auf dem Pfad →",
+  "@lessonNotFound": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  }
+}

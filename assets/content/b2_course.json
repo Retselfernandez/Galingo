@@ -33,7 +33,41 @@
                 "Alfonso R. Castelao"
               ],
               "correctAnswer": "Rosalía de Castro",
-              "explanation": "'Cantares Galegos' é a obra cume do Rexurdimento, escrita por Rosalía de Castro."
+              "explanation": "'Cantares Galegos' é a obra cume do Rexurdimento, escrita por Rosalía de Castro.",
+              "i18n": {
+                "es": {
+                  "question": "Quen escribiu 'Cantares Galegos' en 1863?",
+                  "explanation": "'Cantares Galegos' é a obra cume do Rexurdimento, escrita por Rosalía de Castro."
+                },
+                "pt": {
+                  "question": "Quen escribiu 'Cantares Galegos' en 1863?",
+                  "explanation": "'Cantares Galegos' é a obra cume do Rexurdimento, escrita por Rosalía de Castro."
+                },
+                "en": {
+                  "question": "Quen escribiu 'Cantares Galegos' en 1863?",
+                  "explanation": "'Cantares Galegos' é a obra cume do Rexurdimento, escrita por Rosalía de Castro."
+                },
+                "fr": {
+                  "question": "Quen escribiu 'Cantares Galegos' en 1863?",
+                  "explanation": "'Cantares Galegos' é a obra cume do Rexurdimento, escrita por Rosalía de Castro."
+                },
+                "ro": {
+                  "question": "Quen escribiu 'Cantares Galegos' en 1863?",
+                  "explanation": "'Cantares Galegos' é a obra cume do Rexurdimento, escrita por Rosalía de Castro."
+                },
+                "it": {
+                  "question": "Quen escribiu 'Cantares Galegos' en 1863?",
+                  "explanation": "'Cantares Galegos' é a obra cume do Rexurdimento, escrita por Rosalía de Castro."
+                },
+                "de": {
+                  "question": "Quen escribiu 'Cantares Galegos' en 1863?",
+                  "explanation": "'Cantares Galegos' é a obra cume do Rexurdimento, escrita por Rosalía de Castro."
+                },
+                "zh": {
+                  "question": "Quen escribiu 'Cantares Galegos' en 1863?",
+                  "explanation": "'Cantares Galegos' é a obra cume do Rexurdimento, escrita por Rosalía de Castro."
+                }
+              }
             }
           ]
         }

@@ -6,9 +6,8 @@ import 'package:flutter_animate/flutter_animate.dart';
 import '../../../core/router/app_router.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../core/constants/app_constants.dart';
-import '../../../core/i18n/app_strings.dart';
 import '../../providers/progress_provider.dart';
-import '../../providers/settings_provider.dart';
+import 'package:galingo/l10n/app_localizations.dart';
 import '../../widgets/gabi/gabi_widget.dart';
 import '../../widgets/camino/unit_node_widget.dart';
 
@@ -21,7 +20,7 @@ class HomeScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final progressAsync = ref.watch(progressNotifierProvider);
     final unitsAsync = ref.watch(unitsWithStatusProvider);
-    final strings = ref.watch(appStringsProvider);
+    final strings = AppLocalizations.of(context)!;
 
     final screenWidth = MediaQuery.of(context).size.width;
     final isCompactScreen = screenWidth < 800;
@@ -61,7 +60,7 @@ class HomeScreen extends ConsumerWidget {
     BuildContext context,
     WidgetRef ref,
     AsyncValue progressAsync,
-    AppStrings strings, {
+    AppLocalizations strings, {
     bool isDrawer = false,
   }) {
     final userName = progressAsync.valueOrNull?.userName ?? 'Estudante';
@@ -105,7 +104,7 @@ class HomeScreen extends ConsumerWidget {
                           state: GabiState.pointing,
                           size: isCompact ? 80 : 100,
                           showMessage: !isCompact, // oculta la burbuja si hay poco espacio vertical
-                          message: '${strings.greetingFor(userName)}\n${strings.nextLessonMessage}',
+                          message: '${strings.greeting(userName)}\n${strings.nextLessonMessage}',
                         ),
                         SizedBox(height: isCompact ? 12 : 16),
                         progressAsync.when(
@@ -309,7 +308,7 @@ class HomeScreen extends ConsumerWidget {
     BuildContext context,
     WidgetRef ref,
     dynamic progress,
-    AppStrings strings,
+    AppLocalizations strings,
   ) {
     final currentLevel = progress.currentLevel ?? 'A1';
 
@@ -370,7 +369,7 @@ class HomeScreen extends ConsumerWidget {
     WidgetRef ref,
     AsyncValue unitsAsync,
     AsyncValue progressAsync,
-    AppStrings strings, {
+    AppLocalizations strings, {
     required bool isCompactScreen,
   }) {
     final currentLevel = progressAsync.valueOrNull?.currentLevel ?? 'A1';
@@ -411,7 +410,7 @@ class HomeScreen extends ConsumerWidget {
   Widget _buildTopBar(
     BuildContext context,
     String currentLevel,
-    AppStrings strings, {
+    AppLocalizations strings, {
     required bool isCompactScreen,
   }) {
     Color indicatorColor = AppTheme.primaryBlue;
@@ -498,7 +497,7 @@ class HomeScreen extends ConsumerWidget {
     WidgetRef ref,
     List<UnitWithStatus> units,
     String currentLevel,
-    AppStrings strings,
+    AppLocalizations strings,
   ) {
     final showNextLevelBanner = currentLevel != 'B2';
 
@@ -572,7 +571,7 @@ class HomeScreen extends ConsumerWidget {
     String nextIcon,
     Color nextColor,
     int index,
-    AppStrings strings,
+    AppLocalizations strings,
   ) {
     return GestureDetector(
       onTap: () {
@@ -658,7 +657,7 @@ class HomeScreen extends ConsumerWidget {
     BuildContext context,
     WidgetRef ref,
     dynamic progress,
-    AppStrings strings,
+    AppLocalizations strings,
   ) {
     final currentLevel = progress.currentLevel ?? 'A1';
 

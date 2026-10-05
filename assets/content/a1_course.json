@@ -26,29 +26,154 @@
               "id": "a1_u1_l1_e1",
               "type": "multiple_choice",
               "question": "Como se di 'Hola' en galego?",
-              "options": ["Ola", "Adeus", "Grazas", "Por favor"],
+              "options": [
+                "Ola",
+                "Adeus",
+                "Grazas",
+                "Por favor"
+              ],
               "correctAnswer": "Ola",
               "explanation": "'Ola' é o saúdo máis común en galego, equivalente ao castelán 'Hola'.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di 'Hola' en galego?",
+                  "explanation": "'Ola' é o saúdo máis común en galego, equivalente ao castelán 'Hola'."
+                },
+                "pt": {
+                  "question": "Como se diz 'Olá' em galego?",
+                  "explanation": "'Ola' é o saúdo máis común en galego, equivalente ao castelán 'Hola'."
+                },
+                "en": {
+                  "question": "How do you say 'Hello' in Galician?",
+                  "explanation": "'Ola' é o saúdo máis común en galego, equivalente ao castelán 'Hola'."
+                },
+                "fr": {
+                  "question": "Comment dit-on 'Bonjour' en galicien?",
+                  "explanation": "'Ola' é o saúdo máis común en galego, equivalente ao castelán 'Hola'."
+                },
+                "ro": {
+                  "question": "Cum se spune 'Salut' în galiciană?",
+                  "explanation": "'Ola' é o saúdo máis común en galego, equivalente ao castelán 'Hola'."
+                },
+                "it": {
+                  "question": "Come si dice 'Ciao' in galiziano?",
+                  "explanation": "'Ola' é o saúdo máis común en galego, equivalente ao castelán 'Hola'."
+                },
+                "de": {
+                  "question": "Wie sagt man 'Hallo' auf Galicisch?",
+                  "explanation": "'Ola' é o saúdo máis común en galego, equivalente ao castelán 'Hola'."
+                },
+                "zh": {
+                  "question": "如何用加利西亚语说“你好”？",
+                  "explanation": "'Ola' é o saúdo máis común en galego, equivalente ao castelán 'Hola'."
+                }
+              }
             },
             {
               "id": "a1_u1_l1_e2",
               "type": "multiple_choice",
               "question": "Que significa 'Bo día'?",
-              "options": ["Buenas noches", "Buenos días", "Buenas tardes", "Hasta luego"],
+              "options": [
+                "Buenas noches",
+                "Buenos días",
+                "Buenas tardes",
+                "Hasta luego"
+              ],
               "correctAnswer": "Buenos días",
               "explanation": "'Bo día' úsase polas mañás, igual que 'Buenos días' en castelán.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Que significa 'Bo día'?",
+                  "explanation": "'Bo día' úsase polas mañás, igual que 'Buenos días' en castelán."
+                },
+                "pt": {
+                  "question": "O que significa 'Bo día'?",
+                  "explanation": "'Bo día' úsase polas mañás, igual que 'Buenos días' en castelán."
+                },
+                "en": {
+                  "question": "What does 'Bo día' mean?",
+                  "explanation": "'Bo día' úsase polas mañás, igual que 'Buenos días' en castelán."
+                },
+                "fr": {
+                  "question": "Que signifie 'Bo día'?",
+                  "explanation": "'Bo día' úsase polas mañás, igual que 'Buenos días' en castelán."
+                },
+                "ro": {
+                  "question": "Ce înseamnă 'Bo día'?",
+                  "explanation": "'Bo día' úsase polas mañás, igual que 'Buenos días' en castelán."
+                },
+                "it": {
+                  "question": "Cosa significa 'Bo día'?",
+                  "explanation": "'Bo día' úsase polas mañás, igual que 'Buenos días' en castelán."
+                },
+                "de": {
+                  "question": "Was bedeutet 'Bo día'?",
+                  "explanation": "'Bo día' úsase polas mañás, igual que 'Buenos días' en castelán."
+                },
+                "zh": {
+                  "question": "“Bo día”是什么意思？",
+                  "explanation": "'Bo día' úsase polas mañás, igual que 'Buenos días' en castelán."
+                }
+              }
             },
             {
               "id": "a1_u1_l1_e3",
               "type": "fill_blank",
               "question": "Completa: '_____ noite' (Buenas noches)",
-              "options": ["Boa", "Bo", "Boas", "Bos"],
+              "options": [
+                "Boa",
+                "Bo",
+                "Boas",
+                "Bos"
+              ],
               "correctAnswer": "Boa",
               "hint": "O substantivo 'noite' é feminino en galego",
               "explanation": "'Boa noite' é o saúdo vespertino. 'Boa' concorda en xénero feminino con 'noite'.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: '_____ noite' (Buenas noches)",
+                  "explanation": "'Boa noite' é o saúdo vespertino. 'Boa' concorda en xénero feminino con 'noite'.",
+                  "hint": "O substantivo 'noite' é feminino en galego"
+                },
+                "pt": {
+                  "question": "Completa: '_____ noite' (Boa noite)",
+                  "explanation": "'Boa noite' é o saúdo vespertino. 'Boa' concorda en xénero feminino con 'noite'.",
+                  "hint": "O substantivo 'noite' é feminino en galego"
+                },
+                "en": {
+                  "question": "Completa: '_____ noite' (Good night)",
+                  "explanation": "'Boa noite' é o saúdo vespertino. 'Boa' concorda en xénero feminino con 'noite'.",
+                  "hint": "O substantivo 'noite' é feminino en galego"
+                },
+                "fr": {
+                  "question": "Completa: '_____ noite' (Bonne nuit)",
+                  "explanation": "'Boa noite' é o saúdo vespertino. 'Boa' concorda en xénero feminino con 'noite'.",
+                  "hint": "O substantivo 'noite' é feminino en galego"
+                },
+                "ro": {
+                  "question": "Completa: '_____ noite' (Noapte bună)",
+                  "explanation": "'Boa noite' é o saúdo vespertino. 'Boa' concorda en xénero feminino con 'noite'.",
+                  "hint": "O substantivo 'noite' é feminino en galego"
+                },
+                "it": {
+                  "question": "Completa: '_____ noite' (Buonanotte)",
+                  "explanation": "'Boa noite' é o saúdo vespertino. 'Boa' concorda en xénero feminino con 'noite'.",
+                  "hint": "O substantivo 'noite' é feminino en galego"
+                },
+                "de": {
+                  "question": "Completa: '_____ noite' (Gute Nacht)",
+                  "explanation": "'Boa noite' é o saúdo vespertino. 'Boa' concorda en xénero feminino con 'noite'.",
+                  "hint": "O substantivo 'noite' é feminino en galego"
+                },
+                "zh": {
+                  "question": "Completa: '_____ noite' (晚安)",
+                  "explanation": "'Boa noite' é o saúdo vespertino. 'Boa' concorda en xénero feminino con 'noite'.",
+                  "hint": "O substantivo 'noite' é feminino en galego"
+                }
+              }
             },
             {
               "id": "a1_u1_l1_e4",
@@ -56,21 +181,98 @@
               "question": "Empareja los saludos con su significado",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Ola", "right": "Hola"},
-                {"left": "Adeus", "right": "Adiós"},
-                {"left": "Ata logo", "right": "Hasta luego"},
-                {"left": "Boa tarde", "right": "Buenas tardes"}
+                {
+                  "left": "Ola",
+                  "right": "Hola"
+                },
+                {
+                  "left": "Adeus",
+                  "right": "Adiós"
+                },
+                {
+                  "left": "Ata logo",
+                  "right": "Hasta luego"
+                },
+                {
+                  "left": "Boa tarde",
+                  "right": "Buenas tardes"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja los saludos con su significado"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a1_u1_l1_e5",
               "type": "multiple_choice",
               "question": "Como lle respondes a '¿Como estás?'",
-              "options": ["Estou ben, grazas", "Ola, boa tarde", "Adeus, ata logo", "Por favor"],
+              "options": [
+                "Estou ben, grazas",
+                "Ola, boa tarde",
+                "Adeus, ata logo",
+                "Por favor"
+              ],
               "correctAnswer": "Estou ben, grazas",
               "explanation": "'Estou ben, grazas' significa 'Estoy bien, gracias'.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como lle respondes a '¿Como estás?'",
+                  "explanation": "'Estou ben, grazas' significa 'Estoy bien, gracias'."
+                },
+                "pt": {
+                  "question": "Como lle respondes a '¿Como estás?'",
+                  "explanation": "'Estou ben, grazas' significa 'Estoy bien, gracias'."
+                },
+                "en": {
+                  "question": "Como lle respondes a '¿Como estás?'",
+                  "explanation": "'Estou ben, grazas' significa 'Estoy bien, gracias'."
+                },
+                "fr": {
+                  "question": "Como lle respondes a '¿Como estás?'",
+                  "explanation": "'Estou ben, grazas' significa 'Estoy bien, gracias'."
+                },
+                "ro": {
+                  "question": "Como lle respondes a '¿Como estás?'",
+                  "explanation": "'Estou ben, grazas' significa 'Estoy bien, gracias'."
+                },
+                "it": {
+                  "question": "Como lle respondes a '¿Como estás?'",
+                  "explanation": "'Estou ben, grazas' significa 'Estoy bien, gracias'."
+                },
+                "de": {
+                  "question": "Como lle respondes a '¿Como estás?'",
+                  "explanation": "'Estou ben, grazas' significa 'Estoy bien, gracias'."
+                },
+                "zh": {
+                  "question": "Como lle respondes a '¿Como estás?'",
+                  "explanation": "'Estou ben, grazas' significa 'Estoy bien, gracias'."
+                }
+              }
             }
           ]
         },
@@ -86,19 +288,97 @@
               "id": "a1_u1_l2_e1",
               "type": "multiple_choice",
               "question": "Como di 'Me llamo...' en galego?",
-              "options": ["Chámome...", "Son...", "Teño...", "Vivo en..."],
+              "options": [
+                "Chámome...",
+                "Son...",
+                "Teño...",
+                "Vivo en..."
+              ],
               "correctAnswer": "Chámome...",
               "explanation": "'Chámome' provén do verbo 'chamarse' (llamarse). É a forma máis natural de presentarse.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como di 'Me llamo...' en galego?",
+                  "explanation": "'Chámome' provén do verbo 'chamarse' (llamarse). É a forma máis natural de presentarse."
+                },
+                "pt": {
+                  "question": "Como se diz 'Me llamo...' em galego?",
+                  "explanation": "'Chámome' provén do verbo 'chamarse' (llamarse). É a forma máis natural de presentarse."
+                },
+                "en": {
+                  "question": "How do you say 'Me llamo...' in Galician?",
+                  "explanation": "'Chámome' provén do verbo 'chamarse' (llamarse). É a forma máis natural de presentarse."
+                },
+                "fr": {
+                  "question": "Comment dit-on 'Me llamo...' en galicien?",
+                  "explanation": "'Chámome' provén do verbo 'chamarse' (llamarse). É a forma máis natural de presentarse."
+                },
+                "ro": {
+                  "question": "Cum se spune 'Me llamo...' în galiciană?",
+                  "explanation": "'Chámome' provén do verbo 'chamarse' (llamarse). É a forma máis natural de presentarse."
+                },
+                "it": {
+                  "question": "Come si dice 'Me llamo...' in galiziano?",
+                  "explanation": "'Chámome' provén do verbo 'chamarse' (llamarse). É a forma máis natural de presentarse."
+                },
+                "de": {
+                  "question": "Wie sagt man 'Me llamo...' auf Galicisch?",
+                  "explanation": "'Chámome' provén do verbo 'chamarse' (llamarse). É a forma máis natural de presentarse."
+                },
+                "zh": {
+                  "question": "如何用加利西亚语说“Me llamo...”？",
+                  "explanation": "'Chámome' provén do verbo 'chamarse' (llamarse). É a forma máis natural de presentarse."
+                }
+              }
             },
             {
               "id": "a1_u1_l2_e2",
               "type": "fill_blank",
               "question": "Completa: 'Son _____ Galicia' (Soy de Galicia)",
-              "options": ["de", "en", "da", "con"],
+              "options": [
+                "de",
+                "en",
+                "da",
+                "con"
+              ],
               "correctAnswer": "de",
               "explanation": "'Son de Galicia' = 'Soy de Galicia'. A preposición 'de' indica procedencia.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: 'Son _____ Galicia' (Soy de Galicia)",
+                  "explanation": "'Son de Galicia' = 'Soy de Galicia'. A preposición 'de' indica procedencia."
+                },
+                "pt": {
+                  "question": "Completa: 'Son _____ Galicia' (Soy de Galicia)",
+                  "explanation": "'Son de Galicia' = 'Soy de Galicia'. A preposición 'de' indica procedencia."
+                },
+                "en": {
+                  "question": "Completa: 'Son _____ Galicia' (Soy de Galicia)",
+                  "explanation": "'Son de Galicia' = 'Soy de Galicia'. A preposición 'de' indica procedencia."
+                },
+                "fr": {
+                  "question": "Completa: 'Son _____ Galicia' (Soy de Galicia)",
+                  "explanation": "'Son de Galicia' = 'Soy de Galicia'. A preposición 'de' indica procedencia."
+                },
+                "ro": {
+                  "question": "Completa: 'Son _____ Galicia' (Soy de Galicia)",
+                  "explanation": "'Son de Galicia' = 'Soy de Galicia'. A preposición 'de' indica procedencia."
+                },
+                "it": {
+                  "question": "Completa: 'Son _____ Galicia' (Soy de Galicia)",
+                  "explanation": "'Son de Galicia' = 'Soy de Galicia'. A preposición 'de' indica procedencia."
+                },
+                "de": {
+                  "question": "Completa: 'Son _____ Galicia' (Soy de Galicia)",
+                  "explanation": "'Son de Galicia' = 'Soy de Galicia'. A preposición 'de' indica procedencia."
+                },
+                "zh": {
+                  "question": "Completa: 'Son _____ Galicia' (Soy de Galicia)",
+                  "explanation": "'Son de Galicia' = 'Soy de Galicia'. A preposición 'de' indica procedencia."
+                }
+              }
             },
             {
               "id": "a1_u1_l2_e3",
@@ -106,21 +386,98 @@
               "question": "Empareja las frases con su traducción",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Chámome Ana", "right": "Me llamo Ana"},
-                {"left": "Son de Vigo", "right": "Soy de Vigo"},
-                {"left": "Teño 25 anos", "right": "Tengo 25 years"},
-                {"left": "Falo galego", "right": "Hablo gallego"}
+                {
+                  "left": "Chámome Ana",
+                  "right": "Me llamo Ana"
+                },
+                {
+                  "left": "Son de Vigo",
+                  "right": "Soy de Vigo"
+                },
+                {
+                  "left": "Teño 25 anos",
+                  "right": "Tengo 25 years"
+                },
+                {
+                  "left": "Falo galego",
+                  "right": "Hablo gallego"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja las frases con su traducción"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a1_u1_l2_e4",
               "type": "translation",
               "question": "Traduce ao galego: '¿Cómo te llamas?'",
-              "options": ["Como te chamas?", "Cal é o teu nome?", "Como te chamas? / Cal é o teu nome?", "De onde es?"],
+              "options": [
+                "Como te chamas?",
+                "Cal é o teu nome?",
+                "Como te chamas? / Cal é o teu nome?",
+                "De onde es?"
+              ],
               "correctAnswer": "Como te chamas? / Cal é o teu nome?",
               "explanation": "Ambas as formas son correctas e de uso común en galego.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Traduce ao galego: '¿Cómo te llamas?'",
+                  "explanation": "Ambas as formas son correctas e de uso común en galego."
+                },
+                "pt": {
+                  "question": "Traduce ao galego: '¿Cómo te llamas?'",
+                  "explanation": "Ambas as formas son correctas e de uso común en galego."
+                },
+                "en": {
+                  "question": "Traduce ao galego: '¿Cómo te llamas?'",
+                  "explanation": "Ambas as formas son correctas e de uso común en galego."
+                },
+                "fr": {
+                  "question": "Traduce ao galego: '¿Cómo te llamas?'",
+                  "explanation": "Ambas as formas son correctas e de uso común en galego."
+                },
+                "ro": {
+                  "question": "Traduce ao galego: '¿Cómo te llamas?'",
+                  "explanation": "Ambas as formas son correctas e de uso común en galego."
+                },
+                "it": {
+                  "question": "Traduce ao galego: '¿Cómo te llamas?'",
+                  "explanation": "Ambas as formas son correctas e de uso común en galego."
+                },
+                "de": {
+                  "question": "Traduce ao galego: '¿Cómo te llamas?'",
+                  "explanation": "Ambas as formas son correctas e de uso común en galego."
+                },
+                "zh": {
+                  "question": "Traduce ao galego: '¿Cómo te llamas?'",
+                  "explanation": "Ambas as formas son correctas e de uso común en galego."
+                }
+              }
             }
           ]
         }
@@ -147,10 +504,49 @@
               "id": "a1_u2_l1_e1",
               "type": "multiple_choice",
               "question": "Como se di o número '3' en galego?",
-              "options": ["Tres", "Trece", "Treinta", "Dous"],
+              "options": [
+                "Tres",
+                "Trece",
+                "Treinta",
+                "Dous"
+              ],
               "correctAnswer": "Tres",
               "explanation": "'Tres' en galego é igual que en castelán.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di o número '3' en galego?",
+                  "explanation": "'Tres' en galego é igual que en castelán."
+                },
+                "pt": {
+                  "question": "Como se diz '3' em galego?",
+                  "explanation": "'Tres' en galego é igual que en castelán."
+                },
+                "en": {
+                  "question": "How do you say '3' in Galician?",
+                  "explanation": "'Tres' en galego é igual que en castelán."
+                },
+                "fr": {
+                  "question": "Comment dit-on '3' en galicien?",
+                  "explanation": "'Tres' en galego é igual que en castelán."
+                },
+                "ro": {
+                  "question": "Cum se spune '3' în galiciană?",
+                  "explanation": "'Tres' en galego é igual que en castelán."
+                },
+                "it": {
+                  "question": "Come si dice '3' in galiziano?",
+                  "explanation": "'Tres' en galego é igual que en castelán."
+                },
+                "de": {
+                  "question": "Wie sagt man '3' auf Galicisch?",
+                  "explanation": "'Tres' en galego é igual que en castelán."
+                },
+                "zh": {
+                  "question": "如何用加利西亚语说“3”？",
+                  "explanation": "'Tres' en galego é igual que en castelán."
+                }
+              }
             },
             {
               "id": "a1_u2_l1_e2",
@@ -158,29 +554,137 @@
               "question": "Empareja os números coas súas palabras",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "1", "right": "Un/Unha"},
-                {"left": "5", "right": "Cinco"},
-                {"left": "8", "right": "Oito"},
-                {"left": "10", "right": "Dez"}
+                {
+                  "left": "1",
+                  "right": "Un/Unha"
+                },
+                {
+                  "left": "5",
+                  "right": "Cinco"
+                },
+                {
+                  "left": "8",
+                  "right": "Oito"
+                },
+                {
+                  "left": "10",
+                  "right": "Dez"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja os números coas súas palabras"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a1_u2_l1_e3",
               "type": "multiple_choice",
               "question": "Que número é 'Sete'?",
-              "options": ["7", "6", "8", "9"],
+              "options": [
+                "7",
+                "6",
+                "8",
+                "9"
+              ],
               "correctAnswer": "7",
               "explanation": "'Sete' é o número 7 en galego.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Que número é 'Sete'?",
+                  "explanation": "'Sete' é o número 7 en galego."
+                },
+                "pt": {
+                  "question": "Que número é 'Sete'?",
+                  "explanation": "'Sete' é o número 7 en galego."
+                },
+                "en": {
+                  "question": "Que número é 'Sete'?",
+                  "explanation": "'Sete' é o número 7 en galego."
+                },
+                "fr": {
+                  "question": "Que número é 'Sete'?",
+                  "explanation": "'Sete' é o número 7 en galego."
+                },
+                "ro": {
+                  "question": "Que número é 'Sete'?",
+                  "explanation": "'Sete' é o número 7 en galego."
+                },
+                "it": {
+                  "question": "Que número é 'Sete'?",
+                  "explanation": "'Sete' é o número 7 en galego."
+                },
+                "de": {
+                  "question": "Que número é 'Sete'?",
+                  "explanation": "'Sete' é o número 7 en galego."
+                },
+                "zh": {
+                  "question": "Que número é 'Sete'?",
+                  "explanation": "'Sete' é o número 7 en galego."
+                }
+              }
             },
             {
               "id": "a1_u2_l1_e4",
               "type": "fill_blank",
               "question": "Completa a serie: Un, Dous, _____, Catro",
-              "options": ["Tres", "Cinco", "Seis", "Oito"],
+              "options": [
+                "Tres",
+                "Cinco",
+                "Seis",
+                "Oito"
+              ],
               "correctAnswer": "Tres",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa a serie: Un, Dous, _____, Catro"
+                },
+                "pt": {
+                  "question": "Completa a serie: Un, Dous, _____, Catro"
+                },
+                "en": {
+                  "question": "Completa a serie: Un, Dous, _____, Catro"
+                },
+                "fr": {
+                  "question": "Completa a serie: Un, Dous, _____, Catro"
+                },
+                "ro": {
+                  "question": "Completa a serie: Un, Dous, _____, Catro"
+                },
+                "it": {
+                  "question": "Completa a serie: Un, Dous, _____, Catro"
+                },
+                "de": {
+                  "question": "Completa a serie: Un, Dous, _____, Catro"
+                },
+                "zh": {
+                  "question": "Completa a serie: Un, Dous, _____, Catro"
+                }
+              }
             }
           ]
         },
@@ -196,19 +700,97 @@
               "id": "a1_u2_l2_e1",
               "type": "multiple_choice",
               "question": "Como se di '11' en galego?",
-              "options": ["Once", "Doce", "Trece", "Dez e un"],
+              "options": [
+                "Once",
+                "Doce",
+                "Trece",
+                "Dez e un"
+              ],
               "correctAnswer": "Once",
               "explanation": "'Once' é igual en galego e en castelán.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di '11' en galego?",
+                  "explanation": "'Once' é igual en galego e en castelán."
+                },
+                "pt": {
+                  "question": "Como se diz '11' em galego?",
+                  "explanation": "'Once' é igual en galego e en castelán."
+                },
+                "en": {
+                  "question": "How do you say '11' in Galician?",
+                  "explanation": "'Once' é igual en galego e en castelán."
+                },
+                "fr": {
+                  "question": "Comment dit-on '11' en galicien?",
+                  "explanation": "'Once' é igual en galego e en castelán."
+                },
+                "ro": {
+                  "question": "Cum se spune '11' în galiciană?",
+                  "explanation": "'Once' é igual en galego e en castelán."
+                },
+                "it": {
+                  "question": "Come si dice '11' in galiziano?",
+                  "explanation": "'Once' é igual en galego e en castelán."
+                },
+                "de": {
+                  "question": "Wie sagt man '11' auf Galicisch?",
+                  "explanation": "'Once' é igual en galego e en castelán."
+                },
+                "zh": {
+                  "question": "如何用加利西亚语说“11”？",
+                  "explanation": "'Once' é igual en galego e en castelán."
+                }
+              }
             },
             {
               "id": "a1_u2_l2_e2",
               "type": "multiple_choice",
               "question": "Que número é 'Vinte'?",
-              "options": ["20", "15", "25", "12"],
+              "options": [
+                "20",
+                "15",
+                "25",
+                "12"
+              ],
               "correctAnswer": "20",
               "explanation": "'Vinte' é o número 20 en galego (en castelán, 'veinte').",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Que número é 'Vinte'?",
+                  "explanation": "'Vinte' é o número 20 en galego (en castelán, 'veinte')."
+                },
+                "pt": {
+                  "question": "Que número é 'Vinte'?",
+                  "explanation": "'Vinte' é o número 20 en galego (en castelán, 'veinte')."
+                },
+                "en": {
+                  "question": "Que número é 'Vinte'?",
+                  "explanation": "'Vinte' é o número 20 en galego (en castelán, 'veinte')."
+                },
+                "fr": {
+                  "question": "Que número é 'Vinte'?",
+                  "explanation": "'Vinte' é o número 20 en galego (en castelán, 'veinte')."
+                },
+                "ro": {
+                  "question": "Que número é 'Vinte'?",
+                  "explanation": "'Vinte' é o número 20 en galego (en castelán, 'veinte')."
+                },
+                "it": {
+                  "question": "Que número é 'Vinte'?",
+                  "explanation": "'Vinte' é o número 20 en galego (en castelán, 'veinte')."
+                },
+                "de": {
+                  "question": "Que número é 'Vinte'?",
+                  "explanation": "'Vinte' é o número 20 en galego (en castelán, 'veinte')."
+                },
+                "zh": {
+                  "question": "Que número é 'Vinte'?",
+                  "explanation": "'Vinte' é o número 20 en galego (en castelán, 'veinte')."
+                }
+              }
             },
             {
               "id": "a1_u2_l2_e3",
@@ -216,12 +798,50 @@
               "question": "Empareja os números",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "14", "right": "Catorce"},
-                {"left": "17", "right": "Dezasete"},
-                {"left": "19", "right": "Dezanove"},
-                {"left": "30", "right": "Trinta"}
+                {
+                  "left": "14",
+                  "right": "Catorce"
+                },
+                {
+                  "left": "17",
+                  "right": "Dezasete"
+                },
+                {
+                  "left": "19",
+                  "right": "Dezanove"
+                },
+                {
+                  "left": "30",
+                  "right": "Trinta"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja os números"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             }
           ]
         },
@@ -237,10 +857,49 @@
               "id": "a1_u2_l3_e1",
               "type": "multiple_choice",
               "question": "Como se di \"40\" en galego?",
-              "options": ["Corenta", "Cuarenta", "Catorce", "Corenta e un"],
+              "options": [
+                "Corenta",
+                "Cuarenta",
+                "Catorce",
+                "Corenta e un"
+              ],
               "correctAnswer": "Corenta",
               "explanation": "\"Corenta\" é a forma galega para \"40\"; en castelán é \"cuarenta\".",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"40\" en galego?",
+                  "explanation": "\"Corenta\" é a forma galega para \"40\"; en castelán é \"cuarenta\"."
+                },
+                "pt": {
+                  "question": "Como se di \"40\" en galego?",
+                  "explanation": "\"Corenta\" é a forma galega para \"40\"; en castelán é \"cuarenta\"."
+                },
+                "en": {
+                  "question": "Como se di \"40\" en galego?",
+                  "explanation": "\"Corenta\" é a forma galega para \"40\"; en castelán é \"cuarenta\"."
+                },
+                "fr": {
+                  "question": "Como se di \"40\" en galego?",
+                  "explanation": "\"Corenta\" é a forma galega para \"40\"; en castelán é \"cuarenta\"."
+                },
+                "ro": {
+                  "question": "Como se di \"40\" en galego?",
+                  "explanation": "\"Corenta\" é a forma galega para \"40\"; en castelán é \"cuarenta\"."
+                },
+                "it": {
+                  "question": "Como se di \"40\" en galego?",
+                  "explanation": "\"Corenta\" é a forma galega para \"40\"; en castelán é \"cuarenta\"."
+                },
+                "de": {
+                  "question": "Como se di \"40\" en galego?",
+                  "explanation": "\"Corenta\" é a forma galega para \"40\"; en castelán é \"cuarenta\"."
+                },
+                "zh": {
+                  "question": "Como se di \"40\" en galego?",
+                  "explanation": "\"Corenta\" é a forma galega para \"40\"; en castelán é \"cuarenta\"."
+                }
+              }
             },
             {
               "id": "a1_u2_l3_e2",
@@ -248,30 +907,146 @@
               "question": "Empareja os números coas decenas",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "50", "right": "Cincuenta"},
-                {"left": "60", "right": "Sesenta"},
-                {"left": "70", "right": "Setenta"},
-                {"left": "80", "right": "Oitenta"}
+                {
+                  "left": "50",
+                  "right": "Cincuenta"
+                },
+                {
+                  "left": "60",
+                  "right": "Sesenta"
+                },
+                {
+                  "left": "70",
+                  "right": "Setenta"
+                },
+                {
+                  "left": "80",
+                  "right": "Oitenta"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja os números coas decenas"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a1_u2_l3_e3",
               "type": "fill_blank",
               "question": "Completa: '31 dise \"trinta e _____\"' (uno)",
-              "options": ["un", "dous", "tres", "cero"],
+              "options": [
+                "un",
+                "dous",
+                "tres",
+                "cero"
+              ],
               "correctAnswer": "un",
               "explanation": "A partir do 31, os números compostos únense coa conxunción \"e\" (\"trinta e un\", \"corenta e dous\"...).",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: '31 dise \"trinta e _____\"' (uno)",
+                  "explanation": "A partir do 31, os números compostos únense coa conxunción \"e\" (\"trinta e un\", \"corenta e dous\"...)."
+                },
+                "pt": {
+                  "question": "Completa: '31 dise \"trinta e _____\"' (uno)",
+                  "explanation": "A partir do 31, os números compostos únense coa conxunción \"e\" (\"trinta e un\", \"corenta e dous\"...)."
+                },
+                "en": {
+                  "question": "Completa: '31 dise \"trinta e _____\"' (uno)",
+                  "explanation": "A partir do 31, os números compostos únense coa conxunción \"e\" (\"trinta e un\", \"corenta e dous\"...)."
+                },
+                "fr": {
+                  "question": "Completa: '31 dise \"trinta e _____\"' (uno)",
+                  "explanation": "A partir do 31, os números compostos únense coa conxunción \"e\" (\"trinta e un\", \"corenta e dous\"...)."
+                },
+                "ro": {
+                  "question": "Completa: '31 dise \"trinta e _____\"' (uno)",
+                  "explanation": "A partir do 31, os números compostos únense coa conxunción \"e\" (\"trinta e un\", \"corenta e dous\"...)."
+                },
+                "it": {
+                  "question": "Completa: '31 dise \"trinta e _____\"' (uno)",
+                  "explanation": "A partir do 31, os números compostos únense coa conxunción \"e\" (\"trinta e un\", \"corenta e dous\"...)."
+                },
+                "de": {
+                  "question": "Completa: '31 dise \"trinta e _____\"' (uno)",
+                  "explanation": "A partir do 31, os números compostos únense coa conxunción \"e\" (\"trinta e un\", \"corenta e dous\"...)."
+                },
+                "zh": {
+                  "question": "Completa: '31 dise \"trinta e _____\"' (uno)",
+                  "explanation": "A partir do 31, os números compostos únense coa conxunción \"e\" (\"trinta e un\", \"corenta e dous\"...)."
+                }
+              }
             },
             {
               "id": "a1_u2_l3_e4",
               "type": "multiple_choice",
               "question": "Como se di \"100\" en galego?",
-              "options": ["Cen", "Cento", "Centena", "Cento un"],
+              "options": [
+                "Cen",
+                "Cento",
+                "Centena",
+                "Cento un"
+              ],
               "correctAnswer": "Cen",
               "explanation": "\"Cen\" úsase cando o número vai só ou diante doutro substantivo; \"cento\" úsase noutros contextos compostos (ex. \"cento vinte\").",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"100\" en galego?",
+                  "explanation": "\"Cen\" úsase cando o número vai só ou diante doutro substantivo; \"cento\" úsase noutros contextos compostos (ex. \"cento vinte\")."
+                },
+                "pt": {
+                  "question": "Como se di \"100\" en galego?",
+                  "explanation": "\"Cen\" úsase cando o número vai só ou diante doutro substantivo; \"cento\" úsase noutros contextos compostos (ex. \"cento vinte\")."
+                },
+                "en": {
+                  "question": "Como se di \"100\" en galego?",
+                  "explanation": "\"Cen\" úsase cando o número vai só ou diante doutro substantivo; \"cento\" úsase noutros contextos compostos (ex. \"cento vinte\")."
+                },
+                "fr": {
+                  "question": "Como se di \"100\" en galego?",
+                  "explanation": "\"Cen\" úsase cando o número vai só ou diante doutro substantivo; \"cento\" úsase noutros contextos compostos (ex. \"cento vinte\")."
+                },
+                "ro": {
+                  "question": "Como se di \"100\" en galego?",
+                  "explanation": "\"Cen\" úsase cando o número vai só ou diante doutro substantivo; \"cento\" úsase noutros contextos compostos (ex. \"cento vinte\")."
+                },
+                "it": {
+                  "question": "Como se di \"100\" en galego?",
+                  "explanation": "\"Cen\" úsase cando o número vai só ou diante doutro substantivo; \"cento\" úsase noutros contextos compostos (ex. \"cento vinte\")."
+                },
+                "de": {
+                  "question": "Como se di \"100\" en galego?",
+                  "explanation": "\"Cen\" úsase cando o número vai só ou diante doutro substantivo; \"cento\" úsase noutros contextos compostos (ex. \"cento vinte\")."
+                },
+                "zh": {
+                  "question": "Como se di \"100\" en galego?",
+                  "explanation": "\"Cen\" úsase cando o número vai só ou diante doutro substantivo; \"cento\" úsase noutros contextos compostos (ex. \"cento vinte\")."
+                }
+              }
             },
             {
               "id": "a1_u2_l3_e5",
@@ -279,12 +1054,50 @@
               "question": "Empareja os números compostos",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "90", "right": "Noventa"},
-                {"left": "100", "right": "Cen"},
-                {"left": "45", "right": "Corenta e cinco"},
-                {"left": "72", "right": "Setenta e dous"}
+                {
+                  "left": "90",
+                  "right": "Noventa"
+                },
+                {
+                  "left": "100",
+                  "right": "Cen"
+                },
+                {
+                  "left": "45",
+                  "right": "Corenta e cinco"
+                },
+                {
+                  "left": "72",
+                  "right": "Setenta e dous"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja os números compostos"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             }
           ]
         }
@@ -311,10 +1124,49 @@
               "id": "a1_u3_l1_e1",
               "type": "multiple_choice",
               "question": "Como se di 'madre' en galego?",
-              "options": ["Nai", "Pai", "Irmá", "Avoa"],
+              "options": [
+                "Nai",
+                "Pai",
+                "Irmá",
+                "Avoa"
+              ],
               "correctAnswer": "Nai",
               "explanation": "'Nai' é a palabra galega para 'madre'.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di 'madre' en galego?",
+                  "explanation": "'Nai' é a palabra galega para 'madre'."
+                },
+                "pt": {
+                  "question": "Como se diz 'Mãe' em galego?",
+                  "explanation": "'Nai' é a palabra galega para 'madre'."
+                },
+                "en": {
+                  "question": "How do you say 'Mother' in Galician?",
+                  "explanation": "'Nai' é a palabra galega para 'madre'."
+                },
+                "fr": {
+                  "question": "Comment dit-on 'Mère' en galicien?",
+                  "explanation": "'Nai' é a palabra galega para 'madre'."
+                },
+                "ro": {
+                  "question": "Cum se spune 'Mamă' în galiciană?",
+                  "explanation": "'Nai' é a palabra galega para 'madre'."
+                },
+                "it": {
+                  "question": "Come si dice 'Madre' in galiziano?",
+                  "explanation": "'Nai' é a palabra galega para 'madre'."
+                },
+                "de": {
+                  "question": "Wie sagt man 'Mutter' auf Galicisch?",
+                  "explanation": "'Nai' é a palabra galega para 'madre'."
+                },
+                "zh": {
+                  "question": "如何用加利西亚语说“母亲”？",
+                  "explanation": "'Nai' é a palabra galega para 'madre'."
+                }
+              }
             },
             {
               "id": "a1_u3_l1_e2",
@@ -322,21 +1174,98 @@
               "question": "Empareja os membros da familia",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Pai", "right": "Padre"},
-                {"left": "Avó", "right": "Abuelo"},
-                {"left": "Irmán", "right": "Hermano"},
-                {"left": "Fillo", "right": "Hijo"}
+                {
+                  "left": "Pai",
+                  "right": "Padre"
+                },
+                {
+                  "left": "Avó",
+                  "right": "Abuelo"
+                },
+                {
+                  "left": "Irmán",
+                  "right": "Hermano"
+                },
+                {
+                  "left": "Fillo",
+                  "right": "Hijo"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja os membros da familia"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a1_u3_l1_e3",
               "type": "fill_blank",
               "question": "A _____ do meu pai é a miña avoa. (madre)",
-              "options": ["nai", "irmá", "filla", "cuñada"],
+              "options": [
+                "nai",
+                "irmá",
+                "filla",
+                "cuñada"
+              ],
               "correctAnswer": "nai",
               "explanation": "A nai do teu pai é a túa avoa paterna.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "A _____ do meu pai é a miña avoa. (madre)",
+                  "explanation": "A nai do teu pai é a túa avoa paterna."
+                },
+                "pt": {
+                  "question": "A _____ do meu pai é a miña avoa. (madre)",
+                  "explanation": "A nai do teu pai é a túa avoa paterna."
+                },
+                "en": {
+                  "question": "A _____ do meu pai é a miña avoa. (madre)",
+                  "explanation": "A nai do teu pai é a túa avoa paterna."
+                },
+                "fr": {
+                  "question": "A _____ do meu pai é a miña avoa. (madre)",
+                  "explanation": "A nai do teu pai é a túa avoa paterna."
+                },
+                "ro": {
+                  "question": "A _____ do meu pai é a miña avoa. (madre)",
+                  "explanation": "A nai do teu pai é a túa avoa paterna."
+                },
+                "it": {
+                  "question": "A _____ do meu pai é a miña avoa. (madre)",
+                  "explanation": "A nai do teu pai é a túa avoa paterna."
+                },
+                "de": {
+                  "question": "A _____ do meu pai é a miña avoa. (madre)",
+                  "explanation": "A nai do teu pai é a túa avoa paterna."
+                },
+                "zh": {
+                  "question": "A _____ do meu pai é a miña avoa. (madre)",
+                  "explanation": "A nai do teu pai é a túa avoa paterna."
+                }
+              }
             }
           ]
         }
@@ -363,10 +1292,49 @@
               "id": "a1_u4_l1_e1",
               "type": "multiple_choice",
               "question": "Como se di 'azul' en galego?",
-              "options": ["Azul", "Vermello", "Verde", "Amarelo"],
+              "options": [
+                "Azul",
+                "Vermello",
+                "Verde",
+                "Amarelo"
+              ],
               "correctAnswer": "Azul",
               "explanation": "'Azul' é igual en galego e en castelán.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di 'azul' en galego?",
+                  "explanation": "'Azul' é igual en galego e en castelán."
+                },
+                "pt": {
+                  "question": "Como se diz 'Azul' em galego?",
+                  "explanation": "'Azul' é igual en galego e en castelán."
+                },
+                "en": {
+                  "question": "How do you say 'Blue' in Galician?",
+                  "explanation": "'Azul' é igual en galego e en castelán."
+                },
+                "fr": {
+                  "question": "Comment dit-on 'Bleu' en galicien?",
+                  "explanation": "'Azul' é igual en galego e en castelán."
+                },
+                "ro": {
+                  "question": "Cum se spune 'Albastru' în galiciană?",
+                  "explanation": "'Azul' é igual en galego e en castelán."
+                },
+                "it": {
+                  "question": "Come si dice 'Blu' in galiziano?",
+                  "explanation": "'Azul' é igual en galego e en castelán."
+                },
+                "de": {
+                  "question": "Wie sagt man 'Blau' auf Galicisch?",
+                  "explanation": "'Azul' é igual en galego e en castelán."
+                },
+                "zh": {
+                  "question": "如何用加利西亚语说“蓝色”？",
+                  "explanation": "'Azul' é igual en galego e en castelán."
+                }
+              }
             },
             {
               "id": "a1_u4_l1_e2",
@@ -374,12 +1342,50 @@
               "question": "Empareja os cores",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Vermello", "right": "Rojo"},
-                {"left": "Verde", "right": "Verde"},
-                {"left": "Branco", "right": "Blanco"},
-                {"left": "Negro", "right": "Negro"}
+                {
+                  "left": "Vermello",
+                  "right": "Rojo"
+                },
+                {
+                  "left": "Verde",
+                  "right": "Verde"
+                },
+                {
+                  "left": "Branco",
+                  "right": "Blanco"
+                },
+                {
+                  "left": "Negro",
+                  "right": "Negro"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja os cores"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             }
           ]
         }
@@ -406,10 +1412,49 @@
               "id": "a1_u5_l1_e1",
               "type": "multiple_choice",
               "question": "Como se chama en galego o 'pan'?",
-              "options": ["Pan", "Queixo", "Viño", "Peixe"],
+              "options": [
+                "Pan",
+                "Queixo",
+                "Viño",
+                "Peixe"
+              ],
               "correctAnswer": "Pan",
               "explanation": "'Pan' é igual en galego e en castelán.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se chama en galego o 'pan'?",
+                  "explanation": "'Pan' é igual en galego e en castelán."
+                },
+                "pt": {
+                  "question": "Como se chama en galego o 'pan'?",
+                  "explanation": "'Pan' é igual en galego e en castelán."
+                },
+                "en": {
+                  "question": "Como se chama en galego o 'pan'?",
+                  "explanation": "'Pan' é igual en galego e en castelán."
+                },
+                "fr": {
+                  "question": "Como se chama en galego o 'pan'?",
+                  "explanation": "'Pan' é igual en galego e en castelán."
+                },
+                "ro": {
+                  "question": "Como se chama en galego o 'pan'?",
+                  "explanation": "'Pan' é igual en galego e en castelán."
+                },
+                "it": {
+                  "question": "Como se chama en galego o 'pan'?",
+                  "explanation": "'Pan' é igual en galego e en castelán."
+                },
+                "de": {
+                  "question": "Como se chama en galego o 'pan'?",
+                  "explanation": "'Pan' é igual en galego e en castelán."
+                },
+                "zh": {
+                  "question": "Como se chama en galego o 'pan'?",
+                  "explanation": "'Pan' é igual en galego e en castelán."
+                }
+              }
             },
             {
               "id": "a1_u5_l1_e2",
@@ -417,12 +1462,50 @@
               "question": "Empareja os alimentos",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Leite", "right": "Leche"},
-                {"left": "Ovo", "right": "Huevo"},
-                {"left": "Peixe", "right": "Pescado"},
-                {"left": "Carne", "right": "Carne"}
+                {
+                  "left": "Leite",
+                  "right": "Leche"
+                },
+                {
+                  "left": "Ovo",
+                  "right": "Huevo"
+                },
+                {
+                  "left": "Peixe",
+                  "right": "Pescado"
+                },
+                {
+                  "left": "Carne",
+                  "right": "Carne"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja os alimentos"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             }
           ]
         }
@@ -449,10 +1532,49 @@
               "id": "a1_u6_l1_e1",
               "type": "multiple_choice",
               "question": "Como se di 'comer' en galego?",
-              "options": ["Comer", "Beber", "Durmir", "Falar"],
+              "options": [
+                "Comer",
+                "Beber",
+                "Durmir",
+                "Falar"
+              ],
               "correctAnswer": "Comer",
               "explanation": "'Comer' é igual en galego e en castelán.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di 'comer' en galego?",
+                  "explanation": "'Comer' é igual en galego e en castelán."
+                },
+                "pt": {
+                  "question": "Como se diz 'comer' em galego?",
+                  "explanation": "'Comer' é igual en galego e en castelán."
+                },
+                "en": {
+                  "question": "How do you say 'comer' in Galician?",
+                  "explanation": "'Comer' é igual en galego e en castelán."
+                },
+                "fr": {
+                  "question": "Comment dit-on 'comer' en galicien?",
+                  "explanation": "'Comer' é igual en galego e en castelán."
+                },
+                "ro": {
+                  "question": "Cum se spune 'comer' în galiciană?",
+                  "explanation": "'Comer' é igual en galego e en castelán."
+                },
+                "it": {
+                  "question": "Come si dice 'comer' in galiziano?",
+                  "explanation": "'Comer' é igual en galego e en castelán."
+                },
+                "de": {
+                  "question": "Wie sagt man 'comer' auf Galicisch?",
+                  "explanation": "'Comer' é igual en galego e en castelán."
+                },
+                "zh": {
+                  "question": "如何用加利西亚语说“comer”？",
+                  "explanation": "'Comer' é igual en galego e en castelán."
+                }
+              }
             },
             {
               "id": "a1_u6_l1_e2",
@@ -460,12 +1582,50 @@
               "question": "Empareja os verbos",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Durmir", "right": "Dormir"},
-                {"left": "Traballar", "right": "Trabajar"},
-                {"left": "Camiñar", "right": "Caminar"},
-                {"left": "Ler", "right": "Leer"}
+                {
+                  "left": "Durmir",
+                  "right": "Dormir"
+                },
+                {
+                  "left": "Traballar",
+                  "right": "Trabajar"
+                },
+                {
+                  "left": "Camiñar",
+                  "right": "Caminar"
+                },
+                {
+                  "left": "Ler",
+                  "right": "Leer"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja os verbos"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             }
           ]
         }
@@ -492,10 +1652,49 @@
               "id": "a1_u7_l1_e1",
               "type": "multiple_choice",
               "question": "Como se di \"lunes\" en galego?",
-              "options": ["Luns", "Martes", "Mércores", "Domingo"],
+              "options": [
+                "Luns",
+                "Martes",
+                "Mércores",
+                "Domingo"
+              ],
               "correctAnswer": "Luns",
               "explanation": "A semana en galego comeza en \"luns\", igual que en castelán.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"lunes\" en galego?",
+                  "explanation": "A semana en galego comeza en \"luns\", igual que en castelán."
+                },
+                "pt": {
+                  "question": "Como se di \"lunes\" en galego?",
+                  "explanation": "A semana en galego comeza en \"luns\", igual que en castelán."
+                },
+                "en": {
+                  "question": "Como se di \"lunes\" en galego?",
+                  "explanation": "A semana en galego comeza en \"luns\", igual que en castelán."
+                },
+                "fr": {
+                  "question": "Como se di \"lunes\" en galego?",
+                  "explanation": "A semana en galego comeza en \"luns\", igual que en castelán."
+                },
+                "ro": {
+                  "question": "Como se di \"lunes\" en galego?",
+                  "explanation": "A semana en galego comeza en \"luns\", igual que en castelán."
+                },
+                "it": {
+                  "question": "Como se di \"lunes\" en galego?",
+                  "explanation": "A semana en galego comeza en \"luns\", igual que en castelán."
+                },
+                "de": {
+                  "question": "Como se di \"lunes\" en galego?",
+                  "explanation": "A semana en galego comeza en \"luns\", igual que en castelán."
+                },
+                "zh": {
+                  "question": "Como se di \"lunes\" en galego?",
+                  "explanation": "A semana en galego comeza en \"luns\", igual que en castelán."
+                }
+              }
             },
             {
               "id": "a1_u7_l1_e2",
@@ -503,30 +1702,146 @@
               "question": "Empareja os días da semana",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Martes", "right": "Martes"},
-                {"left": "Mércores", "right": "Miércoles"},
-                {"left": "Xoves", "right": "Jueves"},
-                {"left": "Venres", "right": "Viernes"}
+                {
+                  "left": "Martes",
+                  "right": "Martes"
+                },
+                {
+                  "left": "Mércores",
+                  "right": "Miércoles"
+                },
+                {
+                  "left": "Xoves",
+                  "right": "Jueves"
+                },
+                {
+                  "left": "Venres",
+                  "right": "Viernes"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja os días da semana"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a1_u7_l1_e3",
               "type": "fill_blank",
               "question": "Completa: 'Hoxe é _____' (sábado)",
-              "options": ["sábado", "domingo", "luns", "xoves"],
+              "options": [
+                "sábado",
+                "domingo",
+                "luns",
+                "xoves"
+              ],
               "correctAnswer": "sábado",
               "explanation": "\"Sábado\" mantense case igual que en castelán.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: 'Hoxe é _____' (sábado)",
+                  "explanation": "\"Sábado\" mantense case igual que en castelán."
+                },
+                "pt": {
+                  "question": "Completa: 'Hoxe é _____' (sábado)",
+                  "explanation": "\"Sábado\" mantense case igual que en castelán."
+                },
+                "en": {
+                  "question": "Completa: 'Hoxe é _____' (sábado)",
+                  "explanation": "\"Sábado\" mantense case igual que en castelán."
+                },
+                "fr": {
+                  "question": "Completa: 'Hoxe é _____' (sábado)",
+                  "explanation": "\"Sábado\" mantense case igual que en castelán."
+                },
+                "ro": {
+                  "question": "Completa: 'Hoxe é _____' (sábado)",
+                  "explanation": "\"Sábado\" mantense case igual que en castelán."
+                },
+                "it": {
+                  "question": "Completa: 'Hoxe é _____' (sábado)",
+                  "explanation": "\"Sábado\" mantense case igual que en castelán."
+                },
+                "de": {
+                  "question": "Completa: 'Hoxe é _____' (sábado)",
+                  "explanation": "\"Sábado\" mantense case igual que en castelán."
+                },
+                "zh": {
+                  "question": "Completa: 'Hoxe é _____' (sábado)",
+                  "explanation": "\"Sábado\" mantense case igual que en castelán."
+                }
+              }
             },
             {
               "id": "a1_u7_l1_e4",
               "type": "multiple_choice",
               "question": "Cal é o último día da semana en galego?",
-              "options": ["Domingo", "Sábado", "Venres", "Luns"],
+              "options": [
+                "Domingo",
+                "Sábado",
+                "Venres",
+                "Luns"
+              ],
               "correctAnswer": "Domingo",
               "explanation": "O 'domingo' pecha a semana tamén en galego.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Cal é o último día da semana en galego?",
+                  "explanation": "O 'domingo' pecha a semana tamén en galego."
+                },
+                "pt": {
+                  "question": "Cal é o último día da semana en galego?",
+                  "explanation": "O 'domingo' pecha a semana tamén en galego."
+                },
+                "en": {
+                  "question": "Cal é o último día da semana en galego?",
+                  "explanation": "O 'domingo' pecha a semana tamén en galego."
+                },
+                "fr": {
+                  "question": "Cal é o último día da semana en galego?",
+                  "explanation": "O 'domingo' pecha a semana tamén en galego."
+                },
+                "ro": {
+                  "question": "Cal é o último día da semana en galego?",
+                  "explanation": "O 'domingo' pecha a semana tamén en galego."
+                },
+                "it": {
+                  "question": "Cal é o último día da semana en galego?",
+                  "explanation": "O 'domingo' pecha a semana tamén en galego."
+                },
+                "de": {
+                  "question": "Cal é o último día da semana en galego?",
+                  "explanation": "O 'domingo' pecha a semana tamén en galego."
+                },
+                "zh": {
+                  "question": "Cal é o último día da semana en galego?",
+                  "explanation": "O 'domingo' pecha a semana tamén en galego."
+                }
+              }
             }
           ]
         },
@@ -542,10 +1857,49 @@
               "id": "a1_u7_l2_e1",
               "type": "multiple_choice",
               "question": "Como se di \"enero\" en galego?",
-              "options": ["Xaneiro", "Xuño", "Xullo", "Xaneiro e Xuño"],
+              "options": [
+                "Xaneiro",
+                "Xuño",
+                "Xullo",
+                "Xaneiro e Xuño"
+              ],
               "correctAnswer": "Xaneiro",
               "explanation": "A letra \"x\" en galego soa como a \"sh\" inglesa; \"xaneiro\" é un dos meses máis recoñecibles polo seu son.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"enero\" en galego?",
+                  "explanation": "A letra \"x\" en galego soa como a \"sh\" inglesa; \"xaneiro\" é un dos meses máis recoñecibles polo seu son."
+                },
+                "pt": {
+                  "question": "Como se di \"enero\" en galego?",
+                  "explanation": "A letra \"x\" en galego soa como a \"sh\" inglesa; \"xaneiro\" é un dos meses máis recoñecibles polo seu son."
+                },
+                "en": {
+                  "question": "Como se di \"enero\" en galego?",
+                  "explanation": "A letra \"x\" en galego soa como a \"sh\" inglesa; \"xaneiro\" é un dos meses máis recoñecibles polo seu son."
+                },
+                "fr": {
+                  "question": "Como se di \"enero\" en galego?",
+                  "explanation": "A letra \"x\" en galego soa como a \"sh\" inglesa; \"xaneiro\" é un dos meses máis recoñecibles polo seu son."
+                },
+                "ro": {
+                  "question": "Como se di \"enero\" en galego?",
+                  "explanation": "A letra \"x\" en galego soa como a \"sh\" inglesa; \"xaneiro\" é un dos meses máis recoñecibles polo seu son."
+                },
+                "it": {
+                  "question": "Como se di \"enero\" en galego?",
+                  "explanation": "A letra \"x\" en galego soa como a \"sh\" inglesa; \"xaneiro\" é un dos meses máis recoñecibles polo seu son."
+                },
+                "de": {
+                  "question": "Como se di \"enero\" en galego?",
+                  "explanation": "A letra \"x\" en galego soa como a \"sh\" inglesa; \"xaneiro\" é un dos meses máis recoñecibles polo seu son."
+                },
+                "zh": {
+                  "question": "Como se di \"enero\" en galego?",
+                  "explanation": "A letra \"x\" en galego soa como a \"sh\" inglesa; \"xaneiro\" é un dos meses máis recoñecibles polo seu son."
+                }
+              }
             },
             {
               "id": "a1_u7_l2_e2",
@@ -553,30 +1907,146 @@
               "question": "Empareja os meses correspondentes",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Marzo", "right": "Marzo"},
-                {"left": "Maio", "right": "Mayo"},
-                {"left": "Setembro", "right": "Septiembre"},
-                {"left": "Decembro", "right": "Diciembre"}
+                {
+                  "left": "Marzo",
+                  "right": "Marzo"
+                },
+                {
+                  "left": "Maio",
+                  "right": "Mayo"
+                },
+                {
+                  "left": "Setembro",
+                  "right": "Septiembre"
+                },
+                {
+                  "left": "Decembro",
+                  "right": "Diciembre"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja os meses correspondentes"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a1_u7_l2_e3",
               "type": "multiple_choice",
               "question": "Como se di \"verano\" en galego?",
-              "options": ["Verán", "Inverno", "Outono", "Primavera"],
+              "options": [
+                "Verán",
+                "Inverno",
+                "Outono",
+                "Primavera"
+              ],
               "correctAnswer": "Verán",
               "explanation": "\"Verán\" leva til para marcar que o acento recae na última sílaba.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"verano\" en galego?",
+                  "explanation": "\"Verán\" leva til para marcar que o acento recae na última sílaba."
+                },
+                "pt": {
+                  "question": "Como se di \"verano\" en galego?",
+                  "explanation": "\"Verán\" leva til para marcar que o acento recae na última sílaba."
+                },
+                "en": {
+                  "question": "Como se di \"verano\" en galego?",
+                  "explanation": "\"Verán\" leva til para marcar que o acento recae na última sílaba."
+                },
+                "fr": {
+                  "question": "Como se di \"verano\" en galego?",
+                  "explanation": "\"Verán\" leva til para marcar que o acento recae na última sílaba."
+                },
+                "ro": {
+                  "question": "Como se di \"verano\" en galego?",
+                  "explanation": "\"Verán\" leva til para marcar que o acento recae na última sílaba."
+                },
+                "it": {
+                  "question": "Como se di \"verano\" en galego?",
+                  "explanation": "\"Verán\" leva til para marcar que o acento recae na última sílaba."
+                },
+                "de": {
+                  "question": "Como se di \"verano\" en galego?",
+                  "explanation": "\"Verán\" leva til para marcar que o acento recae na última sílaba."
+                },
+                "zh": {
+                  "question": "Como se di \"verano\" en galego?",
+                  "explanation": "\"Verán\" leva til para marcar que o acento recae na última sílaba."
+                }
+              }
             },
             {
               "id": "a1_u7_l2_e4",
               "type": "fill_blank",
               "question": "Completa: 'O _____ é a estación máis fría' (invierno)",
-              "options": ["inverno", "outono", "verán", "primavera"],
+              "options": [
+                "inverno",
+                "outono",
+                "verán",
+                "primavera"
+              ],
               "correctAnswer": "inverno",
               "explanation": "O inverno é o período máis frío do ano.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: 'O _____ é a estación máis fría' (invierno)",
+                  "explanation": "O inverno é o período máis frío do ano."
+                },
+                "pt": {
+                  "question": "Completa: 'O _____ é a estación máis fría' (invierno)",
+                  "explanation": "O inverno é o período máis frío do ano."
+                },
+                "en": {
+                  "question": "Completa: 'O _____ é a estación máis fría' (invierno)",
+                  "explanation": "O inverno é o período máis frío do ano."
+                },
+                "fr": {
+                  "question": "Completa: 'O _____ é a estación máis fría' (invierno)",
+                  "explanation": "O inverno é o período máis frío do ano."
+                },
+                "ro": {
+                  "question": "Completa: 'O _____ é a estación máis fría' (invierno)",
+                  "explanation": "O inverno é o período máis frío do ano."
+                },
+                "it": {
+                  "question": "Completa: 'O _____ é a estación máis fría' (invierno)",
+                  "explanation": "O inverno é o período máis frío do ano."
+                },
+                "de": {
+                  "question": "Completa: 'O _____ é a estación máis fría' (invierno)",
+                  "explanation": "O inverno é o período máis frío do ano."
+                },
+                "zh": {
+                  "question": "Completa: 'O _____ é a estación máis fría' (invierno)",
+                  "explanation": "O inverno é o período máis frío do ano."
+                }
+              }
             }
           ]
         }
@@ -603,10 +2073,49 @@
               "id": "a1_u8_l1_e1",
               "type": "multiple_choice",
               "question": "Como se di \"hace sol\" en galego?",
-              "options": ["Fai sol", "Fai frío", "Chove", "Neva"],
+              "options": [
+                "Fai sol",
+                "Fai frío",
+                "Chove",
+                "Neva"
+              ],
               "correctAnswer": "Fai sol",
               "explanation": "O verbo \"facer\" úsase para describir moitos fenómenos meteorolóxicos, igual que en castelán.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"hace sol\" en galego?",
+                  "explanation": "O verbo \"facer\" úsase para describir moitos fenómenos meteorolóxicos, igual que en castelán."
+                },
+                "pt": {
+                  "question": "Como se di \"hace sol\" en galego?",
+                  "explanation": "O verbo \"facer\" úsase para describir moitos fenómenos meteorolóxicos, igual que en castelán."
+                },
+                "en": {
+                  "question": "Como se di \"hace sol\" en galego?",
+                  "explanation": "O verbo \"facer\" úsase para describir moitos fenómenos meteorolóxicos, igual que en castelán."
+                },
+                "fr": {
+                  "question": "Como se di \"hace sol\" en galego?",
+                  "explanation": "O verbo \"facer\" úsase para describir moitos fenómenos meteorolóxicos, igual que en castelán."
+                },
+                "ro": {
+                  "question": "Como se di \"hace sol\" en galego?",
+                  "explanation": "O verbo \"facer\" úsase para describir moitos fenómenos meteorolóxicos, igual que en castelán."
+                },
+                "it": {
+                  "question": "Como se di \"hace sol\" en galego?",
+                  "explanation": "O verbo \"facer\" úsase para describir moitos fenómenos meteorolóxicos, igual que en castelán."
+                },
+                "de": {
+                  "question": "Como se di \"hace sol\" en galego?",
+                  "explanation": "O verbo \"facer\" úsase para describir moitos fenómenos meteorolóxicos, igual que en castelán."
+                },
+                "zh": {
+                  "question": "Como se di \"hace sol\" en galego?",
+                  "explanation": "O verbo \"facer\" úsase para describir moitos fenómenos meteorolóxicos, igual que en castelán."
+                }
+              }
             },
             {
               "id": "a1_u8_l1_e2",
@@ -614,31 +2123,155 @@
               "question": "Empareja os estados meteorolóxicos",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Chove", "right": "Llueve"},
-                {"left": "Neva", "right": "Nieva"},
-                {"left": "Fai calor", "right": "Hace calor"},
-                {"left": "Fai vento", "right": "Hace viento"}
+                {
+                  "left": "Chove",
+                  "right": "Llueve"
+                },
+                {
+                  "left": "Neva",
+                  "right": "Nieva"
+                },
+                {
+                  "left": "Fai calor",
+                  "right": "Hace calor"
+                },
+                {
+                  "left": "Fai vento",
+                  "right": "Hace viento"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja os estados meteorolóxicos"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a1_u8_l1_e3",
               "type": "fill_blank",
               "question": "Completa: 'Hoxe está moi _____' (nublado)",
-              "options": ["nubrado", "soleado", "choivoso", "seco"],
+              "options": [
+                "nubrado",
+                "soleado",
+                "choivoso",
+                "seco"
+              ],
               "correctAnswer": "nubrado",
               "hint": "A forma máis xeral en galego é \"nubrado\", aínda que tamén se escoita \"nublado\" con variantes dialectais.",
               "explanation": "\"Está nubrado\" indica que o ceo está cuberto de nubes.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: 'Hoxe está moi _____' (nublado)",
+                  "explanation": "\"Está nubrado\" indica que o ceo está cuberto de nubes.",
+                  "hint": "A forma máis xeral en galego é \"nubrado\", aínda que tamén se escoita \"nublado\" con variantes dialectais."
+                },
+                "pt": {
+                  "question": "Completa: 'Hoxe está moi _____' (nublado)",
+                  "explanation": "\"Está nubrado\" indica que o ceo está cuberto de nubes.",
+                  "hint": "A forma máis xeral en galego é \"nubrado\", aínda que tamén se escoita \"nublado\" con variantes dialectais."
+                },
+                "en": {
+                  "question": "Completa: 'Hoxe está moi _____' (nublado)",
+                  "explanation": "\"Está nubrado\" indica que o ceo está cuberto de nubes.",
+                  "hint": "A forma máis xeral en galego é \"nubrado\", aínda que tamén se escoita \"nublado\" con variantes dialectais."
+                },
+                "fr": {
+                  "question": "Completa: 'Hoxe está moi _____' (nublado)",
+                  "explanation": "\"Está nubrado\" indica que o ceo está cuberto de nubes.",
+                  "hint": "A forma máis xeral en galego é \"nubrado\", aínda que tamén se escoita \"nublado\" con variantes dialectais."
+                },
+                "ro": {
+                  "question": "Completa: 'Hoxe está moi _____' (nublado)",
+                  "explanation": "\"Está nubrado\" indica que o ceo está cuberto de nubes.",
+                  "hint": "A forma máis xeral en galego é \"nubrado\", aínda que tamén se escoita \"nublado\" con variantes dialectais."
+                },
+                "it": {
+                  "question": "Completa: 'Hoxe está moi _____' (nublado)",
+                  "explanation": "\"Está nubrado\" indica que o ceo está cuberto de nubes.",
+                  "hint": "A forma máis xeral en galego é \"nubrado\", aínda que tamén se escoita \"nublado\" con variantes dialectais."
+                },
+                "de": {
+                  "question": "Completa: 'Hoxe está moi _____' (nublado)",
+                  "explanation": "\"Está nubrado\" indica que o ceo está cuberto de nubes.",
+                  "hint": "A forma máis xeral en galego é \"nubrado\", aínda que tamén se escoita \"nublado\" con variantes dialectais."
+                },
+                "zh": {
+                  "question": "Completa: 'Hoxe está moi _____' (nublado)",
+                  "explanation": "\"Está nubrado\" indica que o ceo está cuberto de nubes.",
+                  "hint": "A forma máis xeral en galego é \"nubrado\", aínda que tamén se escoita \"nublado\" con variantes dialectais."
+                }
+              }
             },
             {
               "id": "a1_u8_l1_e4",
               "type": "multiple_choice",
               "question": "Que significa \"Fai bo tempo\"?",
-              "options": ["Hace buen tiempo", "Hace mal tiempo", "Va a llover", "Hace mucho frío"],
+              "options": [
+                "Hace buen tiempo",
+                "Hace mal tiempo",
+                "Va a llover",
+                "Hace mucho frío"
+              ],
               "correctAnswer": "Hace buen tiempo",
               "explanation": "'Fai bo tempo' indica que as condicións climáticas son agradables.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Que significa \"Fai bo tempo\"?",
+                  "explanation": "'Fai bo tempo' indica que as condicións climáticas son agradables."
+                },
+                "pt": {
+                  "question": "Que significa \"Fai bo tempo\"?",
+                  "explanation": "'Fai bo tempo' indica que as condicións climáticas son agradables."
+                },
+                "en": {
+                  "question": "Que significa \"Fai bo tempo\"?",
+                  "explanation": "'Fai bo tempo' indica que as condicións climáticas son agradables."
+                },
+                "fr": {
+                  "question": "Que significa \"Fai bo tempo\"?",
+                  "explanation": "'Fai bo tempo' indica que as condicións climáticas son agradables."
+                },
+                "ro": {
+                  "question": "Que significa \"Fai bo tempo\"?",
+                  "explanation": "'Fai bo tempo' indica que as condicións climáticas son agradables."
+                },
+                "it": {
+                  "question": "Que significa \"Fai bo tempo\"?",
+                  "explanation": "'Fai bo tempo' indica que as condicións climáticas son agradables."
+                },
+                "de": {
+                  "question": "Que significa \"Fai bo tempo\"?",
+                  "explanation": "'Fai bo tempo' indica que as condicións climáticas son agradables."
+                },
+                "zh": {
+                  "question": "Que significa \"Fai bo tempo\"?",
+                  "explanation": "'Fai bo tempo' indica que as condicións climáticas son agradables."
+                }
+              }
             }
           ]
         }
@@ -665,10 +2298,49 @@
               "id": "a1_u9_l1_e1",
               "type": "multiple_choice",
               "question": "Como se di \"cocina\" (la habitación) en galego?",
-              "options": ["Cociña", "Cuarto", "Salón", "Baño"],
+              "options": [
+                "Cociña",
+                "Cuarto",
+                "Salón",
+                "Baño"
+              ],
               "correctAnswer": "Cociña",
               "explanation": "\"Cociña\" designa tanto a estancia coma a acción de cociñar.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"cocina\" (la habitación) en galego?",
+                  "explanation": "\"Cociña\" designa tanto a estancia coma a acción de cociñar."
+                },
+                "pt": {
+                  "question": "Como se di \"cocina\" (la habitación) en galego?",
+                  "explanation": "\"Cociña\" designa tanto a estancia coma a acción de cociñar."
+                },
+                "en": {
+                  "question": "Como se di \"cocina\" (la habitación) en galego?",
+                  "explanation": "\"Cociña\" designa tanto a estancia coma a acción de cociñar."
+                },
+                "fr": {
+                  "question": "Como se di \"cocina\" (la habitación) en galego?",
+                  "explanation": "\"Cociña\" designa tanto a estancia coma a acción de cociñar."
+                },
+                "ro": {
+                  "question": "Como se di \"cocina\" (la habitación) en galego?",
+                  "explanation": "\"Cociña\" designa tanto a estancia coma a acción de cociñar."
+                },
+                "it": {
+                  "question": "Como se di \"cocina\" (la habitación) en galego?",
+                  "explanation": "\"Cociña\" designa tanto a estancia coma a acción de cociñar."
+                },
+                "de": {
+                  "question": "Como se di \"cocina\" (la habitación) en galego?",
+                  "explanation": "\"Cociña\" designa tanto a estancia coma a acción de cociñar."
+                },
+                "zh": {
+                  "question": "Como se di \"cocina\" (la habitación) en galego?",
+                  "explanation": "\"Cociña\" designa tanto a estancia coma a acción de cociñar."
+                }
+              }
             },
             {
               "id": "a1_u9_l1_e2",
@@ -676,30 +2348,146 @@
               "question": "Empareja as estancias",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Cuarto", "right": "Habitación"},
-                {"left": "Baño", "right": "Baño"},
-                {"left": "Salón", "right": "Salón"},
-                {"left": "Xardín", "right": "Jardín"}
+                {
+                  "left": "Cuarto",
+                  "right": "Habitación"
+                },
+                {
+                  "left": "Baño",
+                  "right": "Baño"
+                },
+                {
+                  "left": "Salón",
+                  "right": "Salón"
+                },
+                {
+                  "left": "Xardín",
+                  "right": "Jardín"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja as estancias"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a1_u9_l1_e3",
               "type": "fill_blank",
               "question": "Completa: 'Durmo no meu _____' (habitación)",
-              "options": ["cuarto", "salón", "baño", "xardín"],
+              "options": [
+                "cuarto",
+                "salón",
+                "baño",
+                "xardín"
+              ],
               "correctAnswer": "cuarto",
               "explanation": "'Cuarto' é o espazo dedicado ao descanso.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: 'Durmo no meu _____' (habitación)",
+                  "explanation": "'Cuarto' é o espazo dedicado ao descanso."
+                },
+                "pt": {
+                  "question": "Completa: 'Durmo no meu _____' (habitación)",
+                  "explanation": "'Cuarto' é o espazo dedicado ao descanso."
+                },
+                "en": {
+                  "question": "Completa: 'Durmo no meu _____' (habitación)",
+                  "explanation": "'Cuarto' é o espazo dedicado ao descanso."
+                },
+                "fr": {
+                  "question": "Completa: 'Durmo no meu _____' (habitación)",
+                  "explanation": "'Cuarto' é o espazo dedicado ao descanso."
+                },
+                "ro": {
+                  "question": "Completa: 'Durmo no meu _____' (habitación)",
+                  "explanation": "'Cuarto' é o espazo dedicado ao descanso."
+                },
+                "it": {
+                  "question": "Completa: 'Durmo no meu _____' (habitación)",
+                  "explanation": "'Cuarto' é o espazo dedicado ao descanso."
+                },
+                "de": {
+                  "question": "Completa: 'Durmo no meu _____' (habitación)",
+                  "explanation": "'Cuarto' é o espazo dedicado ao descanso."
+                },
+                "zh": {
+                  "question": "Completa: 'Durmo no meu _____' (habitación)",
+                  "explanation": "'Cuarto' é o espazo dedicado ao descanso."
+                }
+              }
             },
             {
               "id": "a1_u9_l1_e4",
               "type": "multiple_choice",
               "question": "Como se di \"ventana\" en galego?",
-              "options": ["Xanela", "Porta", "Parede", "Teito"],
+              "options": [
+                "Xanela",
+                "Porta",
+                "Parede",
+                "Teito"
+              ],
               "correctAnswer": "Xanela",
               "explanation": "\"Xanela\" é a forma xenuinamente galega para \"ventana\"; comparte orixe co portugués \"janela\".",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"ventana\" en galego?",
+                  "explanation": "\"Xanela\" é a forma xenuinamente galega para \"ventana\"; comparte orixe co portugués \"janela\"."
+                },
+                "pt": {
+                  "question": "Como se di \"ventana\" en galego?",
+                  "explanation": "\"Xanela\" é a forma xenuinamente galega para \"ventana\"; comparte orixe co portugués \"janela\"."
+                },
+                "en": {
+                  "question": "Como se di \"ventana\" en galego?",
+                  "explanation": "\"Xanela\" é a forma xenuinamente galega para \"ventana\"; comparte orixe co portugués \"janela\"."
+                },
+                "fr": {
+                  "question": "Como se di \"ventana\" en galego?",
+                  "explanation": "\"Xanela\" é a forma xenuinamente galega para \"ventana\"; comparte orixe co portugués \"janela\"."
+                },
+                "ro": {
+                  "question": "Como se di \"ventana\" en galego?",
+                  "explanation": "\"Xanela\" é a forma xenuinamente galega para \"ventana\"; comparte orixe co portugués \"janela\"."
+                },
+                "it": {
+                  "question": "Como se di \"ventana\" en galego?",
+                  "explanation": "\"Xanela\" é a forma xenuinamente galega para \"ventana\"; comparte orixe co portugués \"janela\"."
+                },
+                "de": {
+                  "question": "Como se di \"ventana\" en galego?",
+                  "explanation": "\"Xanela\" é a forma xenuinamente galega para \"ventana\"; comparte orixe co portugués \"janela\"."
+                },
+                "zh": {
+                  "question": "Como se di \"ventana\" en galego?",
+                  "explanation": "\"Xanela\" é a forma xenuinamente galega para \"ventana\"; comparte orixe co portugués \"janela\"."
+                }
+              }
             }
           ]
         },
@@ -715,10 +2503,49 @@
               "id": "a1_u9_l2_e1",
               "type": "multiple_choice",
               "question": "Como se di \"silla\" en galego?",
-              "options": ["Cadeira", "Mesa", "Cama", "Armario"],
+              "options": [
+                "Cadeira",
+                "Mesa",
+                "Cama",
+                "Armario"
+              ],
               "correctAnswer": "Cadeira",
               "explanation": "\"Cadeira\" é unha das palabras máis características do galego fronte ao castelán \"silla\".",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"silla\" en galego?",
+                  "explanation": "\"Cadeira\" é unha das palabras máis características do galego fronte ao castelán \"silla\"."
+                },
+                "pt": {
+                  "question": "Como se di \"silla\" en galego?",
+                  "explanation": "\"Cadeira\" é unha das palabras máis características do galego fronte ao castelán \"silla\"."
+                },
+                "en": {
+                  "question": "Como se di \"silla\" en galego?",
+                  "explanation": "\"Cadeira\" é unha das palabras máis características do galego fronte ao castelán \"silla\"."
+                },
+                "fr": {
+                  "question": "Como se di \"silla\" en galego?",
+                  "explanation": "\"Cadeira\" é unha das palabras máis características do galego fronte ao castelán \"silla\"."
+                },
+                "ro": {
+                  "question": "Como se di \"silla\" en galego?",
+                  "explanation": "\"Cadeira\" é unha das palabras máis características do galego fronte ao castelán \"silla\"."
+                },
+                "it": {
+                  "question": "Como se di \"silla\" en galego?",
+                  "explanation": "\"Cadeira\" é unha das palabras máis características do galego fronte ao castelán \"silla\"."
+                },
+                "de": {
+                  "question": "Como se di \"silla\" en galego?",
+                  "explanation": "\"Cadeira\" é unha das palabras máis características do galego fronte ao castelán \"silla\"."
+                },
+                "zh": {
+                  "question": "Como se di \"silla\" en galego?",
+                  "explanation": "\"Cadeira\" é unha das palabras máis características do galego fronte ao castelán \"silla\"."
+                }
+              }
             },
             {
               "id": "a1_u9_l2_e2",
@@ -726,21 +2553,98 @@
               "question": "Empareja os mobles",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Mesa", "right": "Mesa"},
-                {"left": "Cama", "right": "Cama"},
-                {"left": "Armario", "right": "Armario"},
-                {"left": "Sofá", "right": "Sofá"}
+                {
+                  "left": "Mesa",
+                  "right": "Mesa"
+                },
+                {
+                  "left": "Cama",
+                  "right": "Cama"
+                },
+                {
+                  "left": "Armario",
+                  "right": "Armario"
+                },
+                {
+                  "left": "Sofá",
+                  "right": "Sofá"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja os mobles"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a1_u9_l2_e3",
               "type": "fill_blank",
               "question": "Completa: 'Como na _____ da cociña' (mesa)",
-              "options": ["mesa", "cama", "cadeira", "armario"],
+              "options": [
+                "mesa",
+                "cama",
+                "cadeira",
+                "armario"
+              ],
               "correctAnswer": "mesa",
               "explanation": "'Mesa' é onde se colocan os alimentos para comer.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: 'Como na _____ da cociña' (mesa)",
+                  "explanation": "'Mesa' é onde se colocan os alimentos para comer."
+                },
+                "pt": {
+                  "question": "Completa: 'Como na _____ da cociña' (mesa)",
+                  "explanation": "'Mesa' é onde se colocan os alimentos para comer."
+                },
+                "en": {
+                  "question": "Completa: 'Como na _____ da cociña' (mesa)",
+                  "explanation": "'Mesa' é onde se colocan os alimentos para comer."
+                },
+                "fr": {
+                  "question": "Completa: 'Como na _____ da cociña' (mesa)",
+                  "explanation": "'Mesa' é onde se colocan os alimentos para comer."
+                },
+                "ro": {
+                  "question": "Completa: 'Como na _____ da cociña' (mesa)",
+                  "explanation": "'Mesa' é onde se colocan os alimentos para comer."
+                },
+                "it": {
+                  "question": "Completa: 'Como na _____ da cociña' (mesa)",
+                  "explanation": "'Mesa' é onde se colocan os alimentos para comer."
+                },
+                "de": {
+                  "question": "Completa: 'Como na _____ da cociña' (mesa)",
+                  "explanation": "'Mesa' é onde se colocan os alimentos para comer."
+                },
+                "zh": {
+                  "question": "Completa: 'Como na _____ da cociña' (mesa)",
+                  "explanation": "'Mesa' é onde se colocan os alimentos para comer."
+                }
+              }
             }
           ]
         }
@@ -767,10 +2671,49 @@
               "id": "a1_u10_l1_e1",
               "type": "multiple_choice",
               "question": "Como se di \"perro\" en galego?",
-              "options": ["Can", "Gato", "Cabalo", "Paxaro"],
+              "options": [
+                "Can",
+                "Gato",
+                "Cabalo",
+                "Paxaro"
+              ],
               "correctAnswer": "Can",
               "explanation": "\"Can\" é a palabra galega para \"perro\"; en castelán existe tamén \"can\" como forma culta.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"perro\" en galego?",
+                  "explanation": "\"Can\" é a palabra galega para \"perro\"; en castelán existe tamén \"can\" como forma culta."
+                },
+                "pt": {
+                  "question": "Como se di \"perro\" en galego?",
+                  "explanation": "\"Can\" é a palabra galega para \"perro\"; en castelán existe tamén \"can\" como forma culta."
+                },
+                "en": {
+                  "question": "Como se di \"perro\" en galego?",
+                  "explanation": "\"Can\" é a palabra galega para \"perro\"; en castelán existe tamén \"can\" como forma culta."
+                },
+                "fr": {
+                  "question": "Como se di \"perro\" en galego?",
+                  "explanation": "\"Can\" é a palabra galega para \"perro\"; en castelán existe tamén \"can\" como forma culta."
+                },
+                "ro": {
+                  "question": "Como se di \"perro\" en galego?",
+                  "explanation": "\"Can\" é a palabra galega para \"perro\"; en castelán existe tamén \"can\" como forma culta."
+                },
+                "it": {
+                  "question": "Como se di \"perro\" en galego?",
+                  "explanation": "\"Can\" é a palabra galega para \"perro\"; en castelán existe tamén \"can\" como forma culta."
+                },
+                "de": {
+                  "question": "Como se di \"perro\" en galego?",
+                  "explanation": "\"Can\" é a palabra galega para \"perro\"; en castelán existe tamén \"can\" como forma culta."
+                },
+                "zh": {
+                  "question": "Como se di \"perro\" en galego?",
+                  "explanation": "\"Can\" é a palabra galega para \"perro\"; en castelán existe tamén \"can\" como forma culta."
+                }
+              }
             },
             {
               "id": "a1_u10_l1_e2",
@@ -778,30 +2721,146 @@
               "question": "Empareja os animais domésticos",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Gato", "right": "Gato"},
-                {"left": "Cabalo", "right": "Caballo"},
-                {"left": "Vaca", "right": "Vaca"},
-                {"left": "Galiña", "right": "Gallina"}
+                {
+                  "left": "Gato",
+                  "right": "Gato"
+                },
+                {
+                  "left": "Cabalo",
+                  "right": "Caballo"
+                },
+                {
+                  "left": "Vaca",
+                  "right": "Vaca"
+                },
+                {
+                  "left": "Galiña",
+                  "right": "Gallina"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja os animais domésticos"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a1_u10_l1_e3",
               "type": "fill_blank",
               "question": "Completa: 'A _____ pon ovos' (gallina)",
-              "options": ["galiña", "vaca", "ovella", "cabalo"],
+              "options": [
+                "galiña",
+                "vaca",
+                "ovella",
+                "cabalo"
+              ],
               "correctAnswer": "galiña",
               "explanation": "A galiña é a ave de curral que pon ovos.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: 'A _____ pon ovos' (gallina)",
+                  "explanation": "A galiña é a ave de curral que pon ovos."
+                },
+                "pt": {
+                  "question": "Completa: 'A _____ pon ovos' (gallina)",
+                  "explanation": "A galiña é a ave de curral que pon ovos."
+                },
+                "en": {
+                  "question": "Completa: 'A _____ pon ovos' (gallina)",
+                  "explanation": "A galiña é a ave de curral que pon ovos."
+                },
+                "fr": {
+                  "question": "Completa: 'A _____ pon ovos' (gallina)",
+                  "explanation": "A galiña é a ave de curral que pon ovos."
+                },
+                "ro": {
+                  "question": "Completa: 'A _____ pon ovos' (gallina)",
+                  "explanation": "A galiña é a ave de curral que pon ovos."
+                },
+                "it": {
+                  "question": "Completa: 'A _____ pon ovos' (gallina)",
+                  "explanation": "A galiña é a ave de curral que pon ovos."
+                },
+                "de": {
+                  "question": "Completa: 'A _____ pon ovos' (gallina)",
+                  "explanation": "A galiña é a ave de curral que pon ovos."
+                },
+                "zh": {
+                  "question": "Completa: 'A _____ pon ovos' (gallina)",
+                  "explanation": "A galiña é a ave de curral que pon ovos."
+                }
+              }
             },
             {
               "id": "a1_u10_l1_e4",
               "type": "multiple_choice",
               "question": "Como se di \"oveja\" en galego?",
-              "options": ["Ovella", "Vaca", "Cabalo", "Can"],
+              "options": [
+                "Ovella",
+                "Vaca",
+                "Cabalo",
+                "Can"
+              ],
               "correctAnswer": "Ovella",
               "explanation": "Ovella é a femia do carneiro que produce la.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"oveja\" en galego?",
+                  "explanation": "Ovella é a femia do carneiro que produce la."
+                },
+                "pt": {
+                  "question": "Como se di \"oveja\" en galego?",
+                  "explanation": "Ovella é a femia do carneiro que produce la."
+                },
+                "en": {
+                  "question": "Como se di \"oveja\" en galego?",
+                  "explanation": "Ovella é a femia do carneiro que produce la."
+                },
+                "fr": {
+                  "question": "Como se di \"oveja\" en galego?",
+                  "explanation": "Ovella é a femia do carneiro que produce la."
+                },
+                "ro": {
+                  "question": "Como se di \"oveja\" en galego?",
+                  "explanation": "Ovella é a femia do carneiro que produce la."
+                },
+                "it": {
+                  "question": "Como se di \"oveja\" en galego?",
+                  "explanation": "Ovella é a femia do carneiro que produce la."
+                },
+                "de": {
+                  "question": "Como se di \"oveja\" en galego?",
+                  "explanation": "Ovella é a femia do carneiro que produce la."
+                },
+                "zh": {
+                  "question": "Como se di \"oveja\" en galego?",
+                  "explanation": "Ovella é a femia do carneiro que produce la."
+                }
+              }
             }
           ]
         }
@@ -828,10 +2887,49 @@
               "id": "a1_u11_l1_e1",
               "type": "multiple_choice",
               "question": "Como se conxuga \"yo soy\" en galego?",
-              "options": ["Eu son", "Eu estou", "Eu teño", "Eu é"],
+              "options": [
+                "Eu son",
+                "Eu estou",
+                "Eu teño",
+                "Eu é"
+              ],
               "correctAnswer": "Eu son",
               "explanation": "\"Son\" é a primeira persoa do singular do verbo \"ser\" en presente de indicativo.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se conxuga \"yo soy\" en galego?",
+                  "explanation": "\"Son\" é a primeira persoa do singular do verbo \"ser\" en presente de indicativo."
+                },
+                "pt": {
+                  "question": "Como se conxuga \"yo soy\" en galego?",
+                  "explanation": "\"Son\" é a primeira persoa do singular do verbo \"ser\" en presente de indicativo."
+                },
+                "en": {
+                  "question": "Como se conxuga \"yo soy\" en galego?",
+                  "explanation": "\"Son\" é a primeira persoa do singular do verbo \"ser\" en presente de indicativo."
+                },
+                "fr": {
+                  "question": "Como se conxuga \"yo soy\" en galego?",
+                  "explanation": "\"Son\" é a primeira persoa do singular do verbo \"ser\" en presente de indicativo."
+                },
+                "ro": {
+                  "question": "Como se conxuga \"yo soy\" en galego?",
+                  "explanation": "\"Son\" é a primeira persoa do singular do verbo \"ser\" en presente de indicativo."
+                },
+                "it": {
+                  "question": "Como se conxuga \"yo soy\" en galego?",
+                  "explanation": "\"Son\" é a primeira persoa do singular do verbo \"ser\" en presente de indicativo."
+                },
+                "de": {
+                  "question": "Como se conxuga \"yo soy\" en galego?",
+                  "explanation": "\"Son\" é a primeira persoa do singular do verbo \"ser\" en presente de indicativo."
+                },
+                "zh": {
+                  "question": "Como se conxuga \"yo soy\" en galego?",
+                  "explanation": "\"Son\" é a primeira persoa do singular do verbo \"ser\" en presente de indicativo."
+                }
+              }
             },
             {
               "id": "a1_u11_l1_e2",
@@ -839,21 +2937,98 @@
               "question": "Empareja os pronomes co verbo ser",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Ti es", "right": "Tú eres"},
-                {"left": "El/Ela é", "right": "Él/Ella es"},
-                {"left": "Nós somos", "right": "Nosotros somos"},
-                {"left": "Eles son", "right": "Ellos son"}
+                {
+                  "left": "Ti es",
+                  "right": "Tú eres"
+                },
+                {
+                  "left": "El/Ela é",
+                  "right": "Él/Ella es"
+                },
+                {
+                  "left": "Nós somos",
+                  "right": "Nosotros somos"
+                },
+                {
+                  "left": "Eles son",
+                  "right": "Ellos son"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja os pronomes co verbo ser"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a1_u11_l1_e3",
               "type": "fill_blank",
               "question": "Completa: 'Eu _____ en Vigo' (estoy)",
-              "options": ["estou", "son", "teño", "é"],
+              "options": [
+                "estou",
+                "son",
+                "teño",
+                "é"
+              ],
               "correctAnswer": "estou",
               "explanation": "\"Estar\" úsase para localización; \"Eu estou en Vigo\" indica onde te atopas.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: 'Eu _____ en Vigo' (estoy)",
+                  "explanation": "\"Estar\" úsase para localización; \"Eu estou en Vigo\" indica onde te atopas."
+                },
+                "pt": {
+                  "question": "Completa: 'Eu _____ en Vigo' (estoy)",
+                  "explanation": "\"Estar\" úsase para localización; \"Eu estou en Vigo\" indica onde te atopas."
+                },
+                "en": {
+                  "question": "Completa: 'Eu _____ en Vigo' (estoy)",
+                  "explanation": "\"Estar\" úsase para localización; \"Eu estou en Vigo\" indica onde te atopas."
+                },
+                "fr": {
+                  "question": "Completa: 'Eu _____ en Vigo' (estoy)",
+                  "explanation": "\"Estar\" úsase para localización; \"Eu estou en Vigo\" indica onde te atopas."
+                },
+                "ro": {
+                  "question": "Completa: 'Eu _____ en Vigo' (estoy)",
+                  "explanation": "\"Estar\" úsase para localización; \"Eu estou en Vigo\" indica onde te atopas."
+                },
+                "it": {
+                  "question": "Completa: 'Eu _____ en Vigo' (estoy)",
+                  "explanation": "\"Estar\" úsase para localización; \"Eu estou en Vigo\" indica onde te atopas."
+                },
+                "de": {
+                  "question": "Completa: 'Eu _____ en Vigo' (estoy)",
+                  "explanation": "\"Estar\" úsase para localización; \"Eu estou en Vigo\" indica onde te atopas."
+                },
+                "zh": {
+                  "question": "Completa: 'Eu _____ en Vigo' (estoy)",
+                  "explanation": "\"Estar\" úsase para localización; \"Eu estou en Vigo\" indica onde te atopas."
+                }
+              }
             },
             {
               "id": "a1_u11_l1_e4",
@@ -867,7 +3042,41 @@
               ],
               "correctAnswer": "\"Son\" describe identidade/orixe; \"estou\" describe estado/lugar",
               "explanation": "Ser refírese a calidades permanentes e estar a estados temporais ou localización.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Cal é a diferenza entre \"son\" e \"estou\"?",
+                  "explanation": "Ser refírese a calidades permanentes e estar a estados temporais ou localización."
+                },
+                "pt": {
+                  "question": "Cal é a diferenza entre \"son\" e \"estou\"?",
+                  "explanation": "Ser refírese a calidades permanentes e estar a estados temporais ou localización."
+                },
+                "en": {
+                  "question": "Cal é a diferenza entre \"son\" e \"estou\"?",
+                  "explanation": "Ser refírese a calidades permanentes e estar a estados temporais ou localización."
+                },
+                "fr": {
+                  "question": "Cal é a diferenza entre \"son\" e \"estou\"?",
+                  "explanation": "Ser refírese a calidades permanentes e estar a estados temporais ou localización."
+                },
+                "ro": {
+                  "question": "Cal é a diferenza entre \"son\" e \"estou\"?",
+                  "explanation": "Ser refírese a calidades permanentes e estar a estados temporais ou localización."
+                },
+                "it": {
+                  "question": "Cal é a diferenza entre \"son\" e \"estou\"?",
+                  "explanation": "Ser refírese a calidades permanentes e estar a estados temporais ou localización."
+                },
+                "de": {
+                  "question": "Cal é a diferenza entre \"son\" e \"estou\"?",
+                  "explanation": "Ser refírese a calidades permanentes e estar a estados temporais ou localización."
+                },
+                "zh": {
+                  "question": "Cal é a diferenza entre \"son\" e \"estou\"?",
+                  "explanation": "Ser refírese a calidades permanentes e estar a estados temporais ou localización."
+                }
+              }
             }
           ]
         },
@@ -883,10 +3092,49 @@
               "id": "a1_u11_l2_e1",
               "type": "multiple_choice",
               "question": "Como se di \"yo tengo\" en galego?",
-              "options": ["Eu teño", "Eu teno", "Eu tes", "Eu ten"],
+              "options": [
+                "Eu teño",
+                "Eu teno",
+                "Eu tes",
+                "Eu ten"
+              ],
               "correctAnswer": "Eu teño",
               "explanation": "A primeira persoa do verbo \"ter\" en presente é \"teño\".",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"yo tengo\" en galego?",
+                  "explanation": "A primeira persoa do verbo \"ter\" en presente é \"teño\"."
+                },
+                "pt": {
+                  "question": "Como se di \"yo tengo\" en galego?",
+                  "explanation": "A primeira persoa do verbo \"ter\" en presente é \"teño\"."
+                },
+                "en": {
+                  "question": "Como se di \"yo tengo\" en galego?",
+                  "explanation": "A primeira persoa do verbo \"ter\" en presente é \"teño\"."
+                },
+                "fr": {
+                  "question": "Como se di \"yo tengo\" en galego?",
+                  "explanation": "A primeira persoa do verbo \"ter\" en presente é \"teño\"."
+                },
+                "ro": {
+                  "question": "Como se di \"yo tengo\" en galego?",
+                  "explanation": "A primeira persoa do verbo \"ter\" en presente é \"teño\"."
+                },
+                "it": {
+                  "question": "Como se di \"yo tengo\" en galego?",
+                  "explanation": "A primeira persoa do verbo \"ter\" en presente é \"teño\"."
+                },
+                "de": {
+                  "question": "Como se di \"yo tengo\" en galego?",
+                  "explanation": "A primeira persoa do verbo \"ter\" en presente é \"teño\"."
+                },
+                "zh": {
+                  "question": "Como se di \"yo tengo\" en galego?",
+                  "explanation": "A primeira persoa do verbo \"ter\" en presente é \"teño\"."
+                }
+              }
             },
             {
               "id": "a1_u11_l2_e2",
@@ -894,21 +3142,98 @@
               "question": "Empareja as conxugacións do verbo ter",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Ti tes", "right": "Tú tienes"},
-                {"left": "El/Ela ten", "right": "Él/Ella tiene"},
-                {"left": "Nós temos", "right": "Nosotros tenemos"},
-                {"left": "Eles teñen", "right": "Ellos tienen"}
+                {
+                  "left": "Ti tes",
+                  "right": "Tú tienes"
+                },
+                {
+                  "left": "El/Ela ten",
+                  "right": "Él/Ella tiene"
+                },
+                {
+                  "left": "Nós temos",
+                  "right": "Nosotros tenemos"
+                },
+                {
+                  "left": "Eles teñen",
+                  "right": "Ellos tienen"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja as conxugacións do verbo ter"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a1_u11_l2_e3",
               "type": "fill_blank",
               "question": "Completa: 'Ela _____ vinte anos' (tiene)",
-              "options": ["ten", "teño", "tes", "temos"],
+              "options": [
+                "ten",
+                "teño",
+                "tes",
+                "temos"
+              ],
               "correctAnswer": "ten",
               "explanation": "'Ela ten' é a terceira persoa do singular do verbo 'ter'.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: 'Ela _____ vinte anos' (tiene)",
+                  "explanation": "'Ela ten' é a terceira persoa do singular do verbo 'ter'."
+                },
+                "pt": {
+                  "question": "Completa: 'Ela _____ vinte anos' (tiene)",
+                  "explanation": "'Ela ten' é a terceira persoa do singular do verbo 'ter'."
+                },
+                "en": {
+                  "question": "Completa: 'Ela _____ vinte anos' (tiene)",
+                  "explanation": "'Ela ten' é a terceira persoa do singular do verbo 'ter'."
+                },
+                "fr": {
+                  "question": "Completa: 'Ela _____ vinte anos' (tiene)",
+                  "explanation": "'Ela ten' é a terceira persoa do singular do verbo 'ter'."
+                },
+                "ro": {
+                  "question": "Completa: 'Ela _____ vinte anos' (tiene)",
+                  "explanation": "'Ela ten' é a terceira persoa do singular do verbo 'ter'."
+                },
+                "it": {
+                  "question": "Completa: 'Ela _____ vinte anos' (tiene)",
+                  "explanation": "'Ela ten' é a terceira persoa do singular do verbo 'ter'."
+                },
+                "de": {
+                  "question": "Completa: 'Ela _____ vinte anos' (tiene)",
+                  "explanation": "'Ela ten' é a terceira persoa do singular do verbo 'ter'."
+                },
+                "zh": {
+                  "question": "Completa: 'Ela _____ vinte anos' (tiene)",
+                  "explanation": "'Ela ten' é a terceira persoa do singular do verbo 'ter'."
+                }
+              }
             }
           ]
         }
@@ -935,10 +3260,49 @@
               "id": "a1_u12_l1_e1",
               "type": "multiple_choice",
               "question": "Como se di \"grande\" en galego?",
-              "options": ["Grande", "Pequeno", "Bo", "Malo"],
+              "options": [
+                "Grande",
+                "Pequeno",
+                "Bo",
+                "Malo"
+              ],
               "correctAnswer": "Grande",
               "explanation": "\"Grande\" mantense igual có castelán.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"grande\" en galego?",
+                  "explanation": "\"Grande\" mantense igual có castelán."
+                },
+                "pt": {
+                  "question": "Como se di \"grande\" en galego?",
+                  "explanation": "\"Grande\" mantense igual có castelán."
+                },
+                "en": {
+                  "question": "Como se di \"grande\" en galego?",
+                  "explanation": "\"Grande\" mantense igual có castelán."
+                },
+                "fr": {
+                  "question": "Como se di \"grande\" en galego?",
+                  "explanation": "\"Grande\" mantense igual có castelán."
+                },
+                "ro": {
+                  "question": "Como se di \"grande\" en galego?",
+                  "explanation": "\"Grande\" mantense igual có castelán."
+                },
+                "it": {
+                  "question": "Como se di \"grande\" en galego?",
+                  "explanation": "\"Grande\" mantense igual có castelán."
+                },
+                "de": {
+                  "question": "Como se di \"grande\" en galego?",
+                  "explanation": "\"Grande\" mantense igual có castelán."
+                },
+                "zh": {
+                  "question": "Como se di \"grande\" en galego?",
+                  "explanation": "\"Grande\" mantense igual có castelán."
+                }
+              }
             },
             {
               "id": "a1_u12_l1_e2",
@@ -946,21 +3310,98 @@
               "question": "Empareja os adxectivos",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Pequeno/a", "right": "Pequeño/a"},
-                {"left": "Bo/Boa", "right": "Bueno/a"},
-                {"left": "Malo/a", "right": "Malo/a"},
-                {"left": "Novo/a", "right": "Nuevo/a"}
+                {
+                  "left": "Pequeno/a",
+                  "right": "Pequeño/a"
+                },
+                {
+                  "left": "Bo/Boa",
+                  "right": "Bueno/a"
+                },
+                {
+                  "left": "Malo/a",
+                  "right": "Malo/a"
+                },
+                {
+                  "left": "Novo/a",
+                  "right": "Nuevo/a"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja os adxectivos"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a1_u12_l1_e3",
               "type": "fill_blank",
               "question": "Completa: 'Esta casa é moi _____' (pequeña)",
-              "options": ["pequena", "pequeno", "pequenas", "pequenos"],
+              "options": [
+                "pequena",
+                "pequeno",
+                "pequenas",
+                "pequenos"
+              ],
               "correctAnswer": "pequena",
               "explanation": "O adxectivo concorda en xénero e número co substantivo: \"casa\" é feminino singular, polo que o adxectivo remata en \"-a\".",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: 'Esta casa é moi _____' (pequeña)",
+                  "explanation": "O adxectivo concorda en xénero e número co substantivo: \"casa\" é feminino singular, polo que o adxectivo remata en \"-a\"."
+                },
+                "pt": {
+                  "question": "Completa: 'Esta casa é moi _____' (pequeña)",
+                  "explanation": "O adxectivo concorda en xénero e número co substantivo: \"casa\" é feminino singular, polo que o adxectivo remata en \"-a\"."
+                },
+                "en": {
+                  "question": "Completa: 'Esta casa é moi _____' (pequeña)",
+                  "explanation": "O adxectivo concorda en xénero e número co substantivo: \"casa\" é feminino singular, polo que o adxectivo remata en \"-a\"."
+                },
+                "fr": {
+                  "question": "Completa: 'Esta casa é moi _____' (pequeña)",
+                  "explanation": "O adxectivo concorda en xénero e número co substantivo: \"casa\" é feminino singular, polo que o adxectivo remata en \"-a\"."
+                },
+                "ro": {
+                  "question": "Completa: 'Esta casa é moi _____' (pequeña)",
+                  "explanation": "O adxectivo concorda en xénero e número co substantivo: \"casa\" é feminino singular, polo que o adxectivo remata en \"-a\"."
+                },
+                "it": {
+                  "question": "Completa: 'Esta casa é moi _____' (pequeña)",
+                  "explanation": "O adxectivo concorda en xénero e número co substantivo: \"casa\" é feminino singular, polo que o adxectivo remata en \"-a\"."
+                },
+                "de": {
+                  "question": "Completa: 'Esta casa é moi _____' (pequeña)",
+                  "explanation": "O adxectivo concorda en xénero e número co substantivo: \"casa\" é feminino singular, polo que o adxectivo remata en \"-a\"."
+                },
+                "zh": {
+                  "question": "Completa: 'Esta casa é moi _____' (pequeña)",
+                  "explanation": "O adxectivo concorda en xénero e número co substantivo: \"casa\" é feminino singular, polo que o adxectivo remata en \"-a\"."
+                }
+              }
             }
           ]
         },
@@ -976,10 +3417,49 @@
               "id": "a1_u12_l2_e1",
               "type": "multiple_choice",
               "question": "Como se di \"más grande que\" en galego?",
-              "options": ["Máis grande que", "Menos grande que", "Tan grande como", "Grande coma"],
+              "options": [
+                "Máis grande que",
+                "Menos grande que",
+                "Tan grande como",
+                "Grande coma"
+              ],
               "correctAnswer": "Máis grande que",
               "explanation": "A estrutura comparativa de superioridade en galego é \"máis... que\", igual có castelán.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"más grande que\" en galego?",
+                  "explanation": "A estrutura comparativa de superioridade en galego é \"máis... que\", igual có castelán."
+                },
+                "pt": {
+                  "question": "Como se di \"más grande que\" en galego?",
+                  "explanation": "A estrutura comparativa de superioridade en galego é \"máis... que\", igual có castelán."
+                },
+                "en": {
+                  "question": "Como se di \"más grande que\" en galego?",
+                  "explanation": "A estrutura comparativa de superioridade en galego é \"máis... que\", igual có castelán."
+                },
+                "fr": {
+                  "question": "Como se di \"más grande que\" en galego?",
+                  "explanation": "A estrutura comparativa de superioridade en galego é \"máis... que\", igual có castelán."
+                },
+                "ro": {
+                  "question": "Como se di \"más grande que\" en galego?",
+                  "explanation": "A estrutura comparativa de superioridade en galego é \"máis... que\", igual có castelán."
+                },
+                "it": {
+                  "question": "Como se di \"más grande que\" en galego?",
+                  "explanation": "A estrutura comparativa de superioridade en galego é \"máis... que\", igual có castelán."
+                },
+                "de": {
+                  "question": "Como se di \"más grande que\" en galego?",
+                  "explanation": "A estrutura comparativa de superioridade en galego é \"máis... que\", igual có castelán."
+                },
+                "zh": {
+                  "question": "Como se di \"más grande que\" en galego?",
+                  "explanation": "A estrutura comparativa de superioridade en galego é \"máis... que\", igual có castelán."
+                }
+              }
             },
             {
               "id": "a1_u12_l2_e2",
@@ -987,21 +3467,98 @@
               "question": "Empareja as estruturas comparativas",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Máis... que", "right": "Más... que"},
-                {"left": "Menos... que", "right": "Menos... que"},
-                {"left": "Tan... como", "right": "Tan... como"},
-                {"left": "O máis...", "right": "El más..."}
+                {
+                  "left": "Máis... que",
+                  "right": "Más... que"
+                },
+                {
+                  "left": "Menos... que",
+                  "right": "Menos... que"
+                },
+                {
+                  "left": "Tan... como",
+                  "right": "Tan... como"
+                },
+                {
+                  "left": "O máis...",
+                  "right": "El más..."
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja as estruturas comparativas"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a1_u12_l2_e3",
               "type": "fill_blank",
               "question": "Completa: 'A miña casa é _____ grande _____ a túa' (tan... como)",
-              "options": ["tan / como", "máis / que", "menos / que", "o máis / de"],
+              "options": [
+                "tan / como",
+                "máis / que",
+                "menos / que",
+                "o máis / de"
+              ],
               "correctAnswer": "tan / como",
               "explanation": "A estrutura de igualdade en galego é \"tan... como\".",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: 'A miña casa é _____ grande _____ a túa' (tan... como)",
+                  "explanation": "A estrutura de igualdade en galego é \"tan... como\"."
+                },
+                "pt": {
+                  "question": "Completa: 'A miña casa é _____ grande _____ a túa' (tan... como)",
+                  "explanation": "A estrutura de igualdade en galego é \"tan... como\"."
+                },
+                "en": {
+                  "question": "Completa: 'A miña casa é _____ grande _____ a túa' (tan... como)",
+                  "explanation": "A estrutura de igualdade en galego é \"tan... como\"."
+                },
+                "fr": {
+                  "question": "Completa: 'A miña casa é _____ grande _____ a túa' (tan... como)",
+                  "explanation": "A estrutura de igualdade en galego é \"tan... como\"."
+                },
+                "ro": {
+                  "question": "Completa: 'A miña casa é _____ grande _____ a túa' (tan... como)",
+                  "explanation": "A estrutura de igualdade en galego é \"tan... como\"."
+                },
+                "it": {
+                  "question": "Completa: 'A miña casa é _____ grande _____ a túa' (tan... como)",
+                  "explanation": "A estrutura de igualdade en galego é \"tan... como\"."
+                },
+                "de": {
+                  "question": "Completa: 'A miña casa é _____ grande _____ a túa' (tan... como)",
+                  "explanation": "A estrutura de igualdade en galego é \"tan... como\"."
+                },
+                "zh": {
+                  "question": "Completa: 'A miña casa é _____ grande _____ a túa' (tan... como)",
+                  "explanation": "A estrutura de igualdade en galego é \"tan... como\"."
+                }
+              }
             }
           ]
         }
@@ -1028,10 +3585,49 @@
               "id": "a1_u13_l1_e1",
               "type": "multiple_choice",
               "question": "Como se di \"yo hablaré\" en galego?",
-              "options": ["Eu falarei", "Eu falei", "Eu falo", "Eu falaba"],
+              "options": [
+                "Eu falarei",
+                "Eu falei",
+                "Eu falo",
+                "Eu falaba"
+              ],
               "correctAnswer": "Eu falarei",
               "explanation": "O futuro simple engade as terminacións \"-ei, -ás, -á, -emos, -edes, -án\" ao infinitivo do verbo.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"yo hablaré\" en galego?",
+                  "explanation": "O futuro simple engade as terminacións \"-ei, -ás, -á, -emos, -edes, -án\" ao infinitivo do verbo."
+                },
+                "pt": {
+                  "question": "Como se di \"yo hablaré\" en galego?",
+                  "explanation": "O futuro simple engade as terminacións \"-ei, -ás, -á, -emos, -edes, -án\" ao infinitivo do verbo."
+                },
+                "en": {
+                  "question": "Como se di \"yo hablaré\" en galego?",
+                  "explanation": "O futuro simple engade as terminacións \"-ei, -ás, -á, -emos, -edes, -án\" ao infinitivo do verbo."
+                },
+                "fr": {
+                  "question": "Como se di \"yo hablaré\" en galego?",
+                  "explanation": "O futuro simple engade as terminacións \"-ei, -ás, -á, -emos, -edes, -án\" ao infinitivo do verbo."
+                },
+                "ro": {
+                  "question": "Como se di \"yo hablaré\" en galego?",
+                  "explanation": "O futuro simple engade as terminacións \"-ei, -ás, -á, -emos, -edes, -án\" ao infinitivo do verbo."
+                },
+                "it": {
+                  "question": "Como se di \"yo hablaré\" en galego?",
+                  "explanation": "O futuro simple engade as terminacións \"-ei, -ás, -á, -emos, -edes, -án\" ao infinitivo do verbo."
+                },
+                "de": {
+                  "question": "Como se di \"yo hablaré\" en galego?",
+                  "explanation": "O futuro simple engade as terminacións \"-ei, -ás, -á, -emos, -edes, -án\" ao infinitivo do verbo."
+                },
+                "zh": {
+                  "question": "Como se di \"yo hablaré\" en galego?",
+                  "explanation": "O futuro simple engade as terminacións \"-ei, -ás, -á, -emos, -edes, -án\" ao infinitivo do verbo."
+                }
+              }
             },
             {
               "id": "a1_u13_l1_e2",
@@ -1039,30 +3635,146 @@
               "question": "Empareja as persoas do futuro regular",
               "correctAnswer": "matched",
               "matchingPairs": [
-                {"left": "Ti falarás", "right": "Tú hablarás"},
-                {"left": "El/Ela falará", "right": "Él/Ella hablará"},
-                {"left": "Nós falaremos", "right": "Nosotros hablaremos"},
-                {"left": "Eles falarán", "right": "Ellos hablarán"}
+                {
+                  "left": "Ti falarás",
+                  "right": "Tú hablarás"
+                },
+                {
+                  "left": "El/Ela falará",
+                  "right": "Él/Ella hablará"
+                },
+                {
+                  "left": "Nós falaremos",
+                  "right": "Nosotros hablaremos"
+                },
+                {
+                  "left": "Eles falarán",
+                  "right": "Ellos hablarán"
+                }
               ],
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Empareja as persoas do futuro regular"
+                },
+                "pt": {
+                  "question": "Emparelhe os elementos com o seu significado"
+                },
+                "en": {
+                  "question": "Match the items with their meaning"
+                },
+                "fr": {
+                  "question": "Associez les éléments avec leur signification"
+                },
+                "ro": {
+                  "question": "Potriviți elementele cu semnificația lor"
+                },
+                "it": {
+                  "question": "Abbina gli elementi con il loro significato"
+                },
+                "de": {
+                  "question": "Ordnen Sie die Elemente ihrer Bedeutung zu"
+                },
+                "zh": {
+                  "question": "将元素与其含义配对"
+                }
+              }
             },
             {
               "id": "a1_u13_l1_e3",
               "type": "fill_blank",
               "question": "Completa: 'Mañá eu _____ con ela' (hablaré)",
-              "options": ["falarei", "falo", "falei", "falaba"],
+              "options": [
+                "falarei",
+                "falo",
+                "falei",
+                "falaba"
+              ],
               "correctAnswer": "falarei",
               "explanation": "O futuro do verbo falar úsase para indicar o que farei máis adiante.",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Completa: 'Mañá eu _____ con ela' (hablaré)",
+                  "explanation": "O futuro do verbo falar úsase para indicar o que farei máis adiante."
+                },
+                "pt": {
+                  "question": "Completa: 'Mañá eu _____ con ela' (hablaré)",
+                  "explanation": "O futuro do verbo falar úsase para indicar o que farei máis adiante."
+                },
+                "en": {
+                  "question": "Completa: 'Mañá eu _____ con ela' (hablaré)",
+                  "explanation": "O futuro do verbo falar úsase para indicar o que farei máis adiante."
+                },
+                "fr": {
+                  "question": "Completa: 'Mañá eu _____ con ela' (hablaré)",
+                  "explanation": "O futuro do verbo falar úsase para indicar o que farei máis adiante."
+                },
+                "ro": {
+                  "question": "Completa: 'Mañá eu _____ con ela' (hablaré)",
+                  "explanation": "O futuro do verbo falar úsase para indicar o que farei máis adiante."
+                },
+                "it": {
+                  "question": "Completa: 'Mañá eu _____ con ela' (hablaré)",
+                  "explanation": "O futuro do verbo falar úsase para indicar o que farei máis adiante."
+                },
+                "de": {
+                  "question": "Completa: 'Mañá eu _____ con ela' (hablaré)",
+                  "explanation": "O futuro do verbo falar úsase para indicar o que farei máis adiante."
+                },
+                "zh": {
+                  "question": "Completa: 'Mañá eu _____ con ela' (hablaré)",
+                  "explanation": "O futuro do verbo falar úsase para indicar o que farei máis adiante."
+                }
+              }
             },
             {
               "id": "a1_u13_l1_e4",
               "type": "multiple_choice",
               "question": "Como se di \"nosotros comeremos\" en galego?",
-              "options": ["Nós comeremos", "Nós comemos", "Nós comimos", "Nós comiamos"],
+              "options": [
+                "Nós comeremos",
+                "Nós comemos",
+                "Nós comimos",
+                "Nós comiamos"
+              ],
               "correctAnswer": "Nós comeremos",
               "explanation": "O futuro de \"comer\" engade as mesmas terminacións sobre o infinitivo: \"comer-emos\".",
-              "xpReward": 5
+              "xpReward": 5,
+              "i18n": {
+                "es": {
+                  "question": "Como se di \"nosotros comeremos\" en galego?",
+                  "explanation": "O futuro de \"comer\" engade as mesmas terminacións sobre o infinitivo: \"comer-emos\"."
+                },
+                "pt": {
+                  "question": "Como se di \"nosotros comeremos\" en galego?",
+                  "explanation": "O futuro de \"comer\" engade as mesmas terminacións sobre o infinitivo: \"comer-emos\"."
+                },
+                "en": {
+                  "question": "Como se di \"nosotros comeremos\" en galego?",
+                  "explanation": "O futuro de \"comer\" engade as mesmas terminacións sobre o infinitivo: \"comer-emos\"."
+                },
+                "fr": {
+                  "question": "Como se di \"nosotros comeremos\" en galego?",
+                  "explanation": "O futuro de \"comer\" engade as mesmas terminacións sobre o infinitivo: \"comer-emos\"."
+                },
+                "ro": {
+                  "question": "Como se di \"nosotros comeremos\" en galego?",
+                  "explanation": "O futuro de \"comer\" engade as mesmas terminacións sobre o infinitivo: \"comer-emos\"."
+                },
+                "it": {
+                  "question": "Como se di \"nosotros comeremos\" en galego?",
+                  "explanation": "O futuro de \"comer\" engade as mesmas terminacións sobre o infinitivo: \"comer-emos\"."
+                },
+                "de": {
+                  "question": "Como se di \"nosotros comeremos\" en galego?",
+                  "explanation": "O futuro de \"comer\" engade as mesmas terminacións sobre o infinitivo: \"comer-emos\"."
+                },
+                "zh": {
+                  "question": "Como se di \"nosotros comeremos\" en galego?",
+                  "explanation": "O futuro de \"comer\" engade as mesmas terminacións sobre o infinitivo: \"comer-emos\"."
+                }
+              }
             }
           ]
         }

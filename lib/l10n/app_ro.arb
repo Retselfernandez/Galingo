@@ -1,0 +1,82 @@
+{
+  "tagline": "Învață galiciana cu Galingo, pas cu pas",
+  "pathTitle": "Drumul spre galiciană",
+  "pathSubtitle": "Învață pas cu pas • Nivelul A1",
+  "settings": "Setări",
+  "appearance": "🎨 Aspect",
+  "theme": "Tema aplicației",
+  "typography": "✏️ Tipografie",
+  "textSize": "Dimensiune text",
+  "interfaceLanguage": "🌍 Limbă",
+  "information": "ℹ️ Informații",
+  "reset": "Resetare",
+  "resetTitle": "Resetare setări",
+  "resetConfirm": "Aceasta va restaura toate setările la valorile implicite. Continuați?",
+  "lightTheme": "Luminos",
+  "darkTheme": "Întunecat",
+  "systemTheme": "Sistem",
+  "preview": "Previzualizare",
+  "yourName": "Numele tău",
+  "nameHint": "Scrie numele tău...",
+  "editName": "👤 Profil",
+  "save": "Salvare",
+  "cancel": "Anulare",
+  "retry": "Reîncercare",
+  "start": "Start",
+  "continueLabel": "Continuare",
+  "nameQuestion": "Cum te numești?",
+  "nameSubtitle": "Voi personaliza Galingo pentru tine",
+  "greeting": "Salut, {name}! 👋",
+  "nextLessonMessage": "Următoarea ta lecție te așteaptă!",
+  "gabiWelcome": "Bun venit la Galingo!\\nÎți voi fi ghid. 🌟",
+  "startPath": "Începe traseul →",
+  "completed": "Finalizat",
+  "locked": "Blocat",
+  "errorLoading": "Eroare la încărcarea cursului",
+  "version": "Versiune",
+  "levelCovered": "Nivel acoperit",
+  "targetLanguage": "Limba țintă",
+  "developedBy": "Dezvoltat de",
+  "technology": "Tehnologie",
+  "application": "Aplicație",
+  "year": "An",
+  "personalize": "Personalizează-ți experiența",
+  "levelA1": "Nivelul A1 — Începător",
+  "levelA2": "Nivelul A2 — Intermediar",
+  "levelB1": "Nivelul B1 — Prag",
+  "levelB2": "Nivelul B2 — Avansat",
+  "selectLevel": "Selectează nivelul de studiu:",
+  "levelA1Subtitle": "Începător: Salutări, familie, mâncare...",
+  "levelA2Subtitle": "Intermediar: Călătorii, cumpărături, muncă...",
+  "levelB1Subtitle": "Prag: Dezbateri, opinii, texte complexe...",
+  "levelB2Subtitle": "Avansat: Fluență tehnică, literatură, expresii...",
+  "profile": "Profil",
+  "nameLabel": "Nume",
+  "@greeting": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "backToPath": "Înapoi la Cale",
+  "lessonNotFound": "Lecția nu a fost găsită: {id}",
+  "backToHome": "Înapoi la început",
+  "typeTranslation": "Scrie traducerea ta aici...",
+  "verifyTranslation": "Verifică traducerea",
+  "finishLessonTip": "Finalizează lecția și salvează progresul",
+  "nextExerciseTip": "Treci la exercițiul următor",
+  "finishLesson": "Finalizează lecția 🎉",
+  "next": "Următorul →",
+  "veryGood": "Foarte bine!",
+  "incorrect": "Incorect",
+  "lessonCompleted": "Felicitări! Ai terminat lecția! 🎊",
+  "continuePath": "Continuă Calea →",
+  "@lessonNotFound": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  }
+}
