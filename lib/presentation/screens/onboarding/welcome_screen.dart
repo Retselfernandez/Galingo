@@ -21,7 +21,9 @@ class WelcomeScreen extends ConsumerWidget {
           gradient: AppTheme.sunsetGradient,
         ),
         child: Center(
-          child: Container(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.symmetric(vertical: 24),
+            child: Container(
             constraints: const BoxConstraints(maxWidth: 520),
             padding: const EdgeInsets.all(40),
             child: Column(
@@ -125,6 +127,7 @@ class WelcomeScreen extends ConsumerWidget {
                   ),
                 ),
               ],
+            ),
             ),
           ),
         ),

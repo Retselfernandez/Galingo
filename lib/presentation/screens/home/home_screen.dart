@@ -335,7 +335,8 @@ class HomeScreen extends ConsumerWidget {
                 style: TextStyle(fontSize: 18),
               ),
               const SizedBox(width: 8),
-              Text(
+              Flexible(
+                child: Text(
                 currentLevel == 'A1'
                     ? strings.levelA1
                     : currentLevel == 'A2'
@@ -343,11 +344,13 @@ class HomeScreen extends ConsumerWidget {
                         : currentLevel == 'B1'
                             ? strings.levelB1
                             : strings.levelB2,
+                overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.labelLarge?.copyWith(
                       color: AppTheme.accentGold,
                       fontWeight: FontWeight.w800,
                       fontSize: 13,
                     ),
+                ),
               ),
               const SizedBox(width: 6),
               const Icon(
