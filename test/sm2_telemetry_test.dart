@@ -76,4 +76,35 @@ void main() {
       expect(progress.maeImprovementPercent, 0.0);
     });
   });
+  sm2EdgeCases();
+}
+
+void sm2EdgeCases() {
+  group('SM-2 Edge Cases', () {
+    test('fallo reinicia repeticiones y fuerza intervalo 1', () {
+      final st = Sm2Engine.updateSm2State(
+        repetitions: 5, easinessFactor: 2.5, intervalDays: 30, p: 0.0,
+      );
+      expect(st['repetitions'], 0);
+      expect(st['intervalDays'], 1);
+    });
+
+    test('el factor de facilidad nunca baja de 1.3', () {
+      double ef = 1.3;
+      for (var i = 0; i < 10; i++) {
+        ef = Sm2Engine.updateSm2State(
+          repetitions: 0, easinessFactor: ef, intervalDays: 1, p: 0.0,
+        )['easinessFactor'] as double;
+        expect(ef, greaterThanOrEqualTo(1.3));
+      }
+    });
+
+    test('acierto mantiene EF >= anterior con q=4', () {
+      final st = Sm2Engine.updateSm2State(
+        repetitions: 3, easinessFactor: 2.5, intervalDays: 10, p: 1.0,
+      );
+      expect(st['easinessFactor'] as double, greaterThanOrEqualTo(2.5));
+      expect(st['intervalDays'] as int, greaterThanOrEqualTo(10));
+    });
+  });
 }
