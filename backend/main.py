@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from typing import Optional, List
 import datetime, json
-from models import Base, engine, SessionLocal, TrazaInteraccion, ReporteFeedback, EstadoMemoria
+from models import Base, engine, SessionLocal, TrazaInteraccion, ReporteFeedback, EstadoMemoria, SesionDiaria
 
 Base.metadata.create_all(engine)
 app = FastAPI(title="Galingo API", version="1.0.0")
@@ -60,8 +60,23 @@ def estado_memoria(user_id: str, db: Session = Depends(get_db)):
     return [{"item_id": r.item_id, "vida_media": r.vida_media,
              "proximo_repaso": r.proximo_repaso} for r in rows]
 
+class SesionIn(BaseModel):
+    user_id: str
+    fecha: str
+    plataforma: Optional[str] = None
+
+@app.post("/api/v1/sesion", status_code=201)
+def registrar_sesion(s: SesionIn, db: Session = Depends(get_db)):
+    sid = f"{s.user_id}_{s.fecha}"
+    if db.get(SesionDiaria, sid):
+        return {"status": "duplicado", "id": sid}
+    db.add(SesionDiaria(id=sid, user_id=s.user_id, fecha=s.fecha, plataforma=s.plataforma))
+    db.commit()
+    return {"status": "ok", "id": sid}
+
 @app.get("/api/v1/metricas")
 def metricas(db: Session = Depends(get_db)):
     total = db.query(TrazaInteraccion).count()
     feedbacks = db.query(ReporteFeedback).count()
-    return {"eventos_totales": total, "reportes_totales": feedbacks}
+    sesiones = db.query(SesionDiaria).count()
+    return {"eventos_totales": total, "reportes_totales": feedbacks, "sesiones_diarias": sesiones}

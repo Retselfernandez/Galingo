@@ -4,16 +4,32 @@ import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:uuid/uuid.dart';
 
 /// Cola offline + sync de telemetría y feedback contra el backend Galingo.
 class TelemetryService {
   TelemetryService._();
   static final TelemetryService instance = TelemetryService._();
 
-  static const _uuid = Uuid();
   String? _userId;
-  String get userId => _userId ??= _uuid.v4();
+  String get userId => _userId!;
+  void init(String persistedUserId) => _userId = persistedUserId;
+
+  Future<void> registerSession() async {
+    if (_userId == null) return;
+    final now = DateTime.now();
+    final fecha = '${now.year}-${now.month.toString().padLeft(2, '0')}-${now.day.toString().padLeft(2, '0')}';
+    try {
+      final client = http.Client();
+      await client.post(
+        Uri.parse('$baseUrl/api/v1/sesion'),
+        headers: {'Content-Type': 'application/json'},
+        body: jsonEncode({'user_id': userId, 'fecha': fecha}),
+      );
+      client.close();
+    } catch (e) {
+      debugPrint('registerSession error: $e');
+    }
+  }
 
   String get baseUrl {
     if (kIsWeb) return 'http://localhost:8000';

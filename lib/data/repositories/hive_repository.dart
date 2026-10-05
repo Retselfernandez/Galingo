@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:uuid/uuid.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -313,6 +314,14 @@ class HiveRepository implements MemoryRepository {
       }
     } catch (_) {}
     return const SettingsModel();
+  }
+
+  Future<String> getOrCreateUserId() async {
+    final raw = _settingsBox.get('telemetry_user_id');
+    if (raw is String && raw.isNotEmpty) return raw;
+    final id = const Uuid().v4();
+    await _settingsBox.put('telemetry_user_id', id);
+    return id;
   }
 
   @override

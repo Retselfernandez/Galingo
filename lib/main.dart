@@ -7,6 +7,7 @@ import 'core/router/app_router.dart';
 import 'core/theme/app_theme.dart';
 import 'core/services/audio_service.dart';
 import 'core/services/shake_service.dart';
+import 'core/services/telemetry_service.dart';
 import 'data/models/settings_model.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:galingo/l10n/app_localizations.dart';
@@ -19,6 +20,9 @@ Future<bool> _initAppHelper() async {
     await HiveRepository.instance.initialize();
     // Inicializar reproductor de sonido
     await AudioService.instance.init();
+    final uid = await HiveRepository.instance.getOrCreateUserId();
+    TelemetryService.instance.init(uid);
+    await TelemetryService.instance.registerSession();
     return true;
   } catch (e) {
     debugPrint("Hive initialization failed: $e");

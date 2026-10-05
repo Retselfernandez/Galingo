@@ -35,6 +35,14 @@ class TrazaInteraccion(Base):
     fallos = Column(Integer, default=0)
     dificultad = Column(Float, default=0.5)
 
+class SesionDiaria(Base):
+    __tablename__ = "sesion_diaria"
+    id = Column(String, primary_key=True)  # user_id + fecha (YYYY-MM-DD)
+    user_id = Column(String, index=True)
+    fecha = Column(String, index=True)
+    inicio = Column(DateTime, default=datetime.datetime.utcnow)
+    plataforma = Column(String)
+
 class ReporteFeedback(Base):
     __tablename__ = "reportes_feedback"
     report_id = Column(String, primary_key=True)
