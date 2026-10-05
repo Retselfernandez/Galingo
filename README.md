@@ -1,22 +1,31 @@
-<<<<<<< HEAD
 # Galingo
+
 Aplicación gamificada para el aprendizaje del gallego. Arquitectura de microservicios con motor de repetición espaciada.
-=======
-# galingo
 
-A new Flutter project.
+App multiplataforma (Android, iOS, macOS, Windows y Web) construida con Flutter.
 
-## Getting Started
+## Requisitos
 
-This project is a starting point for a Flutter application.
+- Flutter ≥ 3.19 (Dart ≥ 3.3)
 
-A few resources to get you started if this is your first Flutter project:
+## Ejecutar
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+```bash
+flutter pub get
+flutter run
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
->>>>>>> 84fce55 (feat: Galingo Multiplatform v1.0.0-Beta Release - Full codebase, builds & CI/CD pipeline)
+## Tests
+
+```bash
+flutter test
+flutter analyze
+```
+
+## Estructura
+
+- `lib/core` — tema, router, i18n, motores ML (SM-2/HLR), servicios
+- `lib/data` — modelos, repositorios, contenido
+- `lib/presentation` — pantallas, providers, widgets
+- `assets/content` — cursos A1–B2 en JSON
+- `TFM` — memoria del Trabajo de Fin de Máster

@@ -43,3 +43,11 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Artefactos de build (beta releases) — se publican en GitHub Releases/CI, no en el repo
+*.apk
+*.ipa
+*.app/
+*.zip
+android/build/
+macos/Runner/Flutter/ephemeral/

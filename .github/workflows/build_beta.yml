@@ -6,7 +6,30 @@ on:
   workflow_dispatch:
 
 jobs:
+  test:
+    name: Widget & Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+      - name: Get Dependencies
+        run: |
+          if [ -d "Galingo" ]; then cd Galingo; fi
+          flutter pub get
+      - name: Analyze
+        run: |
+          if [ -d "Galingo" ]; then cd Galingo; fi
+          flutter analyze --no-fatal-infos
+      - name: Run Tests
+        run: |
+          if [ -d "Galingo" ]; then cd Galingo; fi
+          flutter test
+
   build-android:
+    needs: test
     name: Build Android APK (Beta)
     runs-on: ubuntu-latest
     steps:
@@ -42,6 +65,7 @@ jobs:
             Galingo/build/app/outputs/flutter-apk/app-release.apk
 
   build-windows:
+    needs: test
     name: Build Windows Desktop (.exe)
     runs-on: windows-latest
     steps:
@@ -78,6 +102,7 @@ jobs:
           path: Galingo-Windows-Beta.zip
 
   build-macos:
+    needs: test
     name: Build macOS Desktop (.app)
     runs-on: macos-latest
     steps:
