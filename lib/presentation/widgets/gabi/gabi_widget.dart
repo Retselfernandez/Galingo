@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -63,7 +64,7 @@ class _GabiWidgetState extends ConsumerState<GabiWidget>
   void initState() {
     super.initState();
 
-    final isTest = Platform.environment.containsKey('FLUTTER_TEST');
+    final isTest = !kIsWeb && Platform.environment.containsKey('FLUTTER_TEST');
     final shouldAnimate = widget.animate && !isTest;
 
     if (!shouldAnimate) return;
