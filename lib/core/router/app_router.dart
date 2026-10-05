@@ -8,6 +8,7 @@ import '../../presentation/screens/onboarding/name_input_screen.dart';
 import '../../presentation/screens/onboarding/splash_screen.dart';
 import '../../presentation/screens/onboarding/welcome_screen.dart';
 import '../../presentation/screens/settings/settings_screen.dart';
+import '../../presentation/screens/feedback/feedback_screen.dart';
 
 /// Rutas nombradas de la app
 abstract class AppRoutes {
@@ -17,6 +18,7 @@ abstract class AppRoutes {
   static const String home = '/home';
   static const String lesson = '/lesson/:lessonId';
   static const String settings = '/settings';
+  static const String feedback = '/feedback';
 
   static String lessonPath(String lessonId) => '/lesson/$lessonId';
 }
@@ -63,6 +65,13 @@ final appRouterProvider = Provider<GoRouter>((ref) {
         pageBuilder: (context, state) => _slideUpTransition(
           state: state,
           child: const NameInputScreen(),
+        ),
+      ),
+      GoRoute(
+        path: AppRoutes.feedback,
+        pageBuilder: (context, state) => _slideUpTransition(
+          state: state,
+          child: const FeedbackScreen(),
         ),
       ),
       GoRoute(

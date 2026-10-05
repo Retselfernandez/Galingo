@@ -15,6 +15,7 @@ import '../../../data/models/lesson_model.dart';
 import 'package:galingo/l10n/app_localizations.dart';
 import '../../providers/progress_provider.dart';
 import '../../providers/settings_provider.dart';
+import '../../../core/services/telemetry_service.dart';
 import '../../widgets/gabi/gabi_widget.dart';
 
 /// LessonScreen — pantalla de lección con ejercicios progresivos
@@ -237,6 +238,20 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         sessionEvents.add(event);
       }
     }
+
+    // Enviar telemetría HLR al backend (cola offline-first con sync)
+    TelemetryService.instance.enqueueEvents(
+      sessionEvents.map((e) => {
+        'event_id': '${e.wordId}_${DateTime.now().millisecondsSinceEpoch}_${sessionEvents.indexOf(e)}',
+        'user_id': TelemetryService.instance.userId,
+        'item_id': e.wordId,
+        'resultado': e.p,
+        'intervalo_dias': e.t,
+        'aciertos': e.s,
+        'fallos': e.f,
+        'dificultad': e.d,
+      }).toList(),
+    );
 
     await ref.read(progressNotifierProvider.notifier).completeLesson(
       lessonId: lesson.id,

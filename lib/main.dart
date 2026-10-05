@@ -6,6 +6,7 @@ import 'core/constants/app_constants.dart';
 import 'core/router/app_router.dart';
 import 'core/theme/app_theme.dart';
 import 'core/services/audio_service.dart';
+import 'core/services/shake_service.dart';
 import 'data/models/settings_model.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:galingo/l10n/app_localizations.dart';
@@ -138,9 +139,21 @@ class GalingoApp extends ConsumerStatefulWidget {
 
 class _GalingoAppState extends ConsumerState<GalingoApp> {
   @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ShakeService.instance.start(() {
+        final router = ref.read(appRouterProvider);
+        router.go(AppRoutes.feedback);
+      });
+    });
+  }
+
+  @override
   void dispose() {
     // L7: liberar recursos de AudioService al destruir el widget raíz
     AudioService.instance.dispose();
+    ShakeService.instance.stop();
     super.dispose();
   }
 
