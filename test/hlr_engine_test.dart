@@ -78,7 +78,8 @@ void main() {
           reg += w * w;
         }
         return sumErr + 0.01 * reg;
-      }
+        edgeCases();
+}
 
       final initialLoss = calculateLoss(initialTheta);
 
@@ -99,6 +100,63 @@ void main() {
       print('Theta entrenado: $trainedTheta');
 
       expect(finalLoss, lessThan(initialLoss));
+    });
+  });
+}
+
+void edgeCases() {
+  group('HLR Edge Cases', () {
+    final theta = HlrEngine.defaultTheta;
+
+    test('t mínimo (0.001 días) no rompe la probabilidad de recuerdo', () {
+      final h = HlrEngine.estimateHalfLife(theta: theta, s: 0, f: 0, d: 0.2);
+      final p = HlrEngine.estimateRecallProbability(halfLife: h, t: 0.001);
+      expect(p, inInclusiveRange(0.0, 1.0));
+      expect(p, greaterThan(0.99)); // recién repasado ≈ recuerdo casi seguro
+    });
+
+    test('vida media cero o negativa devuelve probabilidad 0', () {
+      expect(
+        HlrEngine.estimateRecallProbability(halfLife: 0.0, t: 1.0),
+        0.0,
+      );
+      expect(
+        HlrEngine.estimateRecallProbability(halfLife: -5.0, t: 1.0),
+        0.0,
+      );
+    });
+
+    test('racha de fallos reduce la vida media y la probabilidad', () {
+      final hOk = HlrEngine.estimateHalfLife(theta: theta, s: 3, f: 0, d: 0.3);
+      final hFail = HlrEngine.estimateHalfLife(theta: theta, s: 0, f: 3, d: 0.3);
+      expect(hFail, lessThan(hOk));
+    });
+
+    test('trainLocalTheta no diverge con lote grande de eventos (200)', () {
+      final events = List.generate(200, (i) => HlrEvent(
+            wordId: 'w$i',
+            d: (i % 10) / 10.0,
+            s: i % 5,
+            f: i % 3,
+            t: (i % 10) + 0.5,
+            p: i % 2 == 0 ? 1.0 : 0.0,
+          ));
+      final trained = HlrEngine.trainLocalTheta(
+        currentTheta: List.from(theta),
+        events: events,
+      );
+      for (final w in trained) {
+        expect(w.isFinite, isTrue);
+        expect(w, inInclusiveRange(-5.0, 5.0));
+      }
+    });
+
+    test('trainLocalTheta con lista vacía devuelve theta sin cambios', () {
+      final same = HlrEngine.trainLocalTheta(
+        currentTheta: List.from(theta),
+        events: [],
+      );
+      expect(same, theta);
     });
   });
 }
