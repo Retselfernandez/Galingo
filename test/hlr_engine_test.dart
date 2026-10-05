@@ -78,7 +78,6 @@ void main() {
           reg += w * w;
         }
         return sumErr + 0.01 * reg;
-        edgeCases();
 }
 
       final initialLoss = calculateLoss(initialTheta);
@@ -102,6 +101,7 @@ void main() {
       expect(finalLoss, lessThan(initialLoss));
     });
   });
+  edgeCases();
 }
 
 void edgeCases() {
