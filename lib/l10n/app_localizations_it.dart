@@ -212,4 +212,22 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get continuePath => 'Continua il Cammino →';
+
+  @override
+  String get speakExercise => 'Pronuncia questa frase';
+
+  @override
+  String get speakTarget => 'Tieni premuto il microfono e parla';
+
+  @override
+  String get speakResult => 'La tua trascrizione:';
+
+  @override
+  String get speakRetry => 'Riprova';
+
+  @override
+  String get speakGreat => 'Ottima pronuncia!';
+
+  @override
+  String get speakGood => 'Bene, ma puoi migliorare';
 }

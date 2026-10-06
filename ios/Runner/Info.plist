@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Galingo necesita el micrófono para los ejercicios de pronunciación</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Galingo usa el reconocimiento de voz para evaluar tu pronunciación</string>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>

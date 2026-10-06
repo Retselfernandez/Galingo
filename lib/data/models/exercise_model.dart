@@ -4,7 +4,8 @@ enum ExerciseType {
   fillBlank,
   matching,
   audio,
-  translation;
+  translation,
+  speech;
 
   /// Convierte desde string JSON
   static ExerciseType fromJson(String value) {
@@ -14,6 +15,7 @@ enum ExerciseType {
       'matching' => ExerciseType.matching,
       'audio' => ExerciseType.audio,
       'translation' => ExerciseType.translation,
+      'speech' => ExerciseType.speech,
       _ => ExerciseType.multipleChoice,
     };
   }
@@ -25,6 +27,7 @@ enum ExerciseType {
       ExerciseType.matching => 'matching',
       ExerciseType.audio => 'audio',
       ExerciseType.translation => 'translation',
+      ExerciseType.speech => 'speech',
     };
   }
 }

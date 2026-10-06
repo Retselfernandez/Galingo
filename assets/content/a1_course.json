@@ -273,6 +273,28 @@
                   "explanation": "'Estou ben, grazas' significa 'Estoy bien, gracias'."
                 }
               }
+            },
+            {
+              "id": "a1_u1_l1_e_speech1",
+              "type": "speech",
+              "question": "Pronuncia: 'Ola, como estás?'",
+              "options": [],
+              "correctAnswer": "Ola, como estás?",
+              "matchingPairs": [],
+              "hint": "Fala devagar e claro",
+              "explanation": "Pronunciación correcta: Ola, como estás?",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Ola, como estás?'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Ola, como estás?'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Ola, como estás?'"
+                }
+              }
             }
           ]
         },
