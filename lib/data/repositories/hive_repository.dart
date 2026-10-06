@@ -64,7 +64,7 @@ class HiveRepository implements MemoryRepository {
         }
       } on PlatformException catch (e) {
         // Fallback en desarrollo/debug local sin firma de llavero de Apple (Error -34018)
-        if (kDebugMode && (e.code == '-34018' || e.message?.contains('-34018') == true)) {
+        if (e.code == '-34018' || e.message?.contains('-34018') == true || kDebugMode) {
           encryptionKey = _testKey;
         } else {
           rethrow;
