@@ -80,9 +80,12 @@
     }
   },
   "speakExercise": "Pronunță această frază",
-  "speakTarget": "Ține microfonul și vorbește",
+  "speakTarget": "Atinge microfonul pentru a vorbi, atinge din nou pentru a opri",
   "speakResult": "Transcrierea ta:",
   "speakRetry": "Încearcă din nou",
   "speakGreat": "Pronunție excelentă!",
-  "speakGood": "Bine, dar poți îmbunătăți"
+  "speakGood": "Bine, dar poți îmbunătăți",
+  "speakExcellent": "Excelent!",
+  "speakAlmost": "Aproape…",
+  "speakKeepTrying": "Continuă să exersezi"
 }

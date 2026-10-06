@@ -80,9 +80,12 @@
     }
   },
   "speakExercise": "Pronuncia questa frase",
-  "speakTarget": "Tieni premuto il microfono e parla",
+  "speakTarget": "Tocca il microfono per parlare, tocca di nuovo per fermare",
   "speakResult": "La tua trascrizione:",
   "speakRetry": "Riprova",
   "speakGreat": "Ottima pronuncia!",
-  "speakGood": "Bene, ma puoi migliorare"
+  "speakGood": "Bene, ma puoi migliorare",
+  "speakExcellent": "Eccellente!",
+  "speakAlmost": "Quasi…",
+  "speakKeepTrying": "Continua a esercitarti"
 }

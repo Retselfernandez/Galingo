@@ -214,7 +214,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get speakExercise => '朗读这句话';
 
   @override
-  String get speakTarget => '按住麦克风说话';
+  String get speakTarget => '点击麦克风说话，再次点击停止';
 
   @override
   String get speakResult => '你的转写：';
@@ -227,4 +227,13 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get speakGood => '不错，但还能更好';
+
+  @override
+  String get speakExcellent => '非常好！';
+
+  @override
+  String get speakAlmost => '差不多…';
+
+  @override
+  String get speakKeepTrying => '继续练习';
 }

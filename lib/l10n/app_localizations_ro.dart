@@ -216,7 +216,8 @@ class AppLocalizationsRo extends AppLocalizations {
   String get speakExercise => 'Pronunță această frază';
 
   @override
-  String get speakTarget => 'Ține microfonul și vorbește';
+  String get speakTarget =>
+      'Atinge microfonul pentru a vorbi, atinge din nou pentru a opri';
 
   @override
   String get speakResult => 'Transcrierea ta:';
@@ -229,4 +230,13 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get speakGood => 'Bine, dar poți îmbunătăți';
+
+  @override
+  String get speakExcellent => 'Excelent!';
+
+  @override
+  String get speakAlmost => 'Aproape…';
+
+  @override
+  String get speakKeepTrying => 'Continuă să exersezi';
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -257,6 +258,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         'dificultad': e.d,
       }).toList(),
     );
+    // Intentar subir los eventos encolados (no bloquea: cola offline)
+    unawaited(TelemetryService.instance.sync());
 
     await ref.read(progressNotifierProvider.notifier).completeLesson(
       lessonId: lesson.id,

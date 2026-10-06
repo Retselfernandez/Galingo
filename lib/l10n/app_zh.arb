@@ -80,9 +80,12 @@
     }
   },
   "speakExercise": "朗读这句话",
-  "speakTarget": "按住麦克风说话",
+  "speakTarget": "点击麦克风说话，再次点击停止",
   "speakResult": "你的转写：",
   "speakRetry": "再试一次",
   "speakGreat": "发音非常好！",
-  "speakGood": "不错，但还能更好"
+  "speakGood": "不错，但还能更好",
+  "speakExcellent": "非常好！",
+  "speakAlmost": "差不多…",
+  "speakKeepTrying": "继续练习"
 }

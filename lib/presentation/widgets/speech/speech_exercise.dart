@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
+import 'package:galingo/l10n/app_localizations.dart';
 
 /// Distancia Levenshtein normalizada → similitud 0..1
 double textSimilarity(String a, String b) {
@@ -41,11 +42,27 @@ class _SpeechExerciseState extends State<SpeechExercise> {
   bool _available = false;
   bool _listening = false;
   String _transcription = '';
+  String _localeId = 'es_ES';
 
   @override
   void initState() {
     super.initState();
-    _speech.initialize().then((ok) => setState(() => _available = ok));
+    _speech.initialize().then((ok) async {
+      if (!ok) { setState(() => _available = false); return; }
+      final locales = await _speech.locales();
+      final ids = locales.map((l) => l.localeId).toList();
+      setState(() {
+        _available = true;
+        _localeId = ids.firstWhere(
+          (id) => id.toLowerCase().startsWith('gl'),
+          orElse: () => ids.firstWhere(
+            (id) => id.toLowerCase().startsWith('es'),
+            orElse: () => ids.isNotEmpty ? ids.first : 'es_ES',
+          ),
+        );
+        debugPrint('ASR locale elegido: $_localeId, disponible: $ids');
+      });
+    });
   }
 
   Future<void> _listen() async {
@@ -54,13 +71,19 @@ class _SpeechExerciseState extends State<SpeechExercise> {
       _listening = true;
       _transcription = '';
     });
-    await _speech.listen(
-      localeId: 'gl_ES',
+    try {
+      await _speech.listen(
+      localeId: _localeId,
       onResult: (r) => setState(() {
         _transcription = r.recognizedWords;
         widget.onTranscribed(_transcription);
+        debugPrint('ASR transcripcion: $_transcription');
       }),
     );
+    } catch (e) {
+      setState(() => _listening = false);
+      debugPrint('Speech listen error: $e');
+    }
   }
 
   Future<void> _stop() async {
@@ -77,9 +100,7 @@ class _SpeechExerciseState extends State<SpeechExercise> {
             style: Theme.of(context).textTheme.titleLarge, textAlign: TextAlign.center),
         const SizedBox(height: 20),
         GestureDetector(
-          onTapDown: (_) => _listen(),
-          onTapUp: (_) => _stop(),
-          onTapCancel: _stop,
+          onTap: () => _listening ? _stop() : _listen(),
           child: CircleAvatar(
             radius: 36,
             backgroundColor: _listening ? Colors.red : Theme.of(context).primaryColor,
@@ -92,11 +113,15 @@ class _SpeechExerciseState extends State<SpeechExercise> {
           const SizedBox(height: 8),
           if (sim != null)
             Text(
-              sim >= 0.8
-                  ? '¡Excelente! (${(sim * 100).round()}%)'
-                  : sim >= 0.5
-                      ? 'Casi… (${(sim * 100).round()}%) — inténtalo de nuevo'
-                      : 'Sigue practicando (${(sim * 100).round()}%)',
+              () {
+                final l = AppLocalizations.of(context)!;
+                final pct = (sim! * 100).round();
+                return sim! >= 0.8
+                    ? '${l.speakExcellent} ($pct%)'
+                    : sim! >= 0.5
+                        ? '${l.speakAlmost} ($pct%) — ${l.speakRetry}'
+                        : '${l.speakKeepTrying} ($pct%)';
+              }(),
               style: TextStyle(
                 color: sim >= 0.8 ? Colors.green : (sim >= 0.5 ? Colors.orange : Colors.red),
                 fontWeight: FontWeight.bold,

@@ -80,9 +80,12 @@
     }
   },
   "speakExercise": "Pronounce this phrase",
-  "speakTarget": "Hold the microphone and speak",
+  "speakTarget": "Tap the mic to speak, tap again to stop",
   "speakResult": "Your transcription:",
   "speakRetry": "Try again",
   "speakGreat": "Great pronunciation!",
-  "speakGood": "Good, but you can do better"
+  "speakGood": "Good, but you can do better",
+  "speakExcellent": "Excellent!",
+  "speakAlmost": "Almost…",
+  "speakKeepTrying": "Keep practicing"
 }
