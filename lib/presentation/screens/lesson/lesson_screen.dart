@@ -16,6 +16,7 @@ import 'package:galingo/l10n/app_localizations.dart';
 import '../../providers/progress_provider.dart';
 import '../../providers/settings_provider.dart';
 import '../../../core/services/telemetry_service.dart';
+import '../../widgets/speech/speech_exercise.dart';
 import '../../widgets/gabi/gabi_widget.dart';
 
 /// LessonScreen — pantalla de lección con ejercicios progresivos
@@ -114,6 +115,9 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     // Aumentar dificultad por tipo de ejercicio
     if (exercise.type == ExerciseType.translation) {
       difficulty += 0.4;
+    }
+    if (exercise.type == ExerciseType.speech) {
+      difficulty += 0.4;
     } else if (exercise.type == ExerciseType.matching) {
       difficulty += 0.2;
     } else if (exercise.type == ExerciseType.fillBlank) {
@@ -133,6 +137,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   double _getExerciseDifficulty(dynamic exercise) {
     double d = 0.2;
     if (exercise.type == ExerciseType.translation) d += 0.4;
+    if (exercise.type == ExerciseType.speech) d += 0.4;
     if (exercise.type == ExerciseType.matching) d += 0.2;
     if (exercise.type == ExerciseType.fillBlank) d += 0.1;
     // L4: usar _unitLevel en lugar de startsWith('a2')
@@ -144,7 +149,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     if (_isAnswered) return;
     final exercise = _lesson!.exercises[_currentExerciseIndex];
     
-    final bool correct = exercise.type == ExerciseType.translation
+    final bool correct = (exercise.type == ExerciseType.translation || exercise.type == ExerciseType.speech)
         ? _isFuzzyEqual(answer, exercise.correctAnswer)
         : answer == exercise.correctAnswer;
 
@@ -598,7 +603,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
             const SizedBox(height: 24),
 
             // Opciones (multiple choice / fill blank)
-            if (_shuffledOptions.isNotEmpty && exercise.type != ExerciseType.matching)
+            if (_shuffledOptions.isNotEmpty && exercise.type != ExerciseType.matching && exercise.type != ExerciseType.speech)
               GridView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
@@ -682,6 +687,19 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                       ),
                     ],
                   ],
+                ),
+              ),
+
+            // Speech exercise
+            if (exercise.type == ExerciseType.speech)
+              Padding(
+                padding: const EdgeInsets.only(top: 12),
+                child: SpeechExercise(
+                  targetText: exercise.correctAnswer,
+                  onTranscribed: (text) {
+                    _translationController.text = text;
+                    setState(() {});
+                  },
                 ),
               ),
 
@@ -840,7 +858,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     final exercise = _lesson?.exercises[_currentExerciseIndex];
 
     if (!_isAnswered) {
-      if (exercise != null && exercise.type == ExerciseType.translation) {
+      if (exercise != null && (exercise.type == ExerciseType.translation || exercise.type == ExerciseType.speech)) {
         final textInput = _translationController.text.trim();
         final hasInput = textInput.isNotEmpty;
         
@@ -903,6 +921,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       ExerciseType.matching => '🔗 Emparellar',
       ExerciseType.audio => '🔊 Audio',
       ExerciseType.translation => '🌐 Tradución',
+      ExerciseType.speech => '🎤 Pronuncia',
     };
   }
 }

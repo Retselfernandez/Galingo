@@ -209,4 +209,22 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get continuePath => '继续路径 →';
+
+  @override
+  String get speakExercise => '朗读这句话';
+
+  @override
+  String get speakTarget => '按住麦克风说话';
+
+  @override
+  String get speakResult => '你的转写：';
+
+  @override
+  String get speakRetry => '再试一次';
+
+  @override
+  String get speakGreat => '发音非常好！';
+
+  @override
+  String get speakGood => '不错，但还能更好';
 }

@@ -211,4 +211,22 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get continuePath => 'Continuă Calea →';
+
+  @override
+  String get speakExercise => 'Pronunță această frază';
+
+  @override
+  String get speakTarget => 'Ține microfonul și vorbește';
+
+  @override
+  String get speakResult => 'Transcrierea ta:';
+
+  @override
+  String get speakRetry => 'Încearcă din nou';
+
+  @override
+  String get speakGreat => 'Pronunție excelentă!';
+
+  @override
+  String get speakGood => 'Bine, dar poți îmbunătăți';
 }

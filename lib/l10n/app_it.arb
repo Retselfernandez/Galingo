@@ -78,5 +78,11 @@
         "type": "String"
       }
     }
-  }
+  },
+  "speakExercise": "Pronuncia questa frase",
+  "speakTarget": "Tieni premuto il microfono e parla",
+  "speakResult": "La tua trascrizione:",
+  "speakRetry": "Riprova",
+  "speakGreat": "Ottima pronuncia!",
+  "speakGood": "Bene, ma puoi migliorare"
 }

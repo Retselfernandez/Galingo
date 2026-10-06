@@ -78,5 +78,11 @@
         "type": "String"
       }
     }
-  }
+  },
+  "speakExercise": "朗读这句话",
+  "speakTarget": "按住麦克风说话",
+  "speakResult": "你的转写：",
+  "speakRetry": "再试一次",
+  "speakGreat": "发音非常好！",
+  "speakGood": "不错，但还能更好"
 }

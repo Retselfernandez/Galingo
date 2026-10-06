@@ -505,6 +505,42 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Continuar el Camino →'**
   String get continuePath;
+
+  /// No description provided for @speakExercise.
+  ///
+  /// In es, this message translates to:
+  /// **'Pronuncia esta frase'**
+  String get speakExercise;
+
+  /// No description provided for @speakTarget.
+  ///
+  /// In es, this message translates to:
+  /// **'Mantén pulsado el micrófono y habla'**
+  String get speakTarget;
+
+  /// No description provided for @speakResult.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu transcripción:'**
+  String get speakResult;
+
+  /// No description provided for @speakRetry.
+  ///
+  /// In es, this message translates to:
+  /// **'Inténtalo de nuevo'**
+  String get speakRetry;
+
+  /// No description provided for @speakGreat.
+  ///
+  /// In es, this message translates to:
+  /// **'¡Muy bien pronunciado!'**
+  String get speakGreat;
+
+  /// No description provided for @speakGood.
+  ///
+  /// In es, this message translates to:
+  /// **'Bien, pero puedes mejorar'**
+  String get speakGood;
 }
 
 class _AppLocalizationsDelegate

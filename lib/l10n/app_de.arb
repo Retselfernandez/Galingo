@@ -78,5 +78,11 @@
         "type": "String"
       }
     }
-  }
+  },
+  "speakExercise": "Sprich diesen Satz aus",
+  "speakTarget": "Mikrofon halten und sprechen",
+  "speakResult": "Deine Transkription:",
+  "speakRetry": "Nochmal versuchen",
+  "speakGreat": "Tolle Aussprache!",
+  "speakGood": "Gut, aber da geht noch was"
 }
