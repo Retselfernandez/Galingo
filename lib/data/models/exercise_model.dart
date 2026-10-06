@@ -446,8 +446,25 @@ class ExerciseModel {
         ? _translateWord(correctAnswer, langCode)
         : correctAnswer;
 
+    // Traducir también la palabra citada dentro del enunciado (para cualquiera de las
+    // plantillas de pregunta tipo "Como se di 'X' en galego?").
+    String translateQuotedInQuestion(String q) {
+      return q.replaceAllMapped(
+        RegExp(r'''["']([^"']+)["']'''),
+        (m) {
+          final word = m.group(1)!;
+          final translated = _translateWord(word, langCode);
+          return "'$translated'";
+        },
+      );
+    }
+
+    final localizedQuestion = langCode == 'es'
+        ? (texts['question'] ?? question)
+        : translateQuotedInQuestion(texts['question'] ?? question);
+
     return copyWith(
-      question: texts['question'] ?? question,
+      question: localizedQuestion,
       hint: texts['hint'] ?? hint,
       explanation: texts['explanation'] ?? explanation,
       options: translatedOptions,
