@@ -515,7 +515,7 @@ abstract class AppLocalizations {
   /// No description provided for @speakTarget.
   ///
   /// In es, this message translates to:
-  /// **'Mantén pulsado el micrófono y habla'**
+  /// **'Toca el micrófono para hablar y vuelve a tocarlo para detener'**
   String get speakTarget;
 
   /// No description provided for @speakResult.
@@ -541,6 +541,24 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Bien, pero puedes mejorar'**
   String get speakGood;
+
+  /// No description provided for @speakExcellent.
+  ///
+  /// In es, this message translates to:
+  /// **'¡Excelente!'**
+  String get speakExcellent;
+
+  /// No description provided for @speakAlmost.
+  ///
+  /// In es, this message translates to:
+  /// **'Casi…'**
+  String get speakAlmost;
+
+  /// No description provided for @speakKeepTrying.
+  ///
+  /// In es, this message translates to:
+  /// **'Sigue practicando'**
+  String get speakKeepTrying;
 }
 
 class _AppLocalizationsDelegate

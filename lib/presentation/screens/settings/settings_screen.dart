@@ -5,6 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../core/theme/app_theme.dart';
 import '../../../data/models/settings_model.dart';
+import 'package:go_router/go_router.dart';
+import '../../../core/router/app_router.dart';
 import '../../../data/models/user_progress_model.dart';
 import '../../providers/progress_provider.dart';
 import '../../providers/settings_provider.dart';
@@ -79,6 +81,15 @@ class SettingsScreen extends ConsumerWidget {
               _buildSectionHeader(context, strings.information, 4),
               const SizedBox(height: 12),
               _buildInfoCard(context, strings),
+              const SizedBox(height: 16),
+              _SettingsCard(
+                child: ListTile(
+                  leading: const Icon(Icons.bug_report_rounded),
+                  title: const Text('Reportar un problema'),
+                  subtitle: const Text('O agita el dispositivo en cualquier pantalla'),
+                  onTap: () => context.go(AppRoutes.feedback),
+                ),
+              ),
               const SizedBox(height: 16),
               _buildTelemetryCard(context, ref, strings),
               const SizedBox(height: 32),

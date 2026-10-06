@@ -217,7 +217,8 @@ class AppLocalizationsIt extends AppLocalizations {
   String get speakExercise => 'Pronuncia questa frase';
 
   @override
-  String get speakTarget => 'Tieni premuto il microfono e parla';
+  String get speakTarget =>
+      'Tocca il microfono per parlare, tocca di nuovo per fermare';
 
   @override
   String get speakResult => 'La tua trascrizione:';
@@ -230,4 +231,13 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get speakGood => 'Bene, ma puoi migliorare';
+
+  @override
+  String get speakExcellent => 'Eccellente!';
+
+  @override
+  String get speakAlmost => 'Quasi…';
+
+  @override
+  String get speakKeepTrying => 'Continua a esercitarti';
 }

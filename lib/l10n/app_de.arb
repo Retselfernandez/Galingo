@@ -80,9 +80,12 @@
     }
   },
   "speakExercise": "Sprich diesen Satz aus",
-  "speakTarget": "Mikrofon halten und sprechen",
+  "speakTarget": "Tippe auf das Mikro, um zu sprechen, erneut tippen zum Stoppen",
   "speakResult": "Deine Transkription:",
   "speakRetry": "Nochmal versuchen",
   "speakGreat": "Tolle Aussprache!",
-  "speakGood": "Gut, aber da geht noch was"
+  "speakGood": "Gut, aber da geht noch was",
+  "speakExcellent": "Ausgezeichnet!",
+  "speakAlmost": "Fast…",
+  "speakKeepTrying": "Weiter üben"
 }
