@@ -92,6 +92,110 @@
               }
             }
           ]
+        },
+        {
+          "id": "b2_u1_l2",
+          "title": "Análise de texto",
+          "description": "Comprensión crítica de literatura",
+          "icon": "📖",
+          "xpReward": 20,
+          "estimatedMinutes": 10,
+          "exercises": [
+            {
+              "id": "b2_u1_l2_e1",
+              "type": "multiple_choice",
+              "question": "Como se di 'Rosalía de Castro' en galego?",
+              "options": [
+                "Rosalía de Castro",
+                "Rosalía de Castro é",
+                "Rosalía",
+                "Rosalía e Castro"
+              ],
+              "correctAnswer": "Rosalía de Castro",
+              "i18n": {
+                "es": {
+                  "question": "Como se di 'Rosalía de Castro' en galego?"
+                },
+                "en": {
+                  "question": "How do you say 'Rosalía de Castro' in Galician?"
+                }
+              }
+            },
+            {
+              "id": "b2_u1_l2_e2",
+              "type": "speech",
+              "question": "Pronuncia: 'Rosalía de Castro'",
+              "options": [],
+              "correctAnswer": "Rosalía de Castro",
+              "matchingPairs": [],
+              "hint": "Fala devagar e claro",
+              "explanation": "Pronunciación correcta: Rosalía de Castro",
+              "xpReward": 10,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Rosalía de Castro'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Rosalía de Castro'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Rosalía de Castro'"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "b2_u1_l3",
+          "title": "Reforzo oral B2",
+          "description": "Pronunciación de nivel B2",
+          "icon": "🎤",
+          "xpReward": 20,
+          "estimatedMinutes": 5,
+          "exercises": [
+            {
+              "id": "b2_u1_l3_e1",
+              "type": "speech",
+              "question": "Pronuncia: 'A literatura galega'",
+              "options": [],
+              "correctAnswer": "A literatura galega",
+              "matchingPairs": [],
+              "hint": "Fala devagar e claro",
+              "explanation": "Pronunciación correcta: A literatura galega",
+              "xpReward": 10,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'A literatura galega'"
+                },
+                "en": {
+                  "question": "Pronounce: 'A literatura galega'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'A literatura galega'"
+                }
+              }
+            },
+            {
+              "id": "b2_u1_l3_e2",
+              "type": "fill_blank",
+              "question": "Completa: O Rexurdimento foi no século _____.",
+              "correctAnswer": "XIX",
+              "options": [
+                "XIX",
+                "XX",
+                "XVIII",
+                "XV"
+              ],
+              "i18n": {
+                "es": {
+                  "question": "Completa: O Rexurdimento foi no século _____."
+                },
+                "en": {
+                  "question": "Fill in: O Rexurdimento foi no século _____."
+                }
+              }
+            }
+          ]
         }
       ]
     }

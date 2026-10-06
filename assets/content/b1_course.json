@@ -139,6 +139,113 @@
               }
             }
           ]
+        },
+        {
+          "id": "b1_u1_l2",
+          "title": "Argumentando con matices",
+          "description": "Expresións para valorar e matizar",
+          "icon": "⚖️",
+          "xpReward": 15,
+          "estimatedMinutes": 8,
+          "exercises": [
+            {
+              "id": "b1_u1_l2_e1",
+              "type": "multiple_choice",
+              "question": "Como se di 'En mi opinión' en galego?",
+              "options": [
+                "Na miña opinión",
+                "Na súa opinión",
+                "Segundo dixo",
+                "Quizais"
+              ],
+              "correctAnswer": "Na miña opinión",
+              "i18n": {
+                "es": {
+                  "question": "Como se di 'En mi opinión' en galego?"
+                },
+                "en": {
+                  "question": "How do you say 'In my opinion' in Galician?"
+                },
+                "pt": {
+                  "question": "Como se diz 'Em minha opinião' em galego?"
+                }
+              }
+            },
+            {
+              "id": "b1_u1_l2_e2",
+              "type": "speech",
+              "question": "Pronuncia: 'Na miña opinión'",
+              "options": [],
+              "correctAnswer": "Na miña opinión",
+              "matchingPairs": [],
+              "hint": "Claro e devagar",
+              "explanation": "Pronunciación correcta: Na miña opinión",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Na miña opinión'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Na miña opinión'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Na miña opinión'"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "b1_u1_l3",
+          "title": "Reforzo oral",
+          "description": "Práctica de pronunciación B1",
+          "icon": "🎤",
+          "xpReward": 15,
+          "estimatedMinutes": 5,
+          "exercises": [
+            {
+              "id": "b1_u1_l3_e1",
+              "type": "speech",
+              "question": "Pronuncia: 'Non estou de acordo'",
+              "options": [],
+              "correctAnswer": "Non estou de acordo",
+              "matchingPairs": [],
+              "hint": "Claro e devagar",
+              "explanation": "Pronunciación correcta: Non estou de acordo",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Non estou de acordo'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Non estou de acordo'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Non estou de acordo'"
+                }
+              }
+            },
+            {
+              "id": "b1_u1_l3_e2",
+              "type": "fill_blank",
+              "question": "Completa: Na miña opinión, _____ ben.",
+              "correctAnswer": "é",
+              "options": [
+                "é",
+                "son",
+                "está",
+                "somos"
+              ],
+              "i18n": {
+                "es": {
+                  "question": "Completa: Na miña opinión, _____ ben."
+                },
+                "en": {
+                  "question": "Fill in: Na miña opinión, _____ ben."
+                }
+              }
+            }
+          ]
         }
       ]
     }
