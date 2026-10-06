@@ -115,6 +115,28 @@
                   "explanation": "A primeira persoa do presente de indicativo do verbo compartir é 'comparto'."
                 }
               }
+            },
+            {
+              "id": "b1_u1_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Todas son correctas'",
+              "options": [],
+              "correctAnswer": "Todas son correctas",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Todas son correctas",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Todas son correctas'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Todas son correctas'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Todas son correctas'"
+                }
+              }
             }
           ]
         }

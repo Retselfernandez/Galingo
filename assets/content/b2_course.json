@@ -68,6 +68,28 @@
                   "explanation": "'Cantares Galegos' é a obra cume do Rexurdimento, escrita por Rosalía de Castro."
                 }
               }
+            },
+            {
+              "id": "b2_u1_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Rosalía de Castro'",
+              "options": [],
+              "correctAnswer": "Rosalía de Castro",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Rosalía de Castro",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Rosalía de Castro'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Rosalía de Castro'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Rosalía de Castro'"
+                }
+              }
             }
           ]
         }
