@@ -168,6 +168,28 @@
                   "explanation": "O 'tren' é o medio de transporte que chega á estación ferroviaria."
                 }
               }
+            },
+            {
+              "id": "a2_u1_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Billete'",
+              "options": [],
+              "correctAnswer": "Billete",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Billete",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Billete'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Billete'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Billete'"
+                }
+              }
             }
           ]
         }
@@ -283,6 +305,28 @@
                 "zh": {
                   "question": "Completa: 'Canto _____ este pantalón?' (Cuesta)",
                   "explanation": "Tanto 'custa' coma 'vale' son correctos e habituais para preguntar o prezo."
+                }
+              }
+            },
+            {
+              "id": "a2_u2_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Camisa'",
+              "options": [],
+              "correctAnswer": "Camisa",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Camisa",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Camisa'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Camisa'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Camisa'"
                 }
               }
             }
@@ -405,6 +449,28 @@
                   "question": "将元素与其含义配对"
                 }
               }
+            },
+            {
+              "id": "a2_u3_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Ocio / Tiempo libre'",
+              "options": [],
+              "correctAnswer": "Ocio / Tiempo libre",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Ocio / Tiempo libre",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Ocio / Tiempo libre'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Ocio / Tiempo libre'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Ocio / Tiempo libre'"
+                }
+              }
             }
           ]
         }
@@ -520,6 +586,28 @@
                 "zh": {
                   "question": "Completa: 'O _____ traballa na escola' (El profesor)",
                   "explanation": "'Mestre' significa profesor ou maestro, e traballa no colexio ou escola."
+                }
+              }
+            },
+            {
+              "id": "a2_u4_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Médico / Médica'",
+              "options": [],
+              "correctAnswer": "Médico / Médica",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Médico / Médica",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Médico / Médica'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Médico / Médica'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Médico / Médica'"
                 }
               }
             }
@@ -690,6 +778,28 @@
                   "explanation": "\"Ollos\" é a forma galega para \"ojos\"."
                 }
               }
+            },
+            {
+              "id": "a2_u5_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Cabeza'",
+              "options": [],
+              "correctAnswer": "Cabeza",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Cabeza",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Cabeza'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Cabeza'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Cabeza'"
+                }
+              }
             }
           ]
         },
@@ -845,6 +955,28 @@
                 },
                 "zh": {
                   "question": "将元素与其含义配对"
+                }
+              }
+            },
+            {
+              "id": "a2_u5_l2_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Dóeme a cabeza'",
+              "options": [],
+              "correctAnswer": "Dóeme a cabeza",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Dóeme a cabeza",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Dóeme a cabeza'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Dóeme a cabeza'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Dóeme a cabeza'"
                 }
               }
             }
@@ -1063,6 +1195,28 @@
                   "explanation": "'Preto de' significa cerca de en galego."
                 }
               }
+            },
+            {
+              "id": "a2_u6_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Á dereita'",
+              "options": [],
+              "correctAnswer": "Á dereita",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Á dereita",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Á dereita'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Á dereita'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Á dereita'"
+                }
+              }
             }
           ]
         }
@@ -1277,6 +1431,28 @@
                 "zh": {
                   "question": "Como se di \"agua\" en galego?",
                   "explanation": "Auga escríbese con 'u' en galego."
+                }
+              }
+            },
+            {
+              "id": "a2_u7_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Quero'",
+              "options": [],
+              "correctAnswer": "Quero",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Quero",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Quero'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Quero'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Quero'"
                 }
               }
             }
@@ -1495,6 +1671,28 @@
                   "explanation": "A terminación da terceira persoa de plural en pretérito de verbos en -er é '-eron'."
                 }
               }
+            },
+            {
+              "id": "a2_u8_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Eu falei'",
+              "options": [],
+              "correctAnswer": "Eu falei",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Eu falei",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Eu falei'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Eu falei'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Eu falei'"
+                }
+              }
             }
           ]
         },
@@ -1650,6 +1848,28 @@
                 "zh": {
                   "question": "Completa: 'Ela _____ en Ourense durante dous anos' (vivió)",
                   "explanation": "A terceira persoa de singular en pretérito de verbos en -ir remata en '-iu'."
+                }
+              }
+            },
+            {
+              "id": "a2_u8_l2_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Eu vivín'",
+              "options": [],
+              "correctAnswer": "Eu vivín",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Eu vivín",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Eu vivín'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Eu vivín'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Eu vivín'"
                 }
               }
             }
@@ -1868,6 +2088,28 @@
                   "explanation": "\"Contrasinal\" é o termo normativo galego recomendado polos organismos lingüísticos oficiais para \"contraseña\"."
                 }
               }
+            },
+            {
+              "id": "a2_u9_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Ordenador'",
+              "options": [],
+              "correctAnswer": "Ordenador",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Ordenador",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Ordenador'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Ordenador'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Ordenador'"
+                }
+              }
             }
           ]
         }
@@ -2079,6 +2321,28 @@
                 "zh": {
                   "question": "Si alguien llega empapado por la lluvia, ¿qué dirías en gallego?",
                   "explanation": "\"Estar feito unha sopa\" indica que alguén está completamente mollado."
+                }
+              }
+            },
+            {
+              "id": "a2_u10_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Nostalgia/morriña por algo ou alguén ausente'",
+              "options": [],
+              "correctAnswer": "Nostalgia/morriña por algo ou alguén ausente",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Nostalgia/morriña por algo ou alguén ausente",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Nostalgia/morriña por algo ou alguén ausente'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Nostalgia/morriña por algo ou alguén ausente'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Nostalgia/morriña por algo ou alguén ausente'"
                 }
               }
             }

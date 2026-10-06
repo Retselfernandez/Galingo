@@ -500,6 +500,28 @@
                   "explanation": "Ambas as formas son correctas e de uso común en galego."
                 }
               }
+            },
+            {
+              "id": "a1_u1_l2_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Chámome...'",
+              "options": [],
+              "correctAnswer": "Chámome...",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Chámome...",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Chámome...'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Chámome...'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Chámome...'"
+                }
+              }
             }
           ]
         }
@@ -707,6 +729,28 @@
                   "question": "Completa a serie: Un, Dous, _____, Catro"
                 }
               }
+            },
+            {
+              "id": "a1_u2_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Tres'",
+              "options": [],
+              "correctAnswer": "Tres",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Tres",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Tres'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Tres'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Tres'"
+                }
+              }
             }
           ]
         },
@@ -862,6 +906,28 @@
                 },
                 "zh": {
                   "question": "将元素与其含义配对"
+                }
+              }
+            },
+            {
+              "id": "a1_u2_l2_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Once'",
+              "options": [],
+              "correctAnswer": "Once",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Once",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Once'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Once'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Once'"
                 }
               }
             }
@@ -1120,6 +1186,28 @@
                   "question": "将元素与其含义配对"
                 }
               }
+            },
+            {
+              "id": "a1_u2_l3_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Corenta'",
+              "options": [],
+              "correctAnswer": "Corenta",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Corenta",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Corenta'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Corenta'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Corenta'"
+                }
+              }
             }
           ]
         }
@@ -1288,6 +1376,28 @@
                   "explanation": "A nai do teu pai é a túa avoa paterna."
                 }
               }
+            },
+            {
+              "id": "a1_u3_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Nai'",
+              "options": [],
+              "correctAnswer": "Nai",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Nai",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Nai'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Nai'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Nai'"
+                }
+              }
             }
           ]
         }
@@ -1406,6 +1516,28 @@
                 },
                 "zh": {
                   "question": "将元素与其含义配对"
+                }
+              }
+            },
+            {
+              "id": "a1_u4_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Azul'",
+              "options": [],
+              "correctAnswer": "Azul",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Azul",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Azul'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Azul'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Azul'"
                 }
               }
             }
@@ -1528,6 +1660,28 @@
                   "question": "将元素与其含义配对"
                 }
               }
+            },
+            {
+              "id": "a1_u5_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Pan'",
+              "options": [],
+              "correctAnswer": "Pan",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Pan",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Pan'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Pan'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Pan'"
+                }
+              }
             }
           ]
         }
@@ -1646,6 +1800,28 @@
                 },
                 "zh": {
                   "question": "将元素与其含义配对"
+                }
+              }
+            },
+            {
+              "id": "a1_u6_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Comer'",
+              "options": [],
+              "correctAnswer": "Comer",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Comer",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Comer'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Comer'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Comer'"
                 }
               }
             }
@@ -1864,6 +2040,28 @@
                   "explanation": "O 'domingo' pecha a semana tamén en galego."
                 }
               }
+            },
+            {
+              "id": "a1_u7_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Luns'",
+              "options": [],
+              "correctAnswer": "Luns",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Luns",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Luns'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Luns'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Luns'"
+                }
+              }
             }
           ]
         },
@@ -2067,6 +2265,28 @@
                 "zh": {
                   "question": "Completa: 'O _____ é a estación máis fría' (invierno)",
                   "explanation": "O inverno é o período máis frío do ano."
+                }
+              }
+            },
+            {
+              "id": "a1_u7_l2_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Xaneiro'",
+              "options": [],
+              "correctAnswer": "Xaneiro",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Xaneiro",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Xaneiro'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Xaneiro'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Xaneiro'"
                 }
               }
             }
@@ -2294,6 +2514,28 @@
                   "explanation": "'Fai bo tempo' indica que as condicións climáticas son agradables."
                 }
               }
+            },
+            {
+              "id": "a1_u8_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Fai sol'",
+              "options": [],
+              "correctAnswer": "Fai sol",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Fai sol",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Fai sol'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Fai sol'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Fai sol'"
+                }
+              }
             }
           ]
         }
@@ -2510,6 +2752,28 @@
                   "explanation": "\"Xanela\" é a forma xenuinamente galega para \"ventana\"; comparte orixe co portugués \"janela\"."
                 }
               }
+            },
+            {
+              "id": "a1_u9_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Cociña'",
+              "options": [],
+              "correctAnswer": "Cociña",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Cociña",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Cociña'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Cociña'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Cociña'"
+                }
+              }
             }
           ]
         },
@@ -2665,6 +2929,28 @@
                 "zh": {
                   "question": "Completa: 'Como na _____ da cociña' (mesa)",
                   "explanation": "'Mesa' é onde se colocan os alimentos para comer."
+                }
+              }
+            },
+            {
+              "id": "a1_u9_l2_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Cadeira'",
+              "options": [],
+              "correctAnswer": "Cadeira",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Cadeira",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Cadeira'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Cadeira'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Cadeira'"
                 }
               }
             }
@@ -2883,6 +3169,28 @@
                   "explanation": "Ovella é a femia do carneiro que produce la."
                 }
               }
+            },
+            {
+              "id": "a1_u10_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Can'",
+              "options": [],
+              "correctAnswer": "Can",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Can",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Can'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Can'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Can'"
+                }
+              }
             }
           ]
         }
@@ -3099,6 +3407,28 @@
                   "explanation": "Ser refírese a calidades permanentes e estar a estados temporais ou localización."
                 }
               }
+            },
+            {
+              "id": "a1_u11_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Eu son'",
+              "options": [],
+              "correctAnswer": "Eu son",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Eu son",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Eu son'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Eu son'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Eu son'"
+                }
+              }
             }
           ]
         },
@@ -3254,6 +3584,28 @@
                 "zh": {
                   "question": "Completa: 'Ela _____ vinte anos' (tiene)",
                   "explanation": "'Ela ten' é a terceira persoa do singular do verbo 'ter'."
+                }
+              }
+            },
+            {
+              "id": "a1_u11_l2_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Eu teño'",
+              "options": [],
+              "correctAnswer": "Eu teño",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Eu teño",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Eu teño'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Eu teño'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Eu teño'"
                 }
               }
             }
@@ -3424,6 +3776,28 @@
                   "explanation": "O adxectivo concorda en xénero e número co substantivo: \"casa\" é feminino singular, polo que o adxectivo remata en \"-a\"."
                 }
               }
+            },
+            {
+              "id": "a1_u12_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Grande'",
+              "options": [],
+              "correctAnswer": "Grande",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Grande",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Grande'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Grande'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Grande'"
+                }
+              }
             }
           ]
         },
@@ -3579,6 +3953,28 @@
                 "zh": {
                   "question": "Completa: 'A miña casa é _____ grande _____ a túa' (tan... como)",
                   "explanation": "A estrutura de igualdade en galego é \"tan... como\"."
+                }
+              }
+            },
+            {
+              "id": "a1_u12_l2_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Máis grande que'",
+              "options": [],
+              "correctAnswer": "Máis grande que",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Máis grande que",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Máis grande que'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Máis grande que'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Máis grande que'"
                 }
               }
             }
@@ -3795,6 +4191,28 @@
                 "zh": {
                   "question": "Como se di \"nosotros comeremos\" en galego?",
                   "explanation": "O futuro de \"comer\" engade as mesmas terminacións sobre o infinitivo: \"comer-emos\"."
+                }
+              }
+            },
+            {
+              "id": "a1_u13_l1_e_speech",
+              "type": "speech",
+              "question": "Pronuncia: 'Eu falarei'",
+              "options": [],
+              "correctAnswer": "Eu falarei",
+              "matchingPairs": [],
+              "hint": "Habla claro e devagar",
+              "explanation": "Pronunciación correcta: Eu falarei",
+              "xpReward": 8,
+              "i18n": {
+                "es": {
+                  "question": "Pronuncia: 'Eu falarei'"
+                },
+                "en": {
+                  "question": "Pronounce: 'Eu falarei'"
+                },
+                "pt": {
+                  "question": "Pronuncia: 'Eu falarei'"
                 }
               }
             }

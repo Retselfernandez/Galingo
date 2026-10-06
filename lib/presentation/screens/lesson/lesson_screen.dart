@@ -150,9 +150,14 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     if (_isAnswered) return;
     final exercise = _lesson!.exercises[_currentExerciseIndex];
     
-    final bool correct = (exercise.type == ExerciseType.translation || exercise.type == ExerciseType.speech)
-        ? _isFuzzyEqual(answer, exercise.correctAnswer)
-        : answer == exercise.correctAnswer;
+    final bool correct;
+    if (exercise.type == ExerciseType.speech) {
+      correct = textSimilarity(answer, exercise.correctAnswer) >= 0.8;
+    } else if (exercise.type == ExerciseType.translation) {
+      correct = _isFuzzyEqual(answer, exercise.correctAnswer);
+    } else {
+      correct = answer == exercise.correctAnswer;
+    }
 
     // Registrar resultado del primer intento
     if (!_firstAttemptResults.containsKey(exercise.id)) {
