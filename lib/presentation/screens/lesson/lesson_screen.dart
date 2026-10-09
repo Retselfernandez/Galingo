@@ -73,10 +73,13 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   }
 
   /// Ejercicios que se responden escribiendo (caja de texto).
+  /// Un `fill_blank` es de escribir si no tiene opciones o si la respuesta no
+  /// está entre ellas (en ese caso `options` actúa de pista, p. ej. el infinitivo).
   bool _showsTextInput(dynamic e) =>
       e.type == ExerciseType.translation ||
       e.type == ExerciseType.reading ||
-      (e.type == ExerciseType.fillBlank && (e.options as List).isEmpty);
+      (e.type == ExerciseType.fillBlank &&
+          !(e.options as List).contains(e.correctAnswer));
 
   /// Reproduce automáticamente el audio del ejercicio actual, si lo tiene.
   void _maybeAutoPlayAudio() {
@@ -664,10 +667,24 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
               const SizedBox(height: 12),
               _buildListenButton(context, exercise),
             ],
+            // Pista (options usadas como axuda en exercicios de escribir)
+            if (_showsTextInput(exercise) &&
+                (exercise.options as List).isNotEmpty)
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Text(
+                  '💡 ${(exercise.options as List).join(' / ')}',
+                  style: const TextStyle(
+                    color: AppTheme.textSecondary,
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
             const SizedBox(height: 24),
 
             // Opciones (multiple choice / fill blank / image)
-            if (_shuffledOptions.isNotEmpty && exercise.type != ExerciseType.matching && exercise.type != ExerciseType.speech && exercise.type != ExerciseType.ordering)
+            if (_shuffledOptions.isNotEmpty && exercise.options.contains(exercise.correctAnswer) && exercise.type != ExerciseType.matching && exercise.type != ExerciseType.speech && exercise.type != ExerciseType.ordering)
               GridView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),

@@ -1,9 +1,28 @@
+import 'dart:io' show Platform;
+import 'package:flutter/foundation.dart' show kIsWeb;
+
 /// Constantes globales de la aplicación Galingo
 class AppConstants {
   AppConstants._();
 
   static const String appName = 'Galingo';
   static const String appTagline = 'Aprende galego, paso a paso';
+
+  // ─── Backend (telemetría + voz) ───────────────────────────────────────────
+  /// URL base del backend. En la beta se compila con:
+  ///   --dart-define=API_BASE_URL=https://<tu-backend>
+  /// Sin override cae a localhost / 10.0.2.2 (desarrollo).
+  static const String _apiBaseUrlOverride =
+      String.fromEnvironment('API_BASE_URL');
+
+  static String get apiBaseUrl {
+    if (_apiBaseUrlOverride.isNotEmpty) return _apiBaseUrlOverride;
+    if (kIsWeb) return 'http://localhost:8000';
+    try {
+      if (Platform.isAndroid) return 'http://10.0.2.2:8000';
+    } catch (_) {}
+    return 'http://localhost:8000';
+  }
 
   // Hive Box Names
   static const String progressBoxName = 'galingo_progress';

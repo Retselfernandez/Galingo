@@ -47,5 +47,14 @@ void main() {
     for (final e in all.where((e) => e.type == ExerciseType.speech)) {
       expect(e.audioAsset, isNotNull, reason: 'dictado ${e.id} sin audio');
     }
+
+    // Los ejercicios de opción múltiple / imagen deben tener su respuesta
+    // entre las opciones (si no, al pulsarla se marcaría incorrecta).
+    for (final e in all.where((e) =>
+        e.type == ExerciseType.multipleChoice ||
+        e.type == ExerciseType.image)) {
+      expect(e.options, contains(e.correctAnswer),
+          reason: '${e.id}: a resposta non está entre as opcións');
+    }
   });
 }

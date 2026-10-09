@@ -1,0 +1,18 @@
+services:
+  api:
+    build:
+      context: ../..
+      dockerfile: deploy/oracle/Dockerfile
+    environment:
+      WHISPER_MODEL_REPO: Galingo/galingo-whisper-turbo-gl-ct2
+      DATABASE_URL: sqlite:////data/galingo.db
+    volumes:
+      - models:/models          # modelo ASR (persistente, se descarga 1 vez)
+      - data:/data              # SQLite de telemetría
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+volumes:
+  models:
+  data:
