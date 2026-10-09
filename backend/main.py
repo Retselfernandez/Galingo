@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Depends, HTTPException
+from fastapi import FastAPI, Depends, HTTPException, File, UploadFile, Form
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from typing import Optional, List
@@ -80,3 +80,25 @@ def metricas(db: Session = Depends(get_db)):
     feedbacks = db.query(ReporteFeedback).count()
     sesiones = db.query(SesionDiaria).count()
     return {"eventos_totales": total, "reportes_totales": feedbacks, "sesiones_diarias": sesiones}
+
+
+# ─── Evaluación de voz (Whisper gallego) ─────────────────────────────────────
+@app.post("/api/v1/voz/avaliar")
+async def voz_avaliar(
+    audio: UploadFile = File(...),
+    target: str = Form(...),
+    umbral: float = Form(0.7),
+):
+    """Recibe un audio y la frase objetivo; devuelve transcripción y puntuación."""
+    try:
+        from voz import evaluar
+    except Exception as e:  # pragma: no cover
+        raise HTTPException(status_code=500, detail=f"voz no disponible: {e}")
+    data = await audio.read()
+    if not data:
+        raise HTTPException(status_code=400, detail="audio vacío")
+    try:
+        return evaluar(data, target, umbral=umbral)
+    except Exception as e:
+        raise HTTPException(status_code=503, detail=f"modelo de voz no disponible: {e}")
+

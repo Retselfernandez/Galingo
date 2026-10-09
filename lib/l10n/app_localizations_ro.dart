@@ -189,6 +189,18 @@ class AppLocalizationsRo extends AppLocalizations {
   String get verifyTranslation => 'Verifică traducerea';
 
   @override
+  String get typeAnswer => 'Scrie răspunsul tău aici…';
+
+  @override
+  String get verifyAnswer => 'Verifică';
+
+  @override
+  String get listen => 'Ascultă';
+
+  @override
+  String get correctAnswerLabel => 'Răspuns corect:';
+
+  @override
   String get finishLessonTip => 'Finalizează lecția și salvează progresul';
 
   @override

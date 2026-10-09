@@ -42,6 +42,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   int _consecutiveFailures = 0;
   bool _isLoading = true;
   List<String> _shuffledOptions = [];
+  List<String> _orderPool = [];
+  List<String> _orderChosen = [];
 
   final TextEditingController _translationController = TextEditingController();
   // Registra el resultado del primer intento de cada ejercicio: { exerciseId: isCorrect }
@@ -63,6 +65,28 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     if (_lesson == null) return;
     final exercise = _lesson!.exercises[_currentExerciseIndex];
     _shuffledOptions = List<String>.from(exercise.options)..shuffle();
+    if (exercise.type == ExerciseType.ordering) {
+      _orderPool = List<String>.from(exercise.options)..shuffle();
+      _orderChosen = [];
+      _translationController.clear();
+    }
+  }
+
+  /// Ejercicios que se responden escribiendo (caja de texto).
+  bool _showsTextInput(dynamic e) =>
+      e.type == ExerciseType.translation ||
+      e.type == ExerciseType.reading ||
+      (e.type == ExerciseType.fillBlank && (e.options as List).isEmpty);
+
+  /// Reproduce automáticamente el audio del ejercicio actual, si lo tiene.
+  void _maybeAutoPlayAudio() {
+    final lesson = _lesson;
+    if (lesson == null || lesson.exercises.isEmpty) return;
+    final asset = lesson.exercises[_currentExerciseIndex].audioAsset;
+    if (asset == null) return;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      AudioService.instance.playAsset(asset);
+    });
   }
 
   Future<void> _loadLesson() async {
@@ -81,6 +105,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         _isLoading = false;
         _prepareCurrentExerciseOptions();
       });
+      _maybeAutoPlayAudio();
     } else {
       setState(() {
         _isLoading = false;
@@ -150,14 +175,25 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     if (_isAnswered) return;
     final exercise = _lesson!.exercises[_currentExerciseIndex];
     
-    final bool correct;
-    if (exercise.type == ExerciseType.speech) {
-      correct = textSimilarity(answer, exercise.correctAnswer) >= 0.8;
-    } else if (exercise.type == ExerciseType.translation) {
-      correct = _isFuzzyEqual(answer, exercise.correctAnswer);
-    } else {
-      correct = answer == exercise.correctAnswer;
-    }
+    final bool correct = switch (exercise.type) {
+      ExerciseType.speech =>
+        textSimilarity(answer, exercise.correctAnswer) >=
+            AppConstants.speechPassThreshold,
+      // El InteractiveMatchingWidget solo llama a onCompleted cuando TODOS los
+      // pares son correctos, así que completar el emparejamiento es un acierto.
+      ExerciseType.matching => true,
+      ExerciseType.translation ||
+      ExerciseType.reading ||
+      ExerciseType.ordering =>
+        _isFuzzyEqual(answer, exercise.correctAnswer),
+      ExerciseType.fillBlank => exercise.options.isEmpty
+          ? _isFuzzyEqual(answer, exercise.correctAnswer)
+          : answer == exercise.correctAnswer,
+      ExerciseType.multipleChoice ||
+      ExerciseType.image ||
+      ExerciseType.audio =>
+        answer == exercise.correctAnswer,
+    };
 
     // Registrar resultado del primer intento
     if (!_firstAttemptResults.containsKey(exercise.id)) {
@@ -200,6 +236,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       _consecutiveFailures = 0;
       _prepareCurrentExerciseOptions();
     });
+    _maybeAutoPlayAudio();
   }
 
   Future<void> _completeLesson() async {
@@ -543,8 +580,22 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     );
   }
 
+  /// Enunciado mostrado: en ejercicios con audio oculta el guion «…» y el
+  /// prefijo "Audio:" para no revelar lo que hay que escuchar.
+  String _displayQuestion(dynamic exercise) {
+    var q = exercise.question as String;
+    if (exercise.audioAsset != null) {
+      q = q
+          .replaceAll(RegExp(r'«[^»]*»'), '')
+          .replaceAll(RegExp(r'^\s*Audio:\s*'), '')
+          .replaceAll(RegExp(r'\s{2,}'), ' ')
+          .trim();
+    }
+    return q.isEmpty ? (exercise.question as String) : q;
+  }
+
   Widget _buildQuestionText(BuildContext context, dynamic exercise) {
-    final text = exercise.question;
+    final text = _displayQuestion(exercise);
     if (exercise.type == ExerciseType.fillBlank && text.contains('_____')) {
       final answerToShow = _selectedAnswer ?? '_____';
       final parts = text.split('_____');
@@ -597,7 +648,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Text(
-                _exerciseTypeLabel(exercise.type),
+                _exerciseLabel(exercise),
                 style: Theme.of(context).textTheme.labelSmall?.copyWith(
                       color: AppTheme.primaryBlue,
                       fontWeight: FontWeight.w700,
@@ -608,10 +659,15 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
 
             // Pregunta
             _buildQuestionText(context, exercise),
+            // Audio del ejercicio (escucha / dictado)
+            if (exercise.audioAsset != null) ...[
+              const SizedBox(height: 12),
+              _buildListenButton(context, exercise),
+            ],
             const SizedBox(height: 24),
 
-            // Opciones (multiple choice / fill blank)
-            if (_shuffledOptions.isNotEmpty && exercise.type != ExerciseType.matching && exercise.type != ExerciseType.speech)
+            // Opciones (multiple choice / fill blank / image)
+            if (_shuffledOptions.isNotEmpty && exercise.type != ExerciseType.matching && exercise.type != ExerciseType.speech && exercise.type != ExerciseType.ordering)
               GridView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
@@ -626,8 +682,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                     _buildOptionButton(context, _shuffledOptions[i], exercise.correctAnswer),
               ),
 
-            // Translation exercise (caja de texto)
-            if (exercise.type == ExerciseType.translation)
+            // Ejercicios de texto libre (traducción / lectura / hueco sin opciones)
+            if (_showsTextInput(exercise))
               Padding(
                 padding: const EdgeInsets.only(top: 12),
                 child: Column(
@@ -642,7 +698,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                         fontWeight: FontWeight.w600,
                       ),
                       decoration: InputDecoration(
-                        hintText: AppLocalizations.of(context)!.typeTranslation,
+                        hintText: AppLocalizations.of(context)!.typeAnswer,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
                           borderSide: BorderSide(color: Colors.grey.shade300),
@@ -674,9 +730,9 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
-                              'Tradución correcta:',
-                              style: TextStyle(
+                            Text(
+                              AppLocalizations.of(context)!.correctAnswerLabel,
+                              style: const TextStyle(
                                 color: AppTheme.successGreen,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 12,
@@ -716,6 +772,13 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
               SizedBox(
                 height: 280,
                 child: _buildMatchingWidget(context, exercise),
+              ),
+
+            // Ordering exercise (ordena as palabras)
+            if (exercise.type == ExerciseType.ordering)
+              Padding(
+                padding: const EdgeInsets.only(top: 12),
+                child: _buildOrderingWidget(context, exercise),
               ),
           ],
         ),
@@ -801,6 +864,127 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     );
   }
 
+  // ─── Ejercicio de ordenar palabras ─────────────────────────────────────────
+  Widget _buildOrderingWidget(BuildContext context, dynamic exercise) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        // Zona de resposta (palabras elixidas)
+        Container(
+          constraints: const BoxConstraints(minHeight: 60),
+          padding: const EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            color: isDark ? AppTheme.surfaceDark2 : AppTheme.surfaceBlue,
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(
+              color: _isAnswered
+                  ? (_isCorrect ? AppTheme.successGreen : AppTheme.errorRed)
+                  : AppTheme.primaryBlue.withValues(alpha: 0.3),
+              width: 2,
+            ),
+          ),
+          child: Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            children: [
+              if (_orderChosen.isEmpty)
+                Padding(
+                  padding: const EdgeInsets.all(6),
+                  child: Text(
+                    AppLocalizations.of(context)!.typeAnswer,
+                    style: const TextStyle(color: AppTheme.textSecondary, fontSize: 13),
+                  ),
+                ),
+              for (final w in _orderChosen) _orderChip(w, chosen: true),
+            ],
+          ),
+        ),
+        if (_isAnswered && !_isCorrect) ...[
+          const SizedBox(height: 12),
+          Container(
+            padding: const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              color: AppTheme.successGreenLight.withValues(alpha: 0.3),
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: AppTheme.successGreen.withValues(alpha: 0.3)),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  AppLocalizations.of(context)!.correctAnswerLabel,
+                  style: const TextStyle(
+                    color: AppTheme.successGreen,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  exercise.correctAnswer,
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.onSurface,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+        const SizedBox(height: 16),
+        // Palabras dispoñibles
+        Wrap(
+          spacing: 8,
+          runSpacing: 8,
+          children: [for (final w in _orderPool) _orderChip(w, chosen: false)],
+        ),
+      ],
+    );
+  }
+
+  Widget _orderChip(String word, {required bool chosen}) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    return GestureDetector(
+      onTap: _isAnswered
+          ? null
+          : () => setState(() {
+                if (chosen) {
+                  _orderChosen.remove(word);
+                  _orderPool.add(word);
+                } else {
+                  _orderPool.remove(word);
+                  _orderChosen.add(word);
+                }
+                _translationController.text = _orderChosen.join(' ');
+              }),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+        decoration: BoxDecoration(
+          color: chosen
+              ? AppTheme.primaryBlue.withValues(alpha: 0.12)
+              : (isDark ? AppTheme.surfaceDark2 : Colors.white),
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(
+            color: chosen
+                ? AppTheme.primaryBlue
+                : (isDark ? Colors.white24 : Colors.grey.shade300),
+            width: 1.5,
+          ),
+        ),
+        child: Text(
+          word,
+          style: TextStyle(
+            fontWeight: FontWeight.w700,
+            color: chosen
+                ? AppTheme.primaryBlue
+                : (isDark ? Colors.white : AppTheme.textPrimary),
+          ),
+        ),
+      ),
+    );
+  }
+
   Widget _buildAnswerFeedback(BuildContext context, String? explanation) {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
@@ -866,7 +1050,10 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     final exercise = _lesson?.exercises[_currentExerciseIndex];
 
     if (!_isAnswered) {
-      if (exercise != null && (exercise.type == ExerciseType.translation || exercise.type == ExerciseType.speech)) {
+      if (exercise != null &&
+          (_showsTextInput(exercise) ||
+              exercise.type == ExerciseType.speech ||
+              exercise.type == ExerciseType.ordering)) {
         final textInput = _translationController.text.trim();
         final hasInput = textInput.isNotEmpty;
         
@@ -874,7 +1061,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           width: double.infinity,
           child: Semantics(
             button: true,
-            label: AppLocalizations.of(context)!.typeTranslation,
+            label: AppLocalizations.of(context)!.typeAnswer,
             child: FilledButton(
               onPressed: hasInput ? () => _checkAnswer(textInput) : null,
               style: FilledButton.styleFrom(
@@ -883,7 +1070,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
               ),
               child: Text(
-                AppLocalizations.of(context)!.verifyTranslation,
+                AppLocalizations.of(context)!.verifyAnswer,
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
               ),
             ),
@@ -922,6 +1109,32 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         .slideY(begin: 0.3, end: 0, curve: Curves.easeOut, duration: 300.ms);
   }
 
+  String _exerciseLabel(dynamic exercise) {
+    if (exercise.type == ExerciseType.multipleChoice &&
+        exercise.audioAsset != null) {
+      return '🎧 Escoita';
+    }
+    return _exerciseTypeLabel(exercise.type as ExerciseType);
+  }
+
+  Widget _buildListenButton(BuildContext context, dynamic exercise) {
+    return SizedBox(
+      width: double.infinity,
+      child: OutlinedButton.icon(
+        onPressed: () =>
+            AudioService.instance.playAsset(exercise.audioAsset as String),
+        icon: const Icon(Icons.volume_up_rounded),
+        label: Text(AppLocalizations.of(context)!.listen),
+        style: OutlinedButton.styleFrom(
+          foregroundColor: AppTheme.primaryBlue,
+          side: const BorderSide(color: AppTheme.primaryBlue, width: 2),
+          padding: const EdgeInsets.symmetric(vertical: 14),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        ),
+      ),
+    );
+  }
+
   String _exerciseTypeLabel(ExerciseType type) {
     return switch (type) {
       ExerciseType.multipleChoice => '🔘 Elección múltiple',
@@ -930,6 +1143,9 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       ExerciseType.audio => '🔊 Audio',
       ExerciseType.translation => '🌐 Tradución',
       ExerciseType.speech => '🎤 Pronuncia',
+      ExerciseType.reading => '📖 Lectura',
+      ExerciseType.ordering => '🧩 Ordenar',
+      ExerciseType.image => '🖼️ Imaxe',
     };
   }
 }

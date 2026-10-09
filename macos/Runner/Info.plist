@@ -28,5 +28,9 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Galingo necesita o micrófono para os exercicios de pronuncia e ditado en galego.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Galingo usa o recoñecemento de voz para avaliar a túa pronuncia en galego.</string>
 </dict>
 </plist>
