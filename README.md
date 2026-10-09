@@ -63,3 +63,12 @@ WHISPER_CT2_DIR="$PWD/models/whisper-large-v3-turbo-gl-ct2" \
 
 > El modelo CT2 (~783 MB) y los modelos TTS no se versionan (ver `.gitignore` → `backend/models/`).
 
+## Beta (Android)
+
+- **APK**: https://github.com/Retselfernandez/Galingo/releases/tag/v1.1.0-beta
+- **Backend desplegado** (Modal, serverless + HTTPS): https://retselfernandez--galingo-backend.modal.run
+- Opciones de despliegue: `deploy/modal/` (Modal, gratis) · `deploy/oracle/` (VM Always Free) ·
+  `deploy/hf_space/` (requiere HF PRO). La app se compila con
+  `--dart-define=API_BASE_URL=<url>`.
+
+
