@@ -42,6 +42,7 @@ dependencies:
   connectivity_plus: ^6.0.5
   sensors_plus: ^6.0.1
   speech_to_text: ^7.5.0
+  record: ^7.1.1
 
 dev_dependencies:
   flutter_test:
@@ -58,3 +59,4 @@ flutter:
     - assets/content/
     - assets/lottie/
     - assets/audio/
+    - assets/audio/exercises/

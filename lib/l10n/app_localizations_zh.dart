@@ -187,6 +187,18 @@ class AppLocalizationsZh extends AppLocalizations {
   String get verifyTranslation => '检查翻译';
 
   @override
+  String get typeAnswer => '在这里写下你的答案…';
+
+  @override
+  String get verifyAnswer => '检查';
+
+  @override
+  String get listen => '听';
+
+  @override
+  String get correctAnswerLabel => '正确答案：';
+
+  @override
   String get finishLessonTip => '完成课程并保存进度';
 
   @override

@@ -7,6 +7,7 @@ class AudioService {
   static final AudioService instance = AudioService._internal();
 
   final Map<SoundEffect, AudioPlayer> _players = {};
+  AudioPlayer? _exercisePlayer;
   bool _soundEnabled = true;
   double _volume = 0.8;
   bool _initialized = false;
@@ -47,6 +48,7 @@ class AudioService {
     for (final player in _players.values) {
       player.setVolume(_volume);
     }
+    _exercisePlayer?.setVolume(_volume);
   }
 
   /// Reproduce un efecto. Nunca lanza excepción hacia arriba: un fallo de
@@ -68,11 +70,30 @@ class AudioService {
   Future<void> playError() => play(SoundEffect.error);
   Future<void> playLevelUp() => play(SoundEffect.levelUp);
 
+  /// Reproduce un audio de ejercicio (p. ej. `assets/audio/exercises/1E01.mp3`).
+  /// Nunca lanza excepción: un fallo de audio no debe interrumpir la lección.
+  Future<void> playAsset(String assetPath) async {
+    if (!_soundEnabled) return;
+    final src = assetPath.startsWith('assets/')
+        ? assetPath.substring('assets/'.length)
+        : assetPath;
+    try {
+      _exercisePlayer ??= AudioPlayer(playerId: 'exercise_audio');
+      await _exercisePlayer!.stop();
+      await _exercisePlayer!.setVolume(_volume);
+      await _exercisePlayer!.play(AssetSource(src));
+    } catch (_) {
+      // Fallo silencioso deliberado.
+    }
+  }
+
   Future<void> dispose() async {
     for (final player in _players.values) {
       await player.dispose();
     }
     _players.clear();
+    await _exercisePlayer?.dispose();
+    _exercisePlayer = null;
     _initialized = false;
   }
 }

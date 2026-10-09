@@ -19,9 +19,24 @@ class AppConstants {
   static const int xpPerPerfectLesson = 15;
   static const int streakBonusXp = 5;
 
+  // Voz / ASR (speech_to_text)
+  /// Similitud mínima (Levenshtein) para aprobar un ejercicio de voz.
+  /// No es 1.0 porque el ASR puede no tener gallego y transcribir con ruido.
+  static const double speechPassThreshold = 0.7;
+  /// Umbral para el mensaje intermedio ("case").
+  static const double speechAlmostThreshold = 0.5;
+
   // Niveles
   static const String levelA1 = 'A1';
   static const String levelA2 = 'A2';
+
+  /// Niveles habilitados actualmente en el desarrollo.
+  /// A2/B1/B2 están desactivados temporalmente (contenido en pausa);
+  /// sus JSON se conservan pero no se muestran en la UI.
+  static const List<String> enabledLevels = <String>[levelA1];
+
+  /// ¿Hay más de un nivel disponible para cambiar desde la UI?
+  static bool get hasMultipleLevels => enabledLevels.length > 1;
 
   // Timing
   static const Duration exerciseTransitionDuration = Duration(milliseconds: 400);

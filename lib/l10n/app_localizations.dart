@@ -458,6 +458,30 @@ abstract class AppLocalizations {
   /// **'Verificar traducción'**
   String get verifyTranslation;
 
+  /// No description provided for @typeAnswer.
+  ///
+  /// In es, this message translates to:
+  /// **'Escribe tu respuesta aquí…'**
+  String get typeAnswer;
+
+  /// No description provided for @verifyAnswer.
+  ///
+  /// In es, this message translates to:
+  /// **'Comprobar'**
+  String get verifyAnswer;
+
+  /// No description provided for @listen.
+  ///
+  /// In es, this message translates to:
+  /// **'Escuchar'**
+  String get listen;
+
+  /// No description provided for @correctAnswerLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Resposta correcta:'**
+  String get correctAnswerLabel;
+
   /// No description provided for @finishLessonTip.
   ///
   /// In es, this message translates to:

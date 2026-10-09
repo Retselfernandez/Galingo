@@ -53,3 +53,13 @@ android/build/
 macos/Runner/Flutter/ephemeral/
 *.keystore
 android/key.properties
+
+# Modelos ASR/TTS (grandes, descargables; no versionar)
+backend/models/
+
+# Base de datos local del backend (pruebas)
+backend/*.db
+*.db-journal
+
+# SPM generado por Flutter/Xcode
+**/xcshareddata/swiftpm/

@@ -190,6 +190,18 @@ class AppLocalizationsFr extends AppLocalizations {
   String get verifyTranslation => 'Vérifier la traduction';
 
   @override
+  String get typeAnswer => 'Écris ta réponse ici…';
+
+  @override
+  String get verifyAnswer => 'Vérifier';
+
+  @override
+  String get listen => 'Écouter';
+
+  @override
+  String get correctAnswerLabel => 'Réponse correcte :';
+
+  @override
   String get finishLessonTip => 'Terminer la leçon et sauvegarder';
 
   @override

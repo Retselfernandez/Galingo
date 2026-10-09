@@ -1171,12 +1171,15 @@ final List<Achievement> appAchievements = [
     icon: '🧠',
     isUnlocked: (p) => p.totalXp >= 500,
   ),
-  Achievement(
-    id: 'polyglot',
-    title: 'Políglota A2',
-    description: 'Comeza o camiño de nivel intermedio A2.',
-    icon: '🎓',
-    // L4: comparación robusta con el nivel del usuario, no con el ID de lección
-    isUnlocked: (p) => p.currentLevel == 'A2' || p.currentLevel == 'B1' || p.currentLevel == 'B2',
-  ),
+  // Desactivado temporalmente: A2/B1/B2 no están disponibles en la UI.
+  // Achievement(
+  //   id: 'polyglot',
+  //   title: 'Políglota A2',
+  //   description: 'Comeza o camiño de nivel intermedio A2.',
+  //   icon: '🎓',
+  //   // L4: comparación robusta con el nivel del usuario, no con el ID de lección
+  //   isUnlocked: (p) => p.currentLevel == 'A2' ||
+  //       p.currentLevel == 'B1' ||
+  //       p.currentLevel == 'B2',
+  // ),
 ];

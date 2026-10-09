@@ -313,9 +313,13 @@ class HomeScreen extends ConsumerWidget {
     final currentLevel = progress.currentLevel ?? 'A1';
 
     return GestureDetector(
-      onTap: () => _showLevelSelectorDialog(context, ref, progress, strings),
+      onTap: AppConstants.hasMultipleLevels
+          ? () => _showLevelSelectorDialog(context, ref, progress, strings)
+          : null,
       child: MouseRegion(
-        cursor: SystemMouseCursors.click,
+        cursor: AppConstants.hasMultipleLevels
+            ? SystemMouseCursors.click
+            : SystemMouseCursors.basic,
         child: Container(
           margin: const EdgeInsets.symmetric(horizontal: 20),
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
@@ -353,11 +357,12 @@ class HomeScreen extends ConsumerWidget {
                 ),
               ),
               const SizedBox(width: 6),
-              const Icon(
-                Icons.swap_vert_rounded,
-                color: AppTheme.accentGold,
-                size: 14,
-              ),
+              if (AppConstants.hasMultipleLevels)
+                const Icon(
+                  Icons.swap_vert_rounded,
+                  color: AppTheme.accentGold,
+                  size: 14,
+                ),
             ],
           ),
         ),
@@ -502,7 +507,8 @@ class HomeScreen extends ConsumerWidget {
     String currentLevel,
     AppLocalizations strings,
   ) {
-    final showNextLevelBanner = currentLevel != 'B2';
+    final showNextLevelBanner = AppConstants.hasMultipleLevels &&
+        currentLevel != AppConstants.enabledLevels.last;
 
     return ListView.builder(
       padding: const EdgeInsets.fromLTRB(24, 16, 24, 32),
@@ -662,6 +668,9 @@ class HomeScreen extends ConsumerWidget {
     dynamic progress,
     AppLocalizations strings,
   ) {
+    // A2/B1/B2 desactivados temporalmente: sin selector si solo hay un nivel.
+    if (!AppConstants.hasMultipleLevels) return;
+
     final currentLevel = progress.currentLevel ?? 'A1';
 
     showDialog(
@@ -717,49 +726,52 @@ class HomeScreen extends ConsumerWidget {
               ),
               const SizedBox(height: 12),
           
-              _LevelCardOption(
-                icon: '✈️',
-                title: strings.levelA2,
-                subtitle: strings.levelA2Subtitle,
-                gradientColors: const [AppTheme.accentCoral, Color(0xFFD84315)],
-                isSelected: currentLevel == 'A2',
-                onTap: () async {
-                  await ref
-                      .read(progressNotifierProvider.notifier)
-                      .updateCurrentLevel('A2');
-                  if (ctx.mounted) Navigator.pop(ctx);
-                },
-              ),
+              if (AppConstants.enabledLevels.contains(AppConstants.levelA2))
+                _LevelCardOption(
+                  icon: '✈️',
+                  title: strings.levelA2,
+                  subtitle: strings.levelA2Subtitle,
+                  gradientColors: const [AppTheme.accentCoral, Color(0xFFD84315)],
+                  isSelected: currentLevel == 'A2',
+                  onTap: () async {
+                    await ref
+                        .read(progressNotifierProvider.notifier)
+                        .updateCurrentLevel('A2');
+                    if (ctx.mounted) Navigator.pop(ctx);
+                  },
+                ),
               const SizedBox(height: 12),
 
-              _LevelCardOption(
-                icon: '💬',
-                title: strings.levelB1,
-                subtitle: strings.levelB1Subtitle,
-                gradientColors: const [Color(0xFF43A047), Color(0xFF2E7D32)],
-                isSelected: currentLevel == 'B1',
-                onTap: () async {
-                  await ref
-                      .read(progressNotifierProvider.notifier)
-                      .updateCurrentLevel('B1');
-                  if (ctx.mounted) Navigator.pop(ctx);
-                },
-              ),
+              if (AppConstants.enabledLevels.contains('B1'))
+                _LevelCardOption(
+                  icon: '💬',
+                  title: strings.levelB1,
+                  subtitle: strings.levelB1Subtitle,
+                  gradientColors: const [Color(0xFF43A047), Color(0xFF2E7D32)],
+                  isSelected: currentLevel == 'B1',
+                  onTap: () async {
+                    await ref
+                        .read(progressNotifierProvider.notifier)
+                        .updateCurrentLevel('B1');
+                    if (ctx.mounted) Navigator.pop(ctx);
+                  },
+                ),
               const SizedBox(height: 12),
 
-              _LevelCardOption(
-                icon: '📚',
-                title: strings.levelB2,
-                subtitle: strings.levelB2Subtitle,
-                gradientColors: const [Color(0xFF8E24AA), Color(0xFF6A1B9A)],
-                isSelected: currentLevel == 'B2',
-                onTap: () async {
-                  await ref
-                      .read(progressNotifierProvider.notifier)
-                      .updateCurrentLevel('B2');
-                  if (ctx.mounted) Navigator.pop(ctx);
-                },
-              ),
+              if (AppConstants.enabledLevels.contains('B2'))
+                _LevelCardOption(
+                  icon: '📚',
+                  title: strings.levelB2,
+                  subtitle: strings.levelB2Subtitle,
+                  gradientColors: const [Color(0xFF8E24AA), Color(0xFF6A1B9A)],
+                  isSelected: currentLevel == 'B2',
+                  onTap: () async {
+                    await ref
+                        .read(progressNotifierProvider.notifier)
+                        .updateCurrentLevel('B2');
+                    if (ctx.mounted) Navigator.pop(ctx);
+                  },
+                ),
               const SizedBox(height: 16),
           
               TextButton(
