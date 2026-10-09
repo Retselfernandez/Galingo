@@ -1,7 +1,8 @@
 import 'dart:convert';
-import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
+
+import '../constants/app_constants.dart';
 
 /// Resultado de evaluar un audio contra una frase objetivo (backend Whisper gl).
 class WordResult {
@@ -43,13 +44,7 @@ class VoiceEvalService {
   VoiceEvalService._();
   static final VoiceEvalService instance = VoiceEvalService._();
 
-  String get baseUrl {
-    if (kIsWeb) return 'http://localhost:8000';
-    try {
-      if (Platform.isAndroid) return 'http://10.0.2.2:8000';
-    } catch (_) {}
-    return 'http://localhost:8000';
-  }
+  String get baseUrl => AppConstants.apiBaseUrl;
 
   /// Sube el audio y devuelve la evaluación, o null si el backend no responde.
   Future<VoiceEvalResult?> evaluar({

@@ -63,3 +63,7 @@ backend/*.db
 
 # SPM generado por Flutter/Xcode
 **/xcshareddata/swiftpm/
+
+# Referencias de diseño (raíz, no versionar)
+/O Camiño do Galego_ Aprende Paso a Paso.png
+/fondo galingo.png

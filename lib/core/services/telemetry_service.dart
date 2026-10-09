@@ -1,9 +1,10 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:connectivity_plus/connectivity_plus.dart';
+
+import '../constants/app_constants.dart';
 
 /// Cola offline + sync de telemetría y feedback contra el backend Galingo.
 class TelemetryService {
@@ -31,13 +32,7 @@ class TelemetryService {
     }
   }
 
-  String get baseUrl {
-    if (kIsWeb) return 'http://localhost:8000';
-    try {
-      if (Platform.isAndroid) return 'http://10.0.2.2:8000';
-    } catch (_) {}
-    return 'http://localhost:8000';
-  }
+  String get baseUrl => AppConstants.apiBaseUrl;
 
   final List<Map<String, dynamic>> _eventQueue = [];
   final List<Map<String, dynamic>> _feedbackQueue = [];

@@ -40,6 +40,15 @@ class AppTheme {
   static const Color surfaceDark = Color(0xFF1A2F45);
   static const Color surfaceDark2 = Color(0xFF243B55);
 
+  // ─── Paleta rediseño HOME "O Camiño do Galego" ────────────────────────────
+  static const Color deepBlue = Color(0xFF0B3C7A);
+  static const Color mediumBlue = Color(0xFF1E6FD0);
+  static const Color skyBlue = Color(0xFFEAF4FF);
+  static const Color caminoGold = Color(0xFFF5B301);
+  static const Color caminoOrange = Color(0xFFFF8A00);
+  static const Color caminoGreen = Color(0xFF22B573);
+  static const Color lockedGray = Color(0xFF8A97A8);
+
   // ─── Gradientes ───────────────────────────────────────────────────────────
 
   static const LinearGradient oceanGradient = LinearGradient(
