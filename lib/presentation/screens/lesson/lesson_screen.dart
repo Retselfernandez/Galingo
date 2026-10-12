@@ -462,6 +462,9 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
 
                       // Botón siguiente / confirmar
                       _buildActionButton(context),
+
+                      // Hueco para la barra de navegación de Android
+                      SizedBox(height: MediaQuery.of(context).viewPadding.bottom),
                     ],
                   ),
                 ),

@@ -17,8 +17,11 @@ Future<void> _pumpAtSizes(
   List<String> errors,
 ) async {
   for (final size in const [
+    Size(320, 568),
     Size(360, 640),
+    Size(360, 800),
     Size(390, 844),
+    Size(412, 915),
     Size(800, 360),
     Size(768, 1024),
     Size(1366, 768),

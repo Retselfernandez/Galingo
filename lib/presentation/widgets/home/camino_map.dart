@@ -35,69 +35,77 @@ class _CaminoMapState extends State<CaminoMap> {
   Widget build(BuildContext context) {
     return Container(
       color: AppTheme.skyBlue,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          _header(context),
-          Expanded(
-            child: LayoutBuilder(
-              builder: (context, constraints) {
-                final width = constraints.maxWidth;
-                final height = _topPad * 2 + (widget.units.length - 1) * _spacing + 140;
+      child: LayoutBuilder(
+        builder: (context, outer) {
+          final narrow = outer.maxWidth < 700;
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _header(context, narrow: narrow),
+              Expanded(
+                child: LayoutBuilder(
+                  builder: (context, constraints) {
+                    final width = constraints.maxWidth;
+                    final height =
+                        _topPad * 2 + (widget.units.length - 1) * _spacing + 140;
 
-                final points = List.generate(widget.units.length, (i) {
-                  final center = width / 2;
-                  final x = center +
-                      math.sin(i * 1.05 + 0.6) * (width * 0.19);
-                  final y = _topPad + i * _spacing;
-                  return Offset(x, y);
-                });
+                    final amp = width * (narrow ? 0.10 : 0.19);
+                    final points = List.generate(widget.units.length, (i) {
+                      final center = width / 2;
+                      final x = center + math.sin(i * 1.05 + 0.6) * amp;
+                      final y = _topPad + i * _spacing;
+                      return Offset(x, y);
+                    });
 
-                return Stack(
-                  children: [
-                    Positioned.fill(child: _background()),
-                    SingleChildScrollView(
-                      child: SizedBox(
-                        height: height,
-                        width: width,
-                        child: Stack(
-                          children: [
-                            Positioned.fill(
-                              child: CustomPaint(
-                                painter: _DottedPathPainter(points),
-                              ),
+                    return Stack(
+                      children: [
+                        Positioned.fill(child: _background()),
+                        SingleChildScrollView(
+                          child: SizedBox(
+                            height: height,
+                            width: width,
+                            child: Stack(
+                              children: [
+                                Positioned.fill(
+                                  child: CustomPaint(
+                                    painter: _DottedPathPainter(points),
+                                  ),
+                                ),
+                                for (var i = 0; i < widget.units.length; i++)
+                                  _positionedNode(
+                                      context, i, points[i], width, narrow),
+                                Positioned(
+                                  left: 16,
+                                  bottom: 8,
+                                  child: _milestone(),
+                                ),
+                              ],
                             ),
-                            for (var i = 0; i < widget.units.length; i++)
-                              _positionedNode(context, i, points[i], width),
-                            Positioned(
-                              left: 16,
-                              bottom: 8,
-                              child: _milestone(),
-                            ),
-                          ],
+                          ),
                         ),
-                      ),
-                    ),
-                  ],
-                );
-              },
-            ),
-          ),
-        ],
+                      ],
+                    );
+                  },
+                ),
+              ),
+            ],
+          );
+        },
       ),
     );
   }
 
-  Widget _header(BuildContext context) {
+  Widget _header(BuildContext context, {required bool narrow}) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(24, 18, 24, 10),
+      padding: EdgeInsets.fromLTRB(
+          narrow ? 16 : 24, narrow ? 12 : 18, narrow ? 16 : 24, 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('🗺️', style: TextStyle(fontSize: 34)),
+              Text('🗺️', style: TextStyle(fontSize: narrow ? 26 : 34)),
               const SizedBox(width: 10),
               Expanded(
                 child: Column(
@@ -105,16 +113,18 @@ class _CaminoMapState extends State<CaminoMap> {
                   children: [
                     Text(
                       'O Camiño do Galego',
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
                       style: GoogleFonts.pacifico(
-                        fontSize: 30,
+                        fontSize: narrow ? 22 : 30,
                         color: AppTheme.deepBlue,
-                        height: 1.0,
+                        height: 1.05,
                       ),
                     ),
                     Text(
                       'Nivel A1 — Iniciación',
                       style: GoogleFonts.nunito(
-                        fontSize: 15,
+                        fontSize: narrow ? 13 : 15,
                         fontWeight: FontWeight.w800,
                         color: AppTheme.mediumBlue,
                       ),
@@ -122,17 +132,28 @@ class _CaminoMapState extends State<CaminoMap> {
                   ],
                 ),
               ),
-              if (widget.headerTrailing != null) ...[
+              if (!narrow && widget.headerTrailing != null) ...[
                 const SizedBox(width: 12),
                 widget.headerTrailing!,
               ],
             ],
           ),
+          if (narrow && widget.headerTrailing != null) ...[
+            const SizedBox(height: 10),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: Alignment.centerLeft,
+                child: widget.headerTrailing!,
+              ),
+            ),
+          ],
           const SizedBox(height: 12),
           Text(
             'Cada lección é unha parada no teu camiño.',
             style: GoogleFonts.nunito(
-              fontSize: 15,
+              fontSize: narrow ? 13 : 15,
               fontWeight: FontWeight.w800,
               color: AppTheme.textPrimary,
             ),
@@ -140,7 +161,7 @@ class _CaminoMapState extends State<CaminoMap> {
           Text(
             'Completa as leccións e fai que o teu galego che leve máis lonxe.',
             style: GoogleFonts.nunito(
-              fontSize: 13.5,
+              fontSize: narrow ? 12 : 13.5,
               fontWeight: FontWeight.w500,
               color: AppTheme.textSecondary,
             ),
@@ -174,12 +195,13 @@ class _CaminoMapState extends State<CaminoMap> {
   }
 
   Widget _positionedNode(
-      BuildContext context, int i, Offset p, double width) {
+      BuildContext context, int i, Offset p, double width, bool narrow) {
     final data = widget.units[i];
-    const nodeSize = 64.0;
-    const cardWidth = 190.0;
+    final nodeSize = narrow ? 52.0 : 64.0;
+    final cardWidth = narrow ? 150.0 : 190.0;
     final toRight = p.dx < width / 2;
-    final cardLeft = toRight ? p.dx + nodeSize / 2 + 8 : p.dx - nodeSize / 2 - 8 - cardWidth;
+    final cardLeft =
+        toRight ? p.dx + nodeSize / 2 + 6 : p.dx - nodeSize / 2 - 6 - cardWidth;
 
     return Stack(
       children: [
@@ -190,16 +212,18 @@ class _CaminoMapState extends State<CaminoMap> {
             index: i,
             data: data,
             highlighted: widget.highlightedIndex == i,
+            compact: narrow,
             onHover: (h) => widget.onHover?.call(h ? i : null),
             onTap: () => widget.onOpen(data),
           ),
         ),
         Positioned(
           left: cardLeft.clamp(8, width - cardWidth - 8),
-          top: p.dy - 34,
+          top: p.dy - (narrow ? 28 : 34),
           child: _MapCard(
             data: data,
             highlighted: widget.highlightedIndex == i,
+            compact: narrow,
             onTap: () => widget.onOpen(data),
           ),
         ),
@@ -242,6 +266,7 @@ class _MapNode extends StatefulWidget {
   final int index;
   final HomeUnitData data;
   final bool highlighted;
+  final bool compact;
   final ValueChanged<bool> onHover;
   final VoidCallback onTap;
 
@@ -249,6 +274,7 @@ class _MapNode extends StatefulWidget {
     required this.index,
     required this.data,
     required this.highlighted,
+    this.compact = false,
     required this.onHover,
     required this.onTap,
   });
@@ -283,6 +309,8 @@ class _MapNodeState extends State<_MapNode>
             ? AppTheme.caminoGold
             : AppTheme.lockedGray;
 
+    final double baseSize = widget.compact ? 52 : 64;
+
     return MouseRegion(
       cursor: locked ? SystemMouseCursors.forbidden : SystemMouseCursors.click,
       onEnter: (_) => widget.onHover(true),
@@ -297,8 +325,8 @@ class _MapNodeState extends State<_MapNode>
               children: [
                 if (current)
                   Container(
-                    width: 64 + 16 * _pulse.value,
-                    height: 64 + 16 * _pulse.value,
+                    width: baseSize + 16 * _pulse.value,
+                    height: baseSize + 16 * _pulse.value,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: AppTheme.caminoGold
@@ -311,8 +339,8 @@ class _MapNodeState extends State<_MapNode>
           },
           child: AnimatedContainer(
             duration: const Duration(milliseconds: 200),
-            width: widget.highlighted ? 70 : 64,
-            height: widget.highlighted ? 70 : 64,
+            width: widget.highlighted ? baseSize + 6 : baseSize,
+            height: widget.highlighted ? baseSize + 6 : baseSize,
             decoration: BoxDecoration(
               color: base,
               shape: BoxShape.circle,
@@ -327,12 +355,13 @@ class _MapNodeState extends State<_MapNode>
             ),
             child: Center(
               child: completed
-                  ? const Icon(Icons.check, color: Colors.white, size: 28)
+                  ? Icon(Icons.check,
+                      color: Colors.white, size: widget.compact ? 22 : 28)
                   : Text(
                       '${widget.index + 1}',
                       style: GoogleFonts.nunito(
                         color: Colors.white,
-                        fontSize: 22,
+                        fontSize: widget.compact ? 18 : 22,
                         fontWeight: FontWeight.w900,
                       ),
                     ),
@@ -349,11 +378,13 @@ class _MapNodeState extends State<_MapNode>
 class _MapCard extends StatelessWidget {
   final HomeUnitData data;
   final bool highlighted;
+  final bool compact;
   final VoidCallback onTap;
 
   const _MapCard({
     required this.data,
     required this.highlighted,
+    this.compact = false,
     required this.onTap,
   });
 
@@ -364,11 +395,12 @@ class _MapCard extends StatelessWidget {
       onTap: onTap,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
-        width: 190,
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+        width: compact ? 150 : 190,
+        padding: EdgeInsets.symmetric(
+            horizontal: compact ? 10 : 14, vertical: compact ? 9 : 12),
         decoration: BoxDecoration(
           color: Colors.white.withValues(alpha: 0.92),
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(compact ? 16 : 20),
           border: Border.all(
             color: highlighted
                 ? AppTheme.mediumBlue
@@ -391,25 +423,31 @@ class _MapCard extends StatelessWidget {
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               style: GoogleFonts.nunito(
-                fontSize: 14,
+                fontSize: compact ? 12.5 : 14,
                 fontWeight: FontWeight.w800,
                 color: AppTheme.textPrimary,
               ),
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: compact ? 6 : 8),
             Row(
               children: [
-                Text('⭐ ${data.xp} XP',
-                    style: GoogleFonts.nunito(
-                        fontSize: 11.5,
-                        fontWeight: FontWeight.w700,
-                        color: AppTheme.textSecondary)),
-                const SizedBox(width: 10),
-                Text('⏱ ${data.minutes} min',
-                    style: GoogleFonts.nunito(
-                        fontSize: 11.5,
-                        fontWeight: FontWeight.w700,
-                        color: AppTheme.textSecondary)),
+                Flexible(
+                  child: Text('⭐ ${data.xp} XP',
+                      overflow: TextOverflow.ellipsis,
+                      style: GoogleFonts.nunito(
+                          fontSize: compact ? 10.5 : 11.5,
+                          fontWeight: FontWeight.w700,
+                          color: AppTheme.textSecondary)),
+                ),
+                SizedBox(width: compact ? 6 : 10),
+                Flexible(
+                  child: Text('⏱ ${data.minutes} min',
+                      overflow: TextOverflow.ellipsis,
+                      style: GoogleFonts.nunito(
+                          fontSize: compact ? 10.5 : 11.5,
+                          fontWeight: FontWeight.w700,
+                          color: AppTheme.textSecondary)),
+                ),
               ],
             ),
             if (locked) ...[
