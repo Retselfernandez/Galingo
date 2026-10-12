@@ -39,7 +39,6 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   bool _isCorrect = false;
   int _xpEarned = 0;
   int _lives = 5;
-  int _consecutiveFailures = 0;
   bool _isLoading = true;
   List<String> _shuffledOptions = [];
   List<String> _orderPool = [];
@@ -209,12 +208,10 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       _isCorrect = correct;
       if (correct) {
         _xpEarned += _calculateVariableXp(exercise);
-        _consecutiveFailures = 0;
         HapticFeedback.lightImpact();
         AudioService.instance.playSuccess();
       } else {
         _lives--;
-        _consecutiveFailures++;
         HapticFeedback.vibrate();
         AudioService.instance.playError();
       }
@@ -236,7 +233,6 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       _selectedAnswer = null;
       _isAnswered = false;
       _isCorrect = false;
-      _consecutiveFailures = 0;
       _prepareCurrentExerciseOptions();
     });
     _maybeAutoPlayAudio();
@@ -429,37 +425,19 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
               child: Container(
                 constraints:
                     const BoxConstraints(maxWidth: AppConstants.maxContentWidth),
-                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      // Gabi feedback
-                      if (_isAnswered) ...[
-                        GabiWidget(
-                          state: _isCorrect ? GabiState.happy : GabiState.thinking,
-                          size: 80,
-                          showMessage: true,
-                          message: _isCorrect
-                              ? '¡Excelente! +${exercise.xpReward} XP 🌟'
-                              : _consecutiveFailures >= 2
-                                  ? 'Non te preocupes polo erro! Gabi di: ¡Cada fallo achégate máis a dominar o galego! 💪\nA resposta correcta é: ${exercise.correctAnswer}'
-                                  : 'Case! A resposta correcta é: ${exercise.correctAnswer}',
-                        ),
-                        const SizedBox(height: 16),
-                      ],
-
-                      // Pregunta
+                      // Pregunta + opciones
                       _buildExerciseCard(context, exercise),
 
-                      const SizedBox(height: 16),
+                      const SizedBox(height: 10),
 
                       // Feedback de respuesta correcta/incorrecta
-                      if (_isAnswered) ...[
+                      if (_isAnswered)
                         _buildAnswerFeedback(context, exercise.explanation),
-                        const SizedBox(height: 16),
-                      ],
-
                     ],
                   ),
                 ),
@@ -640,7 +618,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       color: Theme.of(context).cardTheme.color,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
       child: Padding(
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -659,7 +637,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                     ),
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 12),
 
             // Pregunta
             _buildQuestionText(context, exercise),
@@ -682,7 +660,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                   ),
                 ),
               ),
-            const SizedBox(height: 24),
+            const SizedBox(height: 14),
 
             // Opciones (multiple choice / fill blank / image)
             if (_shuffledOptions.isNotEmpty && exercise.options.contains(exercise.correctAnswer) && exercise.type != ExerciseType.matching && exercise.type != ExerciseType.speech && exercise.type != ExerciseType.ordering)
@@ -692,7 +670,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                     _buildOptionButton(
                         context, _shuffledOptions[i], exercise.correctAnswer),
                     if (i < _shuffledOptions.length - 1)
-                      const SizedBox(height: 10),
+                      const SizedBox(height: 8),
                   ],
                 ],
               ),
@@ -835,8 +813,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 250),
         width: double.infinity,
-        constraints: const BoxConstraints(minHeight: 52),
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        constraints: const BoxConstraints(minHeight: 46),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
         decoration: BoxDecoration(
           color: bgColor,
           borderRadius: BorderRadius.circular(14),
@@ -1005,7 +983,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   Widget _buildAnswerFeedback(BuildContext context, String? explanation) {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: _isCorrect ? AppTheme.successGreenLight : AppTheme.errorRedLight,
         borderRadius: BorderRadius.circular(16),
