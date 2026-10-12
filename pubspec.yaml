@@ -57,6 +57,5 @@ flutter:
   assets:
     - assets/images/
     - assets/content/
-    - assets/lottie/
     - assets/audio/
     - assets/audio/exercises/
