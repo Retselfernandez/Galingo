@@ -460,17 +460,15 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                         const SizedBox(height: 16),
                       ],
 
-                      // Botón siguiente / confirmar
-                      _buildActionButton(context),
-
-                      // Hueco para la barra de navegación de Android
-                      SizedBox(height: MediaQuery.of(context).viewPadding.bottom),
                     ],
                   ),
                 ),
               ),
             ),
           ),
+
+          // ── Barra inferior fija: botón de seguir / confirmar ─────────
+          _buildBottomBar(context),
         ],
       ),
     );
@@ -1062,6 +1060,41 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildBottomBar(BuildContext context) {
+    final exercise = _lesson?.exercises[_currentExerciseIndex];
+    final showsButton = exercise != null &&
+        (_isAnswered ||
+            _showsTextInput(exercise) ||
+            exercise.type == ExerciseType.speech ||
+            exercise.type == ExerciseType.ordering);
+    if (!showsButton) return const SizedBox.shrink();
+    return Container(
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.surface,
+        boxShadow: [
+          BoxShadow(
+            color: AppTheme.primaryBlue.withValues(alpha: 0.08),
+            blurRadius: 8,
+            offset: const Offset(0, -2),
+          ),
+        ],
+      ),
+      child: SafeArea(
+        top: false,
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(24, 10, 24, 10),
+          child: Center(
+            child: ConstrainedBox(
+              constraints:
+                  const BoxConstraints(maxWidth: AppConstants.maxContentWidth),
+              child: _buildActionButton(context),
+            ),
+          ),
+        ),
       ),
     );
   }
