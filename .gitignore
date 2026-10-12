@@ -67,3 +67,6 @@ backend/*.db
 # Referencias de diseño (raíz, no versionar)
 /O Camiño do Galego_ Aprende Paso a Paso.png
 /fondo galingo.png
+
+# Capturas de testers (no versionar)
+Imagenes de reportes/
