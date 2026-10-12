@@ -164,7 +164,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           ),
         ),
         Expanded(child: buildMap(pillOnly)),
-        SizedBox(height: 320, child: panel),
+        SizedBox(
+          height: (MediaQuery.of(context).size.height * 0.34).clamp(220.0, 360.0),
+          child: panel,
+        ),
       ],
     );
   }
