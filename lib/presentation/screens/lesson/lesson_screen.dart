@@ -686,18 +686,15 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
 
             // Opciones (multiple choice / fill blank / image)
             if (_shuffledOptions.isNotEmpty && exercise.options.contains(exercise.correctAnswer) && exercise.type != ExerciseType.matching && exercise.type != ExerciseType.speech && exercise.type != ExerciseType.ordering)
-              GridView.builder(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 12,
-                  mainAxisSpacing: 12,
-                  childAspectRatio: 2.8,
-                ),
-                itemCount: _shuffledOptions.length,
-                itemBuilder: (context, i) =>
-                    _buildOptionButton(context, _shuffledOptions[i], exercise.correctAnswer),
+              Column(
+                children: [
+                  for (var i = 0; i < _shuffledOptions.length; i++) ...[
+                    _buildOptionButton(
+                        context, _shuffledOptions[i], exercise.correctAnswer),
+                    if (i < _shuffledOptions.length - 1)
+                      const SizedBox(height: 10),
+                  ],
+                ],
               ),
 
             // Ejercicios de texto libre (traducción / lectura / hueco sin opciones)
@@ -837,7 +834,9 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       onTap: () => _checkAnswer(option),
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 250),
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+        width: double.infinity,
+        constraints: const BoxConstraints(minHeight: 52),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         decoration: BoxDecoration(
           color: bgColor,
           borderRadius: BorderRadius.circular(14),
