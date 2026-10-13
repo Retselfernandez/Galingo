@@ -3,6 +3,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'package:galingo/l10n/app_localizations.dart';
 import '../../../core/theme/app_theme.dart';
 import 'home_models.dart';
 
@@ -453,11 +454,11 @@ class _MapCard extends StatelessWidget {
             if (locked) ...[
               const SizedBox(height: 6),
               Row(
-                children: const [
-                  Icon(Icons.lock, size: 12, color: AppTheme.lockedGray),
-                  SizedBox(width: 4),
-                  Text('Bloqueada',
-                      style: TextStyle(
+                children: [
+                  const Icon(Icons.lock, size: 12, color: AppTheme.lockedGray),
+                  const SizedBox(width: 4),
+                  Text(AppLocalizations.of(context)!.blockedLabel,
+                      style: const TextStyle(
                           fontSize: 11,
                           color: AppTheme.lockedGray,
                           fontWeight: FontWeight.w700)),

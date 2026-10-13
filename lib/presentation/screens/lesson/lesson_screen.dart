@@ -324,28 +324,30 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       builder: (context) => AlertDialog(
         backgroundColor: Colors.white,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-        title: const Row(
+        title: Row(
           children: [
-            Text('💔', style: TextStyle(fontSize: 28)),
-            SizedBox(width: 10),
-            Text(
-              'Sen vidas!',
-              style: TextStyle(fontWeight: FontWeight.w900),
+            const Text('💔', style: TextStyle(fontSize: 28)),
+            const SizedBox(width: 10),
+            Flexible(
+              child: Text(
+                AppLocalizations.of(context)!.noLivesTitle,
+                style: const TextStyle(fontWeight: FontWeight.w900),
+              ),
             ),
           ],
         ),
-        content: const Column(
+        content: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              '¡Oh non! Cometaches demasiados erros e quedaches sen corazóns para esta lección.',
-              style: TextStyle(color: AppTheme.textSecondary, height: 1.4),
+              AppLocalizations.of(context)!.noLivesText,
+              style: const TextStyle(color: AppTheme.textSecondary, height: 1.4),
             ),
-            SizedBox(height: 12),
+            const SizedBox(height: 12),
             Text(
-              'Gabi di: "Non te preocupes! Recomenza a lección para tentalo de novo e seguir aprendendo."',
-              style: TextStyle(
+              AppLocalizations.of(context)!.noLivesRetry,
+              style: const TextStyle(
                 color: AppTheme.primaryBlue,
                 fontWeight: FontWeight.bold,
                 fontSize: 12,
@@ -475,7 +477,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
               icon: const Icon(Icons.close_rounded),
               color: AppTheme.textSecondary,
               onPressed: () => context.go(AppRoutes.home),
-              tooltip: 'Saír da lección',
+              tooltip: AppLocalizations.of(context)!.exitLesson,
             ),
             const SizedBox(width: 8),
             Expanded(
@@ -636,7 +638,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Text(
-                _exerciseLabel(exercise),
+                _exerciseLabel(context, exercise),
                 style: Theme.of(context).textTheme.labelSmall?.copyWith(
                       color: AppTheme.primaryBlue,
                       fontWeight: FontWeight.w700,
@@ -1240,12 +1242,12 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         .slideY(begin: 0.3, end: 0, curve: Curves.easeOut, duration: 300.ms);
   }
 
-  String _exerciseLabel(dynamic exercise) {
+  String _exerciseLabel(BuildContext context, dynamic exercise) {
     if (exercise.type == ExerciseType.multipleChoice &&
         exercise.audioAsset != null) {
-      return '🎧 Escoita';
+      return '🎧 ${AppLocalizations.of(context)!.exListen}';
     }
-    return _exerciseTypeLabel(exercise.type as ExerciseType);
+    return _exerciseTypeLabel(context, exercise.type as ExerciseType);
   }
 
   Widget _buildListenButton(BuildContext context, dynamic exercise) {
@@ -1266,18 +1268,19 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     );
   }
 
-  String _exerciseTypeLabel(ExerciseType type) {
+  String _exerciseTypeLabel(BuildContext context, ExerciseType type) {
+    final l = AppLocalizations.of(context)!;
     return switch (type) {
-      ExerciseType.multipleChoice => '🔘 Elección múltiple',
-      ExerciseType.fillBlank => '✏️ Completar',
-      ExerciseType.matching => '🔗 Emparellar',
-      ExerciseType.audio => '🔊 Audio',
-      ExerciseType.translation => '🌐 Tradución',
-      ExerciseType.speech => '🎤 Pronuncia',
-      ExerciseType.dictation => '🎧 Ditado',
-      ExerciseType.reading => '📖 Lectura',
-      ExerciseType.ordering => '🧩 Ordenar',
-      ExerciseType.image => '🖼️ Imaxe',
+      ExerciseType.multipleChoice => '🔘 ${l.exMultipleChoice}',
+      ExerciseType.fillBlank => '✏️ ${l.exFillBlank}',
+      ExerciseType.matching => '🔗 ${l.exMatching}',
+      ExerciseType.audio => '🔊 ${l.exAudio}',
+      ExerciseType.translation => '🌐 ${l.exTranslation}',
+      ExerciseType.speech => '🎤 ${l.exSpeech}',
+      ExerciseType.dictation => '🎧 ${l.exDictation}',
+      ExerciseType.reading => '📖 ${l.exReading}',
+      ExerciseType.ordering => '🧩 ${l.exOrdering}',
+      ExerciseType.image => '🖼️ ${l.exImage}',
     };
   }
 }
@@ -1314,7 +1317,7 @@ class _LessonCompletedDialog extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             Text(
-              '¡Lección Completada!',
+              AppLocalizations.of(context)!.lessonCompletedTitle,
               style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                     fontWeight: FontWeight.w800,
                   ),

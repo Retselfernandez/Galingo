@@ -86,7 +86,7 @@ class _SpeechExerciseState extends State<SpeechExercise> {
   Future<void> _startRecording() async {
     try {
       if (!await _recorder.hasPermission()) {
-        setState(() => _error = 'Permiso de micrófono denegado');
+        setState(() => _error = AppLocalizations.of(context)!.micPermissionDenied);
         return;
       }
       final dir = await getTemporaryDirectory();
@@ -101,7 +101,7 @@ class _SpeechExerciseState extends State<SpeechExercise> {
         _localSim = null;
       });
     } catch (e) {
-      setState(() => _error = 'Erro ao gravar: $e');
+      setState(() => _error = '${AppLocalizations.of(context)!.recordError}: $e');
     }
   }
 
@@ -135,7 +135,7 @@ class _SpeechExerciseState extends State<SpeechExercise> {
       setState(() {
         _busy = false;
         _backendDown = true;
-        _error = 'Servidor de voz non dispoñible; usando recoñecemento local';
+        _error = AppLocalizations.of(context)!.voiceServerUnavailable;
       });
       await _initLocal();
     }
@@ -147,7 +147,7 @@ class _SpeechExerciseState extends State<SpeechExercise> {
     final ok = await _speech.initialize();
     if (!mounted) return;
     setState(() => _localReady = ok);
-    if (!ok) setState(() => _error = 'Recoñecemento de voz non dispoñible');
+    if (!ok) setState(() => _error = AppLocalizations.of(context)!.speechUnavailable);
   }
 
   Future<void> _toggleLocal() async {

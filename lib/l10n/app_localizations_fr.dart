@@ -252,4 +252,82 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get speakKeepTrying => 'Continue à pratiquer';
+
+  @override
+  String get exMultipleChoice => 'Choix multiple';
+
+  @override
+  String get exFillBlank => 'Compléter';
+
+  @override
+  String get exMatching => 'Associer';
+
+  @override
+  String get exAudio => 'Audio';
+
+  @override
+  String get exTranslation => 'Traduction';
+
+  @override
+  String get exSpeech => 'Prononciation';
+
+  @override
+  String get exDictation => 'Dictée';
+
+  @override
+  String get exReading => 'Lecture';
+
+  @override
+  String get exOrdering => 'Ordonner';
+
+  @override
+  String get exImage => 'Image';
+
+  @override
+  String get exListen => 'Écouter';
+
+  @override
+  String get lessonCompletedTitle => 'Leçon terminée !';
+
+  @override
+  String get exitLesson => 'Quitter la leçon';
+
+  @override
+  String get noLivesTitle => 'Plus de vies !';
+
+  @override
+  String get noLivesText =>
+      'Tu as fait trop d\'erreurs et tu n\'as plus de cœurs pour cette leçon.';
+
+  @override
+  String get noLivesRetry =>
+      'Ne t\'inquiète pas ! Recommence la leçon pour réessayer.';
+
+  @override
+  String get micPermissionDenied => 'Permission de microphone refusée';
+
+  @override
+  String get recordError => 'Erreur d\'enregistrement';
+
+  @override
+  String get voiceServerUnavailable =>
+      'Serveur vocal indisponible ; reconnaissance locale';
+
+  @override
+  String get speechUnavailable => 'Reconnaissance vocale indisponible';
+
+  @override
+  String get completePrevious => 'Termine la leçon précédente';
+
+  @override
+  String get blockedLabel => 'Verrouillée';
+
+  @override
+  String get a11yCompleted => 'Leçon terminée';
+
+  @override
+  String get a11yLocked => 'Leçon verrouillée';
+
+  @override
+  String get a11yAvailable => 'Leçon disponible';
 }

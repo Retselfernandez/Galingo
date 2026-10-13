@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'package:galingo/l10n/app_localizations.dart';
 import '../../../core/theme/app_theme.dart';
 import 'home_models.dart';
 
@@ -45,9 +46,9 @@ class _LessonCardState extends State<LessonCard>
       ScaffoldMessenger.of(context)
         ..hideCurrentSnackBar()
         ..showSnackBar(
-          const SnackBar(
-            content: Text('Completa a lección anterior'),
-            duration: Duration(seconds: 2),
+          SnackBar(
+            content: Text(AppLocalizations.of(context)!.completePrevious),
+            duration: const Duration(seconds: 2),
             behavior: SnackBarBehavior.floating,
           ),
         );
@@ -199,7 +200,7 @@ class _LessonCardState extends State<LessonCard>
   Widget _trailing(bool completed, bool locked) {
     if (completed) {
       return Semantics(
-        label: 'Lección completada',
+        label: AppLocalizations.of(context)!.a11yCompleted,
         child: Container(
           width: 30,
           height: 30,
@@ -213,7 +214,7 @@ class _LessonCardState extends State<LessonCard>
     }
     if (locked) {
       return Semantics(
-        label: 'Lección bloqueada',
+        label: AppLocalizations.of(context)!.a11yLocked,
         child: Container(
           width: 30,
           height: 30,
@@ -226,7 +227,7 @@ class _LessonCardState extends State<LessonCard>
       );
     }
     return Semantics(
-      label: 'Lección dispoñible',
+      label: AppLocalizations.of(context)!.a11yAvailable,
       child: Container(
         width: 30,
         height: 30,
