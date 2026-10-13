@@ -34,6 +34,7 @@ void main() {
           e.type == ExerciseType.translation ||
           e.type == ExerciseType.reading ||
           e.type == ExerciseType.speech ||
+          e.type == ExerciseType.dictation ||
           e.type == ExerciseType.matching ||
           e.type == ExerciseType.ordering ||
           (e.type == ExerciseType.fillBlank && e.options.isEmpty);
@@ -44,7 +45,7 @@ void main() {
     final withAudio = all.where((e) => e.audioAsset != null).toList();
     expect(withAudio.length, greaterThanOrEqualTo(81),
         reason: 'faltan audios de ejercicios');
-    for (final e in all.where((e) => e.type == ExerciseType.speech)) {
+    for (final e in all.where((e) => e.type == ExerciseType.dictation)) {
       expect(e.audioAsset, isNotNull, reason: 'dictado ${e.id} sin audio');
     }
 
