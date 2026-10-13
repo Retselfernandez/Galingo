@@ -583,6 +583,156 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Sigue practicando'**
   String get speakKeepTrying;
+
+  /// No description provided for @exMultipleChoice.
+  ///
+  /// In es, this message translates to:
+  /// **'Elección múltiple'**
+  String get exMultipleChoice;
+
+  /// No description provided for @exFillBlank.
+  ///
+  /// In es, this message translates to:
+  /// **'Completar'**
+  String get exFillBlank;
+
+  /// No description provided for @exMatching.
+  ///
+  /// In es, this message translates to:
+  /// **'Emparellar'**
+  String get exMatching;
+
+  /// No description provided for @exAudio.
+  ///
+  /// In es, this message translates to:
+  /// **'Audio'**
+  String get exAudio;
+
+  /// No description provided for @exTranslation.
+  ///
+  /// In es, this message translates to:
+  /// **'Tradución'**
+  String get exTranslation;
+
+  /// No description provided for @exSpeech.
+  ///
+  /// In es, this message translates to:
+  /// **'Pronuncia'**
+  String get exSpeech;
+
+  /// No description provided for @exDictation.
+  ///
+  /// In es, this message translates to:
+  /// **'Ditado'**
+  String get exDictation;
+
+  /// No description provided for @exReading.
+  ///
+  /// In es, this message translates to:
+  /// **'Lectura'**
+  String get exReading;
+
+  /// No description provided for @exOrdering.
+  ///
+  /// In es, this message translates to:
+  /// **'Ordenar'**
+  String get exOrdering;
+
+  /// No description provided for @exImage.
+  ///
+  /// In es, this message translates to:
+  /// **'Imaxe'**
+  String get exImage;
+
+  /// No description provided for @exListen.
+  ///
+  /// In es, this message translates to:
+  /// **'Escoita'**
+  String get exListen;
+
+  /// No description provided for @lessonCompletedTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'¡Lección completada!'**
+  String get lessonCompletedTitle;
+
+  /// No description provided for @exitLesson.
+  ///
+  /// In es, this message translates to:
+  /// **'Saír da lección'**
+  String get exitLesson;
+
+  /// No description provided for @noLivesTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Sen vidas!'**
+  String get noLivesTitle;
+
+  /// No description provided for @noLivesText.
+  ///
+  /// In es, this message translates to:
+  /// **'Cometiste demasiados erros e quedaches sen corazóns para esta lección.'**
+  String get noLivesText;
+
+  /// No description provided for @noLivesRetry.
+  ///
+  /// In es, this message translates to:
+  /// **'Non te preocupes! Recomenza a lección para tentalo de novo.'**
+  String get noLivesRetry;
+
+  /// No description provided for @micPermissionDenied.
+  ///
+  /// In es, this message translates to:
+  /// **'Permiso de micrófono denegado'**
+  String get micPermissionDenied;
+
+  /// No description provided for @recordError.
+  ///
+  /// In es, this message translates to:
+  /// **'Erro ao gravar'**
+  String get recordError;
+
+  /// No description provided for @voiceServerUnavailable.
+  ///
+  /// In es, this message translates to:
+  /// **'Servidor de voz non dispoñible; usando recoñecemento local'**
+  String get voiceServerUnavailable;
+
+  /// No description provided for @speechUnavailable.
+  ///
+  /// In es, this message translates to:
+  /// **'Recoñecemento de voz non dispoñible'**
+  String get speechUnavailable;
+
+  /// No description provided for @completePrevious.
+  ///
+  /// In es, this message translates to:
+  /// **'Completa a lección anterior'**
+  String get completePrevious;
+
+  /// No description provided for @blockedLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Bloqueada'**
+  String get blockedLabel;
+
+  /// No description provided for @a11yCompleted.
+  ///
+  /// In es, this message translates to:
+  /// **'Lección completada'**
+  String get a11yCompleted;
+
+  /// No description provided for @a11yLocked.
+  ///
+  /// In es, this message translates to:
+  /// **'Lección bloqueada'**
+  String get a11yLocked;
+
+  /// No description provided for @a11yAvailable.
+  ///
+  /// In es, this message translates to:
+  /// **'Lección dispoñible'**
+  String get a11yAvailable;
 }
 
 class _AppLocalizationsDelegate

@@ -253,4 +253,82 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get speakKeepTrying => 'Weiter üben';
+
+  @override
+  String get exMultipleChoice => 'Multiple Choice';
+
+  @override
+  String get exFillBlank => 'Lücken füllen';
+
+  @override
+  String get exMatching => 'Zuordnen';
+
+  @override
+  String get exAudio => 'Audio';
+
+  @override
+  String get exTranslation => 'Übersetzung';
+
+  @override
+  String get exSpeech => 'Aussprache';
+
+  @override
+  String get exDictation => 'Diktat';
+
+  @override
+  String get exReading => 'Lesen';
+
+  @override
+  String get exOrdering => 'Ordnen';
+
+  @override
+  String get exImage => 'Bild';
+
+  @override
+  String get exListen => 'Anhören';
+
+  @override
+  String get lessonCompletedTitle => 'Lektion abgeschlossen!';
+
+  @override
+  String get exitLesson => 'Lektion verlassen';
+
+  @override
+  String get noLivesTitle => 'Keine Leben mehr!';
+
+  @override
+  String get noLivesText =>
+      'Du hast zu viele Fehler gemacht und keine Herzen mehr für diese Lektion.';
+
+  @override
+  String get noLivesRetry =>
+      'Keine Sorge! Starte die Lektion neu und versuch es nochmal.';
+
+  @override
+  String get micPermissionDenied => 'Mikrofonberechtigung verweigert';
+
+  @override
+  String get recordError => 'Aufnahmefehler';
+
+  @override
+  String get voiceServerUnavailable =>
+      'Sprachserver nicht verfügbar; lokale Erkennung wird verwendet';
+
+  @override
+  String get speechUnavailable => 'Spracherkennung nicht verfügbar';
+
+  @override
+  String get completePrevious => 'Schließe die vorherige Lektion ab';
+
+  @override
+  String get blockedLabel => 'Gesperrt';
+
+  @override
+  String get a11yCompleted => 'Lektion abgeschlossen';
+
+  @override
+  String get a11yLocked => 'Lektion gesperrt';
+
+  @override
+  String get a11yAvailable => 'Lektion verfügbar';
 }

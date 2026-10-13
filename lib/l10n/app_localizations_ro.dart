@@ -251,4 +251,82 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get speakKeepTrying => 'Continuă să exersezi';
+
+  @override
+  String get exMultipleChoice => 'Alegere multiplă';
+
+  @override
+  String get exFillBlank => 'Completează';
+
+  @override
+  String get exMatching => 'Potrivește';
+
+  @override
+  String get exAudio => 'Audio';
+
+  @override
+  String get exTranslation => 'Traducere';
+
+  @override
+  String get exSpeech => 'Pronunție';
+
+  @override
+  String get exDictation => 'Dictare';
+
+  @override
+  String get exReading => 'Citire';
+
+  @override
+  String get exOrdering => 'Ordonează';
+
+  @override
+  String get exImage => 'Imagine';
+
+  @override
+  String get exListen => 'Ascultă';
+
+  @override
+  String get lessonCompletedTitle => 'Lecție completă!';
+
+  @override
+  String get exitLesson => 'Ieși din lecție';
+
+  @override
+  String get noLivesTitle => 'Fără vieți!';
+
+  @override
+  String get noLivesText =>
+      'Ai făcut prea multe greșeli și ai rămas fără vieți pentru această lecție.';
+
+  @override
+  String get noLivesRetry =>
+      'Nu-ți face griji! Reia lecția și încearcă din nou.';
+
+  @override
+  String get micPermissionDenied => 'Permisiune microfon refuzată';
+
+  @override
+  String get recordError => 'Eroare la înregistrare';
+
+  @override
+  String get voiceServerUnavailable =>
+      'Server vocal indisponibil; se folosește recunoașterea locală';
+
+  @override
+  String get speechUnavailable => 'Recunoaștere vocală indisponibilă';
+
+  @override
+  String get completePrevious => 'Finalizează lecția anterioară';
+
+  @override
+  String get blockedLabel => 'Blocată';
+
+  @override
+  String get a11yCompleted => 'Lecție completă';
+
+  @override
+  String get a11yLocked => 'Lecție blocată';
+
+  @override
+  String get a11yAvailable => 'Lecție disponibilă';
 }

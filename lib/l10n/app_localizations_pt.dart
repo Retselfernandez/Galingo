@@ -252,4 +252,82 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get speakKeepTrying => 'Continua a praticar';
+
+  @override
+  String get exMultipleChoice => 'Escolha múltipla';
+
+  @override
+  String get exFillBlank => 'Completar';
+
+  @override
+  String get exMatching => 'Emparelhar';
+
+  @override
+  String get exAudio => 'Áudio';
+
+  @override
+  String get exTranslation => 'Tradução';
+
+  @override
+  String get exSpeech => 'Pronúncia';
+
+  @override
+  String get exDictation => 'Ditado';
+
+  @override
+  String get exReading => 'Leitura';
+
+  @override
+  String get exOrdering => 'Ordenar';
+
+  @override
+  String get exImage => 'Imaxe';
+
+  @override
+  String get exListen => 'Ouvir';
+
+  @override
+  String get lessonCompletedTitle => 'Lição concluída!';
+
+  @override
+  String get exitLesson => 'Sair da lição';
+
+  @override
+  String get noLivesTitle => 'Sem vidas!';
+
+  @override
+  String get noLivesText =>
+      'Cometeste demasiados erros e ficaste sem corações para esta lição.';
+
+  @override
+  String get noLivesRetry =>
+      'Não te preocupes! Reinicia a lição para tentar de novo.';
+
+  @override
+  String get micPermissionDenied => 'Permissão de microfone negada';
+
+  @override
+  String get recordError => 'Erro ao gravar';
+
+  @override
+  String get voiceServerUnavailable =>
+      'Servidor de voz indisponível; a usar reconhecimento local';
+
+  @override
+  String get speechUnavailable => 'Reconhecimento de voz indisponível';
+
+  @override
+  String get completePrevious => 'Completa a lição anterior';
+
+  @override
+  String get blockedLabel => 'Bloqueada';
+
+  @override
+  String get a11yCompleted => 'Lição concluída';
+
+  @override
+  String get a11yLocked => 'Lição bloqueada';
+
+  @override
+  String get a11yAvailable => 'Lição disponível';
 }

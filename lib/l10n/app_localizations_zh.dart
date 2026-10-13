@@ -248,4 +248,79 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get speakKeepTrying => '继续练习';
+
+  @override
+  String get exMultipleChoice => '选择题';
+
+  @override
+  String get exFillBlank => '填空';
+
+  @override
+  String get exMatching => '配对';
+
+  @override
+  String get exAudio => '音频';
+
+  @override
+  String get exTranslation => '翻译';
+
+  @override
+  String get exSpeech => '发音';
+
+  @override
+  String get exDictation => '听写';
+
+  @override
+  String get exReading => '阅读';
+
+  @override
+  String get exOrdering => '排序';
+
+  @override
+  String get exImage => '图片';
+
+  @override
+  String get exListen => '听';
+
+  @override
+  String get lessonCompletedTitle => '课程完成！';
+
+  @override
+  String get exitLesson => '退出课程';
+
+  @override
+  String get noLivesTitle => '没有生命了！';
+
+  @override
+  String get noLivesText => '你错了太多次，这节课没有红心了。';
+
+  @override
+  String get noLivesRetry => '别担心！重新开始这节课再试试。';
+
+  @override
+  String get micPermissionDenied => '麦克风权限被拒绝';
+
+  @override
+  String get recordError => '录音错误';
+
+  @override
+  String get voiceServerUnavailable => '语音服务器不可用；使用本地识别';
+
+  @override
+  String get speechUnavailable => '语音识别不可用';
+
+  @override
+  String get completePrevious => '完成上一课';
+
+  @override
+  String get blockedLabel => '已锁定';
+
+  @override
+  String get a11yCompleted => '课程已完成';
+
+  @override
+  String get a11yLocked => '课程已锁定';
+
+  @override
+  String get a11yAvailable => '课程可用';
 }
