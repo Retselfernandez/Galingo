@@ -105,12 +105,12 @@ class _NameInputScreenState extends ConsumerState<NameInputScreen> {
                   // Título
                   Animate(
                     delay: const Duration(milliseconds: 400),
-                    effects: [
-                      const FadeEffect(duration: Duration(milliseconds: 500)),
+                    effects: const [
+                      FadeEffect(duration: Duration(milliseconds: 500)),
                       SlideEffect(
-                        begin: const Offset(0, 0.3),
+                        begin: Offset(0, 0.3),
                         end: Offset.zero,
-                        duration: const Duration(milliseconds: 500),
+                        duration: Duration(milliseconds: 500),
                         curve: Curves.easeOut,
                       ),
                     ],
@@ -145,12 +145,12 @@ class _NameInputScreenState extends ConsumerState<NameInputScreen> {
                   // Campo de texto
                   Animate(
                     delay: const Duration(milliseconds: 650),
-                    effects: [
-                      const FadeEffect(duration: Duration(milliseconds: 500)),
+                    effects: const [
+                      FadeEffect(duration: Duration(milliseconds: 500)),
                       SlideEffect(
-                        begin: const Offset(0, 0.2),
+                        begin: Offset(0, 0.2),
                         end: Offset.zero,
-                        duration: const Duration(milliseconds: 500),
+                        duration: Duration(milliseconds: 500),
                         curve: Curves.easeOut,
                       ),
                     ],
@@ -165,7 +165,7 @@ class _NameInputScreenState extends ConsumerState<NameInputScreen> {
                       ),
                       decoration: InputDecoration(
                         hintText: strings.nameHint,
-                        hintStyle: TextStyle(
+                        hintStyle: const TextStyle(
                           color: AppTheme.textHint,
                           fontSize: 18,
                           fontWeight: FontWeight.w400,
@@ -198,12 +198,12 @@ class _NameInputScreenState extends ConsumerState<NameInputScreen> {
                   // Botón continuar
                   Animate(
                     delay: const Duration(milliseconds: 800),
-                    effects: [
-                      const FadeEffect(duration: Duration(milliseconds: 400)),
+                    effects: const [
+                      FadeEffect(duration: Duration(milliseconds: 400)),
                       SlideEffect(
-                        begin: const Offset(0, 0.2),
+                        begin: Offset(0, 0.2),
                         end: Offset.zero,
-                        duration: const Duration(milliseconds: 400),
+                        duration: Duration(milliseconds: 400),
                         curve: Curves.easeOut,
                       ),
                     ],

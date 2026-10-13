@@ -3,7 +3,7 @@ import 'package:galingo/core/ml/hlr_engine.dart';
 
 void main() {
   group('HLR Engine Mathematics & Formulations Tests', () {
-    final theta = HlrEngine.defaultTheta;
+    const theta = HlrEngine.defaultTheta;
 
     test('estimateHalfLife computes correct values based on features', () {
       // Caso 1: Estudiante nuevo (s=0, f=0, dificultad léxica baja d=0.1)
@@ -93,11 +93,6 @@ void main() {
       final finalLoss = calculateLoss(trainedTheta);
 
       // Comprobar que los pesos cambiaron y la pérdida total disminuyó
-      print('Loss inicial: $initialLoss');
-      print('Loss final: $finalLoss');
-      print('Theta inicial: $initialTheta');
-      print('Theta entrenado: $trainedTheta');
-
       expect(finalLoss, lessThan(initialLoss));
     });
   });
@@ -106,7 +101,7 @@ void main() {
 
 void edgeCases() {
   group('HLR Edge Cases', () {
-    final theta = HlrEngine.defaultTheta;
+    const theta = HlrEngine.defaultTheta;
 
     test('t mínimo (0.001 días) no rompe la probabilidad de recuerdo', () {
       final h = HlrEngine.estimateHalfLife(theta: theta, s: 0, f: 0, d: 0.2);

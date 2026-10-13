@@ -463,7 +463,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: AppTheme.primaryBlue.withOpacity(0.08),
+            color: AppTheme.primaryBlue.withValues(alpha: 0.08),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -510,7 +510,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 decoration: BoxDecoration(
-                  color: AppTheme.accentGold.withOpacity(0.15),
+                  color: AppTheme.accentGold.withValues(alpha: 0.15),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Row(
@@ -520,7 +520,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                     const SizedBox(width: 4),
                     Text(
                       '$_xpEarned XP',
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: AppTheme.accentGold,
                         fontWeight: FontWeight.w700,
                         fontSize: 13,
@@ -814,7 +814,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     String correctAnswer,
   ) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
-    Color borderColor = isDark ? Colors.white.withValues(alpha: 0.15) : AppTheme.primaryBlue.withOpacity(0.2);
+    Color borderColor = isDark ? Colors.white.withValues(alpha: 0.15) : AppTheme.primaryBlue.withValues(alpha: 0.2);
     Color bgColor = isDark ? AppTheme.surfaceDark2 : AppTheme.surfaceBlue;
     Color textColor = isDark ? Colors.white : AppTheme.textPrimary;
 
@@ -1092,8 +1092,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
           color: _isCorrect
-              ? AppTheme.successGreen.withOpacity(0.3)
-              : AppTheme.errorRed.withOpacity(0.3),
+              ? AppTheme.successGreen.withValues(alpha: 0.3)
+              : AppTheme.errorRed.withValues(alpha: 0.3),
         ),
       ),
       child: Row(
@@ -1103,8 +1103,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
             height: 40,
             decoration: BoxDecoration(
               color: _isCorrect
-                  ? AppTheme.successGreen.withOpacity(0.2)
-                  : AppTheme.errorRed.withOpacity(0.2),
+                  ? AppTheme.successGreen.withValues(alpha: 0.2)
+                  : AppTheme.errorRed.withValues(alpha: 0.2),
               shape: BoxShape.circle,
             ),
             child: Icon(
@@ -1131,8 +1131,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                     explanation,
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
                           color: _isCorrect
-                              ? AppTheme.successGreen.withOpacity(0.8)
-                              : AppTheme.errorRed.withOpacity(0.8),
+                              ? AppTheme.successGreen.withValues(alpha: 0.8)
+                              : AppTheme.errorRed.withValues(alpha: 0.8),
                         ),
                   ),
                 ],
@@ -1204,7 +1204,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
               ),
               child: Text(
                 AppLocalizations.of(context)!.verifyAnswer,
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
               ),
             ),
           ),
@@ -1367,7 +1367,7 @@ class _LessonCompletedDialog extends StatelessWidget {
                 ),
                 child: Text(
                   AppLocalizations.of(context)!.continuePath,
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
                 ),
               ),
             ),
@@ -1573,9 +1573,9 @@ class _InteractiveMatchingWidgetState extends State<InteractiveMatchingWidget> {
     Color textColor = isDark ? Colors.white : AppTheme.textPrimary;
 
     if (isMatched) {
-      borderColor = AppTheme.successGreen.withOpacity(0.4);
-      bgColor = AppTheme.successGreenLight.withOpacity(0.5);
-      textColor = AppTheme.textSecondary.withOpacity(0.5);
+      borderColor = AppTheme.successGreen.withValues(alpha: 0.4);
+      bgColor = AppTheme.successGreenLight.withValues(alpha: 0.5);
+      textColor = AppTheme.textSecondary.withValues(alpha: 0.5);
     } else if (isError) {
       borderColor = AppTheme.errorRed;
       bgColor = AppTheme.errorRedLight;
@@ -1604,7 +1604,7 @@ class _InteractiveMatchingWidgetState extends State<InteractiveMatchingWidget> {
             boxShadow: [
               if (!isMatched)
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.03),
+                  color: Colors.black.withValues(alpha: 0.03),
                   blurRadius: 6,
                   offset: const Offset(0, 3),
                 ),

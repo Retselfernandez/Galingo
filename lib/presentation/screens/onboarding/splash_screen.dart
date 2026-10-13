@@ -60,14 +60,14 @@ class _SplashScreenState extends State<SplashScreen> {
             children: [
               // Gabi
               Animate(
-                effects: [
+                effects: const [
                   ScaleEffect(
-                    begin: const Offset(0.5, 0.5),
-                    end: const Offset(1.0, 1.0),
+                    begin: Offset(0.5, 0.5),
+                    end: Offset(1.0, 1.0),
                     curve: Curves.elasticOut,
-                    duration: const Duration(milliseconds: 800),
+                    duration: Duration(milliseconds: 800),
                   ),
-                  const FadeEffect(duration: Duration(milliseconds: 400)),
+                  FadeEffect(duration: Duration(milliseconds: 400)),
                 ],
                 child: const GabiWidget(
                   state: GabiState.happy,
@@ -81,13 +81,13 @@ class _SplashScreenState extends State<SplashScreen> {
               // Nombre de la app
               Animate(
                 delay: const Duration(milliseconds: 300),
-                effects: [
-                  const FadeEffect(duration: Duration(milliseconds: 500)),
+                effects: const [
+                  FadeEffect(duration: Duration(milliseconds: 500)),
                   SlideEffect(
-                    begin: const Offset(0, 0.3),
+                    begin: Offset(0, 0.3),
                     end: Offset.zero,
                     curve: Curves.easeOut,
-                    duration: const Duration(milliseconds: 500),
+                    duration: Duration(milliseconds: 500),
                   ),
                 ],
                 child: Text(
@@ -104,13 +104,13 @@ class _SplashScreenState extends State<SplashScreen> {
 
               Animate(
                 delay: const Duration(milliseconds: 500),
-                effects: [
-                  const FadeEffect(duration: Duration(milliseconds: 500)),
+                effects: const [
+                  FadeEffect(duration: Duration(milliseconds: 500)),
                   SlideEffect(
-                    begin: const Offset(0, 0.3),
+                    begin: Offset(0, 0.3),
                     end: Offset.zero,
                     curve: Curves.easeOut,
-                    duration: const Duration(milliseconds: 500),
+                    duration: Duration(milliseconds: 500),
                   ),
                 ],
                 child: Text(

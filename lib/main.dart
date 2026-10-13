@@ -67,7 +67,7 @@ class InitializationErrorApp extends StatelessWidget {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    GabiWidget(
+                    const GabiWidget(
                       state: GabiState.happy,
                       size: 90,
                       showMessage: true,
