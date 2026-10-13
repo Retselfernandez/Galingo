@@ -880,7 +880,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Chámome Ana.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/1P01.mp3"
             },
             {
               "id": "1P02",
@@ -889,7 +890,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Como te chamas?",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/1P02.mp3"
             },
             {
               "id": "1P03",
@@ -898,7 +900,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "De onde es?",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/1P03.mp3"
             }
           ]
         }
@@ -1709,7 +1712,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Podes repetir?",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/2P01.mp3"
             },
             {
               "id": "2P02",
@@ -1718,7 +1722,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Máis amodo, por favor.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/2P02.mp3"
             }
           ]
         }
@@ -2604,7 +2609,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Son as dez.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/3P01.mp3"
             }
           ]
         }
@@ -3509,7 +3515,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "A miña nai",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/4P01.mp3"
             },
             {
               "id": "4P02",
@@ -3518,7 +3525,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "O meu pai",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/4P02.mp3"
             },
             {
               "id": "4P03",
@@ -3527,7 +3535,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Os meus irmáns",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/4P03.mp3"
             }
           ]
         }
@@ -4467,7 +4476,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "O coche é vermello.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/5P01.mp3"
             },
             {
               "id": "5P02",
@@ -4476,7 +4486,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "A casa é grande.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/5P02.mp3"
             },
             {
               "id": "5P03",
@@ -4485,7 +4496,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "A miña irmá é alta e simpática.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/5P03.mp3"
             }
           ]
         }
@@ -5522,7 +5534,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Quero un café.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/6P01.mp3"
             },
             {
               "id": "6P02",
@@ -5531,7 +5544,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Quero auga.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/6P02.mp3"
             },
             {
               "id": "6P03",
@@ -5540,7 +5554,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Teño fame.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/6P03.mp3"
             }
           ]
         }
@@ -6379,7 +6394,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "A casa ten tres cuartos.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/7P01.mp3"
             },
             {
               "id": "7P02",
@@ -6388,7 +6404,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Vivo nun piso.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/7P02.mp3"
             },
             {
               "id": "7P03",
@@ -6397,7 +6414,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "O meu cuarto é pequeno.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/7P03.mp3"
             }
           ]
         }
@@ -7385,7 +7403,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Levántome ás sete.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/8P01.mp3"
             },
             {
               "id": "8P02",
@@ -7394,7 +7413,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Almorzo ás oito.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/8P02.mp3"
             },
             {
               "id": "8P03",
@@ -7403,7 +7423,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Xanto ás dúas.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/8P03.mp3"
             }
           ]
         }
@@ -8338,7 +8359,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Onde está a estación?",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/9P01.mp3"
             },
             {
               "id": "9P02",
@@ -8347,7 +8369,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Xira á dereita.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/9P02.mp3"
             },
             {
               "id": "9P03",
@@ -8356,7 +8379,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Segue todo recto.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/9P03.mp3"
             }
           ]
         }
@@ -9279,7 +9303,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Canto custa?",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/10P01.mp3"
             },
             {
               "id": "10P02",
@@ -9288,7 +9313,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "É moi caro.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/10P02.mp3"
             },
             {
               "id": "10P03",
@@ -9297,7 +9323,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Quero unha camiseta azul.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/10P03.mp3"
             }
           ]
         }
@@ -10102,7 +10129,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Hoxe chove.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/11P01.mp3"
             },
             {
               "id": "11P02",
@@ -10111,7 +10139,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Fai sol.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/11P02.mp3"
             },
             {
               "id": "11P03",
@@ -10120,7 +10149,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Fai frío.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/11P03.mp3"
             }
           ]
         }
@@ -11124,7 +11154,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Son profesora.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/12P01.mp3"
             },
             {
               "id": "12P02",
@@ -11133,7 +11164,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Gústame ler.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/12P02.mp3"
             },
             {
               "id": "12P03",
@@ -11142,7 +11174,8 @@
               "question": "Le en alto esta frase:",
               "options": [],
               "correctAnswer": "Gústame camiñar pola praia.",
-              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia.",
+              "audioAsset": "assets/audio/exercises/12P03.mp3"
             }
           ]
         }
