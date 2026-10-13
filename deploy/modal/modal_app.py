@@ -41,7 +41,7 @@ data_vol = modal.Volume.from_name("galingo-data", create_if_missing=True)
     cpu=2,
     memory=4096,
     timeout=600,
-    scaledown_window=300,
+    scaledown_window=900,
 )
 @modal.asgi_app(label="galingo-backend")
 def web():

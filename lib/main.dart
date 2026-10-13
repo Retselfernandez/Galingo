@@ -142,10 +142,12 @@ class GalingoApp extends ConsumerStatefulWidget {
   ConsumerState<GalingoApp> createState() => _GalingoAppState();
 }
 
-class _GalingoAppState extends ConsumerState<GalingoApp> {
+class _GalingoAppState extends ConsumerState<GalingoApp>
+    with WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
     WidgetsBinding.instance.addPostFrameCallback((_) {
       ShakeService.instance.start(() {
         final router = ref.read(appRouterProvider);
@@ -155,7 +157,16 @@ class _GalingoAppState extends ConsumerState<GalingoApp> {
   }
 
   @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    // Al volver a primer plano, calienta el backend por si estaba dormido.
+    if (state == AppLifecycleState.resumed) {
+      TelemetryService.instance.warmUp();
+    }
+  }
+
+  @override
   void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
     // L7: liberar recursos de AudioService al destruir el widget raíz
     AudioService.instance.dispose();
     ShakeService.instance.stop();

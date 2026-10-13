@@ -74,7 +74,21 @@ class TelemetryService {
     _connSub = Connectivity().onConnectivityChanged.listen((results) {
       if (_hasConnection(results)) sync();
     });
+    unawaited(warmUp());
     sync();
+  }
+
+  /// "Despierta" el backend (si está dormido) con una petición ligera.
+  /// Así el contenedor está caliente cuando el usuario llegue a un ejercicio
+  /// de voz, evitando el arranque en frío en mitad de la lección.
+  Future<void> warmUp() async {
+    try {
+      final client = http.Client();
+      await client
+          .get(Uri.parse('$baseUrl/api/v1/metricas'))
+          .timeout(const Duration(seconds: 45));
+      client.close();
+    } catch (_) {}
   }
 
   bool _hasConnection(List<ConnectivityResult> results) =>
