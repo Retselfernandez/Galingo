@@ -63,6 +63,14 @@ WHISPER_CT2_DIR="$PWD/models/whisper-large-v3-turbo-gl-ct2" \
 
 > El modelo CT2 (~783 MB) y los modelos TTS no se versionan (ver `.gitignore` → `backend/models/`).
 
+### Análisis de la beta
+
+```bash
+python backend/analisis_beta_remote.py [URL_BACKEND]
+```
+Descarga `/api/v1/export` y calcula **retención D1/D7**, sesiones, eventos y feedback;
+si hay **≥ 20 eventos**, entrena el modelo **HLR** (regresión logística) y reporta MAE y AUC-ROC.
+
 ## Beta (Android)
 
 - **APK**: https://github.com/Retselfernandez/Galingo/releases/tag/v1.1.0-beta

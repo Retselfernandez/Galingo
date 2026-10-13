@@ -82,6 +82,46 @@ def metricas(db: Session = Depends(get_db)):
     return {"eventos_totales": total, "reportes_totales": feedbacks, "sesiones_diarias": sesiones}
 
 
+@app.get("/api/v1/export")
+def exportar(db: Session = Depends(get_db)):
+    """Exporta la telemetría cruda para el análisis de la beta (retención, HLR)."""
+    eventos = [
+        {
+            "event_id": r.event_id,
+            "user_id": r.user_id,
+            "item_id": r.item_id,
+            "timestamp": r.timestamp.isoformat() if r.timestamp else None,
+            "resultado": r.resultado,
+            "intervalo_dias": r.intervalo_dias,
+            "aciertos": r.aciertos,
+            "fallos": r.fallos,
+            "dificultad": r.dificultad,
+        }
+        for r in db.query(TrazaInteraccion).all()
+    ]
+    sesiones = [
+        {
+            "id": s.id,
+            "user_id": s.user_id,
+            "fecha": s.fecha,
+            "inicio": s.inicio.isoformat() if s.inicio else None,
+            "plataforma": s.plataforma,
+        }
+        for s in db.query(SesionDiaria).all()
+    ]
+    feedback = [
+        {
+            "report_id": f.report_id,
+            "user_id": f.user_id,
+            "categoria": f.categoria,
+            "texto": f.texto,
+            "pantalla": f.pantalla,
+        }
+        for f in db.query(ReporteFeedback).all()
+    ]
+    return {"eventos": eventos, "sesiones": sesiones, "feedback": feedback}
+
+
 # ─── Evaluación de voz (Whisper gallego) ─────────────────────────────────────
 @app.post("/api/v1/voz/avaliar")
 async def voz_avaliar(
