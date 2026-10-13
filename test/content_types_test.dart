@@ -50,6 +50,9 @@ void main() {
     for (final e in all.where((e) => e.type == ExerciseType.dictation)) {
       expect(e.audioAsset, isNotNull, reason: 'dictado ${e.id} sin audio');
     }
+    for (final e in all.where((e) => e.type == ExerciseType.speech)) {
+      expect(e.audioAsset, isNotNull, reason: 'pronuncia ${e.id} sin audio');
+    }
 
     // Los ejercicios de opción múltiple / imagen deben tener su respuesta
     // entre las opciones (si no, al pulsarla se marcaría incorrecta).
