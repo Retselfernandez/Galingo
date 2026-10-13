@@ -5,9 +5,9 @@
 #   bash tool/fetch_asr_model.sh
 set -euo pipefail
 
-DIR="$(cd "$(dirname "$0")/.." && pwd)/assets/models/whisper-small"
-BASE="https://huggingface.co/csukuangfj/sherpa-onnx-whisper-small/resolve/main"
-FILES=(small-encoder.int8.onnx small-decoder.int8.onnx small-tokens.txt)
+DIR="$(cd "$(dirname "$0")/.." && pwd)/assets/models/whisper-medium"
+BASE="https://huggingface.co/csukuangfj/sherpa-onnx-whisper-medium/resolve/main"
+FILES=(medium-encoder.int8.onnx medium-decoder.int8.onnx medium-tokens.txt)
 
 mkdir -p "$DIR"
 for f in "${FILES[@]}"; do
