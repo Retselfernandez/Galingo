@@ -307,6 +307,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get voiceServerUnavailable => '语音服务器不可用；使用本地识别';
 
   @override
+  String get voiceModelLoading => '正在准备语音模型…';
+
+  @override
+  String get voiceOnDevice => '设备端语音识别（无需联网）';
+
+  @override
   String get speechUnavailable => '语音识别不可用';
 
   @override

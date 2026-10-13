@@ -56,6 +56,7 @@ android/key.properties
 
 # Modelos ASR/TTS (grandes, descargables; no versionar)
 backend/models/
+assets/models/
 
 # Base de datos local del backend (pruebas)
 backend/*.db

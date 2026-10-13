@@ -313,6 +313,13 @@ class AppLocalizationsRo extends AppLocalizations {
       'Server vocal indisponibil; se folosește recunoașterea locală';
 
   @override
+  String get voiceModelLoading => 'Se pregătește modelul vocal…';
+
+  @override
+  String get voiceOnDevice =>
+      'Recunoaștere vocală pe dispozitiv (fără internet)';
+
+  @override
   String get speechUnavailable => 'Recunoaștere vocală indisponibilă';
 
   @override

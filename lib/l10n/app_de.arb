@@ -111,6 +111,8 @@
   "micPermissionDenied": "Mikrofonberechtigung verweigert",
   "recordError": "Aufnahmefehler",
   "voiceServerUnavailable": "Sprachserver nicht verfügbar; lokale Erkennung wird verwendet",
+  "voiceModelLoading": "Sprachmodell wird vorbereitet…",
+  "voiceOnDevice": "Spracherkennung auf dem Gerät (ohne Internet)",
   "speechUnavailable": "Spracherkennung nicht verfügbar",
   "completePrevious": "Schließe die vorherige Lektion ab",
   "blockedLabel": "Gesperrt",

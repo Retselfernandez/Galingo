@@ -314,6 +314,13 @@ class AppLocalizationsIt extends AppLocalizations {
       'Server vocale non disponibile; uso riconoscimento locale';
 
   @override
+  String get voiceModelLoading => 'Preparazione del modello vocale…';
+
+  @override
+  String get voiceOnDevice =>
+      'Riconoscimento vocale sul dispositivo (senza internet)';
+
+  @override
   String get speechUnavailable => 'Riconoscimento vocale non disponibile';
 
   @override

@@ -111,6 +111,8 @@
   "micPermissionDenied": "麦克风权限被拒绝",
   "recordError": "录音错误",
   "voiceServerUnavailable": "语音服务器不可用；使用本地识别",
+  "voiceModelLoading": "正在准备语音模型…",
+  "voiceOnDevice": "设备端语音识别（无需联网）",
   "speechUnavailable": "语音识别不可用",
   "completePrevious": "完成上一课",
   "blockedLabel": "已锁定",

@@ -17,6 +17,7 @@ import 'package:galingo/l10n/app_localizations.dart';
 import '../../providers/progress_provider.dart';
 import '../../providers/settings_provider.dart';
 import '../../../core/services/telemetry_service.dart';
+import '../../../core/services/asr_service.dart';
 import '../../widgets/speech/speech_exercise.dart';
 import '../../widgets/gabi/gabi_widget.dart';
 

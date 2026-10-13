@@ -111,6 +111,8 @@
   "micPermissionDenied": "Permisiune microfon refuzată",
   "recordError": "Eroare la înregistrare",
   "voiceServerUnavailable": "Server vocal indisponibil; se folosește recunoașterea locală",
+  "voiceModelLoading": "Se pregătește modelul vocal…",
+  "voiceOnDevice": "Recunoaștere vocală pe dispozitiv (fără internet)",
   "speechUnavailable": "Recunoaștere vocală indisponibilă",
   "completePrevious": "Finalizează lecția anterioară",
   "blockedLabel": "Blocată",

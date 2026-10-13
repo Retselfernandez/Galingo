@@ -698,6 +698,18 @@ abstract class AppLocalizations {
   /// **'Servidor de voz non dispoñible; usando recoñecemento local'**
   String get voiceServerUnavailable;
 
+  /// No description provided for @voiceModelLoading.
+  ///
+  /// In es, this message translates to:
+  /// **'Preparando el modelo de voz…'**
+  String get voiceModelLoading;
+
+  /// No description provided for @voiceOnDevice.
+  ///
+  /// In es, this message translates to:
+  /// **'Reconocimiento de voz en el dispositivo (sin internet)'**
+  String get voiceOnDevice;
+
   /// No description provided for @speechUnavailable.
   ///
   /// In es, this message translates to:
