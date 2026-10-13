@@ -150,11 +150,11 @@ class AsrService {
   AsrService._();
   static final AsrService instance = AsrService._();
 
-  static const String _assetDir = 'assets/models/whisper-small';
+  static const String _assetDir = 'assets/models/whisper-medium';
   static const List<String> _files = <String>[
-    'small-encoder.int8.onnx',
-    'small-decoder.int8.onnx',
-    'small-tokens.txt',
+    'medium-encoder.int8.onnx',
+    'medium-decoder.int8.onnx',
+    'medium-tokens.txt',
   ];
 
   sherpa.OfflineRecognizer? _recognizer;
@@ -182,7 +182,7 @@ class AsrService {
     await sherpa.initBindingsAsync();
 
     final dir = await getApplicationSupportDirectory();
-    final modelDir = Directory('${dir.path}/whisper-small');
+    final modelDir = Directory('${dir.path}/whisper-medium');
     if (!await modelDir.exists()) {
       await modelDir.create(recursive: true);
     }
@@ -203,14 +203,14 @@ class AsrService {
       sherpa.OfflineRecognizerConfig(
         model: sherpa.OfflineModelConfig(
           whisper: sherpa.OfflineWhisperModelConfig(
-            encoder: '${modelDir.path}/small-encoder.int8.onnx',
-            decoder: '${modelDir.path}/small-decoder.int8.onnx',
+            encoder: '${modelDir.path}/medium-encoder.int8.onnx',
+            decoder: '${modelDir.path}/medium-decoder.int8.onnx',
             language: 'gl',
             task: 'transcribe',
           ),
-          tokens: '${modelDir.path}/small-tokens.txt',
+          tokens: '${modelDir.path}/medium-tokens.txt',
           modelType: 'whisper',
-          numThreads: 2,
+          numThreads: 4,
           debug: false,
         ),
       ),
@@ -243,7 +243,7 @@ class AsrService {
     required String target,
     double umbral = 0.7,
   }) async {
-    final transcript = await transcribeFile(audioPath);
+    final transcript = _dedupeSentences(await transcribeFile(audioPath));
     final sim = textSimilarity(transcript, target);
     return VoiceEvalResult(
       transcript: transcript,
@@ -251,6 +251,28 @@ class AsrService {
       aprobado: sim >= umbral,
       palabras: _perWord(target, transcript),
     );
+  }
+
+  /// Quita repeticións consecutivas (artefacto dalgúns modelos Whisper).
+  String _dedupeSentences(String s) {
+    final cleaned = s.replaceAll(RegExp(r'\s+'), ' ').trim();
+    if (cleaned.isEmpty) return '';
+    final parts = cleaned.split(RegExp(r'[.!?]+'));
+    final out = <String>[];
+    for (var p in parts) {
+      p = p.trim();
+      if (p.isEmpty) continue;
+      if (out.isNotEmpty) {
+        final last = out.last;
+        if (p.contains(last) || last.contains(p)) {
+          if (p.length <= last.length) continue;
+          out[out.length - 1] = p;
+          continue;
+        }
+      }
+      out.add(p);
+    }
+    return out.join('. ');
   }
 
   List<WordResult> _perWord(String target, String transcript) {
