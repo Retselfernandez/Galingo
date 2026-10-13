@@ -68,5 +68,17 @@ backend/*.db
 /O Camiño do Galego_ Aprende Paso a Paso.png
 /fondo galingo.png
 
+# Imágenes fuente de ejercicios (raíz; las comprimidas van en assets/images/exercises/)
+/Armario.png
+/Puerta.png
+/Sofa.png
+/Ventana.png
+/cama.png
+/herba.png
+/mesa.png
+/platano.png
+/silla.png
+/tomate.png
+
 # Capturas de testers (no versionar)
 Imagenes de reportes/

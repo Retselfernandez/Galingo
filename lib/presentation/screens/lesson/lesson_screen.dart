@@ -891,50 +891,71 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
             borderRadius: BorderRadius.circular(18),
             border: Border.all(color: borderColor, width: 2.5),
           ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              _imageWidget(option),
-              const SizedBox(height: 4),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 4),
-                child: Text(
-                  option,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                        color: isDark ? Colors.white : AppTheme.textPrimary,
-                        fontWeight: FontWeight.w700,
-                      ),
-                ),
+          child: Padding(
+            padding: const EdgeInsets.all(3),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(15),
+              child: Column(
+                children: [
+                  Expanded(child: _imageWidget(option)),
+                  Container(
+                    width: double.infinity,
+                    color: Colors.white.withValues(alpha: 0.88),
+                    padding: const EdgeInsets.symmetric(vertical: 3),
+                    child: Text(
+                      option,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                            color: AppTheme.textPrimary,
+                            fontWeight: FontWeight.w800,
+                          ),
+                    ),
+                  ),
+                ],
               ),
-            ],
+            ),
           ),
         ),
       ),
     );
   }
 
-  /// Ilustración (emoji) para los ejercicios de imagen.
-  /// Si más adelante se añaden imágenes reales, sustituir por Image.asset.
+  /// Ilustración del ítem: imagen real si existe, si no un emoji de reserva.
   Widget _imageWidget(String word) {
+    final name = _imageAssetName(word);
+    if (name != null) {
+      return Image.asset(
+        'assets/images/exercises/$name.jpg',
+        fit: BoxFit.cover,
+        width: double.infinity,
+        height: double.infinity,
+        errorBuilder: (_, __, ___) => _emojiWidget(word),
+      );
+    }
+    return _emojiWidget(word);
+  }
+
+  String? _imageAssetName(String word) {
+    const map = {
+      'plátano': 'platano', 'platano': 'platano',
+      'tomate': 'tomate', 'herba': 'herba', 'silla': 'silla',
+      'mesa': 'mesa', 'cama': 'cama', 'puerta': 'puerta',
+      'ventana': 'ventana', 'armario': 'armario',
+      'sofá': 'sofa', 'sofa': 'sofa',
+    };
+    return map[word.toLowerCase()];
+  }
+
+  Widget _emojiWidget(String word) {
     const emoji = {
-      'plátano': '🍌',
-      'platano': '🍌',
-      'tomate': '🍅',
-      'herba': '🌿',
-      'silla': '🪑',
-      'mesa': '🍽️',
-      'cama': '🛏️',
-      'sofá': '🛋️',
-      'sofa': '🛋️',
-      'puerta': '🚪',
-      'ventana': '🪟',
-      'armario': '🧥',
+      'plátano': '🍌', 'platano': '🍌', 'tomate': '🍅', 'herba': '🌿',
+      'silla': '🪑', 'mesa': '🍽️', 'cama': '🛏️', 'sofá': '🛋️', 'sofa': '🛋️',
+      'puerta': '🚪', 'ventana': '🪟', 'armario': '🧥',
     };
     final e = emoji[word.toLowerCase()];
-    return Text(e ?? '🖼️', style: const TextStyle(fontSize: 40));
+    return Center(child: Text(e ?? '🖼️', style: const TextStyle(fontSize: 40)));
   }
 
   Widget _buildMatchingWidget(BuildContext context, dynamic exercise) {
