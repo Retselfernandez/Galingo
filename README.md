@@ -65,10 +65,12 @@ WHISPER_CT2_DIR="$PWD/models/whisper-large-v3-turbo-gl-ct2" \
 
 ### Análisis de la beta
 
+`/api/v1/export` está **protegido con un token** (secreto `EXPORT_TOKEN` en Modal).
+
 ```bash
-python backend/analisis_beta_remote.py [URL_BACKEND]
+EXPORT_TOKEN=<token> python backend/analisis_beta_remote.py [URL_BACKEND]
 ```
-Descarga `/api/v1/export` y calcula **retención D1/D7**, sesiones, eventos y feedback;
+Descarga la telemetría y calcula **retención D1/D7**, sesiones, eventos y feedback;
 si hay **≥ 20 eventos**, entrena el modelo **HLR** (regresión logística) y reporta MAE y AUC-ROC.
 
 ## Beta (Android)

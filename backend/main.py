@@ -1,8 +1,8 @@
-from fastapi import FastAPI, Depends, HTTPException, File, UploadFile, Form
+from fastapi import FastAPI, Depends, HTTPException, File, UploadFile, Form, Header
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from typing import Optional, List
-import datetime, json
+import datetime, json, os
 from models import Base, engine, SessionLocal, TrazaInteraccion, ReporteFeedback, EstadoMemoria, SesionDiaria
 
 Base.metadata.create_all(engine)
@@ -83,8 +83,18 @@ def metricas(db: Session = Depends(get_db)):
 
 
 @app.get("/api/v1/export")
-def exportar(db: Session = Depends(get_db)):
-    """Exporta la telemetría cruda para el análisis de la beta (retención, HLR)."""
+def exportar(
+    token: Optional[str] = None,
+    x_admin_token: Optional[str] = Header(default=None),
+    db: Session = Depends(get_db),
+):
+    """Exporta la telemetría cruda para el análisis de la beta (protegido)."""
+    expected = os.getenv("EXPORT_TOKEN")
+    provided = x_admin_token or token
+    if not expected:
+        raise HTTPException(status_code=503, detail="EXPORT_TOKEN no configurado")
+    if provided != expected:
+        raise HTTPException(status_code=401, detail="token inválido")
     eventos = [
         {
             "event_id": r.event_id,

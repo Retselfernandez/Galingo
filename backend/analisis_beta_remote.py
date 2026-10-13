@@ -8,15 +8,19 @@ Descarga /api/v1/export y calcula:
   - HLR (si >= 20 eventos): MAE y AUC-ROC con regresión logística
 """
 import json
+import os
 import sys
 import urllib.request
 from collections import defaultdict
 
 URL = sys.argv[1] if len(sys.argv) > 1 else "https://retselfernandez--galingo-backend.modal.run"
+TOKEN = os.environ.get("EXPORT_TOKEN", "")
 
 
 def fetch(url):
-    with urllib.request.urlopen(f"{url}/api/v1/export", timeout=180) as r:
+    req = urllib.request.Request(
+        f"{url}/api/v1/export", headers={"X-Admin-Token": TOKEN})
+    with urllib.request.urlopen(req, timeout=180) as r:
         return json.load(r)
 
 
