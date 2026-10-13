@@ -868,6 +868,39 @@
               }
             }
           ]
+        },
+        {
+          "id": "u1_P",
+          "title": "P",
+          "exercises": [
+            {
+              "id": "1P01",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Chámome Ana.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            },
+            {
+              "id": "1P02",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Como te chamas?",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            },
+            {
+              "id": "1P03",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "De onde es?",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            }
+          ]
         }
       ]
     },
@@ -1662,6 +1695,30 @@
                   "explanation": "Lleva tilde porque la «i» tónica rompe el diptongo."
                 }
               }
+            }
+          ]
+        },
+        {
+          "id": "u2_P",
+          "title": "P",
+          "exercises": [
+            {
+              "id": "2P01",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Podes repetir?",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            },
+            {
+              "id": "2P02",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Máis amodo, por favor.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
             }
           ]
         }
@@ -2533,6 +2590,21 @@
                   "explanation": "El texto dice «de luns a sábado», es decir, no abre el domingo."
                 }
               }
+            }
+          ]
+        },
+        {
+          "id": "u3_P",
+          "title": "P",
+          "exercises": [
+            {
+              "id": "3P01",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Son as dez.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
             }
           ]
         }
@@ -3423,6 +3495,39 @@
                   "explanation": "«A súa irmá» se refiere a la hermana de Brais."
                 }
               }
+            }
+          ]
+        },
+        {
+          "id": "u4_P",
+          "title": "P",
+          "exercises": [
+            {
+              "id": "4P01",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "A miña nai",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            },
+            {
+              "id": "4P02",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "O meu pai",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            },
+            {
+              "id": "4P03",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Os meus irmáns",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
             }
           ]
         }
@@ -4348,6 +4453,39 @@
                   "explanation": "El texto dice «novos»."
                 }
               }
+            }
+          ]
+        },
+        {
+          "id": "u5_P",
+          "title": "P",
+          "exercises": [
+            {
+              "id": "5P01",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "O coche é vermello.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            },
+            {
+              "id": "5P02",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "A casa é grande.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            },
+            {
+              "id": "5P03",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "A miña irmá é alta e simpática.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
             }
           ]
         }
@@ -5372,6 +5510,39 @@
               }
             }
           ]
+        },
+        {
+          "id": "u6_P",
+          "title": "P",
+          "exercises": [
+            {
+              "id": "6P01",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Quero un café.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            },
+            {
+              "id": "6P02",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Quero auga.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            },
+            {
+              "id": "6P03",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Teño fame.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            }
+          ]
         }
       ]
     },
@@ -6194,6 +6365,39 @@
                   "explanation": "El texto dice «no xardín»."
                 }
               }
+            }
+          ]
+        },
+        {
+          "id": "u7_P",
+          "title": "P",
+          "exercises": [
+            {
+              "id": "7P01",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "A casa ten tres cuartos.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            },
+            {
+              "id": "7P02",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Vivo nun piso.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            },
+            {
+              "id": "7P03",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "O meu cuarto é pequeno.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
             }
           ]
         }
@@ -7169,6 +7373,39 @@
               }
             }
           ]
+        },
+        {
+          "id": "u8_P",
+          "title": "P",
+          "exercises": [
+            {
+              "id": "8P01",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Levántome ás sete.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            },
+            {
+              "id": "8P02",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Almorzo ás oito.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            },
+            {
+              "id": "8P03",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Xanto ás dúas.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            }
+          ]
         }
       ]
     },
@@ -8089,6 +8326,39 @@
               }
             }
           ]
+        },
+        {
+          "id": "u9_P",
+          "title": "P",
+          "exercises": [
+            {
+              "id": "9P01",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Onde está a estación?",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            },
+            {
+              "id": "9P02",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Xira á dereita.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            },
+            {
+              "id": "9P03",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Segue todo recto.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            }
+          ]
         }
       ]
     },
@@ -8997,6 +9267,39 @@
               }
             }
           ]
+        },
+        {
+          "id": "u10_P",
+          "title": "P",
+          "exercises": [
+            {
+              "id": "10P01",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Canto custa?",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            },
+            {
+              "id": "10P02",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "É moi caro.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            },
+            {
+              "id": "10P03",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Quero unha camiseta azul.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            }
+          ]
         }
       ]
     },
@@ -9785,6 +10088,39 @@
                   "explanation": "El texto dice «dez graos»."
                 }
               }
+            }
+          ]
+        },
+        {
+          "id": "u11_P",
+          "title": "P",
+          "exercises": [
+            {
+              "id": "11P01",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Hoxe chove.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            },
+            {
+              "id": "11P02",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Fai sol.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            },
+            {
+              "id": "11P03",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Fai frío.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
             }
           ]
         }
@@ -10774,6 +11110,39 @@
                   "explanation": "El texto lo define así."
                 }
               }
+            }
+          ]
+        },
+        {
+          "id": "u12_P",
+          "title": "P",
+          "exercises": [
+            {
+              "id": "12P01",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Son profesora.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            },
+            {
+              "id": "12P02",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Gústame ler.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
+            },
+            {
+              "id": "12P03",
+              "type": "speech",
+              "category": "P",
+              "question": "Le en alto esta frase:",
+              "options": [],
+              "correctAnswer": "Gústame camiñar pola praia.",
+              "explanation": "Le a frase en voz alta; avaliarase a túa pronuncia."
             }
           ]
         }
