@@ -24,12 +24,6 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
-        // sherpa-onnx (ASR on-device) publica nativos por ABI; el paquete
-        // por defecto es arm64-v8a. Limitamos a arm64 para no generar APKs
-        // con ABI sin la librería nativa.
-        ndk {
-            abiFilters += listOf("arm64-v8a")
-        }
     }
 
     val keystorePropertiesFile = rootProject.file("key.properties")
