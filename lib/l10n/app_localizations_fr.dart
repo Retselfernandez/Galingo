@@ -314,6 +314,13 @@ class AppLocalizationsFr extends AppLocalizations {
       'Serveur vocal indisponible ; reconnaissance locale';
 
   @override
+  String get voiceModelLoading => 'Préparation du modèle vocal…';
+
+  @override
+  String get voiceOnDevice =>
+      'Reconnaissance vocale sur l\'appareil (sans internet)';
+
+  @override
   String get speechUnavailable => 'Reconnaissance vocale indisponible';
 
   @override

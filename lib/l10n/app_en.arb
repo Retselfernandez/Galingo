@@ -111,6 +111,8 @@
   "micPermissionDenied": "Microphone permission denied",
   "recordError": "Recording error",
   "voiceServerUnavailable": "Voice server unavailable; using local recognition",
+  "voiceModelLoading": "Preparing the voice model…",
+  "voiceOnDevice": "On-device speech recognition (no internet)",
   "speechUnavailable": "Speech recognition unavailable",
   "completePrevious": "Complete the previous lesson",
   "blockedLabel": "Locked",

@@ -111,6 +111,8 @@
   "micPermissionDenied": "Permissão de microfone negada",
   "recordError": "Erro ao gravar",
   "voiceServerUnavailable": "Servidor de voz indisponível; a usar reconhecimento local",
+  "voiceModelLoading": "A preparar o modelo de voz…",
+  "voiceOnDevice": "Reconhecimento de voz no dispositivo (sem internet)",
   "speechUnavailable": "Reconhecimento de voz indisponível",
   "completePrevious": "Completa a lição anterior",
   "blockedLabel": "Bloqueada",

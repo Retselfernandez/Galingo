@@ -41,8 +41,8 @@ dependencies:
   http: ^1.2.2
   connectivity_plus: ^6.0.5
   sensors_plus: ^6.0.1
-  speech_to_text: ^7.5.0
   record: ^7.1.1
+  sherpa_onnx: ^1.13.8
 
 dev_dependencies:
   flutter_test:
@@ -57,6 +57,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/exercises/
+    - assets/models/whisper-small/
     - assets/content/
     - assets/audio/
     - assets/audio/exercises/

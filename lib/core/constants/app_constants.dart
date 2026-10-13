@@ -39,10 +39,11 @@ class AppConstants {
   static const int xpPerPerfectLesson = 15;
   static const int streakBonusXp = 5;
 
-  // Voz / ASR (speech_to_text)
-  /// Similitud mínima (Levenshtein) para aprobar un ejercicio de voz.
-  /// No es 1.0 porque el ASR puede no tener gallego y transcribir con ruido.
-  static const double speechPassThreshold = 0.7;
+  // Voz / ASR (sherpa-onnx + Whisper, 100 % no dispositivo)
+  /// Similitud mínima (Levenshtein fonético) para aprobar un exercicio de voz.
+  /// Axustado ó ASR on-device: ~94 % de acertos en audio correcto e 0 falsos
+  /// positivos en frases cruzadas.
+  static const double speechPassThreshold = 0.65;
   /// Umbral para el mensaje intermedio ("case").
   static const double speechAlmostThreshold = 0.5;
 

@@ -315,6 +315,12 @@ class AppLocalizationsDe extends AppLocalizations {
       'Sprachserver nicht verfügbar; lokale Erkennung wird verwendet';
 
   @override
+  String get voiceModelLoading => 'Sprachmodell wird vorbereitet…';
+
+  @override
+  String get voiceOnDevice => 'Spracherkennung auf dem Gerät (ohne Internet)';
+
+  @override
   String get speechUnavailable => 'Spracherkennung nicht verfügbar';
 
   @override

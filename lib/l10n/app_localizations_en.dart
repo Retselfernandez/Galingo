@@ -312,6 +312,12 @@ class AppLocalizationsEn extends AppLocalizations {
       'Voice server unavailable; using local recognition';
 
   @override
+  String get voiceModelLoading => 'Preparing the voice model…';
+
+  @override
+  String get voiceOnDevice => 'On-device speech recognition (no internet)';
+
+  @override
   String get speechUnavailable => 'Speech recognition unavailable';
 
   @override

@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:galingo/presentation/widgets/speech/speech_exercise.dart';
+import 'package:galingo/core/services/asr_service.dart';
 
 void main() {
   group('textSimilarity', () {
@@ -14,6 +14,20 @@ void main() {
     });
     test('vacío devuelve 0', () {
       expect(textSimilarity('', 'Ola'), 0.0);
+    });
+    test('tolerante a díxitos e fonética galego/portugués (ASR on-device)', () {
+      expect(
+          textSimilarity('A casa ten tres cuartos.', 'Acá saten 3/4.'),
+          greaterThanOrEqualTo(0.65));
+      expect(textSimilarity('Levántome ás sete.', 'Levanto má 7.'),
+          greaterThanOrEqualTo(0.65));
+      expect(textSimilarity('A miña nai', 'Aminha na.'),
+          greaterThanOrEqualTo(0.65));
+    });
+    test('frase distinta non aproba', () {
+      expect(textSimilarity('Fai sol.', 'Vivo nun piso.'), lessThan(0.65));
+      expect(textSimilarity('Teño fame.', 'Quero unha camiseta azul.'),
+          lessThan(0.65));
     });
   });
 }

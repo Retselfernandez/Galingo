@@ -3,45 +3,14 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:record/record.dart';
-import 'package:speech_to_text/speech_to_text.dart' as stt;
 
 import 'package:galingo/l10n/app_localizations.dart';
 import 'package:galingo/core/constants/app_constants.dart';
-import 'package:galingo/core/services/voice_eval_service.dart';
+import 'package:galingo/core/services/asr_service.dart';
 
-/// Distancia Levenshtein normalizada → similitud 0..1 (fallback local).
-double textSimilarity(String a, String b) {
-  String clean(String s) => s
-      .toLowerCase()
-      .replaceAll(RegExp(r'[.,;:!?¿¡"()\x27]'), '')
-      .replaceAll(RegExp(r'\s+'), ' ')
-      .trim();
-  final x = clean(a);
-  final y = clean(b);
-  if (x.isEmpty || y.isEmpty) return 0.0;
-  final m = x.length, n = y.length;
-  final d = List.generate(m + 1, (_) => List.filled(n + 1, 0));
-  for (var i = 0; i <= m; i++) {
-    d[i][0] = i;
-  }
-  for (var j = 0; j <= n; j++) {
-    d[0][j] = j;
-  }
-  for (var i = 1; i <= m; i++) {
-    for (var j = 1; j <= n; j++) {
-      d[i][j] = x[i - 1] == y[j - 1]
-          ? d[i - 1][j - 1]
-          : 1 +
-              [d[i - 1][j], d[i][j - 1], d[i - 1][j - 1]]
-                  .reduce((v, e) => v < e ? v : e);
-    }
-  }
-  final dist = d[m][n];
-  return 1 - dist / (x.length > y.length ? x.length : y.length);
-}
-
-/// Ejercicio de voz: graba con el micrófono y evalúa contra el objetivo.
-/// Intenta el backend (Whisper gallego); si no responde, usa ASR local.
+/// Ejercicio de voz **offline**: graba con el micrófono y evalúa la pronuncia
+/// contra la frase objetivo usando el ASR on-device (sherpa-onnx + Whisper gl).
+/// El audio nunca sale del dispositivo.
 class SpeechExercise extends StatefulWidget {
   final String targetText;
   final ValueChanged<String> onTranscribed;
@@ -56,20 +25,21 @@ class SpeechExercise extends StatefulWidget {
 }
 
 class _SpeechExerciseState extends State<SpeechExercise> {
-  // Backend (grabación → POST)
   final AudioRecorder _recorder = AudioRecorder();
   bool _recording = false;
-  bool _busy = false;
-  bool _backendDown = false;
+  bool _busy = false; // transcribiendo
+  bool _preparing = false; // cargando/copiando el modelo
+  double _prepProgress = 0.0;
+  bool _modelReady = false;
   VoiceEvalResult? _result;
   String? _error;
 
-  // Fallback local (speech_to_text)
-  final stt.SpeechToText _speech = stt.SpeechToText();
-  bool _localReady = false;
-  bool _listening = false;
-  String _localTranscript = '';
-  double? _localSim;
+  @override
+  void initState() {
+    super.initState();
+    // Prepara el modelo en segundo plano (la 1ª vez copia ~370 MB).
+    _prepareModel();
+  }
 
   @override
   void dispose() {
@@ -77,9 +47,35 @@ class _SpeechExerciseState extends State<SpeechExercise> {
     super.dispose();
   }
 
-  // ─── Backend ─────────────────────────────────────────────────────────────
+  Future<void> _prepareModel() async {
+    if (_modelReady || _preparing) return;
+    setState(() {
+      _preparing = true;
+      _prepProgress = 0.0;
+      _error = null;
+    });
+    try {
+      await AsrService.instance.ensureReady(onProgress: (p) {
+        if (mounted) setState(() => _prepProgress = p);
+      });
+      if (mounted) {
+        setState(() {
+          _modelReady = true;
+          _preparing = false;
+        });
+      }
+    } catch (e) {
+      if (mounted) {
+        setState(() {
+          _preparing = false;
+          _error = '${AppLocalizations.of(context)!.recordError}: $e';
+        });
+      }
+    }
+  }
+
   Future<void> _toggleRecord() async {
-    if (_busy) return;
+    if (_busy || _preparing) return;
     if (_recording) {
       await _stopAndEval();
     } else {
@@ -88,24 +84,35 @@ class _SpeechExerciseState extends State<SpeechExercise> {
   }
 
   Future<void> _startRecording() async {
+    if (!_modelReady) {
+      await _prepareModel();
+      if (!_modelReady) return;
+    }
     try {
       if (!await _recorder.hasPermission()) {
-        setState(() => _error = AppLocalizations.of(context)!.micPermissionDenied);
+        setState(
+            () => _error = AppLocalizations.of(context)!.micPermissionDenied);
         return;
       }
       final dir = await getTemporaryDirectory();
       final path =
-          '${dir.path}/galingo_rec_${DateTime.now().millisecondsSinceEpoch}.m4a';
-      await _recorder.start(const RecordConfig(), path: path);
+          '${dir.path}/galingo_rec_${DateTime.now().millisecondsSinceEpoch}.wav';
+      await _recorder.start(
+        const RecordConfig(
+          encoder: AudioEncoder.wav,
+          sampleRate: 16000,
+          numChannels: 1,
+        ),
+        path: path,
+      );
       setState(() {
         _recording = true;
         _error = null;
         _result = null;
-        _localTranscript = '';
-        _localSim = null;
       });
     } catch (e) {
-      setState(() => _error = '${AppLocalizations.of(context)!.recordError}: $e');
+      setState(
+          () => _error = '${AppLocalizations.of(context)!.recordError}: $e');
     }
   }
 
@@ -119,65 +126,30 @@ class _SpeechExerciseState extends State<SpeechExercise> {
       setState(() => _busy = false);
       return;
     }
-    final res = await VoiceEvalService.instance.evaluar(
-      audioPath: path,
-      target: widget.targetText,
-      umbral: AppConstants.speechPassThreshold,
-    );
     try {
-      File(path).delete();
-    } catch (_) {}
-    if (!mounted) return;
-    if (res != null) {
+      final res = await AsrService.instance.evaluar(
+        audioPath: path,
+        target: widget.targetText,
+        umbral: AppConstants.speechPassThreshold,
+      );
       widget.onTranscribed(res.transcript);
+      if (!mounted) return;
       setState(() {
         _result = res;
         _busy = false;
         _error = null;
       });
-    } else {
+    } catch (e) {
+      if (!mounted) return;
       setState(() {
         _busy = false;
-        _backendDown = true;
-        _error = AppLocalizations.of(context)!.voiceServerUnavailable;
+        _error = '${AppLocalizations.of(context)!.recordError}: $e';
       });
-      await _initLocal();
+    } finally {
+      try {
+        File(path).delete();
+      } catch (_) {}
     }
-  }
-
-  // ─── Fallback local ────────────────────────────────────────────────────────
-  Future<void> _initLocal() async {
-    if (_localReady) return;
-    final ok = await _speech.initialize();
-    if (!mounted) return;
-    setState(() => _localReady = ok);
-    if (!ok) setState(() => _error = AppLocalizations.of(context)!.speechUnavailable);
-  }
-
-  Future<void> _toggleLocal() async {
-    if (!_localReady) await _initLocal();
-    if (!_localReady) return;
-    if (_listening) {
-      await _speech.stop();
-      setState(() => _listening = false);
-      return;
-    }
-    setState(() {
-      _listening = true;
-      _localTranscript = '';
-      _localSim = null;
-    });
-    await _speech.listen(
-      onResult: (r) {
-        final text = r.recognizedWords;
-        final sim = textSimilarity(text, widget.targetText);
-        widget.onTranscribed(text);
-        setState(() {
-          _localTranscript = text;
-          _localSim = sim;
-        });
-      },
-    );
   }
 
   @override
@@ -191,17 +163,41 @@ class _SpeechExerciseState extends State<SpeechExercise> {
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 20),
-        if (_backendDown) _buildLocalMic(context, l) else _buildRecordMic(l),
+        _buildMic(context),
         const SizedBox(height: 12),
+        if (_preparing) ...[
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            child: LinearProgressIndicator(
+              value: _prepProgress == 0 ? null : _prepProgress,
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            l.voiceModelLoading,
+            style: const TextStyle(color: Colors.grey, fontSize: 12),
+            textAlign: TextAlign.center,
+          ),
+        ],
         if (_busy)
-          const Padding(
-            padding: EdgeInsets.all(8),
-            child: CircularProgressIndicator(),
+          Padding(
+            padding: const EdgeInsets.all(8),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const SizedBox(
+                  width: 16,
+                  height: 16,
+                  child: CircularProgressIndicator(strokeWidth: 2),
+                ),
+                const SizedBox(width: 10),
+                Text(l.exSpeech,
+                    style: const TextStyle(color: Colors.grey, fontSize: 12)),
+              ],
+            ),
           ),
         if (_result != null) _buildResult(context, l, _result!),
-        if (_localTranscript.isNotEmpty && _result == null)
-          _buildLocalResult(context, l),
-        if (_error != null && _result == null && _localTranscript.isEmpty)
+        if (_error != null && _result == null)
           Padding(
             padding: const EdgeInsets.only(top: 8),
             child: Text(
@@ -210,32 +206,47 @@ class _SpeechExerciseState extends State<SpeechExercise> {
               textAlign: TextAlign.center,
             ),
           ),
+        if (_modelReady && _result == null && !_busy)
+          Padding(
+            padding: const EdgeInsets.only(top: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(Icons.offline_bolt, size: 14, color: Colors.grey),
+                const SizedBox(width: 4),
+                Text(
+                  l.voiceOnDevice,
+                  style: const TextStyle(color: Colors.grey, fontSize: 11),
+                ),
+              ],
+            ),
+          ),
       ],
     );
   }
 
-  Widget _buildRecordMic(AppLocalizations l) {
+  Widget _buildMic(BuildContext context) {
     return GestureDetector(
       onTap: _toggleRecord,
       child: CircleAvatar(
         radius: 36,
-        backgroundColor: _recording ? Colors.red : Theme.of(context).primaryColor,
-        child: Icon(
-          _recording ? Icons.stop : Icons.mic,
-          color: Colors.white,
-          size: 36,
-        ),
-      ),
-    );
-  }
-
-  Widget _buildLocalMic(BuildContext context, AppLocalizations l) {
-    return GestureDetector(
-      onTap: _toggleLocal,
-      child: CircleAvatar(
-        radius: 36,
-        backgroundColor: _listening ? Colors.red : Theme.of(context).primaryColor,
-        child: const Icon(Icons.mic, color: Colors.white, size: 36),
+        backgroundColor: _recording
+            ? Colors.red
+            : (_preparing
+                ? Colors.grey
+                : Theme.of(context).primaryColor),
+        child: _preparing
+            ? const SizedBox(
+                width: 28,
+                height: 28,
+                child: CircularProgressIndicator(
+                    strokeWidth: 3, color: Colors.white),
+              )
+            : Icon(
+                _recording ? Icons.stop : Icons.mic,
+                color: Colors.white,
+                size: 36,
+              ),
       ),
     );
   }
@@ -259,7 +270,9 @@ class _SpeechExerciseState extends State<SpeechExercise> {
         Text(
           res.aprobado
               ? '${l.speakExcellent} ($pct%)'
-              : '${l.speakKeepTrying} ($pct%)',
+              : (res.similitud >= AppConstants.speechAlmostThreshold
+                  ? '${l.speakAlmost} ($pct%) — ${l.speakRetry}'
+                  : '${l.speakKeepTrying} ($pct%)'),
           style: TextStyle(color: color, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 10),
@@ -288,36 +301,6 @@ class _SpeechExerciseState extends State<SpeechExercise> {
                     ),
                   ))
               .toList(),
-        ),
-      ],
-    );
-  }
-
-  Widget _buildLocalResult(BuildContext context, AppLocalizations l) {
-    final sim = _localSim ?? 0.0;
-    final pct = (sim * 100).round();
-    return Column(
-      children: [
-        Text(
-          _localTranscript,
-          style: const TextStyle(fontStyle: FontStyle.italic),
-          textAlign: TextAlign.center,
-        ),
-        const SizedBox(height: 8),
-        Text(
-          sim >= AppConstants.speechPassThreshold
-              ? '${l.speakExcellent} ($pct%)'
-              : sim >= AppConstants.speechAlmostThreshold
-                  ? '${l.speakAlmost} ($pct%) — ${l.speakRetry}'
-                  : '${l.speakKeepTrying} ($pct%)',
-          style: TextStyle(
-            color: sim >= AppConstants.speechPassThreshold
-                ? Colors.green
-                : (sim >= AppConstants.speechAlmostThreshold
-                    ? Colors.orange
-                    : Colors.red),
-            fontWeight: FontWeight.bold,
-          ),
         ),
       ],
     );

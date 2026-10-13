@@ -314,6 +314,13 @@ class AppLocalizationsPt extends AppLocalizations {
       'Servidor de voz indisponível; a usar reconhecimento local';
 
   @override
+  String get voiceModelLoading => 'A preparar o modelo de voz…';
+
+  @override
+  String get voiceOnDevice =>
+      'Reconhecimento de voz no dispositivo (sem internet)';
+
+  @override
   String get speechUnavailable => 'Reconhecimento de voz indisponível';
 
   @override
