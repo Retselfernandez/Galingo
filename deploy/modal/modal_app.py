@@ -38,6 +38,7 @@ data_vol = modal.Volume.from_name("galingo-data", create_if_missing=True)
 @app.function(
     image=image,
     volumes={"/models": models_vol, "/data": data_vol},
+    secrets=[modal.Secret.from_name("galingo-secrets")],
     cpu=2,
     memory=4096,
     timeout=600,
