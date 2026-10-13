@@ -83,3 +83,6 @@ backend/*.db
 
 # Capturas de testers (no versionar)
 Imagenes de reportes/
+
+# Caché de tradución de exercicios (xerada)
+tool/.i18n_cache.json
