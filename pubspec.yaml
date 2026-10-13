@@ -1,7 +1,7 @@
 name: galingo
 description: "Galingo — App de aprendizaxe do galego A1-A2. TFM."
 publish_to: 'none'
-version: 1.2.0+12
+version: 1.2.1+13
 
 environment:
   sdk: '>=3.3.0 <4.0.0'
