@@ -150,11 +150,11 @@ class AsrService {
   AsrService._();
   static final AsrService instance = AsrService._();
 
-  static const String _assetDir = 'assets/models/whisper-medium';
+  static const String _assetDir = 'assets/models/whisper';
   static const List<String> _files = <String>[
-    'medium-encoder.int8.onnx',
-    'medium-decoder.int8.onnx',
-    'medium-tokens.txt',
+    'encoder.int8.onnx',
+    'decoder.int8.onnx',
+    'tokens.txt',
   ];
 
   sherpa.OfflineRecognizer? _recognizer;
@@ -182,7 +182,7 @@ class AsrService {
     await sherpa.initBindingsAsync();
 
     final dir = await getApplicationSupportDirectory();
-    final modelDir = Directory('${dir.path}/whisper-medium');
+    final modelDir = Directory('${dir.path}/whisper');
     if (!await modelDir.exists()) {
       await modelDir.create(recursive: true);
     }
@@ -203,12 +203,12 @@ class AsrService {
       sherpa.OfflineRecognizerConfig(
         model: sherpa.OfflineModelConfig(
           whisper: sherpa.OfflineWhisperModelConfig(
-            encoder: '${modelDir.path}/medium-encoder.int8.onnx',
-            decoder: '${modelDir.path}/medium-decoder.int8.onnx',
+            encoder: '${modelDir.path}/encoder.int8.onnx',
+            decoder: '${modelDir.path}/decoder.int8.onnx',
             language: 'gl',
             task: 'transcribe',
           ),
-          tokens: '${modelDir.path}/medium-tokens.txt',
+          tokens: '${modelDir.path}/tokens.txt',
           modelType: 'whisper',
           numThreads: 4,
           debug: false,

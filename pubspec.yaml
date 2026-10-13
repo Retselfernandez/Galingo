@@ -57,7 +57,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/exercises/
-    - assets/models/whisper-medium/
+    - assets/models/whisper/
     - assets/content/
     - assets/audio/
     - assets/audio/exercises/

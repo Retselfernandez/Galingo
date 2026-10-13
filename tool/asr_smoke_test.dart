@@ -4,10 +4,10 @@ import 'package:sherpa_onnx/sherpa_onnx.dart' as sherpa;
 
 void main(List<String> args) {
   final dir = Platform.environment['ASR_MODEL_DIR'] ??
-      'assets/models/whisper-medium';
-  final enc = Platform.environment['ASR_ENCODER'] ?? 'medium-encoder.int8.onnx';
-  final dec = Platform.environment['ASR_DECODER'] ?? 'medium-decoder.int8.onnx';
-  final tok = Platform.environment['ASR_TOKENS'] ?? 'medium-tokens.txt';
+      'assets/models/whisper';
+  final enc = Platform.environment['ASR_ENCODER'] ?? 'encoder.int8.onnx';
+  final dec = Platform.environment['ASR_DECODER'] ?? 'decoder.int8.onnx';
+  final tok = Platform.environment['ASR_TOKENS'] ?? 'tokens.txt';
   sherpa.initBindings();
   final recognizer = sherpa.OfflineRecognizer(sherpa.OfflineRecognizerConfig(
     model: sherpa.OfflineModelConfig(
