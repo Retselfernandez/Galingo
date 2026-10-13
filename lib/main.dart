@@ -21,7 +21,8 @@ Future<bool> _initAppHelper() async {
     // Inicializar reproductor de sonido
     await AudioService.instance.init();
     final uid = await HiveRepository.instance.getOrCreateUserId();
-    TelemetryService.instance.init(uid);
+    await TelemetryService.instance.init(uid);
+    TelemetryService.instance.startSyncListener();
     await TelemetryService.instance.registerSession();
     return true;
   } catch (e) {

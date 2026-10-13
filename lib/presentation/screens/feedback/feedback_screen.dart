@@ -39,7 +39,7 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen> {
           .map((e) => e.toJson())
           .toList(),
     };
-    TelemetryService.instance.enqueueFeedback(payload);
+    await TelemetryService.instance.enqueueFeedback(payload);
     await TelemetryService.instance.sync();
     if (mounted) setState(() => _enviado = true);
   }
