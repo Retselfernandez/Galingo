@@ -18,6 +18,8 @@ void main() {
     expect(all.where((e) => e.type == ExerciseType.reading), isNotEmpty);
     expect(all.where((e) => e.type == ExerciseType.ordering), isNotEmpty);
     expect(all.where((e) => e.type == ExerciseType.image), isNotEmpty);
+    expect(all.where((e) => e.type == ExerciseType.dictation), isNotEmpty);
+    expect(all.where((e) => e.type == ExerciseType.speech), isNotEmpty);
 
     // Ordenar e imaxe necesitan opciones para poder mostrarse.
     for (final e in all.where((e) => e.type == ExerciseType.ordering)) {
