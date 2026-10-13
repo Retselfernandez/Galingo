@@ -1,7 +1,7 @@
 name: galingo
 description: "Galingo — App de aprendizaxe do galego A1-A2. TFM."
 publish_to: 'none'
-version: 1.2.1+13
+version: 1.2.2+14
 
 environment:
   sdk: '>=3.3.0 <4.0.0'
@@ -56,6 +56,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/images/exercises/
     - assets/content/
     - assets/audio/
     - assets/audio/exercises/
