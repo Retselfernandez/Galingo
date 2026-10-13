@@ -31,6 +31,7 @@ class HiveRepository implements MemoryRepository {
 
   static late Box _progressBox;
   static late Box _settingsBox;
+  static late Box _telemetryBox;
 
   @override
   Future<void> initialize({String? testPath}) async {
@@ -80,6 +81,10 @@ class HiveRepository implements MemoryRepository {
     );
     _settingsBox = await Hive.openBox(
       AppConstants.settingsBoxName,
+      encryptionCipher: HiveAesCipher(encryptionKey),
+    );
+    _telemetryBox = await Hive.openBox(
+      AppConstants.telemetryBoxName,
       encryptionCipher: HiveAesCipher(encryptionKey),
     );
   }
@@ -327,6 +332,36 @@ class HiveRepository implements MemoryRepository {
   @override
   Future<void> saveSettings(SettingsModel settings) async {
     await _settingsBox.put(_settingsKey, settings.toJson());
+  }
+
+  // ─── Telemetría (cola offline persistente) ─────────────────────────────────
+
+  static const String _telemetryKey = 'queue';
+
+  Map<String, dynamic> loadTelemetryQueue() {
+    final raw = _telemetryBox.get(_telemetryKey);
+    if (raw is Map) {
+      return {
+        'events': ((raw['events'] as List?) ?? [])
+            .map((e) => Map<String, dynamic>.from(e as Map))
+            .toList(),
+        'feedback': ((raw['feedback'] as List?) ?? [])
+            .map((e) => Map<String, dynamic>.from(e as Map))
+            .toList(),
+      };
+    }
+    return {'events': <dynamic>[], 'feedback': <dynamic>[]};
+  }
+
+  Future<void> saveTelemetryQueue(
+    List<Map<String, dynamic>> events,
+    List<Map<String, dynamic>> feedback,
+  ) async {
+    // Guardar copias para evitar aliasing con las listas en memoria del servicio.
+    await _telemetryBox.put(_telemetryKey, {
+      'events': events.map((e) => Map<String, dynamic>.from(e)).toList(),
+      'feedback': feedback.map((e) => Map<String, dynamic>.from(e)).toList(),
+    });
   }
 }
 

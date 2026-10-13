@@ -28,6 +28,7 @@ class AppConstants {
   static const String progressBoxName = 'galingo_progress';
   static const String userBoxName = 'galingo_user';
   static const String settingsBoxName = 'galingo_settings';
+  static const String telemetryBoxName = 'galingo_telemetry';
 
   // Asset Paths
   static const String gabiHappyImage = 'assets/images/gabi_happy.png';
