@@ -668,7 +668,7 @@
             },
             {
               "id": "1E03",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «Boas tardes»",
               "options": [],
@@ -684,7 +684,7 @@
             },
             {
               "id": "1E04",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «Como te chamas?»",
               "options": [],
@@ -1140,7 +1140,7 @@
             },
             {
               "id": "2E05",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «unha»",
               "options": [],
@@ -1156,7 +1156,7 @@
             },
             {
               "id": "2E06",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «ola»",
               "options": [],
@@ -1172,7 +1172,7 @@
             },
             {
               "id": "2E07",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «xoves»",
               "options": [],
@@ -1188,7 +1188,7 @@
             },
             {
               "id": "2E08",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «mañá»",
               "options": [],
@@ -1282,7 +1282,7 @@
             },
             {
               "id": "2E13",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «carballo»",
               "options": [],
@@ -1298,7 +1298,7 @@
             },
             {
               "id": "2E14",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «bos días»",
               "options": [],
@@ -2319,7 +2319,7 @@
             },
             {
               "id": "3E02",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe en cifras lo que oyes: «vinte e catro»",
               "options": [],
@@ -2335,7 +2335,7 @@
             },
             {
               "id": "3E03",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe en cifras lo que oyes: «corenta e sete»",
               "options": [],
@@ -2391,7 +2391,7 @@
             },
             {
               "id": "3E06",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «martes»",
               "options": [],
@@ -3226,7 +3226,7 @@
             },
             {
               "id": "4E03",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «a miña nai»",
               "options": [],
@@ -3242,7 +3242,7 @@
             },
             {
               "id": "4E04",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «os meus avós»",
               "options": [],
@@ -4150,7 +4150,7 @@
             },
             {
               "id": "5E03",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «vermello»",
               "options": [],
@@ -4166,7 +4166,7 @@
             },
             {
               "id": "5E04",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «branco»",
               "options": [],
@@ -5157,7 +5157,7 @@
             },
             {
               "id": "6E03",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «cervexa»",
               "options": [],
@@ -5173,7 +5173,7 @@
             },
             {
               "id": "6E04",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «empanada»",
               "options": [],
@@ -6016,7 +6016,7 @@
             },
             {
               "id": "7E03",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «cociña»",
               "options": [],
@@ -6032,7 +6032,7 @@
             },
             {
               "id": "7E04",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «xanela»",
               "options": [],
@@ -6954,7 +6954,7 @@
             },
             {
               "id": "8E03",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «traballo»",
               "options": [],
@@ -6970,7 +6970,7 @@
             },
             {
               "id": "8E04",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «sempre»",
               "options": [],
@@ -7855,7 +7855,7 @@
             },
             {
               "id": "9E03",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «autobús»",
               "options": [],
@@ -7871,7 +7871,7 @@
             },
             {
               "id": "9E04",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «farmacia»",
               "options": [],
@@ -8778,7 +8778,7 @@
             },
             {
               "id": "10E03",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «pantalóns»",
               "options": [],
@@ -8794,7 +8794,7 @@
             },
             {
               "id": "10E04",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «tarxeta»",
               "options": [],
@@ -9573,7 +9573,7 @@
             },
             {
               "id": "11E03",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «chuvia»",
               "options": [],
@@ -9589,7 +9589,7 @@
             },
             {
               "id": "11E04",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «outono»",
               "options": [],
@@ -10428,7 +10428,7 @@
             },
             {
               "id": "12E03",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «música»",
               "options": [],
@@ -10444,7 +10444,7 @@
             },
             {
               "id": "12E04",
-              "type": "speech",
+              "type": "dictation",
               "category": "E",
               "question": "Escribe lo que oyes: «profesor»",
               "options": [],

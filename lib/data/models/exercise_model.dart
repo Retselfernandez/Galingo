@@ -6,6 +6,7 @@ enum ExerciseType {
   audio,
   translation,
   speech,
+  dictation,
   reading,
   ordering,
   image;
@@ -19,6 +20,7 @@ enum ExerciseType {
       'audio' => ExerciseType.audio,
       'translation' => ExerciseType.translation,
       'speech' => ExerciseType.speech,
+      'dictation' => ExerciseType.dictation,
       'reading' => ExerciseType.reading,
       'ordering' => ExerciseType.ordering,
       'image' => ExerciseType.image,
@@ -34,6 +36,7 @@ enum ExerciseType {
       ExerciseType.audio => 'audio',
       ExerciseType.translation => 'translation',
       ExerciseType.speech => 'speech',
+      ExerciseType.dictation => 'dictation',
       ExerciseType.reading => 'reading',
       ExerciseType.ordering => 'ordering',
       ExerciseType.image => 'image',

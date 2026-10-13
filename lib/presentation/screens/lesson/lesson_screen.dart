@@ -77,6 +77,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   bool _showsTextInput(dynamic e) =>
       e.type == ExerciseType.translation ||
       e.type == ExerciseType.reading ||
+      e.type == ExerciseType.dictation ||
       (e.type == ExerciseType.fillBlank &&
           !(e.options as List).contains(e.correctAnswer));
 
@@ -186,7 +187,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       ExerciseType.matching => true,
       ExerciseType.translation ||
       ExerciseType.reading ||
-      ExerciseType.ordering =>
+      ExerciseType.ordering ||
+      ExerciseType.dictation =>
         _isFuzzyEqual(answer, exercise.correctAnswer),
       ExerciseType.fillBlank => exercise.options.isEmpty
           ? _isFuzzyEqual(answer, exercise.correctAnswer)
@@ -1173,6 +1175,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       ExerciseType.audio => '🔊 Audio',
       ExerciseType.translation => '🌐 Tradución',
       ExerciseType.speech => '🎤 Pronuncia',
+      ExerciseType.dictation => '🎧 Ditado',
       ExerciseType.reading => '📖 Lectura',
       ExerciseType.ordering => '🧩 Ordenar',
       ExerciseType.image => '🖼️ Imaxe',
