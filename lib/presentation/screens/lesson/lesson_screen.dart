@@ -575,6 +575,10 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           .replaceAll(RegExp(r'\s{2,}'), ' ')
           .trim();
     }
+    if (exercise.type == ExerciseType.image) {
+      // Quitar las opciones entre paréntesis: ahora se muestran como imágenes.
+      q = q.replaceAll(RegExp(r'\s*\([^)]*\)\s*$'), '').trim();
+    }
     return q.isEmpty ? (exercise.question as String) : q;
   }
 
@@ -664,8 +668,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
               ),
             const SizedBox(height: 14),
 
-            // Opciones (multiple choice / fill blank / image)
-            if (_shuffledOptions.isNotEmpty && exercise.options.contains(exercise.correctAnswer) && exercise.type != ExerciseType.matching && exercise.type != ExerciseType.speech && exercise.type != ExerciseType.ordering)
+            // Opciones de texto (multiple choice / fill blank)
+            if (_shuffledOptions.isNotEmpty && exercise.options.contains(exercise.correctAnswer) && exercise.type != ExerciseType.matching && exercise.type != ExerciseType.speech && exercise.type != ExerciseType.ordering && exercise.type != ExerciseType.image)
               Column(
                 children: [
                   for (var i = 0; i < _shuffledOptions.length; i++) ...[
@@ -675,6 +679,24 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                       const SizedBox(height: 8),
                   ],
                 ],
+              ),
+
+            // Opciones de imagen (image): tarjetas con ilustración
+            if (exercise.type == ExerciseType.image)
+              Padding(
+                padding: const EdgeInsets.only(top: 8),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    for (var i = 0; i < _shuffledOptions.length; i++) ...[
+                      if (i > 0) const SizedBox(width: 10),
+                      Expanded(
+                        child: _buildImageOption(context, _shuffledOptions[i],
+                            exercise.correctAnswer),
+                      ),
+                    ],
+                  ],
+                ),
               ),
 
             // Ejercicios de texto libre (traducción / lectura / hueco sin opciones)
@@ -834,6 +856,83 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         ),
       ),
     );
+  }
+
+  Widget _buildImageOption(
+      BuildContext context, String option, String correctAnswer) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    Color borderColor =
+        isDark ? Colors.white24 : AppTheme.primaryBlue.withValues(alpha: 0.2);
+    Color bgColor = isDark ? AppTheme.surfaceDark2 : AppTheme.surfaceBlue;
+
+    if (_isAnswered && _selectedAnswer == option) {
+      if (_isCorrect) {
+        borderColor = AppTheme.successGreen;
+        bgColor = AppTheme.successGreenLight;
+      } else {
+        borderColor = AppTheme.errorRed;
+        bgColor = AppTheme.errorRedLight;
+      }
+    } else if (_isAnswered && option == correctAnswer) {
+      borderColor = AppTheme.successGreen;
+      bgColor = AppTheme.successGreenLight;
+    }
+
+    return GestureDetector(
+      onTap: () => _checkAnswer(option),
+      child: AspectRatio(
+        aspectRatio: 1,
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 250),
+          decoration: BoxDecoration(
+            color: bgColor,
+            borderRadius: BorderRadius.circular(18),
+            border: Border.all(color: borderColor, width: 2.5),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              _imageWidget(option),
+              const SizedBox(height: 4),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 4),
+                child: Text(
+                  option,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.labelMedium?.copyWith(
+                        color: isDark ? Colors.white : AppTheme.textPrimary,
+                        fontWeight: FontWeight.w700,
+                      ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  /// Ilustración (emoji) para los ejercicios de imagen.
+  /// Si más adelante se añaden imágenes reales, sustituir por Image.asset.
+  Widget _imageWidget(String word) {
+    const emoji = {
+      'plátano': '🍌',
+      'platano': '🍌',
+      'tomate': '🍅',
+      'herba': '🌿',
+      'silla': '🪑',
+      'mesa': '🍽️',
+      'cama': '🛏️',
+      'sofá': '🛋️',
+      'sofa': '🛋️',
+      'puerta': '🚪',
+      'ventana': '🪟',
+      'armario': '🧥',
+    };
+    final e = emoji[word.toLowerCase()];
+    return Text(e ?? '🖼️', style: const TextStyle(fontSize: 40));
   }
 
   Widget _buildMatchingWidget(BuildContext context, dynamic exercise) {
