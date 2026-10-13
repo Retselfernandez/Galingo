@@ -149,15 +149,15 @@ class UnitNodeWidget extends StatelessWidget {
                                     color: AppTheme.successGreenLight,
                                     borderRadius: BorderRadius.circular(20),
                                   ),
-                                  child: Row(
+                                  child: const Row(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
-                                      const Icon(
+                                      Icon(
                                         Icons.check_circle_rounded,
                                         color: AppTheme.successGreen,
                                         size: 14,
                                       ),
-                                      const SizedBox(width: 4),
+                                      SizedBox(width: 4),
                                       Text(
                                         'Feita',
                                         style: TextStyle(

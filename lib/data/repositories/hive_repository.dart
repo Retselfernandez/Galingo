@@ -49,9 +49,7 @@ class HiveRepository implements MemoryRepository {
     } else {
       // Entorno de ejecución real: usar Keychain / Keystore dinámico con fallback si no hay provisión
       try {
-        const secureStorage = FlutterSecureStorage(
-          aOptions: AndroidOptions(encryptedSharedPreferences: true),
-        );
+        const secureStorage = FlutterSecureStorage();
         final keyString = await secureStorage.read(key: 'galingo_aes_key');
         if (keyString != null) {
           encryptionKey = base64Url.decode(keyString);

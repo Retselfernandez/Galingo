@@ -142,7 +142,7 @@ class AppTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
-        shadowColor: primaryBlue.withOpacity(0.1),
+        shadowColor: primaryBlue.withValues(alpha: 0.1),
       ),
       chipTheme: ChipThemeData(
         backgroundColor: surfaceBlue,
@@ -259,7 +259,7 @@ class AppTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
-        shadowColor: Colors.black.withOpacity(0.3),
+        shadowColor: Colors.black.withValues(alpha: 0.3),
       ),
       chipTheme: ChipThemeData(
         backgroundColor: surfaceDark2,

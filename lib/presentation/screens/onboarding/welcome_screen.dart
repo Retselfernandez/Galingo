@@ -30,12 +30,12 @@ class WelcomeScreen extends ConsumerWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Animate(
-                  effects: [
+                  effects: const [
                     ScaleEffect(
-                      begin: const Offset(0.7, 0.7),
-                      end: const Offset(1.0, 1.0),
+                      begin: Offset(0.7, 0.7),
+                      end: Offset(1.0, 1.0),
                       curve: Curves.elasticOut,
-                      duration: const Duration(milliseconds: 800),
+                      duration: Duration(milliseconds: 800),
                     ),
                   ],
                   child: GabiWidget(
@@ -50,13 +50,13 @@ class WelcomeScreen extends ConsumerWidget {
 
                 Animate(
                   delay: const Duration(milliseconds: 300),
-                  effects: [
-                    const FadeEffect(duration: Duration(milliseconds: 500)),
+                  effects: const [
+                    FadeEffect(duration: Duration(milliseconds: 500)),
                     SlideEffect(
-                      begin: const Offset(0, 0.3),
+                      begin: Offset(0, 0.3),
                       end: Offset.zero,
                       curve: Curves.easeOut,
-                      duration: const Duration(milliseconds: 500),
+                      duration: Duration(milliseconds: 500),
                     ),
                   ],
                   child: Text(
@@ -74,13 +74,13 @@ class WelcomeScreen extends ConsumerWidget {
 
                 Animate(
                   delay: const Duration(milliseconds: 500),
-                  effects: [
-                    const FadeEffect(duration: Duration(milliseconds: 500)),
+                  effects: const [
+                    FadeEffect(duration: Duration(milliseconds: 500)),
                     SlideEffect(
-                      begin: const Offset(0, 0.3),
+                      begin: Offset(0, 0.3),
                       end: Offset.zero,
                       curve: Curves.easeOut,
-                      duration: const Duration(milliseconds: 500),
+                      duration: Duration(milliseconds: 500),
                     ),
                   ],
                   child: Text(
@@ -97,13 +97,13 @@ class WelcomeScreen extends ConsumerWidget {
 
                 Animate(
                   delay: const Duration(milliseconds: 700),
-                  effects: [
-                    const FadeEffect(duration: Duration(milliseconds: 400)),
+                  effects: const [
+                    FadeEffect(duration: Duration(milliseconds: 400)),
                     SlideEffect(
-                      begin: const Offset(0, 0.3),
+                      begin: Offset(0, 0.3),
                       end: Offset.zero,
                       curve: Curves.easeOut,
-                      duration: const Duration(milliseconds: 400),
+                      duration: Duration(milliseconds: 400),
                     ),
                   ],
                   child: SizedBox(

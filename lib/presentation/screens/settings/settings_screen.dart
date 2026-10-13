@@ -1042,7 +1042,7 @@ class _FontOption extends StatelessWidget {
                   ),
                   Text(
                     font.description,
-                    style: TextStyle(fontSize: 11, color: AppTheme.textHint),
+                    style: const TextStyle(fontSize: 11, color: AppTheme.textHint),
                   ),
                 ],
               ),
