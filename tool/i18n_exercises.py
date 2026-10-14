@@ -26,6 +26,13 @@ KEEP_OPT = ['en gallego:', 'plural de', 'contracción de', 'femenino de',
             '¿cómo se escribe', '¿cómo se dice', '¿cómo se pregunta',
             '¿qué respondes', '¿qué sonido tiene', '¿cómo empieza']
 
+# Nomes propios / topónimos (unha soa palabra en maiúscula) -> non se traducen.
+PROPER = re.compile(r'^[A-ZÁÉÍÓÚÑÜ][a-záéíóúñü]+$')
+
+
+def _tr_opt(s, tl):
+    return s if PROPER.match(s.strip()) else mt(s, tl)
+
 _cache = {}
 if os.path.exists(CACHE_PATH):
     try:
@@ -152,7 +159,8 @@ def localize_question(e, tl):
             tr = mt(q[:idx + 1] + ' @@0@@', tl)
             return tr.replace('@@0@@', q[idx + 1:])
         return mt(q, tl)
-    if t in ('reading', 'dictation', 'fill_blank', 'image'):
+    if t in ('reading', 'dictation', 'fill_blank', 'image') or (
+            t == 'multiple_choice' and 'Audio:' in q):
         s, spans = _protect(q, t)
         tr = mt(s, tl)
         for i, sp in enumerate(spans):
@@ -171,8 +179,8 @@ def process(e, tl):
         entry['hint'] = mt(hint, tl)
     if e['type'] == 'multiple_choice':
         if not is_meaning_kept(e['question']):
-            entry['options'] = '\u0001'.join(mt_batch(e['options'], tl))
-            entry['correctAnswer'] = mt(e['correctAnswer'], tl)
+            entry['options'] = '\u0001'.join(_tr_opt(o, tl) for o in e['options'])
+            entry['correctAnswer'] = _tr_opt(e['correctAnswer'], tl)
     elif e['type'] == 'matching' and e.get('matchingPairs'):
         rights = [p.get('right', '') for p in e['matchingPairs']]
         tr = mt_batch(rights, tl)
@@ -211,8 +219,9 @@ def collect_strings(e):
     if e.get('hint'):
         out.append(e['hint'])
     if t == 'multiple_choice' and not is_meaning_kept(e['question']):
-        out.extend(e['options'])
-        out.append(e['correctAnswer'])
+        out.extend(o for o in e['options'] if not PROPER.match(o.strip()))
+        if not PROPER.match(e['correctAnswer'].strip()):
+            out.append(e['correctAnswer'])
     if t == 'matching' and e.get('matchingPairs'):
         out.extend(p.get('right', '') for p in e['matchingPairs'])
     return out

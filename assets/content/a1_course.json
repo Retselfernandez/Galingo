@@ -852,44 +852,44 @@
                 "en": {
                   "question": "What do you say to get attention politely (\"excuse me\")?",
                   "explanation": "\"Excuse me\" is the polite way of asking for attention or an apology.",
-                  "options": "Excuse me\u0001Ata logo\u0001Boas nights",
-                  "correctAnswer": "Excuse me"
+                  "options": "Desculpe\u0001Ata logo\u0001Boas nights",
+                  "correctAnswer": "Desculpe"
                 },
                 "de": {
                   "question": "Was sagen Sie, um höflich Aufmerksamkeit zu erregen („Entschuldigung“)?",
                   "explanation": "„Entschuldigung“ ist die höfliche Art, um Aufmerksamkeit oder Entschuldigung zu bitten.",
-                  "options": "Verzeihung\u0001Ata-Logo\u0001Boas-Nächte",
-                  "correctAnswer": "Verzeihung"
+                  "options": "Desculpe\u0001Ata-Logo\u0001Boas-Nächte",
+                  "correctAnswer": "Desculpe"
                 },
                 "fr": {
                   "question": "Que dites-vous pour attirer l'attention poliment (« excusez-moi ») ?",
                   "explanation": "« Excusez-moi » est une façon polie de demander de l'attention ou des excuses.",
-                  "options": "Excusez-moi\u0001Logo Ata\u0001Les nuits des boas",
-                  "correctAnswer": "Excusez-moi"
+                  "options": "Desculpe\u0001Logo Ata\u0001Les nuits des boas",
+                  "correctAnswer": "Desculpe"
                 },
                 "pt": {
                   "question": "O que você diria para chamar a atenção educadamente (“com licença”)?",
                   "explanation": "\"Com licença\" é a forma educada de pedir atenção ou um pedido de desculpas.",
-                  "options": "Com licença\u0001Logotipo da Ata\u0001Boas noites",
-                  "correctAnswer": "Com licença"
+                  "options": "Desculpe\u0001Logotipo da Ata\u0001Boas noites",
+                  "correctAnswer": "Desculpe"
                 },
                 "it": {
                   "question": "Cosa dici per attirare l'attenzione educatamente (\"scusami\")?",
                   "explanation": "\"Scusate\" è il modo educato per chiedere attenzione o scuse.",
-                  "options": "Mi scusi\u0001Il logo dell'Ata\u0001Notti di Boas",
-                  "correctAnswer": "Mi scusi"
+                  "options": "Desculpe\u0001Il logo dell'Ata\u0001Notti di Boas",
+                  "correctAnswer": "Desculpe"
                 },
                 "ro": {
                   "question": "Ce spui pentru a atrage atenția politicos („scuză-mă”)?",
                   "explanation": "„Scuzați-mă” este modul politicos de a cere atenție sau scuze.",
-                  "options": "Scuzați-mă\u0001Logo-ul Ata\u0001Nopți Boas",
-                  "correctAnswer": "Scuzați-mă"
+                  "options": "Desculpe\u0001Logo-ul Ata\u0001Nopți Boas",
+                  "correctAnswer": "Desculpe"
                 },
                 "zh": {
                   "question": "你会说什么来礼貌地引起注意（“对不起”）？",
                   "explanation": "“Excuse me”是请求注意或道歉的礼貌方式。",
-                  "options": "打扰一下\u0001阿塔标志\u0001博阿斯之夜",
-                  "correctAnswer": "打扰一下"
+                  "options": "Desculpe\u0001阿塔标志\u0001博阿斯之夜",
+                  "correctAnswer": "Desculpe"
                 }
               }
             },
@@ -1624,46 +1624,46 @@
                   "explanation": "El nombre aparece después de «chámome»."
                 },
                 "en": {
-                  "question": "Audio: «Hello, good morning! “Chámome Marta.” What's it called?",
+                  "question": "Audio: «Ola, bos días! Chámome Marta.» What's his name?",
                   "explanation": "The name appears after \"chámome.\"",
-                  "options": "Marten\u0001Maria\u0001Marine",
-                  "correctAnswer": "Marten"
+                  "options": "Marta\u0001María\u0001Marina",
+                  "correctAnswer": "Marta"
                 },
                 "de": {
-                  "question": "Audio: «Hallo, guten Morgen! „Chámome Marta.“ Wie heißt das?",
+                  "question": "Audio: «Ola, bos días! Chámome Marta.» Wie ist sein Name?",
                   "explanation": "Der Name erscheint nach „chámome“.",
-                  "options": "Marder\u0001Maria\u0001Marine",
-                  "correctAnswer": "Marder"
+                  "options": "Marta\u0001María\u0001Marina",
+                  "correctAnswer": "Marta"
                 },
                 "fr": {
-                  "question": "Audio : « Bonjour, bonjour ! « Chamome Marta. » Comment ça s'appelle ?",
+                  "question": "Audio : «Ola, bos días! Chámome Marta.» Quel est son nom ?",
                   "explanation": "Le nom apparaît après « chámome ».",
-                  "options": "Martre\u0001Marie\u0001Marin",
-                  "correctAnswer": "Martre"
+                  "options": "Marta\u0001María\u0001Marina",
+                  "correctAnswer": "Marta"
                 },
                 "pt": {
-                  "question": "Áudio: «Olá, bom dia! “Chamome Marta.” Como é chamado?",
+                  "question": "Áudio: «Ola, bos días! Chámome Marta.» Qual é o nome dele?",
                   "explanation": "O nome aparece depois de \"chámome\".",
-                  "options": "Marta\u0001Maria\u0001Marinho",
+                  "options": "Marta\u0001María\u0001Marina",
                   "correctAnswer": "Marta"
                 },
                 "it": {
-                  "question": "Audio: «Ciao, buongiorno! \"Chamome Marta.\" Come si chiama?",
+                  "question": "Audio: «Ola, bos días! Chámome Marta.» Come si chiama?",
                   "explanation": "Il nome appare dopo \"chámome\".",
-                  "options": "Martora\u0001Maria\u0001Marino",
-                  "correctAnswer": "Martora"
+                  "options": "Marta\u0001María\u0001Marina",
+                  "correctAnswer": "Marta"
                 },
                 "ro": {
-                  "question": "Audio: „Bună dimineața! „Chamome Marta.” Cum se numeste?",
+                  "question": "Audio: «Ola, bos días! Chámome Marta.» Cum îl cheamă?",
                   "explanation": "Numele apare după „chámome”.",
-                  "options": "Jder\u0001Maria\u0001Marin",
-                  "correctAnswer": "Jder"
+                  "options": "Marta\u0001María\u0001Marina",
+                  "correctAnswer": "Marta"
                 },
                 "zh": {
-                  "question": "音频：《你好，早上好！ “查莫·玛尔塔。”它叫什么？",
+                  "question": "音频：«Ola, bos días! Chámome Marta.» 他叫什么名字？",
                   "explanation": "该名称出现在“chámome”之后。",
-                  "options": "貂\u0001玛丽亚\u0001海洋",
-                  "correctAnswer": "貂"
+                  "options": "Marta\u0001María\u0001Marina",
+                  "correctAnswer": "Marta"
                 }
               },
               "audioAsset": "assets/audio/exercises/1E01.mp3"
@@ -1686,46 +1686,46 @@
                   "explanation": "«Son de» introduce el lugar de procedencia."
                 },
                 "en": {
-                  "question": "Audio: «They are from Vigo.» Where is it from?",
+                  "question": "Audio: «Son de Vigo.» Where are you from?",
                   "explanation": "\"They are from\" introduces the place of origin.",
-                  "options": "Vigo\u0001lugo\u0001Ourense",
+                  "options": "Vigo\u0001Lugo\u0001Ourense",
                   "correctAnswer": "Vigo"
                 },
                 "de": {
-                  "question": "Audio: „Sie kommen aus Vigo.“ Woher kommt es?",
+                  "question": "Audio: «Son de Vigo.» Woher kommst du?",
                   "explanation": "„Sie kommen aus“ stellt den Herkunftsort vor.",
-                  "options": "Vigo\u0001lugo\u0001Ourense",
+                  "options": "Vigo\u0001Lugo\u0001Ourense",
                   "correctAnswer": "Vigo"
                 },
                 "fr": {
-                  "question": "Audio: «Ils sont de Vigo.» D'où vient-il ?",
+                  "question": "Audio : «Son de Vigo.» D'où venez-vous ?",
                   "explanation": "\"Ils viennent de\" introduit le lieu d'origine.",
-                  "options": "Vigo\u0001lugo\u0001Orense",
+                  "options": "Vigo\u0001Lugo\u0001Ourense",
                   "correctAnswer": "Vigo"
                 },
                 "pt": {
-                  "question": "Áudio: «São de Vigo.» De onde é?",
+                  "question": "Áudio: «Son de Vigo.» De onde você é?",
                   "explanation": "“Eles são de” introduz o local de origem.",
                   "options": "Vigo\u0001Lugo\u0001Ourense",
                   "correctAnswer": "Vigo"
                 },
                 "it": {
-                  "question": "Audio: «Sono di Vigo.» Da dove viene?",
+                  "question": "Audio: «Son de Vigo.» Da dove vieni?",
                   "explanation": "\"Sono di\" introduce il luogo di origine.",
-                  "options": "Vigo\u0001lugo\u0001Ourense",
+                  "options": "Vigo\u0001Lugo\u0001Ourense",
                   "correctAnswer": "Vigo"
                 },
                 "ro": {
-                  "question": "Audio: „Sunt din Vigo.” De unde este?",
+                  "question": "Audio: «Son de Vigo.» De unde ești?",
                   "explanation": "„Sunt din” introduce locul de origine.",
-                  "options": "Vigo\u0001lugo\u0001Ourense",
+                  "options": "Vigo\u0001Lugo\u0001Ourense",
                   "correctAnswer": "Vigo"
                 },
                 "zh": {
-                  "question": "音频：“他们来自维戈。”它来自哪里？",
+                  "question": "音频：«Son de Vigo.» 你来自哪里？",
                   "explanation": "“他们来自”介绍了原产地。",
-                  "options": "维戈\u0001卢戈\u0001奥伦塞",
-                  "correctAnswer": "维戈"
+                  "options": "Vigo\u0001Lugo\u0001Ourense",
+                  "correctAnswer": "Vigo"
                 }
               },
               "audioAsset": "assets/audio/exercises/1E02.mp3"
@@ -1836,43 +1836,43 @@
                   "explanation": "«Moi ben» significa «muy bien»."
                 },
                 "en": {
-                  "question": "Audio: «Moi ben, thank you. And you? What does he answer?",
+                  "question": "Audio: «Moi ben, grazas. E ti?» What does he answer?",
                   "explanation": "\"Moi ben\" means \"very good.\"",
                   "options": "which is fine\u0001What's wrong\u0001What does the time ask?",
                   "correctAnswer": "which is fine"
                 },
                 "de": {
-                  "question": "Audio: „Moi Ben, danke. Und du? Was antwortet er?",
+                  "question": "Audio: «Moi ben, grazas. E ti?» Was antwortet er?",
                   "explanation": "„Moi ben“ bedeutet „sehr gut“.",
                   "options": "Das ist in Ordnung\u0001Was ist los?\u0001Was fragt die Zeit?",
                   "correctAnswer": "Das ist in Ordnung"
                 },
                 "fr": {
-                  "question": "Audio : « Moi ben, merci. Et toi? Que répond-il ?",
+                  "question": "Audio : «Moi ben, grazas. E ti?» Que répond-il ?",
                   "explanation": "« Moi ben » signifie « très bien ».",
                   "options": "ce qui est bien\u0001Qu'est-ce qui ne va pas\u0001Que demande le temps ?",
                   "correctAnswer": "ce qui est bien"
                 },
                 "pt": {
-                  "question": "Áudio: «Moi ben, obrigado. E você? O que ele responde?",
+                  "question": "Áudio: «Moi ben, grazas. E ti?» O que ele responde?",
                   "explanation": "\"Moi ben\" significa \"muito bom\".",
                   "options": "o que está bem\u0001O que está errado\u0001O que o tempo pede?",
                   "correctAnswer": "o que está bem"
                 },
                 "it": {
-                  "question": "Audio: «Moi ben, grazie. E tu? Cosa risponde?",
+                  "question": "Audio: «Moi ben, grazas. E ti?» Cosa risponde?",
                   "explanation": "\"Moi ben\" significa \"molto buono\".",
                   "options": "il che va bene\u0001Cosa c'è che non va?\u0001Cosa chiede il tempo?",
                   "correctAnswer": "il che va bene"
                 },
                 "ro": {
-                  "question": "Audio: «Moi ben, mulțumesc. Și tu? Ce raspunde el?",
+                  "question": "Audio: «Moi ben, grazas. E ti?» Ce răspunde?",
                   "explanation": "„Moi ben” înseamnă „foarte bine”.",
                   "options": "ceea ce este bine\u0001Ce s-a întâmplat\u0001Ce cere timpul?",
                   "correctAnswer": "ceea ce este bine"
                 },
                 "zh": {
-                  "question": "音频：《我本，谢谢你。你呢？他回答什么？",
+                  "question": "音频：«Moi ben, grazas. E ti?» 他回答什么？",
                   "explanation": "“Moi ben”的意思是“非常好”。",
                   "options": "这很好\u0001怎么了\u0001时间问什么？",
                   "correctAnswer": "这很好"
@@ -1898,43 +1898,43 @@
                   "explanation": "«Ata logo» es una despedida."
                 },
                 "en": {
-                  "question": "Audio: “Ata logo!” What does the person do?",
+                  "question": "Audio: «Ata logo!» What does the person do?",
                   "explanation": "«Ata logo» is a farewell.",
                   "options": "say hello\u0001says goodbye\u0001give thanks",
                   "correctAnswer": "says goodbye"
                 },
                 "de": {
-                  "question": "Audio: „Ata-Logo!“ Was macht die Person?",
+                  "question": "Audio: «Ata logo!» Was macht die Person?",
                   "explanation": "„Ata-Logo“ ist ein Abschied.",
                   "options": "Sag Hallo\u0001verabschiedet sich\u0001Danke sagen",
                   "correctAnswer": "verabschiedet sich"
                 },
                 "fr": {
-                  "question": "Audio : « Logo Ata ! » Que fait la personne ?",
+                  "question": "Audio : «Ata logo!» Que fait la personne ?",
                   "explanation": "«Ata logo» est un adieu.",
                   "options": "dire bonjour\u0001dit au revoir\u0001rendre grâce",
                   "correctAnswer": "dit au revoir"
                 },
                 "pt": {
-                  "question": "Áudio: “Logotipo Ata!” O que a pessoa faz?",
+                  "question": "Áudio: «Ata logo!» O que a pessoa faz?",
                   "explanation": "«Ata logo» é uma despedida.",
                   "options": "diga olá\u0001diz adeus\u0001dar graças",
                   "correctAnswer": "diz adeus"
                 },
                 "it": {
-                  "question": "Audio: “Logo Ata!” Cosa fa la persona?",
+                  "question": "Audio: «Ata logo!» Cosa fa la persona?",
                   "explanation": "«Ata logo» è un addio.",
                   "options": "saluta\u0001dice addio\u0001ringraziare",
                   "correctAnswer": "dice addio"
                 },
                 "ro": {
-                  "question": "Audio: „Ata logo!” Ce face persoana?",
+                  "question": "Audio: «Ata logo!» Ce face persoana respectivă?",
                   "explanation": "«Ata logo» este un rămas bun.",
                   "options": "salută\u0001spune la revedere\u0001multumeste",
                   "correctAnswer": "spune la revedere"
                 },
                 "zh": {
-                  "question": "音频：“Ata 标志！”这个人做什么？",
+                  "question": "音频：«Ata logo!» 此人做什么？",
                   "explanation": "“Ata标志”是一次告别。",
                   "options": "问好\u0001说再见\u0001感谢",
                   "correctAnswer": "说再见"
@@ -2882,31 +2882,31 @@
                   "explanation": "La x gallega suena como una «sh» suave."
                 },
                 "en": {
-                  "question": "Audio: \"xanthar\". How does it start?",
+                  "question": "Audio: «xantar». How does it start?",
                   "explanation": "The Galician x sounds like a soft \"sh\"."
                 },
                 "de": {
-                  "question": "Audio: „xanthar“. Wie fängt es an?",
+                  "question": "Audio: «xantar». Wie fängt es an?",
                   "explanation": "Das galizische x klingt wie ein leises „sh“."
                 },
                 "fr": {
-                  "question": "Audio : « xanthare ». Comment ça commence ?",
+                  "question": "Audio : «xantar». Comment ça commence ?",
                   "explanation": "Le x galicien sonne comme un doux \"sh\"."
                 },
                 "pt": {
-                  "question": "Áudio: \"xanthar\". Como isso começa?",
+                  "question": "Áudio: «xantar». Como isso começa?",
                   "explanation": "O x galego soa como um \"sh\" suave."
                 },
                 "it": {
-                  "question": "Audio: \"xanthar\". Come inizia?",
+                  "question": "Audio: «xantar». Come inizia?",
                   "explanation": "La x galiziana suona come una \"sh\" morbida."
                 },
                 "ro": {
-                  "question": "Audio: „xanthar”. Cum începe?",
+                  "question": "Audio: «xantar». Cum începe?",
                   "explanation": "X-ul din Galicia sună ca un „sh” moale."
                 },
                 "zh": {
-                  "question": "音频：“xanthar”。它是如何开始的？",
+                  "question": "音频：«xantar»。它是如何开始的？",
                   "explanation": "加利西亚语 x 听起来像轻柔的“sh”。"
                 }
               },
@@ -2930,31 +2930,31 @@
                   "explanation": "La «ch» suena como la «ch» castellana."
                 },
                 "en": {
-                  "question": "Audio: “chave”. What sound does “ch” have?",
+                  "question": "Audio: «chave». What does «ch» sound like?",
                   "explanation": "The \"ch\" sounds like the Spanish \"ch.\""
                 },
                 "de": {
-                  "question": "Audio: „chave“. Welchen Laut hat „ch“?",
+                  "question": "Audio: «chave». Wie klingt «ch»?",
                   "explanation": "Das „ch“ klingt wie das spanische „ch“."
                 },
                 "fr": {
-                  "question": "Audio : « chave ». Quel son a « ch » ?",
+                  "question": "Audio : «chave». À quoi ressemble «ch» ?",
                   "explanation": "Le « ch » ressemble au « ch » espagnol."
                 },
                 "pt": {
-                  "question": "Áudio: “chave”. Que som tem “ch”?",
+                  "question": "Áudio: «chave». Como é o som de «ch»?",
                   "explanation": "O \"ch\" soa como o \"ch\" espanhol."
                 },
                 "it": {
-                  "question": "Audio: “chave”. Che suono ha \"ch\"?",
+                  "question": "Audio: «chave». Che suono ha «ch»?",
                   "explanation": "La \"ch\" suona come la \"ch\" spagnola."
                 },
                 "ro": {
-                  "question": "Audio: „chave”. Ce sunet are „ch”?",
+                  "question": "Audio: «chave». Cum sună «ch»?",
                   "explanation": "„ch” sună ca „ch” spaniol."
                 },
                 "zh": {
-                  "question": "音频：“chave”。 “ch”发什么音？",
+                  "question": "音频：«chave»。 «ch» 听起来像什么？",
                   "explanation": "“ch”听起来像西班牙语“ch”。"
                 }
               },
@@ -2978,31 +2978,31 @@
                   "explanation": "La «ll» representa el sonido palatal de «ollo»."
                 },
                 "en": {
-                  "question": "Audio: \"ollo\". What sound does “ll” have?",
+                  "question": "Audio: «ollo». What does «ll» sound like?",
                   "explanation": "The \"ll\" represents the palatal sound of \"ollo.\""
                 },
                 "de": {
-                  "question": "Audio: „Ollo“. Welchen Laut hat „ll“?",
+                  "question": "Audio: «ollo». Wie klingt «ll»?",
                   "explanation": "Das „ll“ stellt den Gaumenklang von „ollo“ dar."
                 },
                 "fr": {
-                  "question": "Audio : \"ollo\". Quel son a « ll » ?",
+                  "question": "Audio : «ollo». À quoi ressemble «ll» ?",
                   "explanation": "Le « ll » représente le son palatin de « ollo »."
                 },
                 "pt": {
-                  "question": "Áudio: \"olá\". Que som tem “ll”?",
+                  "question": "Áudio: «ollo». Como é o som de «ll»?",
                   "explanation": "O “ll” representa o som palatino de “ollo”."
                 },
                 "it": {
-                  "question": "Audio: \"ollo\". Che suono ha il \"ll\"?",
+                  "question": "Audio: «ollo». Che suono ha «ll»?",
                   "explanation": "La \"ll\" rappresenta il suono palatale di \"ollo\"."
                 },
                 "ro": {
-                  "question": "Audio: „ollo”. Ce sunet are „ll”?",
+                  "question": "Audio: «ollo». Cum sună «ll»?",
                   "explanation": "„ll” reprezintă sunetul palatin al lui „ollo”."
                 },
                 "zh": {
-                  "question": "音频：“ollo”。 “ll”发什么音？",
+                  "question": "音频：«ollo»。 «ll» 听起来像什么？",
                   "explanation": "“ll”代表“o​​llo”的腭音。"
                 }
               },
@@ -3026,31 +3026,31 @@
                   "explanation": "La «ñ» es el sonido nasal palatal, igual que en castellano."
                 },
                 "en": {
-                  "question": "Audio: \"tomorrow.\" What sound does “ñ” have?",
+                  "question": "Audio: «mañá». What does «ñ» sound like?",
                   "explanation": "The \"ñ\" is the palatal nasal sound, the same as in Spanish."
                 },
                 "de": {
-                  "question": "Audio: „Morgen.“ Welchen Laut hat „ñ“?",
+                  "question": "Audio: «mañá». Wie klingt «ñ»?",
                   "explanation": "Das „ñ“ ist der palatinale Nasallaut, genau wie im Spanischen."
                 },
                 "fr": {
-                  "question": "Audio : « demain ». Quel son a le « ñ » ?",
+                  "question": "Audio : «mañá». À quoi ressemble «ñ» ?",
                   "explanation": "Le \"ñ\" est le son nasal palatin, le même qu'en espagnol."
                 },
                 "pt": {
-                  "question": "Áudio: \"amanhã\". Que som tem “ñ”?",
+                  "question": "Áudio: «mañá». Como é o som de «ñ»?",
                   "explanation": "O \"ñ\" é o som nasal palatino, igual ao espanhol."
                 },
                 "it": {
-                  "question": "Audio: \"domani\". Che suono ha la “ñ”?",
+                  "question": "Audio: «mañá». Che suono ha «ñ»?",
                   "explanation": "La \"ñ\" è il suono nasale palatale, lo stesso dello spagnolo."
                 },
                 "ro": {
-                  "question": "Audio: „mâine”. Ce sunet are „ñ”?",
+                  "question": "Audio: «mañá». Cum sună «ñ»?",
                   "explanation": "„ñ” este sunetul nazal palatin, la fel ca în spaniolă."
                 },
                 "zh": {
-                  "question": "音频：“明天。” “ñ”发什么音？",
+                  "question": "音频：«mañá»。 «ñ» 听起来像什么？",
                   "explanation": "“ñ”是腭鼻音，与西班牙语相同。"
                 }
               },
@@ -3249,43 +3249,43 @@
                   "explanation": "La tilde marca la sílaba tónica: a-VÓ."
                 },
                 "en": {
-                  "question": "Audio: “avó”. Where does the accent fall?",
+                  "question": "Audio: «avó». Where does the accent fall?",
                   "explanation": "The accent marks the stressed syllable: a-VÓ.",
                   "options": "in the last syllable\u0001in the first",
                   "correctAnswer": "in the last syllable"
                 },
                 "de": {
-                  "question": "Audio: „avó“. Wo liegt der Akzent?",
+                  "question": "Audio: «avó». Wo liegt der Akzent?",
                   "explanation": "Der Akzent markiert die betonte Silbe: a-VÓ.",
                   "options": "in der letzten Silbe\u0001im ersten",
                   "correctAnswer": "in der letzten Silbe"
                 },
                 "fr": {
-                  "question": "Audio : « avó ». Où tombe l’accent ?",
+                  "question": "Audio : «avó». Où tombe l’accent ?",
                   "explanation": "L'accent marque la syllabe accentuée : a-VÓ.",
                   "options": "dans la dernière syllabe\u0001dans le premier",
                   "correctAnswer": "dans la dernière syllabe"
                 },
                 "pt": {
-                  "question": "Áudio: “avó”. Onde cai o sotaque?",
+                  "question": "Áudio: «avó». Onde cai o sotaque?",
                   "explanation": "O acento marca a sílaba tônica: a-VÓ.",
                   "options": "na última sílaba\u0001no primeiro",
                   "correctAnswer": "na última sílaba"
                 },
                 "it": {
-                  "question": "Audio: “avó”. Dove cade l'accento?",
+                  "question": "Audio: «avó». Dove cade l'accento?",
                   "explanation": "L'accento segna la sillaba accentata: a-VÓ.",
                   "options": "nell'ultima sillaba\u0001nel primo",
                   "correctAnswer": "nell'ultima sillaba"
                 },
                 "ro": {
-                  "question": "Audio: „avó”. Unde cade accentul?",
+                  "question": "Audio: «avó». Unde cade accentul?",
                   "explanation": "Accentul marchează silaba accentuată: a-VÓ.",
                   "options": "în ultima silabă\u0001în primul",
                   "correctAnswer": "în ultima silabă"
                 },
                 "zh": {
-                  "question": "音频：“avó”。口音落在哪里？",
+                  "question": "音频：«avó»。口音落在哪里？",
                   "explanation": "重音标记了重读音节：a-VÓ。",
                   "options": "在最后一个音节中\u0001在第一个",
                   "correctAnswer": "在最后一个音节中"
@@ -3322,7 +3322,7 @@
                   "correctAnswer": "ja, es ist eine Variante"
                 },
                 "fr": {
-                  "question": "Audio : « galego » prononcé avec gheada (/h/). Est-ce une prononciation valide ?",
+                  "question": "Audio : «galego» prononcé avec gheada (/h/). Est-ce une prononciation valide ?",
                   "explanation": "Gheada est une variante dialectale acceptée du discours galicien.",
                   "options": "oui, c'est une variante\u0001Non",
                   "correctAnswer": "oui, c'est une variante"
@@ -3340,13 +3340,13 @@
                   "correctAnswer": "sì, è una variante"
                 },
                 "ro": {
-                  "question": "Audio: «galego» pronunțat cu gheada (/h/). Este o pronunție validă?",
+                  "question": "Audio: «galego» pronuntat cu gheada (/h/). Este o pronunție validă?",
                   "explanation": "Gheada este o variantă de dialect acceptată a vorbirii galice.",
                   "options": "da, este o varianta\u0001Nu",
                   "correctAnswer": "da, este o varianta"
                 },
                 "zh": {
-                  "question": "音频：《galego》发音为 gheada (/h/)。这是一个有效的发音吗？",
+                  "question": "音频：«galego» 用 gheada (/h/) 发音。这是一个有效的发音吗？",
                   "explanation": "格赫达 (Gheada) 是加利西亚语的一种公认的方言变体。",
                   "options": "是的，这是一个变体\u0001不",
                   "correctAnswer": "是的，这是一个变体"
@@ -3384,7 +3384,7 @@
                   "correctAnswer": "2"
                 },
                 "fr": {
-                  "question": "Audio : « Vigo ». Combien de syllabes a-t-il ?",
+                  "question": "Audio : «Vigo». Combien de syllabes a-t-il ?",
                   "explanation": "Vi-go se sépare.",
                   "options": "2\u00011\u00013",
                   "correctAnswer": "2"
@@ -3408,7 +3408,7 @@
                   "correctAnswer": "2"
                 },
                 "zh": {
-                  "question": "音频：《维戈》。它有多少个音节？",
+                  "question": "音频：«Vigo»。它有多少个音节？",
                   "explanation": "维戈分开了。",
                   "options": "2\u00011\u00013",
                   "correctAnswer": "2"
@@ -3434,43 +3434,43 @@
                   "explanation": "Se separa car-ba-llo."
                 },
                 "en": {
-                  "question": "Audio: \"carballo\". How many syllables does it have?",
+                  "question": "Audio: «carballo». How many syllables does it have?",
                   "explanation": "Car-ba-llo is separated.",
                   "options": "3\u00012\u00014",
                   "correctAnswer": "3"
                 },
                 "de": {
-                  "question": "Audio: „carballo“. Wie viele Silben hat es?",
+                  "question": "Audio: «carballo». Wie viele Silben hat es?",
                   "explanation": "Car-ba-llo ist getrennt.",
                   "options": "3\u00012\u00014",
                   "correctAnswer": "3"
                 },
                 "fr": {
-                  "question": "Audio : \"carballo\". Combien de syllabes a-t-il ?",
+                  "question": "Audio : «carballo». Combien de syllabes a-t-il ?",
                   "explanation": "Car-ba-llo est séparé.",
                   "options": "3\u00012\u00014",
                   "correctAnswer": "3"
                 },
                 "pt": {
-                  "question": "Áudio: \"carballo\". Quantas sílabas tem?",
+                  "question": "Áudio: «carballo». Quantas sílabas tem?",
                   "explanation": "Car-ba-llo está separado.",
                   "options": "3\u00012\u00014",
                   "correctAnswer": "3"
                 },
                 "it": {
-                  "question": "Audio: \"carballo\". Quante sillabe ha?",
+                  "question": "Audio: «carballo». Quante sillabe ha?",
                   "explanation": "Car-ba-llo è separato.",
                   "options": "3\u00012\u00014",
                   "correctAnswer": "3"
                 },
                 "ro": {
-                  "question": "Audio: \"carballo\". Câte silabe are?",
+                  "question": "Audio: «carballo». Câte silabe are?",
                   "explanation": "Car-ba-llo este separat.",
                   "options": "3\u00012\u00014",
                   "correctAnswer": "3"
                 },
                 "zh": {
-                  "question": "音频：“卡巴洛”。它有多少个音节？",
+                  "question": "音频：«carballo»。它有多少个音节？",
                   "explanation": "Car-ba-llo 被分开了。",
                   "options": "3\u00012\u00014",
                   "correctAnswer": "3"
@@ -3584,43 +3584,43 @@
                   "explanation": "La «u» no se pronuncia en «que» y «qui»."
                 },
                 "en": {
-                  "question": "Audio: “queixo”. What does “wh” sound like?",
+                  "question": "Audio: «queixo». What does «qu» sound like?",
                   "explanation": "The \"u\" is not pronounced in \"que\" and \"qui.\"",
                   "options": "/k/\u0001/kw/\u0001/tʃ/",
                   "correctAnswer": "/k/"
                 },
                 "de": {
-                  "question": "Audio: „queixo“. Wie klingt „wh“?",
+                  "question": "Audio: «queixo». Wie klingt «qu»?",
                   "explanation": "Das „u“ wird in „que“ und „qui“ nicht ausgesprochen.",
                   "options": "/k/\u0001/kw/\u0001/tʃ/",
                   "correctAnswer": "/k/"
                 },
                 "fr": {
-                  "question": "Audio : « queixo ». À quoi ressemble « quoi » ?",
+                  "question": "Audio : «queixo». À quoi ressemble «qu» ?",
                   "explanation": "Le « u » ne se prononce pas dans « que » et « qui ».",
                   "options": "/k/\u0001/kw/\u0001/tʃ/",
                   "correctAnswer": "/k/"
                 },
                 "pt": {
-                  "question": "Áudio: “queixo”. Como é o som de “wh”?",
+                  "question": "Áudio: «queixo». Como é o som de «qu»?",
                   "explanation": "O “u” não é pronunciado em “que” e “qui”.",
                   "options": "/k/\u0001/kw/\u0001/tʃ/",
                   "correctAnswer": "/k/"
                 },
                 "it": {
-                  "question": "Audio: “queixo”. Che suono ha \"wh\"?",
+                  "question": "Audio: «queixo». Che suono ha «qu»?",
                   "explanation": "La \"u\" non si pronuncia in \"que\" e \"qui\".",
                   "options": "/k/\u0001/kw/\u0001/tʃ/",
                   "correctAnswer": "/k/"
                 },
                 "ro": {
-                  "question": "Audio: „queixo”. Cum sună „wh”?",
+                  "question": "Audio: «queixo». Cum sună «qu»?",
                   "explanation": "„u” nu se pronunță în „que” și „qui”.",
                   "options": "/k/\u0001/kw/\u0001/tʃ/",
                   "correctAnswer": "/k/"
                 },
                 "zh": {
-                  "question": "音频：“queixo”。 “wh”听起来像什么？",
+                  "question": "音频：«queixo»。 «qu» 听起来像什么？",
                   "explanation": "“que”和“qui”中的“u”不发音。",
                   "options": "/k/\u0001/千瓦/\u0001/tʃ/",
                   "correctAnswer": "/k/"
@@ -3646,43 +3646,43 @@
                   "explanation": "«Xeado» es el helado; viene de «xear» (helar)."
                 },
                 "en": {
-                  "question": "Audio: \"xado\". What is it?",
+                  "question": "Audio: «xeado». What is it?",
                   "explanation": "\"Xeado\" is ice cream; It comes from \"xear\" (to freeze).",
                   "options": "frozen\u0001inherited\u0001angry",
                   "correctAnswer": "frozen"
                 },
                 "de": {
-                  "question": "Audio: „xado“. Was ist das?",
+                  "question": "Audio: «xeado». Was ist das?",
                   "explanation": "„Xeado“ ist Eis; Es kommt von „xear“ (einfrieren).",
                   "options": "gefroren\u0001geerbt\u0001wütend",
                   "correctAnswer": "gefroren"
                 },
                 "fr": {
-                  "question": "Audio : \"xado\". Qu'est-ce que c'est?",
+                  "question": "Audio : «xeado». Qu'est-ce que c'est?",
                   "explanation": "\"Xeado\" est une glace ; Cela vient de \"xear\" (geler).",
                   "options": "congelé\u0001hérité\u0001en colère",
                   "correctAnswer": "congelé"
                 },
                 "pt": {
-                  "question": "Áudio: \"xado\". O que é?",
+                  "question": "Áudio: «xeado». O que é?",
                   "explanation": "“Xeado” é sorvete; Vem de \"xear\" (congelar).",
                   "options": "congelado\u0001herdado\u0001nervoso",
                   "correctAnswer": "congelado"
                 },
                 "it": {
-                  "question": "Audio: \"xado\". Che cos'è?",
+                  "question": "Audio: «xeado». Che cos'è?",
                   "explanation": "\"Xeado\" è il gelato; Deriva da \"xear\" (congelare).",
                   "options": "congelato\u0001ereditato\u0001arrabbiato",
                   "correctAnswer": "congelato"
                 },
                 "ro": {
-                  "question": "Audio: „xado”. Ce este?",
+                  "question": "Audio: «xeado». Ce este?",
                   "explanation": "„Xeado” este înghețată; Vine de la „xear” (a îngheța).",
                   "options": "îngheţat\u0001moştenit\u0001supărat",
                   "correctAnswer": "îngheţat"
                 },
                 "zh": {
-                  "question": "音频：“xado”。它是什么？",
+                  "question": "音频：«xeado»。它是什么？",
                   "explanation": "“Xeado”是冰淇淋；它来自“xear”（冻结）。",
                   "options": "冷冻的\u0001遗传\u0001生气的",
                   "correctAnswer": "冷冻的"
@@ -6146,43 +6146,43 @@
                   "explanation": "«Oito e media» son las ocho y media."
                 },
                 "en": {
-                  "question": "Audio: «They are as oito e media.» What time is it?",
+                  "question": "Audio: «Son as oito e media.» What time is it?",
                   "explanation": "“Oito e media” is half past eight.",
                   "options": "8:30\u00017:30\u00019:30",
                   "correctAnswer": "8:30"
                 },
                 "de": {
-                  "question": "Audio: „Sie sind wie oito e media.“ Wie spät ist es?",
+                  "question": "Audio: «Son as oito e media.» Wie spät ist es?",
                   "explanation": "„Oito e media“ ist halb acht.",
                   "options": "8:30\u00017:30\u00019:30",
                   "correctAnswer": "8:30"
                 },
                 "fr": {
-                  "question": "Audio : «Ils sont comme oito e media.» Quelle heure est-il?",
+                  "question": "Audio : «Son as oito e media.» Quelle heure est-il ?",
                   "explanation": "« Oito e media » est huit heures et demie.",
                   "options": "8h30\u00017h30\u00019h30",
                   "correctAnswer": "8h30"
                 },
                 "pt": {
-                  "question": "Áudio: «São as oito e media.» Que horas são?",
+                  "question": "Áudio: «Son as oito e media.» Que horas são?",
                   "explanation": "“Oito e media” são oito e meia.",
                   "options": "8h30\u00017h30\u00019h30",
                   "correctAnswer": "8h30"
                 },
                 "it": {
-                  "question": "Audio: «Sono come oito e media.» Che ore sono?",
+                  "question": "Audio: «Son as oito e media.» Che ore sono?",
                   "explanation": "“Oito e media” sono le otto e mezza.",
                   "options": "8:30\u00017:30\u00019:30",
                   "correctAnswer": "8:30"
                 },
                 "ro": {
-                  "question": "Audio: „Sunt la fel de oito e media.” Cât este ceasul?",
+                  "question": "Audio: «Son as oito e media.» Cât este ceasul?",
                   "explanation": "„Oito e media” este opt și jumătate.",
                   "options": "8:30\u00017:30\u00019:30",
                   "correctAnswer": "8:30"
                 },
                 "zh": {
-                  "question": "音频：“他们是 oito e 媒体。”现在是几奌？",
+                  "question": "音频：«Son as oito e media.» 现在几点了？",
                   "explanation": "“Oito e media”是八点半。",
                   "options": "8:30\u00017:30\u00019:30",
                   "correctAnswer": "8:30"
@@ -6302,13 +6302,13 @@
                   "correctAnswer": "Friday"
                 },
                 "de": {
-                  "question": "Audio: „Hoxe é venres.“ Welcher Tag ist heute?",
+                  "question": "Audio: «Hoxe é venres.» Welcher Tag ist heute?",
                   "explanation": "„Venres“ ist Freitag.",
                   "options": "Freitag\u0001Donnerstag\u0001Samstag",
                   "correctAnswer": "Freitag"
                 },
                 "fr": {
-                  "question": "Audio : «Hoxe é venres.» Quel jour est-on ?",
+                  "question": "Audio : «Hoxe é venres.» Quel jour sommes-nous ?",
                   "explanation": "\"Venres\", c'est vendredi.",
                   "options": "Vendredi\u0001Jeudi\u0001Samedi",
                   "correctAnswer": "Vendredi"
@@ -6326,13 +6326,13 @@
                   "correctAnswer": "Venerdì"
                 },
                 "ro": {
-                  "question": "Audio: «Hoxe é vineri.» ce zi este?",
+                  "question": "Audio: «Hoxe é venres.» Ce zi este?",
                   "explanation": "„Venres” este vineri.",
                   "options": "vineri\u0001joi\u0001sâmbătă",
                   "correctAnswer": "vineri"
                 },
                 "zh": {
-                  "question": "音频：《Hoxe é venres》。今天是什么日子？",
+                  "question": "音频：«Hoxe é venres.» 今天星期几？",
                   "explanation": "“凡雷斯”是星期五。",
                   "options": "星期五\u0001周四\u0001周六",
                   "correctAnswer": "星期五"
@@ -6358,43 +6358,43 @@
                   "explanation": "«Xullo» es julio."
                 },
                 "en": {
-                  "question": "Audio: «O my anniversary is the last one.» What month?",
+                  "question": "Audio: «O meu aniversario é o dez de xullo.» What month?",
                   "explanation": "«Xullo» is July.",
                   "options": "July\u0001June\u0001August",
                   "correctAnswer": "July"
                 },
                 "de": {
-                  "question": "Audio: „O mein Jahrestag ist der letzte.“ Welcher Monat?",
+                  "question": "Audio: «O meu aniversario é o dez de xullo.» Welcher Monat?",
                   "explanation": "«Xullo» ist Juli.",
                   "options": "Juli\u0001Juni\u0001August",
                   "correctAnswer": "Juli"
                 },
                 "fr": {
-                  "question": "Audio : «Ô mon anniversaire est le dernier.» Quel mois ?",
+                  "question": "Audio : «O meu aniversario é o dez de xullo.» Quel mois ?",
                   "explanation": "«Xullo» c'est juillet.",
                   "options": "Juillet\u0001Juin\u0001Août",
                   "correctAnswer": "Juillet"
                 },
                 "pt": {
-                  "question": "Áudio: «Oh, meu aniversário é o último.» Em que mês?",
+                  "question": "Áudio: «O meu aniversario é o dez de xullo.» Em que mês?",
                   "explanation": "«Xullo» é julho.",
                   "options": "Julho\u0001Junho\u0001Agosto",
                   "correctAnswer": "Julho"
                 },
                 "it": {
-                  "question": "Audio: «Oh, il mio anniversario è l'ultimo.» Che mese?",
+                  "question": "Audio: «O meu aniversario é o dez de xullo.» Che mese?",
                   "explanation": "«Xullo» è luglio.",
                   "options": "Luglio\u0001Giugno\u0001agosto",
                   "correctAnswer": "Luglio"
                 },
                 "ro": {
-                  "question": "Audio: „O, aniversarea mea este ultima.” Ce lună?",
+                  "question": "Audio: «O meu aniversario é o dez de xullo.» În ce lună?",
                   "explanation": "«Xullo» este iulie.",
                   "options": "iulie\u0001iunie\u0001august",
                   "correctAnswer": "iulie"
                 },
                 "zh": {
-                  "question": "音频：“哦，我的周年纪念日是最后一个。”什么月份？",
+                  "question": "音频：«O meu aniversario é o dez de xullo.» 几月？",
                   "explanation": "“Xullo”是七月。",
                   "options": "七月\u0001六月\u0001八月",
                   "correctAnswer": "七月"
@@ -8535,43 +8535,43 @@
                   "explanation": "Dos hermanos y una hermana suman tres."
                 },
                 "en": {
-                  "question": "Audio: \"Teño dous irmáns e unha irmá.\" How many siblings do you have?",
+                  "question": "Audio: «Teño dous irmáns e unha irmá.» How many siblings do you have?",
                   "explanation": "Two brothers and a sister make three.",
                   "options": "three\u0001two\u0001one",
                   "correctAnswer": "three"
                 },
                 "de": {
-                  "question": "Audio: „Teño dous irmáns e unha irmá.“ Wie viele Geschwister hast du?",
+                  "question": "Audio: «Teño dous irmáns e unha irmá.» Wie viele Geschwister hast du?",
                   "explanation": "Zwei Brüder und eine Schwester ergeben drei.",
                   "options": "drei\u0001zwei\u0001eins",
                   "correctAnswer": "drei"
                 },
                 "fr": {
-                  "question": "Audio : « Teño dous irmáns e unha irmá ». Combien de frères et sœurs as-tu ?",
+                  "question": "Audio : «Teño dous irmáns e unha irmá.» Combien de frères et sœurs avez-vous ?",
                   "explanation": "Deux frères et une sœur font trois.",
                   "options": "trois\u0001deux\u0001un",
                   "correctAnswer": "trois"
                 },
                 "pt": {
-                  "question": "Áudio: \"Teño dous irmáns e uma irmá.\" Quantos irmãos você tem?",
+                  "question": "Áudio: «Teño dous irmáns e unha irmá.» Quantos irmãos você tem?",
                   "explanation": "Dois irmãos e uma irmã são três.",
                   "options": "três\u0001dois\u0001um",
                   "correctAnswer": "três"
                 },
                 "it": {
-                  "question": "Audio: \"Teño dous irmáns e unha irmá.\" Quanti fratelli hai?",
+                  "question": "Audio: «Teño dous irmáns e unha irmá.» Quanti fratelli hai?",
                   "explanation": "Due fratelli e una sorella fanno tre.",
                   "options": "tre\u0001due\u0001uno",
                   "correctAnswer": "tre"
                 },
                 "ro": {
-                  "question": "Audio: „Teño dous frați e unha irmá”. Câți frați ai?",
+                  "question": "Audio: «Teño dous irmáns e unha irmá.» Câți frați aveți?",
                   "explanation": "Doi frați și o soră fac trei.",
                   "options": "trei\u0001două\u0001unul",
                   "correctAnswer": "trei"
                 },
                 "zh": {
-                  "question": "音频：“Teño dous irmáns e unha irmá”。你有几个兄弟姐妹？",
+                  "question": "音频：«Teño dous irmáns e unha irmá.» 你有几个兄弟姐妹？",
                   "explanation": "两个兄弟和一个姐妹一共三个人。",
                   "options": "三\u0001二\u0001一",
                   "correctAnswer": "三"
@@ -8597,46 +8597,46 @@
                   "explanation": "El nombre sigue a «chámase»."
                 },
                 "en": {
-                  "question": "Audio: \"O meu pai chámase Xosé.\" What's it called?",
+                  "question": "Audio: «O meu pai chámase Xosé.» What's his name?",
                   "explanation": "The name follows \"chámase.\"",
-                  "options": "Xose\u0001Xoan\u0001Pepe",
-                  "correctAnswer": "Xose"
+                  "options": "Xosé\u0001Xoán\u0001Pepe",
+                  "correctAnswer": "Xosé"
                 },
                 "de": {
-                  "question": "Audio: „O meu pai chámase Xosé.“ Wie heißt das?",
+                  "question": "Audio: «O meu pai chámase Xosé.» Wie ist sein Name?",
                   "explanation": "Der Name folgt „chámase“.",
-                  "options": "Xose\u0001Xoan\u0001Pepe",
-                  "correctAnswer": "Xose"
+                  "options": "Xosé\u0001Xoán\u0001Pepe",
+                  "correctAnswer": "Xosé"
                 },
                 "fr": {
-                  "question": "Audio : « O meu pai chámase Xosé. » Comment ça s'appelle ?",
+                  "question": "Audio : «O meu pai chámase Xosé.» Quel est son nom ?",
                   "explanation": "Le nom suit « chámase ».",
-                  "options": "Xose\u0001Xoan\u0001Pépé",
-                  "correctAnswer": "Xose"
+                  "options": "Xosé\u0001Xoán\u0001Pepe",
+                  "correctAnswer": "Xosé"
                 },
                 "pt": {
-                  "question": "Áudio: \"O meu pai chámase Xosé.\" Como é chamado?",
+                  "question": "Áudio: «O meu pai chámase Xosé.» Qual é o nome dele?",
                   "explanation": "O nome segue \"chámase\".",
-                  "options": "Xose\u0001Xoan\u0001Pepê",
-                  "correctAnswer": "Xose"
+                  "options": "Xosé\u0001Xoán\u0001Pepe",
+                  "correctAnswer": "Xosé"
                 },
                 "it": {
-                  "question": "Audio: \"O meu pai chámase Xosé.\" Come si chiama?",
+                  "question": "Audio: «O meu pai chámase Xosé.» Come si chiama?",
                   "explanation": "Il nome segue \"chámase\".",
-                  "options": "Xose\u0001Xoan\u0001Pepe",
-                  "correctAnswer": "Xose"
+                  "options": "Xosé\u0001Xoán\u0001Pepe",
+                  "correctAnswer": "Xosé"
                 },
                 "ro": {
-                  "question": "Audio: „O meu pai chámase Xosé”. Cum se numeste?",
+                  "question": "Audio: «O meu pai chámase Xosé.» Cum îl cheamă?",
                   "explanation": "Numele urmează „chámase”.",
-                  "options": "Xose\u0001Xoan\u0001Pepe",
-                  "correctAnswer": "Xose"
+                  "options": "Xosé\u0001Xoán\u0001Pepe",
+                  "correctAnswer": "Xosé"
                 },
                 "zh": {
-                  "question": "音频：“O meu pai chámase Xosé。”它叫什么？",
+                  "question": "音频：«O meu pai chámase Xosé.» 他叫什么名字？",
                   "explanation": "这个名字遵循“chámase”。",
-                  "options": "乔塞\u0001玄安\u0001佩佩",
-                  "correctAnswer": "乔塞"
+                  "options": "Xosé\u0001Xoán\u0001Pepe",
+                  "correctAnswer": "Xosé"
                 }
               },
               "audioAsset": "assets/audio/exercises/4E02.mp3"
@@ -8747,46 +8747,46 @@
                   "explanation": "La ciudad aparece tras «vive en»."
                 },
                 "en": {
-                  "question": "Audio: «My aunt lives in Lugo.» Where you live?",
+                  "question": "Audio: «A miña tía vive en Lugo.» Where do you live?",
                   "explanation": "The city appears after \"lives in.\"",
-                  "options": "lugo\u0001Vigo\u0001Ourense",
-                  "correctAnswer": "lugo"
+                  "options": "Lugo\u0001Vigo\u0001Ourense",
+                  "correctAnswer": "Lugo"
                 },
                 "de": {
-                  "question": "Audio: «Meine Tante lebt in Lugo.» Wo Sie leben?",
+                  "question": "Audio: «A miña tía vive en Lugo.» Wo wohnst du?",
                   "explanation": "Die Stadt erscheint nach „lebt in“.",
-                  "options": "lugo\u0001Vigo\u0001Ourense",
-                  "correctAnswer": "lugo"
+                  "options": "Lugo\u0001Vigo\u0001Ourense",
+                  "correctAnswer": "Lugo"
                 },
                 "fr": {
-                  "question": "Audio: «Ma tante habite à Lugo.» Où habites-tu ?",
+                  "question": "Audio : «A miña tía vive en Lugo.» Où habitez-vous ?",
                   "explanation": "La ville apparaît après « habite ».",
-                  "options": "lugo\u0001Vigo\u0001Orense",
-                  "correctAnswer": "lugo"
+                  "options": "Lugo\u0001Vigo\u0001Ourense",
+                  "correctAnswer": "Lugo"
                 },
                 "pt": {
-                  "question": "Áudio: «Minha tia mora em Lugo.» Onde você mora?",
+                  "question": "Áudio: «A miña tía vive en Lugo.» Onde você mora?",
                   "explanation": "A cidade aparece depois de \"vive em\".",
                   "options": "Lugo\u0001Vigo\u0001Ourense",
                   "correctAnswer": "Lugo"
                 },
                 "it": {
-                  "question": "Audio: «Mia zia vive a Lugo.» Dove vivi?",
+                  "question": "Audio: «A miña tía vive en Lugo.» Dove vivi?",
                   "explanation": "La città appare dopo \"vive in\".",
-                  "options": "lugo\u0001Vigo\u0001Ourense",
-                  "correctAnswer": "lugo"
+                  "options": "Lugo\u0001Vigo\u0001Ourense",
+                  "correctAnswer": "Lugo"
                 },
                 "ro": {
-                  "question": "Audio: „Mătușa mea locuiește în Lugo.” Unde locuiți?",
+                  "question": "Audio: «A miña tía vive en Lugo.» Unde locuiești?",
                   "explanation": "Orașul apare după „locuiește în”.",
-                  "options": "lugo\u0001Vigo\u0001Ourense",
-                  "correctAnswer": "lugo"
+                  "options": "Lugo\u0001Vigo\u0001Ourense",
+                  "correctAnswer": "Lugo"
                 },
                 "zh": {
-                  "question": "音频：“我的阿姨住在卢戈。”你住的地方？",
+                  "question": "音频：«A miña tía vive en Lugo.» 你住在哪里？",
                   "explanation": "城市出现在“居住”之后。",
-                  "options": "卢戈\u0001维戈\u0001奥伦塞",
-                  "correctAnswer": "卢戈"
+                  "options": "Lugo\u0001Vigo\u0001Ourense",
+                  "correctAnswer": "Lugo"
                 }
               },
               "audioAsset": "assets/audio/exercises/4E05.mp3"
@@ -8814,13 +8814,13 @@
                   "correctAnswer": "No"
                 },
                 "de": {
-                  "question": "Audio: „Non teño fillos.“ Haben Sie Kinder?",
+                  "question": "Audio: «Non teño fillos.» Haben Sie Kinder?",
                   "explanation": "„Non teño“ bedeutet „Das habe ich nicht.“",
                   "options": "NEIN\u0001Ja",
                   "correctAnswer": "NEIN"
                 },
                 "fr": {
-                  "question": "Audio : «Non teño fillos.» Avez-vous des enfants?",
+                  "question": "Audio : «Non teño fillos.» Avez-vous des enfants ?",
                   "explanation": "\"Non teño\" signifie \"je n'ai pas\".",
                   "options": "Non\u0001Ouais",
                   "correctAnswer": "Non"
@@ -8838,13 +8838,13 @@
                   "correctAnswer": "NO"
                 },
                 "ro": {
-                  "question": "Audio: „Non am fillos.” Aveţi copii?",
+                  "question": "Audio: «Non teño fillos.» Ai copii?",
                   "explanation": "„Non teño” înseamnă „nu am”.",
                   "options": "Nu\u0001Da",
                   "correctAnswer": "Nu"
                 },
                 "zh": {
-                  "question": "音频：《Non teño fillos》。你有小孩吗？",
+                  "question": "音频：«Non teño fillos.» 你有孩子吗？",
                   "explanation": "“Non teño”的意思是“我没有”。",
                   "options": "不\u0001是的",
                   "correctAnswer": "不"
@@ -10999,43 +10999,43 @@
                   "explanation": "El texto dice «azul»."
                 },
                 "en": {
-                  "question": "Audio: \"O ceo is blue.\" What color is the sky?",
+                  "question": "Audio: «O ceo é azul.» What color is the sky?",
                   "explanation": "The text says \"blue.\"",
                   "options": "blue\u0001green\u0001grey",
                   "correctAnswer": "blue"
                 },
                 "de": {
-                  "question": "Audio: „O CEO ist blau.“ Welche Farbe hat der Himmel?",
+                  "question": "Audio: «O ceo é azul.» Welche Farbe hat der Himmel?",
                   "explanation": "Der Text sagt „blau“.",
                   "options": "Blau\u0001Grün\u0001grau",
                   "correctAnswer": "Blau"
                 },
                 "fr": {
-                  "question": "Audio : « Ô PDG est bleu. » De quelle couleur est le ciel ?",
+                  "question": "Audio : «O ceo é azul.» De quelle couleur est le ciel ?",
                   "explanation": "Le texte dit « bleu ».",
                   "options": "bleu\u0001vert\u0001gris",
                   "correctAnswer": "bleu"
                 },
                 "pt": {
-                  "question": "Áudio: \"O ceo é azul.\" Qual é a cor do céu?",
+                  "question": "Áudio: «O ceo é azul.» Qual é a cor do céu?",
                   "explanation": "O texto diz \"azul\".",
                   "options": "azul\u0001verde\u0001cinza",
                   "correctAnswer": "azul"
                 },
                 "it": {
-                  "question": "Audio: \"O ceo è blu.\" Di che colore è il cielo?",
+                  "question": "Audio: «O ceo é azul.» Di che colore è il cielo?",
                   "explanation": "Il testo dice \"blu\".",
                   "options": "blu\u0001verde\u0001grigio",
                   "correctAnswer": "blu"
                 },
                 "ro": {
-                  "question": "Audio: „O ceo este albastru”. Ce culoare are cerul?",
+                  "question": "Audio: «O ceo é azul.» Ce culoare are cerul?",
                   "explanation": "Textul spune „albastru”.",
                   "options": "albastru\u0001verde\u0001gri",
                   "correctAnswer": "albastru"
                 },
                 "zh": {
-                  "question": "音频：“O CEO 是蓝色的。”天空是什么颜色的？",
+                  "question": "音频：«O ceo é azul.» 天空是什么颜色？",
                   "explanation": "文字上写着“蓝色”。",
                   "options": "蓝色的\u0001绿色的\u0001灰色的",
                   "correctAnswer": "蓝色的"
@@ -11061,43 +11061,43 @@
                   "explanation": "«Amarela» es el femenino de «amarelo»."
                 },
                 "en": {
-                  "question": "Audio: \"My shirt is yellow.\" What color is it?",
+                  "question": "Audio: «A miña camiseta é amarela.» What color is it?",
                   "explanation": "\"Amarela\" is the feminine of \"amarelo.\"",
                   "options": "yellow\u0001blue\u0001red",
                   "correctAnswer": "yellow"
                 },
                 "de": {
-                  "question": "Audio: „Mein Hemd ist gelb.“ Welche Farbe hat es?",
+                  "question": "Audio: «A miña camiseta é amarela.» Welche Farbe hat es?",
                   "explanation": "„Amarela“ ist das weibliche Wort von „amarelo“.",
                   "options": "Gelb\u0001Blau\u0001Rot",
                   "correctAnswer": "Gelb"
                 },
                 "fr": {
-                  "question": "Audio : \"Ma chemise est jaune.\" De quelle couleur est-il ?",
+                  "question": "Audio : «A miña camiseta é amarela.» De quelle couleur est-il ?",
                   "explanation": "« Amarela » est le féminin de « amarelo ».",
                   "options": "jaune\u0001bleu\u0001rouge",
                   "correctAnswer": "jaune"
                 },
                 "pt": {
-                  "question": "Áudio: \"Minha camisa é amarela.\" Qual é a cor?",
+                  "question": "Áudio: «A miña camiseta é amarela.» Qual é a cor?",
                   "explanation": "“Amarela” é o feminino de “amarelo”.",
                   "options": "amarelo\u0001azul\u0001vermelho",
                   "correctAnswer": "amarelo"
                 },
                 "it": {
-                  "question": "Audio: \"La mia maglietta è gialla\". Di che colore è?",
+                  "question": "Audio: «A miña camiseta é amarela.» Di che colore è?",
                   "explanation": "\"Amarela\" è il femminile di \"amarelo\".",
                   "options": "giallo\u0001blu\u0001rosso",
                   "correctAnswer": "giallo"
                 },
                 "ro": {
-                  "question": "Audio: „Cămașa mea este galbenă”. Ce culoare are?",
+                  "question": "Audio: «A miña camiseta é amarela.» Ce culoare este?",
                   "explanation": "„Amarela” este femininul „amarelo”.",
                   "options": "galben\u0001albastru\u0001roşu",
                   "correctAnswer": "galben"
                 },
                 "zh": {
-                  "question": "音频：“我的衬衫是黄色的。”它是什么颜色？",
+                  "question": "音频：«A miña camiseta é amarela.» 它是什么颜色？",
                   "explanation": "“Amarela”是“amarelo”的阴性词。",
                   "options": "黄色的\u0001蓝色的\u0001红色的",
                   "correctAnswer": "黄色的"
@@ -11211,43 +11211,43 @@
                   "explanation": "«Morena» describe pelo o piel oscuros."
                 },
                 "en": {
-                  "question": "Audio: «Marta is tall and dark.» What is Martha like?",
+                  "question": "Audio: «Marta é alta e morena.» What is Marta like?",
                   "explanation": "“Brunette” describes dark hair or skin.",
                   "options": "tall and dark\u0001short and blonde\u0001tall and blonde",
                   "correctAnswer": "tall and dark"
                 },
                 "de": {
-                  "question": "Audio: «Marta ist groß und dunkel.» Wie ist Martha?",
+                  "question": "Audio: «Marta é alta e morena.» Wie ist Marta?",
                   "explanation": "„Brünette“ beschreibt dunkles Haar oder dunkle Haut.",
                   "options": "groß und dunkel\u0001klein und blond\u0001groß und blond",
                   "correctAnswer": "groß und dunkel"
                 },
                 "fr": {
-                  "question": "Audio : « Marta est grande et brune. » Comment est Marthe ?",
+                  "question": "Audio : «Marta é alta e morena.» Comment est Marta ?",
                   "explanation": "« Brunette » décrit les cheveux ou la peau foncés.",
                   "options": "grand et sombre\u0001petite et blonde\u0001grand et blond",
                   "correctAnswer": "grand et sombre"
                 },
                 "pt": {
-                  "question": "Áudio: «Marta é alta e morena.» Como é Marta?",
+                  "question": "Áudio: «Marta é alta e morena.» Como é a Marta?",
                   "explanation": "“Morena” descreve cabelo ou pele escura.",
                   "options": "alto e moreno\u0001baixinha e loira\u0001alto e loiro",
                   "correctAnswer": "alto e moreno"
                 },
                 "it": {
-                  "question": "Audio: «Marta è alta e bruna.» Com'è Marta?",
+                  "question": "Audio: «Marta é alta e morena.» Com'è Marta?",
                   "explanation": "“Bruna” descrive capelli o pelle scuri.",
                   "options": "alto e scuro\u0001basso e biondo\u0001alta e bionda",
                   "correctAnswer": "alto e scuro"
                 },
                 "ro": {
-                  "question": "Audio: „Marta este înaltă și întunecată.” Cum este Martha?",
+                  "question": "Audio: «Marta é alta e morena.» Cum este Marta?",
                   "explanation": "„Brunette” descrie părul sau pielea închisă la culoare.",
                   "options": "înalt și întunecat\u0001scurtă și blondă\u0001înalt și blond",
                   "correctAnswer": "înalt și întunecat"
                 },
                 "zh": {
-                  "question": "音频：“玛塔又高又黑。”玛莎是什么样的人？",
+                  "question": "音频：«Marta é alta e morena.» 玛塔是什么样的人？",
                   "explanation": "“黑发”描述深色的头发或皮肤。",
                   "options": "高而黑\u0001又短又金发\u0001高个子和金发女郎",
                   "correctAnswer": "高而黑"
@@ -11273,43 +11273,43 @@
                   "explanation": "El audio dice «pequeno e negro»."
                 },
                 "en": {
-                  "question": "Audio: \"The cat is small and black.\" What is the cat like?",
+                  "question": "Audio: «O gato é pequeno e negro.» What is the cat like?",
                   "explanation": "The audio says “little black e.”",
                   "options": "small and black\u0001big and black\u0001small and white",
                   "correctAnswer": "small and black"
                 },
                 "de": {
-                  "question": "Audio: „Die Katze ist klein und schwarz.“ Wie ist die Katze?",
+                  "question": "Audio: «O gato é pequeno e negro.» Wie ist die Katze?",
                   "explanation": "Der Ton sagt „little black e“.",
                   "options": "klein und schwarz\u0001groß und schwarz\u0001klein und weiß",
                   "correctAnswer": "klein und schwarz"
                 },
                 "fr": {
-                  "question": "Audio : « Le chat est petit et noir. » Comment est le chat ?",
+                  "question": "Audio : «O gato é pequeno e negro.» Comment est le chat ?",
                   "explanation": "L’audio dit « petit e noir ».",
                   "options": "petit et noir\u0001grand et noir\u0001petit et blanc",
                   "correctAnswer": "petit et noir"
                 },
                 "pt": {
-                  "question": "Áudio: \"O gato é pequeno e preto.\" Como é o gato?",
+                  "question": "Áudio: «O gato é pequeno e negro.» Como é o gato?",
                   "explanation": "O áudio diz “little black e”.",
                   "options": "pequeno e preto\u0001grande e preto\u0001pequeno e branco",
                   "correctAnswer": "pequeno e preto"
                 },
                 "it": {
-                  "question": "Audio: \"Il gatto è piccolo e nero.\" Com'è il gatto?",
+                  "question": "Audio: «O gato é pequeno e negro.» Com'è il gatto?",
                   "explanation": "L'audio dice \"piccola e nera\".",
                   "options": "piccolo e nero\u0001grande e nero\u0001piccolo e bianco",
                   "correctAnswer": "piccolo e nero"
                 },
                 "ro": {
-                  "question": "Audio: „Pisica este mică și neagră”. Cum este pisica?",
+                  "question": "Audio: «O gato é pequeno e negro.» Cum este pisica?",
                   "explanation": "Audio spune „micul e negru”.",
                   "options": "mic și negru\u0001mare și negru\u0001mic și alb",
                   "correctAnswer": "mic și negru"
                 },
                 "zh": {
-                  "question": "音频：“这只猫又小又黑。”猫是什么样的？",
+                  "question": "音频：«O gato é pequeno e negro.» 猫是什么样的？",
                   "explanation": "音频显示“小黑e”。",
                   "options": "小而黑\u0001大而黑\u0001小而白",
                   "correctAnswer": "小而黑"
@@ -13763,43 +13763,43 @@
                   "explanation": "El audio dice «café» y «zume»."
                 },
                 "en": {
-                  "question": "Audio: \"I want a coffee and a juice.\" What do you ask for?",
+                  "question": "Audio: «Quero un café e un zume.» What do you ask for?",
                   "explanation": "The audio says \"coffee\" and \"zume.\"",
                   "options": "coffee and juice\u0001coffee and water\u0001tea and juice",
                   "correctAnswer": "coffee and juice"
                 },
                 "de": {
-                  "question": "Audio: „Ich möchte einen Kaffee und einen Saft.“ Was verlangst du?",
+                  "question": "Audio: «Quero un café e un zume.» Was verlangst du?",
                   "explanation": "Im Ton sind „Kaffee“ und „Zume“ zu hören.",
                   "options": "Kaffee und Saft\u0001Kaffee und Wasser\u0001Tee und Saft",
                   "correctAnswer": "Kaffee und Saft"
                 },
                 "fr": {
-                  "question": "Audio : \"Je veux un café et un jus.\" Que demandez-vous ?",
+                  "question": "Audio : «Quero un café e un zume.» Que demandez-vous ?",
                   "explanation": "L'audio dit \"café\" et \"zume\".",
                   "options": "café et jus\u0001café et eau\u0001thé et jus",
                   "correctAnswer": "café et jus"
                 },
                 "pt": {
-                  "question": "Áudio: “Quero um café e um suco”. O que você pede?",
+                  "question": "Áudio: «Quero un café e un zume.» O que você pede?",
                   "explanation": "O áudio diz “café” e “zume”.",
                   "options": "café e suco\u0001café e água\u0001chá e suco",
                   "correctAnswer": "café e suco"
                 },
                 "it": {
-                  "question": "Audio: \"Voglio un caffè e un succo.\" Cosa chiedi?",
+                  "question": "Audio: «Quero un café e un zume.» Cosa chiedi?",
                   "explanation": "L'audio dice \"caffè\" e \"zume\".",
                   "options": "caffè e succo di frutta\u0001caffè e acqua\u0001tè e succhi",
                   "correctAnswer": "caffè e succo di frutta"
                 },
                 "ro": {
-                  "question": "Audio: „Vreau o cafea și un suc”. Ce ceri?",
+                  "question": "Audio: «Quero un café e un zume.» Ce ceri?",
                   "explanation": "Audio spune „cafea” și „zume”.",
                   "options": "cafea și suc\u0001cafea și apă\u0001ceai și suc",
                   "correctAnswer": "cafea și suc"
                 },
                 "zh": {
-                  "question": "音频：“我想要一杯咖啡和果汁。”你要什么？",
+                  "question": "音频：«Quero un café e un zume.» 你要什么？",
                   "explanation": "音频显示“咖啡”和“zume”。",
                   "options": "咖啡和果汁\u0001咖啡和水\u0001茶和果汁",
                   "correctAnswer": "咖啡和果汁"
@@ -13825,43 +13825,43 @@
                   "explanation": "«Conta» significa «cuenta»."
                 },
                 "en": {
-                  "question": "Audio: \"On time, please.\" What do you ask for?",
+                  "question": "Audio: «A conta, por favor.» What do you ask for?",
                   "explanation": "\"Conta\" means \"account.\"",
                   "options": "the check\u0001the menu\u0001water",
                   "correctAnswer": "the check"
                 },
                 "de": {
-                  "question": "Audio: „Pünktlich, bitte.“ Was verlangst du?",
+                  "question": "Audio: «A conta, por favor.» Was verlangst du?",
                   "explanation": "„Conta“ bedeutet „Konto“.",
                   "options": "der Scheck\u0001das Menü\u0001Wasser",
                   "correctAnswer": "der Scheck"
                 },
                 "fr": {
-                  "question": "Audio : « À l’heure, s’il vous plaît. » Que demandez-vous ?",
+                  "question": "Audio : «A conta, por favor.» Que demandez-vous ?",
                   "explanation": "« Conta » signifie « compte ».",
                   "options": "le chèque\u0001le menu\u0001eau",
                   "correctAnswer": "le chèque"
                 },
                 "pt": {
-                  "question": "Áudio: \"Na hora certa, por favor.\" O que você pede?",
+                  "question": "Áudio: «A conta, por favor.» O que você pede?",
                   "explanation": "\"Conta\" significa \"conta\".",
                   "options": "o cheque\u0001o cardápio\u0001água",
                   "correctAnswer": "o cheque"
                 },
                 "it": {
-                  "question": "Audio: \"Puntuali, per favore.\" Cosa chiedi?",
+                  "question": "Audio: «A conta, por favor.» Cosa chiedi?",
                   "explanation": "\"Conta\" significa \"account\".",
                   "options": "l'assegno\u0001il menù\u0001acqua",
                   "correctAnswer": "l'assegno"
                 },
                 "ro": {
-                  "question": "Audio: „La timp, vă rog”. Ce ceri?",
+                  "question": "Audio: «A conta, por favor.» Ce ceri?",
                   "explanation": "„Conta” înseamnă „cont”.",
                   "options": "cecul\u0001meniul\u0001apă",
                   "correctAnswer": "cecul"
                 },
                 "zh": {
-                  "question": "音频：“请准时。”你要什么？",
+                  "question": "音频：«A conta, por favor.» 你要什么？",
                   "explanation": "“Conta”的意思是“帐户”。",
                   "options": "支票\u0001菜单\u0001水",
                   "correctAnswer": "支票"
@@ -13975,43 +13975,43 @@
                   "explanation": "«Pero» introduce lo que sí le gusta."
                 },
                 "en": {
-                  "question": "Audio: \"I don't like peixe, but I like meat.\" What do you like?",
+                  "question": "Audio: «Non me gusta o peixe, pero gústame a carne.» What do you like?",
                   "explanation": "\"But\" introduces what you do like.",
                   "options": "the meat\u0001the fish\u0001both",
                   "correctAnswer": "the meat"
                 },
                 "de": {
-                  "question": "Audio: „Ich mag kein Peixe, aber ich mag Fleisch.“ Was haben Sie gern?",
+                  "question": "Audio: «Non me gusta o peixe, pero gústame a carne.» Was gefällt dir?",
                   "explanation": "„Aber“ stellt vor, was Ihnen gefällt.",
                   "options": "das Fleisch\u0001der Fisch\u0001beide",
                   "correctAnswer": "das Fleisch"
                 },
                 "fr": {
-                  "question": "Audio : \"Je n'aime pas la pêche, mais j'aime la viande.\" Qu'aimez-vous?",
+                  "question": "Audio : «Non me gusta o peixe, pero gústame a carne.» Qu'est-ce que tu aimes ?",
                   "explanation": "\"Mais\" présente ce que vous aimez.",
                   "options": "la viande\u0001le poisson\u0001les deux",
                   "correctAnswer": "la viande"
                 },
                 "pt": {
-                  "question": "Áudio: “Não gosto de peixe, mas gosto de carne”. Do que você gosta?",
+                  "question": "Áudio: «Non me gusta o peixe, pero gústame a carne.» Do que você gosta?",
                   "explanation": "\"Mas\" apresenta o que você gosta.",
                   "options": "a carne\u0001o peixe\u0001ambos",
                   "correctAnswer": "a carne"
                 },
                 "it": {
-                  "question": "Audio: \"Non mi piace la peixe, ma mi piace la carne.\" Cosa ti piace?",
+                  "question": "Audio: «Non me gusta o peixe, pero gústame a carne.» Cosa ti piace?",
                   "explanation": "\"Ma\" introduce ciò che ti piace.",
                   "options": "la carne\u0001il pesce\u0001Entrambi",
                   "correctAnswer": "la carne"
                 },
                 "ro": {
-                  "question": "Audio: „Nu-mi place peixe, dar îmi place carnea”. Ce-ți place?",
+                  "question": "Audio: «Non me gusta o peixe, pero gústame a carne.» Ce vă place?",
                   "explanation": "„Dar” introduce ceea ce vă place.",
                   "options": "carnea\u0001peștele\u0001ambele",
                   "correctAnswer": "carnea"
                 },
                 "zh": {
-                  "question": "音频：“我不喜欢peixe，但我喜欢肉。”你喜欢什么？",
+                  "question": "音频：«Non me gusta o peixe, pero gústame a carne.» 你喜欢什么？",
                   "explanation": "“但是”介绍了你确实喜欢什么。",
                   "options": "肉\u0001鱼\u0001两个都",
                   "correctAnswer": "肉"
@@ -14037,43 +14037,43 @@
                   "explanation": "«Fame» es hambre."
                 },
                 "en": {
-                  "question": "Audio: “Teño fame.” What do you feel?",
+                  "question": "Audio: «Teño fame.» What do you feel?",
                   "explanation": "\"Fame\" is hunger.",
                   "options": "hunger\u0001thirst\u0001cold",
                   "correctAnswer": "hunger"
                 },
                 "de": {
-                  "question": "Audio: „Teño-Ruhm.“ Was fühlst du?",
+                  "question": "Audio: «Teño fame.» Was fühlst du?",
                   "explanation": "„Ruhm“ ist Hunger.",
                   "options": "Hunger\u0001Durst\u0001kalt",
                   "correctAnswer": "Hunger"
                 },
                 "fr": {
-                  "question": "Audio : « La renommée du Teño ». Que ressentez-vous ?",
+                  "question": "Audio : «Teño fame.» Que ressentez-vous ?",
                   "explanation": "La « renommée », c'est la faim.",
                   "options": "faim\u0001soif\u0001froid",
                   "correctAnswer": "faim"
                 },
                 "pt": {
-                  "question": "Áudio: “Teño fama.” O que você sente?",
+                  "question": "Áudio: «Teño fame.» O que você sente?",
                   "explanation": "“Fama” é fome.",
                   "options": "fome\u0001sede\u0001frio",
                   "correctAnswer": "fome"
                 },
                 "it": {
-                  "question": "Audio: “Fama di Teño”. Cosa senti?",
+                  "question": "Audio: «Teño fame.» Cosa provi?",
                   "explanation": "La \"fama\" è fame.",
                   "options": "fame\u0001sete\u0001Freddo",
                   "correctAnswer": "fame"
                 },
                 "ro": {
-                  "question": "Audio: „Fama Teño”. Ce simti?",
+                  "question": "Audio: «Teño fame.» Ce simți?",
                   "explanation": "„Fama” înseamnă foame.",
                   "options": "foame\u0001sete\u0001rece",
                   "correctAnswer": "foame"
                 },
                 "zh": {
-                  "question": "音频：“Teño 名气。”你有什么感觉？",
+                  "question": "音频：«Teño fame.» 你有什么感觉？",
                   "explanation": "“名”就是饥饿。",
                   "options": "饥饿\u0001口渴\u0001寒冷的",
                   "correctAnswer": "饥饿"
@@ -16071,43 +16071,43 @@
                   "explanation": "El audio dice «catro cadeiras»."
                 },
                 "en": {
-                  "question": "Audio: \"There is a table and four tables in the kitchen.\" How many chairs are there?",
+                  "question": "Audio: «Hai unha mesa e catro cadeiras na cociña.» How many chairs are there?",
                   "explanation": "The audio says \"catro cadeiras.\"",
                   "options": "four\u0001three\u0001two",
                   "correctAnswer": "four"
                 },
                 "de": {
-                  "question": "Audio: „In der Küche stehen ein Tisch und vier Tische.“ Wie viele Stühle gibt es?",
+                  "question": "Audio: «Hai unha mesa e catro cadeiras na cociña.» Wie viele Stühle gibt es?",
                   "explanation": "Im Ton heißt es „catro cadeiras“.",
                   "options": "vier\u0001drei\u0001zwei",
                   "correctAnswer": "vier"
                 },
                 "fr": {
-                  "question": "Audio : « Il y a une table et quatre tables dans la cuisine. » Combien y a-t-il de chaises ?",
+                  "question": "Audio : «Hai unha mesa e catro cadeiras na cociña.» Combien y a-t-il de chaises ?",
                   "explanation": "L'audio dit \"catro cadeiras\".",
                   "options": "quatre\u0001trois\u0001deux",
                   "correctAnswer": "quatre"
                 },
                 "pt": {
-                  "question": "Áudio: “Há uma mesa e quatro mesas na cozinha”. Quantas cadeiras existem?",
+                  "question": "Áudio: «Hai unha mesa e catro cadeiras na cociña.» Quantas cadeiras tem?",
                   "explanation": "O áudio diz \"catro cadeiras\".",
                   "options": "quatro\u0001três\u0001dois",
                   "correctAnswer": "quatro"
                 },
                 "it": {
-                  "question": "Audio: \"C'è un tavolo e quattro tavoli in cucina.\" Quante sedie ci sono?",
+                  "question": "Audio: «Hai unha mesa e catro cadeiras na cociña.» Quante sedie ci sono?",
                   "explanation": "L'audio dice \"catro cadeiras\".",
                   "options": "quattro\u0001tre\u0001due",
                   "correctAnswer": "quattro"
                 },
                 "ro": {
-                  "question": "Audio: „Există o masă și patru mese în bucătărie”. Câte scaune sunt?",
+                  "question": "Audio: «Hai unha mesa e catro cadeiras na cociña.» Câte scaune sunt?",
                   "explanation": "Audio spune „catro cadeiras”.",
                   "options": "patru\u0001trei\u0001două",
                   "correctAnswer": "patru"
                 },
                 "zh": {
-                  "question": "音频：“厨房里有一张桌子和四张桌子。”有几张椅子？",
+                  "question": "音频：«Hai unha mesa e catro cadeiras na cociña.» 有多少张椅子？",
                   "explanation": "音频显示“catro cadeiras”。",
                   "options": "四\u0001三\u0001二",
                   "correctAnswer": "四"
@@ -16133,43 +16133,43 @@
                   "explanation": "El audio dice «pequeno»."
                 },
                 "en": {
-                  "question": "Audio: \"My room is small.\" How is?",
+                  "question": "Audio: «O meu cuarto é pequeno.» What is it like?",
                   "explanation": "The audio says \"small.\"",
                   "options": "little\u0001big\u0001new",
                   "correctAnswer": "little"
                 },
                 "de": {
-                  "question": "Audio: „Mein Zimmer ist klein.“ Wie ist es?",
+                  "question": "Audio: «O meu cuarto é pequeno.» Wie ist es?",
                   "explanation": "Der Ton sagt „klein“.",
                   "options": "wenig\u0001groß\u0001neu",
                   "correctAnswer": "wenig"
                 },
                 "fr": {
-                  "question": "Audio : « Ma chambre est petite. » Comment est?",
+                  "question": "Audio : «O meu cuarto é pequeno.» Comment ça se passe ?",
                   "explanation": "L'audio dit \"petit\".",
                   "options": "petit\u0001grand\u0001nouveau",
                   "correctAnswer": "petit"
                 },
                 "pt": {
-                  "question": "Áudio: \"Meu quarto é pequeno.\" Como está?",
+                  "question": "Áudio: «O meu cuarto é pequeno.» Como é?",
                   "explanation": "O áudio diz \"pequeno\".",
                   "options": "pequeno\u0001grande\u0001novo",
                   "correctAnswer": "pequeno"
                 },
                 "it": {
-                  "question": "Audio: \"La mia stanza è piccola.\" Com'è?",
+                  "question": "Audio: «O meu cuarto é pequeno.» Com'è?",
                   "explanation": "L'audio dice \"piccolo\".",
                   "options": "poco\u0001grande\u0001nuovo",
                   "correctAnswer": "poco"
                 },
                 "ro": {
-                  "question": "Audio: „Camera mea este mică”. Cum este?",
+                  "question": "Audio: «O meu cuarto é pequeno.» Cum este?",
                   "explanation": "Audio spune „mic”.",
                   "options": "puţin\u0001mare\u0001nou",
                   "correctAnswer": "puţin"
                 },
                 "zh": {
-                  "question": "音频：“我的房间很小。”怎么样？",
+                  "question": "音频：«O meu cuarto é pequeno.» 是什么样的？",
                   "explanation": "音频说“小”。",
                   "options": "小的\u0001大的\u0001新的",
                   "correctAnswer": "小的"
@@ -16283,43 +16283,43 @@
                   "explanation": "«Debaixo» es debajo."
                 },
                 "en": {
-                  "question": "Audio: \"The cat is under the table.\" Where is the cat?",
+                  "question": "Audio: «O gato está debaixo da mesa.» Where is the cat?",
                   "explanation": "«Debaixo» is below.",
                   "options": "under the table\u0001on top of the table\u0001in the chair",
                   "correctAnswer": "under the table"
                 },
                 "de": {
-                  "question": "Audio: „Die Katze ist unter dem Tisch.“ Wo ist die Katze?",
+                  "question": "Audio: «O gato está debaixo da mesa.» Wo ist die Katze?",
                   "explanation": "«Debaixo» ist unten.",
                   "options": "unter dem Tisch\u0001oben auf dem Tisch\u0001auf dem Stuhl",
                   "correctAnswer": "unter dem Tisch"
                 },
                 "fr": {
-                  "question": "Audio : « Le chat est sous la table. » Où est le chat ?",
+                  "question": "Audio : «O gato está debaixo da mesa.» Où est le chat ?",
                   "explanation": "«Debaixo» est ci-dessous.",
                   "options": "sous la table\u0001en haut de la table\u0001sur la chaise",
                   "correctAnswer": "sous la table"
                 },
                 "pt": {
-                  "question": "Áudio: \"O gato está debaixo da mesa.\" Onde está o gato?",
+                  "question": "Áudio: «O gato está debaixo da mesa.» Onde está o gato?",
                   "explanation": "«Debaixo» está abaixo.",
                   "options": "debaixo da mesa\u0001em cima da mesa\u0001na cadeira",
                   "correctAnswer": "debaixo da mesa"
                 },
                 "it": {
-                  "question": "Audio: \"Il gatto è sotto il tavolo.\" Dov'è il gatto?",
+                  "question": "Audio: «O gato está debaixo da mesa.» Dov'è il gatto?",
                   "explanation": "«Debaixo» è sotto.",
                   "options": "sotto il tavolo\u0001sopra il tavolo\u0001sulla sedia",
                   "correctAnswer": "sotto il tavolo"
                 },
                 "ro": {
-                  "question": "Audio: „Pisica este sub masă”. Unde este pisica?",
+                  "question": "Audio: «O gato está debaixo da mesa.» Unde este pisica?",
                   "explanation": "„Debaixo” este mai jos.",
                   "options": "sub masă\u0001deasupra mesei\u0001în scaun",
                   "correctAnswer": "sub masă"
                 },
                 "zh": {
-                  "question": "音频：“猫在桌子下面。”猫在哪儿？",
+                  "question": "音频：«O gato está debaixo da mesa.» 猫在哪里？",
                   "explanation": "«Debaixo» 如下。",
                   "options": "在桌子底下\u0001在桌子上面\u0001在椅子上",
                   "correctAnswer": "在桌子底下"
@@ -18640,43 +18640,43 @@
                   "explanation": "Se levanta a las siete y desayuna a las ocho."
                 },
                 "en": {
-                  "question": "Audio: \"I get up earlier and have lunch earlier.\" What time do you get up?",
+                  "question": "Audio: «Levántome ás sete e almorzo ás oito.» What time do you get up?",
                   "explanation": "He gets up at seven and has breakfast at eight.",
                   "options": "at seven\u0001at eight\u0001at six",
                   "correctAnswer": "at seven"
                 },
                 "de": {
-                  "question": "Audio: „Ich stehe früher auf und esse früher zu Mittag.“ Um wieviel Uhr weckst du auf?",
+                  "question": "Audio: «Levántome ás sete e almorzo ás oito.» Um wie viel Uhr stehen Sie auf?",
                   "explanation": "Er steht um sieben auf und frühstückt um acht.",
                   "options": "um sieben\u0001um acht\u0001um sechs",
                   "correctAnswer": "um sieben"
                 },
                 "fr": {
-                  "question": "Audio : \"Je me lève plus tôt et je déjeune plus tôt.\" À quelle heure vous levez-vous?",
+                  "question": "Audio : «Levántome ás sete e almorzo ás oito.» À quelle heure tu te lèves ?",
                   "explanation": "Il se lève à sept heures et prend son petit-déjeuner à huit heures.",
                   "options": "à sept heures\u0001à huit heures\u0001à six heures",
                   "correctAnswer": "à sept heures"
                 },
                 "pt": {
-                  "question": "Áudio: \"Levanto mais cedo e almoço mais cedo.\" A que horas você se levanta?",
+                  "question": "Áudio: «Levántome ás sete e almorzo ás oito.» A que horas você acorda?",
                   "explanation": "Ele acorda às sete e toma café da manhã às oito.",
                   "options": "às sete\u0001às oito\u0001às seis",
                   "correctAnswer": "às sete"
                 },
                 "it": {
-                  "question": "Audio: \"Mi alzo prima e pranzo prima.\" A che ora ti alzi?",
+                  "question": "Audio: «Levántome ás sete e almorzo ás oito.» A che ora ti alzi?",
                   "explanation": "Si alza alle sette e fa colazione alle otto.",
                   "options": "alle sette\u0001alle otto\u0001alle sei",
                   "correctAnswer": "alle sette"
                 },
                 "ro": {
-                  "question": "Audio: „Mă trezesc mai devreme și iau prânzul mai devreme”. La ce oră doriţi să vă treziţi?",
+                  "question": "Audio: «Levántome ás sete e almorzo ás oito.» La ce oră te trezești?",
                   "explanation": "Se trezește la șapte și ia micul dejun la opt.",
                   "options": "la şapte\u0001la opt\u0001la şase",
                   "correctAnswer": "la şapte"
                 },
                 "zh": {
-                  "question": "音频：“我早点起床，早点吃午饭。”你几点起床？",
+                  "question": "音频：«Levántome ás sete e almorzo ás oito.» 你几点起床？",
                   "explanation": "他七点起床，八点吃早餐。",
                   "options": "七点\u0001八点\u0001六点",
                   "correctAnswer": "七点"
@@ -18702,43 +18702,43 @@
                   "explanation": "«Xantar» es comer al mediodía."
                 },
                 "en": {
-                  "question": "Audio: «Xanto ás duas.» What does it do to both?",
+                  "question": "Audio: «Xanto ás dúas.» What makes both?",
                   "explanation": "\"Xanthar\" is eating at noon.",
                   "options": "eat\u0001dinner\u0001have breakfast",
                   "correctAnswer": "eat"
                 },
                 "de": {
-                  "question": "Audio: „Xanto ás duas.“ Was macht es mit beiden?",
+                  "question": "Audio: «Xanto ás dúas.» Was macht beides aus?",
                   "explanation": "„Xanthar“ isst mittags.",
                   "options": "essen\u0001Abendessen\u0001frühstücken",
                   "correctAnswer": "essen"
                 },
                 "fr": {
-                  "question": "Audio : « Xanto ás duas. » Qu'est-ce que cela fait aux deux ?",
+                  "question": "Audio : «Xanto ás dúas.» Qu'est-ce qui fait les deux ?",
                   "explanation": "\"Xanthar\" mange à midi.",
                   "options": "manger\u0001dîner\u0001prendre le petit-déjeuner",
                   "correctAnswer": "manger"
                 },
                 "pt": {
-                  "question": "Áudio: «Xanto ás duas.» O que isso faz com ambos?",
+                  "question": "Áudio: «Xanto ás dúas.» O que faz ambos?",
                   "explanation": "\"Xanthar\" está comendo ao meio-dia.",
                   "options": "comer\u0001jantar\u0001tomar café da manhã",
                   "correctAnswer": "comer"
                 },
                 "it": {
-                  "question": "Audio: «Xanto ás duas.» Cosa fa ad entrambi?",
+                  "question": "Audio: «Xanto ás dúas.» Cosa li rende entrambi?",
                   "explanation": "\"Xanthar\" mangia a mezzogiorno.",
                   "options": "mangiare\u0001cena\u0001fare colazione",
                   "correctAnswer": "mangiare"
                 },
                 "ro": {
-                  "question": "Audio: «Xanto ás duas.» Ce le face ambilor?",
+                  "question": "Audio: «Xanto ás dúas.» Ce face pe ambele?",
                   "explanation": "„Xanthar” mănâncă la prânz.",
                   "options": "mânca\u0001cină\u0001ia micul dejun",
                   "correctAnswer": "mânca"
                 },
                 "zh": {
-                  "question": "音频：《Xanto ás duas》。它对两者有什么作用？",
+                  "question": "音频：«Xanto ás dúas.» 两者的区别是什么？",
                   "explanation": "“Xanthar”中午正在吃饭。",
                   "options": "吃\u0001晚餐\u0001吃早餐",
                   "correctAnswer": "吃"
@@ -18852,43 +18852,43 @@
                   "explanation": "«Pola noite» significa por la noche."
                 },
                 "en": {
-                  "question": "Audio: «Pola night vexo a television.» When do you watch TV?",
+                  "question": "Audio: «Pola noite vexo a televisión.» When do you watch TV?",
                   "explanation": "\"Pola noite\" means at night.",
                   "options": "at night\u0001in the morning\u0001in the afternoon",
                   "correctAnswer": "at night"
                 },
                 "de": {
-                  "question": "Audio: „Pola night vexo a tv.“ Wann schaust du fern?",
+                  "question": "Audio: «Pola noite vexo a televisión.» Wann schaust du fern?",
                   "explanation": "„Pola noite“ bedeutet nachts.",
                   "options": "nachts\u0001am Morgen\u0001am Nachmittag",
                   "correctAnswer": "nachts"
                 },
                 "fr": {
-                  "question": "Audio: «Pola nuit vexo une télévision.» Quand regardes-tu la télévision ?",
+                  "question": "Audio : «Pola noite vexo a televisión.» Quand regardez-vous la télévision ?",
                   "explanation": "« Pola noite » signifie la nuit.",
                   "options": "la nuit\u0001le matin\u0001dans l'après-midi",
                   "correctAnswer": "la nuit"
                 },
                 "pt": {
-                  "question": "Áudio: «Pola night vex a televisão.» Quando você assiste TV?",
+                  "question": "Áudio: «Pola noite vexo a televisión.» Quando você assiste TV?",
                   "explanation": "\"Pola noite\" significa à noite.",
                   "options": "à noite\u0001pela manhã\u0001à tarde",
                   "correctAnswer": "à noite"
                 },
                 "it": {
-                  "question": "Audio: «Pola notte vexo una televisione.» Quando guardi la TV?",
+                  "question": "Audio: «Pola noite vexo a televisión.» Quando guardi la TV?",
                   "explanation": "\"Pola noite\" significa di notte.",
                   "options": "di notte\u0001la mattina\u0001nel pomeriggio",
                   "correctAnswer": "di notte"
                 },
                 "ro": {
-                  "question": "Audio: „Pola night vexo a television.” Când te uiți la televizor?",
+                  "question": "Audio: «Pola noite vexo a televisión.» Când te uiți la televizor?",
                   "explanation": "„Pola noite” înseamnă noaptea.",
                   "options": "timp de noapte\u0001dimineaţa\u0001după amiază",
                   "correctAnswer": "timp de noapte"
                 },
                 "zh": {
-                  "question": "音频：《Pola night vexo a TV》你什么时候看电视？",
+                  "question": "音频：«Pola noite vexo a televisión.» 你什么时候看电视？",
                   "explanation": "“Pola noite”的意思是晚上。",
                   "options": "晚上\u0001在早晨\u0001下午",
                   "correctAnswer": "晚上"
@@ -18913,43 +18913,43 @@
                   "explanation": "«Nunca» significa «nunca»."
                 },
                 "en": {
-                  "question": "Audio: \"I never drink coffee at night.\" Do you drink coffee at night?",
+                  "question": "Audio: «Nunca tomo café pola noite.» Do you drink coffee at night?",
                   "explanation": "\"Never\" means \"never.\"",
                   "options": "No\u0001Yeah",
                   "correctAnswer": "No"
                 },
                 "de": {
-                  "question": "Audio: „Ich trinke nachts nie Kaffee.“ Trinkst du abends Kaffee?",
+                  "question": "Audio: «Nunca tomo café pola noite.» Trinken Sie abends Kaffee?",
                   "explanation": "„Niemals“ bedeutet „niemals“.",
                   "options": "NEIN\u0001Ja",
                   "correctAnswer": "NEIN"
                 },
                 "fr": {
-                  "question": "Audio : \"Je ne bois jamais de café le soir.\" Buvez-vous du café le soir ?",
+                  "question": "Audio : «Nunca tomo café pola noite.» Buvez-vous du café le soir ?",
                   "explanation": "« Jamais » signifie « jamais ».",
                   "options": "Non\u0001Ouais",
                   "correctAnswer": "Non"
                 },
                 "pt": {
-                  "question": "Áudio: \"Nunca bebo café à noite.\" Você toma café à noite?",
+                  "question": "Áudio: «Nunca tomo café pola noite.» Você toma café à noite?",
                   "explanation": "\"Nunca\" significa \"nunca\".",
                   "options": "Não\u0001Sim",
                   "correctAnswer": "Não"
                 },
                 "it": {
-                  "question": "Audio: \"Non bevo mai caffè di notte\". Bevi caffè la sera?",
+                  "question": "Audio: «Nunca tomo café pola noite.» Bevi caffè la sera?",
                   "explanation": "\"Mai\" significa \"mai\".",
                   "options": "NO\u0001Sì",
                   "correctAnswer": "NO"
                 },
                 "ro": {
-                  "question": "Audio: „Nu beau niciodată cafea noaptea”. Bei cafea noaptea?",
+                  "question": "Audio: «Nunca tomo café pola noite.» Bei cafea noaptea?",
                   "explanation": "„Niciodată” înseamnă „niciodată”.",
                   "options": "Nu\u0001Da",
                   "correctAnswer": "Nu"
                 },
                 "zh": {
-                  "question": "音频：“我晚上从不喝咖啡。”你晚上喝咖啡吗？",
+                  "question": "音频：«Nunca tomo café pola noite.» 你晚上喝咖啡吗？",
                   "explanation": "“从不”就是“从不”的意思。",
                   "options": "不\u0001是的",
                   "correctAnswer": "不"
@@ -21054,43 +21054,43 @@
                   "explanation": "El audio da dos instrucciones seguidas."
                 },
                 "en": {
-                  "question": "Audio: \"Go straight and go straight.\" What should you do?",
+                  "question": "Audio: «Vai todo recto e xira á dereita.» What should you do?",
                   "explanation": "The audio gives two instructions in a row.",
                   "options": "go straight and turn right\u0001turn left\u0001go back",
                   "correctAnswer": "go straight and turn right"
                 },
                 "de": {
-                  "question": "Audio: „Gehen Sie geradeaus und gehen Sie geradeaus.“ Was sollten Sie tun?",
+                  "question": "Audio: «Vai todo recto e xira á dereita.» Was sollten Sie tun?",
                   "explanation": "Der Ton gibt zwei Anweisungen hintereinander.",
                   "options": "Gehen Sie geradeaus und biegen Sie rechts ab\u0001Biegen Sie links ab\u0001geh zurück",
                   "correctAnswer": "Gehen Sie geradeaus und biegen Sie rechts ab"
                 },
                 "fr": {
-                  "question": "Audio : \"Allez tout droit et allez tout droit.\" Que devez-vous faire ?",
+                  "question": "Audio : «Vai todo recto e xira á dereita.» Que devez-vous faire ?",
                   "explanation": "L'audio donne deux instructions d'affilée.",
                   "options": "va tout droit et tourne à droite\u0001Tourner à gauche\u0001revenir",
                   "correctAnswer": "va tout droit et tourne à droite"
                 },
                 "pt": {
-                  "question": "Áudio: \"Vá em frente e siga em frente.\" O que você deve fazer?",
+                  "question": "Áudio: «Vai todo recto e xira á dereita.» O que você deve fazer?",
                   "explanation": "O áudio dá duas instruções seguidas.",
                   "options": "siga em frente e vire à direita\u0001Vire à esquerda\u0001volte",
                   "correctAnswer": "siga em frente e vire à direita"
                 },
                 "it": {
-                  "question": "Audio: \"Vai dritto e vai dritto.\" Cosa dovresti fare?",
+                  "question": "Audio: «Vai todo recto e xira á dereita.» Cosa dovresti fare?",
                   "explanation": "L'audio fornisce due istruzioni di seguito.",
                   "options": "vai dritto e gira a destra\u0001Girare a sinistra\u0001torna indietro",
                   "correctAnswer": "vai dritto e gira a destra"
                 },
                 "ro": {
-                  "question": "Audio: „Du-te drept și mergi drept”. Ce ar trebui să faci?",
+                  "question": "Audio: «Vai todo recto e xira á dereita.» Ce ar trebui să faci?",
                   "explanation": "Audio oferă două instrucțiuni la rând.",
                   "options": "mergeți drept și faceți dreapta\u0001Viraj la stânga\u0001întoarce-te",
                   "correctAnswer": "mergeți drept și faceți dreapta"
                 },
                 "zh": {
-                  "question": "音频：“直走，直走。”你应该做什么？",
+                  "question": "音频：«Vai todo recto e xira á dereita.» 你该怎么办？",
                   "explanation": "音频连续给出两个指令。",
                   "options": "直走然后右转\u0001左转\u0001回去",
                   "correctAnswer": "直走然后右转"
@@ -21115,43 +21115,43 @@
                   "explanation": "«Preto» significa cerca."
                 },
                 "en": {
-                  "question": "Audio: \"The station is ready for the street.\" Is it far away?",
+                  "question": "Audio: «A estación está preto da praza.» Is it far away?",
                   "explanation": "\"Preto\" means close.",
                   "options": "No\u0001Yeah",
                   "correctAnswer": "No"
                 },
                 "de": {
-                  "question": "Audio: „Der Bahnhof ist bereit für die Straße.“ Ist es weit weg?",
+                  "question": "Audio: «A estación está preto da praza.» Ist es weit weg?",
                   "explanation": "„Preto“ bedeutet nah.",
                   "options": "NEIN\u0001Ja",
                   "correctAnswer": "NEIN"
                 },
                 "fr": {
-                  "question": "Audio : \"La station est prête pour la rue.\" Est-ce loin ?",
+                  "question": "Audio : «A estación está preto da praza.» C'est loin ?",
                   "explanation": "\"Preto\" signifie proche.",
                   "options": "Non\u0001Ouais",
                   "correctAnswer": "Non"
                 },
                 "pt": {
-                  "question": "Áudio: “A estação está pronta para a rua”. Está longe?",
+                  "question": "Áudio: «A estación está preto da praza.» Está longe?",
                   "explanation": "\"Preto\" significa próximo.",
                   "options": "Não\u0001Sim",
                   "correctAnswer": "Não"
                 },
                 "it": {
-                  "question": "Audio: \"La stazione è pronta per la strada.\" È lontano?",
+                  "question": "Audio: «A estación está preto da praza.» È lontano?",
                   "explanation": "\"Preto\" significa vicino.",
                   "options": "NO\u0001Sì",
                   "correctAnswer": "NO"
                 },
                 "ro": {
-                  "question": "Audio: „Stația este pregătită pentru stradă”. E departe?",
+                  "question": "Audio: «A estación está preto da praza.» Este departe?",
                   "explanation": "„Preto” înseamnă aproape.",
                   "options": "Nu\u0001Da",
                   "correctAnswer": "Nu"
                 },
                 "zh": {
-                  "question": "音频：“车站已准备好上街。”远吗？",
+                  "question": "音频：«A estación está preto da praza.» 远吗？",
                   "explanation": "“Preto”的意思是接近。",
                   "options": "不\u0001是的",
                   "correctAnswer": "不"
@@ -21265,43 +21265,43 @@
                   "explanation": "El audio dice «en tren»."
                 },
                 "en": {
-                  "question": "Audio: «You went to Santiago by train.» How is it going?",
+                  "question": "Audio: «Vou a Santiago en tren.» How's it going?",
                   "explanation": "The audio says \"by train.\"",
                   "options": "by train\u0001by bus\u0001walking",
                   "correctAnswer": "by train"
                 },
                 "de": {
-                  "question": "Audio: „Du bist mit dem Zug nach Santiago gefahren.“ Wie geht es Ihnen?",
+                  "question": "Audio: «Vou a Santiago en tren.» Wie geht es dir?",
                   "explanation": "Im Ton ist „mit dem Zug“ zu hören.",
                   "options": "mit dem Zug\u0001mit dem Bus\u0001gehen",
                   "correctAnswer": "mit dem Zug"
                 },
                 "fr": {
-                  "question": "Audio : « Vous êtes allé à Santiago en train. » Comment ça va?",
+                  "question": "Audio : «Vou a Santiago en tren.» Comment ça va ?",
                   "explanation": "L'audio dit \"en train\".",
                   "options": "en train\u0001en autobus\u0001marche",
                   "correctAnswer": "en train"
                 },
                 "pt": {
-                  "question": "Áudio: «Você foi para Santiago de trem.» Como vão as coisas?",
+                  "question": "Áudio: «Vou a Santiago en tren.» Como vai?",
                   "explanation": "O áudio diz “de trem”.",
                   "options": "de trem\u0001de ônibus\u0001andando",
                   "correctAnswer": "de trem"
                 },
                 "it": {
-                  "question": "Audio: «Sei andato a Santiago in treno.» Come va?",
+                  "question": "Audio: «Vou a Santiago en tren.» Come va?",
                   "explanation": "L'audio dice \"in treno\".",
                   "options": "in treno\u0001in autobus\u0001a piedi",
                   "correctAnswer": "in treno"
                 },
                 "ro": {
-                  "question": "Audio: „Ai mers la Santiago cu trenul.” Cum vă merge?",
+                  "question": "Audio: «Vou a Santiago en tren.» Cum merge?",
                   "explanation": "Audio spune „cu trenul”.",
                   "options": "cu trenul\u0001cu autobuzul\u0001mers pe jos",
                   "correctAnswer": "cu trenul"
                 },
                 "zh": {
-                  "question": "音频：“你乘火车去圣地亚哥。”最近好吗？",
+                  "question": "音频：«Vou a Santiago en tren.» 怎么样？",
                   "explanation": "音频显示“乘火车”。",
                   "options": "乘火车\u0001乘巴士\u0001步行",
                   "correctAnswer": "乘火车"
@@ -21327,43 +21327,43 @@
                   "explanation": "«Esquerda» es izquierda."
                 },
                 "en": {
-                  "question": "Audio: «The museum is on the left.» Where is?",
+                  "question": "Audio: «O museo está á esquerda.» Where is it?",
                   "explanation": "\"Left\" is left.",
                   "options": "to the left\u0001to the right\u0001near",
                   "correctAnswer": "to the left"
                 },
                 "de": {
-                  "question": "Audio: «Das Museum befindet sich auf der linken Seite.» Wo ist?",
+                  "question": "Audio: «O museo está á esquerda.» Wo ist es?",
                   "explanation": "„Links“ ist links.",
                   "options": "Nach links\u0001Nach rechts\u0001nahe",
                   "correctAnswer": "Nach links"
                 },
                 "fr": {
-                  "question": "Audio : « Le musée est à gauche. » Où est?",
+                  "question": "Audio : «O museo está á esquerda.» Où est-il ?",
                   "explanation": "\"Gauche\" est gauche.",
                   "options": "À gauche\u0001À droite\u0001près",
                   "correctAnswer": "À gauche"
                 },
                 "pt": {
-                  "question": "Áudio: «O museu fica à esquerda.» Onde está?",
+                  "question": "Áudio: «O museo está á esquerda.» Onde está?",
                   "explanation": "\"Esquerda\" é esquerda.",
                   "options": "Para a esquerda\u0001Para a direita\u0001aproximar",
                   "correctAnswer": "Para a esquerda"
                 },
                 "it": {
-                  "question": "Audio: «Il museo è sulla sinistra.» Dov'è?",
+                  "question": "Audio: «O museo está á esquerda.» Dov'è?",
                   "explanation": "\"Sinistra\" è rimasto.",
                   "options": "A sinistra\u0001A destra\u0001vicino",
                   "correctAnswer": "A sinistra"
                 },
                 "ro": {
-                  "question": "Audio: „Muzeul este în stânga.” Unde este?",
+                  "question": "Audio: «O museo está á esquerda.» Unde este?",
                   "explanation": "„Stânga” este lăsat.",
                   "options": "La stânga\u0001La dreapta\u0001aproape",
                   "correctAnswer": "La stânga"
                 },
                 "zh": {
-                  "question": "音频：“博物馆在左边。”在哪里？",
+                  "question": "音频：«O museo está á esquerda.» 在哪里？",
                   "explanation": "“左”就是左。",
                   "options": "向左转\u0001向右\u0001靠近",
                   "correctAnswer": "向左转"
@@ -23565,43 +23565,43 @@
                   "explanation": "«Canto custa» pregunta el precio."
                 },
                 "en": {
-                  "question": "Audio: \"How much does this shirt cost?\" What question?",
+                  "question": "Audio: «Canto custa esta camiseta?» What question?",
                   "explanation": "«Canto custa» asks the price.",
                   "options": "the price\u0001the size\u0001the color",
                   "correctAnswer": "the price"
                 },
                 "de": {
-                  "question": "Audio: „Wie viel kostet dieses Shirt?“ Welche Frage?",
+                  "question": "Audio: «Canto custa esta camiseta?» Welche Frage?",
                   "explanation": "«Canto custa» fragt nach dem Preis.",
                   "options": "der Preis\u0001die Größe\u0001die Farbe",
                   "correctAnswer": "der Preis"
                 },
                 "fr": {
-                  "question": "Audio : « Combien coûte cette chemise ? » Quelle question ?",
+                  "question": "Audio : «Canto custa esta camiseta?» Quelle question ?",
                   "explanation": "«Canto custa» demande le prix.",
                   "options": "le prix\u0001la taille\u0001la couleur",
                   "correctAnswer": "le prix"
                 },
                 "pt": {
-                  "question": "Áudio: \"Quanto custa esta camisa?\" Que pergunta?",
+                  "question": "Áudio: «Canto custa esta camiseta?» Que pergunta?",
                   "explanation": "«Canto custa» pergunta o preço.",
                   "options": "o preço\u0001o tamanho\u0001a cor",
                   "correctAnswer": "o preço"
                 },
                 "it": {
-                  "question": "Audio: \"Quanto costa questa maglietta?\" Quale domanda?",
+                  "question": "Audio: «Canto custa esta camiseta?» Quale domanda?",
                   "explanation": "«Canto custa» chiede il prezzo.",
                   "options": "il prezzo\u0001la dimensione\u0001il colore",
                   "correctAnswer": "il prezzo"
                 },
                 "ro": {
-                  "question": "Audio: „Cât costă această cămașă?” Ce întrebare?",
+                  "question": "Audio: «Canto custa esta camiseta?» Ce întrebare?",
                   "explanation": "„Canto custa” întreabă prețul.",
                   "options": "pretul\u0001dimensiunea\u0001culoarea",
                   "correctAnswer": "pretul"
                 },
                 "zh": {
-                  "question": "音频：“这件衬衫多少钱？”什么问题？",
+                  "question": "音频：«Canto custa esta camiseta?» 什么问题？",
                   "explanation": "“Canto custa”询问价格。",
                   "options": "价格\u0001尺寸\u0001颜色",
                   "correctAnswer": "价格"
@@ -23627,43 +23627,43 @@
                   "explanation": "El audio dice «quince»."
                 },
                 "en": {
-                  "question": "Audio: \"It costs fifteen euros.\" How much does it cost?",
+                  "question": "Audio: «Custa quince euros.» How much does it cost?",
                   "explanation": "The audio says \"fifteen.\"",
                   "options": "€15\u0001€50\u0001€5",
                   "correctAnswer": "€15"
                 },
                 "de": {
-                  "question": "Audio: „Es kostet fünfzehn Euro.“ Wie viel kostet es?",
+                  "question": "Audio: «Custa quince euros.» Wie viel kostet es?",
                   "explanation": "Der Ton sagt „fünfzehn“.",
                   "options": "15 €\u000150 €\u00015 €",
                   "correctAnswer": "15 €"
                 },
                 "fr": {
-                  "question": "Audio : \"Ça coûte quinze euros.\" Combien ça coûte?",
+                  "question": "Audio : «Custa quince euros.» Combien ça coûte ?",
                   "explanation": "L'audio dit \"quinze\".",
                   "options": "15 €\u000150 €\u00015 €",
                   "correctAnswer": "15 €"
                 },
                 "pt": {
-                  "question": "Áudio: “Custa quinze euros”. Quanto custa isso?",
+                  "question": "Áudio: «Custa quince euros.» Quanto custa?",
                   "explanation": "O áudio diz “quinze”.",
                   "options": "15€\u000150€\u00015€",
                   "correctAnswer": "15€"
                 },
                 "it": {
-                  "question": "Audio: \"Costa quindici euro.\" Quanto costa?",
+                  "question": "Audio: «Custa quince euros.» Quanto costa?",
                   "explanation": "L'audio dice \"quindici\".",
                   "options": "€15\u0001€50\u0001€5",
                   "correctAnswer": "€15"
                 },
                 "ro": {
-                  "question": "Audio: „Costă cincisprezece euro”. Cât costã?",
+                  "question": "Audio: «Custa quince euros.» Cât costă?",
                   "explanation": "Audio spune „cincisprezece”.",
                   "options": "15 €\u000150 €\u00015 €",
                   "correctAnswer": "15 €"
                 },
                 "zh": {
-                  "question": "音频：“花费十五欧元。”它要多少钱？",
+                  "question": "音频：«Custa quince euros.» 多少钱？",
                   "explanation": "音频显示“十五”。",
                   "options": "15 欧元\u000150 欧元\u00015 欧元",
                   "correctAnswer": "15 欧元"
@@ -23777,43 +23777,43 @@
                   "explanation": "«Tarxeta» es tarjeta."
                 },
                 "en": {
-                  "question": "Audio: \"I want to pay with a card.\" How do you want to pay?",
+                  "question": "Audio: «Quero pagar con tarxeta.» How do you want to pay?",
                   "explanation": "\"Tarxeta\" is card.",
                   "options": "with card\u0001in cash\u0001with check",
                   "correctAnswer": "with card"
                 },
                 "de": {
-                  "question": "Audio: „Ich möchte mit Karte bezahlen.“ Wie möchten Sie bezahlen?",
+                  "question": "Audio: «Quero pagar con tarxeta.» Wie möchten Sie bezahlen?",
                   "explanation": "„Tarxeta“ ist eine Karte.",
                   "options": "mit Karte\u0001in bar\u0001mit Scheck",
                   "correctAnswer": "mit Karte"
                 },
                 "fr": {
-                  "question": "Audio : \"Je veux payer avec une carte.\" Comment voulez-vous payer ?",
+                  "question": "Audio : «Quero pagar con tarxeta.» Comment souhaitez-vous payer ?",
                   "explanation": "\"Tarxeta\" est une carte.",
                   "options": "avec carte\u0001en espèces\u0001avec chèque",
                   "correctAnswer": "avec carte"
                 },
                 "pt": {
-                  "question": "Áudio: \"Quero pagar com cartão.\" Como você quer pagar?",
+                  "question": "Áudio: «Quero pagar con tarxeta.» Como você deseja pagar?",
                   "explanation": "\"Tarxeta\" é cartão.",
                   "options": "com cartão\u0001em dinheiro\u0001com cheque",
                   "correctAnswer": "com cartão"
                 },
                 "it": {
-                  "question": "Audio: \"Voglio pagare con una carta\". Come vuoi pagare?",
+                  "question": "Audio: «Quero pagar con tarxeta.» Come vuoi pagare?",
                   "explanation": "\"Tarxeta\" è il card.",
                   "options": "con carta\u0001in contanti\u0001con assegno",
                   "correctAnswer": "con carta"
                 },
                 "ro": {
-                  "question": "Audio: „Vreau să plătesc cu un card”. Cum vrei sa platesti?",
+                  "question": "Audio: «Quero pagar con tarxeta.» Cum vrei să plătești?",
                   "explanation": "„Tarxeta” este card.",
                   "options": "cu card\u0001în numerar\u0001cu cec",
                   "correctAnswer": "cu card"
                 },
                 "zh": {
-                  "question": "音频：“我想用卡支付。”您想如何付款？",
+                  "question": "音频：«Quero pagar con tarxeta.» 您想如何付款？",
                   "explanation": "“Tarxeta”是卡片。",
                   "options": "带卡\u0001现金\u0001带支票",
                   "correctAnswer": "带卡"
@@ -23839,43 +23839,43 @@
                   "explanation": "«Moi caro» es muy caro."
                 },
                 "en": {
-                  "question": "Audio: \"This coat is very expensive.\" What is the coat like?",
+                  "question": "Audio: «Este abrigo é moi caro.» What is the coat like?",
                   "explanation": "\"Moi caro\" is very expensive.",
                   "options": "very expensive\u0001very cheap\u0001very old",
                   "correctAnswer": "very expensive"
                 },
                 "de": {
-                  "question": "Audio: „Dieser Mantel ist sehr teuer.“ Wie ist das Fell?",
+                  "question": "Audio: «Este abrigo é moi caro.» Wie ist das Fell?",
                   "explanation": "„Moi caro“ ist sehr teuer.",
                   "options": "sehr teuer\u0001sehr günstig\u0001sehr alt",
                   "correctAnswer": "sehr teuer"
                 },
                 "fr": {
-                  "question": "Audio : « Ce manteau est très cher. » Comment est le manteau ?",
+                  "question": "Audio : «Este abrigo é moi caro.» À quoi ressemble le manteau ?",
                   "explanation": "\"Moi caro\" coûte très cher.",
                   "options": "très cher\u0001très bon marché\u0001très vieux",
                   "correctAnswer": "très cher"
                 },
                 "pt": {
-                  "question": "Áudio: \"Este casaco é muito caro.\" Como é o casaco?",
+                  "question": "Áudio: «Este abrigo é moi caro.» Como é o casaco?",
                   "explanation": "\"Moi caro\" é muito caro.",
                   "options": "muito caro\u0001muito barato\u0001muito velho",
                   "correctAnswer": "muito caro"
                 },
                 "it": {
-                  "question": "Audio: \"Questo cappotto è molto costoso.\" Com'è il cappotto?",
+                  "question": "Audio: «Este abrigo é moi caro.» Com'è il cappotto?",
                   "explanation": "\"Moi caro\" è molto caro.",
                   "options": "molto costoso\u0001molto economico\u0001molto vecchio",
                   "correctAnswer": "molto costoso"
                 },
                 "ro": {
-                  "question": "Audio: „Această haină este foarte scumpă”. Cum este haina?",
+                  "question": "Audio: «Este abrigo é moi caro.» Cum este haina?",
                   "explanation": "„Moi caro” este foarte scump.",
                   "options": "foarte scump\u0001foarte ieftin\u0001foarte vechi",
                   "correctAnswer": "foarte scump"
                 },
                 "zh": {
-                  "question": "音频：“这件外套很贵。”大衣是什么样的？",
+                  "question": "音频：«Este abrigo é moi caro.» 这件外套是什么样的？",
                   "explanation": "“Moi caro”非常昂贵。",
                   "options": "非常贵\u0001很便宜\u0001很旧",
                   "correctAnswer": "非常贵"
@@ -25780,13 +25780,13 @@
                   "correctAnswer": "it rains and it is windy"
                 },
                 "de": {
-                  "question": "Audio: „Hoxe chove e fai vento.“ Wie ist das Wetter?",
+                  "question": "Audio: «Hoxe chove e fai vento.» Wie ist das Wetter?",
                   "explanation": "Die Audionamen „chove“ und „fai vento“.",
                   "options": "es regnet und es ist windig\u0001Es ist sonnig\u0001es schneit",
                   "correctAnswer": "es regnet und es ist windig"
                 },
                 "fr": {
-                  "question": "Audio : « Hoxe chove e fai vento. » Quel temps fait-il?",
+                  "question": "Audio : «Hoxe chove e fai vento.» Quel temps fait-il ?",
                   "explanation": "Les noms audio « chove » et « fai vento ».",
                   "options": "il pleut et il y a du vent\u0001Il fait beau\u0001il neige",
                   "correctAnswer": "il pleut et il y a du vent"
@@ -25804,13 +25804,13 @@
                   "correctAnswer": "piove e c'è vento"
                 },
                 "ro": {
-                  "question": "Audio: «Hoxe chove e fai vento.» Cum e vremea?",
+                  "question": "Audio: «Hoxe chove e fai vento.» Cum este vremea?",
                   "explanation": "Denumirile audio „chove” și „fai vento”.",
                   "options": "ploua si bate vant\u0001E soare\u0001ninge",
                   "correctAnswer": "ploua si bate vant"
                 },
                 "zh": {
-                  "question": "音频：《Hoxe chove e fai vento》。天气如何？",
+                  "question": "音频：«Hoxe chove e fai vento.» 天气怎么样？",
                   "explanation": "音频名称为“chove”和“fai vento”。",
                   "options": "下雨，刮风\u0001今天是晴天\u0001下雪了",
                   "correctAnswer": "下雨，刮风"
@@ -25836,43 +25836,43 @@
                   "explanation": "«Xullo» es julio."
                 },
                 "en": {
-                  "question": "Audio: «In xullo fai moita calor.» What month are you talking about?",
+                  "question": "Audio: «En xullo fai moita calor.» What month are you talking about?",
                   "explanation": "«Xullo» is July.",
                   "options": "July\u0001June\u0001January",
                   "correctAnswer": "July"
                 },
                 "de": {
-                  "question": "Audio: „In xullo fai moita calor.“ Von welchem ​​Monat sprichst du?",
+                  "question": "Audio: «En xullo fai moita calor.» Von welchem ​​Monat sprichst du?",
                   "explanation": "«Xullo» ist Juli.",
                   "options": "Juli\u0001Juni\u0001Januar",
                   "correctAnswer": "Juli"
                 },
                 "fr": {
-                  "question": "Audio : « In xullo fai moita calor. » De quel mois parles-tu ?",
+                  "question": "",
                   "explanation": "«Xullo» c'est juillet.",
                   "options": "Juillet\u0001Juin\u0001Janvier",
                   "correctAnswer": "Juillet"
                 },
                 "pt": {
-                  "question": "Áudio: «In xullo fai moita calor.» De que mês você está falando?",
+                  "question": "Áudio: «En xullo fai moita calor.» De que mês você está falando?",
                   "explanation": "«Xullo» é julho.",
                   "options": "Julho\u0001Junho\u0001Janeiro",
                   "correctAnswer": "Julho"
                 },
                 "it": {
-                  "question": "Audio: «In xullo fai moita calor.» Di che mese stai parlando?",
+                  "question": "Audio: «En xullo fai moita calor.» Di che mese stai parlando?",
                   "explanation": "«Xullo» è luglio.",
                   "options": "Luglio\u0001Giugno\u0001Gennaio",
                   "correctAnswer": "Luglio"
                 },
                 "ro": {
-                  "question": "Audio: «În iulie fai multă calorie.» Despre ce luna vorbesti?",
+                  "question": "Audio: «En xullo fai moita calor.» Despre ce lună vorbești?",
                   "explanation": "«Xullo» este iulie.",
                   "options": "iulie\u0001iunie\u0001ianuarie",
                   "correctAnswer": "iulie"
                 },
                 "zh": {
-                  "question": "音频：《In xullo fai moita calor》。你说的是哪一个月？",
+                  "question": "音频：«En xullo fai moita calor.» 你说的是几月？",
                   "explanation": "“Xullo”是七月。",
                   "options": "七月\u0001六月\u0001一月",
                   "correctAnswer": "七月"
@@ -25986,43 +25986,43 @@
                   "explanation": "«Vai facer» expresa futuro próximo."
                 },
                 "en": {
-                  "question": "Audio: «Tomorrow it will be sunny.» What will the weather be like tomorrow?",
+                  "question": "Audio: «Mañá vai facer sol.» What will the weather be like tomorrow?",
                   "explanation": "\"Vai facer\" expresses near future.",
                   "options": "sun\u0001rain\u0001fog",
                   "correctAnswer": "sun"
                 },
                 "de": {
-                  "question": "Audio: «Morgen wird es sonnig sein.» Wie wird das Wetter morgen sein?",
+                  "question": "Audio: «Mañá vai facer sol.» Wie wird das Wetter morgen sein?",
                   "explanation": "„Vai facer“ drückt die nahe Zukunft aus.",
                   "options": "Sonne\u0001Regen\u0001Nebel",
                   "correctAnswer": "Sonne"
                 },
                 "fr": {
-                  "question": "Audio : « Demain, il fera beau. » Quel temps fera-t-il demain ?",
+                  "question": "Audio : «Mañá vai facer sol.» Quel temps fera-t-il demain ?",
                   "explanation": "\"Vai facer\" exprime un futur proche.",
                   "options": "soleil\u0001pluie\u0001brouillard",
                   "correctAnswer": "soleil"
                 },
                 "pt": {
-                  "question": "Áudio: «Amanhã fará sol.» Como estará o tempo amanhã?",
+                  "question": "Áudio: «Mañá vai facer sol.» Como estará o tempo amanhã?",
                   "explanation": "“Vai facer” expressa futuro próximo.",
                   "options": "sol\u0001chuva\u0001névoa",
                   "correctAnswer": "sol"
                 },
                 "it": {
-                  "question": "Audio: «Domani sarà soleggiato.» Che tempo farà domani?",
+                  "question": "Audio: «Mañá vai facer sol.» Che tempo farà domani?",
                   "explanation": "\"Vai facer\" esprime il futuro prossimo.",
                   "options": "sole\u0001piovere\u0001nebbia",
                   "correctAnswer": "sole"
                 },
                 "ro": {
-                  "question": "Audio: „Mâine va fi soare.” Cum va fi vremea mâine?",
+                  "question": "Audio: «Mañá vai facer sol.» Cum va fi vremea mâine?",
                   "explanation": "„Vai facer” exprimă viitorul apropiat.",
                   "options": "soare\u0001ploaie\u0001ceaţă",
                   "correctAnswer": "soare"
                 },
                 "zh": {
-                  "question": "音频：“明天天气晴朗。”明天天气怎么样？",
+                  "question": "音频：«Mañá vai facer sol.» 明天天气怎么样？",
                   "explanation": "“Vaifacer”表示不久的将来。",
                   "options": "太阳\u0001雨\u0001多雾路段",
                   "correctAnswer": "太阳"
@@ -28064,43 +28064,43 @@
                   "explanation": "El audio dice «enfermeira»."
                 },
                 "en": {
-                  "question": "Audio: \"They are nurses and I work in Vigo.\" What profession do you have?",
+                  "question": "Audio: «Son enfermeira e traballo en Vigo.» What profession do you have?",
                   "explanation": "The audio says \"nurse.\"",
                   "options": "nurse\u0001teacher\u0001lawyer",
                   "correctAnswer": "nurse"
                 },
                 "de": {
-                  "question": "Audio: „Sie sind Krankenschwestern und ich arbeite in Vigo.“ Welchen Beruf haben Sie?",
+                  "question": "Audio: «Son enfermeira e traballo en Vigo.» Welchen Beruf haben Sie?",
                   "explanation": "Im Ton ist „Krankenschwester“ zu hören.",
                   "options": "Krankenschwester\u0001Lehrer\u0001Rechtsanwalt",
                   "correctAnswer": "Krankenschwester"
                 },
                 "fr": {
-                  "question": "Audio : « Ce sont des infirmières et je travaille à Vigo. » Quel métier exercez-vous ?",
+                  "question": "Audio : «Son enfermeira e traballo en Vigo.» Quelle profession exercez-vous ?",
                   "explanation": "L'audio dit \"infirmière\".",
                   "options": "infirmière\u0001professeur\u0001avocat",
                   "correctAnswer": "infirmière"
                 },
                 "pt": {
-                  "question": "Áudio: “São enfermeiras e eu trabalho em Vigo”. Que profissão você tem?",
+                  "question": "Áudio: «Son enfermeira e traballo en Vigo.» Qual profissão você tem?",
                   "explanation": "O áudio diz “enfermeira”.",
                   "options": "enfermeira\u0001professor\u0001advogado",
                   "correctAnswer": "enfermeira"
                 },
                 "it": {
-                  "question": "Audio: \"Sono infermieri e lavoro a Vigo.\" Che professione svolgi?",
+                  "question": "Audio: «Son enfermeira e traballo en Vigo.» Che professione svolgi?",
                   "explanation": "L'audio dice \"infermiera\".",
                   "options": "infermiera\u0001insegnante\u0001avvocato",
                   "correctAnswer": "infermiera"
                 },
                 "ro": {
-                  "question": "Audio: „Sunt asistente și eu lucrez în Vigo”. Ce profesie ai?",
+                  "question": "Audio: «Son enfermeira e traballo en Vigo.» Ce profesie ai?",
                   "explanation": "Audio spune „asistentă”.",
                   "options": "asistenta medicala\u0001profesor\u0001avocat",
                   "correctAnswer": "asistenta medicala"
                 },
                 "zh": {
-                  "question": "音频：“他们是护士，我在维戈工作。”你从事什么职业？",
+                  "question": "音频：«Son enfermeira e traballo en Vigo.» 你从事什么职业？",
                   "explanation": "音频显示“护士”。",
                   "options": "护士\u0001老师\u0001律师",
                   "correctAnswer": "护士"
@@ -28126,43 +28126,43 @@
                   "explanation": "El audio nombra «ler» y «camiñar»."
                 },
                 "en": {
-                  "question": "Audio: \"I like to read and walk.\" What do you like?",
+                  "question": "Audio: «Gústame ler e camiñar.» What do you like?",
                   "explanation": "The audio names \"ler\" and \"camiñar.\"",
                   "options": "read and walk\u0001swim and run\u0001cooking and traveling",
                   "correctAnswer": "read and walk"
                 },
                 "de": {
-                  "question": "Audio: „Ich lese und gehe gerne spazieren.“ Was haben Sie gern?",
+                  "question": "Audio: «Gústame ler e camiñar.» Was gefällt dir?",
                   "explanation": "Die Audionamen „ler“ und „camiñar“.",
                   "options": "lesen und spazieren gehen\u0001schwimmen und laufen\u0001Kochen und Reisen",
                   "correctAnswer": "lesen und spazieren gehen"
                 },
                 "fr": {
-                  "question": "Audio : \"J'aime lire et marcher.\" Qu'aimez-vous?",
+                  "question": "Audio : «Gústame ler e camiñar.» Qu'est-ce que tu aimes ?",
                   "explanation": "Les noms audio «ler» et «camiñar».",
                   "options": "lire et marcher\u0001nager et courir\u0001cuisiner et voyager",
                   "correctAnswer": "lire et marcher"
                 },
                 "pt": {
-                  "question": "Áudio: \"Gosto de ler e caminhar.\" Do que você gosta?",
+                  "question": "Áudio: «Gústame ler e camiñar.» Do que você gosta?",
                   "explanation": "Os nomes de áudio “ler” e “camiñar”.",
                   "options": "leia e caminhe\u0001nadar e correr\u0001cozinhar e viajar",
                   "correctAnswer": "leia e caminhe"
                 },
                 "it": {
-                  "question": "Audio: \"Mi piace leggere e camminare.\" Cosa ti piace?",
+                  "question": "Audio: «Gústame ler e camiñar.» Cosa ti piace?",
                   "explanation": "I nomi audio \"ler\" e \"camiñar\".",
                   "options": "leggere e camminare\u0001nuotare e correre\u0001cucinare e viaggiare",
                   "correctAnswer": "leggere e camminare"
                 },
                 "ro": {
-                  "question": "Audio: „Îmi place să citesc și să merg”. Ce-ți place?",
+                  "question": "Audio: «Gústame ler e camiñar.» Ce vă place?",
                   "explanation": "Denumirile audio „ler” și „camiñar”.",
                   "options": "citește și mergi\u0001inota si alerga\u0001gătit și călătorii",
                   "correctAnswer": "citește și mergi"
                 },
                 "zh": {
-                  "question": "音频：“我喜欢读书和散步。”你喜欢什么？",
+                  "question": "音频：«Gústame ler e camiñar.» 你喜欢什么？",
                   "explanation": "音频名称为“ler”和“camiñar”。",
                   "options": "阅读和行走\u0001游泳和跑步\u0001烹饪和旅行",
                   "correctAnswer": "阅读和行走"
@@ -28276,45 +28276,45 @@
                   "explanation": "La capital de Galicia es Santiago de Compostela."
                 },
                 "en": {
-                  "question": "Audio: «Santiago de Compostela is the capital of Galicia.» What is the capital?",
+                  "question": "Audio: «Santiago de Compostela é a capital de Galicia.» What is the capital?",
                   "explanation": "The capital of Galicia is Santiago de Compostela.",
                   "options": "Santiago de Compostela\u0001Vigo\u0001To Coruña",
                   "correctAnswer": "Santiago de Compostela"
                 },
                 "de": {
-                  "question": "Audio: „Santiago de Compostela ist die Hauptstadt Galiziens.“ Was ist die Hauptstadt?",
+                  "question": "Audio: «Santiago de Compostela é a capital de Galicia.» Was ist die Hauptstadt?",
                   "explanation": "Die Hauptstadt Galiziens ist Santiago de Compostela.",
                   "options": "Santiago de Compostela\u0001Vigo\u0001Nach Coruña",
                   "correctAnswer": "Santiago de Compostela"
                 },
                 "fr": {
-                  "question": "Audio : « Saint-Jacques-de-Compostelle est la capitale de la Galice. » Quelle est la capitale ?",
+                  "question": "Audio : «Santiago de Compostela é a capital de Galicia.» Quelle est la capitale ?",
                   "explanation": "La capitale de la Galice est Saint-Jacques-de-Compostelle.",
                   "options": "Saint Jacques de Compostelle\u0001Vigo\u0001Vers La Corogne",
                   "correctAnswer": "Saint Jacques de Compostelle"
                 },
                 "pt": {
-                  "question": "Áudio: «Santiago de Compostela é a capital da Galiza.» Qual é a capital?",
+                  "question": "Áudio: «Santiago de Compostela é a capital de Galicia.» Qual é a capital?",
                   "explanation": "A capital da Galiza é Santiago de Compostela.",
                   "options": "Santiago de Compostela\u0001Vigo\u0001Para Corunha",
                   "correctAnswer": "Santiago de Compostela"
                 },
                 "it": {
-                  "question": "Audio: «Santiago de Compostela è la capitale della Galizia.» Qual è la capitale?",
+                  "question": "Audio: «Santiago de Compostela é a capital de Galicia.» Qual è la capitale?",
                   "explanation": "La capitale della Galizia è Santiago de Compostela.",
                   "options": "Santiago di Compostela\u0001Vigo\u0001A Coruña",
                   "correctAnswer": "Santiago di Compostela"
                 },
                 "ro": {
-                  "question": "Audio: „Santiago de Compostela este capitala Galiției.” Care este capitala?",
+                  "question": "Audio: «Santiago de Compostela é a capital de Galicia.» Care este capitala?",
                   "explanation": "Capitala Galiției este Santiago de Compostela.",
                   "options": "Santiago de Compostela\u0001Vigo\u0001La Coruña",
                   "correctAnswer": "Santiago de Compostela"
                 },
                 "zh": {
-                  "question": "音频：“圣地亚哥德孔波斯特拉是加利西亚的首府。”首都是什么？",
+                  "question": "音频：«Santiago de Compostela é a capital de Galicia.» 首都是多少？",
                   "explanation": "加利西亚的首府是圣地亚哥德孔波斯特拉。",
-                  "options": "圣地亚哥·德·孔波斯特拉\u0001维戈\u0001飞往 科鲁尼亚",
+                  "options": "圣地亚哥·德·孔波斯特拉\u0001Vigo\u0001飞往 科鲁尼亚",
                   "correctAnswer": "圣地亚哥·德·孔波斯特拉"
                 }
               },
@@ -28338,43 +28338,43 @@
                   "explanation": "El audio dice «os sábados»."
                 },
                 "en": {
-                  "question": "Audio: «On Saturdays you go to the beach with friends.» When is it going?",
+                  "question": "Audio: «Os sábados vou á praia con amigos.» When is it coming?",
                   "explanation": "The audio says \"on Saturdays.\"",
                   "options": "on saturdays\u0001on sundays\u0001on mondays",
                   "correctAnswer": "on saturdays"
                 },
                 "de": {
-                  "question": "Audio: «Samstags gehst du mit Freunden an den Strand.» Wann geht es?",
+                  "question": "Audio: «Os sábados vou á praia con amigos.» Wann kommt es?",
                   "explanation": "Im Ton steht „samstags“.",
                   "options": "an Samstagen\u0001sonntags\u0001montags",
                   "correctAnswer": "an Samstagen"
                 },
                 "fr": {
-                  "question": "Audio : « Le samedi, tu vas à la plage avec des amis. » Quand est-ce que ça va ?",
+                  "question": "Audio : «Os sábados vou á praia con amigos.» Quand est-ce que ça arrive ?",
                   "explanation": "L'audio dit \"le samedi\".",
                   "options": "le samedi\u0001le dimanche\u0001le lundi",
                   "correctAnswer": "le samedi"
                 },
                 "pt": {
-                  "question": "Áudio: «Aos sábados você vai à praia com os amigos.» Quando isso vai acontecer?",
+                  "question": "Áudio: «Os sábados vou á praia con amigos.» Quando chegará?",
                   "explanation": "O áudio diz “aos sábados”.",
                   "options": "aos sábados\u0001aos domingos\u0001às segundas-feiras",
                   "correctAnswer": "aos sábados"
                 },
                 "it": {
-                  "question": "Audio: «Il sabato vai al mare con gli amici.» Quando andrà?",
+                  "question": "Audio: «Os sábados vou á praia con amigos.» Quando arriverà?",
                   "explanation": "L'audio dice \"il sabato\".",
                   "options": "il sabato\u0001la domenica\u0001il lunedì",
                   "correctAnswer": "il sabato"
                 },
                 "ro": {
-                  "question": "Audio: „Sâmbăta mergi la plajă cu prietenii.” Când merge?",
+                  "question": "Audio: «Os sábados vou á praia con amigos.» Când vine?",
                   "explanation": "Audio spune „sâmbătă”.",
                   "options": "in zilele de sambata\u0001duminica\u0001luni",
                   "correctAnswer": "in zilele de sambata"
                 },
                 "zh": {
-                  "question": "音频：“周六你和朋友一起去海滩。”什么时候进行？",
+                  "question": "音频：«Os sábados vou á praia con amigos.» 什么时候来？",
                   "explanation": "音频显示“周六”。",
                   "options": "星期六\u0001周日\u0001星期一",
                   "correctAnswer": "星期六"
@@ -28400,43 +28400,43 @@
                   "explanation": "La TVG es la televisión autonómica de Galicia."
                 },
                 "en": {
-                  "question": "Audio: «A TVG broadcasts in Galician.» What language does it broadcast in?",
+                  "question": "Audio: «A TVG emite en galego.» What language does it broadcast in?",
                   "explanation": "TVG is the regional television of Galicia.",
                   "options": "Galician\u0001Castilian\u0001English",
                   "correctAnswer": "Galician"
                 },
                 "de": {
-                  "question": "Audio: «Ein TVG sendet auf Galizisch.» In welcher Sprache wird ausgestrahlt?",
+                  "question": "Audio: «A TVG emite en galego.» In welcher Sprache wird ausgestrahlt?",
                   "explanation": "TVG ist das Regionalfernsehen Galiziens.",
                   "options": "galizisch\u0001Kastilisch\u0001Englisch",
                   "correctAnswer": "galizisch"
                 },
                 "fr": {
-                  "question": "Audio: «Une TVG diffuse en galicien.» Dans quelle langue est-il diffusé ?",
+                  "question": "Audio : «A TVG emite en galego.» Dans quelle langue est-il diffusé ?",
                   "explanation": "TVG est la télévision régionale de Galice.",
                   "options": "Galicien\u0001Castillan\u0001Anglais",
                   "correctAnswer": "Galicien"
                 },
                 "pt": {
-                  "question": "Áudio: «Uma TVG transmite em galego.» Em que idioma é transmitido?",
+                  "question": "Áudio: «A TVG emite en galego.» Em que idioma é transmitido?",
                   "explanation": "TVG é a televisão regional da Galiza.",
                   "options": "Galego\u0001Castelhano\u0001Inglês",
                   "correctAnswer": "Galego"
                 },
                 "it": {
-                  "question": "Audio: «Una TVG trasmette in galiziano.» In che lingua va in onda?",
+                  "question": "Audio: «A TVG emite en galego.» In che lingua viene trasmesso?",
                   "explanation": "TVG è la televisione regionale della Galizia.",
                   "options": "galiziano\u0001castigliano\u0001Inglese",
                   "correctAnswer": "galiziano"
                 },
                 "ro": {
-                  "question": "Audio: „Un TVG emite în limba galițienă.” În ce limbă difuzează?",
+                  "question": "Audio: «A TVG emite en galego.» În ce limbă difuzează?",
                   "explanation": "TVG este televiziunea regională a Galiției.",
                   "options": "Galician\u0001castiliană\u0001engleză",
                   "correctAnswer": "Galician"
                 },
                 "zh": {
-                  "question": "音频：“TVG 用加利西亚语广播。”用什么语言广播？",
+                  "question": "音频：«A TVG emite en galego.» 用什么语言广播？",
                   "explanation": "TVG 是加利西亚的地区电视台。",
                   "options": "加利西亚语\u0001卡斯蒂利亚语\u0001英语",
                   "correctAnswer": "加利西亚语"

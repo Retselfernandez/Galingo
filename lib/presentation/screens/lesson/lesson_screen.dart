@@ -458,8 +458,11 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   }
 
   Widget _buildHeader(BuildContext context, LessonModel lesson, double progress) {
+    // Android 15+/16 (edge-to-edge): engade o alto da barra de estado para que
+    // o título e o botón de pechar non queden debaixo dela.
+    final topInset = MediaQuery.of(context).padding.top;
     return Container(
-      padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
+      padding: EdgeInsets.fromLTRB(16, 12 + topInset, 16, 12),
       decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: [
