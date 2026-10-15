@@ -1,7 +1,3 @@
-# TFM Galingo — Ver 4.0
-
----
-
 **Universidade de Vigo** · **Escola Superior de Enxeñaría Informática**
 
 Memoria del Trabajo de Fin de Máster que presenta **Lester Andre Fernández Cedeño**
@@ -9,7 +5,11 @@ para la obtención del Título de **Máster en Enxeñaría Informática**
 
 ## Diseño, implementación y validación de una plataforma gamificada basada en modelos probabilísticos de repetición espaciada para el aprendizaje del idioma gallego (Galingo)
 
-Curso 2025/2026 · Tutor/a: Francisco Javier Rodríguez
+Curso 2025/2026
+
+Trabajo de Fin de Máster Nº: ______
+
+Tutor/a: Francisco Javier Rodríguez · Área de coñecemento: ______ · Departamento: ______
 
 ---
 
@@ -236,14 +236,14 @@ El desarrollo siguió un enfoque **iterativo e incremental (sprints)**, con un *
 
 | Fase | Peso | Estado | Evidencia |
 |---|---|---|---|
-| 0 — Higiene del repositorio (README, `.gitignore`, CI con gate) | 10 % | ✅ | `.github/workflows`, `README.md` |
-| 1 — Internacionalización de la interfaz y del contenido | 20 % | ✅ | 8 locales, curso traducido |
-| 2 — Robustez del motor SM-2/HLR (casos límite, MAE) | 10 % | ✅ | `test/*`, MAE en Ajustes |
-| 3 — Backend FastAPI + BD + telemetría + feedback | 25 % | ✅ | `backend/`, endpoints desplegados |
-| 4 — Responsividad multiplataforma, firma y CI | 15 % | ✅ | Android/iOS/macOS/Windows |
-| 5 — Voz local (TTS + ASR on-device) | — | ✅ (ampliación) | sherpa-onnx + Whisper, Proxecto Nós |
-| 6 — Beta y métricas | 15 % | 🟡 en curso | telemetría D1/D7, HLR |
-| 7 — Memoria Ver 4.0 | 5 % | 🟡 en curso | este documento |
+| 0 — Higiene del repositorio (README, `.gitignore`, CI con gate) | 10 % | Completada | `.github/workflows`, `README.md` |
+| 1 — Internacionalización de la interfaz y del contenido | 20 % | Completada | 8 locales, curso traducido |
+| 2 — Robustez del motor SM-2/HLR (casos límite, MAE) | 10 % | Completada | `test/*`, MAE en Ajustes |
+| 3 — Backend FastAPI + BD + telemetría + feedback | 25 % | Completada | `backend/`, endpoints desplegados |
+| 4 — Responsividad multiplataforma, firma y CI | 15 % | Completada | Android/iOS/macOS/Windows |
+| 5 — Voz local (TTS + ASR on-device) | — | Completada (ampliación) | sherpa-onnx + Whisper, Proxecto Nós |
+| 6 — Beta y métricas | 15 % | En curso | telemetría D1/D7, HLR |
+| 7 — Memoria Ver 4.0 | 5 % | En curso | este documento |
 
 El **cronograma real** se ajustó a lo previsto salvo la **voz local** (fase 5), que surgió como ampliación al comprobar que ni Android ni iOS ofrecen ASR en gallego. Esta decisión eliminó la dependencia de la nube y mejoró la privacidad, a costa de recalibrar el alcance (A1) para priorizar calidad sobre cantidad.
 
