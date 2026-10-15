@@ -432,7 +432,7 @@ En el **modo repaso**, los pasos son los mismos salvo que la lección se genera 
 
 ## 7.2 Información externa (productos de terceros)
 
-La voz *Celtia* y los modelos del Proxecto Nós son recursos publicados por la USC; Whisper (OpenAI) se distribuye con licencia permisiva; sherpa-onnx es software libre. El dataset de evaluación de repetición espaciada empleado en §9 (FSRS/Anki revlogs) se distribuye con licencia MIT. Se justifica el uso de cada componente por la **ausencia de alternativas específicas para el gallego** y se documentan sus licencias.
+La voz *Celtia* y los modelos del Proxecto Nós son recursos publicados por la USC; Whisper (OpenAI) se distribuye con licencia permisiva; sherpa-onnx es software libre. El dataset de evaluación de repetición espaciada empleado en §9 (FSRS/Anki revlogs) [12] se distribuye con licencia MIT. Se justifica el uso de cada componente por la **ausencia de alternativas específicas para el gallego** y se documentan sus licencias.
 
 ## 7.3 Información interna y persistencia
 
@@ -525,7 +525,7 @@ El cliente funciona de forma autónoma (aprendizaje y voz local); el backend sol
 
 - **Plataforma**: cliente Flutter en Android (APK firmado) e iOS (*sideload*), backend en la nube (*serverless*).
 - **Instrumentación**: telemetría anónima (eventos de repaso, sesiones) y reporte de incidencias integrado.
-- **Datos para el modelo**: (i) *logs* reales de repetición espaciada (**FSRS/Anki revlogs**, licencia MIT: 3,17 M de repasos, 30 usuarios, 312 195 tarjetas) y (ii) una **simulación con verdad conocida** con intervalos aleatorios.
+- **Datos para el modelo**: (i) *logs* reales de repetición espaciada (**FSRS/Anki revlogs** [12], licencia MIT: 3,17 M de repasos, 30 usuarios, 312 195 tarjetas) y (ii) una **simulación con verdad conocida** con intervalos aleatorios.
 
 **Métricas.** Para predicciones probabilísticas de sucesos binarios se emplean:
 
