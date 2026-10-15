@@ -43,21 +43,29 @@ A complete system has been built that integrates: an *offline-first* Flutter cli
 
 ## 1.1 Contexto y motivación
 
-La combinación de ingeniería de software, gamificación y aprendizaje automático ha transformado la manera de aprender una segunda lengua durante la última década. Las plataformas globales de microaprendizaje retienen a las personas usuarias mediante bucles de retroalimentación inmediata, pero reservan el desarrollo algorítmico avanzado para las lenguas con mayor tamaño de mercado. Las lenguas minorizadas quedan cubiertas por recursos digitales estáticos, fragmentados y sin metodologías de retención adaptativa.
+La combinación de ingeniería de software, gamificación y aprendizaje automático ha transformado la manera de aprender una segunda lengua durante la última década. Las plataformas globales de microaprendizaje retienen a las personas usuarias mediante bucles de retroalimentación inmediata, sesiones breves y mecánicas de juego, pero reservan el desarrollo algorítmico avanzado para las lenguas con mayor tamaño de mercado. Las lenguas minorizadas quedan cubiertas por recursos digitales estáticos, fragmentados y sin metodologías de retención adaptativa.
 
-En el caso del gallego, esta desigualdad tecnológica tiene consecuencias sociales concretas. Galicia recibe población migrante de forma continuada y la lengua propia es un factor central para el arraigo territorial, la inserción laboral y la cohesión familiar. La falta de herramientas accesibles para la inmersión lingüística —sobre todo en los niveles iniciales A1/A2— dificulta el aprendizaje progresivo de adultos y menores. A ello se suma una segunda barrera, específicamente técnica: **ni Android ni iOS ofrecen reconocimiento del habla en gallego de forma nativa**, de modo que cualquier ejercicio de voz que dependa de servicios en la nube exige conexión permanente y compromete la privacidad.
+En el caso del gallego, esta desigualdad tecnológica tiene consecuencias sociales concretas. Galicia recibe población migrante de forma continuada, y la lengua propia es un factor central para el **arraigo territorial**, la **inserción laboral** y la **cohesión familiar**. La falta de herramientas accesibles para la inmersión lingüística —sobre todo en los niveles iniciales A1/A2— dificulta el aprendizaje progresivo de personas adultas y de menores en edad escolar. El gallego, además, comparte con otras lenguas minorizadas un ecosistema digital limitado: recursos institucionales valiosos pero a menudo desconectados entre sí, y una presencia escasa en las aplicaciones comerciales de aprendizaje.
 
-Galingo nace de aplicar ingeniería de producto e inteligencia artificial a este doble problema: facilitar el acceso al gallego con una experiencia interactiva y resolver la voz **en el propio dispositivo**.
+A esta brecha de contenido se suma una **brecha tecnológica específica**: ni Android ni iOS ofrecen **reconocimiento del habla en gallego** de forma nativa. Cualquier aplicación que quiera evaluar la pronunciación —la destreza oral, tradicionalmente la más difícil de practicar sin un docente— se ve forzada a depender de servicios en la nube, lo que exige conexión permanente, introduce latencia y compromete la privacidad del audio. Esta limitación es especialmente relevante para una app de idiomas, donde la voz es un componente esencial.
 
-## 1.2 Problema de investigación
+Galingo nace de aplicar ingeniería de producto e inteligencia artificial a este doble problema: **facilitar el acceso al gallego** con una experiencia interactiva y gamificada, y **resolver la voz en el propio dispositivo**, de forma privada y sin conexión. El proyecto se plantea, por tanto, no solo como una interfaz de usuario, sino como una **infraestructura de software** que combine un modelo probabilístico de memoria, una arquitectura desacoplada y una capa de voz local, con un coste de operación nulo que lo haga sostenible sin presupuesto.
 
-El problema técnico abordado es la **ineficiencia de los métodos de repaso estático** en las herramientas existentes para el gallego. La ciencia cognitiva describe la retención mediante la curva de olvido de Ebbinghaus, según la cual la probabilidad de recuerdo $p$ tras un tiempo $t$ decae exponencialmente con una fuerza de memoria o vida media $h$:
+## 1.2 Formulación del problema
+
+El problema técnico abordado es la **ineficiencia de los métodos de repaso estático** en las herramientas existentes para el gallego. La ciencia cognitiva describe la retención de la información mediante la curva de olvido de Ebbinghaus, según la cual la probabilidad de recuerdo $p$ tras un tiempo $t$ decae de forma aproximadamente exponencial en función de la fuerza de memoria o vida media $h$:
 
 $$p = 2^{-\frac{t}{h}}$$
 
-Los sistemas de *flashcards* para lenguas minorizadas tratan $h$ como una variable determinista que crece con multiplicadores fijos (algoritmo **SM-2**), sin aprovechar la latencia de respuesta, el historial real de aciertos/fallos ni la dificultad del ítem. El reto es construir una infraestructura que **capture eventos de interacción de forma continua** y los use para **entrenar un modelo que estime $h$** minimizando el error frente a los resultados reales, dentro de una aplicación multiplataforma capaz de responder sin interrumpir la sesión de estudio.
+Los sistemas de *flashcards* disponibles para lenguas minorizadas tratan $h$ como una variable determinista que se incrementa mediante multiplicadores fijos tras cada acierto (algoritmo **SM-2**), sin aprovechar la latencia de respuesta, el historial real de aciertos y fallos, ni la dificultad intrínseca —léxica y sintáctica— del ítem evaluado. El reto consiste en construir una infraestructura que **capture eventos de interacción de forma continua** y los use para **entrenar un modelo que estime $h$** minimizando el error frente a los resultados reales, dentro de una aplicación multiplataforma capaz de responder con la rapidez suficiente para no interrumpir la sesión de estudio.
 
-A este reto algorítmico se añade el **reto de voz**: proporcionar síntesis y reconocimiento del habla en gallego **sin conexión**, sin enviar el audio a terceros y funcionando en dispositivos de gama media.
+La formulación del problema se concreta en tres subproblemas:
+
+1. **Captura y gestión del dato.** Registrar de forma fiable los eventos de repaso (resultado, intervalo, latencia) incluso sin conexión, y almacenarlos de forma que sean útiles para el entrenamiento.
+2. **Modelado de la memoria.** Estimar $h$ a partir de características del ítem y del usuario, y **decidir cuándo repasar** cada ítem.
+3. **Voz local.** Ofrecer síntesis y reconocimiento del habla en gallego **sin conexión** y sin enviar el audio a terceros.
+
+A este reto algorítmico se añade un reto **metodológico**: la evaluación de un modelo de memoria sobre datos reales es sutil, porque los planificadores óptimos programan los repasos de forma adaptativa y confunden la relación entre tiempo y recuerdo (§9). Abordar ese sesgo de forma explícita forma parte del problema de investigación.
 
 ## 1.3 Contribuciones
 
@@ -80,35 +88,75 @@ El documento se estructura así: el capítulo 2 revisa los fundamentos y el esta
 
 ## 2.1 Microaprendizaje y gamificación
 
-Las plataformas comerciales de mayor difusión han fijado un patrón de interacción que segmenta el contenido en unidades pequeñas reforzadas por mecánicas de juego (rachas, puntos de experiencia, niveles), optimizando el compromiso diario. Este patrón es eficaz para la retención de usuarios, pero su desarrollo algorítmico se concentra en las lenguas con mayor mercado, dejando a las minorizadas fuera del ecosistema. Galingo adopta esas mecánicas de producto pero las aplica a una lengua minorizada, con especial atención a la **reducción de la fricción cognitiva inicial**.
+El **microaprendizaje** consiste en segmentar el contenido en unidades breves y autocontenidas que se consumen en sesiones cortas y frecuentes. Su eficacia se apoya en principios de la psicología cognitiva ampliamente contrastados: la **práctica distribuida** (el aprendizaje se consolida mejor cuando se reparte en el tiempo que cuando se concentra en una sola sesión), la **práctica de recuperación** (*retrieval practice*, recordar activamente refuerza la memoria más que releer) y el **efecto de prueba** (los tests no solo miden, sino que consolidan). A ello se suma la **carga cognitiva**: presentar un solo concepto por unidad minimiza la carga extrínseca y libera recursos para la carga relevante (la construcción de esquemas).
+
+Las plataformas comerciales de mayor difusión han industrializado este patrón y lo han combinado con **gamificación**: rachas de días consecutivos, puntos de experiencia (XP), niveles, vidas y desbloqueo progresivo. Estas mecánicas actúan sobre la motivación extrínseca y sobre la formación de hábito, y explican en gran medida su retención de usuarios. Sin embargo, su desarrollo algorítmico se concentra en las lenguas con mayor tamaño de mercado, y las minorizadas quedan fuera del ecosistema: los recursos disponibles son estáticos (diccionarios, listas de vocabulario) y carecen de **repetición adaptativa** y de **retroalimentación interactiva**.
+
+Galingo adopta estas mecánicas de producto —microaprendizaje, racha, XP, niveles, desbloqueo— pero las aplica a una lengua minorizada, con especial atención a la **reducción de la fricción cognitiva inicial**: sesiones cortas, un tipo de ejercicio claro por pantalla, y una estética que no exige conocimientos previos de la lengua objetivo.
 
 ## 2.2 Repetición espaciada: de la heurística al modelo aprendido
 
-- **SM-2.** El algoritmo de Wozniak [2] sigue siendo el estándar de facto en aplicaciones de *flashcards*. Tras cada intento ajusta un factor de facilidad $EF$ y calcula el siguiente intervalo de repaso. Es sensible al historial, pero sus parámetros de penalización están fijados por quien diseña el sistema y **no se aprenden de los datos**.
+La **curva de olvido** de Ebbinghaus (1885) describe el decaimiento de la retención a lo largo del tiempo y constituye el fundamento de todos los sistemas de repetición espaciada. Sobre ella se han construido varias generaciones de algoritmos:
 
-- **HLR (Half-Life Regression).** Settles y Meeder [1] proponen asumir la curva de Ebbinghaus pero **estimar la vida media** $h$ a partir de un vector de características $\mathbf{x}$ proyectado por un vector de pesos $\boldsymbol{\theta}$:
+- **Leitner (1972).** Sistema de cajas: cada acierto promueve la tarjeta a una caja con intervalos mayores; cada fallo la devuelve a la primera. Sencillo y determinista.
+- **SuperMemo / SM-2 (Wozniak, 1987–1990).** Introdujo el **factor de facilidad** $EF$ y la calidad de respuesta $q\in[0,5]$, ajustando el intervalo de forma multiplicativa. Sigue siendo el estándar de facto en aplicaciones de *flashcards* [2]. Es sensible al historial, pero sus parámetros están **fijados a mano** y no se aprenden de los datos.
+- **Anki / FSRS.** Popularizaron SM-2 en la práctica y, más recientemente, el *Free Spaced Repetition Scheduler* (FSRS), un modelo basado en la dificultad y la estabilidad de cada tarjeta, estimado por optimización a partir de los *logs* del propio usuario.
+- **HLR (Settles y Meeder, 2016).** Da un paso más: en lugar de un intervalo heurístico, **estima la vida media** $h$ mediante una regresión sobre características del ítem y del usuario, y deriva de ella la probabilidad de recuerdo [1].
 
-$$\hat{h}_{\boldsymbol{\theta}}(\mathbf{x}) = 2^{\boldsymbol{\theta}\cdot\mathbf{x}}, \qquad \hat{p} = 2^{-t/\hat{h}}$$
+- **Modelos de *Deep Knowledge Tracing* (DKT).** Sustituyen la regresión por redes recurrentes capaces de modelar secuencias completas de interacción [3], a costa de más datos y complejidad.
 
-El modelo se entrena minimizando el error de predicción del recuerdo y de la vida media, con regularización L2. En producción, HLR redujo el error de predicción más de un 45 % frente a los modelos de referencia y aumentó el compromiso diario un 12 % [1].
+| Modelo | Parámetros | ¿Aprende de datos? | Entrada | Complejidad |
+|---|---|---|---|---|
+| Leitner | Fijos | No | Resultado | Muy baja |
+| SM-2 | Fijos ($EF$) | No | Resultado | Baja |
+| FSRS | Estimados | Sí (por usuario) | Historial de la tarjeta | Media |
+| **HLR** | Entrenados | Sí | Features del ítem/usuario | Media |
+| DKT | Red neuronal | Sí | Secuencia completa | Alta |
+
+Galingo implementa **SM-2** como línea base determinista (por su simplicidad, reproducibilidad y popularidad) y **HLR** como modelo entrenable, y los ejecuta **en paralelo** sobre los mismos eventos para compararlos de forma directa.
 
 ## 2.3 Aprendizaje automático aplicado a la memoria del usuario
 
-La evaluación de este tipo de modelos exige métricas apropiadas para **predicciones probabilísticas de sucesos binarios**: el error absoluto medio (MAE), el *Brier score* (error cuadrático de la probabilidad), el área bajo la curva ROC (AUC-ROC) y las **curvas de calibración** (probabilidad predicha frente a frecuencia observada). Un aspecto crítico, y a menudo ignorado, es que la **programación de repasos suele ser adaptativa** (los sistemas óptimos asignan intervalos largos a los ítems bien conocidos), lo que **confunde** la relación entre el tiempo transcurrido y el recuerdo observado. Este trabajo analiza explícitamente ese sesgo (§9).
+La predicción del recuerdo es un problema de **clasificación probabilística binaria**: se estima la probabilidad $\hat{p}$ de que un repaso sea recordado ($p\in\{0,1\}$). La elección de la métrica es crítica:
+
+- **MAE / RMSE.** Error absoluto/cuadrático medio. Intuitivos, pero sobre salidas binarias están **dominados por la tasa base**: si el 90 % de los repasos se recuerdan, predecir siempre $\hat{p}=0{,}9$ da un MAE bajo sin discriminar nada.
+- ***Brier score*.** Error cuadrático de la probabilidad; adecuado para pronósticos probabilísticos, pero con la misma limitación de tasa base.
+- **AUC-ROC.** Mide la **capacidad de discriminación** (ordenar correctamente los aciertos por encima de los fallos) y es **independiente de la tasa base**; es la métrica más informativa para comparar modelos de recuerdo.
+- **Calibración.** Relaciona la probabilidad predicha con la frecuencia observada (diagrama de fiabilidad). Un modelo bien calibrado es útil para **decidir cuándo repasar**.
+
+Un aspecto metodológico central, y a menudo ignorado, es la **naturaleza adaptativa de la programación de repasos**. Los planificadores óptimos (FSRS, Anki) asignan **intervalos largos a los ítems bien conocidos** y cortos a los difíciles, de modo que la probabilidad de recuerdo observada se mantiene aproximadamente constante **con independencia del tiempo transcurrido**. Como consecuencia, el tiempo $t$ **deja de discriminar** y cualquier modelo basado en él se vuelve difícil de evaluar de forma ingenua. Este trabajo **caracteriza explícitamente ese sesgo** (§9) y propone contrastarlo con una **simulación de intervalos aleatorios** con verdad conocida, en la que el efecto de la programación adaptativa desaparece.
 
 ## 2.4 Reconocimiento y síntesis de voz para lenguas minorizadas
 
-- **ASR.** Whisper [9] es un modelo de reconocimiento multilingüe de alta calidad; su tamaño *small* cuantizado a int8 es viable en dispositivos móviles. **sherpa-onnx** [10] permite ejecutar modelos ONNX *on-device* sin conexión. La combinación de ambos resuelve el reconocimiento del habla en gallego **sin depender de servicios en la nube**.
-- **TTS.** El **Proxecto Nós** [8] de la Universidade de Santiago de Compostela publica voces neuronales en gallego (entre ellas *Celtia*) y modelos ASR afinados, que constituyen la base de la capa de voz del proyecto.
-- **Recursos del ILG.** El Instituto da Lingua Galega ofrece recursos como **CORILGA** [4], relevantes para una futura integración de dictados con voz natural, y recursos de generación automática de lenguaje [5].
+La **voz** es un componente esencial de una app de idiomas (escuchar y pronunciar), pero también el más difícil de resolver para una lengua minorizada, por la escasez de recursos y la ausencia de soporte nativo en los sistemas operativos.
+
+**Reconocimiento automático del habla (ASR).** Los sistemas operativos ofrecen ASR nativo (*SFSpeechRecognizer* en iOS, *SpeechRecognizer* en Android), pero **ninguno incluye el gallego**; al forzar un idioma cercano (p. ej. español) la transcripción degrada y produce falsos negativos en la evaluación de la pronunciación. Las alternativas basadas en modelos:
+
+- **Whisper** [9] es un modelo *encoder-decoder* multilingüe entrenado con grandes volúmenes de audio débilmente supervisado; reconoce gallego razonablemente bien. Sus variantes *tiny/base/small/medium/large* ofrecen un compromiso tamaño/precisión; la *small* cuantizada a int8 (~370 MB) es viable en móvil.
+- **wav2vec 2.0 / conformer** afinados para gallego (p. ej. recursos del Proxecto Nós [8]) alcanzan mejor precisión, pero exigen arquitecturas que no siempre están soportadas por los *runtimes* móviles y exportaciones complejas.
+- **Ejecución *on-device*.** **sherpa-onnx** [10] permite ejecutar modelos ONNX (incluido Whisper) en el dispositivo, sin conexión. Combinado con Whisper, resuelve el ASR en gallego **sin depender de servicios en la nube**, preservando la privacidad.
+
+**Síntesis de voz (TTS).** Las voces neuronales han superado a las concatenativas en naturalidad. El **Proxecto Nós** [8] publica voces en gallego (entre ellas *Celtia*, basada en VITS) que permiten generar el **audio del modelo** para los ejercicios de escucha y de pronunciación con una prosodia gallega auténtica, evitando el efecto "portugués" de voces de idiomas vecinos.
+
+**Recursos del ILG.** El Instituto da Lingua Galega ofrece **CORILGA** (corpus oral) [4] y recursos de generación automática de lenguaje [5], relevantes para futuros dictados con voz natural y para modelar la dificultad léxica real de los ítems.
 
 ## 2.5 Internacionalización y aprendizaje de segundas lenguas
 
-El **Marco Común Europeo de Referencia** [11] organiza la competencia lingüística en niveles; Galingo se centra en el **A1**. Para un público no gallegoparlante, es clave separar el **contenido** (la lengua objetivo, el gallego) del **andamiaje** (enunciados e interfaz), que deben ofrecerse en el idioma del usuario. La cercanía entre gallego y portugués, aprovechada en sistemas de traducción [6], informa además la normalización fonética del texto reconocido (§5).
+El **Marco Común Europeo de Referencia (MCER)** [11] organiza la competencia en seis niveles (A1–C2); Galingo se centra en el **A1** (usuario básico), que corresponde a presentaciones, saludos, números, familia, rutinas diarias y vocabulario cotidiano.
+
+Desde la **adquisición de segundas lenguas (SLA)**, el diseño se apoya en la **hipótesis del *input* comprensible** (se aprende mejor con material ligeramente por encima del nivel actual), la **hipótesis de la producción** (producir la lengua —incluida la pronunciación— consolida el aprendizaje) y la **enseñanza explícita de vocabulario** con repetición espaciada. La evaluación de la pronunciación mediante ASR materializa la producción oral, tradicionalmente la destreza más difícil de evaluar sin un docente.
+
+Un requisito clave para un público **no gallegoparlante** es **separar el contenido de la lengua objetivo (gallego) del andamiaje** (enunciados, instrucciones e interfaz), que deben ofrecerse en el **idioma del usuario**. La cercanía entre gallego y portugués, aprovechada en traducción automática [6], informa además la **normalización fonética** del texto reconocido (§5.5), que tolera variantes ortográficas entre ambas lenguas.
 
 ## 2.6 Posicionamiento de Galingo
 
-Galingo se sitúa en la intersección de estas brechas: no es solo una interfaz de usuario, sino una **infraestructura de software** que (i) traslada un modelo probabilístico de predicción de memoria a una lengua minorizada, (ii) resuelve la voz de forma **local y privada**, y (iii) internacionaliza el andamiaje manteniendo la lengua objetivo. Las aportaciones se contrastan con una línea base determinista (SM-2) y se discuten abiertamente sus limitaciones.
+Galingo se sitúa en la intersección de tres brechas identificadas en la literatura y en el mercado:
+
+1. **Brecha de contenido:** las lenguas minorizadas no tienen microaprendizaje adaptativo.
+2. **Brecha algorítmica:** los modelos entrenables de memoria (HLR, FSRS, DKT) apenas se han aplicado a lenguas minorizadas.
+3. **Brecha de voz:** no existe ASR nativo ni, en general, soluciones de voz **locales** para el gallego.
+
+Frente a ellas, Galingo aporta un sistema que traslada un modelo probabilístico de memoria a una lengua minorizada, resuelve la voz de forma **local y privada**, e internacionaliza el andamiaje manteniendo la lengua objetivo. Sus aportaciones se contrastan con una línea base determinista (SM-2) y se discuten **abiertamente sus limitaciones** y las amenazas a la validez (§12), lo que lo distingue de las evaluaciones puramente optimistas.
 
 # 3. Objetivos, alcance e hipótesis
 
@@ -118,12 +166,37 @@ Diseñar, implementar y validar una plataforma multiplataforma, **Galingo**, est
 
 ## 3.2 Objetivos específicos
 
-- **O1. Algorítmicos.** Diseñar una base de datos relacional y un proceso de ingesta continua de telemetría; implementar la línea base determinista (SM-2) y el modelo entrenable (HLR); evaluar ambos con métricas apropiadas para recuerdo binario (MAE, *Brier*, AUC-ROC, calibración).
-- **O2. Arquitectónicos.** Construir una API desacoplada del cliente, con procesamiento en segundo plano y cola *offline* en el cliente, garantizando que la telemetría no se pierda y que la latencia percibida no se degrade.
-- **O3. De producto.** Implementar una interfaz que reduzca la fricción inicial, con componentes reutilizables y mecánicas de gamificación (racha, XP, niveles), integrando el aprendizaje guiado (**O Camiño**), la evaluación y la consulta léxico-verbal (**O Laboratorio**).
-- **O4. De voz.** Proporcionar ejercicios de escucha (síntesis gallega) y de pronunciación/dictado (ASR) **sin conexión**, sin enviar el audio a terceros.
-- **O5. De internacionalización.** Ofrecer la interfaz y los enunciados en ocho idiomas, manteniendo el gallego como lengua objetivo.
-- **O6. De validación.** Desplegar una beta cerrada instrumentada y analizar retención, uso y error del modelo, con discusión honesta de las limitaciones.
+- **O1. Algorítmicos.**
+  - O1.1 Diseñar una base de datos relacional (ítems léxicos, estado de memoria, trazas de interacción).
+  - O1.2 Implementar un proceso de **ingesta continua** de telemetría, idempotente y tolerante a desconexiones.
+  - O1.3 Implementar la línea base determinista **SM-2** (factor de facilidad, intervalo, reinicio por fallo).
+  - O1.4 Implementar el modelo entrenable **HLR** (estimación de vida media por características).
+  - O1.5 Evaluar ambos con métricas apropiadas para recuerdo binario (MAE, *Brier*, AUC-ROC, calibración) y partición por usuario.
+
+- **O2. Arquitectónicos.**
+  - O2.1 Construir una **API desacoplada** del cliente con procesamiento en segundo plano.
+  - O2.2 Diseñar una **cola *offline*** persistente que evite la pérdida de telemetría.
+  - O2.3 Desplegar el backend en una plataforma de coste nulo con *warm-up* para evitar la latencia en frío.
+
+- **O3. De producto.**
+  - O3.1 Implementar un sistema de componentes reutilizable que reduzca la fricción inicial.
+  - O3.2 Integrar mecánicas de gamificación (racha, XP, niveles, desbloqueo).
+  - O3.3 Integrar el aprendizaje guiado (**O Camiño**) y la consulta léxico-verbal (**O Laboratorio**).
+  - O3.4 Implementar un **motor de repasos** que reexponga los ítems vencidos en días sucesivos.
+
+- **O4. De voz.**
+  - O4.1 Generar el **audio del modelo** con una voz neuronal gallega.
+  - O4.2 Ejecutar el **reconocimiento del habla *on-device*** (sin conexión).
+  - O4.3 Evaluar la pronunciación con acierto por palabra y umbral calibrado, con una métrica tolerante a variantes gallego/portugués.
+
+- **O5. De internacionalización.**
+  - O5.1 Localizar la interfaz en ocho idiomas.
+  - O5.2 Localizar los **enunciados** de los ejercicios **manteniendo el gallego** como contenido.
+
+- **O6. De validación.**
+  - O6.1 Desplegar una beta cerrada instrumentada.
+  - O6.2 Analizar retención (D1/D7), uso y error del modelo.
+  - O6.3 Discutir honestamente limitaciones y amenazas a la validez.
 
 ## 3.3 Hipótesis
 
@@ -143,7 +216,21 @@ Diseñar, implementar y validar una plataforma multiplataforma, **Galingo**, est
 
 ## 4.1 Estrategia de trabajo
 
-El desarrollo siguió un enfoque **iterativo e incremental (sprints)**, con un **gate de calidad automático** (análisis estático + batería de pruebas) previo a cada compilación, y una fase final de **beta cerrada instrumentada**. Se mantuvo un documento de seguimiento (*As Built*) que registra, para cada fase, decisiones y artefactos.
+El desarrollo siguió un enfoque **iterativo e incremental (sprints)**, con un **gate de calidad automático** (análisis estático + batería de pruebas) previo a cada compilación y una fase final de **beta cerrada instrumentada**. Se mantuvo un documento de seguimiento (*As Built*) que registra, para cada fase, decisiones y artefactos, lo que permite reconstruir la evolución del proyecto.
+
+**Sprints principales.**
+
+| Sprint | Contenido | Entregable |
+|---|---|---|
+| S1 — Cimientos | Arquitectura Flutter, modelo de contenido (unidades/lecciones/ejercicios), navegación. | App navegable con lecciones. |
+| S2 — Motor de repetición | SM-2 y HLR (Dart), persistencia del historial, MAE. | Motor con métrica visible. |
+| S3 — Contenido A1 | Banco de 540 preguntas, 12 unidades, tipos de ejercicio. | Curso A1 completo. |
+| S4 — Backend y datos | FastAPI, PostgreSQL/SQLite, telemetría, feedback, despliegue. | API + ingesta. |
+| S5 — Internacionalización | 8 locales, localización del contenido, generación de traducciones. | UI y enunciados en 8 idiomas. |
+| S6 — Voz local | TTS (Proxecto Nós), ASR on-device (sherpa-onnx + Whisper), normalización fonética. | Pronunciación offline. |
+| S7 — Beta y calidad | Firma, distribución, CI, responsividad, motor de repasos. | Beta en funcionamiento. |
+
+**Metodología de calidad.** Cada *push* ejecuta el *pipeline* de CI (`flutter analyze` + `flutter test`) antes de compilar. Las decisiones de diseño se documentan; los defectos detectados en la beta se convierten en *tests* de regresión.
 
 ## 4.2 Hitos y seguimiento
 
@@ -196,15 +283,15 @@ La solución sustituye los intervalos heurísticos fijos por una **función prob
 
 ## 5.2 SM-2 como línea base determinista
 
-SM-2 mantiene, por ítem, un factor de facilidad $EF$, un número de repeticiones y un intervalo. Tras cada intento con calidad $q$ (acierto→4, fallo→1):
+SM-2 mantiene, por ítem, tres variables de estado: el **factor de facilidad** $EF$ (inicialmente 2,5), el número de repeticiones consecutivas correctas y el **intervalo** vigente en días. Tras cada intento con calidad $q\in[0,5]$ (en la app: acierto→4, fallo→1):
 
 $$EF' = \max\big(1{,}3,\; EF + 0{,}1 - (5-q)(0{,}08 + (5-q)\,0{,}02)\big)$$
 
-El intervalo crece (1 → 6 → $intervalo\cdot EF$) mientras $q\ge3$ y se reinicia a 1 tras un fallo. En la app, la predicción de recuerdo de SM-2 usa la vida media aproximada igual al intervalo vigente: $\hat{p}_{SM2} = 2^{-t/intervalo}$.
+El intervalo evoluciona de forma determinista mientras $q\ge3$: primer repaso a 1 día, segundo a 6 días, y a partir de ahí $intervalo \times EF$; ante un fallo se **reinicia** a 1 día y se resetea el contador de repeticiones. La predicción de recuerdo asociada usa la vida media aproximada igual al intervalo vigente: $\hat{p}_{SM2} = 2^{-t/intervalo}$. SM-2 es la línea base por su simplicidad, reproducibilidad y ubicuidad, pero sus parámetros **no se aprenden** y no usa la latencia de respuesta.
 
 ## 5.3 Modelo HLR
 
-El vector de características es $\mathbf{x} = [1, \sqrt{1+s}, \sqrt{1+f}, d]$, donde $s$ y $f$ son los aciertos y fallos acumulados del ítem y $d$ su dificultad. La vida media y la probabilidad estimadas son:
+HLR estima directamente la vida media del ítem a partir de un vector de características. En Galingo, $\mathbf{x} = [1, \sqrt{1+s}, \sqrt{1+f}, d]$, donde $s$ y $f$ son los aciertos y fallos acumulados del ítem y $d$ su dificultad. Las transformaciones $\sqrt{1+s}$ y $\sqrt{1+f}$ capturan el **rendimiento marginal decreciente** (los primeros aciertos aumentan mucho la vida media; los siguientes, menos). Las estimaciones son:
 
 $$\hat{h}_{\boldsymbol{\theta}}(\mathbf{x}) = 2^{\boldsymbol{\theta}\cdot\mathbf{x}}, \qquad \hat{p} = 2^{-t/\hat{h}}$$
 
@@ -212,23 +299,25 @@ El entrenamiento minimiza el error de predicción del recuerdo y de la vida medi
 
 $$\mathcal{L}(\boldsymbol{\theta}) = \sum_i \big(p_i - \hat{p}_{\boldsymbol{\theta}}(\mathbf{x}_i)\big)^2 + \alpha \sum_i \big(h_i - \hat{h}_{\boldsymbol{\theta}}(\mathbf{x}_i)\big)^2 + \lambda \lVert \boldsymbol{\theta}\rVert_2^2$$
 
-donde $h_i$ se deriva del resultado observado con suavizado ($p\in\{0{,}95, 0{,}05\}$). El modelo se ejecuta **on-device** (Dart, para funcionar sin conexión) y se reentrena **en servidor** (scikit-learn) con la telemetría acumulada.
+donde $h_i$ se deriva del resultado observado con suavizado ($p\in\{0{,}95,0{,}05\}$) para evitar valores infinitos. El término $\alpha$ pondera el ajuste de la vida media (que da al modelo información **más rica** que el simple acierto/fallo). En el cliente, el descenso de gradiente se aplica de forma **incremental** sobre los eventos de la sesión, con *gradient clipping* y acotación de los pesos $\theta\in[-5,5]$ para estabilidad numérica; en servidor se reentrena con scikit-learn sobre toda la telemetría. Esta doble ejecución permite ofrecer predicciones **sin conexión** y, a la vez, mejorar el modelo con datos agregados.
 
-## 5.4 Protocolo de evaluación
+## 5.4 Planificador de repasos
 
-- **Partición por usuario** (80 % entrenamiento / 20 % evaluación) para evitar filtración de datos y garantizar la generalización a perfiles no vistos.
-- **Métricas**: MAE y *Brier score* (error de probabilidad), AUC-ROC (discriminación) y **curvas de calibración**.
-- **Análisis del sesgo de programación**: se contrasta la evaluación sobre datos de planificadores adaptativos (logs reales) con una **simulación con verdad conocida** e intervalos aleatorios.
+Un modelo de memoria solo es útil si **decide cuándo repasar**. Galingo implementa un planificador que, por cada ítem con historial, calcula el **próximo vencimiento** a partir del intervalo SM-2 almacenado y de la marca temporal del último repaso:
+
+$$\text{nextDue} = \text{lastPracticed} + \text{intervalo}\,(\text{días})$$
+
+Cuando `nextDue` es anterior al instante actual, el ítem está **vencido** y entra en la **cola de repaso**, ordenada por antigüedad (los más atrasados primero) y limitada a un número máximo por sesión. La lección de repaso se construye dinámicamente mapeando cada palabra vencida a un ejercicio del curso (por su respuesta correcta). Este planificador es clave para el sistema: **garantiza que los ítems se vuelvan a ver en días sucesivos**, generando la secuencia de repasos $(s,f,t,p)$ que necesitan HLR y SM-2 para evaluarse con datos reales. Sin él, cada ítem se vería una única vez y no habría curva de olvido que modelar.
 
 ## 5.5 Capa de voz local
 
-- **Síntesis (TTS).** Voz neuronal gallega (*Celtia*, Proxecto Nós) convertida a audio para los ejercicios de escucha y de pronunciación; se reproduce automáticamente y con botón de repetición.
-- **Reconocimiento (ASR).** Whisper *small* int8 ejecutado con **sherpa-onnx** en el dispositivo. La grabación (16 kHz mono) se transcribe localmente y se compara con la frase objetivo mediante una **similitud fonética** tolerante a las variantes gallego/portugués (`nh↔ñ`, `camiñar↔caminhar`), a los dígitos escritos como cifra (`7`→`sete`) y a la segmentación de palabras.
-- **Privacidad.** El audio nunca abandona el dispositivo.
+- **Síntesis (TTS).** Voz neuronal gallega (*Celtia*, Proxecto Nós) pregenerada a audio para los ejercicios de escucha y de pronunciación; se reproduce automáticamente al aparecer el ejercicio y con un botón de repetición. En los ejercicios de escucha, la frase gallega se **oculta** en el enunciado para no revelar la respuesta.
+- **Reconocimiento (ASR).** Whisper *small* int8 ejecutado con **sherpa-onnx** en el dispositivo. La grabación (WAV, 16 kHz, mono) se transcribe localmente y se compara con la frase objetivo mediante una **similitud fonética** que tolera las variantes gallego/portugués que produce el modelo (`nh↔ñ`, `camiñar↔caminhar`), los dígitos escritos como cifra (`7`→`sete`) y la segmentación de palabras. Se calcula un **acierto por palabra** y un umbral de aprobado calibrado empíricamente (0,65). El modelo se prepara la primera vez (~1 min) copiándolo del paquete al almacenamiento interno.
+- **Privacidad.** El audio **nunca abandona el dispositivo**.
 
 ## 5.6 Internacionalización con lengua objetivo
 
-La interfaz usa `flutter gen-l10n` (8 locales). Los **enunciados** de los ejercicios viven en un campo `i18n` por idioma, generado y revisado de forma que **el contenido gallego (respuestas, opciones, pasajes) se conserva** y solo se traduce el andamiaje. Se corrigió un defecto por el que los ejercicios de escucha traducían la frase gallega (rompiendo su ocultado).
+La interfaz usa `flutter gen-l10n` (8 locales: es, en, de, fr, pt, it, ro, zh). Los **enunciados** de los ejercicios viven en un campo `i18n` por idioma. Su generación sigue un proceso que **protege el contenido gallego**: se traduce el **andamiaje** (instrucciones y plantillas de pregunta) y se **conservan** las respuestas, opciones, pasajes de lectura y palabras citadas; las opciones de significado (que están en castellano) sí se traducen. Un conjunto de **enunciados fijos** (p. ej. *Empareja*, *Lee:* …) se traduce manualmente para garantizar su calidad. Se corrigió un defecto por el que los ejercicios de escucha traducían la frase gallega —rompiendo su ocultado— y por el que se traducían nombres propios (`Marta`→*Marder*).
 
 # 6. Arquitectura y diseño de software
 
@@ -260,6 +349,18 @@ lib/
     └── widgets/                # gabi, camino_map, speech_exercise, …
 ```
 
+| Módulo | Responsabilidad |
+|---|---|
+| `core/ml/hlr_engine` | Modelo HLR: vida media, probabilidad, entrenamiento incremental. |
+| `core/ml/sm2_engine` | Línea base SM-2: factor de facilidad e intervalo. |
+| `core/services/asr_service` | ASR on-device (sherpa-onnx + Whisper) y similitud fonética. |
+| `core/services/review_service` | Planificador: ítems vencidos y lección de repaso. |
+| `core/services/telemetry_service` | Cola persistente y sincronización por lotes. |
+| `core/services/shake_service` | Detección del gesto de agitado para reportar. |
+| `data/repositories/hive_repository` | Persistencia local y procesamiento de eventos (historial, MAE, θ). |
+| `presentation/providers` | Estado reactivo (progreso, ajustes, repaso). |
+| `presentation/screens/lesson` | UI de ejercicios y tipos (incluye voz y emparejar). |
+
 El **motor de repasos** (`ReviewService`) calcula los ítems vencidos según el intervalo SM-2 almacenado por palabra y construye una **lección de repaso** dinámica, que reutiliza la pantalla de lección en "modo repaso" (registra la sesión sin marcar lecciones ni otorgar XP). Esto garantiza que la persona usuaria **vuelva a ver los ítems en días sucesivos**, generando la secuencia de repasos que necesitan HLR y SM-2.
 
 ## 6.3 Backend y API
@@ -275,7 +376,19 @@ El **motor de repasos** (`ReviewService`) calcula los ítems vencidos según el 
 
 ## 6.4 Modelo de datos
 
-Entidades relacionales (PostgreSQL; SQLite en desarrollo): `Item_Lexico` (lema, categoría, complejidad), `Estado_Memoria` (vida media $h$ y próximo repaso por par usuario-ítem), `Traza_Interaccion` (marca temporal, latencia, resultado, intervalo — *dataset* de entrenamiento), `Reportes_Feedback` y `SesionDiaria`. En el cliente, la persistencia usa **Hive** (progreso, ajustes, usuario y cola de telemetría). La telemetría se preprocesa aplicando una transformación logarítmica a la latencia para atenuar valores atípicos.
+**Base de datos relacional (PostgreSQL; SQLite en desarrollo).**
+
+| Tabla | Campos principales | Función |
+|---|---|---|
+| `Item_Lexico` | `id`, `lema`, `categoria`, `complejidad` | Vocabulario y su dificultad. |
+| `Estado_Memoria` | `user_id`, `item_id`, `h` (vida media), `next_review` | Estado de memoria por par usuario-ítem. |
+| `Traza_Interaccion` | `event_id` (único), `user_id`, `item_id`, `timestamp`, `resultado`, `intervalo_dias`, `aciertos`, `fallos`, `dificultad` | *Dataset* de entrenamiento (solo escritura). |
+| `Reportes_Feedback` | `report_id`, `user_id`, `categoria`, `texto`, `pantalla` | Incidencias reportadas desde la app. |
+| `SesionDiaria` | `user_id`, `fecha`, `inicio` | Base del cálculo de retención D1/D7. |
+
+La ingesta es **idempotente** por `event_id` (repetir un envío no duplica datos), lo que permite reintentos seguros desde la cola del cliente. La latencia se preprocesa con transformación logarítmica para atenuar valores atípicos.
+
+**Persistencia local (Hive).** Cajas para progreso (`UserProgressModel`: lecciones/unidades completadas, XP, racha, $\theta$, historial de repetición por palabra, sumas de error y contador de telemetría), ajustes, usuario anónimo (UUID) y la **cola de telemetría** (eventos pendientes de sincronizar).
 
 ## 6.5 Capa de voz
 
@@ -288,7 +401,15 @@ El modelo se empaqueta en la app y se copia a almacenamiento interno la primera 
 
 ## 6.6 Secuencia de ejecución
 
-*Onboarding → O Camiño → lección/repaso → evaluación → cola de telemetría → sincronización*. En cada ejercicio, el cliente evalúa la respuesta, actualiza el estado de memoria (SM-2 + HLR) y encola un evento. Un proceso asíncrono reentrena el modelo. El diseño *offline-first* garantiza que el flujo no se interrumpe por falta de red.
+El flujo dinámico principal es *onboarding → O Camiño → lección/repaso → evaluación → cola de telemetría → sincronización*. En cada ejercicio:
+
+1. El usuario responde; el cliente evalúa localmente y muestra retroalimentación inmediata.
+2. Se actualiza el estado de memoria (SM-2 y HLR) del ítem.
+3. Se **encola** un evento de telemetría con `resultado`, `intervalo_dias` (tiempo desde el último repaso), `aciertos`, `fallos` y `dificultad`.
+4. Periódicamente (o al recuperar conectividad) la cola se envía **por lotes** al backend, que valida la idempotencia y persiste los datos.
+5. Un proceso asíncrono reentrena el modelo HLR con la telemetría acumulada.
+
+En el **modo repaso**, los pasos son los mismos salvo que la lección se genera dinámicamente a partir de los ítems vencidos y que **no se marcan lecciones ni se otorga XP** (solo se actualiza el estado de memoria y la telemetría). El diseño *offline-first* garantiza que el flujo del usuario nunca se interrumpe por falta de red.
 
 ---
 
@@ -328,6 +449,21 @@ El repositorio incluye: scripts de compilación por plataforma, *pipeline* de CI
 - **Consentimiento.** La beta informa a las personas participantes de qué datos se recogen y con qué finalidad.
 - **Lengua e inclusión.** El proyecto se orienta explícitamente a la inclusión lingüística de población migrante, y la documentación respeta el uso de lenguaje inclusivo.
 
+## 7.6 Integración continua y topología de despliegue
+
+**Integración continua (CI).** El repositorio incluye un *pipeline* que, ante cada *push* a `main`, ejecuta un *job* de calidad (`flutter analyze` + `flutter test`) y, si pasa, compila los artefactos (Android, Windows, macOS). Este *gate* evita integrar cambios que rompan la compilación o las pruebas.
+
+**Topología de despliegue.**
+
+```text
+[Cliente Flutter] --HTTPS--> [Backend FastAPI (serverless)]
+      |  (offline)                    |
+      v                               v
+[Cola Hive local]              [PostgreSQL]
+```
+
+El cliente funciona de forma autónoma (aprendizaje y voz local); el backend solo recibe telemetría y feedback. El contenedor *serverless* se "calienta" al abrir la app para evitar la latencia de arranque en frío.
+
 # 8. Especificación y análisis de requisitos
 
 ## 8.1 Actores
@@ -338,26 +474,39 @@ El repositorio incluye: scripts de compilación por plataforma, *pipeline* de CI
 
 ## 8.2 Requisitos funcionales
 
-- **RF1.** Registrar eventos de interacción por ejercicio: identificador de ítem, resultado, intervalo transcurrido y latencia.
-- **RF2.** Calcular y persistir el estado de memoria por par (usuario, ítem) y **programar el próximo repaso** (SM-2/HLR).
-- **RF3.** Ofrecer el flujo guiado (**O Camiño**): mapa de unidades y lecciones con progreso y desbloqueo.
-- **RF4.** Evaluar ejercicios de **nueve tipos** (opción múltiple, huecos, emparejar, traducción, ordenar, lectura, imagen, audio y voz) con retroalimentación inmediata.
-- **RF5.** Proporcionar **audio del modelo** (TTS gallego) y **evaluación de pronunciación** (ASR local) con acierto por palabra.
-- **RF6.** Ofrecer una **cola de repaso** de los ítems vencidos.
-- **RF7.** Reportar incidencias desde la app (gesto de agitado o Ajustes).
-- **RF8.** Sincronizar telemetría y reportes de forma diferida sin conexión.
-- **RF9.** Permitir elegir el idioma de interfaz entre ocho locales.
+| ID | Requisito | Criterio de aceptación |
+|---|---|---|
+| RF1 | Registrar eventos de interacción por ejercicio | Cada repaso genera un evento con ítem, resultado, intervalo y latencia, persistido en la cola local. |
+| RF2 | Calcular y persistir el estado de memoria y programar el próximo repaso | Tras cada repaso, el ítem queda con intervalo SM-2 y vida media HLR actualizados y un `nextDue`. |
+| RF3 | Flujo guiado **O Camiño** | Mapa de unidades con progreso y desbloqueo secuencial; una lección abrible por unidad. |
+| RF4 | Evaluar nueve tipos de ejercicio | Opción múltiple, huecos, emparejar, traducción, ordenar, lectura, imagen, audio y voz, con retroalimentación inmediata. |
+| RF5 | Audio del modelo y evaluación de pronunciación | Reproducción del audio gallego y evaluación con acierto por palabra (offline). |
+| RF6 | Cola de repaso | Botón "Repaso (N)" en el HOME cuando hay ítems vencidos; lección generada dinámicamente. |
+| RF7 | Reportar incidencias | Gesto de agitado o Ajustes abre el formulario; el reporte llega al backend. |
+| RF8 | Sincronización diferida | Con la red caída, los eventos se encolan y se envían por lotes al recuperarla. |
+| RF9 | Selección de idioma | Ocho locales de interfaz; los enunciados se localizan manteniendo el gallego. |
 
 ## 8.3 Requisitos no funcionales
 
-- **RNF1 (latencia).** Transiciones de estado percibidas como instantáneas (< 0,1 s; límite < 1 s) [7].
-- **RNF2 (privacidad).** El audio de voz nunca abandona el dispositivo.
-- **RNF3 (disponibilidad offline).** Aprendizaje y voz funcionan sin conexión.
-- **RNF4 (portabilidad).** Un único código para Android, iOS, macOS, Windows y Web.
-- **RNF5 (rendimiento de voz).** El ASR se ejecuta en un teléfono de gama media en pocos segundos por frase.
-- **RNF6 (mantenibilidad).** Análisis estático sin avisos y batería de pruebas en verde como gate de integración.
+| ID | Requisito | Objetivo medible |
+|---|---|---|
+| RNF1 | Latencia percibida | Transiciones < 0,1 s (límite < 1 s) [7]. |
+| RNF2 | Privacidad de voz | El audio no sale del dispositivo (verificado: no hay subida de audio). |
+| RNF3 | Disponibilidad offline | Aprendizaje y voz funcionan en modo avión. |
+| RNF4 | Portabilidad | Un código para Android, iOS, macOS, Windows y Web. |
+| RNF5 | Rendimiento de voz | ASR en gama media: pocos segundos por frase. |
+| RNF6 | Mantenibilidad | `flutter analyze` sin avisos; batería de pruebas en verde como gate. |
+| RNF7 | Coste de distribución | Cero coste (APK + sideload + backend *serverless* gratuito). |
 
-## 8.4 Trazabilidad (objetivos → requisitos → pruebas)
+## 8.4 Casos de uso principales
+
+- **CU1 — Estudio diario.** El usuario abre la app, entra en la unidad actual y completa una lección; el sistema evalúa, registra la telemetría y actualiza su racha.
+- **CU2 — Repaso.** Al día siguiente, el usuario ve "Repaso (N)" y repasa los ítems vencidos, generando repeticiones.
+- **CU3 — Pronunciación.** El usuario escucha el modelo y lee la frase en voz alta; el sistema evalúa localmente y muestra acierto por palabra.
+- **CU4 — Reporte.** El usuario agita el móvil, describe un problema y lo envía; el equipo lo recibe en el backend.
+- **CU5 — Análisis (investigador).** El investigador exporta la telemetría, calcula retención y reentrena el modelo HLR.
+
+## 8.5 Trazabilidad (objetivos → requisitos → pruebas)
 
 | Objetivo | Requisitos | Pruebas |
 |---|---|---|
@@ -374,9 +523,21 @@ El repositorio incluye: scripts de compilación por plataforma, *pipeline* de CI
 
 ## 9.1 Configuración
 
-- **Plataforma**: cliente Flutter en Android (APK firmado) e iOS (sideload), backend en la nube (Modal).
-- **Instrumentación**: telemetría anónima (eventos de repaso, sesiones) y reporte de incidencias.
-- **Datos de referencia para el modelo**: *logs* reales de repetición espaciada (FSRS/Anki revlogs, licencia MIT; 3,17 M de repasos, 30 usuarios, 312 195 tarjetas) y una **simulación con verdad conocida**.
+- **Plataforma**: cliente Flutter en Android (APK firmado) e iOS (*sideload*), backend en la nube (*serverless*).
+- **Instrumentación**: telemetría anónima (eventos de repaso, sesiones) y reporte de incidencias integrado.
+- **Datos para el modelo**: (i) *logs* reales de repetición espaciada (**FSRS/Anki revlogs**, licencia MIT: 3,17 M de repasos, 30 usuarios, 312 195 tarjetas) y (ii) una **simulación con verdad conocida** con intervalos aleatorios.
+
+**Métricas.** Para predicciones probabilísticas de sucesos binarios se emplean:
+
+$$\text{MAE} = \frac{1}{N}\sum_i |p_i - \hat{p}_i|, \qquad \text{Brier} = \frac{1}{N}\sum_i (p_i - \hat{p}_i)^2, \qquad \text{AUC-ROC}$$
+
+El MAE y el *Brier* miden el error de probabilidad (sensibles a la tasa base); la **AUC-ROC** mide la **discriminación** (independiente de la tasa base) y las **curvas de calibración** relacionan probabilidad predicha y frecuencia observada. La partición es **por usuario** (80/20) para evitar filtración. Los experimentos son **reproducibles** con los *scripts* del Anexo B.
+
+## 9.1b Configuración de los experimentos
+
+**Experimento 1 — datos reales (FSRS/Anki).** Se construyen eventos $(s, f, t, p)$ por tarjeta a partir del historial de repasos (`delta_t`, resultado). Se entrena HLR y se evalúa SM-2 sobre el 20 % de usuarios reservado. Este experimento refleja el comportamiento de un planificador **adaptativo** real.
+
+**Experimento 2 — simulación con verdad conocida.** Se genera un proceso con parámetros $\boldsymbol{\theta}^*$ conocidos y **intervalos aleatorios** (uniforme 0,3–40 días), eliminando el sesgo de programación; cada ítem tiene una **secuencia** de repasos para que SM-2 disponga de estado real. Se comprueba la capacidad de discriminación de HLR y SM-2 (AUC, *Brier*, calibración).
 
 ## 9.2 Beta cerrada (piloto)
 
@@ -436,6 +597,16 @@ El modelo *medium* es más preciso pero consume ~1,5–2 GB de RAM (inviable en 
 - **H1 (eficiencia predictiva):** **parcialmente contrastada**. El HLR reduce el MAE frente a SM-2 en datos reales, pero la comparación con AUC está confundida por el sesgo de programación; se requiere un diseño experimental con intervalos aleatorios o características ricas para una conclusión firme.
 - **H2 (retención de producto):** **no concluyente** con la muestra actual; la infraestructura y el motor de repasos están listos para acumular la muestra necesaria.
 
+## 9.7 Interpretación y decisiones derivadas
+
+Del análisis anterior se derivan tres decisiones de diseño y metodológicas:
+
+1. **Priorizar AUC-ROC y calibración** sobre MAE/*Brier* al comparar modelos de recuerdo, por ser métricas independientes de la tasa base.
+2. **Diseñar el experimento controlando el sesgo de programación**: usar intervalos aleatorios (simulación) o características ricas que permitan discriminar ítems con independencia del intervalo.
+3. **Instrumentar el sistema para generar datos válidos**: el **motor de repasos** garantiza repeticiones reales, y la telemetría recoge el intervalo efectivo y la latencia, que son las variables que permitirán, con más muestra, contrastar H1 con potencia.
+
+Estas decisiones conectan la evaluación con el diseño del producto: la propia app se convierte en el instrumento de medida, y su planificador determina la calidad del *dataset*. Reconocer esta dependencia es parte del resultado.
+
 ---
 
 # 10. Verificación y calidad del software
@@ -450,15 +621,24 @@ La matriz de §8.4 relaciona objetivos, requisitos y pruebas. Cada requisito fun
 
 ## 10.3 Cobertura funcional de las pruebas
 
-- **Algorítmica:** casos límite de HLR/SM-2 (t→0, h≤0, rachas de fallos, estabilidad, entradas vacías, piso $EF\ge1{,}3$).
-- **Producto:** renderizado de ejercicios, emparejado (incluido el caso de **valores duplicados**), responsividad (5 pantallas × 6 tamaños).
+- **Algorítmica:** casos límite de HLR/SM-2 (t→0, h≤0, rachas de fallos, estabilidad tras 200 eventos, entradas vacías, piso $EF\ge1{,}3$).
+- **Producto:** renderizado de ejercicios, emparejado (incluido el caso de **valores duplicados**, como `eles`/`elas`→`Sie` en alemán), responsividad (5 pantallas × 6 tamaños).
 - **Contenido:** los 573 ejercicios tienen traducción en los 7 idiomas adicionales y la localización conserva el gallego.
 - **Repaso:** cálculo de ítems vencidos y orden por antigüedad.
 - **Estado:** **41 pruebas en verde**, `flutter analyze` sin avisos.
 
+| Área | Fichero de prueba | Qué verifica |
+|---|---|---|
+| HLR | `hlr_engine_test.dart` | Estabilidad y casos límite del modelo. |
+| SM-2 | `sm2_telemetry_test.dart` | Reinicio de racha, piso $EF$, invariantes. |
+| Emparejar | `matching_widget_test.dart` | Selección, acierto/error y valores duplicados. |
+| Repaso | `review_service_test.dart` | Ítems vencidos y orden. |
+| i18n | `exercise_i18n_test.dart` | Cobertura de idiomas y conservación del gallego. |
+| Interfaz | `widget_test.dart`, `responsive_screens_test.dart` | Render y ausencia de desbordamiento. |
+
 ## 10.4 Prueba de aceptación
 
-Se verificó el flujo completo en dispositivo real (iPhone): instalación, onboarding, lección, ejercicios de voz (offline), repaso y reporte de incidencias, con la telemetría llegando al backend.
+Se verificó el flujo completo en dispositivo real (iPhone): instalación, onboarding, lección, ejercicios de voz (offline), repaso y reporte de incidencias, con la telemetría llegando al backend. Se validó además la actualización de versión sobre la instalación previa y la persistencia del progreso.
 
 ## 10.5 Reproducibilidad
 
@@ -508,40 +688,59 @@ flutter build macos --release
 - **No aparece "Repaso"**: los ítems vencen a partir de ~1 día de su último repaso.
 - **El backend no responde**: la app sigue funcionando *offline*; la telemetría se sincroniza después.
 
+## 11.6 Distribución y firma
+
+**Android.** El APK de *release* se firma con un *keystore* propio (alias `galingo`, RSA-2048, validez 10 años) y se publica en *GitHub Releases*. La firma se inyecta desde `android/key.properties` (excluido del control de versiones); en CI, sin credenciales, se recurre a la firma de depuración. Mantener el mismo *keystore* permite **actualizar** sobre versiones anteriores sin desinstalar.
+
+**iOS.** La distribución sin cuenta de desarrollador de pago se realiza por ***sideload*** con Xcode y un Apple ID personal: la app se firma con el equipo personal y **caduca a los 7 días**, por lo que hay que reinstalarla periódicamente. El *bundle id* debe ser único; el iPhone requiere activar el **Modo de desarrollador** y confiar en el certificado la primera vez.
+
+**macOS / Windows / Web.** Compilaciones locales; la distribución fuera de la App Store requeriría notarización (macOS), fuera del alcance de este trabajo.
+
+## 11.7 Mantenimiento y operación
+
+- **Reentrenamiento del modelo**: `python train_hlr.py` con la telemetría exportada.
+- **Análisis de la beta**: `python analisis_beta_remote.py` (retención D1/D7 + totales).
+- **Regeneración del modelo de voz y de los audios**: *scripts* en `tool/` (Anexo B).
+- **Contenido**: el curso es un JSON; añadir lecciones no requiere cambios de código.
+- **Calidad**: cada *push* pasa por el *gate* de CI (analyze + tests).
+
 ---
 
 # 12. Discusión
 
 ## 12.1 Lectura conjunta de los resultados
 
-El sistema funciona de extremo a extremo y ha permitido **detectar y corregir defectos reales** a partir de datos de uso. La capa de voz local alcanza una precisión útil (94 % con el modelo adoptado). La evaluación del modelo de memoria, en cambio, revela una **dificultad metodológica de fondo**: sobre datos de planificadores adaptativos, la comparación HLR/SM-2 queda confundida, y las métricas de error sobre salidas binarias no aíslan la calidad del modelo.
+El sistema funciona de extremo a extremo y ha permitido **detectar y corregir defectos reales** a partir de datos de uso, lo que constituye en sí mismo una validación del ciclo *diseño → despliegue → medición → mejora*. La capa de voz local alcanza una precisión útil (94 % con el modelo adoptado) y, sobre todo, demuestra que es posible ofrecer voz en gallego **sin conexión y sin enviar audio**, resolviendo la ausencia de soporte nativo.
+
+La evaluación del modelo de memoria, en cambio, revela una **dificultad metodológica de fondo**: sobre datos de planificadores adaptativos, la comparación HLR/SM-2 queda confundida, y las métricas de error sobre salidas binarias no aíslan la calidad del modelo. Lejos de ser un fracaso, este hallazgo es un resultado relevante: **cuestiona la forma habitual de evaluar** estos sistemas y propone un diseño experimental más riguroso.
 
 ## 12.2 Aportación científica
 
-La principal aportación científica es **doble**: (i) trasladar un modelo probabilístico de memoria (HLR) a una lengua minorizada con una capa de voz **local y privada**, y (ii) **identificar y caracterizar el sesgo de programación adaptativa** como amenaza a la validez en la evaluación de modelos de repaso, proponiendo la simulación con verdad conocida y las métricas adecuadas (AUC, calibración).
+La aportación científica es **doble**: (i) trasladar un modelo probabilístico de memoria (HLR) a una lengua minorizada con una capa de voz **local y privada** —una combinación no reportada hasta donde alcanza nuestra revisión—, y (ii) **identificar y caracterizar el sesgo de programación adaptativa** como amenaza a la validez en la evaluación de modelos de repaso, proponiendo contrastarlo con una **simulación con verdad conocida** y priorizando **AUC-ROC y calibración** sobre MAE/*Brier* para sucesos binarios.
 
 ## 12.3 Aportación de ingeniería
 
-Un sistema completo, multiplataforma, *offline-first*, **distribuido con coste cero** (APK + sideload), con telemetría fiable, reporte de incidencias, motor de repasos e internacionalización con lengua objetivo. La solución a la ausencia de ASR en gallego (ejecución *on-device*) es reutilizable por otras lenguas minorizadas.
+Se ha construido un sistema completo, multiplataforma y *offline-first*, **distribuido con coste cero** (APK firmado + *sideload*), con telemetría fiable, reporte de incidencias integrado, **motor de repasos** e internacionalización con lengua objetivo. La solución a la ausencia de ASR en gallego (ejecución *on-device* con sherpa-onnx + Whisper) es directamente **reutilizable por otras lenguas minorizadas** con recursos escasos.
 
 ## 12.4 Limitaciones
 
 - **Muestra de beta pequeña** (3 usuarios, 49 eventos) → resultados de retención y de modelo **preliminares**.
-- **Sin repeticiones suficientes** en la muestra original (corregido con el motor de repasos).
-- **Dificultad léxica $d$ aproximada** (proxy de tipo de ejercicio), no léxica real (pendiente de frecuencia ILG/CORILGA).
-- **Precisión del ASR** limitada por el modelo multilingüe (no afinado en gallego).
-- **Traducciones** generadas y revisadas parcialmente (revisión humana fina pendiente).
+- **Sin repeticiones suficientes** en la muestra original, ya corregido con el motor de repasos (los ítems se vuelven a ver a partir de ~1 día).
+- **Dificultad léxica $d$ aproximada** (proxy de tipo de ejercicio + nivel), no léxica real (pendiente de frecuencia ILG/CORILGA).
+- **Precisión del ASR** limitada por el modelo multilingüe (no afinado en gallego); el modelo *medium* mejoraría la precisión a costa de memoria.
+- **Traducciones** generadas automáticamente y revisadas parcialmente (revisión humana fina pendiente).
+- **Alcance A1**: A2/B1/B2 quedan desactivados.
 
 ## 12.5 Amenazas a la validez
 
-- **Validez interna:** el sesgo de programación adaptativa y la dependencia de la tasa base en métricas binarias.
-- **Validez externa:** muestra pequeña y sesgada (usuarios próximos); generalización limitada.
-- **Validez de constructo:** la "dificultad" y la "similitud fonética" son aproximaciones.
-- **Validez de conclusión:** potencia estadística insuficiente para H2.
+- **Validez interna:** el sesgo de programación adaptativa y la dependencia de la tasa base en métricas binarias; el planificador del cliente (SM-2) es a la vez objeto de estudio y parte del sistema.
+- **Validez externa:** muestra pequeña y sesgada (usuarios próximos al autor); la generalización a otras poblaciones y lenguas es una hipótesis, no un resultado.
+- **Validez de constructo:** la "dificultad" del ítem y la "similitud fonética" son aproximaciones operativas de conceptos no observables directamente.
+- **Validez de conclusión:** potencia estadística insuficiente para confirmar H2 y solo parcialmente H1.
 
 ## 12.6 Consideraciones éticas
 
-Privacidad de voz (procesamiento local), datos anónimos y mínimos, consentimiento informado en la beta, y orientación explícita a la inclusión lingüística. La documentación respeta el lenguaje inclusivo.
+El diseño prioriza la **privacidad** (voz procesada localmente), la **minimización de datos** (telemetría anónima y agregada), el **consentimiento informado** en la beta y la **inclusión lingüística** como finalidad. No se recogen datos personales ni el contenido del audio. La documentación respeta el uso de lenguaje inclusivo conforme al reglamento de la Universidade de Vigo.
 
 ---
 
