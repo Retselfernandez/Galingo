@@ -113,6 +113,8 @@
   "voiceServerUnavailable": "Servidor de voz indisponível; a usar reconhecimento local",
   "voiceModelLoading": "A preparar o modelo de voz…",
   "voiceOnDevice": "Reconhecimento de voz no dispositivo (sem internet)",
+  "review": "Revisão",
+  "reviewNone": "Não há itens pendentes de revisão. Bom trabalho!",
   "speechUnavailable": "Reconhecimento de voz indisponível",
   "completePrevious": "Completa a lição anterior",
   "blockedLabel": "Bloqueada",

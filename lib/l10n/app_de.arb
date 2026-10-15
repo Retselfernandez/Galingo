@@ -113,6 +113,8 @@
   "voiceServerUnavailable": "Sprachserver nicht verfügbar; lokale Erkennung wird verwendet",
   "voiceModelLoading": "Sprachmodell wird vorbereitet…",
   "voiceOnDevice": "Spracherkennung auf dem Gerät (ohne Internet)",
+  "review": "Wiederholung",
+  "reviewNone": "Keine fälligen Wiederholungen. Gut gemacht!",
   "speechUnavailable": "Spracherkennung nicht verfügbar",
   "completePrevious": "Schließe die vorherige Lektion ab",
   "blockedLabel": "Gesperrt",

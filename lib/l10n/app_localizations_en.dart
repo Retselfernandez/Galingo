@@ -318,6 +318,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get voiceOnDevice => 'On-device speech recognition (no internet)';
 
   @override
+  String get review => 'Review';
+
+  @override
+  String get reviewNone => 'No items due for review. Good job!';
+
+  @override
   String get speechUnavailable => 'Speech recognition unavailable';
 
   @override

@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/ml/hlr_engine.dart';
 import '../../core/services/audio_service.dart';
+import '../../core/services/review_service.dart';
 import '../../data/datasources/mock/content_service.dart';
 import '../../data/models/unit_model.dart';
 import '../../data/models/user_progress_model.dart';
@@ -46,6 +47,12 @@ class ProgressNotifier extends AsyncNotifier<UserProgressModel> {
     state = AsyncData(updated);
   }
 
+  Future<void> recordReviewSession({required List<HlrEvent> sessionEvents}) async {
+    final updated =
+        await _repo.recordReviewSession(sessionEvents: sessionEvents);
+    state = AsyncData(updated);
+  }
+
   Future<void> updateUserName(String name) async {
     final current = state.valueOrNull ?? UserProgressModel.initial();
     final updated = current.copyWith(userName: name);
@@ -71,6 +78,13 @@ final progressNotifierProvider =
     AsyncNotifierProvider<ProgressNotifier, UserProgressModel>(
   ProgressNotifier.new,
 );
+
+/// Número de ítems vencidos (pendientes de repaso) según el planificador SM-2.
+final dueReviewProvider = Provider<int>((ref) {
+  final progress = ref.watch(progressNotifierProvider).valueOrNull;
+  if (progress == null) return 0;
+  return ReviewService.instance.dueCount(progress);
+});
 
 // ─── Units Provider ───────────────────────────────────────────────────────────
 

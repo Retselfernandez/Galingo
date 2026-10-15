@@ -321,6 +321,13 @@ class AppLocalizationsEs extends AppLocalizations {
       'Reconocimiento de voz en el dispositivo (sin internet)';
 
   @override
+  String get review => 'Repaso';
+
+  @override
+  String get reviewNone =>
+      'No tienes ítems pendientes de repaso. ¡Buen trabajo!';
+
+  @override
   String get speechUnavailable => 'Recoñecemento de voz non dispoñible';
 
   @override

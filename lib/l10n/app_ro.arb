@@ -113,6 +113,8 @@
   "voiceServerUnavailable": "Server vocal indisponibil; se folosește recunoașterea locală",
   "voiceModelLoading": "Se pregătește modelul vocal…",
   "voiceOnDevice": "Recunoaștere vocală pe dispozitiv (fără internet)",
+  "review": "Recapitulare",
+  "reviewNone": "Nicio recapitulare de făcut. Bună treabă!",
   "speechUnavailable": "Recunoaștere vocală indisponibilă",
   "completePrevious": "Finalizează lecția anterioară",
   "blockedLabel": "Blocată",
