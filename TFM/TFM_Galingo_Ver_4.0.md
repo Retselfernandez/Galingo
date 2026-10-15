@@ -96,14 +96,14 @@ Galingo adopta estas mecánicas de producto —microaprendizaje, racha, XP, nive
 
 ## 2.2 Repetición espaciada: de la heurística al modelo aprendido
 
-La **curva de olvido** de Ebbinghaus (1885) describe el decaimiento de la retención a lo largo del tiempo y constituye el fundamento de todos los sistemas de repetición espaciada. Sobre ella se han construido varias generaciones de algoritmos:
+La **curva de olvido** de Ebbinghaus (1885) [1] describe el decaimiento de la retención a lo largo del tiempo y constituye el fundamento de todos los sistemas de repetición espaciada. Sobre ella se han construido varias generaciones de algoritmos:
 
-- **Leitner (1972).** Sistema de cajas: cada acierto promueve la tarjeta a una caja con intervalos mayores; cada fallo la devuelve a la primera. Sencillo y determinista.
-- **SuperMemo / SM-2 (Wozniak, 1987–1990).** Introdujo el **factor de facilidad** $EF$ y la calidad de respuesta $q\in[0,5]$, ajustando el intervalo de forma multiplicativa. Sigue siendo el estándar de facto en aplicaciones de *flashcards* [2]. Es sensible al historial, pero sus parámetros están **fijados a mano** y no se aprenden de los datos.
-- **Anki / FSRS.** Popularizaron SM-2 en la práctica y, más recientemente, el *Free Spaced Repetition Scheduler* (FSRS), un modelo basado en la dificultad y la estabilidad de cada tarjeta, estimado por optimización a partir de los *logs* del propio usuario.
-- **HLR (Settles y Meeder, 2016).** Da un paso más: en lugar de un intervalo heurístico, **estima la vida media** $h$ mediante una regresión sobre características del ítem y del usuario, y deriva de ella la probabilidad de recuerdo [1].
+- **Leitner (1972)** [2]. Sistema de cajas: cada acierto promueve la tarjeta a una caja con intervalos mayores; cada fallo la devuelve a la primera. Sencillo y determinista.
+- **SuperMemo / SM-2 (Wozniak, 1987–1990).** Introdujo el **factor de facilidad** $EF$ y la calidad de respuesta $q\in[0,5]$, ajustando el intervalo de forma multiplicativa. Sigue siendo el estándar de facto en aplicaciones de *flashcards* [3]. Es sensible al historial, pero sus parámetros están **fijados a mano** y no se aprenden de los datos.
+- **Anki / FSRS.** Popularizaron SM-2 en la práctica y, más recientemente, el *Free Spaced Repetition Scheduler* (FSRS) [4], un modelo basado en la dificultad y la estabilidad de cada tarjeta, estimado por optimización a partir de los *logs* del propio usuario.
+- **HLR (Settles y Meeder, 2016).** Da un paso más: en lugar de un intervalo heurístico, **estima la vida media** $h$ mediante una regresión sobre características del ítem y del usuario, y deriva de ella la probabilidad de recuerdo [5].
 
-- **Modelos de *Deep Knowledge Tracing* (DKT).** Sustituyen la regresión por redes recurrentes capaces de modelar secuencias completas de interacción [3], a costa de más datos y complejidad.
+- **Modelos de *Deep Knowledge Tracing* (DKT).** Sustituyen la regresión por redes recurrentes capaces de modelar secuencias completas de interacción [6], a costa de más datos y complejidad.
 
 | Modelo | Parámetros | ¿Aprende de datos? | Entrada | Complejidad |
 |---|---|---|---|---|
@@ -132,21 +132,21 @@ La **voz** es un componente esencial de una app de idiomas (escuchar y pronuncia
 
 **Reconocimiento automático del habla (ASR).** Los sistemas operativos ofrecen ASR nativo (*SFSpeechRecognizer* en iOS, *SpeechRecognizer* en Android), pero **ninguno incluye el gallego**; al forzar un idioma cercano (p. ej. español) la transcripción degrada y produce falsos negativos en la evaluación de la pronunciación. Las alternativas basadas en modelos:
 
-- **Whisper** [9] es un modelo *encoder-decoder* multilingüe entrenado con grandes volúmenes de audio débilmente supervisado; reconoce gallego razonablemente bien. Sus variantes *tiny/base/small/medium/large* ofrecen un compromiso tamaño/precisión; la *small* cuantizada a int8 (~370 MB) es viable en móvil.
-- **wav2vec 2.0 / conformer** afinados para gallego (p. ej. recursos del Proxecto Nós [8]) alcanzan mejor precisión, pero exigen arquitecturas que no siempre están soportadas por los *runtimes* móviles y exportaciones complejas.
+- **Whisper** [7] es un modelo *encoder-decoder* multilingüe entrenado con grandes volúmenes de audio débilmente supervisado; reconoce gallego razonablemente bien. Sus variantes *tiny/base/small/medium/large* ofrecen un compromiso tamaño/precisión; la *small* cuantizada a int8 (~370 MB) es viable en móvil.
+- **wav2vec 2.0 / conformer** [8] afinados para gallego (p. ej. recursos del Proxecto Nós [9]) alcanzan mejor precisión, pero exigen arquitecturas que no siempre están soportadas por los *runtimes* móviles y exportaciones complejas.
 - **Ejecución *on-device*.** **sherpa-onnx** [10] permite ejecutar modelos ONNX (incluido Whisper) en el dispositivo, sin conexión. Combinado con Whisper, resuelve el ASR en gallego **sin depender de servicios en la nube**, preservando la privacidad.
 
-**Síntesis de voz (TTS).** Las voces neuronales han superado a las concatenativas en naturalidad. El **Proxecto Nós** [8] publica voces en gallego (entre ellas *Celtia*, basada en VITS) que permiten generar el **audio del modelo** para los ejercicios de escucha y de pronunciación con una prosodia gallega auténtica, evitando el efecto "portugués" de voces de idiomas vecinos.
+**Síntesis de voz (TTS).** Las voces neuronales han superado a las concatenativas en naturalidad. El **Proxecto Nós** [9] publica voces en gallego (entre ellas *Celtia*, basada en VITS [11]) que permiten generar el **audio del modelo** para los ejercicios de escucha y de pronunciación con una prosodia gallega auténtica, evitando el efecto "portugués" de voces de idiomas vecinos.
 
-**Recursos del ILG.** El Instituto da Lingua Galega ofrece **CORILGA** (corpus oral) [4] y recursos de generación automática de lenguaje [5], relevantes para futuros dictados con voz natural y para modelar la dificultad léxica real de los ítems.
+**Recursos del ILG.** El Instituto da Lingua Galega ofrece **CORILGA** (corpus oral) [12] y recursos de generación automática de lenguaje [13], relevantes para futuros dictados con voz natural y para modelar la dificultad léxica real de los ítems.
 
 ## 2.5 Internacionalización y aprendizaje de segundas lenguas
 
-El **Marco Común Europeo de Referencia (MCER)** [11] organiza la competencia en seis niveles (A1–C2); Galingo se centra en el **A1** (usuario básico), que corresponde a presentaciones, saludos, números, familia, rutinas diarias y vocabulario cotidiano.
+El **Marco Común Europeo de Referencia (MCER)** [14] organiza la competencia en seis niveles (A1–C2); Galingo se centra en el **A1** (usuario básico), que corresponde a presentaciones, saludos, números, familia, rutinas diarias y vocabulario cotidiano.
 
 Desde la **adquisición de segundas lenguas (SLA)**, el diseño se apoya en la **hipótesis del *input* comprensible** (se aprende mejor con material ligeramente por encima del nivel actual), la **hipótesis de la producción** (producir la lengua —incluida la pronunciación— consolida el aprendizaje) y la **enseñanza explícita de vocabulario** con repetición espaciada. La evaluación de la pronunciación mediante ASR materializa la producción oral, tradicionalmente la destreza más difícil de evaluar sin un docente.
 
-Un requisito clave para un público **no gallegoparlante** es **separar el contenido de la lengua objetivo (gallego) del andamiaje** (enunciados, instrucciones e interfaz), que deben ofrecerse en el **idioma del usuario**. La cercanía entre gallego y portugués, aprovechada en traducción automática [6], informa además la **normalización fonética** del texto reconocido (§5.5), que tolera variantes ortográficas entre ambas lenguas.
+Un requisito clave para un público **no gallegoparlante** es **separar el contenido de la lengua objetivo (gallego) del andamiaje** (enunciados, instrucciones e interfaz), que deben ofrecerse en el **idioma del usuario**. La cercanía entre gallego y portugués, aprovechada en traducción automática [15], informa además la **normalización fonética** del texto reconocido (§5.5), que tolera variantes ortográficas entre ambas lenguas.
 
 ## 2.6 Posicionamiento de Galingo
 
@@ -432,7 +432,7 @@ En el **modo repaso**, los pasos son los mismos salvo que la lección se genera 
 
 ## 7.2 Información externa (productos de terceros)
 
-La voz *Celtia* y los modelos del Proxecto Nós son recursos publicados por la USC; Whisper (OpenAI) se distribuye con licencia permisiva; sherpa-onnx es software libre. El dataset de evaluación de repetición espaciada empleado en §9 (FSRS/Anki revlogs) [12] se distribuye con licencia MIT. Se justifica el uso de cada componente por la **ausencia de alternativas específicas para el gallego** y se documentan sus licencias.
+La voz *Celtia* y los modelos del Proxecto Nós son recursos publicados por la USC; Whisper (OpenAI) se distribuye con licencia permisiva; sherpa-onnx es software libre. El dataset de evaluación de repetición espaciada empleado en §9 (FSRS/Anki revlogs) [16] se distribuye con licencia MIT. Se justifica el uso de cada componente por la **ausencia de alternativas específicas para el gallego** y se documentan sus licencias.
 
 ## 7.3 Información interna y persistencia
 
@@ -490,7 +490,7 @@ El cliente funciona de forma autónoma (aprendizaje y voz local); el backend sol
 
 | ID | Requisito | Objetivo medible |
 |---|---|---|
-| RNF1 | Latencia percibida | Transiciones < 0,1 s (límite < 1 s) [7]. |
+| RNF1 | Latencia percibida | Transiciones < 0,1 s (límite < 1 s) [17]. |
 | RNF2 | Privacidad de voz | El audio no sale del dispositivo (verificado: no hay subida de audio). |
 | RNF3 | Disponibilidad offline | Aprendizaje y voz funcionan en modo avión. |
 | RNF4 | Portabilidad | Un código para Android, iOS, macOS, Windows y Web. |
@@ -525,7 +525,7 @@ El cliente funciona de forma autónoma (aprendizaje y voz local); el backend sol
 
 - **Plataforma**: cliente Flutter en Android (APK firmado) e iOS (*sideload*), backend en la nube (*serverless*).
 - **Instrumentación**: telemetría anónima (eventos de repaso, sesiones) y reporte de incidencias integrado.
-- **Datos para el modelo**: (i) *logs* reales de repetición espaciada (**FSRS/Anki revlogs** [12], licencia MIT: 3,17 M de repasos, 30 usuarios, 312 195 tarjetas) y (ii) una **simulación con verdad conocida** con intervalos aleatorios.
+- **Datos para el modelo**: (i) *logs* reales de repetición espaciada (**FSRS/Anki revlogs** [16], licencia MIT: 3,17 M de repasos, 30 usuarios, 312 195 tarjetas) y (ii) una **simulación con verdad conocida** con intervalos aleatorios.
 
 **Métricas.** Para predicciones probabilísticas de sucesos binarios se emplean:
 
@@ -779,8 +779,8 @@ El trabajo ha supuesto un ejercicio completo de ingeniería de producto bajo res
 
 - **Escalar la beta** (con el motor de repasos ya operativo) para validar H1 y H2 con potencia estadística.
 - **Modelo ASR afinado en gallego** exportado a ONNX para el dispositivo.
-- **Deep Knowledge Tracing** [3] como sucesor de HLR.
-- **Colaboración con el ILG (CORILGA)** [4] para dictados con voz natural y dificultad léxica real.
+- **Deep Knowledge Tracing** [6] como sucesor de HLR.
+- **Colaboración con el ILG (CORILGA)** [12] para dictados con voz natural y dificultad léxica real.
 - **Publicación en tiendas** (AAB/TestFlight/notarización) y ampliación a A2/B1/B2.
 - **Ampliar `O Laboratorio`** a verbos irregulares y mesóclisis.
 
@@ -788,61 +788,36 @@ El trabajo ha supuesto un ejercicio completo de ingeniería de producto bajo res
 
 # Referencias
 
-[1] B. Settles and B. Meeder, "A Trainable Spaced Repetition Model for Language Learning," in *Proc. 54th Annual Meeting of the ACL*, Berlin, 2016, pp. 1848–1858.
+[1] H. Ebbinghaus, *Über das Gedächtnis: Untersuchungen zur experimentellen Psychologie*. Leipzig: Duncker & Humblot, 1885.
 
-[2] P. A. Wozniak, "Optimization of learning," Master's thesis, University of Technology in Poznan, 1990.
+[2] S. Leitner, *So lernt man lernen*. Freiburg: Herder, 1972.
 
-[3] C. Piech et al., "Deep Knowledge Tracing," in *Advances in Neural Information Processing Systems (NeurIPS)*, vol. 28, 2015.
+[3] P. A. Woźniak, "Optimization of learning," Master's thesis, University of Technology in Poznań, Poznań, Poland, 1990.
 
-[4] Instituto da Lingua Galega, "CORILGA: Corpus Oral Informatizado da Lingua Galega," USC. [En línea]. https://ilg.usc.gal
+[4] Open Spaced Repetition, *Free Spaced Repetition Scheduler (FSRS)*. [En línea]. https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler
 
-[5] Instituto da Lingua Galega, "Interoperabilidade de recursos e produción automática de linguaxe natural," USC. [En línea]. https://ilg.usc.gal
+[5] B. Settles and B. Meeder, "A Trainable Spaced Repetition Model for Language Learning," in *Proc. 54th Annual Meeting of the Association for Computational Linguistics (ACL)*, Berlin, Germany, 2016, pp. 1848–1858.
 
-[6] J. C. Pichel Campos, "Carvalho: Un sistema de traducción estadística inglés-galego…," *Procesamiento del Lenguaje Natural*, SEPLN.
+[6] C. Piech, J. Bassen, J. Huang, S. Ganguli, M. Sahami, L. J. Guibas, and J. Sohl-Dickstein, "Deep Knowledge Tracing," in *Advances in Neural Information Processing Systems (NeurIPS)*, vol. 28, 2015, pp. 505–513.
 
-[7] J. Nielsen, "Response Times: The 3 Important Limits," Nielsen Norman Group, 1993. [En línea]. https://www.nngroup.com/articles/response-times-3-important-limits/
+[7] A. Radford, J. W. Kim, T. Xu, G. Brockman, C. McLeavey, and I. Sutskever, "Robust Speech Recognition via Large-Scale Weak Supervision (Whisper)," OpenAI, 2022. arXiv:2212.04356.
 
-[8] Proxecto Nós, USC. Recursos de voz e lingua para o galego (voz *Celtia*; modelos ASR). [En línea]. https://nos.gal
+[8] A. Baevski, H. Zhou, A. Mohamed, and M. Auli, "wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations," in *Advances in Neural Information Processing Systems (NeurIPS)*, vol. 33, 2020, pp. 12449–12460.
 
-[9] A. Radford et al., "Robust Speech Recognition via Large-Scale Weak Supervision (Whisper)," OpenAI, 2022.
+[9] Proxecto Nós, Universidade de Santiago de Compostela. *Recursos de voz e lingua para o galego* (voz *Celtia*; modelos ASR). [En línea]. https://nos.gal
 
-[10] k2-fsa, "sherpa-onnx: Real-time speech recognition and synthesis without internet." [En línea]. https://github.com/k2-fsa/sherpa-onnx
+[10] k2-fsa, *sherpa-onnx: Real-time speech recognition and synthesis without internet*. [En línea]. https://github.com/k2-fsa/sherpa-onnx
 
-[11] Consejo de Europa, *Marco Común Europeo de Referencia para las lenguas*. Estrasburgo, 2001.
+[11] J. Kim, J. Kong, and J. Son, "Conditional Variational Autoencoder with Adversarial Learning for End-to-End Text-to-Speech (VITS)," in *Proc. 38th International Conference on Machine Learning (ICML)*, 2021, pp. 5530–5540.
 
-[12] Open Spaced Repetition, "FSRS/Anki review logs dataset (licencia MIT)." [En línea]. https://huggingface.co/datasets/open-spaced-repetition/fsrs-dataset
+[12] X. L. Regueira (dir.), *Corpus Oral Informatizado da Lingua Galega (CORILGA)*. Santiago de Compostela: Instituto da Lingua Galega. [En línea]. https://ilg.usc.gal/corilga/
 
----
+[13] M. J. Domínguez Vázquez (dir.), "Interoperabilidade de recursos e produción automática de linguaxe natural," Instituto da Lingua Galega, Universidade de Santiago de Compostela. [En línea]. https://ilg.usc.gal/gl/proxectos/interoperabilidade-de-recursos-e-producion-automatica-de-linguaxe-natural
 
-# Anexos
+[14] Consejo de Europa, *Marco Común Europeo de Referencia para las lenguas: aprendizaje, enseñanza, evaluación*. Estrasburgo: Consejo de Europa, 2001.
 
-## Anexo A. Manual de despliegue
+[15] J. R. Pichel Campos, P. Malvar Fernández, O. Senra Gómez, P. Gamallo Otero, and A. García, "Carvalho: Un sistema de traducción estadística inglés-galego construído a partir do corpus paralelo inglés-portugués EuroParl," *Procesamiento del Lenguaje Natural*, no. 43, pp. 379–381, 2009.
 
-Backend: `docker compose up --build` (API en `:8000`). Variables: `DATABASE_URL`, `EXPORT_TOKEN`. Endpoints en §6.3. Reentrenamiento: `python train_hlr.py`; análisis: `python analisis_beta_remote.py` (retención D1/D7). Cliente: comandos en §11.3.
+[16] Open Spaced Repetition, *FSRS/Anki review logs dataset*. [En línea]. https://huggingface.co/datasets/open-spaced-repetition/fsrs-dataset
 
-## Anexo B. Comandos de reproducción
-
-```bash
-# Modelo ASR on-device
-bash tool/fetch_asr_model.sh small
-# Experimento HLR vs SM-2 (datos reales FSRS)
-python backend/experimentos/hlr_vs_sm2_fsrs.py
-# Simulación con verdad conocida
-python backend/experimentos/simulacion_hlr.py
-# Traducción de ejercicios (i18n)
-python tool/i18n_exercises.py
-```
-
-## Anexo C. Corpus de evaluación
-
-**Resumen:** 12 unidades, 70 lecciones, 573 ejercicios (Vocabulario 12, Gramática 11, Escucha 12, Ortografía 12, Lectura 11, Pronuncia 12 lecciones). Tipos: opción múltiple (200), huecos (126), traducción (63), emparejar (56), lectura (54), pronunciación (33), dictado (29), ordenar (6), imagen (6). Ejemplo de ejercicio con `i18n` en §5.6.
-
-Resultados del piloto y de la voz: §9.2 y §9.5.
-
----
-
-*Fin de la memoria — Ver 4.0.*
-
-
-
-
+[17] J. Nielsen, "Response Times: The 3 Important Limits," Nielsen Norman Group, 1993. [En línea]. https://www.nngroup.com/articles/response-times-3-important-limits/
