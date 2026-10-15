@@ -578,6 +578,24 @@ El HLR **reduce el MAE un 13,3 %** frente a SM-2, pero **la AUC-ROC es ≈0,5 o 
 
 Con intervalos aleatorios (sin sesgo), **ambos modelos discriminan bien** (AUC ≈0,98); las métricas de error (*Brier*/MAE) favorecen a SM-2 porque, con salidas binarias y una tasa base alta (~0,84), esas métricas **premian predecir la tasa base** y no aíslan la calidad del modelo. La conclusión metodológica es que, para recuerdo binario, **AUC-ROC y calibración son las métricas apropiadas**, y que la ventaja de HLR depende de **características ricas** (lexema, latencia, usuario) que el piloto aún no genera en volumen suficiente.
 
+**Figuras.** Error de predicción, curva ROC y calibración sobre datos reales:
+
+![Error de predicción HLR vs SM-2 (datos reales)](figuras/fig_mae_rmse.png)
+
+![Curva ROC (datos reales)](figuras/fig_roc.png)
+
+![Curva de calibración (datos reales)](figuras/fig_calibracion.png)
+
+Curva de olvido observada frente a la predicha por HLR (datos reales):
+
+![Curva de olvido observada vs predicha](figuras/fig_retencion.png)
+
+Simulación con verdad conocida (intervalos aleatorios): ROC y calibración:
+
+![Simulación: curva ROC](figuras/sim_roc.png)
+
+![Simulación: calibración](figuras/sim_calibracion.png)
+
 > Estas conclusiones se discuten como **limitaciones y amenazas a la validez** en §12.
 
 ## 9.5 Validación de la capa de voz
