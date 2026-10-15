@@ -13,6 +13,11 @@ abstract class MemoryRepository {
     required List<String> allLessonIdsInUnit,
     List<HlrEvent>? sessionEvents,
   });
+  /// Registra una sesión de repaso espaciado (actualiza historial, MAE y theta)
+  /// sin marcar lecciones ni otorgar XP.
+  Future<UserProgressModel> recordReviewSession({
+    required List<HlrEvent> sessionEvents,
+  });
   Future<void> resetProgress();
 
   SettingsModel getSettings();

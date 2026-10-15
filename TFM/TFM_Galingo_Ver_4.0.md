@@ -113,7 +113,7 @@ El reto consiste, por tanto, en diseñar una infraestructura que (i) capture eve
 
 Diseñar un sistema de aprendizaje de idiomas que incorpore inteligencia requiere combinar tres áreas: la ingeniería de interfaces aplicada al microaprendizaje, los modelos computacionales de retención de memoria y el procesamiento del lenguaje natural.
 
-- **Sistemas de *microlearning*.** Soluciones comerciales como Duolingo o Babbel han fijado un patrón de interacción que maximiza el tiempo de sesión segmentando el contenido en unidades pequeñas, reforzadas por mecánicas de juego orientadas al compromiso diario [8][9]. Sin embargo, excluyen de forma sistemática lenguas minorizadas como el gallego.
+- **Sistemas de *microlearning*.** Las plataformas comerciales de mayor difusión han fijado un patrón de interacción que maximiza el tiempo de sesión segmentando el contenido en unidades pequeñas, reforzadas por mecánicas de juego orientadas al compromiso diario. Sin embargo, excluyen de forma sistemática las lenguas minorizadas como el gallego, ya que su desarrollo algorítmico se concentra en los idiomas con mayor tamaño de mercado.
 
 - **Algoritmos de repetición espaciada.** El algoritmo **SM-2** de Wozniak sigue siendo el estándar de facto en aplicaciones de *flashcards* [2]. Introduce un factor de facilidad $EF$ que se ajusta tras cada intento ($EF' = EF + (0{,}1 - (5-q)\,(0{,}08 + (5-q)\,0{,}02))$), pero sus parámetros de penalización están fijados por quien diseña el sistema y no se aprenden a partir de los datos.
 
@@ -416,17 +416,13 @@ Este trabajo demuestra que es viable, técnica y arquitectónicamente, diseñar 
 
 [7] J. Nielsen, "Response Times: The 3 Important Limits," Nielsen Norman Group, 1993. [En línea]. Disponible en: https://www.nngroup.com/articles/response-times-3-important-limits/
 
-[8] Duolingo, Inc. [En línea]. Disponible en: https://www.duolingo.com
+[8] Proxecto Nós, Universidade de Santiago de Compostela. Recursos de voz e lingua para o galego (voz *Celtia*; modelos ASR). [En línea]. Disponible en: https://nos.gal
 
-[9] Babbel GmbH. [En línea]. Disponible en: https://www.babbel.com
+[9] A. Radford, J. W. Kim, T. Xu, G. Brockman, C. McLeavey, and I. Sutskever, "Robust Speech Recognition via Large-Scale Weak Supervision (Whisper)," OpenAI, 2022.
 
-[10] Proxecto Nós, Universidade de Santiago de Compostela. Recursos de voz e lingua para o galego (voz *Celtia*; modelos ASR). [En línea]. Disponible en: https://nos.gal
+[10] k2-fsa, "sherpa-onnx: Real-time speech recognition and synthesis without internet." [En línea]. Disponible en: https://github.com/k2-fsa/sherpa-onnx
 
-[11] A. Radford, J. W. Kim, T. Xu, G. Brockman, C. McLeavey, and I. Sutskever, "Robust Speech Recognition via Large-Scale Weak Supervision (Whisper)," OpenAI, 2022.
-
-[12] k2-fsa, "sherpa-onnx: Real-time speech recognition and synthesis without internet." [En línea]. Disponible en: https://github.com/k2-fsa/sherpa-onnx
-
-[13] Consejo de Europa, *Marco Común Europeo de Referencia para las lenguas: aprendizaje, enseñanza, evaluación*. Estrasburgo: Consejo de Europa, 2001.
+[11] Consejo de Europa, *Marco Común Europeo de Referencia para las lenguas: aprendizaje, enseñanza, evaluación*. Estrasburgo: Consejo de Europa, 2001.
 
 ---
 

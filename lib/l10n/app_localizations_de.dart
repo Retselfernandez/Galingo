@@ -321,6 +321,12 @@ class AppLocalizationsDe extends AppLocalizations {
   String get voiceOnDevice => 'Spracherkennung auf dem Gerät (ohne Internet)';
 
   @override
+  String get review => 'Wiederholung';
+
+  @override
+  String get reviewNone => 'Keine fälligen Wiederholungen. Gut gemacht!';
+
+  @override
   String get speechUnavailable => 'Spracherkennung nicht verfügbar';
 
   @override

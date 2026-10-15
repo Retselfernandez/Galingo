@@ -1,5 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
+import '../../models/exercise_model.dart';
+import '../../models/lesson_model.dart';
 import '../../models/level_model.dart';
 import '../../models/unit_model.dart';
 import '../../../core/constants/app_constants.dart';
@@ -90,6 +92,29 @@ class ContentService {
       }
     }
     return null;
+  }
+
+  /// Devuelve los ejercicios cuyo `correctAnswer` coincide con la palabra dada.
+  /// Se usa para construir lecciones de repaso a partir del historial.
+  Future<List<ExerciseModel>> exercisesForWord(String word) async {
+    await _ensureAllLoaded();
+    final out = <ExerciseModel>[];
+    for (final entry in _lessonCache.values) {
+      final lesson = entry as LessonModel;
+      for (final e in lesson.exercises) {
+        if (e.correctAnswer == word) out.add(e);
+      }
+    }
+    return out;
+  }
+
+  Future<void> _ensureAllLoaded() async {
+    if (_lessonCache.isNotEmpty) return;
+    for (final lvlId in ['A1', 'A2', 'B1', 'B2']) {
+      try {
+        await loadLevel(lvlId);
+      } catch (_) {}
+    }
   }
 
   /// Invalida la caché (útil para tests)

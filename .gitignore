@@ -86,3 +86,6 @@ Imagenes de reportes/
 
 # Caché de tradución de exercicios (xerada)
 tool/.i18n_cache.json
+
+# Datos de experimentos (grandes; descargables)
+backend/experimentos/fsrs/

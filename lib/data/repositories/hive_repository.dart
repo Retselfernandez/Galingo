@@ -187,6 +187,55 @@ class HiveRepository implements MemoryRepository {
     return updated;
   }
 
+  @override
+  Future<UserProgressModel> recordReviewSession({
+    required List<HlrEvent> sessionEvents,
+  }) async {
+    final current = getProgress();
+    if (sessionEvents.isEmpty) return current;
+
+    Map<String, Map<String, dynamic>> updatedHistory = Map.from(
+      current.wordRepetitionHistory.map((k, v) => MapEntry(k, Map<String, dynamic>.from(v))),
+    );
+    List<double> updatedTheta = List.from(current.theta);
+    List<HlrEvent> updatedHlrEvents = List.from(current.hlrEvents);
+    double batchHlrErrorSum = 0.0;
+    double batchSm2ErrorSum = 0.0;
+    int batchTelemetryCount = 0;
+
+    _processTelemetryEvents(
+      sessionEvents: sessionEvents,
+      currentTheta: current.theta,
+      updatedHistory: updatedHistory,
+      nowStr: DateTime.now().toIso8601String(),
+      onErrorAccumulated: (hlrErr, sm2Err) {
+        batchHlrErrorSum += hlrErr;
+        batchSm2ErrorSum += sm2Err;
+        batchTelemetryCount++;
+      },
+    );
+
+    updatedHlrEvents.addAll(sessionEvents);
+    if (updatedHlrEvents.length > 200) {
+      updatedHlrEvents = updatedHlrEvents.sublist(updatedHlrEvents.length - 200);
+    }
+    updatedTheta = HlrEngine.trainLocalTheta(
+      currentTheta: current.theta,
+      events: sessionEvents,
+    );
+
+    final updated = current.copyWith(
+      theta: updatedTheta,
+      hlrEvents: updatedHlrEvents,
+      wordRepetitionHistory: updatedHistory,
+      hlrErrorSum: current.hlrErrorSum + batchHlrErrorSum,
+      sm2ErrorSum: current.sm2ErrorSum + batchSm2ErrorSum,
+      telemetryCount: current.telemetryCount + batchTelemetryCount,
+    );
+    await saveProgress(updated);
+    return updated;
+  }
+
   // ─── Métodos Auxiliares de Procesamiento (Refactor H2) ─────────────────────
 
   UserProgressModel _updateStreakDays(UserProgressModel current, DateTime now) {

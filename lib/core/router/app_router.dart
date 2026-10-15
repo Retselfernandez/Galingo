@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../presentation/screens/home/home_screen.dart';
 import '../../presentation/screens/lesson/lesson_screen.dart';
+import '../../presentation/screens/review/review_screen.dart';
 import '../../presentation/screens/onboarding/name_input_screen.dart';
 import '../../presentation/screens/onboarding/splash_screen.dart';
 import '../../presentation/screens/onboarding/welcome_screen.dart';
@@ -17,6 +18,7 @@ abstract class AppRoutes {
   static const String name = '/name';
   static const String home = '/home';
   static const String lesson = '/lesson/:lessonId';
+  static const String review = '/review';
   static const String settings = '/settings';
   static const String feedback = '/feedback';
 
@@ -59,6 +61,13 @@ final appRouterProvider = Provider<GoRouter>((ref) {
             child: LessonScreen(lessonId: lessonId),
           );
         },
+      ),
+      GoRoute(
+        path: AppRoutes.review,
+        pageBuilder: (context, state) => _slideTransition(
+          state: state,
+          child: const ReviewScreen(),
+        ),
       ),
       GoRoute(
         path: AppRoutes.name,

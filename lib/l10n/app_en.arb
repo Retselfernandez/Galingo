@@ -113,6 +113,8 @@
   "voiceServerUnavailable": "Voice server unavailable; using local recognition",
   "voiceModelLoading": "Preparing the voice model…",
   "voiceOnDevice": "On-device speech recognition (no internet)",
+  "review": "Review",
+  "reviewNone": "No items due for review. Good job!",
   "speechUnavailable": "Speech recognition unavailable",
   "completePrevious": "Complete the previous lesson",
   "blockedLabel": "Locked",

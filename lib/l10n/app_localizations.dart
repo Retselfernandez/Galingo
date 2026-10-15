@@ -710,6 +710,18 @@ abstract class AppLocalizations {
   /// **'Reconocimiento de voz en el dispositivo (sin internet)'**
   String get voiceOnDevice;
 
+  /// No description provided for @review.
+  ///
+  /// In es, this message translates to:
+  /// **'Repaso'**
+  String get review;
+
+  /// No description provided for @reviewNone.
+  ///
+  /// In es, this message translates to:
+  /// **'No tienes ítems pendientes de repaso. ¡Buen trabajo!'**
+  String get reviewNone;
+
   /// No description provided for @speechUnavailable.
   ///
   /// In es, this message translates to:

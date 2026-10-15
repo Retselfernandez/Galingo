@@ -25,7 +25,11 @@ import '../../widgets/gabi/gabi_widget.dart';
 class LessonScreen extends ConsumerStatefulWidget {
   final String lessonId;
 
-  const LessonScreen({super.key, required this.lessonId});
+  /// Si se proporciona, se usa esta lección en lugar de cargarla por id
+  /// (modo "repaso": lección generada dinámicamente desde el historial).
+  final LessonModel? overrideLesson;
+
+  const LessonScreen({super.key, required this.lessonId, this.overrideLesson});
 
   @override
   ConsumerState<LessonScreen> createState() => _LessonScreenState();
@@ -94,7 +98,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   }
 
   Future<void> _loadLesson() async {
-    final lesson = await ContentService.instance.findLessonById(widget.lessonId);
+    final dynamic lesson = widget.overrideLesson ??
+        await ContentService.instance.findLessonById(widget.lessonId);
     // L4: determinar el nivel real de la unidad que contiene esta lección
     final parentUnit = await ContentService.instance.findUnitForLesson(widget.lessonId);
     if (lesson != null) {
@@ -248,12 +253,19 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     final progress = ref.read(progressNotifierProvider).valueOrNull;
     final level = progress?.currentLevel ?? 'A1';
     
+    // Modo repaso: la lección no pertenece a ninguna unidad del curso.
+    final isReview = widget.overrideLesson != null;
+
     // Obtener todas las lecciones del nivel actual
-    final units = await ContentService.instance.loadUnitsForLevel(level);
-    final parentUnit = units.firstWhere(
-      (u) => u.lessons.any((l) => l.id == lesson.id),
-      orElse: () => units.first,
-    );
+    final units = isReview
+        ? <dynamic>[]
+        : await ContentService.instance.loadUnitsForLevel(level);
+    final parentUnit = isReview
+        ? null
+        : units.firstWhere(
+            (u) => u.lessons.any((l) => l.id == lesson.id),
+            orElse: () => units.first,
+          );
 
     // ─── Generación de Eventos HLR de la Sesión ───
     final List<HlrEvent> sessionEvents = [];
@@ -305,13 +317,20 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     // Intentar subir los eventos encolados (no bloquea: cola offline)
     unawaited(TelemetryService.instance.sync());
 
-    await ref.read(progressNotifierProvider.notifier).completeLesson(
-      lessonId: lesson.id,
-      unitId: parentUnit.id,
-      xpEarned: _xpEarned,
-      allLessonIdsInUnit: parentUnit.lessons.map((l) => l.id).toList(),
-      sessionEvents: sessionEvents,
-    );
+    if (isReview) {
+      await ref
+          .read(progressNotifierProvider.notifier)
+          .recordReviewSession(sessionEvents: sessionEvents);
+    } else {
+      await ref.read(progressNotifierProvider.notifier).completeLesson(
+            lessonId: lesson.id,
+            unitId: parentUnit!.id,
+            xpEarned: _xpEarned,
+            allLessonIdsInUnit:
+                parentUnit.lessons.map((l) => l.id).toList(),
+            sessionEvents: sessionEvents,
+          );
+    }
 
     if (mounted) {
       _showCompletionDialog();

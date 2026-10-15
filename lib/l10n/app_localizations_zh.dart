@@ -313,6 +313,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get voiceOnDevice => '设备端语音识别（无需联网）';
 
   @override
+  String get review => '复习';
+
+  @override
+  String get reviewNone => '没有需要复习的内容。做得好！';
+
+  @override
   String get speechUnavailable => '语音识别不可用';
 
   @override

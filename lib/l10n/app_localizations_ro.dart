@@ -320,6 +320,12 @@ class AppLocalizationsRo extends AppLocalizations {
       'Recunoaștere vocală pe dispozitiv (fără internet)';
 
   @override
+  String get review => 'Recapitulare';
+
+  @override
+  String get reviewNone => 'Nicio recapitulare de făcut. Bună treabă!';
+
+  @override
   String get speechUnavailable => 'Recunoaștere vocală indisponibilă';
 
   @override

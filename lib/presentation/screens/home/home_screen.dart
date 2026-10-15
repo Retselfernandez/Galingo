@@ -33,8 +33,18 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final unitsAsync = ref.watch(unitsWithStatusProvider);
     final strings = AppLocalizations.of(context)!;
 
+    final due = ref.watch(dueReviewProvider);
     return Scaffold(
       backgroundColor: AppTheme.skyBlue,
+      floatingActionButton: due > 0
+          ? FloatingActionButton.extended(
+              onPressed: () => context.push(AppRoutes.review),
+              icon: const Icon(Icons.replay_rounded),
+              label: Text('${strings.review} ($due)'),
+              backgroundColor: AppTheme.primaryBlue,
+              foregroundColor: Colors.white,
+            )
+          : null,
       body: progressAsync.when(
         loading: () => const Center(child: CircularProgressIndicator()),
         error: (e, _) => Center(child: Text('${strings.errorLoading} $e')),
