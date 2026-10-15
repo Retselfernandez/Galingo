@@ -78,5 +78,46 @@ void main() {
       // Al emparejar todos, se debe disparar el callback
       expect(completed, isTrue);
     });
+
+    testWidgets('valores duplicados na columna dereita emparéllanse por instancia',
+        (WidgetTester tester) async {
+      // Caso real: "eles" e "elas" traducen ambos a "Sie" en alemán.
+      final pairs = [
+        {'left': 'eles', 'right': 'Sie'},
+        {'left': 'elas', 'right': 'Sie'},
+      ];
+      bool completed = false;
+
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: InteractiveMatchingWidget(
+              matchingPairs: pairs,
+              onCompleted: () {
+                completed = true;
+              },
+              isAnswered: false,
+            ),
+          ),
+        ),
+      );
+
+      // Emparejar 'eles' cun dos "Sie"
+      await tester.tap(find.text('eles'));
+      await tester.pump();
+      await tester.tap(find.text('Sie').first);
+      await tester.pump();
+
+      // Só hai unha parella feita: non se completa
+      expect(completed, isFalse);
+
+      // Emparejar 'elas' co outro "Sie" (debe seguir dispoñible)
+      await tester.tap(find.text('elas'));
+      await tester.pump();
+      await tester.tap(find.text('Sie').at(1));
+      await tester.pump();
+
+      expect(completed, isTrue);
+    });
   });
 }

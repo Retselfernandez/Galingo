@@ -1446,14 +1446,16 @@ class InteractiveMatchingWidget extends StatefulWidget {
 class _InteractiveMatchingWidgetState extends State<InteractiveMatchingWidget> {
   late List<String> _leftItems;
   late List<String> _rightItems;
-  
-  String? _selectedLeft;
-  String? _selectedRight;
-  
-  final Map<String, String> _matches = {};
-  
-  String? _errorLeft;
-  String? _errorRight;
+
+  // Identificamos os ítems por ÍNDICE, non por valor: pode haber valores
+  // repetidos na columna dereita (p. ex. "Sie" para "eles" e "elas").
+  int? _selectedLeft;
+  int? _selectedRight;
+
+  final Map<int, int> _matches = {}; // índice esquerdo -> índice dereito
+
+  int? _errorLeft;
+  int? _errorRight;
 
   @override
   void initState() {
@@ -1484,50 +1486,52 @@ class _InteractiveMatchingWidgetState extends State<InteractiveMatchingWidget> {
     _rightItems.shuffle();
   }
 
-  void _onLeftSelected(String item) {
-    if (widget.isAnswered || _matches.containsKey(item)) return;
-    
+  void _onLeftSelected(int index) {
+    if (widget.isAnswered || _matches.containsKey(index)) return;
+
     setState(() {
       _errorLeft = null;
       _errorRight = null;
-      
-      if (_selectedLeft == item) {
+
+      if (_selectedLeft == index) {
         _selectedLeft = null;
       } else {
-        _selectedLeft = item;
+        _selectedLeft = index;
         _checkMatch();
       }
     });
   }
 
-  void _onRightSelected(String item) {
-    if (widget.isAnswered || _matches.containsValue(item)) return;
-    
+  void _onRightSelected(int index) {
+    if (widget.isAnswered || _matches.containsValue(index)) return;
+
     setState(() {
       _errorLeft = null;
       _errorRight = null;
-      
-      if (_selectedRight == item) {
+
+      if (_selectedRight == index) {
         _selectedRight = null;
       } else {
-        _selectedRight = item;
+        _selectedRight = index;
         _checkMatch();
       }
     });
   }
 
   void _checkMatch() {
-    if (_selectedLeft == null || _selectedRight == null) return;
-   
+    final li = _selectedLeft;
+    final ri = _selectedRight;
+    if (li == null || ri == null) return;
+
     final isValid = widget.matchingPairs.any(
-      (p) => p['left'] == _selectedLeft && p['right'] == _selectedRight,
+      (p) => p['left'] == _leftItems[li] && p['right'] == _rightItems[ri],
     );
-   
+
     if (isValid) {
       AudioService.instance.play(SoundEffect.success);
       HapticFeedback.lightImpact();
       setState(() {
-        _matches[_selectedLeft!] = _selectedRight!;
+        _matches[li] = ri;
         _selectedLeft = null;
         _selectedRight = null;
       });
@@ -1538,16 +1542,14 @@ class _InteractiveMatchingWidgetState extends State<InteractiveMatchingWidget> {
       AudioService.instance.play(SoundEffect.error);
       HapticFeedback.vibrate();
       setState(() {
-        _errorLeft = _selectedLeft;
-        _errorRight = _selectedRight;
+        _errorLeft = li;
+        _errorRight = ri;
         _selectedLeft = null;
         _selectedRight = null;
       });
-   
-      final errL = _errorLeft;
-      final errR = _errorRight;
+
       Future.delayed(const Duration(milliseconds: 600), () {
-        if (mounted && _errorLeft == errL && _errorRight == errR) {
+        if (mounted && _errorLeft == li && _errorRight == ri) {
           setState(() {
             _errorLeft = null;
             _errorRight = null;
@@ -1565,19 +1567,16 @@ class _InteractiveMatchingWidgetState extends State<InteractiveMatchingWidget> {
         Expanded(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: _leftItems.map((item) {
-              final isMatched = _matches.containsKey(item);
-              final isSelected = _selectedLeft == item;
-              final isError = _errorLeft == item;
-              
-              return _buildMatchingCard(
-                text: item,
-                isSelected: isSelected,
-                isMatched: isMatched,
-                isError: isError,
-                onTap: () => _onLeftSelected(item),
-              );
-            }).toList(),
+            children: [
+              for (var i = 0; i < _leftItems.length; i++)
+                _buildMatchingCard(
+                  text: _leftItems[i],
+                  isSelected: _selectedLeft == i,
+                  isMatched: _matches.containsKey(i),
+                  isError: _errorLeft == i,
+                  onTap: () => _onLeftSelected(i),
+                ),
+            ],
           ),
         ),
         const SizedBox(width: 20),
@@ -1585,19 +1584,16 @@ class _InteractiveMatchingWidgetState extends State<InteractiveMatchingWidget> {
         Expanded(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: _rightItems.map((item) {
-              final isMatched = _matches.containsValue(item);
-              final isSelected = _selectedRight == item;
-              final isError = _errorRight == item;
-              
-              return _buildMatchingCard(
-                text: item,
-                isSelected: isSelected,
-                isMatched: isMatched,
-                isError: isError,
-                onTap: () => _onRightSelected(item),
-              );
-            }).toList(),
+            children: [
+              for (var i = 0; i < _rightItems.length; i++)
+                _buildMatchingCard(
+                  text: _rightItems[i],
+                  isSelected: _selectedRight == i,
+                  isMatched: _matches.containsValue(i),
+                  isError: _errorRight == i,
+                  onTap: () => _onRightSelected(i),
+                ),
+            ],
           ),
         ),
       ],
