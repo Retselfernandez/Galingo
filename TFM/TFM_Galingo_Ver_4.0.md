@@ -224,7 +224,7 @@ El desarrollo siguió un enfoque **iterativo e incremental (sprints)**, con un *
 |---|---|---|
 | S1 — Cimientos | Arquitectura Flutter, modelo de contenido (unidades/lecciones/ejercicios), navegación. | App navegable con lecciones. |
 | S2 — Motor de repetición | SM-2 y HLR (Dart), persistencia del historial, MAE. | Motor con métrica visible. |
-| S3 — Contenido A1 | Banco de 540 preguntas, 12 unidades, tipos de ejercicio. | Curso A1 completo. |
+| S3 — Contenido A1 | Banco de 540 preguntas (+ 33 de pronuncia = 573 ejercicios), 12 unidades, tipos de ejercicio. | Curso A1 completo. |
 | S4 — Backend y datos | FastAPI, PostgreSQL/SQLite, telemetría, feedback, despliegue. | API + ingesta. |
 | S5 — Internacionalización | 8 locales, localización del contenido, generación de traducciones. | UI y enunciados en 8 idiomas. |
 | S6 — Voz local | TTS (Proxecto Nós), ASR on-device (sherpa-onnx + Whisper), normalización fonética. | Pronunciación offline. |
@@ -513,7 +513,7 @@ El cliente funciona de forma autónoma (aprendizaje y voz local); el backend sol
 | O1 Algorítmicos | RF1, RF2 | `hlr_engine_test`, `sm2_telemetry_test`, §9 |
 | O2 Arquitectónicos | RF1, RF8 | `review_service_test`, verificación de cola offline |
 | O3 Producto | RF3, RF4, RF6 | `widget_test`, `responsive_screens_test`, `matching_widget_test` |
-| O4 Voz | RF5 | validación de voz (§9.5) |
+| O4 Voz | RF5 | validación de voz (§9.6) |
 | O5 i18n | RF9 | `exercise_i18n_test` |
 | O6 Validación | RF1, RF7, RF8 | beta + análisis (§9) |
 
@@ -533,13 +533,13 @@ $$\text{MAE} = \frac{1}{N}\sum_i |p_i - \hat{p}_i|, \qquad \text{Brier} = \frac{
 
 El MAE y el *Brier* miden el error de probabilidad (sensibles a la tasa base); la **AUC-ROC** mide la **discriminación** (independiente de la tasa base) y las **curvas de calibración** relacionan probabilidad predicha y frecuencia observada. La partición es **por usuario** (80/20) para evitar filtración. Los experimentos son **reproducibles** con los *scripts* del Anexo B.
 
-## 9.1b Configuración de los experimentos
+## 9.2 Configuración de los experimentos
 
 **Experimento 1 — datos reales (FSRS/Anki).** Se construyen eventos $(s, f, t, p)$ por tarjeta a partir del historial de repasos (`delta_t`, resultado). Se entrena HLR y se evalúa SM-2 sobre el 20 % de usuarios reservado. Este experimento refleja el comportamiento de un planificador **adaptativo** real.
 
 **Experimento 2 — simulación con verdad conocida.** Se genera un proceso con parámetros $\boldsymbol{\theta}^*$ conocidos y **intervalos aleatorios** (uniforme 0,3–40 días), eliminando el sesgo de programación; cada ítem tiene una **secuencia** de repasos para que SM-2 disponga de estado real. Se comprueba la capacidad de discriminación de HLR y SM-2 (AUC, *Brier*, calibración).
 
-## 9.2 Beta cerrada (piloto)
+## 9.3 Beta cerrada (piloto)
 
 En el momento de redactar esta memoria, el piloto acumulaba:
 
@@ -552,11 +552,11 @@ En el momento de redactar esta memoria, el piloto acumulaba:
 
 El volumen de eventos ya **permite entrenar** el modelo HLR (≥20 eventos). Los reportes recibidos (texto de cabecera recortado en Android 15/16 y un defecto de traducción/emparejado en alemán) se tradujeron en **correcciones concretas**, evidenciando el valor del canal de *feedback*. La muestra es **pequeña**, por lo que los resultados de retención se consideran **preliminares**.
 
-## 9.3 Retención (D1/D7)
+## 9.4 Retención (D1/D7)
 
 La retención se calcula a partir de las sesiones diarias registradas. Con el tamaño muestral actual, los valores de **D1/D7 son indicativos**, no concluyentes para H2. El sistema está preparado para escalar la muestra (solo requiere más tiempo de uso).
 
-## 9.4 Error del modelo (MAE, Brier, AUC-ROC, calibración) y sesgo de programación
+## 9.5 Error del modelo (MAE, Brier, AUC-ROC, calibración) y sesgo de programación
 
 Se evaluó HLR frente a SM-2 sobre **datos reales** (FSRS/Anki) y sobre una **simulación con verdad conocida**.
 
@@ -598,7 +598,7 @@ Simulación con verdad conocida (intervalos aleatorios): ROC y calibración:
 
 > Estas conclusiones se discuten como **limitaciones y amenazas a la validez** en §12.
 
-## 9.5 Validación de la capa de voz
+## 9.6 Validación de la capa de voz
 
 El modelo ASR se evaluó con las **33 frases de pronunciación** del curso, comparando la transcripción con el texto objetivo mediante la métrica fonética:
 
@@ -610,12 +610,12 @@ El modelo ASR se evaluó con las **33 frases de pronunciación** del curso, comp
 
 El modelo *medium* es más preciso pero consume ~1,5–2 GB de RAM (inviable en gama media); se adoptó *small* por su equilibrio. El **conjunto de control** (frase objetivo frente a un audio distinto) **no produjo falsos positivos**, lo que valida la capacidad discriminativa de la métrica.
 
-## 9.6 Estado de las hipótesis
+## 9.7 Estado de las hipótesis
 
 - **H1 (eficiencia predictiva):** **parcialmente contrastada**. El HLR reduce el MAE frente a SM-2 en datos reales, pero la comparación con AUC está confundida por el sesgo de programación; se requiere un diseño experimental con intervalos aleatorios o características ricas para una conclusión firme.
 - **H2 (retención de producto):** **no concluyente** con la muestra actual; la infraestructura y el motor de repasos están listos para acumular la muestra necesaria.
 
-## 9.7 Interpretación y decisiones derivadas
+## 9.8 Interpretación y decisiones derivadas
 
 Del análisis anterior se derivan tres decisiones de diseño y metodológicas:
 
@@ -635,7 +635,7 @@ Se combinan pruebas **unitarias** (motores SM-2/HLR, servicio de repaso), de ***
 
 ## 10.2 Matriz de trazabilidad
 
-La matriz de §8.4 relaciona objetivos, requisitos y pruebas. Cada requisito funcional tiene al menos una prueba o evidencia asociada.
+La matriz de §8.5 relaciona objetivos, requisitos y pruebas. Cada requisito funcional tiene al menos una prueba o evidencia asociada.
 
 ## 10.3 Cobertura funcional de las pruebas
 
