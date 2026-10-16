@@ -292,6 +292,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get noLivesTitle => '没有生命了！';
 
   @override
+  String get retryLesson => '重试本课';
+
+  @override
   String get noLivesText => '你错了太多次，这节课没有红心了。';
 
   @override

@@ -106,6 +106,7 @@
   "lessonCompletedTitle": "课程完成！",
   "exitLesson": "退出课程",
   "noLivesTitle": "没有生命了！",
+  "retryLesson": "重试本课",
   "noLivesText": "你错了太多次，这节课没有红心了。",
   "noLivesRetry": "别担心！重新开始这节课再试试。",
   "micPermissionDenied": "麦克风权限被拒绝",

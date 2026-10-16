@@ -106,6 +106,7 @@
   "lessonCompletedTitle": "Lecție completă!",
   "exitLesson": "Ieși din lecție",
   "noLivesTitle": "Fără vieți!",
+  "retryLesson": "Reîncearcă lecția",
   "noLivesText": "Ai făcut prea multe greșeli și ai rămas fără vieți pentru această lecție.",
   "noLivesRetry": "Nu-ți face griji! Reia lecția și încearcă din nou.",
   "micPermissionDenied": "Permisiune microfon refuzată",

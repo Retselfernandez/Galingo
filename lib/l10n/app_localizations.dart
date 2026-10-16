@@ -668,6 +668,12 @@ abstract class AppLocalizations {
   /// **'Sen vidas!'**
   String get noLivesTitle;
 
+  /// No description provided for @retryLesson.
+  ///
+  /// In es, this message translates to:
+  /// **'Reintentar lección'**
+  String get retryLesson;
+
   /// No description provided for @noLivesText.
   ///
   /// In es, this message translates to:

@@ -295,6 +295,9 @@ class AppLocalizationsRo extends AppLocalizations {
   String get noLivesTitle => 'Fără vieți!';
 
   @override
+  String get retryLesson => 'Reîncearcă lecția';
+
+  @override
   String get noLivesText =>
       'Ai făcut prea multe greșeli și ai rămas fără vieți pentru această lecție.';
 

@@ -227,12 +227,14 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   }
 
   Future<void> _nextExercise() async {
-    if (_lives <= 0) {
-      _showNoLivesDialog();
-      return;
-    }
+    // Finalizar SIEMPRE tiene prioridad: terminar la lección nunca debe
+    // bloquearse por quedarse sin vidas.
     if (_isLastExercise) {
       await _completeLesson();
+      return;
+    }
+    if (_lives <= 0) {
+      _showNoLivesDialog();
       return;
     }
     _translationController.clear();
@@ -241,6 +243,22 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       _selectedAnswer = null;
       _isAnswered = false;
       _isCorrect = false;
+      _prepareCurrentExerciseOptions();
+    });
+    _maybeAutoPlayAudio();
+  }
+
+  /// Reinicia la lección desde el principio (usado desde el diálogo de vidas).
+  void _retryLesson() {
+    _translationController.clear();
+    setState(() {
+      _lives = 5;
+      _currentExerciseIndex = 0;
+      _selectedAnswer = null;
+      _isAnswered = false;
+      _isCorrect = false;
+      _firstAttemptResults.clear();
+      _xpEarned = 0;
       _prepareCurrentExerciseOptions();
     });
     _maybeAutoPlayAudio();
@@ -376,6 +394,13 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           ],
         ),
         actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+              _retryLesson();
+            },
+            child: Text(AppLocalizations.of(context)!.retryLesson),
+          ),
           FilledButton(
             onPressed: () {
               Navigator.of(context).pop();
