@@ -106,6 +106,7 @@
   "lessonCompletedTitle": "Lezione completata!",
   "exitLesson": "Esci dalla lezione",
   "noLivesTitle": "Niente vite!",
+  "retryLesson": "Riprova la lezione",
   "noLivesText": "Hai fatto troppi errori e sei rimasto senza cuori per questa lezione.",
   "noLivesRetry": "Non preoccuparti! Ricomincia la lezione per riprovare.",
   "micPermissionDenied": "Permesso microfono negato",

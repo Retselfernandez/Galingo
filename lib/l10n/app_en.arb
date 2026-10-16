@@ -106,6 +106,7 @@
   "lessonCompletedTitle": "Lesson complete!",
   "exitLesson": "Exit lesson",
   "noLivesTitle": "No lives left!",
+  "retryLesson": "Retry lesson",
   "noLivesText": "You made too many mistakes and ran out of hearts for this lesson.",
   "noLivesRetry": "Don't worry! Restart the lesson to try again.",
   "micPermissionDenied": "Microphone permission denied",

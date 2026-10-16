@@ -295,6 +295,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get noLivesTitle => 'No lives left!';
 
   @override
+  String get retryLesson => 'Retry lesson';
+
+  @override
   String get noLivesText =>
       'You made too many mistakes and ran out of hearts for this lesson.';
 

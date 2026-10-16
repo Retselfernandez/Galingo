@@ -296,6 +296,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get noLivesTitle => 'Sen vidas!';
 
   @override
+  String get retryLesson => 'Reintentar lección';
+
+  @override
   String get noLivesText =>
       'Cometiste demasiados erros e quedaches sen corazóns para esta lección.';
 
