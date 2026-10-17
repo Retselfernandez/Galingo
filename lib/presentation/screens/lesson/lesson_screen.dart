@@ -264,90 +264,94 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     _maybeAutoPlayAudio();
   }
 
-  Future<void> _completeLesson() async {
-    final lesson = _lesson!;
-    
-    // Obtener el nivel de progreso del usuario de forma dinámica
-    final progress = ref.read(progressNotifierProvider).valueOrNull;
-    final level = progress?.currentLevel ?? 'A1';
-    
-    // Modo repaso: la lección no pertenece a ninguna unidad del curso.
-    final isReview = widget.overrideLesson != null;
-
-    // Obtener todas las lecciones del nivel actual
-    final units = isReview
-        ? <dynamic>[]
-        : await ContentService.instance.loadUnitsForLevel(level);
-    final parentUnit = isReview
-        ? null
-        : units.firstWhere(
-            (u) => u.lessons.any((l) => l.id == lesson.id),
-            orElse: () => units.first,
-          );
-
-    // ─── Generación de Eventos HLR de la Sesión ───
-    final List<HlrEvent> sessionEvents = [];
-    if (progress != null) {
-      for (final exercise in lesson.exercises) {
-        final wasPracticed = _firstAttemptResults.containsKey(exercise.id);
-        if (!wasPracticed) continue;
-
-        // Se usa correctAnswer como ID único de la palabra/concepto léxico
-        final wordId = exercise.correctAnswer;
-        final stats = progress.wordRepetitionHistory[wordId];
-        
-        final s = stats != null ? (stats['s'] as int? ?? 0) : 0;
-        final f = stats != null ? (stats['f'] as int? ?? 0) : 0;
-
-        double t = 1.0; // 1 día por defecto
-        if (stats != null && stats['lastPracticed'] != null) {
-          final lastPracticed = DateTime.parse(stats['lastPracticed'] as String);
-          final diff = DateTime.now().difference(lastPracticed).inMinutes;
-          // Pasar a fracción de días (mínimo 0.001 días)
+  /// Constrúe os eventos HLR da sesión (a proba de erros: nunca debe
+  /// impedir que a lección se marque como completada).
+  List<HlrEvent> _buildSessionEvents(dynamic lesson, dynamic progress) {
+    final events = <HlrEvent>[];
+    if (progress == null) return events;
+    for (final exercise in lesson.exercises) {
+      if (!_firstAttemptResults.containsKey(exercise.id)) continue;
+      final wordId = exercise.correctAnswer as String;
+      final stats = progress.wordRepetitionHistory[wordId];
+      final s = stats != null ? (stats['s'] as int? ?? 0) : 0;
+      final f = stats != null ? (stats['f'] as int? ?? 0) : 0;
+      double t = 1.0;
+      try {
+        final lp = stats?['lastPracticed'];
+        if (lp is String) {
+          final diff = DateTime.now().difference(DateTime.parse(lp)).inMinutes;
           t = (diff / 1440.0).clamp(0.001, 30.0);
         }
+      } catch (_) {}
+      events.add(HlrEvent(
+        wordId: wordId,
+        d: _getExerciseDifficulty(exercise),
+        s: s,
+        f: f,
+        t: t,
+        p: _firstAttemptResults[exercise.id] == true ? 1.0 : 0.0,
+      ));
+    }
+    return events;
+  }
 
-        final event = HlrEvent(
-          wordId: wordId,
-          d: _getExerciseDifficulty(exercise),
-          s: s,
-          f: f,
-          t: t,
-          p: _firstAttemptResults[exercise.id] == true ? 1.0 : 0.0,
-        );
-        sessionEvents.add(event);
-      }
+  Future<void> _completeLesson() async {
+    final lesson = _lesson!;
+    final isReview = widget.overrideLesson != null;
+    final progress = ref.read(progressNotifierProvider).valueOrNull;
+    final level = progress?.currentLevel ?? 'A1';
+
+    // 1) Eventos da sesión (non crítico; a proba de erros).
+    List<HlrEvent> events = const [];
+    try {
+      events = _buildSessionEvents(lesson, progress);
+    } catch (e) {
+      debugPrint('Erro construíndo eventos: $e');
     }
 
-    // Enviar telemetría HLR al backend (cola offline-first con sync)
-    TelemetryService.instance.enqueueEvents(
-      sessionEvents.map((e) => {
-        'event_id': '${e.wordId}_${DateTime.now().millisecondsSinceEpoch}_${sessionEvents.indexOf(e)}',
-        'user_id': TelemetryService.instance.userId,
-        'item_id': e.wordId,
-        'resultado': e.p,
-        'intervalo_dias': e.t,
-        'aciertos': e.s,
-        'fallos': e.f,
-        'dificultad': e.d,
-      }).toList(),
-    );
-    // Intentar subir los eventos encolados (no bloquea: cola offline)
-    unawaited(TelemetryService.instance.sync());
+    // 2) Marcar a lección / rexistrar o repaso (CRÍTICO: ten que executarse
+    //    sempre, para que a lección quede completada e se poida avanzar).
+    try {
+      if (isReview) {
+        await ref
+            .read(progressNotifierProvider.notifier)
+            .recordReviewSession(sessionEvents: events);
+      } else {
+        final units = await ContentService.instance.loadUnitsForLevel(level);
+        final parentUnit = units.firstWhere(
+          (u) => u.lessons.any((l) => l.id == lesson.id),
+          orElse: () => units.first,
+        );
+        await ref.read(progressNotifierProvider.notifier).completeLesson(
+              lessonId: lesson.id,
+              unitId: parentUnit.id,
+              xpEarned: _xpEarned,
+              allLessonIdsInUnit: parentUnit.lessons.map((l) => l.id).toList(),
+              sessionEvents: events,
+            );
+      }
+    } catch (e, st) {
+      debugPrint('Erro completando a lección: $e\n$st');
+    }
 
-    if (isReview) {
-      await ref
-          .read(progressNotifierProvider.notifier)
-          .recordReviewSession(sessionEvents: sessionEvents);
-    } else {
-      await ref.read(progressNotifierProvider.notifier).completeLesson(
-            lessonId: lesson.id,
-            unitId: parentUnit!.id,
-            xpEarned: _xpEarned,
-            allLessonIdsInUnit:
-                parentUnit.lessons.map((l) => l.id).toList(),
-            sessionEvents: sessionEvents,
-          );
+    // 3) Telemetría (non crítico).
+    try {
+      TelemetryService.instance.enqueueEvents(
+        events.map((e) => {
+          'event_id':
+              '${e.wordId}_${DateTime.now().millisecondsSinceEpoch}_${events.indexOf(e)}',
+          'user_id': TelemetryService.instance.userId,
+          'item_id': e.wordId,
+          'resultado': e.p,
+          'intervalo_dias': e.t,
+          'aciertos': e.s,
+          'fallos': e.f,
+          'dificultad': e.d,
+        }).toList(),
+      );
+      unawaited(TelemetryService.instance.sync());
+    } catch (e) {
+      debugPrint('Erro de telemetría: $e');
     }
 
     if (mounted) {
