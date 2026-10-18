@@ -1,7 +1,19 @@
 flutter_launcher_icons:
-  image_path: "assets/images/app_icon.png"
-  android: false
-  ios: false
+  # Icono principal (gaviota) para iOS y Android.
+  image_path: "assets/images/app_icon_full.png"
+  android: true
+  ios: true
+  # iOS non admite transparencia no icono.
+  remove_alpha_ios: true
+  # Icono adaptativo de Android (fondo azul + gaviota).
+  adaptive_icon_background: "#1E88E5"
+  adaptive_icon_foreground: "assets/images/app_icon_full.png"
+  web:
+    generate: true
+    image_path: "assets/images/app_icon_full.png"
+    background_color: "#1E88E5"
+    theme_color: "#1E88E5"
+  # macOS xa tiña a gaviota (mantense).
   macos:
     generate: true
     image_path: "assets/images/app_icon.png"
