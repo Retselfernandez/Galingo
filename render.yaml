@@ -1,0 +1,28 @@
+# Render Blueprint — backend de Galingo (sólo telemetría; el ASR es on-device).
+# Despliega: un Web Service (Docker) + una base de datos PostgreSQL gratuita.
+# Uso: en Render → New + → Blueprint → conecta el repo Retselfernandez/Galingo.
+databases:
+  - name: galingo-db
+    plan: free
+    region: frankfurt
+    databaseName: galingo
+    user: galingo
+
+services:
+  - type: web
+    name: galingo-backend
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    healthCheckPath: /api/v1/metricas
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: galingo-db
+          property: connectionString
+      # Token de administración del endpoint /api/v1/export (se pide al crear).
+      - key: EXPORT_TOKEN
+        sync: false
