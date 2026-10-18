@@ -338,4 +338,28 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get a11yAvailable => '课程可用';
+
+  @override
+  String get reportProblem => '报告问题';
+
+  @override
+  String get reportThanks => '谢谢！';
+
+  @override
+  String get reportSent => '报告已发送。感谢你的反馈！';
+
+  @override
+  String get reportDescribeHint => '描述问题或建议……';
+
+  @override
+  String get reportSend => '发送报告';
+
+  @override
+  String get categoryBug => '🐛 错误 / Bug';
+
+  @override
+  String get categorySuggestion => '💡 建议';
+
+  @override
+  String get categoryContent => '📚 内容';
 }

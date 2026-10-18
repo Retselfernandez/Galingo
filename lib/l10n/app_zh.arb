@@ -121,5 +121,13 @@
   "blockedLabel": "已锁定",
   "a11yCompleted": "课程已完成",
   "a11yLocked": "课程已锁定",
-  "a11yAvailable": "课程可用"
+  "a11yAvailable": "课程可用",
+  "reportProblem": "报告问题",
+  "reportThanks": "谢谢！",
+  "reportSent": "报告已发送。感谢你的反馈！",
+  "reportDescribeHint": "描述问题或建议……",
+  "reportSend": "发送报告",
+  "categoryBug": "🐛 错误 / Bug",
+  "categorySuggestion": "💡 建议",
+  "categoryContent": "📚 内容"
 }

@@ -121,5 +121,13 @@
   "blockedLabel": "Blocată",
   "a11yCompleted": "Lecție completă",
   "a11yLocked": "Lecție blocată",
-  "a11yAvailable": "Lecție disponibilă"
+  "a11yAvailable": "Lecție disponibilă",
+  "reportProblem": "Raportează o problemă",
+  "reportThanks": "Mulțumesc!",
+  "reportSent": "Raport trimis. Mulțumesc pentru feedback!",
+  "reportDescribeHint": "Descrie problema sau sugestia...",
+  "reportSend": "Trimite raportul",
+  "categoryBug": "🐛 Eroare / Bug",
+  "categorySuggestion": "💡 Sugestie",
+  "categoryContent": "📚 Conținut"
 }

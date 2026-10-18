@@ -121,5 +121,13 @@
   "blockedLabel": "Bloccata",
   "a11yCompleted": "Lezione completata",
   "a11yLocked": "Lezione bloccata",
-  "a11yAvailable": "Lezione disponibile"
+  "a11yAvailable": "Lezione disponibile",
+  "reportProblem": "Segnala un problema",
+  "reportThanks": "Grazie!",
+  "reportSent": "Segnalazione inviata. Grazie per il tuo feedback!",
+  "reportDescribeHint": "Descrivi il problema o il suggerimento...",
+  "reportSend": "Invia segnalazione",
+  "categoryBug": "🐛 Bug / Errore",
+  "categorySuggestion": "💡 Suggerimento",
+  "categoryContent": "📚 Contenuto"
 }

@@ -345,4 +345,28 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get a11yAvailable => 'Lecție disponibilă';
+
+  @override
+  String get reportProblem => 'Raportează o problemă';
+
+  @override
+  String get reportThanks => 'Mulțumesc!';
+
+  @override
+  String get reportSent => 'Raport trimis. Mulțumesc pentru feedback!';
+
+  @override
+  String get reportDescribeHint => 'Descrie problema sau sugestia...';
+
+  @override
+  String get reportSend => 'Trimite raportul';
+
+  @override
+  String get categoryBug => '🐛 Eroare / Bug';
+
+  @override
+  String get categorySuggestion => '💡 Sugestie';
+
+  @override
+  String get categoryContent => '📚 Conținut';
 }

@@ -1,8 +1,11 @@
 import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:uuid/uuid.dart';
+import 'package:galingo/core/router/app_router.dart';
 import 'package:galingo/core/services/telemetry_service.dart';
+import 'package:galingo/l10n/app_localizations.dart';
 import 'package:galingo/presentation/providers/progress_provider.dart';
 
 class FeedbackScreen extends ConsumerStatefulWidget {
@@ -17,7 +20,19 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen> {
   bool _enviado = false;
 
   @override
+  void initState() {
+    super.initState();
+    // FIX: reconstruír ao escribir para que "Enviar reporte" se active só.
+    // Antes só se activaba ao tocar noutro control (p. ex. o desplegable),
+    // que era o que reportou o tester.
+    _controller.addListener(_onTextChanged);
+  }
+
+  void _onTextChanged() => setState(() {});
+
+  @override
   void dispose() {
+    _controller.removeListener(_onTextChanged);
     _controller.dispose();
     super.dispose();
   }
@@ -46,14 +61,49 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context)!;
+
     if (_enviado) {
       return Scaffold(
-        appBar: AppBar(title: const Text('Grazas!')),
-        body: const Center(child: Text('Reporte enviado. ¡Grazas polo teu feedback!')),
+        appBar: AppBar(
+          title: Text(l.reportThanks),
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back),
+            tooltip: l.backToHome,
+            onPressed: () => context.go(AppRoutes.home),
+          ),
+        ),
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(24),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(l.reportSent, textAlign: TextAlign.center),
+                const SizedBox(height: 24),
+                FilledButton.icon(
+                  onPressed: () => context.go(AppRoutes.home),
+                  icon: const Icon(Icons.home_outlined),
+                  label: Text(l.backToHome),
+                ),
+              ],
+            ),
+          ),
+        ),
       );
     }
+
     return Scaffold(
-      appBar: AppBar(title: const Text('Reportar un problema')),
+      appBar: AppBar(
+        title: Text(l.reportProblem),
+        // FIX: a pantalla ábrese con `context.go` (substitúe a pila), polo que
+        // o AppBar non amosaba frecha de volta. Engadímola explicitamente.
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          tooltip: l.backToHome,
+          onPressed: () => context.go(AppRoutes.home),
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(24),
         child: Column(
@@ -61,10 +111,12 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen> {
             DropdownButton<String>(
               value: _categoria,
               isExpanded: true,
-              items: const [
-                DropdownMenuItem(value: 'bug', child: Text('🐛 Erro / Bug')),
-                DropdownMenuItem(value: 'sugerencia', child: Text('💡 Suxerencia')),
-                DropdownMenuItem(value: 'contenido', child: Text('📚 Contido')),
+              items: [
+                DropdownMenuItem(value: 'bug', child: Text(l.categoryBug)),
+                DropdownMenuItem(
+                    value: 'sugerencia', child: Text(l.categorySuggestion)),
+                DropdownMenuItem(
+                    value: 'contenido', child: Text(l.categoryContent)),
               ],
               onChanged: (v) => setState(() => _categoria = v!),
             ),
@@ -75,9 +127,9 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen> {
                 maxLines: null,
                 expands: true,
                 textAlignVertical: TextAlignVertical.top,
-                decoration: const InputDecoration(
-                  hintText: 'Describe o problema ou suxerencia...',
-                  border: OutlineInputBorder(),
+                decoration: InputDecoration(
+                  hintText: l.reportDescribeHint,
+                  border: const OutlineInputBorder(),
                 ),
               ),
             ),
@@ -86,7 +138,7 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen> {
               width: double.infinity,
               child: FilledButton(
                 onPressed: _controller.text.trim().isEmpty ? null : _enviar,
-                child: const Text('Enviar reporte'),
+                child: Text(l.reportSend),
               ),
             ),
           ],

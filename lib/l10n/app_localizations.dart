@@ -763,6 +763,54 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Lección dispoñible'**
   String get a11yAvailable;
+
+  /// No description provided for @reportProblem.
+  ///
+  /// In es, this message translates to:
+  /// **'Reportar un problema'**
+  String get reportProblem;
+
+  /// No description provided for @reportThanks.
+  ///
+  /// In es, this message translates to:
+  /// **'¡Gracias!'**
+  String get reportThanks;
+
+  /// No description provided for @reportSent.
+  ///
+  /// In es, this message translates to:
+  /// **'Reporte enviado. ¡Gracias por tu feedback!'**
+  String get reportSent;
+
+  /// No description provided for @reportDescribeHint.
+  ///
+  /// In es, this message translates to:
+  /// **'Describe el problema o sugerencia...'**
+  String get reportDescribeHint;
+
+  /// No description provided for @reportSend.
+  ///
+  /// In es, this message translates to:
+  /// **'Enviar reporte'**
+  String get reportSend;
+
+  /// No description provided for @categoryBug.
+  ///
+  /// In es, this message translates to:
+  /// **'🐛 Error / Bug'**
+  String get categoryBug;
+
+  /// No description provided for @categorySuggestion.
+  ///
+  /// In es, this message translates to:
+  /// **'💡 Sugerencia'**
+  String get categorySuggestion;
+
+  /// No description provided for @categoryContent.
+  ///
+  /// In es, this message translates to:
+  /// **'📚 Contenido'**
+  String get categoryContent;
 }
 
 class _AppLocalizationsDelegate

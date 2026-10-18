@@ -346,4 +346,29 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get a11yAvailable => 'Lektion verfügbar';
+
+  @override
+  String get reportProblem => 'Ein Problem melden';
+
+  @override
+  String get reportThanks => 'Danke!';
+
+  @override
+  String get reportSent => 'Bericht gesendet. Danke für dein Feedback!';
+
+  @override
+  String get reportDescribeHint =>
+      'Beschreibe das Problem oder den Vorschlag...';
+
+  @override
+  String get reportSend => 'Bericht senden';
+
+  @override
+  String get categoryBug => '🐛 Fehler / Bug';
+
+  @override
+  String get categorySuggestion => '💡 Vorschlag';
+
+  @override
+  String get categoryContent => '📚 Inhalt';
 }
