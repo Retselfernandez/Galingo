@@ -63,7 +63,18 @@ desde cero. Combina tres ideas:
 | 📝 | **Reporte de incidencias** | agitando el móvil o desde Ajustes |
 | 🌗 | **Tema claro/oscuro** | y tamaño de texto ajustable |
 
-<!-- 📸 CAPTURAS: engádense aquí cando estean en .github/assets/ -->
+## 📸 Capturas
+
+<div align="center">
+
+<img src=".github/assets/screenshot-splash.jpg" alt="Portada" width="30%" />
+<img src=".github/assets/screenshot-home.jpg" alt="O Camiño do Galego (HOME)" width="30%" />
+<img src=".github/assets/screenshot-settings.jpg" alt="Ajustes" width="30%" />
+
+<br/>
+<sub><b>Portada</b> &nbsp;·&nbsp; <b>O Camiño do Galego</b> (HOME: unidades, progreso y <b>Repaso</b>) &nbsp;·&nbsp; <b>Ajustes</b> (perfil, XP, racha, 8 idiomas y tema)</sub>
+
+</div>
 
 ---
 

@@ -1,9 +1,12 @@
-Imaxes do README (capturas da app, arte, etc.).
+Imaxes do README (capturas da app).
 
-Coloca aquí as capturas co nome:
-  screenshot-home.png        (HOME / O Camiño)
-  screenshot-lesson.png      (exercicio de lección)
-  screenshot-review.png      (Repaso)
-  screenshot-voice.png       (exercicio de voz / pronunciación)
+Actuais (xeradas a partir de capturas reais, 640 px de ancho, JPEG q85):
+
+  screenshot-splash.jpg     Portada (splash)
+  screenshot-home.jpg       O Camiño do Galego (HOME)
+  screenshot-settings.jpg   Ajustes (perfil, idiomas, tema)
+
+Referéncianse desde o `README.md` principal.
 
 Este directorio NON se empaqueta na app (non está declarado en pubspec.yaml).
+Para engadir máis: copia a captura aquí, optimízaa e engádea ao README.
