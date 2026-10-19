@@ -158,11 +158,11 @@ jobs:
         run: |
           if [ -d "Galingo/build/macos/Build/Products/Release" ]; then
             cd Galingo/build/macos/Build/Products/Release
-            zip -r ../../../../../Galingo-macOS-Beta.zip Galingo.app
           else
             cd build/macos/Build/Products/Release
-            zip -r ../../../../Galingo-macOS-Beta.zip Galingo.app
           fi
+          zip -r "$GITHUB_WORKSPACE/Galingo-macOS-Beta.zip" Galingo.app
+          ls -lh "$GITHUB_WORKSPACE/Galingo-macOS-Beta.zip"
 
       - name: Upload macOS App Artifact
         uses: actions/upload-artifact@v4
