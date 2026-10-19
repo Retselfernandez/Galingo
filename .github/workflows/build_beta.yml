@@ -186,7 +186,7 @@ jobs:
       - name: List files to publish
         run: ls -lh
 
-      - name: Publish GitHub Release (tag: beta)
+      - name: "Publish GitHub Release (tag: beta)"
         uses: softprops/action-gh-release@v2
         with:
           tag_name: beta
