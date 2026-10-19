@@ -1,0 +1,36 @@
+Galingo — Aplicación para el aprendizaje del gallego (A1)
+Copyright (c) 2026 Lester Fernández
+
+Este trabajo se distribuye bajo la licencia
+Creative Commons Atribución-NoComercial 4.0 Internacional (CC BY-NC 4.0).
+
+Eres libre de:
+  - Compartir — copiar y redistribuir el material en cualquier medio o formato.
+  - Adaptar — remezclar, transformar y construir a partir del material.
+
+Bajo las siguientes condiciones:
+  - Atribución — Debes dar crédito de manera adecuada, brindar un enlace a la
+    licencia e indicar si se han realizado cambios.
+  - NoComercial — No puedes utilizar el material para una finalidad comercial.
+
+Sin restricciones adicionales: no puedes aplicar términos legales ni medidas
+tecnológicas que restrinjan legalmente a otras personas a hacer lo que la
+licencia permite.
+
+Texto completo de la licencia:
+  https://creativecommons.org/licenses/by-nc/4.0/legalcode.es
+
+Aviso sobre componentes de terceros
+-----------------------------------
+Este repositorio incluye o hace uso de recursos de terceros con sus propias
+licencias, que se aplican de forma independiente:
+
+  - Modelos y voz del Proxecto Nós (Universidade de Santiago de Compostela),
+    usados para la síntesis de voz gallega (voz "Celtia") y el reconocimiento
+    del habla. Ver sus términos en el Proxecto Nós.
+  - Whisper (OpenAI) — licencia MIT.
+  - sherpa-onnx — licencia Apache 2.0.
+  - Flutter y paquetes de pub.dev — cada uno con su licencia (ver `pubspec.yaml`).
+
+El contenido del curso (textos, audios generados) se distribuye bajo la misma
+licencia CC BY-NC 4.0, salvo los recursos de terceros indicados arriba.
