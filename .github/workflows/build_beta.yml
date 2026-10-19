@@ -5,6 +5,14 @@ on:
     branches: [ main, master, release/* ]
   workflow_dispatch:
 
+# Necesario para publicar a Release de GitHub.
+permissions:
+  contents: write
+
+# URL do backend (Render). Inxéctase na app en tempo de compilación.
+env:
+  API_BASE_URL: https://galingo-backend.onrender.com
+
 jobs:
   test:
     name: Widget & Unit Tests
@@ -34,35 +42,44 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Set up Java JDK
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
-          
+
       - name: Set up Flutter SDK
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-          
+
       - name: Get Dependencies
         run: |
           if [ -d "Galingo" ]; then cd Galingo; fi
           flutter pub get
-          
+
+      - name: Fetch on-device ASR model
+        run: |
+          if [ -d "Galingo" ]; then cd Galingo; fi
+          bash tool/fetch_asr_model.sh small
+
       - name: Build Android APK Release
         run: |
           if [ -d "Galingo" ]; then cd Galingo; fi
-          flutter build apk --release
-          
+          flutter build apk --release --dart-define=API_BASE_URL=${{ env.API_BASE_URL }}
+
+      - name: Prepare APK for release
+        run: |
+          if [ -d "Galingo" ]; then APK="Galingo/build/app/outputs/flutter-apk/app-release.apk"; else APK="build/app/outputs/flutter-apk/app-release.apk"; fi
+          cp "$APK" Galingo-Beta-Android.apk
+          ls -lh Galingo-Beta-Android.apk
+
       - name: Upload Android APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: Galingo-Android-Beta-APK
-          path: |
-            build/app/outputs/flutter-apk/app-release.apk
-            Galingo/build/app/outputs/flutter-apk/app-release.apk
+          path: Galingo-Beta-Android.apk
 
   build-windows:
     needs: test
@@ -70,31 +87,37 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Set up Flutter SDK
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-          
+
       - name: Enable Windows Desktop
         run: flutter config --enable-windows-desktop
-        
+
       - name: Get Dependencies
         run: |
           if (Test-Path -Path "Galingo") { Set-Location Galingo }
           flutter pub get
-          
+
+      - name: Fetch on-device ASR model
+        shell: bash
+        run: |
+          if [ -d "Galingo" ]; then cd Galingo; fi
+          bash tool/fetch_asr_model.sh small
+
       - name: Build Windows Release
         run: |
           if (Test-Path -Path "Galingo") { Set-Location Galingo }
-          flutter build windows --release
-          
+          flutter build windows --release --dart-define=API_BASE_URL=${{ env.API_BASE_URL }}
+
       - name: Zip Windows Portable Package
         shell: powershell
         run: |
           $relPath = if (Test-Path -Path "Galingo") { "Galingo\build\windows\x64\runner\Release\*" } else { "build\windows\x64\runner\Release\*" }
           Compress-Archive -Path $relPath -DestinationPath Galingo-Windows-Beta.zip
-          
+
       - name: Upload Windows Executable Artifact
         uses: actions/upload-artifact@v4
         with:
@@ -107,25 +130,30 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Set up Flutter SDK
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-          
+
       - name: Enable macOS Desktop
         run: flutter config --enable-macos-desktop
-        
+
       - name: Get Dependencies
         run: |
           if [ -d "Galingo" ]; then cd Galingo; fi
           flutter pub get
-          
+
+      - name: Fetch on-device ASR model
+        run: |
+          if [ -d "Galingo" ]; then cd Galingo; fi
+          bash tool/fetch_asr_model.sh small
+
       - name: Build macOS Release
         run: |
           if [ -d "Galingo" ]; then cd Galingo; fi
-          flutter build macos --release
-          
+          flutter build macos --release --dart-define=API_BASE_URL=${{ env.API_BASE_URL }}
+
       - name: Zip macOS App Bundle
         run: |
           if [ -d "Galingo/build/macos/Build/Products/Release" ]; then
@@ -135,10 +163,55 @@ jobs:
             cd build/macos/Build/Products/Release
             zip -r ../../../../Galingo-macOS-Beta.zip Galingo.app
           fi
-          
+
       - name: Upload macOS App Artifact
         uses: actions/upload-artifact@v4
         with:
           name: Galingo-macOS-Beta-Zip
           path: Galingo-macOS-Beta.zip
 
+  # Publica (ou actualiza) unha Release fixa co tag `beta`, co enlace de
+  # descarga estable para os testers.
+  release:
+    name: Publish Beta Release
+    needs: [ build-android, build-windows, build-macos ]
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          merge-multiple: true
+
+      - name: List files to publish
+        run: ls -lh
+
+      - name: Publish GitHub Release (tag: beta)
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: beta
+          name: "Galingo Beta (build #${{ github.run_number }})"
+          body: |
+            ## Galingo — Beta automática (A1)
+
+            Compilada automaticamente desde `main` en cada *push*.
+
+            - **Commit:** ${{ github.sha }}
+            - **Backend:** ${{ env.API_BASE_URL }}
+            - **Build:** #${{ github.run_number }}
+
+            ### 📱 Android (recomendado)
+            Descarga **`Galingo-Beta-Android.apk`** e instálala no móbil
+            (activa "Instalar desde orígenes descoñecidos"). Inclúe o
+            recoñecemento de voz *on-device* (sen conexión).
+
+            > ℹ️ Se xa tes unha versión anterior instalada, podes
+            > actualizar enriba (mesma firma).
+          files: |
+            Galingo-Beta-Android.apk
+            Galingo-Windows-Beta.zip
+            Galingo-macOS-Beta.zip
+          prerelease: true
+          overwrite_files: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
