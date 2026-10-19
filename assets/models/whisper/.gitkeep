@@ -1,0 +1,3 @@
+# Mantén este directorio no repositorio (baleiro) para que `flutter analyze`
+# non avise de que o asset declarado en pubspec.yaml non existe.
+# O modelo real (~370 MB) descárgase con:  bash tool/fetch_asr_model.sh small

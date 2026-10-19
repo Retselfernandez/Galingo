@@ -56,7 +56,10 @@ android/key.properties
 
 # Modelos ASR/TTS (grandes, descargables; no versionar)
 backend/models/
-assets/models/
+assets/models/*
+!assets/models/whisper/
+assets/models/whisper/*
+!assets/models/whisper/.gitkeep
 
 # Base de datos local del backend (pruebas)
 backend/*.db
