@@ -92,3 +92,15 @@ tool/.i18n_cache.json
 
 # Datos de experimentos (grandes; descargables)
 backend/experimentos/fsrs/
+
+# ─── Material documental / do TFM (NON debe publicarse no repo) ───────────
+# A memoria, a rúbrica, anexos, pantallazos e notas internas quedan só en local.
+TFM/
+Errores/
+docs/
+AS_BUILT_*.md
+docs_*.md
+galingo_banco_a1_540_preguntas.md
+# Ficheiros temporais de Word/LibreOffice
+~$*.docx
+~$*.xlsx
