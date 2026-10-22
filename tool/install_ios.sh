@@ -21,7 +21,7 @@ if [ -z "$UDID" ]; then
 import json, sys
 try:
     for d in json.load(sys.stdin):
-        if d.get("targetPlatform") == "ios":
+        if d.get("targetPlatform") == "ios" and not d.get("emulator"):
             print(d["id"])
             break
 except Exception:

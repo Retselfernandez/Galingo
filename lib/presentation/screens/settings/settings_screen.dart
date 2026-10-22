@@ -65,17 +65,6 @@ class SettingsScreen extends ConsumerWidget {
                           ),
                         ),
                       ),
-                      TextButton.icon(
-                        onPressed: () =>
-                            _showResetDialog(context, ref, strings),
-                        icon: const Icon(Icons.refresh_rounded,
-                            color: Colors.white70, size: 18),
-                        label: Text(
-                          strings.reset,
-                          style: const TextStyle(
-                              color: Colors.white70, fontSize: 13),
-                        ),
-                      ),
                     ],
                   ),
                   const SizedBox(height: 6),
@@ -142,6 +131,23 @@ class SettingsScreen extends ConsumerWidget {
                     ),
                     const SizedBox(height: 16),
                     _buildTelemetryCard(context, ref, strings),
+                    const SizedBox(height: 16),
+                    _SettingsCard(
+                      child: ListTile(
+                        leading: const Icon(Icons.refresh_rounded,
+                            color: AppTheme.errorRed),
+                        title: Text(
+                          strings.reset,
+                          style: const TextStyle(
+                            color: AppTheme.errorRed,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        subtitle: const Text(
+                            'Borra o progreso local e comeza de cero.'),
+                        onTap: () => _showResetDialog(context, ref, strings),
+                      ),
+                    ),
                     const SizedBox(height: 32),
                   ],
                 ),
@@ -230,166 +236,7 @@ class SettingsScreen extends ConsumerWidget {
               ),
             ],
           ),
-          const SizedBox(height: 16),
-          const Divider(height: 1, color: Colors.black12),
-          const SizedBox(height: 16),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Expanded(
-                  child: _buildStatBox(
-                      '⭐', '${progress.totalXp} XP', 'Experiencia total')),
-              Expanded(
-                  child: _buildStatBox(
-                      '🔥', '${progress.streakDays} días', 'Racha de estudio')),
-            ],
-          ),
-          const SizedBox(height: 16),
-          const Divider(height: 1, color: Colors.black12),
-          const SizedBox(height: 16),
-          Text(
-            'Insignias académicas:',
-            style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                  color: context.textSecondary,
-                  fontWeight: FontWeight.bold,
-                ),
-          ),
-          const SizedBox(height: 12),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: appAchievements.map((achievement) {
-              final isUnlocked = achievement.isUnlocked(progress);
-              return _buildAchievementBadge(context, achievement, isUnlocked);
-            }).toList(),
-          ),
         ],
-      ),
-    );
-  }
-
-  Widget _buildStatBox(String icon, String value, String label) {
-    return Column(
-      children: [
-        Text(icon, style: const TextStyle(fontSize: 22)),
-        const SizedBox(height: 4),
-        Text(
-          value,
-          style: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w800,
-          ),
-        ),
-        Text(
-          label,
-          style: const TextStyle(
-            fontSize: 11,
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget _buildAchievementBadge(
-    BuildContext context,
-    Achievement achievement,
-    bool isUnlocked,
-  ) {
-    return Tooltip(
-      message: '${achievement.title}: ${achievement.description}',
-      child: GestureDetector(
-        onTap: () {
-          showDialog(
-            context: context,
-            builder: (context) => AlertDialog(
-              backgroundColor: context.cardBg,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)),
-              title: Row(
-                children: [
-                  Text(achievement.icon, style: const TextStyle(fontSize: 28)),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: Text(
-                      achievement.title,
-                      style: const TextStyle(fontWeight: FontWeight.w800),
-                    ),
-                  ),
-                ],
-              ),
-              content: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    achievement.description,
-                    style: TextStyle(color: context.textSecondary, height: 1.4),
-                  ),
-                  const SizedBox(height: 16),
-                  Container(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                    decoration: BoxDecoration(
-                      color: isUnlocked
-                          ? AppTheme.successGreenLight
-                          : AppTheme.errorRedLight.withValues(alpha: 0.4),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Text(
-                      isUnlocked ? '🔓 Desbloqueada' : '🔒 Bloqueada',
-                      style: TextStyle(
-                        color: isUnlocked
-                            ? AppTheme.successGreen
-                            : AppTheme.errorRed,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 12,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              actions: [
-                TextButton(
-                  onPressed: () => Navigator.pop(context),
-                  child: const Text('Aceptar'),
-                ),
-              ],
-            ),
-          );
-        },
-        child: MouseRegion(
-          cursor: SystemMouseCursors.click,
-          child: AnimatedOpacity(
-            duration: const Duration(milliseconds: 300),
-            opacity: isUnlocked ? 1.0 : 0.4,
-            child: Container(
-              width: 48,
-              height: 48,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: isUnlocked ? context.cardBg : context.softBg,
-                border: Border.all(
-                  color:
-                      isUnlocked ? Colors.amber.shade600 : Colors.grey.shade400,
-                  width: isUnlocked ? 2.5 : 1.5,
-                ),
-                boxShadow: [
-                  if (isUnlocked)
-                    BoxShadow(
-                      color: Colors.amber.withValues(alpha: 0.2),
-                      blurRadius: 8,
-                      spreadRadius: 1,
-                    ),
-                ],
-              ),
-              child: Center(
-                child: Text(
-                  achievement.icon,
-                  style: const TextStyle(fontSize: 22),
-                ),
-              ),
-            ),
-          ),
-        ),
       ),
     );
   }
@@ -1264,63 +1111,3 @@ class _InfoRow extends StatelessWidget {
     );
   }
 }
-
-// ─── Clase Logro e Insignias ────────────────────────────────────────────────
-
-class Achievement {
-  final String id;
-  final String title;
-  final String description;
-  final String icon;
-  final bool Function(UserProgressModel) isUnlocked;
-
-  const Achievement({
-    required this.id,
-    required this.title,
-    required this.description,
-    required this.icon,
-    required this.isUnlocked,
-  });
-}
-
-final List<Achievement> appAchievements = [
-  Achievement(
-    id: 'first_step',
-    title: 'Primeiro Paso',
-    description: 'Completa a túa primeira lección en Galingo.',
-    icon: '👋',
-    isUnlocked: (p) => p.completedLessonIds.isNotEmpty,
-  ),
-  Achievement(
-    id: 'streak_3',
-    title: 'Racha Inicial',
-    description: 'Mantén unha racha de estudo de polo menos 3 días.',
-    icon: '🔥',
-    isUnlocked: (p) => p.streakDays >= 3,
-  ),
-  Achievement(
-    id: 'xp_100',
-    title: 'Superestrela',
-    description: 'Consigue un total de 100 puntos de experiencia (XP).',
-    icon: '⭐',
-    isUnlocked: (p) => p.totalXp >= 100,
-  ),
-  Achievement(
-    id: 'xp_500',
-    title: 'Sabio do Galego',
-    description: 'Consigue un total de 500 puntos de experiencia (XP).',
-    icon: '🧠',
-    isUnlocked: (p) => p.totalXp >= 500,
-  ),
-  // Desactivado temporalmente: A2/B1/B2 no están disponibles en la UI.
-  // Achievement(
-  //   id: 'polyglot',
-  //   title: 'Políglota A2',
-  //   description: 'Comeza o camiño de nivel intermedio A2.',
-  //   icon: '🎓',
-  //   // L4: comparación robusta con el nivel del usuario, no con el ID de lección
-  //   isUnlocked: (p) => p.currentLevel == 'A2' ||
-  //       p.currentLevel == 'B1' ||
-  //       p.currentLevel == 'B2',
-  // ),
-];

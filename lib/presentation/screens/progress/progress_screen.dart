@@ -9,6 +9,8 @@ import '../../../core/theme/galingo_colors.dart';
 import '../../../data/models/unit_model.dart';
 import '../../providers/progress_provider.dart';
 import '../../widgets/home/home_models.dart';
+import '../../widgets/progress/achievement_badge.dart';
+import '../../../data/models/achievement.dart';
 
 /// Pestana "Progreso": XP, racha, paradas, leccións e avance por parada.
 class ProgressScreen extends ConsumerWidget {
@@ -96,6 +98,50 @@ class ProgressScreen extends ConsumerWidget {
                         const SizedBox(height: 16),
                         _ReviewCard(due: due),
                       ],
+                      const SizedBox(height: 24),
+                      Text(
+                        'Insignias académicas',
+                        style: GoogleFonts.nunito(
+                          fontSize: 19,
+                          fontWeight: FontWeight.w900,
+                          color: context.textPrimary,
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        'Desbloquea logros avanzando no Camiño.',
+                        style: GoogleFonts.nunito(
+                          fontSize: 13.5,
+                          fontWeight: FontWeight.w600,
+                          color: context.textSecondary,
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 12, vertical: 16),
+                        decoration: BoxDecoration(
+                          color: context.cardBg,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: context.shadow,
+                              blurRadius: 14,
+                              offset: const Offset(0, 6),
+                            ),
+                          ],
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            for (final achievement in appAchievements)
+                              AchievementBadge(
+                                achievement: achievement,
+                                unlocked: achievement.isUnlocked(progress),
+                              ),
+                          ],
+                        ),
+                      ),
                       const SizedBox(height: 24),
                       Text(
                         'Por parada',
