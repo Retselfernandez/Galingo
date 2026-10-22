@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -148,6 +149,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     }
 
     // Layout estreito: barra superior + mapa + panel debajo.
+    // En móbil nativo (iOS/Android) o header amosa o wordmark centrado.
+    final isMobileNative = !kIsWeb &&
+        (defaultTargetPlatform == TargetPlatform.iOS ||
+            defaultTargetPlatform == TargetPlatform.android);
+
     return Column(
       children: [
         Container(
@@ -155,22 +161,46 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
           child: SafeArea(
             bottom: false,
-            child: Row(
-              children: [
-                const Text('🦅', style: TextStyle(fontSize: 26)),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: Text(
-                    'Galingo',
-                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w900,
+            child: isMobileNative
+                ? SizedBox(
+                    height: 42,
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/images/logo_wordmark_white.png',
+                          height: 32,
+                          filterQuality: FilterQuality.medium,
+                          semanticLabel: 'Galingo',
                         ),
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: SettingsButton(
+                            onTap: () => context.push(AppRoutes.settings),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                : Row(
+                    children: [
+                      const Text('🦅', style: TextStyle(fontSize: 26)),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Text(
+                          'Galingo',
+                          style:
+                              Theme.of(context).textTheme.titleLarge?.copyWith(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w900,
+                                  ),
+                        ),
+                      ),
+                      SettingsButton(
+                        onTap: () => context.push(AppRoutes.settings),
+                      ),
+                    ],
                   ),
-                ),
-                SettingsButton(onTap: () => context.push(AppRoutes.settings)),
-              ],
-            ),
           ),
         ),
         Expanded(child: buildMap(pillOnly)),
