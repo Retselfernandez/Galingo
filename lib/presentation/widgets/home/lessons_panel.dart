@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../core/theme/app_theme.dart';
+import '../../../core/theme/galingo_colors.dart';
 import 'home_models.dart';
 import 'lesson_card.dart';
 
@@ -23,9 +24,9 @@ class LessonsPanel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-        color: Color(0xFFF7FAFF),
-        borderRadius: BorderRadius.only(
+      decoration: BoxDecoration(
+        color: context.cardBg,
+        borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(28),
           topRight: Radius.circular(28),
         ),
@@ -37,23 +38,23 @@ class LessonsPanel extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(20, 20, 20, 4),
             child: Row(
               children: [
-                const Icon(Icons.menu_book_rounded,
-                    color: AppTheme.mediumBlue, size: 26),
+                Icon(Icons.menu_book_rounded,
+                    color: context.accent, size: 26),
                 const SizedBox(width: 10),
                 Text(
                   'Leccións',
                   style: GoogleFonts.nunito(
                     fontSize: 22,
                     fontWeight: FontWeight.w900,
-                    color: AppTheme.textPrimary,
+                    color: context.textPrimary,
                   ),
                 ),
                 const Spacer(),
                 OutlinedButton(
                   onPressed: () {},
                   style: OutlinedButton.styleFrom(
-                    foregroundColor: AppTheme.mediumBlue,
-                    side: const BorderSide(color: AppTheme.mediumBlue),
+                    foregroundColor: context.accent,
+                    side: BorderSide(color: context.accent),
                     padding:
                         const EdgeInsets.symmetric(horizontal: 12, vertical: 0),
                     minimumSize: const Size(0, 32),
@@ -80,7 +81,7 @@ class LessonsPanel extends StatelessWidget {
                     style: GoogleFonts.caveat(
                       fontSize: 26,
                       height: 0.95,
-                      color: AppTheme.mediumBlue,
+                      color: context.accent,
                       fontWeight: FontWeight.w700,
                     ),
                   ),

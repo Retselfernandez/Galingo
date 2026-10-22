@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'galingo_colors.dart';
+
 /// Tema principal de Galingo
 /// Paleta inspirada en el océano gallego: azules, blancos y toques dorados
 class AppTheme {
@@ -80,6 +82,7 @@ class AppTheme {
     );
 
     return base.copyWith(
+      extensions: const [GalingoColors.light],
       scaffoldBackgroundColor: backgroundLight,
       textTheme: _buildTextTheme(base.textTheme, textPrimary),
       appBarTheme: AppBarTheme(
@@ -197,6 +200,7 @@ class AppTheme {
     );
 
     return base.copyWith(
+      extensions: const [GalingoColors.dark],
       scaffoldBackgroundColor: backgroundDark,
       textTheme: _buildTextTheme(base.textTheme, Colors.white),
       appBarTheme: AppBarTheme(

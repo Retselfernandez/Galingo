@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:galingo/l10n/app_localizations.dart';
 import '../../../core/theme/app_theme.dart';
+import '../../../core/theme/galingo_colors.dart';
 import 'home_models.dart';
 
 /// Zona central: cabecera del mapa + ilustración + sendero punteado con paradas.
@@ -35,7 +36,7 @@ class _CaminoMapState extends State<CaminoMap> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppTheme.skyBlue,
+      color: context.pageBg,
       child: LayoutBuilder(
         builder: (context, outer) {
           final narrow = outer.maxWidth < 700;
@@ -118,7 +119,7 @@ class _CaminoMapState extends State<CaminoMap> {
                       overflow: TextOverflow.ellipsis,
                       style: GoogleFonts.pacifico(
                         fontSize: narrow ? 22 : 30,
-                        color: AppTheme.deepBlue,
+                        color: context.accent,
                         height: 1.05,
                       ),
                     ),
@@ -127,7 +128,7 @@ class _CaminoMapState extends State<CaminoMap> {
                       style: GoogleFonts.nunito(
                         fontSize: narrow ? 13 : 15,
                         fontWeight: FontWeight.w800,
-                        color: AppTheme.mediumBlue,
+                        color: context.accent,
                       ),
                     ),
                   ],
@@ -156,7 +157,7 @@ class _CaminoMapState extends State<CaminoMap> {
             style: GoogleFonts.nunito(
               fontSize: narrow ? 13 : 15,
               fontWeight: FontWeight.w800,
-              color: AppTheme.textPrimary,
+              color: context.textPrimary,
             ),
           ),
           Text(
@@ -164,7 +165,7 @@ class _CaminoMapState extends State<CaminoMap> {
             style: GoogleFonts.nunito(
               fontSize: narrow ? 12 : 13.5,
               fontWeight: FontWeight.w500,
-              color: AppTheme.textSecondary,
+              color: context.textSecondary,
             ),
           ),
         ],
@@ -191,6 +192,13 @@ class _CaminoMapState extends State<CaminoMap> {
           fit: BoxFit.cover,
           errorBuilder: (_, __, ___) => const SizedBox.shrink(),
         ),
+        // No tema escuro atenuamos a foto para non deslumbrar.
+        if (Theme.of(context).brightness == Brightness.dark)
+          Positioned.fill(
+            child: IgnorePointer(
+              child: ColoredBox(color: Colors.black.withValues(alpha: 0.45)),
+            ),
+          ),
       ],
     );
   }
@@ -400,12 +408,12 @@ class _MapCard extends StatelessWidget {
         padding: EdgeInsets.symmetric(
             horizontal: compact ? 10 : 14, vertical: compact ? 9 : 12),
         decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: 0.92),
+          color: context.cardBg.withValues(alpha: 0.92),
           borderRadius: BorderRadius.circular(compact ? 16 : 20),
           border: Border.all(
             color: highlighted
-                ? AppTheme.mediumBlue
-                : Colors.white.withValues(alpha: 0.8),
+                ? context.accent
+                : context.cardBg.withValues(alpha: 0.8),
             width: highlighted ? 2 : 1,
           ),
           boxShadow: [
@@ -426,7 +434,7 @@ class _MapCard extends StatelessWidget {
               style: GoogleFonts.nunito(
                 fontSize: compact ? 12.5 : 14,
                 fontWeight: FontWeight.w800,
-                color: AppTheme.textPrimary,
+                color: context.textPrimary,
               ),
             ),
             SizedBox(height: compact ? 6 : 8),
@@ -438,7 +446,7 @@ class _MapCard extends StatelessWidget {
                       style: GoogleFonts.nunito(
                           fontSize: compact ? 10.5 : 11.5,
                           fontWeight: FontWeight.w700,
-                          color: AppTheme.textSecondary)),
+                          color: context.textSecondary)),
                 ),
                 SizedBox(width: compact ? 6 : 10),
                 Flexible(
@@ -447,7 +455,7 @@ class _MapCard extends StatelessWidget {
                       style: GoogleFonts.nunito(
                           fontSize: compact ? 10.5 : 11.5,
                           fontWeight: FontWeight.w700,
-                          color: AppTheme.textSecondary)),
+                          color: context.textSecondary)),
                 ),
               ],
             ),

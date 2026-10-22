@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'core/constants/app_constants.dart';
 import 'core/router/app_router.dart';
 import 'core/theme/app_theme.dart';
+import 'core/theme/galingo_colors.dart';
 import 'core/services/audio_service.dart';
 import 'core/services/shake_service.dart';
 import 'core/services/telemetry_service.dart';
@@ -180,14 +181,21 @@ class _GalingoAppState extends ConsumerState<GalingoApp>
     final settings = ref.watch(settingsProvider);
 
     // Tema con la tipografía elegida (sin escalar fontSize — se hace via textScaler)
-    final textTheme = _buildTextTheme(settings.fontFamily);
-    final dynamicLight = AppTheme.lightTheme.copyWith(textTheme: textTheme);
-    final dynamicDark = AppTheme.darkTheme.copyWith(textTheme: textTheme);
+    final dynamicLight = AppTheme.lightTheme.copyWith(
+      textTheme: _buildTextTheme(settings.fontFamily, AppTheme.textPrimary),
+    );
+    final dynamicDark = AppTheme.darkTheme.copyWith(
+      textTheme: _buildTextTheme(
+        settings.fontFamily,
+        GalingoColors.dark.textPrimary,
+      ),
+    );
 
-    // A identidade visual de Galingo é luminosa (mapa, camiño, ceo): o tema
-    // escuro require un redeseño completo e queda fóra do alcance da beta.
-    // Forzamos sempre o tema claro para evitar combinacións ilexibles.
-    const themeMode = ThemeMode.light;
+    final themeMode = switch (settings.themeMode) {
+      AppThemeMode.light => ThemeMode.light,
+      AppThemeMode.dark => ThemeMode.dark,
+      AppThemeMode.system => ThemeMode.system,
+    };
 
     return MaterialApp.router(
       title: AppConstants.appName,
@@ -228,12 +236,15 @@ class _GalingoAppState extends ConsumerState<GalingoApp>
     );
   }
 
-  TextTheme _buildTextTheme(AppFontFamily family) {
-    return switch (family) {
+  TextTheme _buildTextTheme(AppFontFamily family, Color color) {
+    final base = switch (family) {
       AppFontFamily.nunito => GoogleFonts.nunitoTextTheme(),
       AppFontFamily.outfit => GoogleFonts.outfitTextTheme(),
       AppFontFamily.roboto => GoogleFonts.robotoTextTheme(),
       AppFontFamily.lato => GoogleFonts.latoTextTheme(),
     };
+    // GoogleFonts devolve un textTheme con cores do tema claro: forzamos
+    // as cores correctas para que o modo escuro sexa lexible.
+    return base.apply(bodyColor: color, displayColor: color);
   }
 }

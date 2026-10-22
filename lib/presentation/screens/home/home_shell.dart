@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../core/theme/app_theme.dart';
+import '../../../core/theme/galingo_colors.dart';
 
 /// Casca de navegación con barra inferior (móbil).
 ///
@@ -47,16 +47,16 @@ class HomeShell extends StatelessWidget {
                 initialLocation: index == shell.currentIndex,
               ),
               height: 68,
-              backgroundColor: Colors.white,
+              backgroundColor: context.cardBg,
               surfaceTintColor: Colors.transparent,
-              indicatorColor: AppTheme.surfaceBlue,
+              indicatorColor: context.accentSoft,
               labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
               destinations: [
                 for (final item in _items)
                   NavigationDestination(
-                    icon: Icon(item.icon, color: AppTheme.textSecondary),
+                    icon: Icon(item.icon, color: context.textSecondary),
                     selectedIcon:
-                        Icon(item.active, color: AppTheme.primaryBlue),
+                        Icon(item.active, color: context.accent),
                     label: item.label,
                   ),
               ],

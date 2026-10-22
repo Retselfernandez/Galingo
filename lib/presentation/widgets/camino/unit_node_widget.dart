@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import '../../../../core/theme/app_theme.dart';
+import '../../../core/theme/galingo_colors.dart';
 import '../../../../presentation/providers/progress_provider.dart';
 
 /// Nodo individual del Camiño — representa una Unidad
@@ -67,16 +68,16 @@ class UnitNodeWidget extends StatelessWidget {
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
                   color: isLocked
-                      ? Colors.grey.shade100
+                      ? context.softBg
                       : (isCompleted
                           ? _accentColor.withValues(alpha: 0.08)
-                          : Colors.white),
+                          : context.cardBg),
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(
                     color: isCurrentUnit
                         ? _accentColor
                         : (isLocked
-                            ? Colors.grey.shade200
+                            ? context.divider
                             : _accentColor.withValues(alpha: 0.3)),
                     width: isCurrentUnit ? 2.5 : 1.5,
                   ),
@@ -180,7 +181,7 @@ class UnitNodeWidget extends StatelessWidget {
                                 ?.copyWith(
                                   color: isLocked
                                       ? Colors.grey.shade400
-                                      : AppTheme.textSecondary,
+                                      : context.textSecondary,
                                 ),
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
@@ -231,7 +232,7 @@ class UnitNodeWidget extends StatelessWidget {
                                 size: 13,
                                 color: isLocked
                                     ? Colors.grey
-                                    : AppTheme.textSecondary,
+                                    : context.textSecondary,
                               ),
                               const SizedBox(width: 4),
                               Text(
@@ -241,7 +242,7 @@ class UnitNodeWidget extends StatelessWidget {
                                   fontWeight: FontWeight.w600,
                                   color: isLocked
                                       ? Colors.grey
-                                      : AppTheme.textSecondary,
+                                      : context.textSecondary,
                                 ),
                               ),
                             ],

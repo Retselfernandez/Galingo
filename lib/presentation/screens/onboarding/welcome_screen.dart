@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import '../../../core/theme/app_theme.dart';
+import '../../../core/theme/galingo_colors.dart';
 import '../../../core/router/app_router.dart';
 import 'package:galingo/l10n/app_localizations.dart';
 import '../../widgets/gabi/gabi_widget.dart';
@@ -62,7 +63,7 @@ class WelcomeScreen extends ConsumerWidget {
                   child: Text(
                     strings.tagline,
                     style: Theme.of(context).textTheme.displaySmall?.copyWith(
-                          color: AppTheme.textPrimary,
+                          color: context.textPrimary,
                           fontWeight: FontWeight.w800,
                           height: 1.2,
                         ),
@@ -86,7 +87,7 @@ class WelcomeScreen extends ConsumerWidget {
                   child: Text(
                     strings.pathSubtitle,
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                          color: AppTheme.textSecondary,
+                          color: context.textSecondary,
                           height: 1.6,
                         ),
                     textAlign: TextAlign.center,

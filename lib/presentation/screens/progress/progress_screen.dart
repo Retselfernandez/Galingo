@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../core/router/app_router.dart';
 import '../../../core/theme/app_theme.dart';
+import '../../../core/theme/galingo_colors.dart';
 import '../../../data/models/unit_model.dart';
 import '../../providers/progress_provider.dart';
 import '../../widgets/home/home_models.dart';
@@ -20,7 +21,7 @@ class ProgressScreen extends ConsumerWidget {
     final due = ref.watch(dueReviewProvider);
 
     return Scaffold(
-      backgroundColor: AppTheme.skyBlue,
+      backgroundColor: context.pageBg,
       body: Column(
         children: [
           _Header(name: progressAsync.valueOrNull?.userName),
@@ -77,7 +78,7 @@ class ProgressScreen extends ConsumerWidget {
                               emoji: '🚩',
                               value: '$doneUnits/${units.length}',
                               label: 'Paradas',
-                              color: AppTheme.primaryBlue,
+                              color: context.accent,
                             ),
                           ),
                           const SizedBox(width: 12),
@@ -101,7 +102,7 @@ class ProgressScreen extends ConsumerWidget {
                         style: GoogleFonts.nunito(
                           fontSize: 19,
                           fontWeight: FontWeight.w900,
-                          color: AppTheme.textPrimary,
+                          color: context.textPrimary,
                         ),
                       ),
                       const SizedBox(height: 4),
@@ -110,7 +111,7 @@ class ProgressScreen extends ConsumerWidget {
                         style: GoogleFonts.nunito(
                           fontSize: 13.5,
                           fontWeight: FontWeight.w600,
-                          color: AppTheme.textSecondary,
+                          color: context.textSecondary,
                         ),
                       ),
                       const SizedBox(height: 12),
@@ -201,11 +202,11 @@ class _StatCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.fromLTRB(16, 14, 16, 16),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: context.cardBg,
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            color: AppTheme.deepBlue.withValues(alpha: 0.07),
+            color: context.shadow,
             blurRadius: 14,
             offset: const Offset(0, 6),
           ),
@@ -233,7 +234,7 @@ class _StatCard extends StatelessWidget {
                   style: GoogleFonts.nunito(
                     fontSize: 12.5,
                     fontWeight: FontWeight.w700,
-                    color: AppTheme.textSecondary,
+                    color: context.textSecondary,
                   ),
                 ),
               ),
@@ -245,7 +246,7 @@ class _StatCard extends StatelessWidget {
             style: GoogleFonts.nunito(
               fontSize: 26,
               fontWeight: FontWeight.w900,
-              color: AppTheme.textPrimary,
+              color: context.textPrimary,
               height: 1,
             ),
           ),
@@ -263,7 +264,7 @@ class _ReviewCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color: context.cardBg,
       borderRadius: BorderRadius.circular(20),
       child: InkWell(
         borderRadius: BorderRadius.circular(20),
@@ -286,8 +287,8 @@ class _ReviewCard extends StatelessWidget {
                   color: AppTheme.primaryBlue.withValues(alpha: 0.12),
                   borderRadius: BorderRadius.circular(13),
                 ),
-                child: const Icon(Icons.replay_rounded,
-                    color: AppTheme.primaryBlue, size: 22),
+                child: Icon(Icons.replay_rounded,
+                    color: context.accent, size: 22),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -299,7 +300,7 @@ class _ReviewCard extends StatelessWidget {
                       style: GoogleFonts.nunito(
                         fontSize: 15,
                         fontWeight: FontWeight.w900,
-                        color: AppTheme.textPrimary,
+                        color: context.textPrimary,
                       ),
                     ),
                     Text(
@@ -307,14 +308,14 @@ class _ReviewCard extends StatelessWidget {
                       style: GoogleFonts.nunito(
                         fontSize: 12.5,
                         fontWeight: FontWeight.w600,
-                        color: AppTheme.textSecondary,
+                        color: context.textSecondary,
                       ),
                     ),
                   ],
                 ),
               ),
-              const Icon(Icons.chevron_right_rounded,
-                  color: AppTheme.primaryBlue),
+              Icon(Icons.chevron_right_rounded,
+                  color: context.accent),
             ],
           ),
         ),
@@ -346,11 +347,11 @@ class _UnitProgress extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 10),
       padding: const EdgeInsets.fromLTRB(14, 12, 14, 13),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: context.cardBg,
         borderRadius: BorderRadius.circular(18),
         boxShadow: [
           BoxShadow(
-            color: AppTheme.deepBlue.withValues(alpha: 0.05),
+            color: context.shadow,
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -370,7 +371,7 @@ class _UnitProgress extends StatelessWidget {
                   style: GoogleFonts.nunito(
                     fontSize: 14.5,
                     fontWeight: FontWeight.w800,
-                    color: AppTheme.textPrimary,
+                    color: context.textPrimary,
                   ),
                 ),
               ),
@@ -382,7 +383,7 @@ class _UnitProgress extends StatelessWidget {
                   fontWeight: FontWeight.w800,
                   color: completed
                       ? AppTheme.successGreen
-                      : AppTheme.textSecondary,
+                      : context.textSecondary,
                 ),
               ),
               if (completed) ...[
@@ -398,9 +399,9 @@ class _UnitProgress extends StatelessWidget {
             child: LinearProgressIndicator(
               value: ratio,
               minHeight: 7,
-              backgroundColor: const Color(0xFFEDF3FA),
+              backgroundColor: context.softBg,
               valueColor: AlwaysStoppedAnimation(
-                completed ? AppTheme.successGreen : AppTheme.primaryBlue,
+                completed ? AppTheme.successGreen : context.accent,
               ),
             ),
           ),

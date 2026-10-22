@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../../core/router/app_router.dart';
 import '../../../core/theme/app_theme.dart';
+import '../../../core/theme/galingo_colors.dart';
 import '../../../core/constants/app_constants.dart';
 import '../../../data/models/user_progress_model.dart';
 import '../../providers/progress_provider.dart';
@@ -36,7 +37,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
     final due = ref.watch(dueReviewProvider);
     return Scaffold(
-      backgroundColor: AppTheme.skyBlue,
+      backgroundColor: context.pageBg,
       floatingActionButton: due > 0
           ? FloatingActionButton.extended(
               onPressed: () => context.push(AppRoutes.review),

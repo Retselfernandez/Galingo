@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:galingo/l10n/app_localizations.dart';
 import '../../../core/theme/app_theme.dart';
+import '../../../core/theme/galingo_colors.dart';
 import 'home_models.dart';
 
 /// Card de lección (parada) del panel derecho.
@@ -68,7 +69,7 @@ class _LessonCardState extends State<LessonCard>
             : Colors.transparent);
     final bg = completed
         ? AppTheme.caminoGreen.withValues(alpha: 0.10)
-        : Colors.white;
+        : context.cardBg;
 
     return MouseRegion(
       cursor: locked ? SystemMouseCursors.forbidden : SystemMouseCursors.click,
@@ -115,7 +116,7 @@ class _LessonCardState extends State<LessonCard>
                     width: 46,
                     height: 46,
                     decoration: BoxDecoration(
-                      color: AppTheme.skyBlue,
+                      color: context.pageBg,
                       shape: BoxShape.circle,
                       border: Border.all(
                         color: AppTheme.mediumBlue.withValues(alpha: 0.15),
@@ -138,7 +139,7 @@ class _LessonCardState extends State<LessonCard>
                           style: GoogleFonts.nunito(
                             fontSize: 15,
                             fontWeight: FontWeight.w800,
-                            color: AppTheme.textPrimary,
+                            color: context.textPrimary,
                           ),
                         ),
                         const SizedBox(height: 3),
@@ -147,7 +148,7 @@ class _LessonCardState extends State<LessonCard>
                           style: GoogleFonts.nunito(
                             fontSize: 12,
                             fontWeight: FontWeight.w500,
-                            color: AppTheme.textSecondary,
+                            color: context.textSecondary,
                           ),
                         ),
                         const SizedBox(height: 8),
@@ -176,7 +177,7 @@ class _LessonCardState extends State<LessonCard>
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4),
       decoration: BoxDecoration(
-        color: AppTheme.skyBlue,
+        color: context.pageBg,
         borderRadius: BorderRadius.circular(10),
       ),
       child: Row(
@@ -189,7 +190,7 @@ class _LessonCardState extends State<LessonCard>
             style: GoogleFonts.nunito(
               fontSize: 11.5,
               fontWeight: FontWeight.w700,
-              color: AppTheme.textSecondary,
+              color: context.textSecondary,
             ),
           ),
         ],

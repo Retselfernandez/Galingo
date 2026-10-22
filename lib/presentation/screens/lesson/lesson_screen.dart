@@ -6,6 +6,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../core/theme/app_theme.dart';
+import '../../../core/theme/galingo_colors.dart';
 import '../../../core/router/app_router.dart';
 import '../../../core/constants/app_constants.dart';
 import '../../../core/ml/hlr_engine.dart';
@@ -364,7 +365,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       context: context,
       barrierDismissible: false,
       builder: (context) => AlertDialog(
-        backgroundColor: Colors.white,
+        backgroundColor: context.cardBg,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
         title: Row(
           children: [
@@ -384,13 +385,13 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           children: [
             Text(
               AppLocalizations.of(context)!.noLivesText,
-              style: const TextStyle(color: AppTheme.textSecondary, height: 1.4),
+              style: TextStyle(color: context.textSecondary, height: 1.4),
             ),
             const SizedBox(height: 12),
             Text(
               AppLocalizations.of(context)!.noLivesRetry,
-              style: const TextStyle(
-                color: AppTheme.primaryBlue,
+              style: TextStyle(
+                color: context.accent,
                 fontWeight: FontWeight.bold,
                 fontSize: 12,
               ),
@@ -512,7 +513,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     return Container(
       padding: EdgeInsets.fromLTRB(16, 12 + topInset, 16, 12),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: context.cardBg,
         boxShadow: [
           BoxShadow(
             color: AppTheme.primaryBlue.withValues(alpha: 0.08),
@@ -527,7 +528,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           children: [
             IconButton(
               icon: const Icon(Icons.close_rounded),
-              color: AppTheme.textSecondary,
+              color: context.textSecondary,
               onPressed: () => context.go(AppRoutes.home),
               tooltip: AppLocalizations.of(context)!.exitLesson,
             ),
@@ -549,7 +550,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                     borderRadius: BorderRadius.circular(4),
                     child: LinearProgressIndicator(
                       value: progress,
-                      color: AppTheme.primaryBlue,
+                      color: context.accent,
                       minHeight: 6,
                     ),
                   ),
@@ -609,7 +610,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
             Text(
               '${_currentExerciseIndex + 1}/${lesson.exercises.length}',
               style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                    color: AppTheme.textSecondary,
+                    color: context.textSecondary,
                   ),
             ),
           ],
@@ -654,7 +655,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
               style: TextStyle(
                 color: _isAnswered
                     ? (_isCorrect ? AppTheme.successGreen : AppTheme.errorRed)
-                    : AppTheme.primaryBlue,
+                    : context.accent,
                 decoration: TextDecoration.underline,
                 fontWeight: FontWeight.w900,
               ),
@@ -686,13 +687,13 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
               decoration: BoxDecoration(
-                color: AppTheme.surfaceBlue,
+                color: context.accentSoft,
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Text(
                 _exerciseLabel(context, exercise),
                 style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                      color: AppTheme.primaryBlue,
+                      color: context.accent,
                       fontWeight: FontWeight.w700,
                     ),
               ),
@@ -713,8 +714,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                 padding: const EdgeInsets.only(top: 10),
                 child: Text(
                   '💡 ${(exercise.options as List).join(' / ')}',
-                  style: const TextStyle(
-                    color: AppTheme.textSecondary,
+                  style: TextStyle(
+                    color: context.textSecondary,
                     fontStyle: FontStyle.italic,
                     fontWeight: FontWeight.w600,
                   ),
@@ -776,7 +777,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
-                          borderSide: const BorderSide(color: AppTheme.primaryBlue, width: 2),
+                          borderSide: BorderSide(color: context.accent, width: 2),
                         ),
                         filled: true,
                         fillColor: _isAnswered
@@ -867,8 +868,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   ) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     Color borderColor = isDark ? Colors.white.withValues(alpha: 0.15) : AppTheme.primaryBlue.withValues(alpha: 0.2);
-    Color bgColor = isDark ? AppTheme.surfaceDark2 : AppTheme.surfaceBlue;
-    Color textColor = isDark ? Colors.white : AppTheme.textPrimary;
+    Color bgColor = isDark ? AppTheme.surfaceDark2 : context.accentSoft;
+    Color textColor = isDark ? Colors.white : context.textPrimary;
 
     if (_isAnswered && _selectedAnswer == option) {
       if (_isCorrect) {
@@ -917,7 +918,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     Color borderColor =
         isDark ? Colors.white24 : AppTheme.primaryBlue.withValues(alpha: 0.2);
-    Color bgColor = isDark ? AppTheme.surfaceDark2 : AppTheme.surfaceBlue;
+    Color bgColor = isDark ? AppTheme.surfaceDark2 : context.accentSoft;
 
     if (_isAnswered && _selectedAnswer == option) {
       if (_isCorrect) {
@@ -960,7 +961,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.center,
                       style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                            color: AppTheme.textPrimary,
+                            color: context.textPrimary,
                             fontWeight: FontWeight.w800,
                           ),
                     ),
@@ -1046,7 +1047,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           constraints: const BoxConstraints(minHeight: 60),
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
-            color: isDark ? AppTheme.surfaceDark2 : AppTheme.surfaceBlue,
+            color: isDark ? AppTheme.surfaceDark2 : context.accentSoft,
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
               color: _isAnswered
@@ -1064,7 +1065,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                   padding: const EdgeInsets.all(6),
                   child: Text(
                     AppLocalizations.of(context)!.typeAnswer,
-                    style: const TextStyle(color: AppTheme.textSecondary, fontSize: 13),
+                    style: TextStyle(color: context.textSecondary, fontSize: 13),
                   ),
                 ),
               for (final w in _orderChosen) _orderChip(w, chosen: true),
@@ -1138,7 +1139,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           borderRadius: BorderRadius.circular(14),
           border: Border.all(
             color: chosen
-                ? AppTheme.primaryBlue
+                ? context.accent
                 : (isDark ? Colors.white24 : Colors.grey.shade300),
             width: 1.5,
           ),
@@ -1148,8 +1149,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           style: TextStyle(
             fontWeight: FontWeight.w700,
             color: chosen
-                ? AppTheme.primaryBlue
-                : (isDark ? Colors.white : AppTheme.textPrimary),
+                ? context.accent
+                : (isDark ? Colors.white : context.textPrimary),
           ),
         ),
       ),
@@ -1295,7 +1296,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           onPressed: _nextExercise,
           style: FilledButton.styleFrom(
             backgroundColor:
-                _isCorrect ? AppTheme.successGreen : AppTheme.primaryBlue,
+                _isCorrect ? AppTheme.successGreen : context.accent,
             padding: const EdgeInsets.symmetric(vertical: 16),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
@@ -1332,8 +1333,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         icon: const Icon(Icons.volume_up_rounded),
         label: Text(AppLocalizations.of(context)!.listen),
         style: OutlinedButton.styleFrom(
-          foregroundColor: AppTheme.primaryBlue,
-          side: const BorderSide(color: AppTheme.primaryBlue, width: 2),
+          foregroundColor: context.accent,
+          side: BorderSide(color: context.accent, width: 2),
           padding: const EdgeInsets.symmetric(vertical: 14),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         ),
@@ -1374,7 +1375,7 @@ class _LessonCompletedDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Dialog(
-      backgroundColor: Colors.white,
+      backgroundColor: context.cardBg,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
       child: Container(
         constraints: const BoxConstraints(maxWidth: 400),
@@ -1400,7 +1401,7 @@ class _LessonCompletedDialog extends StatelessWidget {
             Text(
               lessonTitle,
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: AppTheme.textSecondary,
+                    color: context.textSecondary,
                   ),
               textAlign: TextAlign.center,
             ),
@@ -1639,20 +1640,20 @@ class _InteractiveMatchingWidgetState extends State<InteractiveMatchingWidget> {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     Color borderColor = isDark ? Colors.white.withValues(alpha: 0.1) : Colors.grey.shade300;
     Color bgColor = isDark ? AppTheme.surfaceDark : Colors.white;
-    Color textColor = isDark ? Colors.white : AppTheme.textPrimary;
+    Color textColor = isDark ? Colors.white : context.textPrimary;
 
     if (isMatched) {
       borderColor = AppTheme.successGreen.withValues(alpha: 0.4);
       bgColor = AppTheme.successGreenLight.withValues(alpha: 0.5);
-      textColor = AppTheme.textSecondary.withValues(alpha: 0.5);
+      textColor = context.textSecondary.withValues(alpha: 0.5);
     } else if (isError) {
       borderColor = AppTheme.errorRed;
       bgColor = AppTheme.errorRedLight;
       textColor = AppTheme.errorRed;
     } else if (isSelected) {
-      borderColor = AppTheme.primaryBlue;
-      bgColor = isDark ? AppTheme.surfaceDark2 : AppTheme.surfaceBlue;
-      textColor = isDark ? AppTheme.primaryBlueLight : AppTheme.primaryBlue;
+      borderColor = context.accent;
+      bgColor = isDark ? AppTheme.surfaceDark2 : context.accentSoft;
+      textColor = isDark ? AppTheme.primaryBlueLight : context.accent;
     }
 
     return GestureDetector(

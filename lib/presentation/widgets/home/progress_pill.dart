@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../core/theme/app_theme.dart';
+import '../../../core/theme/galingo_colors.dart';
 
 /// Pill "O teu progreso" con trofeo, barra animada y contador derivado del estado real.
 class ProgressPill extends StatelessWidget {
@@ -16,7 +17,7 @@ class ProgressPill extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: context.cardBg,
         borderRadius: BorderRadius.circular(24),
         boxShadow: [
           BoxShadow(
@@ -48,7 +49,7 @@ class ProgressPill extends StatelessWidget {
                 style: GoogleFonts.nunito(
                   fontSize: 12.5,
                   fontWeight: FontWeight.w800,
-                  color: AppTheme.textPrimary,
+                  color: context.textPrimary,
                 ),
               ),
               const SizedBox(height: 4),
@@ -63,7 +64,7 @@ class ProgressPill extends StatelessWidget {
                     builder: (context, value, _) => LinearProgressIndicator(
                       value: value,
                       minHeight: 8,
-                      backgroundColor: AppTheme.skyBlue,
+                      backgroundColor: context.pageBg,
                       valueColor: const AlwaysStoppedAnimation(AppTheme.caminoGreen),
                     ),
                   ),
@@ -77,7 +78,7 @@ class ProgressPill extends StatelessWidget {
             style: GoogleFonts.nunito(
               fontSize: 12.5,
               fontWeight: FontWeight.w700,
-              color: AppTheme.textSecondary,
+              color: context.textSecondary,
             ),
           ),
         ],

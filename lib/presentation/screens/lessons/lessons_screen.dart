@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../core/router/app_router.dart';
 import '../../../core/theme/app_theme.dart';
+import '../../../core/theme/galingo_colors.dart';
 import '../../../data/models/lesson_model.dart';
 import '../../../data/models/user_progress_model.dart';
 import '../../providers/progress_provider.dart';
@@ -20,7 +21,7 @@ class LessonsScreen extends ConsumerWidget {
     final unitsAsync = ref.watch(unitsWithStatusProvider);
 
     return Scaffold(
-      backgroundColor: AppTheme.skyBlue,
+      backgroundColor: context.pageBg,
       body: Column(
         children: [
           _Header(
@@ -136,11 +137,11 @@ class _UnitCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(bottom: 14),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: context.cardBg,
         borderRadius: BorderRadius.circular(22),
         boxShadow: [
           BoxShadow(
-            color: AppTheme.deepBlue.withValues(alpha: 0.07),
+            color: context.shadow,
             blurRadius: 14,
             offset: const Offset(0, 6),
           ),
@@ -157,7 +158,7 @@ class _UnitCard extends StatelessWidget {
                   height: 44,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                    color: locked ? const Color(0xFFEFF3F8) : AppTheme.skyBlue,
+                    color: locked ? context.softBg : context.pageBg,
                     borderRadius: BorderRadius.circular(14),
                   ),
                   child: Text(
@@ -178,7 +179,7 @@ class _UnitCard extends StatelessWidget {
                         style: GoogleFonts.nunito(
                           fontSize: 16.5,
                           fontWeight: FontWeight.w900,
-                          color: AppTheme.textPrimary,
+                          color: context.textPrimary,
                         ),
                       ),
                       const SizedBox(height: 2),
@@ -187,7 +188,7 @@ class _UnitCard extends StatelessWidget {
                         style: GoogleFonts.nunito(
                           fontSize: 12.5,
                           fontWeight: FontWeight.w600,
-                          color: AppTheme.textSecondary,
+                          color: context.textSecondary,
                         ),
                       ),
                     ],
@@ -200,7 +201,7 @@ class _UnitCard extends StatelessWidget {
               ],
             ),
           ),
-          const Divider(height: 1, color: Color(0xFFEDF3FA)),
+          Divider(height: 1, color: context.softBg),
           for (final lesson in unit.lessons)
             _LessonRow(
               lesson: lesson,
@@ -229,7 +230,7 @@ class _StatusChip extends StatelessWidget {
         ? AppTheme.successGreen
         : locked
             ? const Color(0xFF9AA9BC)
-            : AppTheme.primaryBlue;
+            : context.accent;
     final label = completed
         ? 'Completada'
         : locked
@@ -274,11 +275,11 @@ class _LessonRow extends StatelessWidget {
         ? AppTheme.successGreen
         : available
             ? AppTheme.primaryBlue.withValues(alpha: 0.12)
-            : const Color(0xFFF1F5FA);
+            : context.softBg;
     final Color fg = done
         ? Colors.white
         : available
-            ? AppTheme.primaryBlue
+            ? context.accent
             : const Color(0xFF9AA9BC);
     final IconData iconData = done
         ? Icons.check_rounded
@@ -308,7 +309,7 @@ class _LessonRow extends StatelessWidget {
                 style: GoogleFonts.nunito(
                   fontSize: 14.5,
                   fontWeight: done ? FontWeight.w700 : FontWeight.w600,
-                  color: locked ? const Color(0xFF96A5B8) : AppTheme.textPrimary,
+                  color: locked ? const Color(0xFF96A5B8) : context.textPrimary,
                 ),
               ),
             ),
@@ -318,7 +319,7 @@ class _LessonRow extends StatelessWidget {
               style: GoogleFonts.nunito(
                 fontSize: 11.5,
                 fontWeight: FontWeight.w600,
-                color: AppTheme.textSecondary,
+                color: context.textSecondary,
               ),
             ),
           ],

@@ -4,7 +4,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../core/router/app_router.dart';
-import '../../../core/theme/app_theme.dart';
+import '../../../core/theme/galingo_colors.dart';
 import '../../providers/progress_provider.dart';
 import 'package:galingo/l10n/app_localizations.dart';
 import '../../widgets/gabi/gabi_widget.dart';
@@ -158,15 +158,15 @@ class _NameInputScreenState extends ConsumerState<NameInputScreen> {
                       controller: _controller,
                       focusNode: _focusNode,
                       textAlign: TextAlign.center,
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.w700,
-                        color: AppTheme.textPrimary,
+                        color: context.textPrimary,
                       ),
                       decoration: InputDecoration(
                         hintText: strings.nameHint,
-                        hintStyle: const TextStyle(
-                          color: AppTheme.textHint,
+                        hintStyle: TextStyle(
+                          color: context.textMuted,
                           fontSize: 18,
                           fontWeight: FontWeight.w400,
                         ),
@@ -216,7 +216,7 @@ class _NameInputScreenState extends ConsumerState<NameInputScreen> {
                           onPressed: _hasText && !_isLoading ? _saveName : null,
                           style: FilledButton.styleFrom(
                             backgroundColor: Colors.white,
-                            foregroundColor: AppTheme.primaryBlue,
+                            foregroundColor: context.accent,
                             disabledBackgroundColor: Colors.white.withValues(alpha: 0.5),
                             padding: const EdgeInsets.symmetric(vertical: 18),
                             shape: RoundedRectangleBorder(

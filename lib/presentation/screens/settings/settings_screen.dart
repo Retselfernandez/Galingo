@@ -4,6 +4,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../core/theme/app_theme.dart';
+import '../../../core/theme/galingo_colors.dart';
 import '../../../data/models/settings_model.dart';
 import 'package:go_router/go_router.dart';
 import '../../../core/router/app_router.dart';
@@ -62,6 +63,7 @@ class SettingsScreen extends ConsumerWidget {
               // ── Apariencia ───────────────────────────────────────────────
               _buildSectionHeader(context, strings.appearance, 2),
               const SizedBox(height: 12),
+              _buildThemeSelector(context, ref, settings, strings),
               const SizedBox(height: 16),
 
               // ── Tipografía ───────────────────────────────────────────────
@@ -130,10 +132,10 @@ class SettingsScreen extends ConsumerWidget {
               Container(
                 width: 52,
                 height: 52,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   gradient: LinearGradient(
-                    colors: [AppTheme.primaryBlue, AppTheme.primaryBlueLight],
+                    colors: [context.accent, AppTheme.primaryBlueLight],
                   ),
                 ),
                 child: Center(
@@ -168,7 +170,7 @@ class SettingsScreen extends ConsumerWidget {
               IconButton(
                 onPressed: () => _showEditNameDialog(context, ref, strings, userName),
                 icon: const Icon(Icons.edit_rounded, size: 20),
-                color: AppTheme.primaryBlue,
+                color: context.accent,
                 tooltip: strings.editName,
               ),
             ],
@@ -189,7 +191,7 @@ class SettingsScreen extends ConsumerWidget {
           Text(
             'Insignias académicas:',
             style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                  color: AppTheme.textSecondary,
+                  color: context.textSecondary,
                   fontWeight: FontWeight.bold,
                 ),
           ),
@@ -240,7 +242,7 @@ class SettingsScreen extends ConsumerWidget {
           showDialog(
             context: context,
             builder: (context) => AlertDialog(
-              backgroundColor: Colors.white,
+              backgroundColor: context.cardBg,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
               title: Row(
                 children: [
@@ -260,7 +262,7 @@ class SettingsScreen extends ConsumerWidget {
                 children: [
                   Text(
                     achievement.description,
-                    style: const TextStyle(color: AppTheme.textSecondary, height: 1.4),
+                    style: TextStyle(color: context.textSecondary, height: 1.4),
                   ),
                   const SizedBox(height: 16),
                   Container(
@@ -301,7 +303,7 @@ class SettingsScreen extends ConsumerWidget {
               height: 48,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: isUnlocked ? Colors.white : Colors.grey.shade200,
+                color: isUnlocked ? context.cardBg : context.softBg,
                 border: Border.all(
                   color: isUnlocked ? Colors.amber.shade600 : Colors.grey.shade400,
                   width: isUnlocked ? 2.5 : 1.5,
@@ -352,12 +354,12 @@ class SettingsScreen extends ConsumerWidget {
                       const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   decoration: BoxDecoration(
                     color: isSelected
-                        ? AppTheme.primaryBlue
+                        ? context.accent
                         : (Theme.of(context).brightness == Brightness.dark ? AppTheme.surfaceDark2 : Theme.of(context).cardTheme.color ?? Colors.white),
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(
                       color: isSelected
-                          ? AppTheme.primaryBlue
+                          ? context.accent
                           : (Theme.of(context).brightness == Brightness.dark ? Colors.white.withValues(alpha: 0.1) : Colors.grey.shade300),
                     ),
                   ),
@@ -368,6 +370,52 @@ class SettingsScreen extends ConsumerWidget {
                       fontWeight: FontWeight.w700,
                       color: isSelected ? Colors.white : Theme.of(context).colorScheme.onSurface,
                     ),
+                  ),
+                ),
+              );
+            }).toList(),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // ─── Tema ─────────────────────────────────────────────────────────────────
+
+  Widget _buildThemeSelector(
+    BuildContext context,
+    WidgetRef ref,
+    SettingsModel settings,
+    AppLocalizations strings,
+  ) {
+    final themeLabels = [strings.lightTheme, strings.darkTheme, strings.systemTheme];
+    return _SettingsCard(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            strings.theme,
+            style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                  color: context.textSecondary,
+                  fontWeight: FontWeight.w600,
+                ),
+          ),
+          const SizedBox(height: 12),
+          Row(
+            children: AppThemeMode.values.asMap().entries.map((entry) {
+              final mode = entry.value;
+              final label = themeLabels[entry.key];
+              final isSelected = settings.themeMode == mode;
+              return Expanded(
+                child: Padding(
+                  padding: const EdgeInsetsDirectional.only(end: 8),
+                  child: _ThemeOptionButton(
+                    icon: mode.icon,
+                    label: label,
+                    isSelected: isSelected,
+                    onTap: () => ref
+                        .read(settingsProvider.notifier)
+                        .setThemeMode(mode),
                   ),
                 ),
               );
@@ -392,7 +440,7 @@ class SettingsScreen extends ConsumerWidget {
           Text(
             'Familia tipográfica',
             style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                  color: AppTheme.textSecondary,
+                  color: context.textSecondary,
                   fontWeight: FontWeight.w600,
                 ),
           ),
@@ -430,7 +478,7 @@ class SettingsScreen extends ConsumerWidget {
               Text(
                 strings.textSize,
                 style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                      color: AppTheme.textSecondary,
+                      color: context.textSecondary,
                       fontWeight: FontWeight.w600,
                     ),
               ),
@@ -442,8 +490,8 @@ class SettingsScreen extends ConsumerWidget {
                 ),
                 child: Text(
                   settings.fontSize.displayName,
-                  style: const TextStyle(
-                    color: AppTheme.primaryBlue,
+                  style: TextStyle(
+                    color: context.accent,
                     fontWeight: FontWeight.w700,
                     fontSize: 12,
                   ),
@@ -464,7 +512,7 @@ class SettingsScreen extends ConsumerWidget {
                         duration: const Duration(milliseconds: 200),
                         height: 4,
                         decoration: BoxDecoration(
-                          color: isSelected ? AppTheme.primaryBlue : Colors.grey.shade200,
+                          color: isSelected ? context.accent : Colors.grey.shade200,
                           borderRadius: BorderRadius.circular(2),
                         ),
                       ),
@@ -474,7 +522,7 @@ class SettingsScreen extends ConsumerWidget {
                         style: TextStyle(
                           fontSize: 12 + (AppFontSize.values.indexOf(size) * 4),
                           fontWeight: isSelected ? FontWeight.w800 : FontWeight.w400,
-                          color: isSelected ? AppTheme.primaryBlue : AppTheme.textSecondary,
+                          color: isSelected ? context.accent : context.textSecondary,
                         ),
                       ),
                       const SizedBox(height: 4),
@@ -483,7 +531,7 @@ class SettingsScreen extends ConsumerWidget {
                         style: TextStyle(
                           fontSize: 10,
                           fontWeight: isSelected ? FontWeight.w700 : FontWeight.w400,
-                          color: isSelected ? AppTheme.primaryBlue : AppTheme.textHint,
+                          color: isSelected ? context.accent : context.textMuted,
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -507,14 +555,14 @@ class SettingsScreen extends ConsumerWidget {
   ) {
     final fontStyle = _getTextStyle(settings);
     return _SettingsCard(
-      backgroundColor: AppTheme.surfaceBlue,
+      backgroundColor: context.accentSoft,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             strings.preview,
             style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                  color: AppTheme.textSecondary,
+                  color: context.textSecondary,
                   fontWeight: FontWeight.w600,
                 ),
           ),
@@ -524,7 +572,7 @@ class SettingsScreen extends ConsumerWidget {
             style: fontStyle.copyWith(
               fontSize: 22 * settings.fontSize.scale,
               fontWeight: FontWeight.w800,
-              color: AppTheme.textPrimary,
+              color: context.textPrimary,
             ),
           ),
           const SizedBox(height: 4),
@@ -532,7 +580,7 @@ class SettingsScreen extends ConsumerWidget {
             'Aprende galego paso a paso comigo.',
             style: fontStyle.copyWith(
               fontSize: 14 * settings.fontSize.scale,
-              color: AppTheme.textSecondary,
+              color: context.textSecondary,
             ),
           ),
           const SizedBox(height: 4),
@@ -540,7 +588,7 @@ class SettingsScreen extends ConsumerWidget {
             '${settings.fontFamily.displayName} · ${settings.fontSize.displayName}',
             style: fontStyle.copyWith(
               fontSize: 11 * settings.fontSize.scale,
-              color: AppTheme.textHint,
+              color: context.textMuted,
               fontWeight: FontWeight.w600,
             ),
           ),
@@ -610,14 +658,14 @@ class SettingsScreen extends ConsumerWidget {
                   color: AppTheme.primaryBlue.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: const Icon(Icons.analytics_rounded, color: AppTheme.primaryBlue, size: 20),
+                child: Icon(Icons.analytics_rounded, color: context.accent, size: 20),
               ),
               const SizedBox(width: 12),
               Expanded(
                 child: Text(
                   'Telemetría de Modelado (Capítulo 7)',
                   style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                        color: AppTheme.textPrimary,
+                        color: context.textPrimary,
                         fontWeight: FontWeight.bold,
                       ),
                 ),
@@ -641,11 +689,11 @@ class SettingsScreen extends ConsumerWidget {
             ],
           ),
           const SizedBox(height: 16),
-          const Text(
+          Text(
             'Comparación en tempo real de erro absoluto medio (MAE) entre o motor HLR do TFM e o algoritmo clásico de espaciado SM-2:',
             style: TextStyle(
               fontSize: 12,
-              color: AppTheme.textSecondary,
+              color: context.textSecondary,
               height: 1.4,
             ),
           ),
@@ -654,20 +702,20 @@ class SettingsScreen extends ConsumerWidget {
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: AppTheme.surfaceBlue,
+                color: context.accentSoft,
                 borderRadius: BorderRadius.circular(16),
               ),
-              child: const Row(
+              child: Row(
                 children: [
-                  Text('🦉', style: TextStyle(fontSize: 26)),
-                  SizedBox(width: 12),
+                  const Text('🦉', style: TextStyle(fontSize: 26)),
+                  const SizedBox(width: 12),
                   Expanded(
                     child: Text(
                       'Gabi di: "Completa a túa primeira lección para recoller os primeiros datos de telemetría predictiva!"',
                       style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.bold,
-                        color: AppTheme.primaryBlue,
+                        color: context.accent,
                         height: 1.3,
                       ),
                     ),
@@ -679,21 +727,24 @@ class SettingsScreen extends ConsumerWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                _buildTelemetryBox('Predicións', '$count reviews', 'Muestras evaluadas'),
-                _buildTelemetryBox('MAE HLR', hlrMaeVal.toStringAsFixed(4), 'Erro predictivo HLR'),
-                _buildTelemetryBox('MAE SM-2', sm2MaeVal.toStringAsFixed(4), 'Erro predictivo SM-2'),
+                _buildTelemetryBox(
+                    context, 'Predicións', '$count reviews', 'Muestras evaluadas'),
+                _buildTelemetryBox(
+                    context, 'MAE HLR', hlrMaeVal.toStringAsFixed(4), 'Erro predictivo HLR'),
+                _buildTelemetryBox(
+                    context, 'MAE SM-2', sm2MaeVal.toStringAsFixed(4), 'Erro predictivo SM-2'),
               ],
             ),
             const SizedBox(height: 20),
-            const Text(
+            Text(
               'Comparativa de Error Predictivo (Menor MAE = Maior Precisión):',
-              style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: AppTheme.textSecondary),
+              style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: context.textSecondary),
             ),
             const SizedBox(height: 8),
             _buildMaeBar(
               label: 'HLR Engine (TFM)',
               value: hlrMaeVal,
-              color: AppTheme.primaryBlue,
+              color: context.accent,
               maxValue: hlrMaeVal > sm2MaeVal ? hlrMaeVal : sm2MaeVal,
             ),
             const SizedBox(height: 8),
@@ -709,24 +760,25 @@ class SettingsScreen extends ConsumerWidget {
     );
   }
 
-  Widget _buildTelemetryBox(String label, String value, String description) {
+  Widget _buildTelemetryBox(
+      BuildContext context, String label, String value, String description) {
     return Expanded(
       child: Column(
         children: [
           Text(
             label,
-            style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: AppTheme.textHint),
+            style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: context.textMuted),
           ),
           const SizedBox(height: 4),
           Text(
             value,
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: AppTheme.textPrimary),
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: context.textPrimary),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 2),
           Text(
             description,
-            style: const TextStyle(fontSize: 9, color: AppTheme.textSecondary),
+            style: TextStyle(fontSize: 9, color: context.textSecondary),
             textAlign: TextAlign.center,
           ),
         ],
@@ -885,6 +937,58 @@ class _SettingsCard extends StatelessWidget {
   }
 }
 
+class _ThemeOptionButton extends StatelessWidget {
+  final String icon;
+  final String label;
+  final bool isSelected;
+  final VoidCallback onTap;
+
+  const _ThemeOptionButton({
+    required this.icon,
+    required this.label,
+    required this.isSelected,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    return GestureDetector(
+      onTap: onTap,
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 200),
+        padding: const EdgeInsets.symmetric(vertical: 12),
+        decoration: BoxDecoration(
+          color: isSelected
+              ? context.accent
+              : (isDark ? AppTheme.surfaceDark2 : context.accentSoft),
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(
+            color: isSelected
+                ? context.accent
+                : (isDark ? Colors.white.withValues(alpha: 0.1) : Colors.grey.shade200),
+            width: 2,
+          ),
+        ),
+        child: Column(
+          children: [
+            Text(icon, style: const TextStyle(fontSize: 20)),
+            const SizedBox(height: 4),
+            Text(
+              label,
+              style: TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w700,
+                color: isSelected ? Colors.white : Theme.of(context).colorScheme.onSurfaceVariant,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 class _FontOption extends StatelessWidget {
   final AppFontFamily font;
   final bool isSelected;
@@ -920,7 +1024,7 @@ class _FontOption extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
             color: isSelected
-                ? AppTheme.primaryBlue
+                ? context.accent
                 : (Theme.of(context).brightness == Brightness.dark ? Colors.white.withValues(alpha: 0.1) : Colors.grey.shade200),
             width: isSelected ? 2 : 1,
           ),
@@ -935,13 +1039,13 @@ class _FontOption extends StatelessWidget {
                     font.displayName,
                     style: _previewStyle.copyWith(
                       color: isSelected
-                          ? (Theme.of(context).brightness == Brightness.dark ? AppTheme.primaryBlueLight : AppTheme.primaryBlue)
+                          ? (Theme.of(context).brightness == Brightness.dark ? AppTheme.primaryBlueLight : context.accent)
                           : Theme.of(context).colorScheme.onSurface,
                     ),
                   ),
                   Text(
                     font.description,
-                    style: const TextStyle(fontSize: 11, color: AppTheme.textHint),
+                    style: TextStyle(fontSize: 11, color: context.textMuted),
                   ),
                 ],
               ),
@@ -958,10 +1062,10 @@ class _FontOption extends StatelessWidget {
               height: 22,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: isSelected ? AppTheme.primaryBlue : Colors.transparent,
+                color: isSelected ? context.accent : Colors.transparent,
                 border: Border.all(
                   color: isSelected
-                      ? AppTheme.primaryBlue
+                      ? context.accent
                       : (Theme.of(context).brightness == Brightness.dark ? Colors.white.withValues(alpha: 0.2) : Colors.grey.shade300),
                   width: 2,
                 ),
@@ -997,10 +1101,10 @@ class _InfoRow extends StatelessWidget {
           width: 36,
           height: 36,
           decoration: BoxDecoration(
-            color: isDark ? AppTheme.surfaceDark2 : AppTheme.surfaceBlue,
+            color: isDark ? AppTheme.surfaceDark2 : context.accentSoft,
             borderRadius: BorderRadius.circular(10),
           ),
-          child: Icon(icon, color: isDark ? AppTheme.primaryBlueLight : AppTheme.primaryBlue, size: 18),
+          child: Icon(icon, color: isDark ? AppTheme.primaryBlueLight : context.accent, size: 18),
         ),
         const SizedBox(width: 14),
         Expanded(

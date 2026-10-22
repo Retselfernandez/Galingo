@@ -5,6 +5,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../core/theme/app_theme.dart';
+import '../../../core/theme/galingo_colors.dart';
 
 /// Sidebar izquierdo del HOME: avatar, logo, bocadillo, mascota, stats y nivel.
 class GalingoSidebar extends StatelessWidget {
@@ -29,11 +30,11 @@ class GalingoSidebar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 300,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [AppTheme.deepBlue, AppTheme.mediumBlue],
+          colors: [AppTheme.deepBlue, context.accent],
         ),
       ),
       child: Stack(
