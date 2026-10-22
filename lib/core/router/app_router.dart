@@ -3,6 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../presentation/screens/home/home_screen.dart';
+import '../../presentation/screens/home/home_shell.dart';
+import '../../presentation/screens/lessons/lessons_screen.dart';
+import '../../presentation/screens/progress/progress_screen.dart';
 import '../../presentation/screens/lesson/lesson_screen.dart';
 import '../../presentation/screens/review/review_screen.dart';
 import '../../presentation/screens/onboarding/name_input_screen.dart';
@@ -17,6 +20,8 @@ abstract class AppRoutes {
   static const String welcome = '/welcome';
   static const String name = '/name';
   static const String home = '/home';
+  static const String lessons = '/lessons';
+  static const String progress = '/progress';
   static const String lesson = '/lesson/:lessonId';
   static const String review = '/review';
   static const String settings = '/settings';
@@ -43,13 +48,6 @@ final appRouterProvider = Provider<GoRouter>((ref) {
         pageBuilder: (context, state) => _fadeTransition(
           state: state,
           child: const WelcomeScreen(),
-        ),
-      ),
-      GoRoute(
-        path: AppRoutes.home,
-        pageBuilder: (context, state) => _fadeTransition(
-          state: state,
-          child: const HomeScreen(),
         ),
       ),
       GoRoute(
@@ -83,12 +81,15 @@ final appRouterProvider = Provider<GoRouter>((ref) {
           child: const FeedbackScreen(),
         ),
       ),
-      GoRoute(
-        path: AppRoutes.settings,
-        pageBuilder: (context, state) => _slideUpTransition(
-          state: state,
-          child: const SettingsScreen(),
-        ),
+      // Pestanas (móbil): cada rama conserva o seu estado.
+      StatefulShellRoute.indexedStack(
+        builder: (context, state, shell) => HomeShell(shell: shell),
+        branches: [
+          _tabBranch(AppRoutes.home, const HomeScreen()),
+          _tabBranch(AppRoutes.lessons, const LessonsScreen()),
+          _tabBranch(AppRoutes.progress, const ProgressScreen()),
+          _tabBranch(AppRoutes.settings, const SettingsScreen()),
+        ],
       ),
     ],
     errorBuilder: (context, state) => Scaffold(
@@ -98,6 +99,17 @@ final appRouterProvider = Provider<GoRouter>((ref) {
     ),
   );
 });
+
+StatefulShellBranch _tabBranch(String path, Widget child) {
+  return StatefulShellBranch(
+    routes: [
+      GoRoute(
+        path: path,
+        pageBuilder: (context, state) => NoTransitionPage(child: child),
+      ),
+    ],
+  );
+}
 
 CustomTransitionPage<void> _fadeTransition({
   required GoRouterState state,

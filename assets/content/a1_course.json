@@ -10,7 +10,7 @@
       "lessons": [
         {
           "id": "u1_V",
-          "title": "V",
+          "title": "Vocabulario",
           "exercises": [
             {
               "id": "1V01",
@@ -1179,7 +1179,7 @@
         },
         {
           "id": "u1_G",
-          "title": "G",
+          "title": "Gramática",
           "exercises": [
             {
               "id": "1G01",
@@ -1604,7 +1604,7 @@
         },
         {
           "id": "u1_E",
-          "title": "E",
+          "title": "Escoitar",
           "exercises": [
             {
               "id": "1E01",
@@ -1946,7 +1946,7 @@
         },
         {
           "id": "u1_O",
-          "title": "O",
+          "title": "Ortografía",
           "exercises": [
             {
               "id": "1O01",
@@ -2093,7 +2093,7 @@
         },
         {
           "id": "u1_L",
-          "title": "L",
+          "title": "Lectura",
           "exercises": [
             {
               "id": "1L01",
@@ -2271,7 +2271,7 @@
         },
         {
           "id": "u1_P",
-          "title": "P",
+          "title": "Pronuncia",
           "exercises": [
             {
               "id": "1P01",
@@ -2404,7 +2404,7 @@
       "lessons": [
         {
           "id": "u2_V",
-          "title": "V",
+          "title": "Vocabulario",
           "exercises": [
             {
               "id": "2V01",
@@ -2862,7 +2862,7 @@
         },
         {
           "id": "u2_E",
-          "title": "E",
+          "title": "Escoitar",
           "exercises": [
             {
               "id": "2E01",
@@ -3694,7 +3694,7 @@
         },
         {
           "id": "u2_O",
-          "title": "O",
+          "title": "Ortografía",
           "exercises": [
             {
               "id": "2O01",
@@ -4453,7 +4453,7 @@
         },
         {
           "id": "u2_P",
-          "title": "P",
+          "title": "Pronuncia",
           "exercises": [
             {
               "id": "2P01",
@@ -4546,7 +4546,7 @@
       "lessons": [
         {
           "id": "u3_V",
-          "title": "V",
+          "title": "Vocabulario",
           "exercises": [
             {
               "id": "3V01",
@@ -5751,7 +5751,7 @@
         },
         {
           "id": "u3_G",
-          "title": "G",
+          "title": "Gramática",
           "exercises": [
             {
               "id": "3G01",
@@ -6126,7 +6126,7 @@
         },
         {
           "id": "u3_E",
-          "title": "E",
+          "title": "Escoitar",
           "exercises": [
             {
               "id": "3E01",
@@ -6450,7 +6450,7 @@
         },
         {
           "id": "u3_O",
-          "title": "O",
+          "title": "Ortografía",
           "exercises": [
             {
               "id": "3O01",
@@ -6597,7 +6597,7 @@
         },
         {
           "id": "u3_L",
-          "title": "L",
+          "title": "Lectura",
           "exercises": [
             {
               "id": "3L01",
@@ -6775,7 +6775,7 @@
         },
         {
           "id": "u3_P",
-          "title": "P",
+          "title": "Pronuncia",
           "exercises": [
             {
               "id": "3P01",
@@ -6828,7 +6828,7 @@
       "lessons": [
         {
           "id": "u4_V",
-          "title": "V",
+          "title": "Vocabulario",
           "exercises": [
             {
               "id": "4V01",
@@ -8093,7 +8093,7 @@
         },
         {
           "id": "u4_G",
-          "title": "G",
+          "title": "Gramática",
           "exercises": [
             {
               "id": "4G01",
@@ -8515,7 +8515,7 @@
         },
         {
           "id": "u4_E",
-          "title": "E",
+          "title": "Escoitar",
           "exercises": [
             {
               "id": "4E01",
@@ -8856,7 +8856,7 @@
         },
         {
           "id": "u4_O",
-          "title": "O",
+          "title": "Ortografía",
           "exercises": [
             {
               "id": "4O01",
@@ -9003,7 +9003,7 @@
         },
         {
           "id": "u4_L",
-          "title": "L",
+          "title": "Lectura",
           "exercises": [
             {
               "id": "4L01",
@@ -9181,7 +9181,7 @@
         },
         {
           "id": "u4_P",
-          "title": "P",
+          "title": "Pronuncia",
           "exercises": [
             {
               "id": "4P01",
@@ -9314,7 +9314,7 @@
       "lessons": [
         {
           "id": "u5_V",
-          "title": "V",
+          "title": "Vocabulario",
           "exercises": [
             {
               "id": "5V01",
@@ -10332,7 +10332,7 @@
         },
         {
           "id": "u5_G",
-          "title": "G",
+          "title": "Gramática",
           "exercises": [
             {
               "id": "5G01",
@@ -10979,7 +10979,7 @@
         },
         {
           "id": "u5_E",
-          "title": "E",
+          "title": "Escoitar",
           "exercises": [
             {
               "id": "5E01",
@@ -11321,7 +11321,7 @@
         },
         {
           "id": "u5_O",
-          "title": "O",
+          "title": "Ortografía",
           "exercises": [
             {
               "id": "5O01",
@@ -11468,7 +11468,7 @@
         },
         {
           "id": "u5_L",
-          "title": "L",
+          "title": "Lectura",
           "exercises": [
             {
               "id": "5L01",
@@ -11646,7 +11646,7 @@
         },
         {
           "id": "u5_P",
-          "title": "P",
+          "title": "Pronuncia",
           "exercises": [
             {
               "id": "5P01",
@@ -11779,7 +11779,7 @@
       "lessons": [
         {
           "id": "u6_V",
-          "title": "V",
+          "title": "Vocabulario",
           "exercises": [
             {
               "id": "6V01",
@@ -13176,7 +13176,7 @@
         },
         {
           "id": "u6_G",
-          "title": "G",
+          "title": "Gramática",
           "exercises": [
             {
               "id": "6G01",
@@ -13743,7 +13743,7 @@
         },
         {
           "id": "u6_E",
-          "title": "E",
+          "title": "Escoitar",
           "exercises": [
             {
               "id": "6E01",
@@ -14085,7 +14085,7 @@
         },
         {
           "id": "u6_O",
-          "title": "O",
+          "title": "Ortografía",
           "exercises": [
             {
               "id": "6O01",
@@ -14232,7 +14232,7 @@
         },
         {
           "id": "u6_L",
-          "title": "L",
+          "title": "Lectura",
           "exercises": [
             {
               "id": "6L01",
@@ -14453,7 +14453,7 @@
         },
         {
           "id": "u6_P",
-          "title": "P",
+          "title": "Pronuncia",
           "exercises": [
             {
               "id": "6P01",
@@ -14586,7 +14586,7 @@
       "lessons": [
         {
           "id": "u7_V",
-          "title": "V",
+          "title": "Vocabulario",
           "exercises": [
             {
               "id": "7V01",
@@ -15536,7 +15536,7 @@
         },
         {
           "id": "u7_G",
-          "title": "G",
+          "title": "Gramática",
           "exercises": [
             {
               "id": "7G01",
@@ -16051,7 +16051,7 @@
         },
         {
           "id": "u7_E",
-          "title": "E",
+          "title": "Escoitar",
           "exercises": [
             {
               "id": "7E01",
@@ -16331,7 +16331,7 @@
         },
         {
           "id": "u7_O",
-          "title": "O",
+          "title": "Ortografía",
           "exercises": [
             {
               "id": "7O01",
@@ -16478,7 +16478,7 @@
         },
         {
           "id": "u7_L",
-          "title": "L",
+          "title": "Lectura",
           "exercises": [
             {
               "id": "7L01",
@@ -16656,7 +16656,7 @@
         },
         {
           "id": "u7_P",
-          "title": "P",
+          "title": "Pronuncia",
           "exercises": [
             {
               "id": "7P01",
@@ -16789,7 +16789,7 @@
       "lessons": [
         {
           "id": "u8_V",
-          "title": "V",
+          "title": "Vocabulario",
           "exercises": [
             {
               "id": "8V01",
@@ -17798,7 +17798,7 @@
         },
         {
           "id": "u8_G",
-          "title": "G",
+          "title": "Gramática",
           "exercises": [
             {
               "id": "8G01",
@@ -18620,7 +18620,7 @@
         },
         {
           "id": "u8_E",
-          "title": "E",
+          "title": "Escoitar",
           "exercises": [
             {
               "id": "8E01",
@@ -18961,7 +18961,7 @@
         },
         {
           "id": "u8_O",
-          "title": "O",
+          "title": "Ortografía",
           "exercises": [
             {
               "id": "8O01",
@@ -19109,7 +19109,7 @@
         },
         {
           "id": "u8_L",
-          "title": "L",
+          "title": "Lectura",
           "exercises": [
             {
               "id": "8L01",
@@ -19330,7 +19330,7 @@
         },
         {
           "id": "u8_P",
-          "title": "P",
+          "title": "Pronuncia",
           "exercises": [
             {
               "id": "8P01",
@@ -19463,7 +19463,7 @@
       "lessons": [
         {
           "id": "u9_V",
-          "title": "V",
+          "title": "Vocabulario",
           "exercises": [
             {
               "id": "9V01",
@@ -20336,7 +20336,7 @@
         },
         {
           "id": "u9_G",
-          "title": "G",
+          "title": "Gramática",
           "exercises": [
             {
               "id": "9G01",
@@ -21034,7 +21034,7 @@
         },
         {
           "id": "u9_E",
-          "title": "E",
+          "title": "Escoitar",
           "exercises": [
             {
               "id": "9E01",
@@ -21375,7 +21375,7 @@
         },
         {
           "id": "u9_O",
-          "title": "O",
+          "title": "Ortografía",
           "exercises": [
             {
               "id": "9O01",
@@ -21569,7 +21569,7 @@
         },
         {
           "id": "u9_L",
-          "title": "L",
+          "title": "Lectura",
           "exercises": [
             {
               "id": "9L01",
@@ -21790,7 +21790,7 @@
         },
         {
           "id": "u9_P",
-          "title": "P",
+          "title": "Pronuncia",
           "exercises": [
             {
               "id": "9P01",
@@ -21923,7 +21923,7 @@
       "lessons": [
         {
           "id": "u10_V",
-          "title": "V",
+          "title": "Vocabulario",
           "exercises": [
             {
               "id": "10V01",
@@ -22893,7 +22893,7 @@
         },
         {
           "id": "u10_G",
-          "title": "G",
+          "title": "Gramática",
           "exercises": [
             {
               "id": "10G01",
@@ -23545,7 +23545,7 @@
         },
         {
           "id": "u10_E",
-          "title": "E",
+          "title": "Escoitar",
           "exercises": [
             {
               "id": "10E01",
@@ -23887,7 +23887,7 @@
         },
         {
           "id": "u10_O",
-          "title": "O",
+          "title": "Ortografía",
           "exercises": [
             {
               "id": "10O01",
@@ -24081,7 +24081,7 @@
         },
         {
           "id": "u10_L",
-          "title": "L",
+          "title": "Lectura",
           "exercises": [
             {
               "id": "10L01",
@@ -24259,7 +24259,7 @@
         },
         {
           "id": "u10_P",
-          "title": "P",
+          "title": "Pronuncia",
           "exercises": [
             {
               "id": "10P01",
@@ -24392,7 +24392,7 @@
       "lessons": [
         {
           "id": "u11_V",
-          "title": "V",
+          "title": "Vocabulario",
           "exercises": [
             {
               "id": "11V01",
@@ -25319,7 +25319,7 @@
         },
         {
           "id": "u11_G",
-          "title": "G",
+          "title": "Gramática",
           "exercises": [
             {
               "id": "11G01",
@@ -25754,7 +25754,7 @@
         },
         {
           "id": "u11_E",
-          "title": "E",
+          "title": "Escoitar",
           "exercises": [
             {
               "id": "11E01",
@@ -26034,7 +26034,7 @@
         },
         {
           "id": "u11_O",
-          "title": "O",
+          "title": "Ortografía",
           "exercises": [
             {
               "id": "11O01",
@@ -26228,7 +26228,7 @@
         },
         {
           "id": "u11_L",
-          "title": "L",
+          "title": "Lectura",
           "exercises": [
             {
               "id": "11L01",
@@ -26449,7 +26449,7 @@
         },
         {
           "id": "u11_P",
-          "title": "P",
+          "title": "Pronuncia",
           "exercises": [
             {
               "id": "11P01",
@@ -26582,7 +26582,7 @@
       "lessons": [
         {
           "id": "u12_V",
-          "title": "V",
+          "title": "Vocabulario",
           "exercises": [
             {
               "id": "12V01",
@@ -27301,7 +27301,7 @@
         },
         {
           "id": "u12_G",
-          "title": "G",
+          "title": "Gramática",
           "exercises": [
             {
               "id": "12G01",
@@ -28044,7 +28044,7 @@
         },
         {
           "id": "u12_E",
-          "title": "E",
+          "title": "Escoitar",
           "exercises": [
             {
               "id": "12E01",
@@ -28448,7 +28448,7 @@
         },
         {
           "id": "u12_O",
-          "title": "O",
+          "title": "Ortografía",
           "exercises": [
             {
               "id": "12O01",
@@ -28689,7 +28689,7 @@
         },
         {
           "id": "u12_L",
-          "title": "L",
+          "title": "Lectura",
           "exercises": [
             {
               "id": "12L01",
@@ -29125,7 +29125,7 @@
         },
         {
           "id": "u12_P",
-          "title": "P",
+          "title": "Pronuncia",
           "exercises": [
             {
               "id": "12P01",

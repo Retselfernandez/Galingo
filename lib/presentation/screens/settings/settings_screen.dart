@@ -28,10 +28,8 @@ class SettingsScreen extends ConsumerWidget {
         title: Text(strings.settings),
         foregroundColor: Colors.white,
         elevation: 0,
-        leading: BackButton(
-          color: Colors.white,
-          onPressed: () => Navigator.of(context).pop(),
-        ),
+        // Cando é unha pestana non hai "atrás"; se se empurrou (escritorio),
+        // AppBar engade o botón automaticamente.
         actions: [
           TextButton.icon(
             onPressed: () => _showResetDialog(context, ref, strings),

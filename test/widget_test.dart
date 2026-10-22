@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:galingo/main.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:galingo/core/router/app_router.dart';
 import 'package:galingo/data/repositories/hive_repository.dart';
 
 void main() {
@@ -60,5 +61,45 @@ void main() {
     tester.view.resetDevicePixelRatio();
 
     expect(errors, isEmpty, reason: errors.take(3).join('\n---\n'));
+  });
+
+  testWidgets('As pestanas do shell non desbordan',
+      (WidgetTester tester) async {
+    final errors = <String>[];
+    final oldHandler = FlutterError.onError;
+    FlutterError.onError = (d) => errors.add(d.exceptionAsString());
+
+    tester.view.physicalSize = const Size(390, 844);
+    tester.view.devicePixelRatio = 1.0;
+
+    final container = ProviderContainer();
+    addTearDown(container.dispose);
+
+    await tester.pumpWidget(
+      UncontrolledProviderScope(
+        container: container,
+        child: const GalingoApp(),
+      ),
+    );
+    await tester.pump(const Duration(milliseconds: 2500));
+    await tester.pump(const Duration(milliseconds: 600));
+
+    final router = container.read(appRouterProvider);
+    for (final path in const [
+      AppRoutes.home,
+      AppRoutes.lessons,
+      AppRoutes.progress,
+      AppRoutes.settings,
+    ]) {
+      router.go(path);
+      await tester.pump(const Duration(milliseconds: 600));
+      await tester.pump(const Duration(milliseconds: 600));
+    }
+
+    FlutterError.onError = oldHandler;
+    tester.view.resetPhysicalSize();
+    tester.view.resetDevicePixelRatio();
+
+    expect(errors, isEmpty, reason: errors.take(4).join('\n---\n'));
   });
 }

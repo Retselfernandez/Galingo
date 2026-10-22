@@ -164,39 +164,30 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             child: isMobileNative
                 ? SizedBox(
                     height: 48,
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 14,
-                            vertical: 5,
-                          ),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(24),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withValues(alpha: 0.18),
-                                blurRadius: 10,
-                                offset: const Offset(0, 4),
-                              ),
-                            ],
-                          ),
-                          child: Image.asset(
-                            'assets/images/logo_wordmark_navy.png',
-                            height: 38,
-                            filterQuality: FilterQuality.medium,
-                            semanticLabel: 'Galingo',
-                          ),
+                    child: Center(
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 14,
+                          vertical: 5,
                         ),
-                        Align(
-                          alignment: Alignment.centerRight,
-                          child: SettingsButton(
-                            onTap: () => context.push(AppRoutes.settings),
-                          ),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(24),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withValues(alpha: 0.18),
+                              blurRadius: 10,
+                              offset: const Offset(0, 4),
+                            ),
+                          ],
                         ),
-                      ],
+                        child: Image.asset(
+                          'assets/images/logo_wordmark_navy.png',
+                          height: 38,
+                          filterQuality: FilterQuality.medium,
+                          semanticLabel: 'Galingo',
+                        ),
+                      ),
                     ),
                   )
                 : Row(
@@ -221,10 +212,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           ),
         ),
         Expanded(child: buildMap(pillOnly)),
-        SizedBox(
-          height: (MediaQuery.of(context).size.height * 0.34).clamp(220.0, 360.0),
-          child: panel,
-        ),
       ],
     );
   }

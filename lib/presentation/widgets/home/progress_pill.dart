@@ -73,7 +73,7 @@ class ProgressPill extends StatelessWidget {
           ),
           const SizedBox(width: 12),
           Text(
-            '$completed / $total leccións',
+            '$completed / $total paradas',
             style: GoogleFonts.nunito(
               fontSize: 12.5,
               fontWeight: FontWeight.w700,
