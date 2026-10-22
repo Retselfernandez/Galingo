@@ -163,15 +163,32 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             bottom: false,
             child: isMobileNative
                 ? SizedBox(
-                    height: 42,
+                    height: 48,
                     child: Stack(
                       alignment: Alignment.center,
                       children: [
-                        Image.asset(
-                          'assets/images/logo_wordmark_white.png',
-                          height: 32,
-                          filterQuality: FilterQuality.medium,
-                          semanticLabel: 'Galingo',
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 14,
+                            vertical: 5,
+                          ),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(24),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withValues(alpha: 0.18),
+                                blurRadius: 10,
+                                offset: const Offset(0, 4),
+                              ),
+                            ],
+                          ),
+                          child: Image.asset(
+                            'assets/images/logo_wordmark_navy.png',
+                            height: 38,
+                            filterQuality: FilterQuality.medium,
+                            semanticLabel: 'Galingo',
+                          ),
                         ),
                         Align(
                           alignment: Alignment.centerRight,
