@@ -62,7 +62,6 @@ class SettingsScreen extends ConsumerWidget {
               // ── Apariencia ───────────────────────────────────────────────
               _buildSectionHeader(context, strings.appearance, 2),
               const SizedBox(height: 12),
-              _buildThemeSelector(context, ref, settings, strings),
               const SizedBox(height: 16),
 
               // ── Tipografía ───────────────────────────────────────────────
@@ -369,52 +368,6 @@ class SettingsScreen extends ConsumerWidget {
                       fontWeight: FontWeight.w700,
                       color: isSelected ? Colors.white : Theme.of(context).colorScheme.onSurface,
                     ),
-                  ),
-                ),
-              );
-            }).toList(),
-          ),
-        ],
-      ),
-    );
-  }
-
-  // ─── Tema ─────────────────────────────────────────────────────────────────
-
-  Widget _buildThemeSelector(
-    BuildContext context,
-    WidgetRef ref,
-    SettingsModel settings,
-    AppLocalizations strings,
-  ) {
-    final themeLabels = [strings.lightTheme, strings.darkTheme, strings.systemTheme];
-    return _SettingsCard(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            strings.theme,
-            style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                  color: AppTheme.textSecondary,
-                  fontWeight: FontWeight.w600,
-                ),
-          ),
-          const SizedBox(height: 12),
-          Row(
-            children: AppThemeMode.values.asMap().entries.map((entry) {
-              final mode = entry.value;
-              final label = themeLabels[entry.key];
-              final isSelected = settings.themeMode == mode;
-              return Expanded(
-                child: Padding(
-                  padding: const EdgeInsetsDirectional.only(end: 8),
-                  child: _ThemeOptionButton(
-                    icon: mode.icon,
-                    label: label,
-                    isSelected: isSelected,
-                    onTap: () => ref
-                        .read(settingsProvider.notifier)
-                        .setThemeMode(mode),
                   ),
                 ),
               );
@@ -929,58 +882,6 @@ class _SettingsCard extends StatelessWidget {
         .animate()
         .fadeIn(duration: 400.ms)
         .slideY(begin: 0.1, end: 0, curve: Curves.easeOut, duration: 400.ms);
-  }
-}
-
-class _ThemeOptionButton extends StatelessWidget {
-  final String icon;
-  final String label;
-  final bool isSelected;
-  final VoidCallback onTap;
-
-  const _ThemeOptionButton({
-    required this.icon,
-    required this.label,
-    required this.isSelected,
-    required this.onTap,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    return GestureDetector(
-      onTap: onTap,
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 200),
-        padding: const EdgeInsets.symmetric(vertical: 12),
-        decoration: BoxDecoration(
-          color: isSelected
-              ? AppTheme.primaryBlue
-              : (isDark ? AppTheme.surfaceDark2 : AppTheme.surfaceBlue),
-          borderRadius: BorderRadius.circular(14),
-          border: Border.all(
-            color: isSelected
-                ? AppTheme.primaryBlue
-                : (isDark ? Colors.white.withValues(alpha: 0.1) : Colors.grey.shade200),
-            width: 2,
-          ),
-        ),
-        child: Column(
-          children: [
-            Text(icon, style: const TextStyle(fontSize: 20)),
-            const SizedBox(height: 4),
-            Text(
-              label,
-              style: TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.w700,
-                color: isSelected ? Colors.white : Theme.of(context).colorScheme.onSurfaceVariant,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
   }
 }
 

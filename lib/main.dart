@@ -184,11 +184,10 @@ class _GalingoAppState extends ConsumerState<GalingoApp>
     final dynamicLight = AppTheme.lightTheme.copyWith(textTheme: textTheme);
     final dynamicDark = AppTheme.darkTheme.copyWith(textTheme: textTheme);
 
-    final themeMode = switch (settings.themeMode) {
-      AppThemeMode.light => ThemeMode.light,
-      AppThemeMode.dark => ThemeMode.dark,
-      AppThemeMode.system => ThemeMode.system,
-    };
+    // A identidade visual de Galingo é luminosa (mapa, camiño, ceo): o tema
+    // escuro require un redeseño completo e queda fóra do alcance da beta.
+    // Forzamos sempre o tema claro para evitar combinacións ilexibles.
+    const themeMode = ThemeMode.light;
 
     return MaterialApp.router(
       title: AppConstants.appName,
