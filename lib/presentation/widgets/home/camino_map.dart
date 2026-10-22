@@ -98,62 +98,76 @@ class _CaminoMapState extends State<CaminoMap> {
   }
 
   Widget _header(BuildContext context, {required bool narrow}) {
+    final titleBlock = Column(
+      crossAxisAlignment:
+          narrow ? CrossAxisAlignment.center : CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(
+          'O Camiño do Galego',
+          maxLines: 2,
+          textAlign: narrow ? TextAlign.center : TextAlign.start,
+          overflow: TextOverflow.ellipsis,
+          style: GoogleFonts.pacifico(
+            fontSize: narrow ? 22 : 30,
+            color: context.accent,
+            height: 1.05,
+          ),
+        ),
+        Text(
+          'Nivel A1 — Iniciación',
+          style: GoogleFonts.nunito(
+            fontSize: narrow ? 13 : 15,
+            fontWeight: FontWeight.w800,
+            color: context.accent,
+          ),
+        ),
+      ],
+    );
+
     return Padding(
       padding: EdgeInsets.fromLTRB(
           narrow ? 16 : 24, narrow ? 12 : 18, narrow ? 16 : 24, 10),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment:
+            narrow ? CrossAxisAlignment.center : CrossAxisAlignment.start,
         children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('🗺️', style: TextStyle(fontSize: narrow ? 26 : 34)),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'O Camiño do Galego',
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: GoogleFonts.pacifico(
-                        fontSize: narrow ? 22 : 30,
-                        color: context.accent,
-                        height: 1.05,
-                      ),
-                    ),
-                    Text(
-                      'Nivel A1 — Iniciación',
-                      style: GoogleFonts.nunito(
-                        fontSize: narrow ? 13 : 15,
-                        fontWeight: FontWeight.w800,
-                        color: context.accent,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              if (!narrow && widget.headerTrailing != null) ...[
-                const SizedBox(width: 12),
-                widget.headerTrailing!,
+          if (narrow)
+            // Móbil: bloque centrado, en liña co wordmark da cabeceira.
+            // O emoji vai enriba para que o texto quede centrado de verdade.
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Text('🗺️', style: TextStyle(fontSize: 22)),
+                const SizedBox(height: 2),
+                titleBlock,
               ],
-            ],
-          ),
+            )
+          else
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('🗺️', style: TextStyle(fontSize: narrow ? 26 : 34)),
+                const SizedBox(width: 10),
+                Expanded(child: titleBlock),
+                if (widget.headerTrailing != null) ...[
+                  const SizedBox(width: 12),
+                  widget.headerTrailing!,
+                ],
+              ],
+            ),
           if (narrow && widget.headerTrailing != null) ...[
-            const SizedBox(height: 10),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: FittedBox(
-                fit: BoxFit.scaleDown,
-                alignment: Alignment.centerLeft,
-                child: widget.headerTrailing!,
-              ),
+            const SizedBox(height: 12),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.center,
+              child: widget.headerTrailing!,
             ),
           ],
           const SizedBox(height: 12),
           Text(
             'Cada lección é unha parada no teu camiño.',
+            textAlign: narrow ? TextAlign.center : TextAlign.start,
             style: GoogleFonts.nunito(
               fontSize: narrow ? 13 : 15,
               fontWeight: FontWeight.w800,
@@ -162,6 +176,7 @@ class _CaminoMapState extends State<CaminoMap> {
           ),
           Text(
             'Completa as leccións e fai que o teu galego che leve máis lonxe.',
+            textAlign: narrow ? TextAlign.center : TextAlign.start,
             style: GoogleFonts.nunito(
               fontSize: narrow ? 12 : 13.5,
               fontWeight: FontWeight.w500,
