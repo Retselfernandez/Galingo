@@ -134,21 +134,11 @@ class _CaminoMapState extends State<CaminoMap> {
         children: [
           if (narrow)
             // Móbil: bloque centrado, en liña co wordmark da cabeceira.
-            // O emoji vai enriba para que o texto quede centrado de verdade.
-            Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const Text('🗺️', style: TextStyle(fontSize: 22)),
-                const SizedBox(height: 2),
-                titleBlock,
-              ],
-            )
+            titleBlock
           else
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('🗺️', style: TextStyle(fontSize: narrow ? 26 : 34)),
-                const SizedBox(width: 10),
                 Expanded(child: titleBlock),
                 if (widget.headerTrailing != null) ...[
                   const SizedBox(width: 12),
