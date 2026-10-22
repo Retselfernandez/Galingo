@@ -436,6 +436,22 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    // A cabeceira da lección é do fondo do tema (clara en modo claro), así que
+    // as iconas da barra de estado deben ser escuras para verse.
+    final base = isDark ? SystemUiOverlayStyle.light : SystemUiOverlayStyle.dark;
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: base.copyWith(
+        statusBarColor: Colors.transparent,
+        systemNavigationBarColor: isDark ? AppTheme.backgroundDark : Colors.white,
+        systemNavigationBarIconBrightness:
+            isDark ? Brightness.light : Brightness.dark,
+      ),
+      child: _buildScaffold(context),
+    );
+  }
+
+  Widget _buildScaffold(BuildContext context) {
     if (_isLoading) {
       return const Scaffold(
         body: Center(child: CircularProgressIndicator()),

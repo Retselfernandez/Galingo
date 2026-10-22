@@ -14,7 +14,7 @@ con motor de **repetición espaciada** y **voz en gallego 100 % en el dispositiv
 [![Flutter](https://img.shields.io/badge/Flutter-%E2%89%A5%203.19-02569B?logo=flutter&logoColor=white)](https://flutter.dev)
 [![Plataformas](https://img.shields.io/badge/Android%20·%20iOS%20·%20macOS%20·%20Windows%20·%20Web-multiplataforma-6E4AFF)](#-plataformas)
 [![Idiomas](https://img.shields.io/badge/UI-8%20idiomas-blueviolet)](#-internacionalización)
-[![Tests](https://img.shields.io/badge/tests-41%20%E2%9C%94-success)](#-calidad)
+[![Tests](https://img.shields.io/badge/tests-42%20%E2%9C%94-success)](#-calidad)
 [![Licencia](https://img.shields.io/badge/licencia-CC%20BY--NC%204.0-lightgrey)](LICENSE)
 
 <img src="assets/images/logo_wordmark.png" alt="Galingo" width="420" />
@@ -53,6 +53,7 @@ desde cero. Combina tres ideas:
 | | Característica | Detalle |
 |---|---|---|
 | 🗺️ | **Camino gamificado** | 12 unidades · 70 lecciones · progreso y desbloqueo secuencial |
+| 🧭 | **Navegación por pestañas** | Camiño (mapa) · Leccións · Progreso · Axustes, cada una conservando su estado |
 | 🧩 | **9 tipos de ejercicio** | opción múltiple, huecos, emparejar, traducción, ordenar, lectura, imagen, dictado y voz |
 | 🔊 | **Audio del modelo** | 119 audios con voz neuronal gallega (*Celtia*, Proxecto Nós) |
 | 🎙️ | **Pronunciación evaluada** | reconocimiento **on-device** + similitud fonética por palabra |
@@ -67,12 +68,24 @@ desde cero. Combina tres ideas:
 
 <div align="center">
 
-<img src=".github/assets/screenshot-splash.jpg" alt="Portada" width="30%" />
-<img src=".github/assets/screenshot-home.jpg" alt="O Camiño do Galego (HOME)" width="30%" />
-<img src=".github/assets/screenshot-settings.jpg" alt="Ajustes" width="30%" />
+**Modo claro**
+
+<img src=".github/assets/screenshot-camino.jpg" alt="O Camiño do Galego" width="24%" />
+<img src=".github/assets/screenshot-leccions.jpg" alt="Leccións" width="24%" />
+<img src=".github/assets/screenshot-progreso.jpg" alt="Progreso" width="24%" />
+<img src=".github/assets/screenshot-leccion.jpg" alt="Lección" width="24%" />
+
+<br/><br/>
+
+**Modo oscuro**
+
+<img src=".github/assets/screenshot-camino-dark.jpg" alt="O Camiño do Galego (escuro)" width="24%" />
+<img src=".github/assets/screenshot-leccions-dark.jpg" alt="Leccións (escuro)" width="24%" />
+<img src=".github/assets/screenshot-progreso-dark.jpg" alt="Progreso (escuro)" width="24%" />
+<img src=".github/assets/screenshot-leccion-dark.jpg" alt="Lección (escuro)" width="24%" />
 
 <br/>
-<sub><b>Portada</b> &nbsp;·&nbsp; <b>O Camiño do Galego</b> (HOME: unidades, progreso y <b>Repaso</b>) &nbsp;·&nbsp; <b>Ajustes</b> (perfil, XP, racha, 8 idiomas y tema)</sub>
+<sub><b>Camiño</b> (mapa del camino y botón de Repaso) &nbsp;·&nbsp; <b>Leccións</b> (paradas y contenidos) &nbsp;·&nbsp; <b>Progreso</b> (XP, racha y avance por parada) &nbsp;·&nbsp; <b>Lección</b> (9 tipos de ejercicio)</sub>
 
 </div>
 
@@ -93,7 +106,7 @@ flutter run
 ### Tests y análisis
 
 ```bash
-flutter test        # 41 tests
+flutter test        # 42 tests
 flutter analyze     # sin incidencias
 ```
 
@@ -250,7 +263,7 @@ con verdad conocida**, y con la telemetría de la beta:
 | **Error del modelo (datos reales, 3,17 M repasos)** | HLR MAE 0,488 · SM-2 MAE 0,563 (**−13,3 %**) |
 | **Sesgo de programación adaptativa** | documentado (los datos proceden de otro programador → confusor) |
 | **Voz on-device** | 94 % de acierto con el modelo *small* (100 % con *medium*) |
-| **Calidad** | 41 tests, `flutter analyze` limpio, CI en cada push |
+| **Calidad** | 42 tests, `flutter analyze` limpio, CI en cada push |
 
 <div align="center">
 <img src="backend/experimentos/figuras/fig_mae_rmse.png" alt="MAE / RMSE" width="46%" />
@@ -281,9 +294,22 @@ con verdad conocida**, y con la telemetría de la beta:
 
 ## ✅ Calidad
 
-- **41 tests** (`flutter test`) y `flutter analyze` sin incidencias.
+- **42 tests** (`flutter test`) y `flutter analyze` sin incidencias.
 - **CI** en cada *push*: *gate* de calidad antes de compilar y publicar.
 - Los defectos detectados por los testers se convierten en **tests de regresión**.
+
+---
+
+## 🆕 Novedades (evolución de la interfaz)
+
+- **Navegación por pestañas**: Camiño · Leccións · Progreso · Axustes, con un
+  *shell* que conserva el estado de cada pestaña.
+- **Modo oscuro completo**: paleta semántica (`GalingoColors`) aplicada a todas
+  las pantallas, con selector Claro / Escuro / Sistema.
+- **Identidad renovada**: wordmark «Galingo» (con el gorro marinero) en la
+  cabecera móvil y cabecera del camino centrada.
+- **Nuevas pantallas**: *Leccións* (paradas y contenidos) y *Progreso*
+  (XP, racha y avance por parada).
 
 ---
 
