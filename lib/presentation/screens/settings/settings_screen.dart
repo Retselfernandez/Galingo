@@ -25,76 +25,130 @@ class SettingsScreen extends ConsumerWidget {
     final userName = progressAsync.valueOrNull?.userName ?? 'Estudante';
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(strings.settings),
-        foregroundColor: Colors.white,
-        elevation: 0,
-        // Cando é unha pestana non hai "atrás"; se se empurrou (escritorio),
-        // AppBar engade o botón automaticamente.
-        actions: [
-          TextButton.icon(
-            onPressed: () => _showResetDialog(context, ref, strings),
-            icon: const Icon(Icons.refresh_rounded, color: Colors.white70, size: 18),
-            label: Text(
-              strings.reset,
-              style: const TextStyle(color: Colors.white70, fontSize: 13),
+      // Cabecera propia, igual ca nas outras pestanas (Camiño, Leccións,
+      // Progreso): mesma franxa deepBlue, icono e tipografía.
+      body: Column(
+        children: [
+          Container(
+            width: double.infinity,
+            color: AppTheme.deepBlue,
+            padding: const EdgeInsets.fromLTRB(20, 8, 20, 18),
+            child: SafeArea(
+              bottom: false,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      if (Navigator.of(context).canPop()) ...[
+                        IconButton(
+                          padding: EdgeInsets.zero,
+                          constraints: const BoxConstraints(),
+                          icon: const Icon(Icons.arrow_back_rounded,
+                              color: Colors.white, size: 22),
+                          onPressed: () => Navigator.of(context).maybePop(),
+                        ),
+                        const SizedBox(width: 10),
+                      ],
+                      const Icon(Icons.settings_rounded,
+                          color: Colors.white, size: 26),
+                      const SizedBox(width: 10),
+                      Expanded(
+                        child: Text(
+                          'Axustes',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: GoogleFonts.nunito(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w900,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      TextButton.icon(
+                        onPressed: () =>
+                            _showResetDialog(context, ref, strings),
+                        icon: const Icon(Icons.refresh_rounded,
+                            color: Colors.white70, size: 18),
+                        label: Text(
+                          strings.reset,
+                          style: const TextStyle(
+                              color: Colors.white70, fontSize: 13),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 6),
+                  Text(
+                    'Perfil, idioma, tema e datos',
+                    style: GoogleFonts.nunito(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white.withValues(alpha: 0.82),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Expanded(
+            child: Center(
+              child: Container(
+                constraints: const BoxConstraints(maxWidth: 680),
+                child: ListView(
+                  padding: const EdgeInsets.all(24),
+                  children: [
+                    // ── Perfil / Nombre ──────────────────────────────────────────
+                    _buildSectionHeader(context, strings.editName, 0),
+                    const SizedBox(height: 12),
+                    _buildProfileCard(context, ref, strings, userName),
+                    const SizedBox(height: 16),
+
+                    // ── Idioma ───────────────────────────────────────────────────
+                    _buildSectionHeader(context, strings.interfaceLanguage, 1),
+                    const SizedBox(height: 12),
+                    _buildLanguageSelector(context, ref, settings, strings),
+                    const SizedBox(height: 16),
+
+                    // ── Apariencia ───────────────────────────────────────────────
+                    _buildSectionHeader(context, strings.appearance, 2),
+                    const SizedBox(height: 12),
+                    _buildThemeSelector(context, ref, settings, strings),
+                    const SizedBox(height: 16),
+
+                    // ── Tipografía ───────────────────────────────────────────────
+                    _buildSectionHeader(context, strings.typography, 3),
+                    const SizedBox(height: 12),
+                    _buildFontFamilySelector(context, ref, settings),
+                    const SizedBox(height: 16),
+                    _buildFontSizeSelector(context, ref, settings, strings),
+                    const SizedBox(height: 16),
+                    _buildFontPreview(context, settings, strings),
+                    const SizedBox(height: 24),
+
+                    // ── Información ──────────────────────────────────────────────
+                    _buildSectionHeader(context, strings.information, 4),
+                    const SizedBox(height: 12),
+                    _buildInfoCard(context, strings),
+                    const SizedBox(height: 16),
+                    _SettingsCard(
+                      child: ListTile(
+                        leading: const Icon(Icons.bug_report_rounded),
+                        title: const Text('Reportar un problema'),
+                        subtitle: const Text(
+                            'O agita el dispositivo en cualquier pantalla'),
+                        onTap: () => context.go(AppRoutes.feedback),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    _buildTelemetryCard(context, ref, strings),
+                    const SizedBox(height: 32),
+                  ],
+                ),
+              ),
             ),
           ),
         ],
-      ),
-      body: Center(
-        child: Container(
-          constraints: const BoxConstraints(maxWidth: 680),
-          child: ListView(
-            padding: const EdgeInsets.all(24),
-            children: [
-              // ── Perfil / Nombre ──────────────────────────────────────────
-              _buildSectionHeader(context, strings.editName, 0),
-              const SizedBox(height: 12),
-              _buildProfileCard(context, ref, strings, userName),
-              const SizedBox(height: 16),
-
-              // ── Idioma ───────────────────────────────────────────────────
-              _buildSectionHeader(context, strings.interfaceLanguage, 1),
-              const SizedBox(height: 12),
-              _buildLanguageSelector(context, ref, settings, strings),
-              const SizedBox(height: 16),
-
-              // ── Apariencia ───────────────────────────────────────────────
-              _buildSectionHeader(context, strings.appearance, 2),
-              const SizedBox(height: 12),
-              _buildThemeSelector(context, ref, settings, strings),
-              const SizedBox(height: 16),
-
-              // ── Tipografía ───────────────────────────────────────────────
-              _buildSectionHeader(context, strings.typography, 3),
-              const SizedBox(height: 12),
-              _buildFontFamilySelector(context, ref, settings),
-              const SizedBox(height: 16),
-              _buildFontSizeSelector(context, ref, settings, strings),
-              const SizedBox(height: 16),
-              _buildFontPreview(context, settings, strings),
-              const SizedBox(height: 24),
-
-              // ── Información ──────────────────────────────────────────────
-              _buildSectionHeader(context, strings.information, 4),
-              const SizedBox(height: 12),
-              _buildInfoCard(context, strings),
-              const SizedBox(height: 16),
-              _SettingsCard(
-                child: ListTile(
-                  leading: const Icon(Icons.bug_report_rounded),
-                  title: const Text('Reportar un problema'),
-                  subtitle: const Text('O agita el dispositivo en cualquier pantalla'),
-                  onTap: () => context.go(AppRoutes.feedback),
-                ),
-              ),
-              const SizedBox(height: 16),
-              _buildTelemetryCard(context, ref, strings),
-              const SizedBox(height: 32),
-            ],
-          ),
-        ),
       ),
     );
   }
@@ -168,7 +222,8 @@ class SettingsScreen extends ConsumerWidget {
                 ),
               ),
               IconButton(
-                onPressed: () => _showEditNameDialog(context, ref, strings, userName),
+                onPressed: () =>
+                    _showEditNameDialog(context, ref, strings, userName),
                 icon: const Icon(Icons.edit_rounded, size: 20),
                 color: context.accent,
                 tooltip: strings.editName,
@@ -181,8 +236,12 @@ class SettingsScreen extends ConsumerWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Expanded(child: _buildStatBox('⭐', '${progress.totalXp} XP', 'Experiencia total')),
-              Expanded(child: _buildStatBox('🔥', '${progress.streakDays} días', 'Racha de estudio')),
+              Expanded(
+                  child: _buildStatBox(
+                      '⭐', '${progress.totalXp} XP', 'Experiencia total')),
+              Expanded(
+                  child: _buildStatBox(
+                      '🔥', '${progress.streakDays} días', 'Racha de estudio')),
             ],
           ),
           const SizedBox(height: 16),
@@ -243,7 +302,8 @@ class SettingsScreen extends ConsumerWidget {
             context: context,
             builder: (context) => AlertDialog(
               backgroundColor: context.cardBg,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
               title: Row(
                 children: [
                   Text(achievement.icon, style: const TextStyle(fontSize: 28)),
@@ -266,7 +326,8 @@ class SettingsScreen extends ConsumerWidget {
                   ),
                   const SizedBox(height: 16),
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                     decoration: BoxDecoration(
                       color: isUnlocked
                           ? AppTheme.successGreenLight
@@ -276,7 +337,9 @@ class SettingsScreen extends ConsumerWidget {
                     child: Text(
                       isUnlocked ? '🔓 Desbloqueada' : '🔒 Bloqueada',
                       style: TextStyle(
-                        color: isUnlocked ? AppTheme.successGreen : AppTheme.errorRed,
+                        color: isUnlocked
+                            ? AppTheme.successGreen
+                            : AppTheme.errorRed,
                         fontWeight: FontWeight.bold,
                         fontSize: 12,
                       ),
@@ -305,7 +368,8 @@ class SettingsScreen extends ConsumerWidget {
                 shape: BoxShape.circle,
                 color: isUnlocked ? context.cardBg : context.softBg,
                 border: Border.all(
-                  color: isUnlocked ? Colors.amber.shade600 : Colors.grey.shade400,
+                  color:
+                      isUnlocked ? Colors.amber.shade600 : Colors.grey.shade400,
                   width: isUnlocked ? 2.5 : 1.5,
                 ),
                 boxShadow: [
@@ -346,21 +410,25 @@ class SettingsScreen extends ConsumerWidget {
             children: AppLanguage.values.map((lang) {
               final isSelected = settings.language == lang;
               return GestureDetector(
-                onTap: () => ref
-                    .read(settingsProvider.notifier)
-                    .setLanguage(lang),
+                onTap: () =>
+                    ref.read(settingsProvider.notifier).setLanguage(lang),
                 child: Container(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   decoration: BoxDecoration(
                     color: isSelected
                         ? context.accent
-                        : (Theme.of(context).brightness == Brightness.dark ? AppTheme.surfaceDark2 : Theme.of(context).cardTheme.color ?? Colors.white),
+                        : (Theme.of(context).brightness == Brightness.dark
+                            ? AppTheme.surfaceDark2
+                            : Theme.of(context).cardTheme.color ??
+                                Colors.white),
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(
                       color: isSelected
                           ? context.accent
-                          : (Theme.of(context).brightness == Brightness.dark ? Colors.white.withValues(alpha: 0.1) : Colors.grey.shade300),
+                          : (Theme.of(context).brightness == Brightness.dark
+                              ? Colors.white.withValues(alpha: 0.1)
+                              : Colors.grey.shade300),
                     ),
                   ),
                   child: Text(
@@ -368,7 +436,9 @@ class SettingsScreen extends ConsumerWidget {
                     style: TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.w700,
-                      color: isSelected ? Colors.white : Theme.of(context).colorScheme.onSurface,
+                      color: isSelected
+                          ? Colors.white
+                          : Theme.of(context).colorScheme.onSurface,
                     ),
                   ),
                 ),
@@ -388,7 +458,11 @@ class SettingsScreen extends ConsumerWidget {
     SettingsModel settings,
     AppLocalizations strings,
   ) {
-    final themeLabels = [strings.lightTheme, strings.darkTheme, strings.systemTheme];
+    final themeLabels = [
+      strings.lightTheme,
+      strings.darkTheme,
+      strings.systemTheme
+    ];
     return _SettingsCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -413,9 +487,8 @@ class SettingsScreen extends ConsumerWidget {
                     icon: mode.icon,
                     label: label,
                     isSelected: isSelected,
-                    onTap: () => ref
-                        .read(settingsProvider.notifier)
-                        .setThemeMode(mode),
+                    onTap: () =>
+                        ref.read(settingsProvider.notifier).setThemeMode(mode),
                   ),
                 ),
               );
@@ -450,9 +523,8 @@ class SettingsScreen extends ConsumerWidget {
             return _FontOption(
               font: font,
               isSelected: isSelected,
-              onTap: () => ref
-                  .read(settingsProvider.notifier)
-                  .setFontFamily(font),
+              onTap: () =>
+                  ref.read(settingsProvider.notifier).setFontFamily(font),
             );
           }),
         ],
@@ -483,7 +555,8 @@ class SettingsScreen extends ConsumerWidget {
                     ),
               ),
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                 decoration: BoxDecoration(
                   color: AppTheme.primaryBlue.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(20),
@@ -505,14 +578,17 @@ class SettingsScreen extends ConsumerWidget {
               final isSelected = settings.fontSize == size;
               return Expanded(
                 child: GestureDetector(
-                  onTap: () => ref.read(settingsProvider.notifier).setFontSize(size),
+                  onTap: () =>
+                      ref.read(settingsProvider.notifier).setFontSize(size),
                   child: Column(
                     children: [
                       AnimatedContainer(
                         duration: const Duration(milliseconds: 200),
                         height: 4,
                         decoration: BoxDecoration(
-                          color: isSelected ? context.accent : Colors.grey.shade200,
+                          color: isSelected
+                              ? context.accent
+                              : Colors.grey.shade200,
                           borderRadius: BorderRadius.circular(2),
                         ),
                       ),
@@ -521,8 +597,11 @@ class SettingsScreen extends ConsumerWidget {
                         'A',
                         style: TextStyle(
                           fontSize: 12 + (AppFontSize.values.indexOf(size) * 4),
-                          fontWeight: isSelected ? FontWeight.w800 : FontWeight.w400,
-                          color: isSelected ? context.accent : context.textSecondary,
+                          fontWeight:
+                              isSelected ? FontWeight.w800 : FontWeight.w400,
+                          color: isSelected
+                              ? context.accent
+                              : context.textSecondary,
                         ),
                       ),
                       const SizedBox(height: 4),
@@ -530,8 +609,10 @@ class SettingsScreen extends ConsumerWidget {
                         size.displayName,
                         style: TextStyle(
                           fontSize: 10,
-                          fontWeight: isSelected ? FontWeight.w700 : FontWeight.w400,
-                          color: isSelected ? context.accent : context.textMuted,
+                          fontWeight:
+                              isSelected ? FontWeight.w700 : FontWeight.w400,
+                          color:
+                              isSelected ? context.accent : context.textMuted,
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -612,19 +693,40 @@ class SettingsScreen extends ConsumerWidget {
     return _SettingsCard(
       child: Column(
         children: [
-          _InfoRow(icon: Icons.apps_rounded, label: strings.application, value: 'Galingo'),
+          _InfoRow(
+              icon: Icons.apps_rounded,
+              label: strings.application,
+              value: 'Galingo'),
           const Divider(height: 24),
-          _InfoRow(icon: Icons.tag_rounded, label: strings.version, value: '2.0.0 (TFM Master Edition)'),
+          _InfoRow(
+              icon: Icons.tag_rounded,
+              label: strings.version,
+              value: '2.0.0 (TFM Master Edition)'),
           const Divider(height: 24),
-          _InfoRow(icon: Icons.school_rounded, label: strings.levelCovered, value: strings.levelA1),
+          _InfoRow(
+              icon: Icons.school_rounded,
+              label: strings.levelCovered,
+              value: strings.levelA1),
           const Divider(height: 24),
-          _InfoRow(icon: Icons.translate_rounded, label: strings.targetLanguage, value: 'Galego'),
+          _InfoRow(
+              icon: Icons.translate_rounded,
+              label: strings.targetLanguage,
+              value: 'Galego'),
           const Divider(height: 24),
-          _InfoRow(icon: Icons.person_rounded, label: strings.developedBy, value: 'TFM · Lester Fernández'),
+          _InfoRow(
+              icon: Icons.person_rounded,
+              label: strings.developedBy,
+              value: 'TFM · Lester Fernández'),
           const Divider(height: 24),
-          _InfoRow(icon: Icons.code_rounded, label: strings.technology, value: 'Flutter 3.44 · Dart 3'),
+          _InfoRow(
+              icon: Icons.code_rounded,
+              label: strings.technology,
+              value: 'Flutter 3.44 · Dart 3'),
           const Divider(height: 24),
-          _InfoRow(icon: Icons.calendar_today_rounded, label: strings.year, value: '2026'),
+          _InfoRow(
+              icon: Icons.calendar_today_rounded,
+              label: strings.year,
+              value: '2026'),
         ],
       ),
     );
@@ -658,7 +760,8 @@ class SettingsScreen extends ConsumerWidget {
                   color: AppTheme.primaryBlue.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Icon(Icons.analytics_rounded, color: context.accent, size: 20),
+                child: Icon(Icons.analytics_rounded,
+                    color: context.accent, size: 20),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -672,7 +775,8 @@ class SettingsScreen extends ConsumerWidget {
               ),
               if (hasData)
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                   decoration: BoxDecoration(
                     color: AppTheme.successGreenLight,
                     borderRadius: BorderRadius.circular(20),
@@ -727,18 +831,21 @@ class SettingsScreen extends ConsumerWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                _buildTelemetryBox(
-                    context, 'Predicións', '$count reviews', 'Muestras evaluadas'),
-                _buildTelemetryBox(
-                    context, 'MAE HLR', hlrMaeVal.toStringAsFixed(4), 'Erro predictivo HLR'),
-                _buildTelemetryBox(
-                    context, 'MAE SM-2', sm2MaeVal.toStringAsFixed(4), 'Erro predictivo SM-2'),
+                _buildTelemetryBox(context, 'Predicións', '$count reviews',
+                    'Muestras evaluadas'),
+                _buildTelemetryBox(context, 'MAE HLR',
+                    hlrMaeVal.toStringAsFixed(4), 'Erro predictivo HLR'),
+                _buildTelemetryBox(context, 'MAE SM-2',
+                    sm2MaeVal.toStringAsFixed(4), 'Erro predictivo SM-2'),
               ],
             ),
             const SizedBox(height: 20),
             Text(
               'Comparativa de Error Predictivo (Menor MAE = Maior Precisión):',
-              style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: context.textSecondary),
+              style: TextStyle(
+                  fontSize: 11,
+                  fontWeight: FontWeight.bold,
+                  color: context.textSecondary),
             ),
             const SizedBox(height: 8),
             _buildMaeBar(
@@ -767,12 +874,18 @@ class SettingsScreen extends ConsumerWidget {
         children: [
           Text(
             label,
-            style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: context.textMuted),
+            style: TextStyle(
+                fontSize: 11,
+                fontWeight: FontWeight.w600,
+                color: context.textMuted),
           ),
           const SizedBox(height: 4),
           Text(
             value,
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: context.textPrimary),
+            style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w800,
+                color: context.textPrimary),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 2),
@@ -792,15 +905,20 @@ class SettingsScreen extends ConsumerWidget {
     required Color color,
     required double maxValue,
   }) {
-    final double pct = maxValue == 0.0 ? 0.0 : (value / maxValue).clamp(0.05, 1.0);
+    final double pct =
+        maxValue == 0.0 ? 0.0 : (value / maxValue).clamp(0.05, 1.0);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(label, style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w500)),
-            Text(value.toStringAsFixed(4), style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
+            Text(label,
+                style:
+                    const TextStyle(fontSize: 11, fontWeight: FontWeight.w500)),
+            Text(value.toStringAsFixed(4),
+                style:
+                    const TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
           ],
         ),
         const SizedBox(height: 4),
@@ -874,7 +992,8 @@ class SettingsScreen extends ConsumerWidget {
     );
   }
 
-  void _showResetDialog(BuildContext context, WidgetRef ref, AppLocalizations strings) {
+  void _showResetDialog(
+      BuildContext context, WidgetRef ref, AppLocalizations strings) {
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
@@ -919,7 +1038,9 @@ class _SettingsCard extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: backgroundColor ?? Theme.of(context).cardTheme.color ?? Colors.white,
+        color: backgroundColor ??
+            Theme.of(context).cardTheme.color ??
+            Colors.white,
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
@@ -966,7 +1087,9 @@ class _ThemeOptionButton extends StatelessWidget {
           border: Border.all(
             color: isSelected
                 ? context.accent
-                : (isDark ? Colors.white.withValues(alpha: 0.1) : Colors.grey.shade200),
+                : (isDark
+                    ? Colors.white.withValues(alpha: 0.1)
+                    : Colors.grey.shade200),
             width: 2,
           ),
         ),
@@ -979,7 +1102,9 @@ class _ThemeOptionButton extends StatelessWidget {
               style: TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w700,
-                color: isSelected ? Colors.white : Theme.of(context).colorScheme.onSurfaceVariant,
+                color: isSelected
+                    ? Colors.white
+                    : Theme.of(context).colorScheme.onSurfaceVariant,
               ),
             ),
           ],
@@ -1002,10 +1127,14 @@ class _FontOption extends StatelessWidget {
 
   TextStyle get _previewStyle {
     return switch (font) {
-      AppFontFamily.nunito => GoogleFonts.nunito(fontSize: 16, fontWeight: FontWeight.w600),
-      AppFontFamily.outfit => GoogleFonts.outfit(fontSize: 16, fontWeight: FontWeight.w600),
-      AppFontFamily.roboto => GoogleFonts.roboto(fontSize: 16, fontWeight: FontWeight.w600),
-      AppFontFamily.lato => GoogleFonts.lato(fontSize: 16, fontWeight: FontWeight.w600),
+      AppFontFamily.nunito =>
+        GoogleFonts.nunito(fontSize: 16, fontWeight: FontWeight.w600),
+      AppFontFamily.outfit =>
+        GoogleFonts.outfit(fontSize: 16, fontWeight: FontWeight.w600),
+      AppFontFamily.roboto =>
+        GoogleFonts.roboto(fontSize: 16, fontWeight: FontWeight.w600),
+      AppFontFamily.lato =>
+        GoogleFonts.lato(fontSize: 16, fontWeight: FontWeight.w600),
     };
   }
 
@@ -1025,7 +1154,9 @@ class _FontOption extends StatelessWidget {
           border: Border.all(
             color: isSelected
                 ? context.accent
-                : (Theme.of(context).brightness == Brightness.dark ? Colors.white.withValues(alpha: 0.1) : Colors.grey.shade200),
+                : (Theme.of(context).brightness == Brightness.dark
+                    ? Colors.white.withValues(alpha: 0.1)
+                    : Colors.grey.shade200),
             width: isSelected ? 2 : 1,
           ),
         ),
@@ -1039,7 +1170,9 @@ class _FontOption extends StatelessWidget {
                     font.displayName,
                     style: _previewStyle.copyWith(
                       color: isSelected
-                          ? (Theme.of(context).brightness == Brightness.dark ? AppTheme.primaryBlueLight : context.accent)
+                          ? (Theme.of(context).brightness == Brightness.dark
+                              ? AppTheme.primaryBlueLight
+                              : context.accent)
                           : Theme.of(context).colorScheme.onSurface,
                     ),
                   ),
@@ -1053,7 +1186,8 @@ class _FontOption extends StatelessWidget {
             Text(
               'Ola!',
               style: _previewStyle.copyWith(
-                  color: Theme.of(context).colorScheme.onSurfaceVariant, fontSize: 14),
+                  color: Theme.of(context).colorScheme.onSurfaceVariant,
+                  fontSize: 14),
             ),
             const SizedBox(width: 12),
             AnimatedContainer(
@@ -1066,7 +1200,9 @@ class _FontOption extends StatelessWidget {
                 border: Border.all(
                   color: isSelected
                       ? context.accent
-                      : (Theme.of(context).brightness == Brightness.dark ? Colors.white.withValues(alpha: 0.2) : Colors.grey.shade300),
+                      : (Theme.of(context).brightness == Brightness.dark
+                          ? Colors.white.withValues(alpha: 0.2)
+                          : Colors.grey.shade300),
                   width: 2,
                 ),
               ),
@@ -1104,7 +1240,9 @@ class _InfoRow extends StatelessWidget {
             color: isDark ? AppTheme.surfaceDark2 : context.accentSoft,
             borderRadius: BorderRadius.circular(10),
           ),
-          child: Icon(icon, color: isDark ? AppTheme.primaryBlueLight : context.accent, size: 18),
+          child: Icon(icon,
+              color: isDark ? AppTheme.primaryBlueLight : context.accent,
+              size: 18),
         ),
         const SizedBox(width: 14),
         Expanded(
