@@ -129,5 +129,10 @@
   "reportSend": "Bericht senden",
   "categoryBug": "🐛 Fehler / Bug",
   "categorySuggestion": "💡 Vorschlag",
-  "categoryContent": "📚 Inhalt"
+  "categoryContent": "📚 Inhalt",
+  "reminders": "🔔 Erinnerungen",
+  "dailyReminder": "Tägliche Erinnerung",
+  "dailyReminderSubtitle": "Ein galicisches Sprichwort pro Tag – nur, wenn du deine Lektion noch nicht gemacht hast.",
+  "reminderTime": "Erinnerungszeit",
+  "notificationsDenied": "Aktiviere die Galingo-Benachrichtigungen in den Systemeinstellungen, um Erinnerungen zu nutzen."
 }

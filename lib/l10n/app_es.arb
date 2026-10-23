@@ -129,5 +129,10 @@
   "reportSend": "Enviar reporte",
   "categoryBug": "🐛 Error / Bug",
   "categorySuggestion": "💡 Sugerencia",
-  "categoryContent": "📚 Contenido"
+  "categoryContent": "📚 Contenido",
+  "reminders": "🔔 Recordatorios",
+  "dailyReminder": "Recordatorio diario",
+  "dailyReminderSubtitle": "Un refrán en gallego al día, y solo si aún no hiciste la lección.",
+  "reminderTime": "Hora del recordatorio",
+  "notificationsDenied": "Activa las notificaciones de Galingo en los ajustes del sistema para usar los recordatorios."
 }

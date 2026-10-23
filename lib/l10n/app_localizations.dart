@@ -811,6 +811,36 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'📚 Contenido'**
   String get categoryContent;
+
+  /// No description provided for @reminders.
+  ///
+  /// In es, this message translates to:
+  /// **'🔔 Recordatorios'**
+  String get reminders;
+
+  /// No description provided for @dailyReminder.
+  ///
+  /// In es, this message translates to:
+  /// **'Recordatorio diario'**
+  String get dailyReminder;
+
+  /// No description provided for @dailyReminderSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Un refrán en gallego al día, y solo si aún no hiciste la lección.'**
+  String get dailyReminderSubtitle;
+
+  /// No description provided for @reminderTime.
+  ///
+  /// In es, this message translates to:
+  /// **'Hora del recordatorio'**
+  String get reminderTime;
+
+  /// No description provided for @notificationsDenied.
+  ///
+  /// In es, this message translates to:
+  /// **'Activa las notificaciones de Galingo en los ajustes del sistema para usar los recordatorios.'**
+  String get notificationsDenied;
 }
 
 class _AppLocalizationsDelegate

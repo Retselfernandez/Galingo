@@ -7,6 +7,8 @@ import '../../data/models/unit_model.dart';
 import '../../data/models/user_progress_model.dart';
 import '../../data/repositories/hive_repository.dart';
 import '../../data/repositories/memory_repository.dart';
+import '../../core/services/notification_service.dart';
+import 'settings_provider.dart';
 
 // ─── Progress Provider ────────────────────────────────────────────────────────
 
@@ -45,6 +47,18 @@ class ProgressNotifier extends AsyncNotifier<UserProgressModel> {
     }
 
     state = AsyncData(updated);
+
+    // Xa fixo lección hoxe: reprogramar sen molestar ata mañá.
+    try {
+      final settings = ref.read(settingsProvider);
+      await NotificationService.instance.reschedule(
+        enabled: settings.remindersEnabled,
+        hour: settings.reminderHour,
+        minute: settings.reminderMinute,
+        userName: updated.userName,
+        alreadyDoneToday: true,
+      );
+    } catch (_) {}
   }
 
   Future<void> recordReviewSession({required List<HlrEvent> sessionEvents}) async {

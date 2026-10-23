@@ -370,4 +370,21 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get categoryContent => '📚 Conteúdo';
+
+  @override
+  String get reminders => '🔔 Lembretes';
+
+  @override
+  String get dailyReminder => 'Lembrete diário';
+
+  @override
+  String get dailyReminderSubtitle =>
+      'Um refrán em galego por dia, só se ainda não fez a lição.';
+
+  @override
+  String get reminderTime => 'Hora do lembrete';
+
+  @override
+  String get notificationsDenied =>
+      'Ative as notificações do Galingo nas definições do sistema para usar os lembretes.';
 }

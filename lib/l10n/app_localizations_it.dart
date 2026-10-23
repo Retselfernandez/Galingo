@@ -370,4 +370,21 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get categoryContent => '📚 Contenuto';
+
+  @override
+  String get reminders => '🔔 Promemoria';
+
+  @override
+  String get dailyReminder => 'Promemoria giornaliero';
+
+  @override
+  String get dailyReminderSubtitle =>
+      'Un proverbio galiziano al giorno, solo se non hai ancora fatto la lezione.';
+
+  @override
+  String get reminderTime => 'Ora del promemoria';
+
+  @override
+  String get notificationsDenied =>
+      'Attiva le notifiche di Galingo nelle impostazioni di sistema per usare i promemoria.';
 }

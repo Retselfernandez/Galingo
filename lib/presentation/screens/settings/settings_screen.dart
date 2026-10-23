@@ -105,8 +105,14 @@ class SettingsScreen extends ConsumerWidget {
                     _buildThemeSelector(context, ref, settings, strings),
                     const SizedBox(height: 16),
 
+                    // ── Lembretes ────────────────────────────────────────────────
+                    _buildSectionHeader(context, strings.reminders, 3),
+                    const SizedBox(height: 12),
+                    _buildRemindersCard(context, ref, settings, strings),
+                    const SizedBox(height: 16),
+
                     // ── Tipografía ───────────────────────────────────────────────
-                    _buildSectionHeader(context, strings.typography, 3),
+                    _buildSectionHeader(context, strings.typography, 4),
                     const SizedBox(height: 12),
                     _buildFontFamilySelector(context, ref, settings),
                     const SizedBox(height: 16),
@@ -116,7 +122,7 @@ class SettingsScreen extends ConsumerWidget {
                     const SizedBox(height: 24),
 
                     // ── Información ──────────────────────────────────────────────
-                    _buildSectionHeader(context, strings.information, 4),
+                    _buildSectionHeader(context, strings.information, 5),
                     const SizedBox(height: 12),
                     _buildInfoCard(context, strings),
                     const SizedBox(height: 16),
@@ -236,6 +242,68 @@ class SettingsScreen extends ConsumerWidget {
               ),
             ],
           ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildRemindersCard(
+    BuildContext context,
+    WidgetRef ref,
+    SettingsModel settings,
+    AppLocalizations strings,
+  ) {
+    final time = TimeOfDay(
+      hour: settings.reminderHour,
+      minute: settings.reminderMinute,
+    );
+
+    return _SettingsCard(
+      child: Column(
+        children: [
+          SwitchListTile(
+            contentPadding: EdgeInsets.zero,
+            secondary: const Icon(Icons.notifications_active_rounded),
+            title: Text(
+              strings.dailyReminder,
+              style: const TextStyle(fontWeight: FontWeight.w700),
+            ),
+            subtitle: Text(strings.dailyReminderSubtitle),
+            value: settings.remindersEnabled,
+            onChanged: (value) async {
+              final ok = await ref
+                  .read(settingsProvider.notifier)
+                  .setRemindersEnabled(value);
+              if (!ok && context.mounted) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text(strings.notificationsDenied)),
+                );
+              }
+            },
+          ),
+          if (settings.remindersEnabled) ...[
+            const Divider(height: 1),
+            ListTile(
+              contentPadding: EdgeInsets.zero,
+              leading: const Icon(Icons.schedule_rounded),
+              title: Text(strings.reminderTime),
+              trailing: Text(
+                time.format(context),
+                style: const TextStyle(fontWeight: FontWeight.w800),
+              ),
+              onTap: () async {
+                final picked = await showTimePicker(
+                  context: context,
+                  initialTime: time,
+                );
+                if (picked != null) {
+                  await ref
+                      .read(settingsProvider.notifier)
+                      .setReminderTime(picked.hour, picked.minute);
+                }
+              },
+            ),
+          ],
         ],
       ),
     );
@@ -897,7 +965,9 @@ class _SettingsCard extends StatelessWidget {
           ),
         ],
       ),
-      child: child,
+      // Material transparente: os ListTile/ink precisan un Material próximo
+      // e o Container (DecoratedBox) agocharíaos.
+      child: Material(type: MaterialType.transparency, child: child),
     )
         .animate()
         .fadeIn(duration: 400.ms)

@@ -129,5 +129,10 @@
   "reportSend": "Trimite raportul",
   "categoryBug": "🐛 Eroare / Bug",
   "categorySuggestion": "💡 Sugestie",
-  "categoryContent": "📚 Conținut"
+  "categoryContent": "📚 Conținut",
+  "reminders": "🔔 Memento",
+  "dailyReminder": "Memento zilnic",
+  "dailyReminderSubtitle": "Un proverb în galiciană pe zi, doar dacă nu ți-ai făcut încă lecția.",
+  "reminderTime": "Ora mementoului",
+  "notificationsDenied": "Activează notificările Galingo din setările sistemului pentru a folosi mementourile."
 }

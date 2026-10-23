@@ -367,4 +367,21 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get categoryContent => '📚 Content';
+
+  @override
+  String get reminders => '🔔 Reminders';
+
+  @override
+  String get dailyReminder => 'Daily reminder';
+
+  @override
+  String get dailyReminderSubtitle =>
+      'One Galician proverb a day, only if you haven\'t done your lesson yet.';
+
+  @override
+  String get reminderTime => 'Reminder time';
+
+  @override
+  String get notificationsDenied =>
+      'Enable Galingo notifications in your system settings to use reminders.';
 }

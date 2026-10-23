@@ -56,6 +56,9 @@ class SettingsModel {
   final AppThemeMode themeMode;
   final AppLanguage language;
   final bool soundEnabled;
+  final bool remindersEnabled;
+  final int reminderHour;
+  final int reminderMinute;
 
   const SettingsModel({
     this.fontFamily = AppFontFamily.nunito,
@@ -63,6 +66,9 @@ class SettingsModel {
     this.themeMode = AppThemeMode.light,
     this.language = AppLanguage.es,
     this.soundEnabled = true,
+    this.remindersEnabled = false,
+    this.reminderHour = 13,
+    this.reminderMinute = 30,
   });
 
   factory SettingsModel.fromJson(Map<String, dynamic> json) {
@@ -84,6 +90,9 @@ class SettingsModel {
         orElse: () => AppLanguage.es,
       ),
       soundEnabled: json['soundEnabled'] as bool? ?? true,
+      remindersEnabled: json['remindersEnabled'] as bool? ?? false,
+      reminderHour: json['reminderHour'] as int? ?? 13,
+      reminderMinute: json['reminderMinute'] as int? ?? 30,
     );
   }
 
@@ -93,6 +102,9 @@ class SettingsModel {
         'themeMode': themeMode.name,
         'language': language.name,
         'soundEnabled': soundEnabled,
+        'remindersEnabled': remindersEnabled,
+        'reminderHour': reminderHour,
+        'reminderMinute': reminderMinute,
       };
 
   SettingsModel copyWith({
@@ -101,6 +113,9 @@ class SettingsModel {
     AppThemeMode? themeMode,
     AppLanguage? language,
     bool? soundEnabled,
+    bool? remindersEnabled,
+    int? reminderHour,
+    int? reminderMinute,
   }) {
     return SettingsModel(
       fontFamily: fontFamily ?? this.fontFamily,
@@ -108,6 +123,9 @@ class SettingsModel {
       themeMode: themeMode ?? this.themeMode,
       language: language ?? this.language,
       soundEnabled: soundEnabled ?? this.soundEnabled,
+      remindersEnabled: remindersEnabled ?? this.remindersEnabled,
+      reminderHour: reminderHour ?? this.reminderHour,
+      reminderMinute: reminderMinute ?? this.reminderMinute,
     );
   }
 }

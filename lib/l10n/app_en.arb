@@ -129,5 +129,10 @@
   "reportSend": "Send report",
   "categoryBug": "🐛 Bug / Error",
   "categorySuggestion": "💡 Suggestion",
-  "categoryContent": "📚 Content"
+  "categoryContent": "📚 Content",
+  "reminders": "🔔 Reminders",
+  "dailyReminder": "Daily reminder",
+  "dailyReminderSubtitle": "One Galician proverb a day, only if you haven't done your lesson yet.",
+  "reminderTime": "Reminder time",
+  "notificationsDenied": "Enable Galingo notifications in your system settings to use reminders."
 }

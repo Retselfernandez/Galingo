@@ -1,9 +1,12 @@
 import 'dart:ui' as ui;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/services/audio_service.dart';
+import '../../core/services/notification_service.dart';
+import '../../core/utils/iso_date.dart';
 import '../../data/models/settings_model.dart';
 import '../../data/repositories/hive_repository.dart';
 import '../../data/repositories/memory_repository.dart';
+import 'progress_provider.dart';
 
 /// Notifier para la configuración de la app
 class SettingsNotifier extends Notifier<SettingsModel> {
@@ -56,6 +59,35 @@ class SettingsNotifier extends Notifier<SettingsModel> {
   }
 
   Future<void> resetToDefaults() async => _save(const SettingsModel());
+
+  /// Reprograma os recordatorios segundo o estado actual.
+  Future<void> _syncReminders() async {
+    final progress = ref.read(progressNotifierProvider).valueOrNull;
+    await NotificationService.instance.reschedule(
+      enabled: state.remindersEnabled,
+      hour: state.reminderHour,
+      minute: state.reminderMinute,
+      userName: progress?.userName ?? 'Estudante',
+      alreadyDoneToday: progress?.lastLessonDate == todayIsoDate(),
+    );
+  }
+
+  /// Activa/desactiva os recordatorios. Devolve false se o sistema denegou
+  /// o permiso de notificacións.
+  Future<bool> setRemindersEnabled(bool enabled) async {
+    if (enabled) {
+      final granted = await NotificationService.instance.requestPermission();
+      if (!granted) return false;
+    }
+    await _save(state.copyWith(remindersEnabled: enabled));
+    await _syncReminders();
+    return true;
+  }
+
+  Future<void> setReminderTime(int hour, int minute) async {
+    await _save(state.copyWith(reminderHour: hour, reminderMinute: minute));
+    await _syncReminders();
+  }
 }
 
 /// Provider global de configuración

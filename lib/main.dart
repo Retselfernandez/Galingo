@@ -10,6 +10,8 @@ import 'core/theme/galingo_colors.dart';
 import 'core/services/audio_service.dart';
 import 'core/services/shake_service.dart';
 import 'core/services/telemetry_service.dart';
+import 'core/services/notification_service.dart';
+import 'core/utils/iso_date.dart';
 import 'data/models/settings_model.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:galingo/l10n/app_localizations.dart';
@@ -26,6 +28,17 @@ Future<bool> _initAppHelper() async {
     await TelemetryService.instance.init(uid);
     TelemetryService.instance.startSyncListener();
     await TelemetryService.instance.registerSession();
+    // Recordatorios locais (só se o usuario os activou).
+    await NotificationService.instance.init();
+    final s = HiveRepository.instance.getSettings();
+    final p = HiveRepository.instance.getProgress();
+    await NotificationService.instance.reschedule(
+      enabled: s.remindersEnabled,
+      hour: s.reminderHour,
+      minute: s.reminderMinute,
+      userName: p.userName,
+      alreadyDoneToday: p.lastLessonDate == todayIsoDate(),
+    );
     return true;
   } catch (e) {
     debugPrint("Hive initialization failed: $e");

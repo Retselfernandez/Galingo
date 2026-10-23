@@ -12,6 +12,7 @@ import '../../core/ml/sm2_engine.dart';
 import '../../core/constants/app_constants.dart';
 import '../models/settings_model.dart';
 import '../models/user_progress_model.dart';
+import '../../core/utils/iso_date.dart';
 import 'memory_repository.dart';
 
 /// Implementación de MemoryRepository con Hive
@@ -181,11 +182,13 @@ class HiveRepository implements MemoryRepository {
       hlrErrorSum: current.hlrErrorSum + batchHlrErrorSum,
       sm2ErrorSum: current.sm2ErrorSum + batchSm2ErrorSum,
       telemetryCount: current.telemetryCount + batchTelemetryCount,
+      lastLessonDate: todayIsoDate(),
     );
 
     await saveProgress(updated);
     return updated;
   }
+
 
   @override
   Future<UserProgressModel> recordReviewSession({

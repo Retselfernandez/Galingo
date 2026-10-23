@@ -129,5 +129,10 @@
   "reportSend": "发送报告",
   "categoryBug": "🐛 错误 / Bug",
   "categorySuggestion": "💡 建议",
-  "categoryContent": "📚 内容"
+  "categoryContent": "📚 内容",
+  "reminders": "🔔 提醒",
+  "dailyReminder": "每日提醒",
+  "dailyReminderSubtitle": "每天一句加利西亚语谚语，且仅在你尚未完成课程时发送。",
+  "reminderTime": "提醒时间",
+  "notificationsDenied": "请在系统设置中开启 Galingo 通知以使用提醒。"
 }

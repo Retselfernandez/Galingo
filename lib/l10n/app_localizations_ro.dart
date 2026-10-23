@@ -369,4 +369,21 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get categoryContent => '📚 Conținut';
+
+  @override
+  String get reminders => '🔔 Memento';
+
+  @override
+  String get dailyReminder => 'Memento zilnic';
+
+  @override
+  String get dailyReminderSubtitle =>
+      'Un proverb în galiciană pe zi, doar dacă nu ți-ai făcut încă lecția.';
+
+  @override
+  String get reminderTime => 'Ora mementoului';
+
+  @override
+  String get notificationsDenied =>
+      'Activează notificările Galingo din setările sistemului pentru a folosi mementourile.';
 }

@@ -8,6 +8,8 @@ class UserProgressModel {
   final String currentLevel;
   final int streakDays;
   final String? lastSessionDate;
+  /// Data (yyyy-MM-dd) da última lección completada (para os recordatorios).
+  final String? lastLessonDate;
   final String userName;
   
   // Parámetros matemáticos del algoritmo adaptativo HLR
@@ -28,6 +30,7 @@ class UserProgressModel {
     this.currentLevel = 'A1',
     this.streakDays = 0,
     this.lastSessionDate,
+    this.lastLessonDate,
     this.userName = 'Estudante',
     this.theta = HlrEngine.defaultTheta,
     this.hlrEvents = const [],
@@ -82,6 +85,7 @@ class UserProgressModel {
       currentLevel: json['currentLevel'] as String? ?? 'A1',
       streakDays: json['streakDays'] as int? ?? 0,
       lastSessionDate: json['lastSessionDate'] as String?,
+      lastLessonDate: json['lastLessonDate'] as String?,
       userName: json['userName'] as String? ?? 'Estudante',
       theta: parsedTheta,
       hlrEvents: parsedEvents,
@@ -99,6 +103,7 @@ class UserProgressModel {
         'currentLevel': currentLevel,
         'streakDays': streakDays,
         'lastSessionDate': lastSessionDate,
+        'lastLessonDate': lastLessonDate,
         'userName': userName,
         'theta': theta,
         'hlrEvents': hlrEvents.map((e) => e.toJson()).toList(),
@@ -115,6 +120,7 @@ class UserProgressModel {
     String? currentLevel,
     int? streakDays,
     String? lastSessionDate,
+    String? lastLessonDate,
     String? userName,
     List<double>? theta,
     List<HlrEvent>? hlrEvents,
@@ -130,6 +136,7 @@ class UserProgressModel {
       currentLevel: currentLevel ?? this.currentLevel,
       streakDays: streakDays ?? this.streakDays,
       lastSessionDate: lastSessionDate ?? this.lastSessionDate,
+      lastLessonDate: lastLessonDate ?? this.lastLessonDate,
       userName: userName ?? this.userName,
       theta: theta ?? this.theta,
       hlrEvents: hlrEvents ?? this.hlrEvents,

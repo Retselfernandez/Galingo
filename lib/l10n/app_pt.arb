@@ -129,5 +129,10 @@
   "reportSend": "Enviar relatório",
   "categoryBug": "🐛 Erro / Bug",
   "categorySuggestion": "💡 Sugestão",
-  "categoryContent": "📚 Conteúdo"
+  "categoryContent": "📚 Conteúdo",
+  "reminders": "🔔 Lembretes",
+  "dailyReminder": "Lembrete diário",
+  "dailyReminderSubtitle": "Um refrán em galego por dia, só se ainda não fez a lição.",
+  "reminderTime": "Hora do lembrete",
+  "notificationsDenied": "Ative as notificações do Galingo nas definições do sistema para usar os lembretes."
 }

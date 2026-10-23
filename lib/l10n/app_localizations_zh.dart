@@ -362,4 +362,19 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get categoryContent => '📚 内容';
+
+  @override
+  String get reminders => '🔔 提醒';
+
+  @override
+  String get dailyReminder => '每日提醒';
+
+  @override
+  String get dailyReminderSubtitle => '每天一句加利西亚语谚语，且仅在你尚未完成课程时发送。';
+
+  @override
+  String get reminderTime => '提醒时间';
+
+  @override
+  String get notificationsDenied => '请在系统设置中开启 Galingo 通知以使用提醒。';
 }

@@ -129,5 +129,10 @@
   "reportSend": "Invia segnalazione",
   "categoryBug": "🐛 Bug / Errore",
   "categorySuggestion": "💡 Suggerimento",
-  "categoryContent": "📚 Contenuto"
+  "categoryContent": "📚 Contenuto",
+  "reminders": "🔔 Promemoria",
+  "dailyReminder": "Promemoria giornaliero",
+  "dailyReminderSubtitle": "Un proverbio galiziano al giorno, solo se non hai ancora fatto la lezione.",
+  "reminderTime": "Ora del promemoria",
+  "notificationsDenied": "Attiva le notifiche di Galingo nelle impostazioni di sistema per usare i promemoria."
 }
