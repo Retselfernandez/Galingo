@@ -57,7 +57,11 @@ class TelemetryService {
           .post(
             Uri.parse('$baseUrl/api/v1/sesion'),
             headers: {'Content-Type': 'application/json'},
-            body: jsonEncode({'user_id': userId, 'fecha': fecha}),
+            body: jsonEncode({
+              'user_id': userId,
+              'fecha': fecha,
+              'plataforma': defaultTargetPlatform.name,
+            }),
           )
           .timeout(const Duration(seconds: 15));
       client.close();

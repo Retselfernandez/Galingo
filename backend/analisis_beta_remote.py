@@ -7,13 +7,14 @@ Descarga /api/v1/export y calcula:
   - usuarios, retención D1/D7, sesiones, eventos y feedback
   - HLR (si >= 20 eventos): MAE y AUC-ROC con regresión logística
 """
+import datetime
 import json
 import os
 import sys
 import urllib.request
 from collections import defaultdict
 
-URL = sys.argv[1] if len(sys.argv) > 1 else "https://retselfernandez--galingo-backend.modal.run"
+URL = sys.argv[1] if len(sys.argv) > 1 else "https://galingo-backend.onrender.com"
 TOKEN = os.environ.get("EXPORT_TOKEN", "")
 
 
@@ -34,8 +35,17 @@ def main():
     for s in sesiones:
         por_usuario[s["user_id"]].add(s["fecha"])
     usuarios = len(por_usuario)
-    d1 = sum(1 for f in por_usuario.values() if len(f) >= 1)
-    d7 = sum(1 for f in por_usuario.values() if len(f) >= 7)
+    # Retención honesta: volveu o día seguinte / á semana seguinte
+    # do seu primeiro día de uso (non "ten máis dun día").
+    d1 = 0
+    d7 = 0
+    for fechas in por_usuario.values():
+        dias = {datetime.date.fromisoformat(f) for f in fechas}
+        primeiro = min(dias)
+        if primeiro + datetime.timedelta(days=1) in dias:
+            d1 += 1
+        if primeiro + datetime.timedelta(days=7) in dias:
+            d7 += 1
 
     print(json.dumps({
         "usuarios_beta": usuarios,

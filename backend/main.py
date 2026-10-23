@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Depends, HTTPException, File, UploadFile, Form, Header
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from typing import Optional, List
@@ -7,6 +8,14 @@ from models import Base, engine, SessionLocal, TrazaInteraccion, ReporteFeedback
 
 Base.metadata.create_all(engine)
 app = FastAPI(title="Galingo API", version="1.0.0")
+
+# API pública de só escrita (telemetría): CORS aberto para a build web.
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 def get_db():
     db = SessionLocal()
@@ -126,6 +135,10 @@ def exportar(
             "categoria": f.categoria,
             "texto": f.texto,
             "pantalla": f.pantalla,
+            "plataforma": f.plataforma,
+            "version_app": f.version_app,
+            "mae_hlr": f.mae_hlr,
+            "mae_sm2": f.mae_sm2,
         }
         for f in db.query(ReporteFeedback).all()
     ]
