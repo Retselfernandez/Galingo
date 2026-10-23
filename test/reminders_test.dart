@@ -7,30 +7,39 @@ void main() {
     test('refranForDate é determinista dentro do mesmo día', () {
       final a = refranForDate(DateTime(2026, 10, 23));
       final b = refranForDate(DateTime(2026, 10, 23, 18, 45));
-      expect(a.gl, b.gl);
+      expect(a.text, b.text);
     });
 
     test('un ciclo completo non repite refráns', () {
       final seen = <String>{};
       final start = DateTime(2026, 1, 1);
       for (var i = 0; i < kRefrans.length; i++) {
-        seen.add(refranForDate(start.add(Duration(days: i))).gl);
+        seen.add(refranForDate(start.add(Duration(days: i))).text);
       }
       expect(seen.length, kRefrans.length);
     });
 
     test('días consecutivos dan refráns distintos', () {
       expect(
-        refranForDate(DateTime(2026, 3, 1)).gl,
-        isNot(refranForDate(DateTime(2026, 3, 2)).gl),
+        refranForDate(DateTime(2026, 3, 1)).text,
+        isNot(refranForDate(DateTime(2026, 3, 2)).text),
       );
     });
 
-    test('todos os refráns teñen tradución', () {
+    test('todos os refráns inclúen o nome do usuario', () {
       for (final r in kRefrans) {
-        expect(r.gl.trim(), isNotEmpty);
-        expect(r.es.trim(), isNotEmpty);
+        expect(r.text.contains('{nome}'), isTrue, reason: r.text);
       }
+    });
+
+    test('refranParts substitúe o nome e separa título e corpo', () {
+      final parts = refranParts(
+        const Refran('Malo será, {nome}. Con cinco minutos abonda.'),
+        'Lester',
+      );
+      expect(parts.title, 'Malo será, Lester.');
+      expect(parts.body, 'Con cinco minutos abonda.');
+      expect(parts.title.contains('{nome}'), isFalse);
     });
   });
 

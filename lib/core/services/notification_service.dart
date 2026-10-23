@@ -94,12 +94,12 @@ class NotificationService {
       if (!when.isAfter(now)) continue;
       if (i == 0 && alreadyDoneToday) continue;
 
-      final refran = refranForDate(when);
+      final parts = refranParts(refranForDate(when), userName);
       try {
         await _plugin.zonedSchedule(
           id: _baseId + i,
-          title: '«${refran.gl}»',
-          body: '$userName, fai a túa lección de hoxe.\n${refran.es}',
+          title: parts.title,
+          body: parts.body,
           scheduledDate: when,
           notificationDetails: const NotificationDetails(
             android: AndroidNotificationDetails(
