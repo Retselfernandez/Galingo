@@ -107,7 +107,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       xp: progress.totalXp,
       streak: progress.streakDays,
       lessonsCompleted: lessonsCompleted,
-      levelLabel: strings.levelA1,
+      progress: progress,
+      levelLabel: 'Nivel A1 — Iniciación',
       onLevelTap: () => _showLevelInfo(context, strings),
     );
 

@@ -6,6 +6,9 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../core/theme/app_theme.dart';
 import '../../../core/theme/galingo_colors.dart';
+import '../../../data/models/achievement.dart';
+import '../../../data/models/user_progress_model.dart';
+import '../progress/achievement_badge.dart';
 
 /// Sidebar izquierdo del HOME: avatar, logo, bocadillo, mascota, stats y nivel.
 class GalingoSidebar extends StatelessWidget {
@@ -13,6 +16,7 @@ class GalingoSidebar extends StatelessWidget {
   final int xp;
   final int streak;
   final int lessonsCompleted;
+  final UserProgressModel progress;
   final String levelLabel;
   final VoidCallback onLevelTap;
 
@@ -22,6 +26,7 @@ class GalingoSidebar extends StatelessWidget {
     required this.xp,
     required this.streak,
     required this.lessonsCompleted,
+    required this.progress,
     required this.levelLabel,
     required this.onLevelTap,
   });
@@ -73,6 +78,8 @@ class GalingoSidebar extends StatelessWidget {
                   _mascot(),
                   const SizedBox(height: 18),
                   _statsCard(context),
+                  const SizedBox(height: 14),
+                  _badges(context),
                   const SizedBox(height: 14),
                   _levelPill(context),
                 ],
@@ -184,7 +191,7 @@ class GalingoSidebar extends StatelessWidget {
 
   Widget _mascot() {
     return SizedBox(
-      height: 150,
+      height: 96,
       child: Image.asset(
         'assets/images/gabi_happy.png',
         fit: BoxFit.contain,
@@ -272,6 +279,33 @@ class GalingoSidebar extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+
+  Widget _badges(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Insignias',
+          style: GoogleFonts.nunito(
+            color: Colors.white.withValues(alpha: 0.85),
+            fontSize: 12.5,
+            fontWeight: FontWeight.w800,
+          ),
+        ),
+        const SizedBox(height: 8),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            for (final achievement in appAchievements)
+              AchievementBadge(
+                achievement: achievement,
+                unlocked: achievement.isUnlocked(progress),
+              ),
+          ],
+        ),
+      ],
     );
   }
 

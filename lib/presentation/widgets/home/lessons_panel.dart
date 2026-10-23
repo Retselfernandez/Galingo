@@ -49,23 +49,6 @@ class LessonsPanel extends StatelessWidget {
                     color: context.textPrimary,
                   ),
                 ),
-                const Spacer(),
-                OutlinedButton(
-                  onPressed: () {},
-                  style: OutlinedButton.styleFrom(
-                    foregroundColor: context.accent,
-                    side: BorderSide(color: context.accent),
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 12, vertical: 0),
-                    minimumSize: const Size(0, 32),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                  ),
-                  child: Text('Ver todas ›',
-                      style: GoogleFonts.nunito(
-                          fontSize: 12.5, fontWeight: FontWeight.w800)),
-                ),
               ],
             ),
           ),
