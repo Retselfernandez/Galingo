@@ -63,6 +63,7 @@ desde cero. Combina tres ideas:
 | 📶 | **Offline-first** | Hive local; la telemetría se encola y se sincroniza al recuperar red |
 | 📝 | **Reporte de incidencias** | agitando el móvil o desde Ajustes |
 | 🌗 | **Tema claro/oscuro** | y tamaño de texto ajustable |
+| 🔔 | **Recordatorios** | Un refrán gallego al día (100 % local); solo si aún no hiciste la lección |
 
 ## 📸 Capturas
 
@@ -309,7 +310,9 @@ con verdad conocida**, y con la telemetría de la beta:
 - **Identidad renovada**: wordmark «Galingo» (con el gorro marinero) en la
   cabecera móvil y cabecera del camino centrada.
 - **Nuevas pantallas**: *Leccións* (paradas y contenidos) y *Progreso*
-  (XP, racha y avance por parada).
+  (XP, racha, insignias y avance por parada).
+- **Recordatorios diarios** con refranes gallegos: 100 % locales, con el nombre
+  del usuario y sin avisar si ya hiciste la lección.
 
 ---
 
