@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../core/theme/galingo_colors.dart';
+import '../../widgets/home/desktop_sidebar.dart';
 
 /// Casca de navegación con barra inferior (móbil).
 ///
 /// Cada pestana conserva o seu estado (scroll, posición) grazas a
-/// [StatefulNavigationShell]. En escritorio (> 1024 px) a barra ocúltase:
-/// o HomeScreen amosa o sidebar lateral no seu lugar.
+/// [StatefulNavigationShell]. En escritorio (>= 1024 px) a barra inferior
+/// substitúese polo sidebar lateral, que permanece visible en todas as
+/// pestanas.
 class HomeShell extends StatelessWidget {
   final StatefulNavigationShell shell;
 
@@ -36,31 +38,46 @@ class HomeShell extends StatelessWidget {
   Widget build(BuildContext context) {
     final showBar = MediaQuery.sizeOf(context).width < 1024;
 
-    return Scaffold(
-      body: shell,
-      bottomNavigationBar: !showBar
-          ? null
-          : NavigationBar(
-              selectedIndex: shell.currentIndex,
-              onDestinationSelected: (index) => shell.goBranch(
+    if (!showBar) {
+      return Scaffold(
+        body: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            DesktopSidebar(
+              currentIndex: shell.currentIndex,
+              onSelect: (index) => shell.goBranch(
                 index,
                 initialLocation: index == shell.currentIndex,
               ),
-              height: 68,
-              backgroundColor: context.cardBg,
-              surfaceTintColor: Colors.transparent,
-              indicatorColor: context.accentSoft,
-              labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
-              destinations: [
-                for (final item in _items)
-                  NavigationDestination(
-                    icon: Icon(item.icon, color: context.textSecondary),
-                    selectedIcon:
-                        Icon(item.active, color: context.accent),
-                    label: item.label,
-                  ),
-              ],
             ),
+            Expanded(child: shell),
+          ],
+        ),
+      );
+    }
+
+    return Scaffold(
+      body: shell,
+      bottomNavigationBar: NavigationBar(
+        selectedIndex: shell.currentIndex,
+        onDestinationSelected: (index) => shell.goBranch(
+          index,
+          initialLocation: index == shell.currentIndex,
+        ),
+        height: 68,
+        backgroundColor: context.cardBg,
+        surfaceTintColor: Colors.transparent,
+        indicatorColor: context.accentSoft,
+        labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
+        destinations: [
+          for (final item in _items)
+            NavigationDestination(
+              icon: Icon(item.icon, color: context.textSecondary),
+              selectedIcon: Icon(item.active, color: context.accent),
+              label: item.label,
+            ),
+        ],
+      ),
     );
   }
 }

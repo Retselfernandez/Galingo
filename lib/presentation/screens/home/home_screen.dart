@@ -6,19 +6,17 @@ import 'package:go_router/go_router.dart';
 import '../../../core/router/app_router.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../core/theme/galingo_colors.dart';
-import '../../../core/constants/app_constants.dart';
 import '../../../data/models/user_progress_model.dart';
 import '../../providers/progress_provider.dart';
 import 'package:galingo/l10n/app_localizations.dart';
 
 import '../../widgets/home/home_models.dart';
-import '../../widgets/home/galingo_sidebar.dart';
 import '../../widgets/home/camino_map.dart';
-import '../../widgets/home/lessons_panel.dart';
 import '../../widgets/home/progress_pill.dart';
 
 /// HomeScreen — "O Camiño do Galego".
-/// Rediseño con sidebar, mapa de paradas y panel de leccións (responsive).
+/// Mapa de paradas responsive: en escritorio comparte pantalla co sidebar
+/// (que vive en HomeShell); en móbil usa a barra superior e a barra inferior.
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
 
@@ -53,7 +51,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         data: (progress) => unitsAsync.when(
           loading: () => const Center(child: CircularProgressIndicator()),
           error: (e, _) => Center(child: Text('${strings.errorLoading} $e')),
-          data: (units) => _buildBody(context, progress, units, strings),
+          data: (units) => _buildBody(context, progress, units),
         ),
       ),
     );
@@ -63,7 +61,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     BuildContext context,
     UserProgressModel progress,
     List<UnitWithStatus> units,
-    AppLocalizations strings,
   ) {
     int currentIdx =
         units.indexWhere((s) => s.isUnlocked && !s.isCompleted);
@@ -83,11 +80,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     ];
 
     final completedUnits = data.where((d) => d.completed).length;
-    final a1LessonIds = <String>{
-      for (final s in units) for (final l in s.unit.lessons) l.id,
-    };
-    final lessonsCompleted =
-        progress.completedLessonIds.where(a1LessonIds.contains).length;
 
     final width = MediaQuery.of(context).size.width;
     final isWide = width >= 1024;
@@ -102,27 +94,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       context.push(AppRoutes.lessonPath(next.id));
     }
 
-    final sidebar = GalingoSidebar(
-      userName: progress.userName,
-      xp: progress.totalXp,
-      streak: progress.streakDays,
-      lessonsCompleted: lessonsCompleted,
-      progress: progress,
-      levelLabel: 'Nivel A1 — Iniciación',
-      onLevelTap: () => _showLevelInfo(context, strings),
-    );
-
-    final header = Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        ProgressPill(completed: completedUnits, total: data.length),
-        const SizedBox(width: 12),
-        SettingsButton(onTap: () => context.push(AppRoutes.settings)),
-      ],
-    );
-
-    final pillOnly =
-        ProgressPill(completed: completedUnits, total: data.length);
+    final pill = ProgressPill(completed: completedUnits, total: data.length);
 
     CaminoMap buildMap(Widget? trailing) => CaminoMap(
           units: data,
@@ -132,25 +104,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           headerTrailing: trailing,
         );
 
-    final panel = LessonsPanel(
-      units: data,
-      highlightedIndex: _hoveredIndex,
-      onHover: (i) => setState(() => _hoveredIndex = i),
-      onOpen: open,
-    );
-
     if (isWide) {
-      return Row(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          sidebar,
-          Expanded(child: buildMap(header)),
-          SizedBox(width: 380, child: panel),
-        ],
-      );
+      // O sidebar vive na casca (HomeShell) para seguir visible en todas as
+      // pestanas; aquí só queda o mapa co indicador de progreso.
+      return buildMap(pill);
     }
 
-    // Layout estreito: barra superior + mapa + panel debajo.
+    // Layout estreito: barra superior + mapa.
     // En móbil nativo (iOS/Android) o header amosa o wordmark centrado.
     final isMobileNative = !kIsWeb &&
         (defaultTargetPlatform == TargetPlatform.iOS ||
@@ -206,31 +166,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                   ),
                         ),
                       ),
-                      SettingsButton(
-                        onTap: () => context.push(AppRoutes.settings),
-                      ),
                     ],
                   ),
           ),
         ),
-        Expanded(child: buildMap(pillOnly)),
+        Expanded(child: buildMap(pill)),
       ],
     );
-  }
-
-  void _showLevelInfo(BuildContext context, AppLocalizations strings) {
-    ScaffoldMessenger.of(context)
-      ..hideCurrentSnackBar()
-      ..showSnackBar(
-        SnackBar(
-          content: Text(
-            AppConstants.hasMultipleLevels
-                ? strings.selectLevel
-                : '${strings.levelA1} · ${strings.levelCovered}',
-          ),
-          duration: const Duration(seconds: 2),
-          behavior: SnackBarBehavior.floating,
-        ),
-      );
   }
 }

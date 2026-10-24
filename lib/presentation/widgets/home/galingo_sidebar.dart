@@ -10,7 +10,8 @@ import '../../../data/models/achievement.dart';
 import '../../../data/models/user_progress_model.dart';
 import '../progress/achievement_badge.dart';
 
-/// Sidebar izquierdo del HOME: avatar, logo, bocadillo, mascota, stats y nivel.
+/// Sidebar izquierdo del escritorio: avatar, logo, bocadillo, mascota, stats,
+/// nivel e navegación inferior (Leccións · Progreso · Axustes).
 class GalingoSidebar extends StatelessWidget {
   final String userName;
   final int xp;
@@ -19,6 +20,11 @@ class GalingoSidebar extends StatelessWidget {
   final UserProgressModel progress;
   final String levelLabel;
   final VoidCallback onLevelTap;
+
+  /// Rama activa do shell (0 = Camiño, 1 = Leccións, 2 = Progreso,
+  /// 3 = Axustes).
+  final int currentIndex;
+  final ValueChanged<int> onSelect;
 
   const GalingoSidebar({
     super.key,
@@ -29,6 +35,8 @@ class GalingoSidebar extends StatelessWidget {
     required this.progress,
     required this.levelLabel,
     required this.onLevelTap,
+    required this.currentIndex,
+    required this.onSelect,
   });
 
   @override
@@ -55,35 +63,42 @@ class GalingoSidebar extends StatelessWidget {
             ),
           ),
           SafeArea(
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.fromLTRB(20, 20, 20, 24),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  _avatar(),
-                  const SizedBox(height: 12),
-                  _logo(context),
-                  const SizedBox(height: 4),
-                  Text(
-                    'Aprende galego, paso a paso',
-                    style: GoogleFonts.nunito(
-                      color: Colors.white.withValues(alpha: 0.85),
-                      fontSize: 12.5,
-                      fontWeight: FontWeight.w600,
+            child: Column(
+              children: [
+                Expanded(
+                  child: SingleChildScrollView(
+                    padding: const EdgeInsets.fromLTRB(20, 20, 20, 16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        _avatar(),
+                        const SizedBox(height: 12),
+                        _logo(context),
+                        const SizedBox(height: 4),
+                        Text(
+                          'Aprende galego, paso a paso',
+                          style: GoogleFonts.nunito(
+                            color: Colors.white.withValues(alpha: 0.85),
+                            fontSize: 12.5,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        const SizedBox(height: 18),
+                        _speechBubble(context),
+                        const SizedBox(height: 12),
+                        _mascot(),
+                        const SizedBox(height: 18),
+                        _statsCard(context),
+                        const SizedBox(height: 14),
+                        _badges(context),
+                        const SizedBox(height: 14),
+                        _levelPill(context),
+                      ],
                     ),
                   ),
-                  const SizedBox(height: 18),
-                  _speechBubble(context),
-                  const SizedBox(height: 12),
-                  _mascot(),
-                  const SizedBox(height: 18),
-                  _statsCard(context),
-                  const SizedBox(height: 14),
-                  _badges(context),
-                  const SizedBox(height: 14),
-                  _levelPill(context),
-                ],
-              ),
+                ),
+                _navBar(context),
+              ],
             ),
           ),
         ],
@@ -338,6 +353,77 @@ class GalingoSidebar extends StatelessWidget {
             ),
             const SizedBox(width: 6),
             const Icon(Icons.chevron_right, color: AppTheme.caminoGold, size: 20),
+          ],
+        ),
+      ),
+    );
+  }
+
+  /// Navegación inferior do sidebar: as mesmas pestanas que a barra móbil.
+  Widget _navBar(BuildContext context) {
+    const items = <({IconData icon, IconData active, String label})>[
+      (
+        icon: Icons.menu_book_outlined,
+        active: Icons.menu_book_rounded,
+        label: 'Leccións'
+      ),
+      (
+        icon: Icons.insights_outlined,
+        active: Icons.insights_rounded,
+        label: 'Progreso'
+      ),
+      (
+        icon: Icons.settings_outlined,
+        active: Icons.settings_rounded,
+        label: 'Axustes'
+      ),
+    ];
+
+    return Container(
+      padding: const EdgeInsets.fromLTRB(12, 8, 12, 10),
+      decoration: BoxDecoration(
+        border: Border(
+          top: BorderSide(color: Colors.white.withValues(alpha: 0.14)),
+        ),
+      ),
+      child: Row(
+        children: [
+          for (var i = 0; i < items.length; i++)
+            Expanded(child: _navItem(items[i], index: i + 1)),
+        ],
+      ),
+    );
+  }
+
+  Widget _navItem(
+    ({IconData icon, IconData active, String label}) item, {
+    required int index,
+  }) {
+    final selected = currentIndex == index;
+    final color = selected
+        ? AppTheme.caminoGold
+        : Colors.white.withValues(alpha: 0.72);
+
+    return InkWell(
+      onTap: () => onSelect(index),
+      borderRadius: BorderRadius.circular(14),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 6),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(selected ? item.active : item.icon, color: color, size: 22),
+            const SizedBox(height: 4),
+            Text(
+              item.label,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: GoogleFonts.nunito(
+                color: color,
+                fontSize: 11,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
           ],
         ),
       ),

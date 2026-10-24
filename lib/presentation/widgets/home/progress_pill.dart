@@ -87,26 +87,3 @@ class ProgressPill extends StatelessWidget {
   }
 }
 
-/// Botón circular de ajustes del header.
-class SettingsButton extends StatelessWidget {
-  final VoidCallback onTap;
-  const SettingsButton({super.key, required this.onTap});
-
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-      color: Colors.white,
-      shape: const CircleBorder(),
-      elevation: 3,
-      shadowColor: AppTheme.deepBlue.withValues(alpha: 0.2),
-      child: InkWell(
-        customBorder: const CircleBorder(),
-        onTap: onTap,
-        child: const Padding(
-          padding: EdgeInsets.all(10),
-          child: Icon(Icons.settings, color: AppTheme.deepBlue, size: 22),
-        ),
-      ),
-    );
-  }
-}
