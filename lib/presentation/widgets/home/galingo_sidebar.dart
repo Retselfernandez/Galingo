@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../core/theme/app_theme.dart';
@@ -10,8 +9,8 @@ import '../../../data/models/achievement.dart';
 import '../../../data/models/user_progress_model.dart';
 import '../progress/achievement_badge.dart';
 
-/// Sidebar izquierdo del escritorio: avatar, logo, bocadillo, mascota, stats,
-/// nivel e navegación inferior (Leccións · Progreso · Axustes).
+/// Sidebar izquierdo del escritorio: wordmark, stats, insignias, nivel e
+/// navegación inferior (Camiño · Leccións · Progreso · Axustes).
 class GalingoSidebar extends StatelessWidget {
   final String userName;
   final int xp;
@@ -71,23 +70,8 @@ class GalingoSidebar extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        _avatar(),
-                        const SizedBox(height: 12),
-                        _logo(context),
-                        const SizedBox(height: 4),
-                        Text(
-                          'Aprende galego, paso a paso',
-                          style: GoogleFonts.nunito(
-                            color: Colors.white.withValues(alpha: 0.85),
-                            fontSize: 12.5,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                        const SizedBox(height: 18),
-                        _speechBubble(context),
-                        const SizedBox(height: 12),
-                        _mascot(),
-                        const SizedBox(height: 18),
+                        _wordmark(),
+                        const SizedBox(height: 24),
                         _statsCard(context),
                         const SizedBox(height: 14),
                         _badges(context),
@@ -106,115 +90,28 @@ class GalingoSidebar extends StatelessWidget {
     );
   }
 
-  Widget _avatar() {
+  /// Wordmark oficial (co sombreiro), o mesmo da cabeceira móbil.
+  Widget _wordmark() {
     return Container(
-      width: 92,
-      height: 92,
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 9),
       decoration: BoxDecoration(
-        shape: BoxShape.circle,
         color: Colors.white,
-        border: Border.all(color: Colors.white, width: 4),
+        borderRadius: BorderRadius.circular(26),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.2),
-            blurRadius: 14,
-            offset: const Offset(0, 6),
+            color: Colors.black.withValues(alpha: 0.18),
+            blurRadius: 12,
+            offset: const Offset(0, 5),
           ),
         ],
       ),
-      child: ClipOval(
-        child: Image.asset(
-          'assets/images/app_icon.png',
-          fit: BoxFit.cover,
-          errorBuilder: (_, __, ___) => const Center(
-            child: Text('🦅', style: TextStyle(fontSize: 44)),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _logo(BuildContext context) {
-    final base = GoogleFonts.nunito(
-      fontSize: 40,
-      fontWeight: FontWeight.w900,
-      color: Colors.white,
-      letterSpacing: -1,
-    );
-    return Column(
-      children: [
-        Row(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.baseline,
-          textBaseline: TextBaseline.alphabetic,
-          children: [
-            Text('Gal', style: base),
-            ShaderMask(
-              shaderCallback: (r) => const LinearGradient(
-                colors: [AppTheme.caminoGold, AppTheme.caminoOrange],
-              ).createShader(r),
-              child: Text(
-                'ingo',
-                style: base.copyWith(color: Colors.white),
-              ),
-            ),
-          ],
-        ),
-        const SizedBox(height: 2),
-        CustomPaint(
-          size: const Size(150, 8),
-          painter: _WavyUnderlinePainter(),
-        ),
-      ],
-    );
-  }
-
-  Widget _speechBubble(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(18),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withValues(alpha: 0.12),
-                blurRadius: 10,
-                offset: const Offset(0, 4),
-              ),
-            ],
-          ),
-          child: Text(
-            '¡Ola, $userName! 👋\nTodo gran camiño comeza cun primeiro paso.',
-            textAlign: TextAlign.center,
-            style: GoogleFonts.nunito(
-              color: AppTheme.deepBlue,
-              fontSize: 13.5,
-              height: 1.3,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-        ),
-        CustomPaint(
-          size: const Size(22, 10),
-          painter: _BubbleTailPainter(),
-        ),
-      ],
-    );
-  }
-
-  Widget _mascot() {
-    return SizedBox(
-      height: 96,
       child: Image.asset(
-        'assets/images/gabi_happy.png',
-        fit: BoxFit.contain,
-        errorBuilder: (_, __, ___) => const Center(
-          child: Text('🦅', style: TextStyle(fontSize: 90)),
-        ),
+        'assets/images/logo_wordmark_navy.png',
+        height: 52,
+        filterQuality: FilterQuality.medium,
+        semanticLabel: 'Galingo',
       ),
-    ).animate().fadeIn(duration: 500.ms).slideY(begin: 0.2, end: 0);
+    );
   }
 
   Widget _statsCard(BuildContext context) {
@@ -362,6 +259,7 @@ class GalingoSidebar extends StatelessWidget {
   /// Navegación inferior do sidebar: as mesmas pestanas que a barra móbil.
   Widget _navBar(BuildContext context) {
     const items = <({IconData icon, IconData active, String label})>[
+      (icon: Icons.map_outlined, active: Icons.map_rounded, label: 'Camiño'),
       (
         icon: Icons.menu_book_outlined,
         active: Icons.menu_book_rounded,
@@ -389,7 +287,7 @@ class GalingoSidebar extends StatelessWidget {
       child: Row(
         children: [
           for (var i = 0; i < items.length; i++)
-            Expanded(child: _navItem(items[i], index: i + 1)),
+            Expanded(child: _navItem(items[i], index: i)),
         ],
       ),
     );
@@ -464,42 +362,3 @@ class _WavesPainter extends CustomPainter {
   bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
 
-class _WavyUnderlinePainter extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = AppTheme.caminoGold
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 3
-      ..strokeCap = StrokeCap.round;
-    final path = Path()..moveTo(0, size.height / 2);
-    for (double x = 0; x < size.width; x += size.width / 6) {
-      path.quadraticBezierTo(
-        x + size.width / 12,
-        x % (size.width / 3) == 0 ? 0 : size.height,
-        x + size.width / 6,
-        size.height / 2,
-      );
-    }
-    canvas.drawPath(path, paint);
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
-}
-
-class _BubbleTailPainter extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()..color = Colors.white;
-    final path = Path()
-      ..moveTo(0, 0)
-      ..lineTo(size.width / 2, size.height)
-      ..lineTo(size.width, 0)
-      ..close();
-    canvas.drawPath(path, paint);
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
-}
