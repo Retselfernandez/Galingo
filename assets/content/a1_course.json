@@ -2868,46 +2868,46 @@
               "id": "2E01",
               "type": "multiple_choice",
               "category": "E",
-              "question": "Audio: «xantar». ¿Cómo empieza?",
+              "question": "Audio: «xantar». ¿Cuál es la forma correcta?",
               "options": [
-                "/ʃ/ (como «sh»)",
-                "/s/",
-                "/k/"
+                "Cantar",
+                "Xantar",
+                "Chantar"
               ],
-              "correctAnswer": "/ʃ/ (como «sh»)",
-              "explanation": "La x gallega suena como una «sh» suave.",
+              "correctAnswer": "Xantar",
+              "explanation": "En gallego se escribe con x: «xantar». La x suena como un «sh» suave.",
               "i18n": {
                 "es": {
-                  "question": "Audio: «xantar». ¿Cómo empieza?",
-                  "explanation": "La x gallega suena como una «sh» suave."
+                  "question": "Audio: «xantar». ¿Cuál es la forma correcta?",
+                  "explanation": "En gallego se escribe con x: «xantar». La x suena como un «sh» suave."
                 },
                 "en": {
-                  "question": "Audio: «xantar». How does it start?",
-                  "explanation": "The Galician x sounds like a soft \"sh\"."
+                  "question": "Audio: «xantar». Which is the correct form?",
+                  "explanation": "In Galician it is written with x: «xantar». The x sounds like a soft \"sh\"."
                 },
                 "de": {
-                  "question": "Audio: «xantar». Wie fängt es an?",
-                  "explanation": "Das galizische x klingt wie ein leises „sh“."
+                  "question": "Audio: «xantar». Welche Schreibweise ist richtig?",
+                  "explanation": "Auf Galicisch schreibt man es mit x: «xantar». Das x klingt wie ein weiches „sch“."
                 },
                 "fr": {
-                  "question": "Audio : «xantar». Comment ça commence ?",
-                  "explanation": "Le x galicien sonne comme un doux \"sh\"."
+                  "question": "Audio : « xantar ». Quelle est la forme correcte ?",
+                  "explanation": "En galicien, cela s'écrit avec x : « xantar ». Le x se prononce comme un « ch » doux."
                 },
                 "pt": {
-                  "question": "Áudio: «xantar». Como isso começa?",
-                  "explanation": "O x galego soa como um \"sh\" suave."
+                  "question": "Áudio: «xantar». Qual é a forma correta?",
+                  "explanation": "Em galego escreve-se com x: «xantar». O x soa como um «sh» suave."
                 },
                 "it": {
-                  "question": "Audio: «xantar». Come inizia?",
-                  "explanation": "La x galiziana suona come una \"sh\" morbida."
+                  "question": "Audio: «xantar». Qual è la forma corretta?",
+                  "explanation": "In galiziano si scrive con x: «xantar». La x suona come una «sh» morbida."
                 },
                 "ro": {
-                  "question": "Audio: «xantar». Cum începe?",
-                  "explanation": "X-ul din Galicia sună ca un „sh” moale."
+                  "question": "Audio: «xantar». Care este forma corectă?",
+                  "explanation": "În galiciană se scrie cu x: «xantar». X sună ca un „sh” blând."
                 },
                 "zh": {
-                  "question": "音频：«xantar»。它是如何开始的？",
-                  "explanation": "加利西亚语 x 听起来像轻柔的“sh”。"
+                  "question": "音频：«xantar»。哪个拼写正确？",
+                  "explanation": "加利西亚语中写作 x：«xantar»。x 发音像轻柔的“sh”。"
                 }
               },
               "audioAsset": "assets/audio/exercises/2E01.mp3"
@@ -2916,46 +2916,46 @@
               "id": "2E02",
               "type": "multiple_choice",
               "category": "E",
-              "question": "Audio: «chave». ¿Qué sonido tiene «ch»?",
+              "question": "Audio: «chave». ¿Cuál es la forma correcta?",
               "options": [
-                "/tʃ/",
-                "/ʃ/",
-                "/k/"
+                "Chave",
+                "Xave",
+                "Shave"
               ],
-              "correctAnswer": "/tʃ/",
-              "explanation": "La «ch» suena como la «ch» castellana.",
+              "correctAnswer": "Chave",
+              "explanation": "«Chave» se escribe con ch; es la palabra gallega para «llave».",
               "i18n": {
                 "es": {
-                  "question": "Audio: «chave». ¿Qué sonido tiene «ch»?",
-                  "explanation": "La «ch» suena como la «ch» castellana."
+                  "question": "Audio: «chave». ¿Cuál es la forma correcta?",
+                  "explanation": "«Chave» se escribe con ch; es la palabra gallega para «llave»."
                 },
                 "en": {
-                  "question": "Audio: «chave». What does «ch» sound like?",
-                  "explanation": "The \"ch\" sounds like the Spanish \"ch.\""
+                  "question": "Audio: «chave». Which is the correct form?",
+                  "explanation": "«Chave» is written with ch; it is the Galician word for \"key\"."
                 },
                 "de": {
-                  "question": "Audio: «chave». Wie klingt «ch»?",
-                  "explanation": "Das „ch“ klingt wie das spanische „ch“."
+                  "question": "Audio: «chave». Welche Schreibweise ist richtig?",
+                  "explanation": "«Chave» schreibt man mit ch; es ist das galicische Wort für „Schlüssel“."
                 },
                 "fr": {
-                  "question": "Audio : «chave». À quoi ressemble «ch» ?",
-                  "explanation": "Le « ch » ressemble au « ch » espagnol."
+                  "question": "Audio : « chave ». Quelle est la forme correcte ?",
+                  "explanation": "« Chave » s'écrit avec ch ; c'est le mot galicien pour « clé »."
                 },
                 "pt": {
-                  "question": "Áudio: «chave». Como é o som de «ch»?",
-                  "explanation": "O \"ch\" soa como o \"ch\" espanhol."
+                  "question": "Áudio: «chave». Qual é a forma correta?",
+                  "explanation": "«Chave» escreve-se com ch."
                 },
                 "it": {
-                  "question": "Audio: «chave». Che suono ha «ch»?",
-                  "explanation": "La \"ch\" suona come la \"ch\" spagnola."
+                  "question": "Audio: «chave». Qual è la forma corretta?",
+                  "explanation": "«Chave» si scrive con ch; è la parola galiziana per «chiave»."
                 },
                 "ro": {
-                  "question": "Audio: «chave». Cum sună «ch»?",
-                  "explanation": "„ch” sună ca „ch” spaniol."
+                  "question": "Audio: «chave». Care este forma corectă?",
+                  "explanation": "«Chave» se scrie cu ch; este cuvântul galician pentru „cheie”."
                 },
                 "zh": {
-                  "question": "音频：«chave»。 «ch» 听起来像什么？",
-                  "explanation": "“ch”听起来像西班牙语“ch”。"
+                  "question": "音频：«chave»。哪个拼写正确？",
+                  "explanation": "«Chave» 用 ch 拼写；这是加利西亚语中“钥匙”的意思。"
                 }
               },
               "audioAsset": "assets/audio/exercises/2E02.mp3"
@@ -2964,46 +2964,46 @@
               "id": "2E03",
               "type": "multiple_choice",
               "category": "E",
-              "question": "Audio: «ollo». ¿Qué sonido tiene «ll»?",
+              "question": "Audio: «ollo». ¿Cuál es la forma correcta?",
               "options": [
-                "/ʎ/",
-                "/l/",
-                "/s/"
+                "Ollo",
+                "Oyo",
+                "Olo"
               ],
-              "correctAnswer": "/ʎ/",
-              "explanation": "La «ll» representa el sonido palatal de «ollo».",
+              "correctAnswer": "Ollo",
+              "explanation": "«Ollo» se escribe con ll; significa «ojo».",
               "i18n": {
                 "es": {
-                  "question": "Audio: «ollo». ¿Qué sonido tiene «ll»?",
-                  "explanation": "La «ll» representa el sonido palatal de «ollo»."
+                  "question": "Audio: «ollo». ¿Cuál es la forma correcta?",
+                  "explanation": "«Ollo» se escribe con ll; significa «ojo»."
                 },
                 "en": {
-                  "question": "Audio: «ollo». What does «ll» sound like?",
-                  "explanation": "The \"ll\" represents the palatal sound of \"ollo.\""
+                  "question": "Audio: «ollo». Which is the correct form?",
+                  "explanation": "«Ollo» is written with ll; it means \"eye\"."
                 },
                 "de": {
-                  "question": "Audio: «ollo». Wie klingt «ll»?",
-                  "explanation": "Das „ll“ stellt den Gaumenklang von „ollo“ dar."
+                  "question": "Audio: «ollo». Welche Schreibweise ist richtig?",
+                  "explanation": "«Ollo» schreibt man mit ll; es bedeutet „Auge“."
                 },
                 "fr": {
-                  "question": "Audio : «ollo». À quoi ressemble «ll» ?",
-                  "explanation": "Le « ll » représente le son palatin de « ollo »."
+                  "question": "Audio : « ollo ». Quelle est la forme correcte ?",
+                  "explanation": "« Ollo » s'écrit avec ll ; cela signifie « œil »."
                 },
                 "pt": {
-                  "question": "Áudio: «ollo». Como é o som de «ll»?",
-                  "explanation": "O “ll” representa o som palatino de “ollo”."
+                  "question": "Áudio: «ollo». Qual é a forma correta?",
+                  "explanation": "«Ollo» escreve-se com ll; significa «olho»."
                 },
                 "it": {
-                  "question": "Audio: «ollo». Che suono ha «ll»?",
-                  "explanation": "La \"ll\" rappresenta il suono palatale di \"ollo\"."
+                  "question": "Audio: «ollo». Qual è la forma corretta?",
+                  "explanation": "«Ollo» si scrive con ll; significa «occhio»."
                 },
                 "ro": {
-                  "question": "Audio: «ollo». Cum sună «ll»?",
-                  "explanation": "„ll” reprezintă sunetul palatin al lui „ollo”."
+                  "question": "Audio: «ollo». Care este forma corectă?",
+                  "explanation": "«Ollo» se scrie cu ll; înseamnă „ochi”."
                 },
                 "zh": {
-                  "question": "音频：«ollo»。 «ll» 听起来像什么？",
-                  "explanation": "“ll”代表“o​​llo”的腭音。"
+                  "question": "音频：«ollo»。哪个拼写正确？",
+                  "explanation": "«Ollo» 用 ll 拼写；意思是“眼睛”。"
                 }
               },
               "audioAsset": "assets/audio/exercises/2E03.mp3"
@@ -3012,46 +3012,46 @@
               "id": "2E04",
               "type": "multiple_choice",
               "category": "E",
-              "question": "Audio: «mañá». ¿Qué sonido tiene «ñ»?",
+              "question": "Audio: «mañá». ¿Cuál es la forma correcta?",
               "options": [
-                "/ɲ/",
-                "/n/",
-                "/ŋ/"
+                "Mañá",
+                "Manyá",
+                "Maná"
               ],
-              "correctAnswer": "/ɲ/",
-              "explanation": "La «ñ» es el sonido nasal palatal, igual que en castellano.",
+              "correctAnswer": "Mañá",
+              "explanation": "«Mañá» se escribe con ñ; significa «mañana».",
               "i18n": {
                 "es": {
-                  "question": "Audio: «mañá». ¿Qué sonido tiene «ñ»?",
-                  "explanation": "La «ñ» es el sonido nasal palatal, igual que en castellano."
+                  "question": "Audio: «mañá». ¿Cuál es la forma correcta?",
+                  "explanation": "«Mañá» se escribe con ñ; significa «mañana»."
                 },
                 "en": {
-                  "question": "Audio: «mañá». What does «ñ» sound like?",
-                  "explanation": "The \"ñ\" is the palatal nasal sound, the same as in Spanish."
+                  "question": "Audio: «mañá». Which is the correct form?",
+                  "explanation": "«Mañá» is written with ñ; it means \"tomorrow\"."
                 },
                 "de": {
-                  "question": "Audio: «mañá». Wie klingt «ñ»?",
-                  "explanation": "Das „ñ“ ist der palatinale Nasallaut, genau wie im Spanischen."
+                  "question": "Audio: «mañá». Welche Schreibweise ist richtig?",
+                  "explanation": "«Mañá» schreibt man mit ñ; es bedeutet „morgen“."
                 },
                 "fr": {
-                  "question": "Audio : «mañá». À quoi ressemble «ñ» ?",
-                  "explanation": "Le \"ñ\" est le son nasal palatin, le même qu'en espagnol."
+                  "question": "Audio : « mañá ». Quelle est la forme correcte ?",
+                  "explanation": "« Mañá » s'écrit avec ñ ; cela signifie « demain »."
                 },
                 "pt": {
-                  "question": "Áudio: «mañá». Como é o som de «ñ»?",
-                  "explanation": "O \"ñ\" é o som nasal palatino, igual ao espanhol."
+                  "question": "Áudio: «mañá». Qual é a forma correta?",
+                  "explanation": "«Mañá» escreve-se com ñ; significa «amanhã»."
                 },
                 "it": {
-                  "question": "Audio: «mañá». Che suono ha «ñ»?",
-                  "explanation": "La \"ñ\" è il suono nasale palatale, lo stesso dello spagnolo."
+                  "question": "Audio: «mañá». Qual è la forma corretta?",
+                  "explanation": "«Mañá» si scrive con ñ; significa «domani»."
                 },
                 "ro": {
-                  "question": "Audio: «mañá». Cum sună «ñ»?",
-                  "explanation": "„ñ” este sunetul nazal palatin, la fel ca în spaniolă."
+                  "question": "Audio: «mañá». Care este forma corectă?",
+                  "explanation": "«Mañá» se scrie cu ñ; înseamnă „mâine”."
                 },
                 "zh": {
-                  "question": "音频：«mañá»。 «ñ» 听起来像什么？",
-                  "explanation": "“ñ”是腭鼻音，与西班牙语相同。"
+                  "question": "音频：«mañá»。哪个拼写正确？",
+                  "explanation": "«Mañá» 用 ñ 拼写；意思是“明天”。"
                 }
               },
               "audioAsset": "assets/audio/exercises/2E04.mp3"
@@ -3151,39 +3151,39 @@
               "question": "Escribe lo que oyes: «xoves»",
               "options": [],
               "correctAnswer": "xoves",
-              "explanation": "El sonido /ʃ/ inicial se escribe con x.",
+              "explanation": "El sonido de la «x» (como un «sh» suave) se escribe con x.",
               "i18n": {
                 "es": {
                   "question": "Escribe lo que oyes: «xoves»",
-                  "explanation": "El sonido /ʃ/ inicial se escribe con x."
+                  "explanation": "El sonido de la «x» (como un «sh» suave) se escribe con x."
                 },
                 "en": {
                   "question": "Write what you hear: «xoves»",
-                  "explanation": "The initial /ʃ/ sound is written with x."
+                  "explanation": "The \"x\" sound (like a soft \"sh\") is written with x."
                 },
                 "de": {
                   "question": "Schreibe, was du hörst: «xoves»",
-                  "explanation": "Der anfängliche /ʃ/-Laut wird mit x geschrieben."
+                  "explanation": "Der Laut des „x“ (wie ein weiches „sch“) wird mit x geschrieben."
                 },
                 "fr": {
                   "question": "Écrivez ce que vous entendez : «xoves»",
-                  "explanation": "Le son /ʃ/ initial s'écrit avec x."
+                  "explanation": "Le son du « x » (comme un « ch » doux) s'écrit avec x."
                 },
                 "pt": {
                   "question": "Escreva o que ouve: «xoves»",
-                  "explanation": "O som /ʃ/ inicial é escrito com x."
+                  "explanation": "O som do «x» (como um «sh» suave) escreve-se com x."
                 },
                 "it": {
                   "question": "Scrivi ciò che senti: «xoves»",
-                  "explanation": "Il suono iniziale /ʃ/ si scrive con x."
+                  "explanation": "Il suono della «x» (come una «sh» morbida) si scrive con x."
                 },
                 "ro": {
                   "question": "Scrie ce auzi: «xoves»",
-                  "explanation": "Sunetul inițial /ʃ/ este scris cu x."
+                  "explanation": "Sunetul lui „x” (ca un „sh” blând) se scrie cu x."
                 },
                 "zh": {
                   "question": "写出你听到的内容：«xoves»",
-                  "explanation": "声母 /ʃ/ 读作 x。"
+                  "explanation": "«x» 的发音（像轻柔的“sh”）写作 x。"
                 }
               },
               "audioAsset": "assets/audio/exercises/2E07.mp3"
@@ -3297,59 +3297,46 @@
               "id": "2E10",
               "type": "multiple_choice",
               "category": "E",
-              "question": "Audio: «galego» pronunciado con gheada (/h/). ¿Es una pronunciación válida?",
+              "question": "Audio: «galego» pronunciado con gheada. ¿Cómo se escribe?",
               "options": [
-                "sí, es una variante",
-                "no"
+                "Galego",
+                "Halego",
+                "Jalego"
               ],
-              "correctAnswer": "sí, es una variante",
-              "explanation": "La gheada es una variante dialectal admitida del habla gallega.",
+              "correctAnswer": "Galego",
+              "explanation": "La gheada pronuncia la g como un «h» aspirado, pero se escribe con g: «galego».",
               "i18n": {
                 "es": {
-                  "question": "Audio: «galego» pronunciado con gheada (/h/). ¿Es una pronunciación válida?",
-                  "explanation": "La gheada es una variante dialectal admitida del habla gallega."
+                  "question": "Audio: «galego» pronunciado con gheada. ¿Cómo se escribe?",
+                  "explanation": "La gheada pronuncia la g como un «h» aspirado, pero se escribe con g: «galego»."
                 },
                 "en": {
-                  "question": "Audio: «galego» pronounced with gheada (/h/). Is it a valid pronunciation?",
-                  "explanation": "Gheada is an accepted dialect variant of Galician speech.",
-                  "options": "yes, it's a variant\u0001No",
-                  "correctAnswer": "yes, it's a variant"
+                  "question": "Audio: «galego» pronounced with gheada. How is it written?",
+                  "explanation": "Gheada pronounces g as an aspirated \"h\", but it is written with g: «galego»."
                 },
                 "de": {
-                  "question": "Audio: «galego» ausgesprochen mit gheada (/h/). Ist es eine gültige Aussprache?",
-                  "explanation": "Gheada ist eine akzeptierte Dialektvariante der galizischen Sprache.",
-                  "options": "ja, es ist eine Variante\u0001NEIN",
-                  "correctAnswer": "ja, es ist eine Variante"
+                  "question": "Audio: «galego» mit Gheada ausgesprochen. Wie schreibt man es?",
+                  "explanation": "Bei der Gheada wird das g wie ein gehauchtes „h“ ausgesprochen, aber es wird mit g geschrieben: «galego»."
                 },
                 "fr": {
-                  "question": "Audio : «galego» prononcé avec gheada (/h/). Est-ce une prononciation valide ?",
-                  "explanation": "Gheada est une variante dialectale acceptée du discours galicien.",
-                  "options": "oui, c'est une variante\u0001Non",
-                  "correctAnswer": "oui, c'est une variante"
+                  "question": "Audio : « galego » prononcé avec gheada. Comment cela s'écrit-il ?",
+                  "explanation": "La gheada prononce le g comme un « h » aspiré, mais cela s'écrit avec g : « galego »."
                 },
                 "pt": {
-                  "question": "Áudio: «galego» pronunciado com gheada (/h/). É uma pronúncia válida?",
-                  "explanation": "Gheada é uma variante dialetal aceita da língua galega.",
-                  "options": "sim, é uma variante\u0001Não",
-                  "correctAnswer": "sim, é uma variante"
+                  "question": "Áudio: «galego» pronunciado com gheada. Como se escreve?",
+                  "explanation": "A gheada pronuncia o g como um «h» aspirado, mas escreve-se com g: «galego»."
                 },
                 "it": {
-                  "question": "Audio: «galego» pronunciato con gheada (/h/). È una pronuncia valida?",
-                  "explanation": "Gheada è una variante dialettale accettata della parlata galiziana.",
-                  "options": "sì, è una variante\u0001NO",
-                  "correctAnswer": "sì, è una variante"
+                  "question": "Audio: «galego» pronunciato con gheada. Come si scrive?",
+                  "explanation": "La gheada pronuncia la g come una «h» aspirata, ma si scrive con g: «galego»."
                 },
                 "ro": {
-                  "question": "Audio: «galego» pronuntat cu gheada (/h/). Este o pronunție validă?",
-                  "explanation": "Gheada este o variantă de dialect acceptată a vorbirii galice.",
-                  "options": "da, este o varianta\u0001Nu",
-                  "correctAnswer": "da, este o varianta"
+                  "question": "Audio: «galego» pronunțat cu gheada. Cum se scrie?",
+                  "explanation": "Gheada pronunță g ca un „h” aspirat, dar se scrie cu g: «galego»."
                 },
                 "zh": {
-                  "question": "音频：«galego» 用 gheada (/h/) 发音。这是一个有效的发音吗？",
-                  "explanation": "格赫达 (Gheada) 是加利西亚语的一种公认的方言变体。",
-                  "options": "是的，这是一个变体\u0001不",
-                  "correctAnswer": "是的，这是一个变体"
+                  "question": "音频：«galego»，带 gheada 发音。怎么拼写？",
+                  "explanation": "gheada 把 g 发成送气的“h”，但仍写作 g：«galego»。"
                 }
               },
               "audioAsset": "assets/audio/exercises/2E10.mp3"
@@ -3570,60 +3557,46 @@
               "id": "2E15",
               "type": "multiple_choice",
               "category": "E",
-              "question": "Audio: «queixo». ¿Cómo suena «qu»?",
+              "question": "Audio: «queixo». ¿Cuál es la forma correcta?",
               "options": [
-                "/k/",
-                "/kw/",
-                "/tʃ/"
+                "Queixo",
+                "Queicho",
+                "Queiso"
               ],
-              "correctAnswer": "/k/",
-              "explanation": "La «u» no se pronuncia en «que» y «qui».",
+              "correctAnswer": "Queixo",
+              "explanation": "«Queixo» se escribe con x; la «u» de «que» no se pronuncia.",
               "i18n": {
                 "es": {
-                  "question": "Audio: «queixo». ¿Cómo suena «qu»?",
-                  "explanation": "La «u» no se pronuncia en «que» y «qui»."
+                  "question": "Audio: «queixo». ¿Cuál es la forma correcta?",
+                  "explanation": "«Queixo» se escribe con x; la «u» de «que» no se pronuncia."
                 },
                 "en": {
-                  "question": "Audio: «queixo». What does «qu» sound like?",
-                  "explanation": "The \"u\" is not pronounced in \"que\" and \"qui.\"",
-                  "options": "/k/\u0001/kw/\u0001/tʃ/",
-                  "correctAnswer": "/k/"
+                  "question": "Audio: «queixo». Which is the correct form?",
+                  "explanation": "«Queixo» is written with x; the \"u\" in \"que\" is not pronounced."
                 },
                 "de": {
-                  "question": "Audio: «queixo». Wie klingt «qu»?",
-                  "explanation": "Das „u“ wird in „que“ und „qui“ nicht ausgesprochen.",
-                  "options": "/k/\u0001/kw/\u0001/tʃ/",
-                  "correctAnswer": "/k/"
+                  "question": "Audio: «queixo». Welche Schreibweise ist richtig?",
+                  "explanation": "«Queixo» schreibt man mit x; das „u“ in „que“ wird nicht ausgesprochen."
                 },
                 "fr": {
-                  "question": "Audio : «queixo». À quoi ressemble «qu» ?",
-                  "explanation": "Le « u » ne se prononce pas dans « que » et « qui ».",
-                  "options": "/k/\u0001/kw/\u0001/tʃ/",
-                  "correctAnswer": "/k/"
+                  "question": "Audio : « queixo ». Quelle est la forme correcte ?",
+                  "explanation": "« Queixo » s'écrit avec x ; le « u » de « que » ne se prononce pas."
                 },
                 "pt": {
-                  "question": "Áudio: «queixo». Como é o som de «qu»?",
-                  "explanation": "O “u” não é pronunciado em “que” e “qui”.",
-                  "options": "/k/\u0001/kw/\u0001/tʃ/",
-                  "correctAnswer": "/k/"
+                  "question": "Áudio: «queixo». Qual é a forma correta?",
+                  "explanation": "«Queixo» escreve-se com x; o «u» de «que» não se pronuncia."
                 },
                 "it": {
-                  "question": "Audio: «queixo». Che suono ha «qu»?",
-                  "explanation": "La \"u\" non si pronuncia in \"que\" e \"qui\".",
-                  "options": "/k/\u0001/kw/\u0001/tʃ/",
-                  "correctAnswer": "/k/"
+                  "question": "Audio: «queixo». Qual è la forma corretta?",
+                  "explanation": "«Queixo» si scrive con x; la «u» di «que» non si pronuncia."
                 },
                 "ro": {
-                  "question": "Audio: «queixo». Cum sună «qu»?",
-                  "explanation": "„u” nu se pronunță în „que” și „qui”.",
-                  "options": "/k/\u0001/kw/\u0001/tʃ/",
-                  "correctAnswer": "/k/"
+                  "question": "Audio: «queixo». Care este forma corectă?",
+                  "explanation": "«Queixo» se scrie cu x; „u” din „que” nu se pronunță."
                 },
                 "zh": {
-                  "question": "音频：«queixo»。 «qu» 听起来像什么？",
-                  "explanation": "“que”和“qui”中的“u”不发音。",
-                  "options": "/k/\u0001/千瓦/\u0001/tʃ/",
-                  "correctAnswer": "/k/"
+                  "question": "音频：«queixo»。哪个拼写正确？",
+                  "explanation": "«Queixo» 用 x 拼写；«que» 中的 u 不发音。"
                 }
               },
               "audioAsset": "assets/audio/exercises/2E15.mp3"

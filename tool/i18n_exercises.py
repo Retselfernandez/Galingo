@@ -24,7 +24,8 @@ LOCALES = ['en', 'de', 'fr', 'pt', 'it', 'ro', 'zh']
 KEEP_OPT = ['en gallego:', 'plural de', 'contracción de', 'femenino de',
             'contrario de', '¿cuál es correcta', '¿cuál lleva tilde',
             '¿cómo se escribe', '¿cómo se dice', '¿cómo se pregunta',
-            '¿qué respondes', '¿qué sonido tiene', '¿cómo empieza']
+            '¿qué respondes', '¿qué sonido tiene', '¿cómo empieza',
+            '¿cuál es la forma correcta']
 
 # Nomes propios / topónimos (unha soa palabra en maiúscula) -> non se traducen.
 PROPER = re.compile(r'^[A-ZÁÉÍÓÚÑÜ][a-záéíóúñü]+$')
