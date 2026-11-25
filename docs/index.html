@@ -30,7 +30,7 @@
       <a class="brand" href="#top" aria-label="Galingo">
         <img src="assets/logo_wordmark.png" alt="Galingo" width="132" height="46">
       </a>
-      <nav class="nav" id="nav" aria-label="Principal">
+      <nav class="nav" id="nav" aria-label="Principal" data-i18n-aria-label="nav.primary">
         <a href="#como" data-i18n="nav.how">Como funciona</a>
         <a href="#ciencia" data-i18n="nav.science">Ciencia</a>
         <a href="#voz" data-i18n="nav.voice">Voz</a>
@@ -39,13 +39,13 @@
         <a href="#descarga" data-i18n="nav.download">Descarga</a>
       </nav>
       <div class="header-actions">
-        <div class="lang" role="group" aria-label="Idioma">
+        <div class="lang" role="group" aria-label="Idioma" data-i18n-aria-label="nav.language">
           <button type="button" data-lang="gl" class="is-active" aria-pressed="true">GL</button>
           <button type="button" data-lang="es" aria-pressed="false">ES</button>
           <button type="button" data-lang="en" aria-pressed="false">EN</button>
         </div>
         <a class="btn btn-small btn-primary" href="https://github.com/Retselfernandez/Galingo/releases/tag/beta" data-i18n="nav.cta">Descargar</a>
-        <button class="menu" id="menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <button class="menu" id="menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav" data-i18n-aria-label="nav.menu.open">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -78,19 +78,19 @@
           </dl>
         </div>
 
-        <div class="demo-card" id="demo" aria-label="Demo interactiva de Galingo">
+        <div class="demo-card" id="demo" aria-label="Demo interactiva de Galingo" data-i18n-aria-label="demo.aria">
           <div class="demo-head">
             <div class="demo-title"><span class="dot"></span><span data-i18n="demo.title">Proba Galingo aquí</span></div>
             <div class="xp" aria-live="polite"><span id="xp">0</span> XP</div>
           </div>
-          <div class="tabs" role="tablist" aria-label="Mini-exercicios">
-            <button class="tab is-active" type="button" role="tab" aria-selected="true" aria-controls="view-voice" data-demo="voice" data-i18n="demo.tab.voice">Escoita</button>
-            <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="view-vocab" data-demo="vocab" data-i18n="demo.tab.vocab">Vocabulario</button>
-            <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="view-hlr" data-demo="hlr" data-i18n="demo.tab.hlr">Memoria</button>
+          <div class="tabs" role="tablist" aria-label="Mini-exercicios" data-i18n-aria-label="demo.tabs.aria">
+            <button class="tab is-active" type="button" role="tab" id="tab-voice" aria-selected="true" aria-controls="view-voice" data-demo="voice" data-i18n="demo.tab.voice">Escoita</button>
+            <button class="tab" type="button" role="tab" id="tab-vocab" aria-selected="false" aria-controls="view-vocab" data-demo="vocab" data-i18n="demo.tab.vocab">Vocabulario</button>
+            <button class="tab" type="button" role="tab" id="tab-hlr" aria-selected="false" aria-controls="view-hlr" data-demo="hlr" data-i18n="demo.tab.hlr">Memoria</button>
           </div>
 
           <div class="demo-body">
-            <div class="view is-active" id="view-voice" role="tabpanel">
+            <div class="view is-active" id="view-voice" role="tabpanel" aria-labelledby="tab-voice">
               <p class="eyebrow">1P01 · <span data-i18n="demo.voice.label">Pronuncia</span></p>
               <p class="question" data-i18n="demo.voice.q">Escoita e repite:</p>
               <p class="phrase">Chámome Ana.</p>
@@ -108,7 +108,7 @@
               <p class="feedback" aria-live="polite" id="voice-feedback" data-i18n="demo.voice.hint">Locución real do curso. O recoñecemento de voz da app execútase no dispositivo.</p>
             </div>
 
-            <div class="view" id="view-vocab" role="tabpanel" hidden>
+            <div class="view" id="view-vocab" role="tabpanel" aria-labelledby="tab-vocab" hidden>
               <p class="eyebrow">1V01 · <span data-i18n="demo.vocab.label">Vocabulario</span></p>
               <p class="question" data-i18n="demo.vocab.q">¿Cómo se dice «hola» en galego?</p>
               <div class="options" id="vocab-options">
@@ -119,15 +119,15 @@
               <p class="feedback" aria-live="polite" id="vocab-feedback" data-i18n="demo.vocab.hint">Escolle unha opción e mira a reacción de Gabi.</p>
             </div>
 
-            <div class="view" id="view-hlr" role="tabpanel" hidden>
+            <div class="view" id="view-hlr" role="tabpanel" aria-labelledby="tab-hlr" hidden>
               <p class="eyebrow">HLR · <span data-i18n="demo.hlr.label">En vivo</span></p>
               <p class="question" data-i18n="demo.hlr.q">Acertas ou fallas. O modelo actualiza a túa memoria:</p>
               <div class="hlr-grid">
                 <div class="hlr-metric"><span data-i18n="demo.hlr.halfLife">Vida media</span><strong id="hlr-h">—</strong><small data-i18n="demo.hlr.days">días</small></div>
                 <div class="hlr-metric"><span data-i18n="demo.hlr.probability">p(t)</span><strong id="hlr-p">—</strong><small>t = <span id="hlr-t-value">1</span> d</small></div>
               </div>
-              <input id="hlr-t" type="range" min="0" max="30" step="1" value="1" aria-label="Días desde o último repaso">
-              <svg id="hlr-spark" class="spark" viewBox="0 0 360 78" role="img" aria-label="Curva de retención HLR"><path class="spark-grid" d="M0 39 H360"/><path id="hlr-path" class="spark-line" d=""/><circle id="hlr-dot" class="spark-dot" r="4" cx="0" cy="0"/></svg>
+              <input id="hlr-t" type="range" min="0" max="30" step="1" value="1" aria-label="Días desde o último repaso" data-i18n-aria-label="demo.hlr.slider">
+              <svg id="hlr-spark" class="spark" viewBox="0 0 360 78" role="img" aria-label="Curva de retención HLR" data-i18n-aria-label="demo.hlr.chart"><path class="spark-grid" d="M0 39 H360"/><path id="hlr-path" class="spark-line" d=""/><circle id="hlr-dot" class="spark-dot" r="4" cx="0" cy="0"/></svg>
               <div class="mini-actions">
                 <button class="btn btn-primary btn-small" id="hlr-right" type="button" data-i18n="demo.hlr.right">Acertei</button>
                 <button class="btn btn-ghost btn-small" id="hlr-wrong" type="button" data-i18n="demo.hlr.wrong">Fallei</button>
@@ -200,7 +200,7 @@
               <span data-i18n="s2.chart.k">Retención estimada</span>
               <span class="mono">p(t)</span>
             </div>
-            <svg id="science-chart" viewBox="0 0 520 240" role="img" aria-label="Comparación de retención estimada entre HLR e un intervalo fixo">
+            <svg id="science-chart" viewBox="0 0 520 240" role="img" aria-label="Comparación de retención estimada entre HLR e un intervalo fixo" data-i18n-aria-label="s2.chart.aria">
               <g class="grid">
                 <line x1="40" y1="20" x2="40" y2="200"/>
                 <line x1="40" y1="200" x2="500" y2="200"/>
@@ -242,7 +242,7 @@
             <a class="link-arrow" href="https://github.com/Retselfernandez/Galingo" target="_blank" rel="noopener"><span data-i18n="s3.link">Ver como está implementado</span> <span aria-hidden="true">↗</span></a>
             <blockquote class="voice-quote" data-i18n="s3.quote">A voz non viaxa.</blockquote>
           </div>
-          <div class="voice-flow reveal" aria-label="Fluxo de voz local">
+          <div class="voice-flow reveal" aria-label="Fluxo de voz local" data-i18n-aria-label="s3.flow.aria">
             <div class="flow-step"><span class="mono">01</span><strong data-i18n="s3.f1">Micrófono</strong><small data-i18n="s3.f1s">WAV · 16 kHz · mono</small></div>
             <div class="flow-arrow">↓</div>
             <div class="flow-step highlight"><span class="mono">02</span><strong data-i18n="s3.f2">No dispositivo</strong><small>Whisper small int8</small></div>
@@ -336,7 +336,7 @@ flutter build ios --release</code></pre>
     <div class="shell footer-inner">
       <a class="brand" href="#top"><img src="assets/logo_wordmark.png" alt="Galingo" width="112" height="39"></a>
       <p data-i18n="footer.tag">Aprende galego, paso a paso. Feito en Galicia.</p>
-      <nav aria-label="Footer">
+      <nav aria-label="Footer" data-i18n-aria-label="footer.nav">
         <a href="https://github.com/Retselfernandez/Galingo/releases/tag/beta" data-i18n="footer.release">Release</a>
         <a href="https://github.com/Retselfernandez/Galingo" data-i18n="footer.repo">GitHub</a>
         <a href="privacy_policy.html" data-i18n="footer.privacy">Privacidade</a>

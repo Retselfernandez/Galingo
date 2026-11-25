@@ -10,12 +10,15 @@
       'a11y.skip': 'Saltar ao contido',
       'nav.how': 'Como funciona', 'nav.science': 'Ciencia', 'nav.voice': 'Voz',
       'nav.proof': 'Probas', 'nav.roadmap': 'Roadmap', 'nav.download': 'Descarga', 'nav.cta': 'Descargar',
+      'nav.primary': 'Principal', 'nav.language': 'Idioma',
+      'nav.menu.open': 'Abrir menú', 'nav.menu.close': 'Pechar menú',
       'hero.badge': 'v1.5.0 · Beta · 100% Offline-First · Open Source',
       'hero.title1': 'Aprende galego falando.', 'hero.title2': 'Sen internet, sen esperas.',
       'hero.sub': 'Microaprendizaxe gamificada con repetición espazada probabilística (HLR) e voz neuronal no dispositivo. Unha app para aprender galego A1 ao teu ritmo, con Gabi ao lado.',
       'hero.cta1': 'Descargar APK Beta', 'hero.cta2': 'Ver código', 'hero.cta3': 'Proba a demo',
       'hero.fact1.k': 'Nivel', 'hero.fact2.k': 'Tests', 'hero.fact3.k': 'Plataformas',
       'demo.title': 'Proba Galingo aquí',
+      'demo.aria': 'Demo interactiva de Galingo', 'demo.tabs.aria': 'Mini-exercicios',
       'demo.tab.voice': 'Escoita', 'demo.tab.vocab': 'Vocabulario', 'demo.tab.hlr': 'Memoria',
       'demo.voice.label': 'Pronuncia', 'demo.voice.q': 'Escoita e repite:', 'demo.voice.play': 'Escoitar',
       'demo.voice.record': 'Gravar',
@@ -24,6 +27,8 @@
       'demo.vocab.hint': 'Escolle unha opción e mira a reacción de Gabi.',
       'demo.hlr.label': 'En vivo', 'demo.hlr.q': 'Acertas ou fallas. O modelo actualiza a túa memoria:',
       'demo.hlr.halfLife': 'Vida media', 'demo.hlr.probability': 'p(t)', 'demo.hlr.days': 'días',
+      'demo.hlr.slider': 'Días desde el último repaso', 'demo.hlr.chart': 'Curva de retención HLR',
+      'demo.hlr.slider': 'Días desde o último repaso', 'demo.hlr.chart': 'Curva de retención HLR',
       'demo.hlr.right': 'Acertei', 'demo.hlr.wrong': 'Fallei',
       'demo.hlr.hint': 'A dificultade d e os acertos/fallos actualizan a vida media. Sen enviar nada á nube.',
       's1.title': 'O Camiño do Galego',
@@ -45,6 +50,7 @@
       's2.t2': 'HLR como predictor probabilístico en paralelo.',
       's2.t3': 'Avaliación honesta: o piloto non demostrou superioridade de HLR.',
       's2.chart.k': 'Retención estimada', 's2.chart.fixed': 'Intervalo fixo',
+      's2.chart.aria': 'Comparación de retención estimada entre HLR e un intervalo fixo',
       's2.chart.note': 'Curvas ilustrativas · o planificador real é SM-2',
       's3.title': 'Voz 100 % no dispositivo',
       's3.sub': 'Síntese neuronal galega e recoñecemento local. O audio nace e morre no teu teléfono.',
@@ -56,6 +62,8 @@
       's3.f1': 'Micrófono', 's3.f1s': 'WAV · 16 kHz · mono', 's3.f2': 'No dispositivo',
       's3.f3': 'Similitud fonética', 's3.f3s': 'acerto por palabra · 0,65',
       's3.quote': 'A voz non viaxa.',
+      's3.flow.aria': 'Fluxo de voz local',
+      's3.flow.aria': 'Flujo de voz local',
       's3.privacy': '0 bytes de audio enviados',
       's4.title': 'Datos reais, non promesas',
       's4.sub': 'O que está implementado, o que está probado e o que aínda é futuro. Sen inflar o resultado.',
@@ -84,7 +92,7 @@
       's6.privacy': 'Política de privacidade', 's6.license': 'CC BY-NC 4.0',
       'footer.tag': 'Aprende galego, paso a paso. Feito en Galicia.',
       'footer.release': 'Release', 'footer.repo': 'GitHub', 'footer.privacy': 'Privacidade',
-      'footer.license': 'CC BY-NC 4.0',
+      'footer.license': 'CC BY-NC 4.0', 'footer.nav': 'Footer', 'footer.nav': 'Pie de página', 'footer.nav': 'Pé de páxina',
       'dyn.voice.playing': 'Reproducindo a locución…',
       'dyn.voice.audioError': 'Non se puido reproducir o audio. Proba de novo.',
       'dyn.voice.listening': 'Simulando o ditado…',
@@ -98,12 +106,15 @@
       'a11y.skip': 'Saltar al contenido',
       'nav.how': 'Cómo funciona', 'nav.science': 'Ciencia', 'nav.voice': 'Voz',
       'nav.proof': 'Pruebas', 'nav.roadmap': 'Roadmap', 'nav.download': 'Descarga', 'nav.cta': 'Descargar',
+      'nav.primary': 'Principal', 'nav.language': 'Idioma',
+      'nav.menu.open': 'Abrir menú', 'nav.menu.close': 'Cerrar menú',
       'hero.badge': 'v1.5.0 · Beta · 100% Offline-First · Open Source',
       'hero.title1': 'Aprende gallego hablando.', 'hero.title2': 'Sin internet, sin esperas.',
       'hero.sub': 'Microaprendizaje gamificado con repetición espaciada probabilística (HLR) y voz neuronal en el dispositivo. Una app para aprender gallego A1 a tu ritmo, con Gabi al lado.',
       'hero.cta1': 'Descargar APK Beta', 'hero.cta2': 'Ver código', 'hero.cta3': 'Prueba la demo',
       'hero.fact1.k': 'Nivel', 'hero.fact2.k': 'Tests', 'hero.fact3.k': 'Plataformas',
       'demo.title': 'Prueba Galingo aquí',
+      'demo.aria': 'Demo interactiva de Galingo', 'demo.tabs.aria': 'Mini-ejercicios',
       'demo.tab.voice': 'Escucha', 'demo.tab.vocab': 'Vocabulario', 'demo.tab.hlr': 'Memoria',
       'demo.voice.label': 'Pronunciación', 'demo.voice.q': 'Escucha y repite:', 'demo.voice.play': 'Escuchar',
       'demo.voice.record': 'Grabar',
@@ -112,6 +123,8 @@
       'demo.vocab.hint': 'Elige una opción y mira la reacción de Gabi.',
       'demo.hlr.label': 'En vivo', 'demo.hlr.q': 'Aciertas o fallas. El modelo actualiza tu memoria:',
       'demo.hlr.halfLife': 'Vida media', 'demo.hlr.probability': 'p(t)', 'demo.hlr.days': 'días',
+      'demo.hlr.slider': 'Días desde el último repaso', 'demo.hlr.chart': 'Curva de retención HLR',
+      'demo.hlr.slider': 'Días desde o último repaso', 'demo.hlr.chart': 'Curva de retención HLR',
       'demo.hlr.right': 'Acerté', 'demo.hlr.wrong': 'Fallé',
       'demo.hlr.hint': 'La dificultad d y los aciertos/fallos actualizan la vida media. Sin enviar nada a la nube.',
       's1.title': 'El Camino del Gallego',
@@ -133,6 +146,7 @@
       's2.t2': 'HLR como predictor probabilístico en paralelo.',
       's2.t3': 'Evaluación honesta: el piloto no demostró superioridad de HLR.',
       's2.chart.k': 'Retención estimada', 's2.chart.fixed': 'Intervalo fijo',
+      's2.chart.aria': 'Comparación de retención estimada entre HLR y un intervalo fijo',
       's2.chart.note': 'Curvas ilustrativas · el planificador real es SM-2',
       's3.title': 'Voz 100 % en el dispositivo',
       's3.sub': 'Síntesis neuronal gallega y reconocimiento local. El audio nace y muere en tu teléfono.',
@@ -144,6 +158,8 @@
       's3.f1': 'Micrófono', 's3.f1s': 'WAV · 16 kHz · mono', 's3.f2': 'En el dispositivo',
       's3.f3': 'Similitud fonética', 's3.f3s': 'acierto por palabra · 0,65',
       's3.quote': 'La voz no viaja.',
+      's3.flow.aria': 'Fluxo de voz local',
+      's3.flow.aria': 'Flujo de voz local',
       's3.privacy': '0 bytes de audio enviados',
       's4.title': 'Datos reales, no promesas',
       's4.sub': 'Lo que está implementado, lo que está probado y lo que todavía es futuro. Sin inflar el resultado.',
@@ -172,7 +188,7 @@
       's6.privacy': 'Política de privacidad', 's6.license': 'CC BY-NC 4.0',
       'footer.tag': 'Aprende gallego, paso a paso. Hecho en Galicia.',
       'footer.release': 'Release', 'footer.repo': 'GitHub', 'footer.privacy': 'Privacidad',
-      'footer.license': 'CC BY-NC 4.0',
+      'footer.license': 'CC BY-NC 4.0', 'footer.nav': 'Footer', 'footer.nav': 'Pie de página', 'footer.nav': 'Pé de páxina',
       'dyn.voice.playing': 'Reproduciendo la locución…',
       'dyn.voice.audioError': 'No se pudo reproducir el audio. Prueba de nuevo.',
       'dyn.voice.listening': 'Simulando el dictado…',
@@ -186,12 +202,15 @@
       'a11y.skip': 'Skip to content',
       'nav.how': 'How it works', 'nav.science': 'Science', 'nav.voice': 'Voice',
       'nav.proof': 'Proof', 'nav.roadmap': 'Roadmap', 'nav.download': 'Download', 'nav.cta': 'Download',
+      'nav.primary': 'Main', 'nav.language': 'Language',
+      'nav.menu.open': 'Open menu', 'nav.menu.close': 'Close menu',
       'hero.badge': 'v1.5.0 · Beta · 100% Offline-First · Open Source',
       'hero.title1': 'Learn Galician by speaking.', 'hero.title2': 'No internet, no waiting.',
       'hero.sub': 'Gamified microlearning with probabilistic spaced repetition (HLR) and on-device neural voice. An app to learn Galician A1 at your own pace, with Gabi by your side.',
       'hero.cta1': 'Download Beta APK', 'hero.cta2': 'View code', 'hero.cta3': 'Try the demo',
       'hero.fact1.k': 'Level', 'hero.fact2.k': 'Tests', 'hero.fact3.k': 'Platforms',
       'demo.title': 'Try Galingo here',
+      'demo.aria': 'Galingo interactive demo', 'demo.tabs.aria': 'Mini exercises',
       'demo.tab.voice': 'Listen', 'demo.tab.vocab': 'Vocabulary', 'demo.tab.hlr': 'Memory',
       'demo.voice.label': 'Pronunciation', 'demo.voice.q': 'Listen and repeat:', 'demo.voice.play': 'Listen',
       'demo.voice.record': 'Record',
@@ -200,6 +219,7 @@
       'demo.vocab.hint': 'Pick an option and watch Gabi react.',
       'demo.hlr.label': 'Live', 'demo.hlr.q': 'Get it right or wrong. The model updates your memory:',
       'demo.hlr.halfLife': 'Half-life', 'demo.hlr.probability': 'p(t)', 'demo.hlr.days': 'days',
+      'demo.hlr.slider': 'Days since the last review', 'demo.hlr.chart': 'HLR retention curve',
       'demo.hlr.right': 'I got it', 'demo.hlr.wrong': 'I missed',
       'demo.hlr.hint': 'Difficulty d and hits/misses update the half-life. Nothing is sent to the cloud.',
       's1.title': 'The Galician Way',
@@ -221,6 +241,7 @@
       's2.t2': 'HLR as a probabilistic predictor in parallel.',
       's2.t3': 'Honest evaluation: the pilot did not show HLR superiority.',
       's2.chart.k': 'Estimated retention', 's2.chart.fixed': 'Fixed interval',
+      's2.chart.aria': 'Estimated retention comparison between HLR and a fixed interval',
       's2.chart.note': 'Illustrative curves · the real scheduler is SM-2',
       's3.title': 'Voice 100% on-device',
       's3.sub': 'Galician neural synthesis and local recognition. Audio is born and dies on your phone.',
@@ -232,6 +253,7 @@
       's3.f1': 'Microphone', 's3.f1s': 'WAV · 16 kHz · mono', 's3.f2': 'On-device',
       's3.f3': 'Phonetic similarity', 's3.f3s': 'word accuracy · 0.65',
       's3.quote': 'Voice never travels.',
+      's3.flow.aria': 'Local voice flow',
       's3.privacy': '0 bytes of audio sent',
       's4.title': 'Real data, not promises',
       's4.sub': 'What is implemented, what is tested and what is still ahead. No inflated results.',
@@ -260,7 +282,7 @@
       's6.privacy': 'Privacy policy', 's6.license': 'CC BY-NC 4.0',
       'footer.tag': 'Learn Galician, step by step. Made in Galicia.',
       'footer.release': 'Release', 'footer.repo': 'GitHub', 'footer.privacy': 'Privacy',
-      'footer.license': 'CC BY-NC 4.0',
+      'footer.license': 'CC BY-NC 4.0', 'footer.nav': 'Footer', 'footer.nav': 'Pie de página', 'footer.nav': 'Pé de páxina',
       'dyn.voice.playing': 'Playing the recording…',
       'dyn.voice.audioError': 'Audio could not play. Try again.',
       'dyn.voice.listening': 'Simulating dictation…',
@@ -292,6 +314,13 @@
 
   const t = (key) => (I18N[lang] && I18N[lang][key]) || I18N.gl[key] || key;
 
+  function updateMenuLabel() {
+    const m = document.getElementById('menu');
+    const n = document.getElementById('nav');
+    if (!m || !n) return;
+    m.setAttribute('aria-label', t(n.classList.contains('open') ? 'nav.menu.close' : 'nav.menu.open'));
+  }
+
   function applyLang(next) {
     lang = next;
     localStorage.setItem('galingo-lang', lang);
@@ -313,6 +342,10 @@
       b.classList.toggle('is-active', on);
       b.setAttribute('aria-pressed', String(on));
     });
+    $$('[data-i18n-aria-label]').forEach((el) => {
+      el.setAttribute('aria-label', t(el.dataset.i18nAriaLabel));
+    });
+    updateMenuLabel();
     resetFeedback();
   }
 
@@ -335,10 +368,12 @@
     menu.addEventListener('click', () => {
       const open = nav.classList.toggle('open');
       menu.setAttribute('aria-expanded', String(open));
+      updateMenuLabel();
     });
     $$('a', nav).forEach((a) => a.addEventListener('click', () => {
       nav.classList.remove('open');
       menu.setAttribute('aria-expanded', 'false');
+      updateMenuLabel();
     }));
   }
 
@@ -402,12 +437,13 @@
   const voiceFeedback = $('#voice-feedback');
   if (audio && wave && playBtn) {
     playBtn.addEventListener('click', async () => {
+      wave.classList.add('playing');
+      if (voiceFeedback) voiceFeedback.textContent = t('dyn.voice.playing');
       try {
         audio.currentTime = 0;
         await audio.play();
-        wave.classList.add('playing');
-        if (voiceFeedback) voiceFeedback.textContent = t('dyn.voice.playing');
       } catch (_) {
+        wave.classList.remove('playing');
         if (voiceFeedback) voiceFeedback.textContent = t('dyn.voice.audioError');
       }
     });
