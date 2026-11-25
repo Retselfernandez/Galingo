@@ -86,11 +86,9 @@
       'footer.release': 'Release', 'footer.repo': 'GitHub', 'footer.privacy': 'Privacidade',
       'footer.license': 'CC BY-NC 4.0',
       'dyn.voice.playing': 'Reproducindo a locución…',
-      'dyn.voice.unsupported': 'Este navegador non permite gravar; proba a escoitar a locución.',
-      'dyn.voice.listening': 'Escoitando… fala agora.',
-      'dyn.voice.match': 'Ben! Similitud {n} %.',
-      'dyn.voice.almost': 'Case! Similitud {n} %. Repite con calma.',
-      'dyn.voice.retry': 'Non se recoñeceu. Proba de novo.',
+      'dyn.voice.audioError': 'Non se puido reproducir o audio. Proba de novo.',
+      'dyn.voice.listening': 'Simulando o ditado…',
+      'dyn.voice.demo': 'Demo visual · similitud {n} %. A app real avalia a pronuncia con Whisper no dispositivo.',
       'dyn.vocab.correct': 'Ben feito! +10 XP. «Ola» é o saúdo básico.',
       'dyn.vocab.wrong': 'Case. A forma correcta é «Ola».',
       'dyn.hlr.right': 'Acertei: +10 XP. A vida media sobe.',
@@ -176,11 +174,9 @@
       'footer.release': 'Release', 'footer.repo': 'GitHub', 'footer.privacy': 'Privacidad',
       'footer.license': 'CC BY-NC 4.0',
       'dyn.voice.playing': 'Reproduciendo la locución…',
-      'dyn.voice.unsupported': 'Este navegador no permite grabar; prueba a escuchar la locución.',
-      'dyn.voice.listening': 'Escuchando… habla ahora.',
-      'dyn.voice.match': '¡Bien! Similitud {n} %.',
-      'dyn.voice.almost': '¡Casi! Similitud {n} %. Repite con calma.',
-      'dyn.voice.retry': 'No se reconoció. Prueba de nuevo.',
+      'dyn.voice.audioError': 'No se pudo reproducir el audio. Prueba de nuevo.',
+      'dyn.voice.listening': 'Simulando el dictado…',
+      'dyn.voice.demo': 'Demo visual · similitud {n} %. La app real evalúa la pronunciación con Whisper en el dispositivo.',
       'dyn.vocab.correct': '¡Bien hecho! +10 XP. «Ola» es el saludo básico.',
       'dyn.vocab.wrong': 'Casi. La forma correcta es «Ola».',
       'dyn.hlr.right': 'Acerté: +10 XP. La vida media sube.',
@@ -266,11 +262,9 @@
       'footer.release': 'Release', 'footer.repo': 'GitHub', 'footer.privacy': 'Privacy',
       'footer.license': 'CC BY-NC 4.0',
       'dyn.voice.playing': 'Playing the recording…',
-      'dyn.voice.unsupported': 'This browser cannot record; try listening to the recording.',
-      'dyn.voice.listening': 'Listening… speak now.',
-      'dyn.voice.match': 'Nice! Similarity {n}%.',
-      'dyn.voice.almost': 'Almost! Similarity {n}%. Try again slowly.',
-      'dyn.voice.retry': 'Not recognised. Try again.',
+      'dyn.voice.audioError': 'Audio could not play. Try again.',
+      'dyn.voice.listening': 'Simulating dictation…',
+      'dyn.voice.demo': 'Visual demo · {n}% similarity. The real app scores pronunciation with Whisper on-device.',
       'dyn.vocab.correct': 'Well done! +10 XP. «Ola» is the basic greeting.',
       'dyn.vocab.wrong': 'Almost. The correct form is «Ola».',
       'dyn.hlr.right': 'Correct: +10 XP. Half-life goes up.',
@@ -414,7 +408,7 @@
         wave.classList.add('playing');
         if (voiceFeedback) voiceFeedback.textContent = t('dyn.voice.playing');
       } catch (_) {
-        if (voiceFeedback) voiceFeedback.textContent = t('dyn.voice.unsupported');
+        if (voiceFeedback) voiceFeedback.textContent = t('dyn.voice.audioError');
       }
     });
     audio.addEventListener('ended', () => {
@@ -424,63 +418,26 @@
     audio.addEventListener('pause', () => wave.classList.remove('playing'));
   }
 
-  function normalize(text) {
-    return text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-      .replace(/[^a-z0-9\s]/g, ' ').replace(/\s+/g, ' ').trim();
-  }
-  function levenshtein(a, b) {
-    const m = a.length, n = b.length;
-    const dp = Array.from({ length: m + 1 }, (_, i) => [i]);
-    for (let j = 1; j <= n; j++) dp[0][j] = j;
-    for (let i = 1; i <= m; i++) {
-      for (let j = 1; j <= n; j++) {
-        dp[i][j] = Math.min(dp[i - 1][j] + 1, dp[i][j - 1] + 1, dp[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
-      }
-    }
-    return dp[m][n];
-  }
-  function similarity(a, b) {
-    if (!a && !b) return 1;
-    return Math.max(0, 1 - levenshtein(a, b) / Math.max(a.length, b.length));
-  }
-
+  // The demo is intentionally local: no microphone capture and no speech
+  // recognition request. The real app runs Whisper on-device.
+  let recording = false;
   if (recordBtn && voiceFeedback) {
     recordBtn.addEventListener('click', () => {
-      const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-      if (!SR) {
-        voiceFeedback.textContent = t('dyn.voice.unsupported');
-        return;
-      }
-      const rec = new SR();
-      rec.lang = 'gl-ES';
-      rec.interimResults = false;
-      rec.maxAlternatives = 1;
-      rec.onstart = () => {
-        voiceFeedback.textContent = t('dyn.voice.listening');
-        if (wave) wave.classList.add('playing');
-      };
-      rec.onresult = (event) => {
-        const said = event.results[0][0].transcript;
-        const score = similarity(normalize(said), normalize('Chámome Ana'));
+      if (recording) return;
+      recording = true;
+      recordBtn.disabled = true;
+      if (audio) audio.pause();
+      voiceFeedback.textContent = t('dyn.voice.listening');
+      if (wave) wave.classList.add('playing');
+      window.setTimeout(() => {
         if (wave) wave.classList.remove('playing');
-        if (score >= 0.65) {
-          addXp(10);
-          gabi('happy');
-          voiceFeedback.textContent = t('dyn.voice.match').replace('{n}', String(Math.round(score * 100)));
-        } else {
-          gabi('sad');
-          const key = score >= 0.5 ? 'dyn.voice.almost' : 'dyn.voice.retry';
-          voiceFeedback.textContent = t(key).replace('{n}', String(Math.round(score * 100)));
-        }
-      };
-      rec.onerror = () => {
-        if (wave) wave.classList.remove('playing');
-        voiceFeedback.textContent = t('dyn.voice.retry');
-      };
-      rec.onend = () => { if (wave) wave.classList.remove('playing'); };
-      try { rec.start(); } catch (_) {
-        voiceFeedback.textContent = t('dyn.voice.unsupported');
-      }
+        const score = 90 + Math.floor(Math.random() * 7);
+        addXp(10);
+        gabi('happy');
+        voiceFeedback.textContent = t('dyn.voice.demo').replace('{n}', String(score));
+        recording = false;
+        recordBtn.disabled = false;
+      }, 1400);
     });
   }
 
