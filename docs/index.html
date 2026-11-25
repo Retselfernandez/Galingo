@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="gl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galingo — Aprende galego falando, sen internet</title>
+  <meta name="description" content="Galingo é unha app de microaprendizaxe do galego (A1) con repetición espazada, voz neuronal no dispositivo e un modelo probabilístico de memoria. Beta aberta, código aberto.">
+  <meta name="theme-color" content="#0B3C7A">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <meta property="og:title" content="Galingo — Aprende galego falando">
+  <meta property="og:description" content="Microaprendizaxe A1, voz 100% local e memoria probabilística. Beta aberta para Android, iOS, macOS, Windows e Web.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://retselfernandez.github.io/Galingo/">
+  <meta property="og:image" content="https://retselfernandez.github.io/Galingo/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <link rel="canonical" href="https://retselfernandez.github.io/Galingo/">
+  <meta property="og:locale" content="gl_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="assets/fonts/inter-400-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="a11y.skip">Saltar ao contido</a>
+
+  <header class="site-header" id="top">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="Galingo">
+        <img src="assets/logo_wordmark.png" alt="Galingo" width="132" height="46">
+      </a>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#como" data-i18n="nav.how">Como funciona</a>
+        <a href="#ciencia" data-i18n="nav.science">Ciencia</a>
+        <a href="#voz" data-i18n="nav.voice">Voz</a>
+        <a href="#probas" data-i18n="nav.proof">Probas</a>
+        <a href="#roadmap" data-i18n="nav.roadmap">Roadmap</a>
+        <a href="#descarga" data-i18n="nav.download">Descarga</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang" role="group" aria-label="Idioma">
+          <button type="button" data-lang="gl" class="is-active" aria-pressed="true">GL</button>
+          <button type="button" data-lang="es" aria-pressed="false">ES</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="btn btn-small btn-primary" href="https://github.com/Retselfernandez/Galingo/releases/tag/beta" data-i18n="nav.cta">Descargar</a>
+        <button class="menu" id="menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <div class="badge"><span class="pulse" aria-hidden="true"></span><span data-i18n="hero.badge">v1.5.0 · Beta · 100% Offline-First · Open Source</span></div>
+          <h1>
+            <span data-i18n="hero.title1">Aprende galego falando.</span><br>
+            <em data-i18n="hero.title2">Sen internet, sen esperas.</em>
+          </h1>
+          <p class="lead" data-i18n="hero.sub">Microaprendizaxe gamificada con repetición espazada probabilística (HLR) e voz neuronal no dispositivo. Unha app para aprender galego A1 ao teu ritmo, con Gabi ao lado.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://github.com/Retselfernandez/Galingo/releases/tag/beta">
+              <span data-i18n="hero.cta1">Descargar APK Beta</span><span aria-hidden="true">↓</span>
+            </a>
+            <a class="btn btn-ghost" href="https://github.com/Retselfernandez/Galingo" target="_blank" rel="noopener">
+              <span data-i18n="hero.cta2">Ver código</span><span aria-hidden="true">↗</span>
+            </a>
+            <a class="link-arrow" href="#demo"><span data-i18n="hero.cta3">Proba a demo</span> <span aria-hidden="true">→</span></a>
+          </div>
+          <dl class="hero-facts">
+            <div><dt data-i18n="hero.fact1.k">Nivel</dt><dd>A1</dd></div>
+            <div><dt data-i18n="hero.fact2.k">Tests</dt><dd>49/49</dd></div>
+            <div><dt data-i18n="hero.fact3.k">Plataformas</dt><dd>5</dd></div>
+          </dl>
+        </div>
+
+        <div class="demo-card" id="demo" aria-label="Demo interactiva de Galingo">
+          <div class="demo-head">
+            <div class="demo-title"><span class="dot"></span><span data-i18n="demo.title">Proba Galingo aquí</span></div>
+            <div class="xp" aria-live="polite"><span id="xp">0</span> XP</div>
+          </div>
+          <div class="tabs" role="tablist" aria-label="Mini-exercicios">
+            <button class="tab is-active" type="button" role="tab" aria-selected="true" aria-controls="view-voice" data-demo="voice" data-i18n="demo.tab.voice">Escoita</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="view-vocab" data-demo="vocab" data-i18n="demo.tab.vocab">Vocabulario</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="view-hlr" data-demo="hlr" data-i18n="demo.tab.hlr">Memoria</button>
+          </div>
+
+          <div class="demo-body">
+            <div class="view is-active" id="view-voice" role="tabpanel">
+              <p class="eyebrow">1P01 · <span data-i18n="demo.voice.label">Pronuncia</span></p>
+              <p class="question" data-i18n="demo.voice.q">Escoita e repite:</p>
+              <p class="phrase">Chámome Ana.</p>
+              <div class="wave" id="wave" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <div class="mini-actions">
+                <button class="btn btn-primary btn-small" id="play-audio" type="button">
+                  <span aria-hidden="true">▶</span> <span data-i18n="demo.voice.play">Escoitar</span>
+                </button>
+                <button class="btn btn-ghost btn-small" id="record" type="button">
+                  <span aria-hidden="true">●</span> <span data-i18n="demo.voice.record">Gravar</span>
+                </button>
+              </div>
+              <p class="feedback" aria-live="polite" id="voice-feedback" data-i18n="demo.voice.hint">Locución real do curso. O recoñecemento de voz da app execútase no dispositivo.</p>
+            </div>
+
+            <div class="view" id="view-vocab" role="tabpanel" hidden>
+              <p class="eyebrow">1V01 · <span data-i18n="demo.vocab.label">Vocabulario</span></p>
+              <p class="question" data-i18n="demo.vocab.q">¿Cómo se dice «hola» en galego?</p>
+              <div class="options" id="vocab-options">
+                <button type="button" data-answer="wrong">Hola</button>
+                <button type="button" data-answer="right">Ola</button>
+                <button type="button" data-answer="wrong">Olá</button>
+              </div>
+              <p class="feedback" aria-live="polite" id="vocab-feedback" data-i18n="demo.vocab.hint">Escolle unha opción e mira a reacción de Gabi.</p>
+            </div>
+
+            <div class="view" id="view-hlr" role="tabpanel" hidden>
+              <p class="eyebrow">HLR · <span data-i18n="demo.hlr.label">En vivo</span></p>
+              <p class="question" data-i18n="demo.hlr.q">Acertas ou fallas. O modelo actualiza a túa memoria:</p>
+              <div class="hlr-grid">
+                <div class="hlr-metric"><span data-i18n="demo.hlr.halfLife">Vida media</span><strong id="hlr-h">—</strong><small data-i18n="demo.hlr.days">días</small></div>
+                <div class="hlr-metric"><span data-i18n="demo.hlr.probability">p(t)</span><strong id="hlr-p">—</strong><small>t = <span id="hlr-t-value">1</span> d</small></div>
+              </div>
+              <input id="hlr-t" type="range" min="0" max="30" step="1" value="1" aria-label="Días desde o último repaso">
+              <svg id="hlr-spark" class="spark" viewBox="0 0 360 78" role="img" aria-label="Curva de retención HLR"><path class="spark-grid" d="M0 39 H360"/><path id="hlr-path" class="spark-line" d=""/><circle id="hlr-dot" class="spark-dot" r="4" cx="0" cy="0"/></svg>
+              <div class="mini-actions">
+                <button class="btn btn-primary btn-small" id="hlr-right" type="button" data-i18n="demo.hlr.right">Acertei</button>
+                <button class="btn btn-ghost btn-small" id="hlr-wrong" type="button" data-i18n="demo.hlr.wrong">Fallei</button>
+              </div>
+              <p class="formula-mini">p = 2<sup>−t/ĥ</sup> · ĥ = 2<sup>θ·x</sup></p>
+              <p class="feedback" aria-live="polite" id="hlr-feedback" data-i18n="demo.hlr.hint">A dificultade d e os acertos/fallos actualizan a vida media. Sen enviar nada á nube.</p>
+            </div>
+          </div>
+
+          <div class="gabi-wrap">
+            <img id="gabi" src="assets/gabi_happy.webp" alt="Gabi, a mascota de Galingo" width="128" height="128" loading="lazy">
+          </div>
+          <audio id="voice-audio" src="assets/audio/chamome-ana.mp3" preload="none"></audio>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="como">
+      <div class="shell">
+        <header class="section-head reveal">
+          <span class="num">01</span>
+          <h2 data-i18n="s1.title">O Camiño do Galego</h2>
+          <p data-i18n="s1.sub">Tres ideas sinxelas: sesións curtas, práctica multimodal e unha mascota que che acompaña.</p>
+        </header>
+        <div class="grid three">
+          <article class="card reveal">
+            <span class="card-index">A1</span>
+            <h3 data-i18n="s1.c1.t">Leccións curtas</h3>
+            <p data-i18n="s1.c1.p">Sesións de 5–10 minutos, 12 paradas e 70 leccións. Un concepto por pantalla, sen fricción.</p>
+            <div class="mini">70 <span data-i18n="s1.c1.m">leccións</span> · 573 <span data-i18n="s1.c1.m2">exercicios</span></div>
+          </article>
+          <article class="card reveal">
+            <span class="card-index">06</span>
+            <h3 data-i18n="s1.c2.t">Práctica multimodal</h3>
+            <p data-i18n="s1.c2.p">Selección, escritura, emparellamento, ditado e voz. O mesmo contido, distintas formas de recuperalo.</p>
+            <div class="mini">6 <span data-i18n="s1.c2.m">tipos de exercicio</span></div>
+          </article>
+          <article class="card reveal">
+            <span class="card-index">XP</span>
+            <img class="card-gabi" src="assets/gabi_happy.webp" alt="" width="54" height="54" loading="lazy">
+            <h3 data-i18n="s1.c3.t">Rachas e XP</h3>
+            <p data-i18n="s1.c3.p">Gabi celebra os acertos, insiste nos fallos e axuda a converter o estudo nun hábito diario.</p>
+            <div class="mini" data-i18n="s1.c3.m">racha · niveis · insignias</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="ciencia">
+      <div class="shell">
+        <header class="section-head reveal">
+          <span class="num">02</span>
+          <h2 data-i18n="s2.title">A ciencia detrás da aprendizaxe</h2>
+          <p data-i18n="s2.sub">Sm-2 planifica os repasos. HLR estima, en paralelo, cando vas recordar. Dous modelos, un mesmo compromiso: ensinar con datos, non con promesas.</p>
+        </header>
+        <div class="science-grid">
+          <article class="paper reveal">
+            <p class="eyebrow" data-i18n="s2.formula.k">Half-Life Regression</p>
+            <div class="formula">p = 2<sup>−t/ĥ</sup></div>
+            <div class="formula small">ĥ = 2<sup>θ<sub>0</sub> + θ<sub>1</sub>√(1+s) + θ<sub>2</sub>√(1+f) + θ<sub>3</sub>d</sup></div>
+            <p data-i18n="s2.formula.p">O modelo aprende de acertos (s), fallos (f) e dificultade (d). O vector θ entrena no dispositivo; non se envía á nube.</p>
+            <ul class="ticks">
+              <li data-i18n="s2.t1">SM-2 como planificador determinista.</li>
+              <li data-i18n="s2.t2">HLR como predictor probabilístico en paralelo.</li>
+              <li data-i18n="s2.t3">Avaliación honesta: o piloto non demostrou superioridade de HLR.</li>
+            </ul>
+          </article>
+          <figure class="chart-card reveal">
+            <div class="chart-head">
+              <span data-i18n="s2.chart.k">Retención estimada</span>
+              <span class="mono">p(t)</span>
+            </div>
+            <svg id="science-chart" viewBox="0 0 520 240" role="img" aria-label="Comparación de retención estimada entre HLR e un intervalo fixo">
+              <g class="grid">
+                <line x1="40" y1="20" x2="40" y2="200"/>
+                <line x1="40" y1="200" x2="500" y2="200"/>
+                <line x1="40" y1="110" x2="500" y2="110"/>
+                <line x1="40" y1="20" x2="500" y2="20"/>
+              </g>
+              <path id="curve-fixed" class="curve curve-fixed" d=""/>
+              <path id="curve-hlr" class="curve curve-hlr" d=""/>
+              <g class="axis-labels">
+                <text x="18" y="24">1</text><text x="14" y="114">0.5</text><text x="26" y="204">0</text>
+                <text x="40" y="222">0</text><text x="260" y="222">15</text><text x="482" y="222">30 d</text>
+              </g>
+            </svg>
+            <figcaption>
+              <span class="legend"><i class="dot hlr"></i> HLR</span>
+              <span class="legend"><i class="dot fixed"></i> <span data-i18n="s2.chart.fixed">Intervalo fixo</span></span>
+              <span class="note" data-i18n="s2.chart.note">Curvas ilustrativas · o planificador real é SM-2</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="voz">
+      <div class="shell">
+        <header class="section-head reveal">
+          <span class="num">03</span>
+          <h2 data-i18n="s3.title">Voz 100 % no dispositivo</h2>
+          <p data-i18n="s3.sub">Síntese neuronal galega e recoñecemento local. O audio nace e morre no teu teléfono.</p>
+        </header>
+        <div class="voice-grid">
+          <div class="voice-copy reveal">
+            <ul class="ticks big">
+              <li data-i18n-html="s3.t1"><strong>Proxecto Nós</strong> para a voz neuronal en galego.</li>
+              <li data-i18n-html="s3.t2"><strong>Whisper</strong> e sherpa-onnx para recoñecemento <em>on-device</em>.</li>
+              <li data-i18n="s3.t3">Sen conexión, sen latencia de servidor, sen enviar o audio.</li>
+              <li data-i18n="s3.t4">En Web non hai voz local; en Android, iOS e macOS si.</li>
+            </ul>
+            <a class="link-arrow" href="https://github.com/Retselfernandez/Galingo" target="_blank" rel="noopener"><span data-i18n="s3.link">Ver como está implementado</span> <span aria-hidden="true">↗</span></a>
+            <blockquote class="voice-quote" data-i18n="s3.quote">A voz non viaxa.</blockquote>
+          </div>
+          <div class="voice-flow reveal" aria-label="Fluxo de voz local">
+            <div class="flow-step"><span class="mono">01</span><strong data-i18n="s3.f1">Micrófono</strong><small data-i18n="s3.f1s">WAV · 16 kHz · mono</small></div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-step highlight"><span class="mono">02</span><strong data-i18n="s3.f2">No dispositivo</strong><small>Whisper small int8</small></div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-step"><span class="mono">03</span><strong data-i18n="s3.f3">Similitud fonética</strong><small data-i18n="s3.f3s">acerto por palabra · 0,65</small></div>
+            <div class="privacy-pill"><span aria-hidden="true">●</span> <span data-i18n="s3.privacy">0 bytes de audio enviados</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="probas">
+      <div class="shell">
+        <header class="section-head reveal">
+          <span class="num">04</span>
+          <h2 data-i18n="s4.title">Datos reais, non promesas</h2>
+          <p data-i18n="s4.sub">O que está implementado, o que está probado e o que aínda é futuro. Sen inflar o resultado.</p>
+        </header>
+        <div class="metrics-grid">
+          <div class="metric reveal"><strong>100 %</strong><span data-i18n="s4.m1">offline no núcleo</span><small data-i18n="s4.m1s">leccións, repaso e voz</small></div>
+          <div class="metric reveal"><strong>AES-256</strong><span data-i18n="s4.m2">cifrado local</span><small>Hive · no dispositivo</small></div>
+          <div class="metric reveal"><strong>49/49</strong><span data-i18n="s4.m3">tests en CI</span><small>flutter analyze + test</small></div>
+          <div class="metric reveal"><strong>5</strong><span data-i18n="s4.m4">plataformas</span><small>Android · iOS · macOS · Windows · Web</small></div>
+        </div>
+        <div class="proof-table reveal">
+          <div class="proof-row head"><span data-i18n="s4.th1">Compoñente</span><span data-i18n="s4.th2">Estado</span><span data-i18n="s4.th3">Nota</span></div>
+          <div class="proof-row"><span>APK Android</span><span class="ok" data-i18n="s4.ok">Probado</span><span data-i18n="s4.r1">Release asinada en GitHub</span></div>
+          <div class="proof-row"><span>iOS</span><span class="ok" data-i18n="s4.ok">Probado</span><span data-i18n="s4.r2">Sideload · iPhone 13 Pro Max</span></div>
+          <div class="proof-row"><span>macOS</span><span class="ok" data-i18n="s4.ok">Probado</span><span data-i18n="s4.r3">Janela nativa · sidebar</span></div>
+          <div class="proof-row"><span>Windows</span><span class="warn" data-i18n="s4.warn">Compilado</span><span data-i18n="s4.r4">Pendente de proba en hardware</span></div>
+          <div class="proof-row"><span>Web</span><span class="warn" data-i18n="s4.warn">Compilado</span><span data-i18n="s4.r5">Sen voz local</span></div>
+        </div>
+        <p class="footnote" data-i18n="s4.note">A telemetría é seudonimizada e agrégase para avaliar a beta. O audio nunca se envía.</p>
+      </div>
+    </section>
+
+    <section class="section" id="roadmap">
+      <div class="shell">
+        <header class="section-head reveal">
+          <span class="num">05</span>
+          <h2 data-i18n="s5.title">Roadmap e estado do proxecto</h2>
+          <p data-i18n="s5.sub">Un TFM da Universidade de Vigo (ESEI) que segue medrando por fases.</p>
+        </header>
+        <ol class="timeline">
+          <li class="done reveal"><span class="when">2025–2026</span><h3 data-i18n="s5.t1">A1 completo</h3><p data-i18n="s5.t1p">12 unidades, 70 leccións, 573 exercicios e os 6 tipos de práctica.</p></li>
+          <li class="done reveal"><span class="when">2026</span><h3 data-i18n="s5.t2">Motor HLR + SM-2</h3><p data-i18n="s5.t2p">Repetición espazada, predición probabilística e avaliación con datos reais.</p></li>
+          <li class="done reveal"><span class="when">2026</span><h3 data-i18n="s5.t3">Voz local</h3><p data-i18n="s5.t3p">TTS do Proxecto Nós e ASR Whisper no dispositivo.</p></li>
+          <li class="next reveal"><span class="when" data-i18n="s5.next">Próximo</span><h3 data-i18n="s5.t4">A2–B2</h3><p data-i18n="s5.t4p">Máis niveis, máis contido e máis voces.</p></li>
+          <li class="next reveal"><span class="when" data-i18n="s5.next">Próximo</span><h3 data-i18n="s5.t5">O Laboratorio</h3><p data-i18n="s5.t5p">Verbos irregulares, mesóclise e práctica guiada.</p></li>
+          <li class="next reveal"><span class="when" data-i18n="s5.next">Próximo</span><h3 data-i18n="s5.t6">A Forxa</h3><p data-i18n="s5.t6p">Novas mecánicas de práctica e comunidade.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section download" id="descarga">
+      <div class="shell download-grid">
+        <div class="reveal">
+          <img class="download-icon" src="assets/app_icon_full.webp" alt="Icono de Galingo" width="72" height="72" loading="lazy">
+          <span class="num">06</span>
+          <h2 data-i18n="s6.title">Descarga e código aberto</h2>
+          <p data-i18n="s6.sub">Probar Galingo é gratis. O código tamén está aberto para aprender, revisar ou continuar.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://github.com/Retselfernandez/Galingo/releases/tag/beta"><span data-i18n="s6.cta1">Descargar APK Beta</span><span aria-hidden="true">↓</span></a>
+            <a class="btn btn-ghost" href="https://github.com/Retselfernandez/Galingo" target="_blank" rel="noopener"><span data-i18n="s6.cta2">Ver no GitHub</span><span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="download-meta">
+            <span>Android · APK</span><span>iOS · sideload</span><span>macOS · .app</span>
+          </div>
+        </div>
+        <div class="build-card reveal">
+          <p class="eyebrow" data-i18n="s6.build.k">Compilar desde a fonte</p>
+          <pre><code><span class="c"># Flutter 3.x</span>
+flutter pub get
+bash tool/fetch_asr_model.sh small
+flutter build apk --release \
+  --dart-define=API_BASE_URL=...
+
+flutter build macos --release
+flutter build ios --release</code></pre>
+          <p class="build-note" data-i18n="s6.build.note">O modelo de voz descárgase aparte. O repositorio inclúe scripts e CI.</p>
+        </div>
+      </div>
+      <div class="shell credits">
+        <p data-i18n-html="s6.credits"><strong>Universidade de Vigo · ESEI</strong> · Traballo de Fin de Máster · Lester Fernández · 2026</p>
+        <p><a href="privacy_policy.html" data-i18n="s6.privacy">Política de privacidade</a> · <span data-i18n="s6.license">CC BY-NC 4.0</span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <a class="brand" href="#top"><img src="assets/logo_wordmark.png" alt="Galingo" width="112" height="39"></a>
+      <p data-i18n="footer.tag">Aprende galego, paso a paso. Feito en Galicia.</p>
+      <nav aria-label="Footer">
+        <a href="https://github.com/Retselfernandez/Galingo/releases/tag/beta" data-i18n="footer.release">Release</a>
+        <a href="https://github.com/Retselfernandez/Galingo" data-i18n="footer.repo">GitHub</a>
+        <a href="privacy_policy.html" data-i18n="footer.privacy">Privacidade</a>
+      </nav>
+      <small>© <span id="year">2026</span> Galingo · <span data-i18n="footer.license">CC BY-NC 4.0</span></small>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

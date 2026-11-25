@@ -14,7 +14,8 @@ con motor de **repetición espaciada** y **voz en gallego 100 % en el dispositiv
 [![Flutter](https://img.shields.io/badge/Flutter-%E2%89%A5%203.19-02569B?logo=flutter&logoColor=white)](https://flutter.dev)
 [![Plataformas](https://img.shields.io/badge/Android%20·%20iOS%20·%20macOS%20·%20Windows%20·%20Web-multiplataforma-6E4AFF)](#-plataformas)
 [![Idiomas](https://img.shields.io/badge/UI-8%20idiomas-blueviolet)](#-internacionalización)
-[![Tests](https://img.shields.io/badge/tests-42%20%E2%9C%94-success)](#-calidad)
+[![Tests](https://img.shields.io/badge/tests-49%20%E2%9C%94-success)](#-calidad)
+[![Landing](https://img.shields.io/badge/landing-Galingo-1E6BB8)](https://retselfernandez.github.io/Galingo/)
 [![Licencia](https://img.shields.io/badge/licencia-CC%20BY--NC%204.0-lightgrey)](LICENSE)
 
 <img src="assets/images/logo_wordmark.png" alt="Galingo" width="420" />

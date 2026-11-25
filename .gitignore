@@ -97,7 +97,7 @@ backend/experimentos/fsrs/
 # A memoria, a rúbrica, anexos, pantallazos e notas internas quedan só en local.
 TFM/
 Errores/
-docs/
+# docs/ é o sitio público de GitHub Pages (docs/index.html).
 AS_BUILT_*.md
 docs_*.md
 galingo_banco_a1_540_preguntas.md

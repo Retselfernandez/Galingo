@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de privacidad — Galingo</title>
+  <meta name="description" content="Política de privacidad de Galingo: telemetría seudonimizada, voz procesada en el dispositivo y sin cookies en la web informativa.">
+  <meta name="theme-color" content="#0B3C7A">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="preload" href="assets/fonts/inter-400-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="Galingo"><img src="assets/logo_wordmark.png" alt="Galingo" width="132" height="46"></a>
+      <div class="header-actions" style="margin-left:auto">
+        <a class="legal-back" href="index.html">← Volver a Galingo</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell legal-shell">
+    <span class="num">Legal</span>
+    <h1>Política de privacidad</h1>
+    <p class="legal-meta">Última actualización: 25 de noviembre de 2026 · Documento en español</p>
+
+    <p><strong>Galingo</strong> es una aplicación educativa para aprender gallego, desarrollada como Trabajo de Fin de Máster (Universidade de Vigo). Esta política explica qué datos trata la app y con qué finalidad.</p>
+
+    <h2>1. Responsable</h2>
+    <p>Lester Fernández — <a href="mailto:fernandez.lester@gmail.com">fernandez.lester@gmail.com</a></p>
+
+    <h2>2. Qué datos se tratan</h2>
+    <ul>
+      <li><strong>Datos de uso seudonimizados (telemetría):</strong> progreso en las lecciones, resultados de ejercicios, eventos de aprendizaje, versión de la app y plataforma. Se asocian a un identificador aleatorio (UUID) generado en tu dispositivo. No incluyen tu nombre ni tu correo electrónico.</li>
+      <li><strong>Audio de voz:</strong> solo en los ejercicios de pronunciación, y únicamente tras conceder el permiso de micrófono. El audio se procesa <strong>íntegramente en el dispositivo</strong> (Whisper / sherpa-onnx) para transcribirlo y evaluar la pronunciación. <strong>No se transmite ni se almacena en ningún servidor.</strong></li>
+      <li><strong>Reportes de feedback:</strong> el texto que escribas voluntariamente al reportar un problema, junto con metadatos técnicos básicos.</li>
+    </ul>
+
+    <h2>3. Finalidad</h2>
+    <ul>
+      <li>Mejorar la app y analizar el aprendizaje mediante métricas agregadas de la beta.</li>
+      <li>Evaluar la pronunciación localmente, sin enviar el audio fuera del dispositivo.</li>
+    </ul>
+
+    <h2>4. Base legal</h2>
+    <p>Consentimiento del usuario (al instalar y usar la app y al conceder el permiso de micrófono).</p>
+
+    <h2>5. Cesión a terceros</h2>
+    <p>No se venden ni comparten datos personales con terceros. La telemetría seudonimizada se aloja en un backend propio (Render) con fines de evaluación de la beta. El audio <strong>no se envía a terceros</strong> ni a ningún servidor: la síntesis de voz (Proxecto Nós) y el reconocimiento (Whisper) se ejecutan en el dispositivo.</p>
+
+    <h2>6. Conservación</h2>
+    <p>La telemetría seudonimizada se conserva durante la duración de la beta con fines de investigación. El audio <strong>no se conserva</strong> porque nunca sale del dispositivo.</p>
+
+    <h2>7. Tus derechos</h2>
+    <p>Puedes solicitar información, rectificación o eliminación de tus datos escribiendo a <a href="mailto:fernandez.lester@gmail.com">fernandez.lester@gmail.com</a>. La app permite además reiniciar el progreso desde Ajustes.</p>
+
+    <h2>8. Menores</h2>
+    <p>La app no está dirigida a menores de 13 años.</p>
+
+    <h2>9. Cambios</h2>
+    <p>Esta política puede actualizarse; se indicará la fecha de la última revisión.</p>
+
+    <h2>10. Web informativa</h2>
+    <p>La página de presentación de Galingo no usa cookies, analítica ni fuentes externas: las tipografías están autoalojadas y el audio de la demo se sirve desde el mismo sitio. Los enlaces a GitHub y a la release son los únicos destinos externos.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <a class="brand" href="index.html"><img src="assets/logo_wordmark.png" alt="Galingo" width="112" height="39"></a>
+      <p>Aprende gallego, paso a paso. Hecho en Galicia.</p>
+      <nav aria-label="Footer">
+        <a href="index.html">Inicio</a>
+        <a href="https://github.com/Retselfernandez/Galingo">GitHub</a>
+        <a href="https://github.com/Retselfernandez/Galingo/releases/tag/beta">Release</a>
+      </nav>
+      <small>© 2026 Galingo · CC BY-NC 4.0</small>
+    </div>
+  </footer>
+</body>
+</html>
